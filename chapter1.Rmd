@@ -1,0 +1,117 @@
+---
+title_meta  : Chapter 1
+title       : The first chapter of the introduction to Python course
+description : Description of the first chapter of the introduction to Python course
+
+--- type:NormalExercise xp:100
+## First Normal Exercise Title
+  
+This is the first Python exercise.
+
+*** =instructions
+- Assign the value 5 to the variable `x`.
+- Print the variable `x`.
+
+*** =hint
+This is a hint.
+
+*** =pre_exercise_code
+```{r eval=FALSE}
+y = 7
+```
+
+*** =sample_code
+```{r eval=FALSE}
+# Assign the value 5 to the variable x
+
+
+# Print the variable x
+
+```
+
+*** =solution
+```{r eval=FALSE}
+# Assign the value 5 to the variable x
+x = 5
+
+# Print the variable x
+print(x)
+```
+
+*** =sct
+```{r eval=FALSE}
+# SCT CODE COMES HERE...
+```
+
+*** =skills
+2
+
+--- type:NormalExercise xp:100
+## Another normal exercise
+  
+Just random shtuff.
+
+*** =instructions
+- Import the `matplotlib` package
+- Print the variable `x`.
+
+*** =hint
+This is a hint.
+
+*** =pre_exercise_code
+```{r eval=FALSE}
+
+```
+
+*** =sample_code
+```{r eval=FALSE}
+# import matplotlib
+
+
+# Make a plot
+
+```
+
+*** =solution
+```{r eval=FALSE}
+# import matplotlib
+import matplotlib.pyplot as plt
+
+# Make a plot
+plt.plot([1,2,3,4])
+plt.ylabel('some numbers')
+plt.show()
+```
+
+*** =sct
+```{r eval=FALSE}
+# SCT CODE COMES HERE...
+```
+
+*** =skills
+2
+
+--- type:MultipleChoiceExercise xp:50
+## First Multiple Choice Exercise Title
+
+This is a python multiple choice exericse.
+
+*** =instructions
+- Option 1
+- Option 2
+
+*** =hint
+The Hint
+
+*** =pre_exercise_code
+```{r eval=FALSE}
+# none
+```
+
+*** =sct
+```{r,eval=FALSE}
+
+```
+
+*** =skills
+2

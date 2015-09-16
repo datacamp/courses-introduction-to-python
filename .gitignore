@@ -1,0 +1,6 @@
+.Rproj.user/*
+.Rproj.user
+.cache
+.DS_STORE
+.Rhistory
+*.html
