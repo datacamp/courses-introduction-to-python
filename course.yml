@@ -1,0 +1,11 @@
+id: 735
+title: Introduction to Python
+author_field: DataCamp
+university: DataCamp
+difficulty_level: 1
+time_needed: 1 hour
+author_bio: Author Bio comes here
+description: Describe your course here
+chapters:
+  chapter1.Rmd: 1728
+
