@@ -7,5 +7,5 @@ time_needed: 1 hour
 author_bio: Author Bio comes here
 description: Describe your course here
 chapters:
-  chapter1.Rmd: 1728
+  chapter1.md: 1744
 
