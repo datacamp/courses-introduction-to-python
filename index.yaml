@@ -33,13 +33,17 @@
     title: "Calculations with variables"
     content: "Redo previous (previous video) calculations, this time with variables. This time cost is in variables: cocktail_price and beer_price. Dit is wat te veel verhaal:You wake up the next morning with the variables still in your memory. You decide to calculate how much you should pay Josh who paid the whole tab. You decide to give him somewhat extra based on that amount."
 
+  - type: "NormalExercise"
+    title: "Calculations with variables (2)"
+    content: "Redo previous (previous video) calculations, this time EVERYTHING is a variables (also how much beer and cocktail)."
+    
   - type: "MultipleChoiceExercise"
     title: "Which is what"
     content: "A list of variables is given with a value. Choose the choice which correctly lists their types."
 
   - type: "NormalExercise"
     title: "Invalid calculations"
-    content: "You find some other variables in your memory of which you have little memory. You decide to check out what their type is. After finding out their type you decide to experiment with them a little bit."
+    content: "You find some other variables in your memory of which you have little memory. You decide to check out what their type is. After finding out their type you decide to experiment with them a little bit. str + str works, str * int works. str + int error"
 
   - type: "MultipleChoiceExercise"
     title: "Which are valid and which aren't"
@@ -47,57 +51,61 @@
 
   - type: "NormalExercise"
     title: "Did we pay everything? "
-    content: "Given the total amount of the tab. Also given - an amount that everyone wants to pay. Do they sum up to the total amount?"
+    content: "Given the total amount of the tab. Also given - an amount that everyone wants to pay. Do they sum up to the total amount? Variable for total, variable for each paying friend."
 
 - chapter_title: "Lists"
   description: "Lists are a very big part of the Python language. In this chapter they will be introduced and some basic operations will be done with them."
   exercises:
   - type: "VideoExercise"
     title: "Lists, what are they?"
-    content: "How to create a list and what's the difference with a normal object. What can be contained in a list. Introduce several examples of lists"
+    content: "How to create a list and what's the difference with a normal object. What can be contained in a list. Introduce several examples of lists."
   
-  - type: "MultipleChoiceExercise"
-    title: "Which is valid, which isn't?"
-    content: "A few examples of lists are given, the student must select which are valid lists."
-    
   - type: "NormalExercise"
     title: "Picking up the tab"
-    content: "You're out with friends again, this time for food. This time you want keep track of what you're eating. Your entree was a Caesar Salade which costed 18 dollars, which was healthy. The main dish was ribs for 35 dollars, which was unhealthy. For drinks, you had a coke for 3 dollars, which was unhealthy. Keep them all in seperate variables (no list yet)."
+    content: "You're out with friends again, this time for food. This time you want keep track of what you and your friends are eating. Friend1 was a Caesar Salade which costed 18 dollars, which was healthy but not so good ..... ==> EDIT THIS The main dish was ribs for 35 dollars, which was unhealthy. For drinks, you had a coke for 3 dollars, which was unhealthy. Keep them all in seperate variables (no list yet)."
     
   - type: "NormalExercise"
     title: "Picking up the tab (2)"
-    content: "In the last exercise you had to define a seperate variable for all the things you wanted to keep in your memory. This time put them in a list -> ['Ceasar Salade', 18, True, 'Ribs', 35, False, 'Coke', 3, False]. Use type() on this."
+    content: "In the last exercise you had to define a seperate variable for all the things you wanted to keep in your memory. Also add if it was good. This time put them in lists -> friend1 = ['Ceasar Salade', 18, True, False] friend2 = ['Ribs', 35, False, True] friend3 = ['Coke', 3, False, True]."
+    
+  - type: "MultipleChoiceExercise"
+    title: "Which is valid, which isn't?"
+    content: "A few examples of lists are given, the student must select which are valid lists. Include list of lists here (previous exercise)"
+    
+  - type: "NormalExercise"
+    title: "List inception"
+    content: "Make dinner list of lists here"
     
   - type: "VideoExercise"
     title: "Subsetting a list"
     content: "You know how to create lists. But what if you want to check the content of one element of the list. Introduce simple subsetting using [..] notation. List start indexing at 0. Negative indexes count from the right. Slices using : (with or without left and right elements: `1:5`, `1:`, `:5`, `:` all valid)"
     
-  - type: "MultipleChoiceExercise"
-    title: "Which element will it return?"
-    content: "A list and an index operation is given; choose which element(s) it will return."
-    
   - type: "NormalExercise"
     title: "Basic indexing"
-    content: "You are given same list as before (Picking up teh tab (2)). Select the name of the main dish and whether it was healthy. You also want to know the price of the coke (Use right indexing)."
+    content: "You are given same list as before (Picking up teh tab (2)). EDIT WITH NEW DATA ==> Select the name of the main dish and whether it was healthy. You also want to know the price of the coke (Use right indexing)."
     
   - type: "NormalExercise"
     title: "Working with elements of the list"
-    content: "Working with the same list. Select the price of the salad and assign it to a variable, same for ribs and cola. Check the types of the assigned variables. Calculate the total cost."
+    content: "Working with the same list. Select the price of friends. Check the types of the assigned variables. Calculate the total cost."
     
   - type: "NormalExercise"
     title: "Slicing makes the world go round"
-    content: "Working with the same list. You want to retrieve all information about the main dish [3:6]. All information about the entree [:3]. All information about the coke [6:]. What about [:]?"
+    content: "EDIT WITH NEW DATA Working with the same list. You want to retrieve all information about the main dish [3:6]. All information about the entree [:3]. All information about the coke [6:]. What about [:]?"
+  
+  - type: "MultipleChoiceExercise"
+    title: "Which element will it return?"
+    content: "list of lists here!!! A list and an index operation is given; choose which element(s) it will return."
     
   - type: "VideoExercise"
     title: "Manipulate those lists"
-    content: "A great thing about lists is that you can change them. First explain setting using [..] = . Then explain append and remove. Explain how assigning a list to a variable will assign a reference and how to use the copy [:] operator to prevent this. Maybe explain sort()" 
+    content: "A great thing about lists is that you can change them. First explain setting using [..] = . Then explain append and del (be careful here). Maybe don't use append but [1,3,4] + [1] instead. Explain how assigning a list to a variable will assign a reference and how to use the copy [:] operator to prevent this." 
     
   - type: "NormalExercise"
     title: "Changing elements in the list"
-    content: "Working with dinner list. You remember you put a lot of sauce on the salade, so it was not quite healthy. Change the list using subsetting [..]. Cola was 2.5 instead of 3, use right subsetting this time [-..] = 3. You remember you didn't order a Caesar Salad for 18 dollar as an entree. Instead you ate bacon, which was not healthy and costed 13 dollars. Use slice subsetting and = to change the entree: dinner[:3] = [...]"
+    content: "EDIT FOR NEW DATA + mss teveel hier-- opassen.Working with dinner list. You remember you put a lot of sauce on the salade, so it was not quite healthy. Change the list using subsetting [..]. Cola was 2.5 instead of 3, use right subsetting this time [-..] = 3. You remember you didn't order a Caesar Salad for 18 dollar as an entree. Instead you ate bacon, which was not healthy and costed 13 dollars. Use slice subsetting and = to change the entree: dinner[:3] = [...]"
     
   - type: "NormalExercise"
-    title: "Appending and removing"
+    title: "Appending and deleting"
     content: "You suddenly remember you should remove the main dish from the list, as you didn't really liked it so you didn't eat it. Instead, you ate desert, which you want to append to the end of the list."
     
   - type: "MultipleChoiceExercise"
@@ -108,16 +116,12 @@
     title: "Effect of changing the list"
     content: "Make a new variable which refers to the list dinner_ref = dinner. Change dinner_ref, see what it does. Repeat but now with copy [:]."
     
-  - type: "NormalExercise"
-    title: "Sorting the list"
-    content: "Given a list with the prices, sort the list using .sort()"
-    
 - chapter_title: "Functions and packages"
   description: "Some of the main functionality in python is included into the predefined functions. Introduce functions and packages and how to call functions from pacakges using the dot notation."
   exercises:
   - type: "VideoExercise"
     title: "Functions, what are they?"
-    content: "Begin by explaining that some of basic motivation of functions: you want to do a sequence of commands. Put it in a function! () notation. Some you already used: print(), type() -> make abstraction of some often used sequence of commands. Explain arguments (don't go into detail about keywords and stuff; it's confusing). Some basic python functions: min(), max(), sum(can have 2 arguments!)"
+    content: "Begin by explaining that some of basic motivation of functions: you want to do a sequence of commands. Put it in a function! () notation. Some you already used: print()(, type(), geen functie) -> make abstraction of some often used sequence of commands. Explain arguments (don't go into detail about keywords and stuff; it's confusing). Some basic python functions: min(), max(), sum(can have 2 arguments!). Dit is simplificatie (bv. enkel positional arguments -- vermeld dit even kort)"
     
   - type: "NormalExercise"  
     title: "Calling a function"
@@ -134,6 +138,10 @@
   - type: "NormalExercise" 
     title: "Use two arguments"
     content: "Given the same list, calculate the total by adding them all and by using sum. You want to start counting from -30, as this is what you spared out last week. Use sum(list, -30)"
+
+  - type: "NormalExercise"
+    title: "Misschien nog eentje"
+    content: "Niet zeker"
     
   - type: "VideoExercise"
     title: "Packages"
@@ -141,7 +149,7 @@
     
   - type: "MultipleChoiceExercise"
     title: "Importing the package"
-    content: "An import statement is given. Which subsequent command will succeed (will not result in an error)."
+    content: "An import statement is given. Which of the following command will succeed (will not result in an error)."
     
   - type: "NormalExercise"
     title: "Have some pi"
