@@ -7,7 +7,7 @@
   
   - type: "NormalExercise"
     title: "Datacamp's Python interface"
-    content: "Stoefen met onze interface"
+    content: "Introduce the interface -- similar to introduction to R"
 
   - type: "MultipleChoiceExercise"
     title: "When to use it"
@@ -19,7 +19,7 @@
 
   - type: "NormalExercise"
     title: "Generosity comes a long way"
-    content: "Instead of splitting the tab evenly you want to pay 50% of the tab yourself and let your friends pay the rest. Your friend think the same thing and pay 50% of what remains (use powers)... (make as simple)"
+    content: "Instead of splitting the tab evenly you want to pay 50% of the tab yourself and let your friends pay the rest. Your friend think the same thing and pay 50% of what remains (use powers)... (make as simple as possible :-), people might not understand)"
 
   - type: "VideoExercise"
     title: "Variables and their types"
@@ -31,11 +31,11 @@
 
   - type: "NormalExercise"
     title: "Calculations with variables"
-    content: "Redo previous (previous video) calculations, this time with variables. This time cost is in variables: cocktail_price and beer_price. Dit is wat te veel verhaal:You wake up the next morning with the variables still in your memory. You decide to calculate how much you should pay Josh who paid the whole tab. You decide to give him somewhat extra based on that amount."
+    content: "Redo previous (previous video) calculations, this time with variables. This time cost is in variables: cocktail_price and beer_price. (Maybe use parts of this story, probably a bit over the top: You wake up the next morning with the variables still in your memory. You decide to calculate how much you should pay Josh who paid the whole tab. You decide to give him somewhat extra based on that amount.)"
 
   - type: "NormalExercise"
     title: "Calculations with variables (2)"
-    content: "Redo previous (previous video) calculations, this time EVERYTHING is a variables (also how much beer and cocktail)."
+    content: "Redo previous (previous video) calculations, this time EVERYTHING is a variables (so also how much beer and cocktail)."
     
   - type: "MultipleChoiceExercise"
     title: "Which is what"
@@ -62,11 +62,11 @@
   
   - type: "NormalExercise"
     title: "Picking up the tab"
-    content: "You're out with friends again, this time for food. This time you want keep track of what you and your friends are eating. Friend1 was a Caesar Salade which costed 18 dollars, which was healthy but not so good ..... ==> EDIT THIS The main dish was ribs for 35 dollars, which was unhealthy. For drinks, you had a coke for 3 dollars, which was unhealthy. Keep them all in seperate variables (no list yet)."
+    content: "You're out with friends again, this time for food. This time you want keep track of what you and your friends are eating. Friend1 had a Caesar Salade which costed 18 dollars, which was healthy but not so good ..... Friend2 had some Ribs which costed 35 dollars, was unhealthy but very tasty, ... Use no lists yet here, make them put everything in seperate variables (very painful!)"
     
   - type: "NormalExercise"
     title: "Picking up the tab (2)"
-    content: "In the last exercise you had to define a seperate variable for all the things you wanted to keep in your memory. Also add if it was good. This time put them in lists -> friend1 = ['Ceasar Salade', 18, True, False] friend2 = ['Ribs', 35, False, True] friend3 = ['Coke', 3, False, True]."
+    content: "In the last exercise you had to define a seperate variable for all the things you wanted to keep in your memory.This time put them in lists -> friend1 = ['Ceasar Salade', 18, True, False] friend2 = ['Ribs', 35, False, True] friend3 = ['Coke', 3, False, True].... (maybe introduce list of lists? putting them all in 1 big list -> probably better in next exercise)"
     
   - type: "MultipleChoiceExercise"
     title: "Which is valid, which isn't?"
@@ -74,7 +74,7 @@
     
   - type: "NormalExercise"
     title: "List inception"
-    content: "Make dinner list of lists here"
+    content: "Make dinner list of lists here. Might seem duplication, but can't hurt to make them create the list of lists themselves."
     
   - type: "VideoExercise"
     title: "Subsetting a list"
@@ -82,7 +82,7 @@
     
   - type: "NormalExercise"
     title: "Basic indexing"
-    content: "You are given same list as before (Picking up teh tab (2)). EDIT WITH NEW DATA ==> Select the name of the main dish and whether it was healthy. You also want to know the price of the coke (Use right indexing)."
+    content: "You are given same list as before (Picking up the tab (2), e.g. list of friend1, not the list of lists). Select the name of the main dish and whether it was healthy. You also want to know the price using right indexing."
     
   - type: "NormalExercise"
     title: "Working with elements of the list"
@@ -157,7 +157,7 @@
     
   - type: "NormalExercise"
     title: "How far to run"
-    content: "You have to a 30 degrees of a circle-shaped track. The diameter is 100 meters. Use from math import radians."
+    content: "You have to run over 30 degrees of a circle-shaped track. The diameter is 100 meters. Use from math import radians."
     
   - type: "NormalExercise"
     title: "Math teachers..."
@@ -168,38 +168,123 @@
   exercises:
   - type: "VideoExercise"
     title: "Numpy: from coding to math"
-    content: "Introduce numpy. Very import feature: numpy.array. Convert a normal list into a mathematical object. Vector arithmetic. What does + do to a normal list: concat."
+    content: "Introduce numpy. Very import feature: numpy.array. Convert a normal list into a mathematical object. Subsetting. Vector arithmetic. What does + do to a normal list: concat. Don't mention appending or removing for numpy arrays yet."
 
   - type: "NormalExercise"
     title: "Getting started with numpy"
     content: "This is an easy one. Just import numpy. As we are going to use numpy a lot, it's best to import it as np."
+  
+  - type: "NormalExercise"
+    title: "Your first numpy array"
+    content: "Create a numpy array with a certain content. Output the array. Very basic stuff."
+    
+  - type: "NormalExercise"
+    title: "Subsetting in numpy"
+    content: "An array is given with budget spent on dinner last week. Make a numpy array of it. Subset it using the same techniques you learned in the lists chapter."
     
   - type: "NormalExercise"
     title: "Calculate the total"
-    content: "Given: budget spent on dinner last week. budget spent on dinner this week. Add them up. You want to calculate the price in euros: multiply."
+    content: "Given: budget spent on dinner last week. budget spent on dinner this week. You want to know how much you spent per day. Add them up. You want to calculate the price in euros: multiply."
+  
+  - type: "MultipleChoice"
+    title: "Why numpy?"
+    content: "Try the same calculations as before, this time use regular lists. What result do you expect? - the same - concat - error - ..."
     
   - type: "NormalExercise"
     title: "Tipping to survive"
     content: "Being a generous person, you always tip for service in a restaurant. However, the mood you're in will greatly influence the percentage of the dinner price you'll tip. On mondays you are in a bad mood, you only tip 5%. On tuesdays till thursday you'll tip 15%. In the weekends you're always in a great mood, so you'll tip 25%. Use numpy (np.array(dinner_prices)*(np.array([0.05, 0.15, 0.15, 0.15, 0.25, 0.25, 0.25]) + 1))"
     
-  - type:
-    title:
-    content:
+  - type: "NormalExercise"
+    title: "Company dinner"
+    content: "You organized a company dinner and it's time to pay the bill. There were 5 dishes from which the employees could choose: Burger with fries (cost: 12, employees: 3); Caesar Salad (cost: 18, employees: 2); Chicken Salad (cost: 20, employees: 3); Steak (cost: 25, employees: 3); Fish (cost: 22, employees: 2). Calculate total cost using sum and np.array(...) * np.array(...)"
     
-  - type:
-    title:
-    content:
+  - type: "VideoExercise"
+    title: "Numpy in two dimensions"
+    content: "Numpy can handle vectors with two dimensions as well. Compare with list of lists in chapter about lists. Explain subsetting in comparison with list of lists subsetting. Basic arithmetic."
     
-  - type:
-    title:
-    content:
+  - type: "NormalExercise" 
+    title: "Your first matrix"
+    content: "Given a list of lists, create a numpy matrix using this list of lists. Print it out. Very basic stuff"
     
-  - type:
-    title:
-    content:
+  - type: "NormalExercise"
+    title: "Subsetting the matrix"
+    content: "Given the matrix you created before, do some subsetting operations to single out elements. Maybe use slices here as well, wouldn't hurt."
     
+  - type: "NormalExercise"
+    title: "Dinner for the family"
+    content: "This time you have a np.array() of money spend on dinner this week for each member of the family. Put them all together in one 2-D np.array."
+    
+  - type: "NormalExercise"
+    title: "Cost over the weeks"
+    content: "You have two 2-D numpy arrays similar to the one in the previous exercise. Add them together to see how much each family member spends on dinner each day. (output in euro's for scalar multiplication?)"
+    
+  - type: "VideoExercise"
+    title: "Basic statistics with numpy"
+    content: "You can use numpy to get some summary statistics on data. np.mean, np.median for more robust measure (example with outlier). np.sum + np.size can reach the same effect as np.mean. np.std for standard deviation. explain standard deviation as measure of spread (very intuitive)."
+    
+  - type: "NormalExercise"
+    title: "Spendings on dinner"
+    content: "Array with money spent on dinner for the last year (check size with np.size first). Take the mean to find out how much you spend on dinner on average."
   
-  
-  
+  - type: "NormalExercise"
+    title: "Minding the outliers"
+    content: "There was an outlier in the array (check it out with indexing). Try to use median instead. Compare the result with the previous result."
     
+  - type: "NormalExercise"
+    title: "Spread of the cost"
+    content: "... use np.std"
     
+- chapter_title: "Matplotlib"
+  description: "Basic package to handle plots in Python. We will give a brief overview of all different possibilities. Handling scatterplots, lineplot, histogram and customizing plots."
+  exercises:
+  - type: "VideoExercise"
+    title: "Matplotlib, the basics"
+    content: "To create plots in python you can use matplotlib. You should from matplotlib import pyplot (as plt). Use plot() to plot a line plot. You have to show() after creating each plot. Use plt.plot(x,y,'o') to make a scatter plot, or use plt.scatter(x,y)."
+    
+  - type: "NormalExercise"
+    title: "Dinners over the year"
+    content: "Create dataset with some nice features: money spend on dinner over the year. Contains 365 entries, each containing money spend on dinner that day, in dollar. (Add some nice features like seasonal dependency and more in the weekends and stuff when creating the dataset -> for the creator). Let them analyse the line plot."
+    
+  - type: "NormalExercise"
+    title: "Best food is healthy"
+    content: "x contains the scores on healtiness (0-10) for the food you had for dinner. y contains scores on tastyness (0-10). First plot a line plot using plt.plot() -> looks ugly!! We need a different kind of plot."
+    
+  - type: "NormalExercise"
+    title: "Best food is healthy (2)"
+    content: "Same data. This time create a scatter plot. Do you see a relation? Yes -> unhealthy food is tasty."
+  
+  - type: "NormalExercise"
+    title: "Scatter chaos"
+    content: "Relations between variables are not always obvious: give new dataset - x healtiness of food (0-10); y distance from home. Messy scatter plot (no linear relationship)"
+    
+  - type: "VideoExercise"
+    title: "Histograms"
+    content: "Explain what histograms are and why we want to use them. Explain with example. Show how to use pyplot.hist()."
+    
+  - type: "NormalExercise"
+    title: "Tasty food"
+    content: "Plot the tastyness of the food each day from the previous section with a scatter- and  line plot... (not much information there, we need something else!)"
+    
+  - type: "NormalExercise"
+    title: "Tasty food (2)"
+    content: "Histograms to the rescue! Create a nice histogram of the tastyness here -> we see some relevant distribution information (don't use the word 'distribution' here, will be confusing)"
+    
+  - type: "NormalExercise"
+    title: "Tasty food (3)"
+    content: "Plot the tastyness again with a histogram. This time play with the number of boxes a bit (second argument)."
+    
+  - type: "VideoExercise"
+    title: "Customizing your plots"
+    content: "Start by explaining how to add a title and labels to the axis. Then continue by explaining the options in pyplot.plot() -> the form of the points, the color of the line/points, ... this connects with the legend."
+    
+  - type: "NormalExercise"
+    title: "Name your plot"
+    content: "Use a previously generated plot, add title, xlabel and ylabel. Use plot of money spend on dinner over the year."
+    
+  - type: "NormalExercise"
+    title: "Comparing with your friends"
+    content: "Your friends have also written down how much money they've spend on dinner each day for the last year. Draw all of the graphs in different colors. (no legend yet)"
+    
+  - type: "NormalExercise"
+    title: "Comparing with your friends (2)"
+    content: "Continue with previous plot, this time add labels and a legend!"
