@@ -23,37 +23,35 @@ Now that you've got an idea about different ways of working with Python, I sugge
 
 ## Variables and their types
 
-A hugely important concept in practically every programming language, is the variable. In Python it is too, and it's used literally all the time. You can think of a variable as a reference to a any piece of information inside your program. Let me clarify this with an example. Suppose you measure your height and length, in american units. Let's say you x foot tall, and weigh y. Instead of doing calculations with these values directly, let's store them in two variables, called `height` and `weight`. In Python, you can do this with the equals sign, like this:
+A hugely important concept in practically every programming language, is the variable. In Python it is too, and it's used literally all the time. You can think of a variable as a reference to a any piece of information inside your program. Let me clarify this with an example. Suppose you measure your height and weight, in american units. Let's say you are 123,56 foot tall, and weigh 240 pounds. Instead of doing calculations with these values directly, let's store them in two variables, called `height` and `weight`. In Python, you can do this with the equals sign, like this:
 
 ```
-height = x
+height = 123,56
 ```
 
 For weight, we can do a similar thing:
 
 ```
-weight = y
+weight = 240
 ```
 
-After running these commands, you can check out their contents by typing height and weight in the shell, like here. If you type the name of the variable, Python looks for the data you're referencing to, and prints it out. Let's try to calculate the Body Mass Index, or BMI, which is your weight in kilograms divided by your length in meters squared. This means you'll have to first convert the measurements to new units. Instead of using the actual values from before, we can simply use the variables height and weight this time, like here: I stored the results in two new variables, `height_m` and `weight_kg`. With these new variables it's easy to calculate the bmi. We can check the resulting bmi by typing the variable name again.
+After running these commands, you can check out their contents by typing height and weight in the shell, like here. If you type the name of the variable, Python looks for the data you're referencing to, and prints it out. Let's try to calculate the Body Mass Index, or BMI, which is your weight in kilograms divided by your height in meters squared. This means you'll have to first convert the measurements to new units. Instead of using the actual values from before, we can simply use the variables height and weight this time, like here: I stored the results in two new variables, `height_m` and `weight_kg`. With these new variables it's easy to calculate the bmi. We can check the resulting bmi by typing the variable name again.
 
-So far, we've only worked with numerical values, such as height and weight. Python also features other so called data types. The most common ones are strings, booleans, integers and floats. A string is Python's way to represent text. You typically use double quotes to build a string, although single quotes work too, like in these examples. It's also possible to combine strings with the plus sign, like in here. The Boolean is a data type that can either by True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be useful in the future, as you can use them to perform filtering operations on your data or to have your program behave differently in different use-cases.
+So far, we've only worked with numerical values, such as height and weight. In Python, these numbers are actually python objects with a specific type. You can check out the type of a python object with the `type()` function. To see the type of our weight value, 240, we simply write type and then the number between parentheses. We see that it's an int, short for integer, which is python's way of storing non decimal numbers. You can of course also use type on the weight variable itself. The result is the same. The type of height appears to be float. This python type _can_ hold numerical values with decimal part. 
 
-Finally, there's integers and floats. Both of these data types represent numberical values, but the integer cannot hold numerical values with demical numbers. 3 is a numeric, but 3.1 is a float. In the python implementation, the way in which integers and floats are stored in your memory is different, but when you're using them in your computations the difference is not that big. We can experiment with this using the `type` function, which shows you the class. If you type in type(4) for example, you'll see it's an int, short for integer. If you type type(weight), on the other hand, the variable we created before, we see it's a float, because it has to contain a decimal part. What if you divide two integers so that the result can not be integer?
+To do data science, you need more than numbers. Next to ints and floats, Python also features other data types. The most common ones are strings and booleans. 
 
-```
-3/4
-```
-
-Python automatically converted the result to a float, because it saw that the integer division was going to produce a decimal part. Checking with `type()` confirms this.
+A string is Python's way to represent text. You typically use double quotes to build a string, although single quotes work too, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
 
 ```
-type(3/4)
+put in examples
 ```
 
-You can also check out the type of Strings and booleans by the way, like these examples. Notice again that you can pass values, but also variables that represent these values. In that case, python again looks for the data you're referencing with the variable, and executes the type command, just as if you are passing the string or boolean itself.
+The Boolean is a type that can either by True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data or to have your program behave differently in different use-cases.
 
-In the exercises that follow, you'll create your very first Pyton variables and experiment with the different data types python has to offer. I'll see you in the next video to explain all about lists.
+Apart from the 4 types I just introduced, Python contains tons of other types. You'll get to know more along the way. What is important to remember is that each type has special functionality associated that makes working with them easier. Take this line of code, where we sum two integers, and then this line of code, were we sum two strings. The plus operator behaves differently depending on the data type. For the integers, it simply summed the values, while for the strings, it pasted the strings together.
+
+In the exercises that follow, you'll create your very first Pyton variables and experiment with the different data types Python has to offer. I'll see you in the next video to explain all about lists.
 
 
 
