@@ -30,7 +30,7 @@ type(fam_height)
 
 The list is an object with the type list. This is thus a new Python type next to the strings, booleans, integers and floats you already know. I told you before that each type has special functionality built in to work them, remember? Well, for lists, this is also true. Python lists host a bunch of tools to subset, extend and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
-## Subsetting a list
+## Subsetting lists
 
 After you've created your very own Python list, you might wonder how you can access information in the list. Suppose you want to select the height of your youngest sister, emma. As you can see from fam_height here, her height is 168 centimers, and this integer is the fourth element in the list. To access this element, you'll need this line of code:
 
@@ -77,4 +77,6 @@ fam_height[1:4]
 
 You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. You can use this colon operator in many other ways, but I'll save that for the exercises. You'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
 
-## Manipulate those lists
+## Manipulating lists
+
+After creation and subsetting, the final piece of the Python lists puzzle is manipulation.
