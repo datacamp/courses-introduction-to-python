@@ -23,21 +23,21 @@ Now that you've got an idea about different ways of working with Python, I sugge
 
 ## Variables and their types
 
-A hugely important concept in practically every programming language, is the variable. In Python it is too, and it's used literally all the time. You can think of a variable as a reference to a any piece of information inside your program. Let me clarify this with an example. Suppose you measure your height and weight, in american units. Let's say you are 123,56 foot tall, and weigh 240 pounds. Instead of doing calculations with these values directly, let's store them in two variables, called `height` and `weight`. In Python, you can do this with the equals sign, like this:
+A hugely important concept in practically every programming language, is the variable. In Python it is too, and it's used literally all the time. You can think of a variable as a reference to a any piece of information inside your program. Let me clarify this with an example. Suppose you measure your height and weight, in imperial units. Let's say you are 6,1 foot tall, and weigh 178 pounds. Instead of doing calculations with these values directly, let's store them in two variables, called `height` and `weight`. In Python, you can do this with the equals sign, like this:
 
 ```
-height = 123,56
+height = 6,1
 ```
 
 For weight, we can do a similar thing:
 
 ```
-weight = 240
+weight = 178
 ```
 
 After running these commands, you can check out their contents by typing height and weight in the shell, like here. If you type the name of the variable, Python looks for the data you're referencing to, and prints it out. Let's try to calculate the Body Mass Index, or BMI, which is your weight in kilograms divided by your height in meters squared. This means you'll have to first convert the measurements to new units. Instead of using the actual values from before, we can simply use the variables height and weight this time, like here: I stored the results in two new variables, `height_m` and `weight_kg`. With these new variables it's easy to calculate the bmi. We can check the resulting bmi by typing the variable name again.
 
-So far, we've only worked with numerical values, such as height and weight. In Python, these numbers are actually python objects with a specific type. You can check out the type of a python object with the `type()` function. To see the type of our weight value, 240, we simply write type and then the number between parentheses. We see that it's an int, short for integer, which is python's way of storing non decimal numbers. You can of course also use type on the weight variable itself. The result is the same. The type of height appears to be float. This python type _can_ hold numerical values with decimal part. 
+So far, we've only worked with numerical values, such as height and weight. In Python, these numbers are actually python objects with a specific type. You can check out the type of a python object with the `type()` function. To see the type of our weight value, 173, we simply write type and then the number between parentheses. We see that it's an int, short for integer, which is python's way of storing non decimal numbers. You can of course also use type on the weight variable itself. The result is the same. The type of height appears to be float. This python type _can_ hold numerical values with decimal part. 
 
 To do data science, you need more than numbers. Next to ints and floats, Python also features other data types. The most common ones are strings and booleans. 
 
