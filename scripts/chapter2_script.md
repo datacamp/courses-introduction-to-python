@@ -32,6 +32,49 @@ The list is an object with the type list. This is thus a new Python type next to
 
 ## Subsetting a list
 
+After you've created your very own Python list, you might wonder how you can access information in the list. Suppose you want to select the height of your youngest sister, emma. As you can see from fam_height here, her height is 168 centimers, and this integer is the fourth element in the list. To access this element, you'll need this line of code:
 
+```
+fam_height[3]
+```
+
+The number three refers to the index of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the integer 168, has index 3. To select the string "dad" from the list, which is sevent element in the list, you'll need to put the index 6 inside square brackets:
+
+```
+fam_height[6]
+```
+
+You can also count backwards, using negative indices. If you want to have the last element in the list, the height of dad, you can use the index -1. _NEED MORE EXPLANATION HERE?_
+
+```
+fam_height[-1]
+```
+
+This means that this line and this line, return the same result:
+
+```
+fam_height[6]
+fam_height[-2]
+```
+
+Apart from selecting only single elements from lists, you can also subset multiple elements in a list, thus creating a new list. You can do this by specifying a range, using a colon. Take this piece of code:
+
+```
+fam_height[3:5]
+```
+
+Can you guess what it'll return? A list with the the integer 168, he integer "mom", and the integer 171, corresponding to the 4th, 5th and 6th element in the list maybe? Let's see what the output is.
+
+```
+[168, 'mom']
+```
+
+Apparently, only the elements with index 3 and 4, get returned. The index you specify before the colon is included, the index you specify after the colon is not. Now that you know this, can you tell what this call will return?
+
+```
+fam_height[1:4]
+```
+
+You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. You can use this colon operator in many other ways, but I'll save that for the exercises. You'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
 
 ## Manipulate those lists
