@@ -79,4 +79,97 @@ You probably guessed correctly that this call gives you a list with three elemen
 
 ## Manipulating lists
 
-After creation and subsetting, the final piece of the Python lists puzzle is manipulation.
+After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list. All of this is possible because in Python, a list is a so-called mutable object: after you've created it, you can make changes to it. This contrasts with immutable objects in Python: once they're created, there's no way to make changes to them anymore.
+
+Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 189 centimers, it should be 186 centimters. To change this list elements, which is at index 7, you can use this line:
+
+```
+fam_height[7] = 186
+```
+
+Remember that you can also use a negative index here, like this:
+
+```
+fam_height[-1] = 186
+```
+
+If you now check out fam_height, you'll see that the value is updated:
+
+```
+fam_height
+```
+
+You can even change a range of elements in a list at once. To change the elements "elise" and 173, you can do something like this:
+
+```
+fam_height[0:1] <- ["ellie", 174]
+```
+
+Notice here, that your resulting subset is a list, so you have to pass a list with the same length to make the replacement.
+
+Do you still remember how the plus operator was different for strings and integers? Well, it's again different for lists. If you add use the plus sign with two lists, Python simply pasting together their contents in a single list. Suppose you want to add your own name and height to the fam height list. This will do the trick:
+
+```
+fam_height + ["me", 185]
+```
+
+Of course, you can also store this new list in a variable, `fam_height_ext` for example:
+
+```
+fam_height_ext = fam_height + ["me", 185]
+```
+
+This approach, where you first store the list you want to add in a variable, works fine as well:
+
+```
+my_height = ["me", 185]
+fam_height_ext = fam_height + my_height
+```
+
+Finally, deleting a list is also pretty straightforward, but you'll have to use the `del()` function here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
+
+```
+del(fam_height[2])
+```
+
+If you check out fam_height now, you'll see that the "emma" string is gone now. But watch out here. The fact that you've removed an index, means that all elements after "emma" have shifted up one spot. If you again run the same line, you're again removing the element at index 2, which is emma's length, 168 centimeters:
+
+```
+del(fam_height[2])
+fam_height
+```
+
+_THIS STUFF IS SUPERHARD TO EXPLAIN!_
+
+Understanding how Python lists actually work behind the scenes becomes pretty important now. A list is not really an array of elements of different types. It's actualy an array of _references_ to elements of different types. The actual data, so the strings and the integers, is stored on your computer somewhere, and the "address" to that data is stored in your list. This subtle difference becomes importing when you start copying lists. Let me clarify this with an example.
+
+Suppose you have a list, `x`, with three strings in it, like this:
+
+```
+x = ["a", "b", "c"]
+```
+
+This list "x" is actually an array of references to these values. Let's now store this list as a new variable `y`, by simply using the equals sign:
+
+```
+y = x
+```
+
+`y` contains the exact reference to elements as `x`.
+
+Let's now change the element with index one in the list `y`, as follows:
+
+```
+y[1] = 2
+y
+```
+
+The funky thing is that if you now check out `x` again, also here the second element was changed. That's because your update of the list element has actually changed the value of the data stored on your system, but not the reference to it. BLABLA DISCUSS WITH VINCENT!!!
+
+To do a 'hard copy' of a list, you'll need to explicitly ask for all the list elements, and then put them in a new list, like this:
+
+```
+y = x[:]
+```
+
+If this was a bit too much to take in, don't worry. The exercises will help you understand list manipulation and the subtle inner workings of lists. I'm sure you'll do great!
