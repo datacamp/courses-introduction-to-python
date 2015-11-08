@@ -1,6 +1,6 @@
 ## Lists
 
-Before, you've played around with all kinds of data types. Each variable referenced to a single value, such as a float or a boolean. In data science, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty bothersome to create a new python variable for each data point you collected right?
+Before, you've played around with all kinds of data types. Each variable referenced to a single value, such as a float or a boolean. As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty bothersome to create a new python variable for each data point you collected right?
 
 What you can do instead, is store all this information in a python list. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in centimeters. You can build the list as follows:
 
@@ -8,13 +8,13 @@ What you can do instead, is store all this information in a python list. You can
 [173, 168, 171, 189]
 ```
 
-Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in in front, like here:
+Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here:
 
 ```
 fam_height = [173, 168, 171, 189]
 ```
 
-More formally, a list is simply a data structure that can hold an arbitrary number of elements, and these elements can have any type; they can be floats, integer, booleans, but also more advanced Python types and even other lists. Also, it's perfectly possible to have a list containing different types. Suppose that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
+More formally, a list is simply a data structure that can hold an arbitrary number of elements, and these elements can have any type; they can be floats, integer, booleans, but also more advanced Python types. It's perfectly possible to have a list containing different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
 
 ```
 fam_height = ["elise", 173, "emma", 168, "mom", 171, "dad", 189]
@@ -28,7 +28,7 @@ Now that we have a list that we're satisfied with, let's check out its type with
 type(fam_height)
 ```
 
-The list is an object with the type list. This is thus a new Python type next to the strings, booleans, integers and floats you already know. I told you before that each type has special functionality built in to work them, remember? Well, for lists, this is also true. Python lists host a bunch of tools to subset, extend and adapt them. But let's take this step by step, and have you experiment with list creation first!
+The list is an object of the type list. This is thus a new Python type next to the strings, booleans, integers and floats you already know. I told you before that each type has special functionality built in to work them, remember? Well, for lists, this is also true. Python lists host a bunch of tools to subset, extend and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
 ## Subsetting lists
 
@@ -44,7 +44,7 @@ The number three refers to the index of the list element. Because python uses so
 fam_height[6]
 ```
 
-You can also count backwards, using negative indices. If you want to have the last element in the list, the height of dad, you can use the index -1. _NEED MORE EXPLANATION HERE?_
+You can also count backwards, using negative indices. If you want to have the last element in the list, the height of dad, you can use the index -1. _NEED NICE ANIMATIONS HERE!_
 
 ```
 fam_height[-1]
@@ -63,7 +63,7 @@ Apart from selecting only single elements from lists, you can also subset multip
 fam_height[3:5]
 ```
 
-Can you guess what it'll return? A list with the the integer 168, he integer "mom", and the integer 171, corresponding to the 4th, 5th and 6th element in the list maybe? Let's see what the output is.
+Can you guess what it'll return? A list with the the integer 168, the integer "mom", and the integer 171, corresponding to the 4th, 5th and 6th element in the list maybe? Let's see what the output is.
 
 ```
 [168, 'mom']
@@ -75,7 +75,7 @@ Apparently, only the elements with index 3 and 4, get returned. The index you sp
 fam_height[1:4]
 ```
 
-You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. You can use this colon operator in many other ways, but I'll save that for the exercises. You'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
+You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. You can use this colon operator in many other ways, but I'll save that for the exercises. There, you'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
 
 ## Manipulating lists
 
