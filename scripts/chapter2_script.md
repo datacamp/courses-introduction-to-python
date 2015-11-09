@@ -14,19 +14,19 @@ Of course, also this data structure can be referenced to with a variable. Simply
 fam_height = [173, 168, 171, 189]
 ```
 
-More formally, a list is simply a data structure that can hold an arbitrary number of elements, and these elements can have any type; they can be floats, integer, booleans, but also more advanced Python types. It's perfectly possible to have a list containing different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
+More formally, a list is a so-called compound data type, used to group together other values. These values, or elements, can ahave any type; they can be floats, integer, booleans, but also more advanced Python types. It's perfectly possible to have a list containing different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
 
 ```
 fam_height = ["elise", 173, "emma", 168, "mom", 171, "dad", 189]
 ```
 
-Now that we have a list that we're satisfied with, let's check out its type with the `type()` function. 
+I you check out the type of this list, you will see that it simply "list":
 
 ```
 type(fam_height)
 ```
 
-The list is an object of the type list. This is thus a new Python type next to the strings, booleans, integers and floats you already know. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
+This means we're dealing with a new Python type next to the strings, booleans, integers and floats you already know about. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
 ## Subsetting lists
 
@@ -55,7 +55,7 @@ fam_height[6]
 fam_height[-2]
 ```
 
-Apart from selecting only single elements from lists, you can also subset multiple elements in a list, thus creating a new list. You can do this by specifying a range, using a colon. Take this piece of code:
+Apart from indexing, there's also something called slicing, which allows you to select multiple elements from a list, thus creating a new list. You can do this by specifying a range, using a colon. Take this piece of code:
 
 ```
 fam_height[3:5]
@@ -77,9 +77,9 @@ You probably guessed correctly that this call gives you a list with three elemen
 
 ## Manipulating lists
 
-After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list. All of this is possible because in Python, a list is a so-called mutable object: after you've created it, you can make changes to it. This contrasts with immutable objects in Python: once they're created, there's no way to make changes to them anymore.
+After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
 
-Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 189 centimers, it should be 186 centimters. To change this list elements, which is at index 7, you can use this line:
+Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 189 centimers, it should be 186 centimters. To change this list element, which is at index 7, you can use this line:
 
 ```
 fam_height[7] = 186
@@ -105,23 +105,16 @@ fam_height[0:1] <- ["ellie", 174]
 
 Notice here, that your resulting subset is a list, so you have to pass a list with the same length to make the replacement.
 
-Do you still remember how the plus operator was different for strings and integers? Well, it's again different for lists. If you add use the plus sign with two lists, Python simply pasting together their contents in a single list. Suppose you want to add your own name and height to the fam height list. This will do the trick:
+Do you still remember how the plus operator was different for strings and integers? Well, it's again different for lists. If you use the plus sign with two lists, Python simply pastes together their contents in a single list. Suppose you want to add your own name and height to the fam height list. This will do the trick:
 
 ```
-fam_height + ["me", 185]
+fam_height + ["me", 179]
 ```
 
-Of course, you can also store this new list in a variable, `fam_height_ext` for example:
+Of course, you can also store this new list in a variable, `fam_height_ext` for example.
 
 ```
 fam_height_ext = fam_height + ["me", 185]
-```
-
-This approach, where you first store the list you want to add in a variable, works fine as well:
-
-```
-my_height = ["me", 185]
-fam_height_ext = fam_height + my_height
 ```
 
 Finally, deleting a list is also pretty straightforward, but you'll have to use the `del()` function here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
@@ -130,44 +123,55 @@ Finally, deleting a list is also pretty straightforward, but you'll have to use 
 del(fam_height[2])
 ```
 
-If you check out fam_height now, you'll see that the "emma" string is gone now. But watch out here. The fact that you've removed an index, means that all elements after "emma" have shifted up one spot. If you again run the same line, you're again removing the element at index 2, which is emma's length, 168 centimeters:
+If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by index. If you again run the same line, you're again removing the element at index 2, which is emma's length, 168 centimeters:
 
 ```
 del(fam_height[2])
 fam_height
 ```
 
-_THIS STUFF IS SUPERHARD TO EXPLAIN!_
-
-Understanding how Python lists actually work behind the scenes becomes pretty important now. A list is not really an array of elements of different types. It's actualy an array of _references_ to elements of different types. The actual data, so the strings and the integers, is stored on your computer somewhere, and the "address" to that data is stored in your list. This subtle difference becomes importing when you start copying lists. Let me clarify this with an example.
-
-Suppose you have a list, `x`, with three strings in it, like this:
+Understanding how Python lists actually work behind the scenes becomes pretty important now. What actually happens when you create a new list, `x`, like this?
 
 ```
 x = ["a", "b", "c"]
 ```
 
-This list "x" is actually an array of references to these values. Let's now store this list as a new variable `y`, by simply using the equals sign:
+Well, in a simplified sense, you're storing a list in your computer memory, and store the 'address' of that list, so where the list is in your computer memory, in `x`. This means that `x` does not actually contain all the list elements, it rather contains a reference to the list. For basic operations, the difference is not that important, but it becomes more so when you start copying lists. Let me clarify this with an example.
+
+Let's store the list `x` as a new variable `y`, by simply using the equals sign:
 
 ```
 y = x
 ```
 
-`y` contains the exact reference to elements as `x`.
-
 Let's now change the element with index one in the list `y`, as follows:
 
 ```
-y[1] = 2
+y[1] = "z"
 y
 ```
 
-The funky thing is that if you now check out `x` again, also here the second element was changed. That's because your update of the list element has actually changed the value of the data stored on your system, but not the reference to it. BLABLA DISCUSS WITH VINCENT!!!
-
-To do a 'hard copy' of a list, you'll need to explicitly ask for all the list elements, and then put them in a new list, like this:
+The funky thing is that if you now check out `x` again, also here the second element was changed:
 
 ```
+x
+```
+
+That's because when you copied x to y with the equals sign, you copied the address of the list, not the actual values themselves. Wehn you're updating an element the list, though, it's one and the same list in the computer memory your changing. The references that are stored in `x` and `y` point to this list, so the update is visible both from `x` and `y`.
+
+If you want to create a list `y` that points to a new list in the memory with the same variables, you'll need to use something else than the equals sign. You can use the `list()` function, like this, or use slicing to select all list elements explicitly.
+
+```
+x = ["a", "b", "c"]
+y = list(x)
 y = x[:]
+```
+
+If you now make a change to the list `y` points to, `x` is not affected:
+
+```
+y[1] = "z"
+x
 ```
 
 If this was a bit too much to take in, don't worry. The exercises will help you understand list manipulation and the subtle inner workings of lists. I'm sure you'll do great!
