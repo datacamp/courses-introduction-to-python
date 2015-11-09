@@ -20,15 +20,13 @@ More formally, a list is simply a data structure that can hold an arbitrary numb
 fam_height = ["elise", 173, "emma", 168, "mom", 171, "dad", 189]
 ```
 
-_Notice here that I put in a space after each comma; I did this to enhance the readability of your Python command. I'm following the official python style guide here, that ev_
-
 Now that we have a list that we're satisfied with, let's check out its type with the `type()` function. 
 
 ```
 type(fam_height)
 ```
 
-The list is an object of the type list. This is thus a new Python type next to the strings, booleans, integers and floats you already know. I told you before that each type has special functionality built in to work them, remember? Well, for lists, this is also true. Python lists host a bunch of tools to subset, extend and adapt them. But let's take this step by step, and have you experiment with list creation first!
+The list is an object of the type list. This is thus a new Python type next to the strings, booleans, integers and floats you already know. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
 ## Subsetting lists
 
