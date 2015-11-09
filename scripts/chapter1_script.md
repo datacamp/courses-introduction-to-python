@@ -23,7 +23,7 @@ Now that you've got an idea about different ways of working with Python, I sugge
 
 ## Variables and their types
 
-A hugely important concept in practically every programming language, is the variable. In Python it is too, and it's used literally all the time. You can think of a variable as a way to store information in your program for later use. Let me clarify this with an example. Suppose you measure your height and weight, in metric units: you are 1 point 75 meters tall, and weigh 68 kilograms. You can store these values in two variables, called `height` and `weight`. You can do this with the equals sign, like this:
+A hugely important concept in practically every programming language, is the variable. In Python it is too, and it's used literally all the time. You can think of a variable as a way to reference to values in your program for later use. Let me clarify this with an example. Suppose you measure your height and weight, in metric units: you are 1 point 75 meters tall, and weigh 68 kilograms. You can assign these values to two variables, called `height` and `weight`. You can do this with the equals sign, like this:
 
 ```
 height = 1.79
