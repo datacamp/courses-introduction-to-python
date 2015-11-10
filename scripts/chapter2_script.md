@@ -2,22 +2,22 @@
 
 Before, you've played around with all kinds of data types. Each variable referenced to a single value, such as a float or a boolean. As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty bothersome to create a new python variable for each data point you collected right?
 
-What you can do instead, is store all this information in a python list. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in centimeters. You can build the list as follows:
+What you can do instead, is store all this information in a python list. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
 
 ```
-[173, 168, 171, 189]
+[1.73, 1.68, 1.71, 1.89]
 ```
 
 Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here:
 
 ```
-fam_height = [173, 168, 171, 189]
+fam_height = [1.73, 1.68, 1.71, 1.89]
 ```
 
 More formally, a list is a so-called compound data type, used to group together other values. These values, or elements, can ahave any type; they can be floats, integer, booleans, but also more advanced Python types. It's perfectly possible to have a list containing different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
 
 ```
-fam_height = ["elise", 173, "emma", 168, "mom", 171, "dad", 189]
+fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
 ```
 
 I you check out the type of this list, you will see that it simply "list":
@@ -75,6 +75,8 @@ fam_height[1:4]
 
 You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. You can use this colon operator in many other ways, but I'll save that for the exercises. There, you'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
 
+<= ADD GENERAL FORMULA HERE =>
+
 ## Manipulating lists
 
 After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
@@ -117,7 +119,7 @@ Of course, you can also store this new list in a variable, `fam_height_ext` for 
 fam_height_ext = fam_height + ["me", 185]
 ```
 
-Finally, deleting a list is also pretty straightforward, but you'll have to use the `del()` function here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
+Finally, deleting a list is also pretty straightforward, you'll have to use `del` here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
 
 ```
 del(fam_height[2])
