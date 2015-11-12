@@ -479,9 +479,11 @@ This will not work, though, as you cannot simply sum strings and floats. To do t
 
 *** =instructions
 - Fix the code on the right such that the printout runs without errors.
+- Convert the variable `pi_string` to a float, and store this float a new varialbe, `pi_float`.
 
 *** =hint
 - You should use `str()` twice!
+- Use `float()` on `pi_string` and store the result in `pi_float`.
 
 *** =pre_exercise_code
 ```{python}
@@ -496,6 +498,12 @@ result = 100 * 1.10 ** 7
 
 # Fix the printout
 print("I started with $" + begin + " and now have $" + result + ". Awesome!")
+
+# Definition of pi_string
+pi_string = "3.1415926"
+
+# Convert pi_string into float: pi_float
+
 ```
 
 *** =solution
@@ -506,6 +514,12 @@ result = 100 * 1.10 ** 7
 
 # Fix the printout
 print("I started with $" + str(begin) + " and now have $" + str(result) + ". Awesome!")
+
+# Definition of pi_string
+pi_string = "3.1415926"
+
+# Convert pi_string into float: pi_float
+pi_float = str(pi_string)
 ```
 
 *** =sct
