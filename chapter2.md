@@ -517,10 +517,10 @@ print(first_floor[1] + first_floor[3])
 success_msg("Wonderful!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Subsetting lists of lists
 
-You saw before that a Python list can contain practically anything; even other lists. To subset lists of lists, you can use the same techniques as before: square brackets. Try out the commands in the following code samples in the IPython Shell:
+You saw before that a Python list can contain practically anything; even other lists. To subset lists of lists, you can use the same techniques as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
 
 ```
 x = [["a", "b", "c"], 
@@ -532,56 +532,32 @@ x[2][:2]
 
 `x[2]` results in a list, that you can subset again by adding additional square brackets.
 
-`house`, a list of lists that you've created a while ago, is already available in the Python script. Up to you to extract the data that is asked for!
+What will `house[-1][1]` return? `house`, the list of lists you've created before, is already defined for you, so you can experiment with it in the IPython Shell.
 
 *** =instructions
-- Extract the bedroom area from `house` and print it out.
-- Extract the string `"bathroom"` and print it out.
+- A float: the kitchen area
+- A string: "kitchen"
+- A float: the bathroom area
+- A string: "bathroom"
 
 *** =hint
-- The bedroom info is in the 4th (so index 3) sublist, so you have to start with `house[3]`. Add another pair of square brackets to get the second element (so index 1) from this sublist.
-- The bathroom info is in the last sublist, so you can start with `house[-1]`. Add another pair of square brackets to get the first element (so index 0) from this sublist.
+`house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`. What's the result if you then subset this sublist with `[1]`? You can always try out the command in the IPython Shell!
 
 *** =pre_exercise_code
 ```{python}
-# pec
-```
-
-*** =sample_code
-```{python}
-# house information as list of lists
 house = [["hallway", 11.25], 
          ["kitchen", 18.0], 
          ["living room", 20.0], 
          ["bedroom", 10.75], 
          ["bathroom", 9.50]]
-
-# Extract and print bedroom area
-
-
-# Extract and print bathroom string
-
-```
-
-*** =solution
-```{python}
-# house information as list of lists
-house = [["hallway", 11.25], 
-         ["kitchen", 18.0], 
-         ["living room", 20.0], 
-         ["bedroom", 10.75], 
-         ["bathroom", 9.50]]
-
-# Extract and print bedroom area
-house[3][1]
-
-# Extract and print bathroom string
-house[-1][0]
 ```
 
 *** =sct
 ```{python}
 # TODO VINCENT SCT CODE
-success_msg("Nice! The last piece of the puzzle is list manipulation.")
+msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`."
+msg3 = "Correcto perfecto! The last piece of the list puzzle is manipulation."
+msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
+success_msg("replace me")
 ```
 
