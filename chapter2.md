@@ -89,6 +89,8 @@ A list can contain any Python type. Although it's not really common, a list can 
 
 The printout of the previous exercise wasn't really satisfying: it's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
+The code on the right is the start of solution: for same of the ares, the name of the corresponding room is placed in front. Pay attention here. `"bahtroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earliers.
+
 *** =instructions
 - Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area.
 - Print `areas` again; is the printout more informative this time?
@@ -187,7 +189,7 @@ As a data scientst, you'll often be dealing with a lot of data, and it will make
 
 Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea. 
 
-Don't get confused here: `"hallway"` is a string, while `hallway` is a variable, that refers to a float that you've specified earlier. Python will understand `["hallway", hallway]` as `["hallway", 11.25]`.
+Don't get confused here: `"hallway"` is a string, while `hallway` is a variable, representing the float `11.25` that you've specified earlier.
 
 *** =instructions
 - Finish the list of lists, so that it also contains the bedroom and bathroom data.
@@ -214,7 +216,9 @@ bedroom = 10.75
 bathroom = 9.50
 
 # house information as list of lists
-house = [["hallway", hallway], ["kitchen", kitchen], ["living room", living]]
+house = [["hallway", hallway],
+         ["kitchen", kitchen],
+         ["living room", living]]
 
 # Print out house
 
@@ -233,8 +237,11 @@ bedroom = 10.75
 bathroom = 9.50
 
 # house information as list of lists
-house = [["hallway", hallway], ["kitchen", kitchen], ["living room", living], 
-         ["bedroom", bedroom], ["bathroom", bathroom]]
+house = [["hallway", hallway],
+         ["kitchen", kitchen],
+         ["living room", living],
+         ["bedroom", bedroom],
+         ["bathroom", bathroom]]
 
 # Print out house
 print(house)
@@ -247,5 +254,334 @@ print(type(house))
 ```{python}
 # TODO VINCENT SCT MAGIC
 success_msg("Great! Get ready to learn about list subsetting!")
+```
+
+--- type:VideoExercise lang:python xp:50 skills:2
+## Subsetting lists
+
+*** =video_link
+//player.vimeo.com/video/108225030
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Subset and conquer
+
+Subsetting Python lists is a piece of cake. Take the code sample below, that creates a list `x` and then selects "b" from it; this is the second element, so with index 1. You can also use negative subsetting.
+
+```
+x = list["a", "b", "c", "d"]
+x[1]
+x[-3] # same result!
+```
+
+Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+
+*** =instructions
+- Print out the second element from the `areas` list, so `11.25`.
+- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
+- Select the element representing the area of the living room and print it out.
+
+*** =hint
+- Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a `print()` call.
+- Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a `print()` call.
+- The element representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Select the second element from areas
+
+
+# Select the last element from areas
+
+
+# Select the element representing the area of the living room
+
+```
+
+*** =solution
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Select the second element from areas
+print(areas[1])
+
+# Select the last element from areas
+print(areas[-1])
+
+# Select the element representing the area of the living room
+print(areas[5])
+```
+
+*** =sct
+```{python}
+# TODO VINCENT SCT MAGIC
+success_msg("Good job!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Subset and calculate
+
+After you've extracted values from a list, you can use them to perform additional calculations. Take this example, were the second and fourth element of a list `x` are extracted and pasted together using the `+` operator:
+
+```
+x = ["a", "b", "c", "d"]
+el2 = x[1]
+el4 = x[3]
+print(el2 + el4)
+```
+
+*** =instructions
+- Using a combination of list subsetting and variable assignment, create new variable `eat_sleep`, that contains the sum of the area of the kitchen and the area of the bedroom.
+- Print this new variable `eat_sleep`.
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Create the variable eat_sleep: sum of kitchen and bedroom area
+
+
+# Print the variable eat_sleep
+
+```
+
+*** =solution
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Create the variable eat_sleep: sum of kitchen and bedroom area
+eat_sleep = areas[3] + areas[-3]
+
+# Print the variable eat_sleep
+print(eatslaap)
+```
+
+*** =sct
+```{python}
+# TODO VINCENT SCT MAGIC
+success_msg("Bellissimo!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Slicing and dicing
+
+Selecting single values of a list is just one part of the story. It's also possible to _slice_ your list, which comes down to selecting multiple elements from your list. Use the following syntax:
+
+```
+my_list[begin:end]
+```
+
+The `begin` index will be included, while the `end` index is _not_.
+
+The code sample below shows an example, where the second and third element, corresponding to indices 1 and 2, are selected from a list `x`:
+
+```
+x = ["a", "b", "c", "d"]
+x[1:3]
+```
+
+The elements with index 1 and 2 are included, while the element with index three is not.
+
+*** =instructions
+- Use slicing to create a list, `ground_floor`, that contains the first 6 elements of `areas`.
+- Do a similar thing to create a new variable, `first_floor`, that contains the last 4 elements of `areas`.
+- Print both `ground_floor` and `first_floor` using `print()`.
+
+*** =hint
+- Use the brackets `[0:6]` to build `ground_floor`.
+- Use the barckets `[6:10]` to build `first_floor`.
+- Simply add two `print()` calls to the script to print out `ground_floor` and `first_floor`.
+
+*** =pre_exercise_code
+```{python}
+# no pec
+```
+
+*** =sample_code
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Use slicing to create ground_floor
+
+
+# Use slicing to create first_floor
+
+
+# Print out ground_floor and first_floor
+```
+
+*** =solution
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Use slicing to create ground_floor
+ground_floor = areas[0:6]
+
+# Use slicing to create first_floor
+first_floor = areas[6:10]
+
+# Print out ground_floor and first_floor
+print(ground_floor)
+print(first_floor)
+```
+
+*** =sct
+```{python}
+
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Slicing and dicing (2)
+
+In the video, Filip only discussed the syntax where you specify both where to begin and end the slice of your list:
+
+```
+my_list[begin:end]
+```
+
+However, it's also possible not to specify these indices. If you don't specify the `begin` index, Python figures out that you want to start your slice at the beginning of your list. If you don't specify the `end` index, the slice will go all the way to the last element of your list. To experiment with this, try the following commands in the IPython Shell:
+
+```
+x = ["a", "b", "c", "d"]
+x[:2]
+x[2:]
+x[:]
+```
+
+*** =instructions
+- Use slicing to create the lists `ground_floor` and `first_floor` again, this time without using indices if it's not necessary.
+- Print out the sum of the areas of the bedroom and the bathroom. You can subset `areas` or `first_floor` to do this, that's up to you.
+
+*** =hint
+- To build `ground_floor`, you can use `[:6]`. To build `first_floor`, you can use `[6:]`.
+- You can use standard subsetting techniques to extract the list elements and perform calculations.
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Alternative slicing to create ground_floor
+
+
+# Alternative slicing to create first_floor
+
+
+# Sum of bedroom and bathroom area
+
+```
+
+*** =solution
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Alternative slicing to create ground_floor
+ground_floor = areas[:6]
+
+# Alternative slicing to create first_floor
+first_floor = areas[6:]
+
+# Sum of bedroom and bathroom area
+print(first_floor[1] + first_floor[3])
+```
+
+*** =sct
+```{python}
+# TODO VINCENT SCT MAGIC
+success_msg("Wonderful!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Subsetting lists of lists
+
+You saw before that a Python list can contain practically anything; even other lists. To subset lists of lists, you can use the same techniques as before: square brackets. Try out the commands in the following code samples in the IPython Shell:
+
+```
+x = [["a", "b", "c"], 
+     ["d", "e", "f"], 
+     ["g", "h", "i"]]
+x[2][0]
+x[2][:2]
+```
+
+`x[2]` results in a list, that you can subset again by adding additional square brackets.
+
+`house`, a list of lists that you've created a while ago, is already available in the Python script. Up to you to extract the data that is asked for!
+
+*** =instructions
+- Extract the bedroom area from `house` and print it out.
+- Extract the string `"bathroom"` and print it out.
+
+*** =hint
+- The bedroom info is in the 4th (so index 3) sublist, so you have to start with `house[3]`. Add another pair of square brackets to get the second element (so index 1) from this sublist.
+- The bathroom info is in the last sublist, so you can start with `house[-1]`. Add another pair of square brackets to get the first element (so index 0) from this sublist.
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# house information as list of lists
+house = [["hallway", 11.25], 
+         ["kitchen", 18.0], 
+         ["living room", 20.0], 
+         ["bedroom", 10.75], 
+         ["bathroom", 9.50]]
+
+# Extract and print bedroom area
+
+
+# Extract and print bathroom string
+
+```
+
+*** =solution
+```{python}
+# house information as list of lists
+house = [["hallway", 11.25], 
+         ["kitchen", 18.0], 
+         ["living room", 20.0], 
+         ["bedroom", 10.75], 
+         ["bathroom", 9.50]]
+
+# Extract and print bedroom area
+house[3][1]
+
+# Extract and print bathroom string
+house[-1][0]
+```
+
+*** =sct
+```{python}
+# TODO VINCENT SCT CODE
+success_msg("Nice! The last piece of the puzzle is list manipulation.")
 ```
 
