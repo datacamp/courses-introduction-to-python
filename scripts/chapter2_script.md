@@ -86,7 +86,7 @@ You can use this colon operator in many other ways, but I'll save that for the e
 
 ## Manipulating lists
 
-After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list. 
+After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
 
 Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 189 centimers, it should be 186 centimters. To change this list element, which is at index 7, you can use this line:
 
@@ -178,3 +178,28 @@ x
 ```
 
 If this was a bit too much to take in, don't worry. The exercises will help you understand list manipulation and the subtle inner workings of lists. I'm sure you'll do great!
+
+
+
+## MUTABLE VS IMMUTABLE STUFF
+
+You can do all of this because a Python list is a so-called mutable type. After you've created a list, you can make changes to it. Types like strings, integers and booleans, on the other hand, are not mutable, or immutable: You can't tell integer 3 to become 7:
+
+```
+3 = 7
+```
+
+This is different than creating a variable, say `x`, that pionts to the value 3:
+
+```
+x = 3
+```
+
+And afterwards changing `x`:
+
+```
+x = 7
+```
+
+This call didn't change 3 to be 7. instead, Python stored the value 7 in memory, and now has `x` pointing to 7, not to three.
+
