@@ -554,10 +554,161 @@ house = [["hallway", 11.25],
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT CODE
+# TODO VINCENT SCT MAGIC
 msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`."
 msg3 = "Correcto perfecto! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
 success_msg("replace me")
+```
+
+--- type:VideoExercise lang:python xp:50 skills:2
+## List Manipulation
+
+*** =video_link
+//player.vimeo.com/video/108225030
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Replace list elements
+
+Replacing list elements is pretty easy: subset the list and assign new values to the subset. You can select single elements, but also change entire list slices at once.
+
+Use the IPython Shell to experiment with the commands below. Can you tell what's happening and why?
+
+```
+x = ["a", "b", "c", "d"]
+x[1] = "r"
+x[2:] = ["s", "t"]
+```
+
+For this and the following exercises, you'll continue working on the `areas` list, that contains the names and areas of different rooms in a house.
+
+*** =instructions
+- You did a miscalculation when determining the area of the bathroom; it's 10.50 square meters instead of 9.50. Can you make the changes?
+- Make the `areas` list more trendy: Change "living room" to "chill zone".
+
+*** =hint
+- To select the bathroom area, you can use `[-1]`.
+- To select the `"living room"` element, you can use `[4]`. Next, use `= "chill zone"` to change this element.
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Correct the bathroom area
+
+
+# Change "living room" to "chill zone"
+
+```
+
+*** =solution
+```{python}
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Correct the bathroom area
+areas[-1] = 10.50
+
+# Change "living room" to "chill zone"
+areas[4]= "chill zone"
+```
+
+*** =sct
+```{python}
+# TODO VINCENT SCT MAGIC
+success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list, to update multiple elements in a single command.")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Extend a list
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Delete list elements
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2
+## Inner workings of lists
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- option 1
+- option 2
+- option 3
+
+*** =hint
+hint
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sct
+```{python}
+test_mc(2) # if 2 is the correct option.
 ```
 
