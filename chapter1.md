@@ -144,18 +144,18 @@ The code in the script on the right gives some examples.
 *** =sample_code
 ```{python}
 # Addition and subtraction
-5 + 5 
-5 - 5 
+print(5 + 5)
+print(5 - 5)
 
 # Multiplication and division
-3 * 5
-10 / 2 
+print(3 * 5)
+print(10 / 2)
 
 # Exponentiation
-4 ** 2
+print(4 ** 2)
 
 # Modulo
-18 %% 7
+print(18 % 7)
 
 # How much is your $100 worth after 7 years?
 ```
@@ -163,21 +163,21 @@ The code in the script on the right gives some examples.
 *** =solution
 ```{python}
 # Addition and subtraction
-5 + 5 
-5 - 5 
+print(5 + 5)
+print(5 - 5)
 
 # Multiplication and division
-3 * 5
-10 / 2 
+print(3 * 5)
+print(10 / 2)
 
 # Exponentiation
-4 ** 2
+print(4 ** 2)
 
 # Modulo
-18 %% 7
+print(18 % 7)
 
 # How much is your $100 worth after 7 years?
-100 * 1.1 ** 7
+print(100 * 1.1 ** 7)
 ```
 
 *** =sct
@@ -276,6 +276,8 @@ begin = 100
 
 # Calculate result
 
+
+# Print out result
 ```
 
 *** =solution
@@ -397,16 +399,16 @@ When you sum two strings for example, you'll get different behavior then when yo
 In the script, some variables with different types have already been created. Up to you get operational on them.
 
 *** =instructions
-- Print out the result of `2 * begin`.
-- Print out the result of `mult * begin`.
-- Print out the result of `desc + desc`
-- Print out the result of `profitable * 5`
+- Calculate the product of `mult` and `begin` and store the result in `year1`. 
+- You're multiplying a string and a float here; what do you think the resulting type will be? Find out by printing the type (`type()`) of `year1`.
+- Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
+- Print out `doubledesc`. Did you expect this?
 
 *** =hint
-- Inside the python script, write `print(2 * begin)`.
-- Put `mult * begin` inside the `print()` function.
-- Put `desc + desc` inside the `print()` function.
-- Put `profitable * 5` inside the `print()` function.
+- Assign `mult * begin` to a new variable, `year1`.
+- To print the type of a variable `x`, use `print(type(x))`.
+- Assign `desc + desc` to a new variable, `doubledesc`.
+- To print a variable `x`, write `print(x)` in the script.
 
 *** =pre_exercise_code
 ```{python}
@@ -419,18 +421,18 @@ In the script, some variables with different types have already been created. Up
 begin = 100
 mult = 1.1
 desc = "compound interest"
-profitable = True
 
-# Print out result of 2 * begin
-
-
-# Print out result of mult * begin
+# Assign product of mult and begin to year1
 
 
-# Print out result of desc + desc
+# Print the type of year1
 
 
-# Print out result of profitable * 5
+# Assign sum of desc and desc to doubledesc
+
+
+# Print out doubledesc
+
 ```
 
 *** =solution
@@ -439,25 +441,24 @@ profitable = True
 begin = 100
 mult = 1.1
 desc = "compound interest"
-profitable = True
 
-# Print out result of 2 * begin
-print(2 * begin)
+# Assign product of mult and begin to year1
+year1 = begin * mult
 
-# Print out result of mult * begin
-print(mult * begin)
+# Print the type of year1
+print(type(year1))
 
-# Print out result of desc + desc
-print(desc + desc)
+# Assign sum of desc and desc to doubledesc
+doubledesc = desc + desc
 
-# Print out result of profitable * 5
-print(profitable * 5)
+# Print out doubledesc
+print(doubledesc)
 ```
 
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-success_msg("Nice. Notice how `desc + desc` causes the strings to be pasted together. The boolean `True` is treated as 1 if you try to do calculations.")
+success_msg("Nice. Notice how `desc + desc` causes the strings to be pasted together.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
