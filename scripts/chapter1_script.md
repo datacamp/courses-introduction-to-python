@@ -10,13 +10,14 @@ Currently, there are two common versions of Python, version 2.7 and 3.5 and late
 
 Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can simply type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a fancy calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. What about mutliplying 2.3 and 6? The shell can handle it. The Python shell that's used here is not actually the original one; we're using IPython, short for Interactive Python. It's a package that enhances your Python experience when you're working directly in the shell. Think of it as Python on steroids.
 
-Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are ordinary text files with the extension _dot py_. It's basically a list of Python commands that are compiled and executed, similar to when you type them in the shell yourself. Let's put the commands from before in a script now, my_code.py. In DataCamp's interface, you can do that here. The next step is executing the script. You do this with the 'Submit Answer' button on DataCamp.
-
 ```
-python ~/python_scripts/my_code.py
+4 + 5
+2.3 * 6
 ```
 
-ASK GLENN HOW OUTPUT DIFFERS!
+Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are ordinary text files with the extension _dot py_. It's basically a list of Python commands that are compiled and executed, similar to when you type them in the shell yourself. Let's put the commands from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script. You do this with 'Submit Answer'.
+
+If you run this line of code in the DataCamp interface, no output will be shown. That's because you have to explicitly use `print()` inside scripts if you want to generate output during executing. Let's wrap our previous calculations in `print()` calls, and rerun the code. This time, the same output as before is generated, great!
 
 Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing. 
 
