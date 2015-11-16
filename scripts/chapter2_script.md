@@ -1,8 +1,8 @@
 ## Lists
 
-Before, you've played around with all kinds of data types. Each variable referenced to a single value, such as a float or a boolean. As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty bothersome to create a new python variable for each data point you collected right?
+Before, you've played around with all kinds of data types. Each variable referenced to a single value, such as a float or a boolean. As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty stupid to create a new python variable for each data point you collected right?
 
-What you can do instead, is store all this information in a python list. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
+What you can do instead, is store all this information in a python _list_. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
 
 ```
 [1.73, 1.68, 1.71, 1.89]
@@ -14,13 +14,13 @@ Of course, also this data structure can be referenced to with a variable. Simply
 fam_height = [1.73, 1.68, 1.71, 1.89]
 ```
 
-More formally, a list is a so-called compound data type, used to group together other values. These values, or elements, can ahave any type; they can be floats, integer, booleans, but also more advanced Python types. It's perfectly possible to have a list containing different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
+More formally, a list is a so-called compound data type, used to group together other values. These values, or elements, can have any type; they can be floats, integer, booleans, but also more advanced Python types, even lists. It's perfectly possible to have a list containing different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
 
 ```
 fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
 ```
 
-I you check out the type of this list, you will see that it simply "list":
+I you check out the type of this list, you will see that it is simply "list":
 
 ```
 type(fam_height)
@@ -36,13 +36,13 @@ After you've created your very own Python list, you might wonder how you can acc
 fam_height[3]
 ```
 
-The number three refers to the index of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the integer 168, has index 3. To select the string "dad" from the list, which is sevent element in the list, you'll need to put the index 6 inside square brackets:
+The number three refers to the _index_ of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the integer 168, has index 3. To select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
 
 ```
 fam_height[6]
 ```
 
-You can also count backwards, using negative indices. If you want to have the last element in the list, the height of dad, you can use the index -1. _NEED NICE ANIMATIONS HERE!_
+You can also count backwards, using negative indices. If you want to have the last element in the list, the height of dad, you can use the index -1.
 
 ```
 fam_height[-1]
@@ -67,30 +67,31 @@ Can you guess what it'll return? A list with the the integer 168, the integer "m
 [168, 'mom']
 ```
 
-Apparently, only the elements with index 3 and 4, get returned. The index you specify before the colon is included, the index you specify after the colon is not. Now that you know this, can you tell what this call will return?
+Apparently, only the elements with index 3 and 4, get returned. In general, the index you specify before the colon, so where the slice starts, is included, while the index you specify after the colon, where the slice stops, is not.
+
+```
+li[begin:end]
+```
+
+With all this, can you tell what this call will return?
 
 ```
 fam_height[1:4]
 ```
 
-You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. You can use this colon operator in many other ways, but I'll save that for the exercises. There, you'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
+You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. 
 
-<= ADD GENERAL FORMULA HERE =>
+You can use this colon operator in many other ways, but I'll save that for the exercises. There, you'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
+
 
 ## Manipulating lists
 
-After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
+After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list. 
 
 Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 189 centimers, it should be 186 centimters. To change this list element, which is at index 7, you can use this line:
 
 ```
 fam_height[7] = 186
-```
-
-Remember that you can also use a negative index here, like this:
-
-```
-fam_height[-1] = 186
 ```
 
 If you now check out fam_height, you'll see that the value is updated:
@@ -99,7 +100,7 @@ If you now check out fam_height, you'll see that the value is updated:
 fam_height
 ```
 
-You can even change a range of elements in a list at once. To change the elements "elise" and 173, you can do something like this:
+You can even change an entire list slice at once. To change the elements "elise" and 173, you can do something like this:
 
 ```
 fam_height[0:1] <- ["ellie", 174]

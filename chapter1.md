@@ -7,16 +7,14 @@ description : An introduction to the basic concepts of Python and its place in t
 ## First steps into Python
 
 *** =video_link
-```{python}
 //player.vimeo.com/video/108225030
-```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## The Python Interface
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
-You can hit _Submit Answer_ as often as you want: you will not loose any experience points. If you're stuck, you can ask for the Hint, and ultimately the Solution. This will cost you XP points, though.
+You can hit _Submit Answer_ as often as you want: you will not loose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
 You can also use the IPython Shell interactively: simply type commands and hit Enter. When you work in the shell directly, your code will not be checked for correctness: a great way to experiment.
 
@@ -192,9 +190,7 @@ success_msg("Time for another video!")
 ## Variables and types
 
 *** =video_link
-```{python}
 //player.vimeo.com/video/108225030
-```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Variable Assignment
