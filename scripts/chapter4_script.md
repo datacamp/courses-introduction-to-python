@@ -165,15 +165,18 @@ np.median(np_hw_city[:,0])
 
 You can do similar things for the weight column in `np_hw_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
 
-Finally, in general, it makes sense that you are heavier if you are taller, or that you are lighter when you are small, right? To see whether two data sources are correlated, so if the one tends to be high when the other tends to be high, you can use `np.correlate()`:
+Apart from `mean()` and `median()`, there's also other functions, like `correlate()` to check if for example height and weight are correlated,
 
 ```
-np.correlate()
+np.correlate(np_hw_city[:,0], np_hw_city[:,1])
+```
 
+`std()`, for standard deviation. 
 
-and `np_weights` arrays contain
+```
+np.sdt(np_hw_city[:,0]
+```
 
+Numpy also features more basic functions, such as `sum()` and `sort()`, which also exist in the basic Python distribution. However, the big difference here is speed. Because Numpy enforces a single data type in an array, it can use optimized C code behind the scenes, making your analysis superfast. 
 
-You can do this by getting summarizing statistics about your data. What's the average price of a US ? What's the most occuring answer to a particular survey question? Is their a correlation between the good weather and the amount of ice creams sold?
-
-Going to into all bits and pieces of Numpy would take us too far, though. 
+Finally, another great tool to get some sense of your data is to visualize it, but that's something for later. First, head over to the exercises to learn how to explore your Numpy arrays!
