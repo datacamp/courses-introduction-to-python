@@ -141,5 +141,39 @@ Finally, 2D numpy arrays enable you to element-wise calculations, the same way y
 
 ## Basic Statistics with Numpy
 
-If Numpy was only about efficient data structures in Python 
+A typical first step in analyzing your data, is getting to know your data. For the Numpy arrays from before, this is pretty easy, because it isn't a lot of data. But imagine you conduct a city-wide survey where you ask 5000 people about their height and weight. You'll probably end up with something like this: a 2D numpy array, which I named `np_hw_city`, that has 5000 rows, corresponding to the 5000 people, and two columns, corresponding to the height and the weight.
 
+```
+# build height and weight
+np_hw_city = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
+          [65.4, 59.2, 63.6, 88.4, 68.7]]).transpose()
+```
+
+Simply staring at these numbers as a zombie won't give you any insights. What you _can_ do, though, is generating summarizing statistics about your data. Aside from an efficient data structure for number crunching, it happens that Numpy is also good at doing these kinds of things. 
+
+For starters, you can try to find out the average height of these 5000 people, with Numpy's mean function. Because it's a function from the Numpy package, don't forget to start with "np dot". 
+
+```
+np.mean(np_hw_city[:,0])
+```
+
+Of course, I first had to do a subsetting operation to get the height column from the matrix. It appears that on average, people are xxx meters tall. What about the median height? This is the height of the middle person if you sort all persons from small to tall. Instead of writing complicated python code to figure this out, you can simply use Numpy's `median()` function:
+
+```
+np.median(np_hw_city[:,0])
+```
+
+You can do similar things for the weight column in `np_hw_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
+
+Finally, in general, it makes sense that you are heavier if you are taller, or that you are lighter when you are small, right? To see whether two data sources are correlated, so if the one tends to be high when the other tends to be high, you can use `np.correlate()`:
+
+```
+np.correlate()
+
+
+and `np_weights` arrays contain
+
+
+You can do this by getting summarizing statistics about your data. What's the average price of a US ? What's the most occuring answer to a particular survey question? Is their a correlation between the good weather and the amount of ice creams sold?
+
+Going to into all bits and pieces of Numpy would take us too far, though. 
