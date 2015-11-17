@@ -5,7 +5,7 @@ In this chapter, I'm going to introduce you to functions. Functions aren't entir
 Suppose you have a list that we've seen before, containing only the heights of your family:
 
 ```
-fam_height = [173, 168, 171, 189]
+fam_height = [1.73, 1.68, 1.71, 1.89]
 ```
 
 Say that you want to get the maximum value in this list. Instead of writing your own piece of Python code that goes through the list and finds the highest value, you can also use Python's `max()` function. This is one of Python's built-in functions, just like `print()`. We simply pass `fam_height` to `max()` inside parentheses:
@@ -14,7 +14,7 @@ Say that you want to get the maximum value in this list. Instead of writing your
 max(fam_height)
 ```
 
-The output makes sense: 189, the highest number in the list. `max()` worked kind of like a black box here: you passed it a list, the implementation of `max()`, that you don't know, did its magic, and produced an output. How `max()` actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own implementation, which made your life easier.
+The output makes sense: 1.89, the highest number in the list. `max()` worked kind of like a black box here: you passed it a list, the implementation of `max()`, that you don't know, did its magic, and produced an output. How `max()` actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own implementation, which made your life easier.
 
 Of course, it's possible to also assign the result of a function call to a new variable, like here:
 
@@ -25,13 +25,13 @@ tallest = max(fam_height)
 Another one of these built-in functions is `round()`. It takes a float and rounds it to 0 digits after the decimal point, as this example shows:
 
 ```
-round(7.316)
+round(1.73)
 ```
 
-The result is stil a float, as you can see from the tracing .0 part. It would also be nice if you could choose the number of digits after the decimal point, right? `round()` allows you to this, by passing a second argument, 2 for example:
+The result is stil a float, as you can see from the tracing .0 part. It would also be nice if you could choose the number of digits after the decimal point, right? `round()` allows you to this, by passing a second input, 1 for example.
 
 ```
-round(7.316, 2)
+round(1.73, 1)
 ```
 
 How did I know about these `max()` and `round()` functions? Well, this is something you learn with experience. Whenever you are doing a pretty standard task in Python, you can be pretty sure that there's already a function that can do this for you. A quick internet search will help you out. If you know the name of the function to use, but not how to use it, you can use the `help()` function, like this:
@@ -64,7 +64,7 @@ Off to the exercises now, where you'll learn about interesting functions and how
 Calling built-in functions is only a part of the story. In Python, you also have something called methods, which are functions that "belong to" Python objects. Every string, boolean, list, and so on, is a Python object that has a bunch of methods associated with them. You can call these methods, with the dot notation. Let's try to add elements to the list of family heights, this time with the `append()` method.
 
 ```
-fam_height = ["elise", 173, "emma", 168, "mom", 171, "dad", 189]
+fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
 ```
 
 Simply type fam_height, dot, append, and then pass the value you want to add to the list between parentheses, like this:
