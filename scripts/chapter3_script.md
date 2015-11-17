@@ -1,6 +1,6 @@
 ## Functions, what are they?
 
-In this chapter, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. Print, for example, is a function to print out values in a script. But what is a function? Simply put, a function is a piece of reusable code that is aimed at solving a particular task. You can then call these function instead of having to write this code yourself. Maybe an example can clarify things here.
+In this chapter, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. Print, for example, is a function to print out values when your executing a script. But what is a function? Simply put, a function is a piece of reusable code that is aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
 
 Suppose you have a list that we've seen before, containing only the heights of your family:
 
