@@ -30,13 +30,13 @@ This means we're dealing with a new Python type next to the strings, booleans, i
 
 ## Subsetting lists
 
-After you've created your very own Python list, you might wonder how you can access information in the list. Suppose you want to select the height of your youngest sister, emma. As you can see from fam_height here, her height is 168 centimers, and this integer is the fourth element in the list. To access this element, you'll need this line of code:
+After you've created your very own Python list, you might wonder how you can access information in the list. Suppose you want to select the height of your youngest sister, emma. As you can see from fam_height here, her height is 1.68 meters, and this integer is the fourth element in the list. To access this element, you'll need this line of code:
 
 ```
 fam_height[3]
 ```
 
-The number three refers to the _index_ of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the integer 168, has index 3. To select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
+The number three refers to the _index_ of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the float 1.68, has index 3. To select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
 
 ```
 fam_height[6]
@@ -61,7 +61,7 @@ Apart from indexing, there's also something called slicing, which allows you to 
 fam_height[3:5]
 ```
 
-Can you guess what it'll return? A list with the the integer 168, the integer "mom", and the integer 171, corresponding to the 4th, 5th and 6th element in the list maybe? Let's see what the output is.
+Can you guess what it'll return? A list with the the float 1.68, the string "mom", and the float 1.71, corresponding to the 4th, 5th and 6th element in the list maybe? Let's see what the output is.
 
 ```
 [168, 'mom']
@@ -73,7 +73,7 @@ Apparently, only the elements with index 3 and 4, get returned. In general, the 
 li[begin:end]
 ```
 
-With all this, can you tell what this call will return?
+With this in mind, can you tell what this call will return? <PAUSE>
 
 ```
 fam_height[1:4]
@@ -88,10 +88,10 @@ You can use this colon operator in many other ways, but I'll save that for the e
 
 After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
 
-Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 189 centimers, it should be 186 centimters. To change this list element, which is at index 7, you can use this line:
+Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 centimters. To change this list element, which is at index 7, you can use this line:
 
 ```
-fam_height[7] = 186
+fam_height[7] = 1.86
 ```
 
 If you now check out fam_height, you'll see that the value is updated:
@@ -100,10 +100,10 @@ If you now check out fam_height, you'll see that the value is updated:
 fam_height
 ```
 
-You can even change an entire list slice at once. To change the elements "elise" and 173, you can do something like this:
+You can even change an entire list slice at once. To change the elements "elise" and 1.73, you can do something like this:
 
 ```
-fam_height[0:1] <- ["ellie", 174]
+fam_height[0:1] <- ["ellie", 1.74]
 ```
 
 Notice here, that your resulting subset is a list, so you have to pass a list with the same length to make the replacement.
@@ -111,13 +111,13 @@ Notice here, that your resulting subset is a list, so you have to pass a list wi
 Do you still remember how the plus operator was different for strings and integers? Well, it's again different for lists. If you use the plus sign with two lists, Python simply pastes together their contents in a single list. Suppose you want to add your own name and height to the fam height list. This will do the trick:
 
 ```
-fam_height + ["me", 179]
+fam_height + ["me", 1.79]
 ```
 
 Of course, you can also store this new list in a variable, `fam_height_ext` for example.
 
 ```
-fam_height_ext = fam_height + ["me", 185]
+fam_height_ext = fam_height + ["me", 1.79]
 ```
 
 Finally, deleting a list is also pretty straightforward, you'll have to use `del` here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
