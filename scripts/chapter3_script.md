@@ -115,5 +115,17 @@ fam_height.index("dad")
 
 It's time to head over to the exercises and add methods to your evergrowing skill set!
 
-
 ## Packages
+
+By now, I hope you're convinced that python functions and methods are extremely powerful: you can basically use other people's code to solve your own problems. That's the true open source spirit if you ask me. However, making available all functions and methods written by all Python developers in the universe would in the Python distribution would be a mess. There would be tons and tons of code in there, that you'll never need.
+
+This is where packages come into play. A python package is basically a set of Python scripts, that specify functions, methods and other Python objects aimed at solving particular problems. There are hundreds, if not thousands of Python packages available from the internet, also for data science related tasks: there's numpy to efficiently work with arrays, matplotlib for data visualization, scikit-learn for machine learning, and many others.
+
+All these packages are not available in Python by default. To use Python packages, you'll have to install them on your system, and then put code in your script to tell Python that you want to use these packages. This is fairly easy, so let's get to it!
+
+CONTINUE HERE
+
+
+
+
+
