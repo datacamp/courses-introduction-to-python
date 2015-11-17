@@ -41,19 +41,19 @@ weight = 68.7
 If you now type the name of the variable, Python looks for the value that goes behind the variable, and prints it out. Let's try to calculate the Body Mass Index, or BMI, which is your weight in kilograms divided by the square of your height in meters. You can do this with the actual values, like this,
 
 ```
-68.7 / 1.79 ^ 2
+68.7 / 1.79 ** 2
 ```
 
 but you can just as well use the variables height and weight, like this.
 
 ```
-weight / height ^ 2
+weight / height ** 2
 ```
 
 Finally, this version has Python store the result in a new variable, `bmi`. `bmi` now contains the same value as the one you calculated earlier.
 
 ```
-bmi = weight / height ^ 2
+bmi = weight / height ** 2
 ```
 
 So far, we've only worked with numerical values, such as height and weight. In Python, these numbers all have a specific type. You can check out the type of a value with the `type()` function. To see the type of our weight value, simply write type and then weight between parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a decimal part. Python als has a type for integers: `int`, like this example:
