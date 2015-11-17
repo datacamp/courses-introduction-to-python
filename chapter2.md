@@ -616,7 +616,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 areas[-1] = 10.50
 
 # Change "living room" to "chill zone"
-areas[4]= "chill zone"
+areas[4] = "chill zone"
 ```
 
 *** =sct
@@ -628,14 +628,24 @@ success_msg("Sweet! As the code sample showed, you can also slice a list and rep
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Extend a list
 
-Assignment comes here. Use Markdown for text formatting.
+Next to changing elements a list, you sure want to be able to add elements to it, right?
+
+This is dead simple: use the `+` operator:
+
+```
+x = ["a", "b", "c", "d"]
+y = x + ["e", "f"]
+```
+
+After updating some elements in the `areas` list, you realize that you forgot to mention some parts of your house. Can you add the necessary data?
 
 *** =instructions
-- instruction 1
-- instruction 2
+- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
+- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45` and name the resulting list `areas_2`.
 
 *** =hint
-hint comes here
+- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24]`.
+- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
 
 *** =pre_exercise_code
 ```{python}
@@ -644,71 +654,142 @@ hint comes here
 
 *** =sample_code
 ```{python}
-# sample code
+# Create the areas list and make some changes
+areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0, 
+         "bedroom", 10.75, "bathroom", 10.50]
+
+# Add poolhouse data to areas, new list is areas_1
+
+
+# Add garage data to areas_1, new list is areas_2
+
 ```
 
 *** =solution
 ```{python}
-# solution code
+# Create the areas list (updated version)
+areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0, 
+         "bedroom", 10.75, "bathroom", 10.50]
+
+# Add poolhouse data to areas, new list is areas_1
+areas_1 = areas + ["poolhouse", 24.5]
+
+# Add garage data to areas_1, new list is areas_2
+areas_2 = areas_1 + ["garage", 15.45]
 ```
 
 *** =sct
 ```{python}
-# sct code
-```
-
---- type:NormalExercise lang:python xp:100 skills:2
-## Delete list elements
-
-Assignment comes here. Use Markdown for text formatting.
-
-*** =instructions
-- instruction 1
-- instruction 2
-
-*** =hint
-hint comes here
-
-*** =pre_exercise_code
-```{python}
-# pec
-```
-
-*** =sample_code
-```{python}
-# sample code
-```
-
-*** =solution
-```{python}
-# solution code
-```
-
-*** =sct
-```{python}
-# sct code
+# TODO VINCENT SCT MAGIC
+success_msg("Cool! The list is shaping up nicely!")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
-## Inner workings of lists
+## Delete list elements
 
-Assignment comes here. Use Markdown for text formatting.
+Finally, you can also remove elements from your list. You can do this with the `del` statement:
+
+```
+x = ["a", "b", "c", "d"]
+del(x[1])
+```
+
+Pay attention here: as soon as you remove an element from a list, the indices of the elements that come after the deleted element all change!
+
+The updated and extended version of `areas` that you've built in the previous exercises is coded below.
+
+```
+areas = ["hallway", 11.25, "kitchen", 18.0, 
+        "chill zone", 20.0, "bedroom", 10.75, 
+         "bathroom", 10.50, "poolhouse", 24.5, 
+         "garage", 15.45]
+```
+
+You decide to remove the string and float that corresponds to your poolhouse. Which of the code chunks does this correctly?  The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
+
+```
+# Use of ;
+command1; command2
+
+# Separate lines
+command1
+command2
+```
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- `del(areas[10]); del(areas[11])`
+- `del(areas[10:11])`
+- `del(areas[-4:-2])`
+- `del(areas[-3]); del(areas[-3])`
 
 *** =hint
-hint
+You can simply try all the different options to see if they work. Just make sure to re-initialize the `areas` list again before you try a new option.
 
 *** =pre_exercise_code
 ```{python}
-# pec
 ```
 
 *** =sct
 ```{python}
-test_mc(2) # if 2 is the correct option.
+msg1 = msg2 = msg4 = "This code chunk will not correctly remove the poolhouse-related information. Try again."
+msg3 = "Correct! You'll learn about easier ways to remove specific elements from Python lists later on."
+success_msg("Replace me")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Inner workings of lists
+
+At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
+
+The Python code in the script already creates a list with the name `areas`, and a _shallow copy_ of the same list: `areas_copy`. Next, the first element in the `areas_copy` list is changed, and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to one and the same list.
+
+If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a _deep copy_ of the `areas` list. You can do this with `list()` or by using `[:]`.
+
+*** =instructions
+- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` becomes a _deep copy_ instead of a _shallow copy_. 
+- Now, changes made to `areas_copy` shouldn't affect `areas`. Hit _Submit Answer_ to check this.
+
+*** =hint
+- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+
+*** =pre_exercise_code
+```{python}
+# no pec
+```
+
+*** =sample_code
+```{python}
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Create areas_copy
+areas_copy = areas
+
+# Change areas_copy
+areas_copy[0] = 5.0
+
+# Print areas
+print(areas)
+```
+
+*** =solution
+```{python}
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Create areas_copy
+areas_copy = list(areas)
+
+# Change areas_copy
+areas_copy[0] = 5.0
+
+# Print areas
+print(areas)
+```
+
+*** =sct
+```{python}
+# TODO VINCENT SCT MAGIC
+success_msg("Nice! The difference between shallow and deep copies is subtle, but can be really important. Try to keep in mind how a list actually in stored in the computer's memory.")
 ```
 
