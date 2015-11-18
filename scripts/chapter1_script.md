@@ -1,14 +1,14 @@
-## First steps in Python
+## Hello Python!
 
-Hi, my name is Filip, and I'm a data scientist at DataCamp. Together with Vincent, I've been working on the _Introduction to Python for Data Science_ course. It's a long name, but that's to stress something: this course is not just another Python tutorial. Instead, the focus will be on using Python specifically for data science. By the end of this course, you'll know about powerful ways to store and manipulate data and to deploy powerful data science tools for your own analyses.
+Hi, my name is Filip, I'm a data scientist at DataCamp and I've been working on the _Introduction to Python for Data Science_ course. It's a long name, but that's to stress something: this course is not just another Python tutorial. Instead, the focus will be on using Python specifically for data science. By the end of this course, you'll know about powerful ways to store and manipulate data and to deploy powerful data science tools for your own analyses.
 
 You will learn Python for Data Science through video lessons, like this one, that are followed by interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
 
-Python is originally conceived by Guido Van Rossum, a Dutch programmer and big fan of Monty Python's flying circus. What started as a hobby project, soon became a general purpose programming language. Nowadays, Python can be used to build practically any piece of software you can think of. That's because it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these package specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales? There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that. 
+Python is originally conceived by Guido Van Rossum. What started as a hobby project, soon became a general purpose programming language: you can use Python to build practically any piece of software you can think of. That's because it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these package specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales? There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that. 
 
 Currently, there are two common versions of Python, version 2.7 and 3.5 and later. Apart from some syntactical differences, they are pretty similar, but as support for version 2 will fade over time, our courses focus on Python 3. To install Python 3 on your own system, follow the steps at this URL.
 
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can simply type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a fancy calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. What about mutliplying 2.3 and 6? The shell can handle it. The Python shell that's used here is not actually the original one; we're using IPython, short for Interactive Python. It's a package that enhances your Python experience when you're working directly in the shell. Think of it as Python on steroids.
+Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can simply type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a fancy calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. What about mutliplying 2.3 and 6? The shell can handle it. The Python shell that's used here is not actually the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python.
 
 ```
 4 + 5
@@ -26,7 +26,7 @@ Now that you've got an idea about different ways of working with Python, I sugge
 
 ## Variables and types
 
-A hugely important concept in practically every programming language, is the variable. Python isn't different: variables are used literally all the time. You can think of a variable as a way to reference to values in your program for later use. Not sure what I mean? Maybe an example can clarify. Suppose you measure your height and weight, in metric units: you are 1 point 75 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, called `height` and `weight`. You can do this with the equals sign, like this:
+A hugely important concept in practically every programming language, is the variable. Python isn't different: variables are used literally all the time. You can think of a variable as a way to reference to values in your program for later use. Not sure what I mean? Maybe an example can clarify. Suppose you measure your height and weight, in metric units: you are 1 point 79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, called `height` and `weight`. You can do this with the equals sign, like this:
 
 ```
 height = 1.79
@@ -38,7 +38,15 @@ For weight, you can do a similar thing:
 weight = 68.7
 ```
 
-If you now type the name of the variable, Python looks for the value that goes behind the variable, and prints it out. Let's try to calculate the Body Mass Index, or BMI, which is your weight in kilograms divided by the square of your height in meters. You can do this with the actual values, like this,
+If you now type the name of the variable,
+
+```
+height
+```
+
+Python looks for the value that goes behind the variable, and prints it out. Notice that when you create a variable, you don't generate an output, because Python assumes you'll be using this variable later on.
+
+Let's now calculate the Body Mass Index, or BMI, which is your weight in kilograms divided by the square of your height in meters. You can do this with the actual values, like this,
 
 ```
 68.7 / 1.79 ** 2
@@ -56,7 +64,7 @@ Finally, this version has Python store the result in a new variable, `bmi`. `bmi
 bmi = weight / height ** 2
 ```
 
-So far, we've only worked with numerical values, such as height and weight. In Python, these numbers all have a specific type. You can check out the type of a value with the `type()` function. To see the type of our weight value, simply write type and then weight between parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a decimal part. Python als has a type for integers: `int`, like this example:
+So far, we've only worked with numerical values, such as height and weight. In Python, these numbers all have a specific type. You can check out the type of a value with the `type()` function. To see the type of our bmi value, simply write type and then bmi between parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a decimal part. Python als has a type for integers: `int`, like this example:
 
 ```
 day_of_week = 5
@@ -67,9 +75,9 @@ To do data science, you'll need more than ints and floats, though. Python featur
 A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
 
 ```
-"body mass index"
-x = 'this works too'
-str(x)
+x = "body mass index"
+y = 'this works too'
+type(y)
 ```
 
 The Boolean is a type that can either by True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
