@@ -556,7 +556,7 @@ house = [["hallway", 11.25],
 ```{python}
 # TODO VINCENT SCT MAGIC
 msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`."
-msg3 = "Correcto perfecto! The last piece of the list puzzle is manipulation."
+msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
 success_msg("replace me")
 ```

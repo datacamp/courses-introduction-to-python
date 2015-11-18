@@ -14,7 +14,13 @@ Say that you want to get the maximum value in this list. Instead of writing your
 max(fam_height)
 ```
 
-The output makes sense: 1.89, the highest number in the list. `max()` worked kind of like a black box here: you passed it a list, the implementation of `max()`, that you don't know, did its magic, and produced an output. How `max()` actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own implementation, which made your life easier.
+The output makes sense: 1.89, the highest number in the list. 
+
+`max()` worked kind of like a black box here: you passed it a list, the implementation of `max()`, that you don't know, did its magic, and produced an output. How `max()` actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own implementation, which made your life easier.
+
+```
+INCLUDE VISUALS
+```
 
 Of course, it's possible to also assign the result of a function call to a new variable, like here:
 
@@ -28,7 +34,7 @@ Another one of these built-in functions is `round()`. It takes a float and round
 round(1.73)
 ```
 
-The result is stil a float, as you can see from the tracing .0 part. You can also choose the number of digits after the decimal point, by passing   `round()` a second input, 1 for example. You separate different inputs with a comma.
+You can tell from the .0 part that the result is still a float. You can also choose the number of digits after the decimal point, by passing   `round()` a second input, 1 for example. You separate different inputs with a comma.
 
 ```
 round(1.73, 1)
