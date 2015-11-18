@@ -4,7 +4,7 @@ title       : Python Basics
 description : An introduction to the basic concepts of Python and its place in the Data Science community
 
 --- type:VideoExercise lang:python xp:50 skills:2
-## First steps into Python
+## Hello Python!
 
 *** =video_link
 //player.vimeo.com/video/108225030
