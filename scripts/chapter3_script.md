@@ -28,13 +28,13 @@ Another one of these built-in functions is `round()`. It takes a float and round
 round(1.73)
 ```
 
-The result is stil a float, as you can see from the tracing .0 part. It would also be nice if you could choose the number of digits after the decimal point, right? `round()` allows you to this, by passing a second input, 1 for example.
+The result is stil a float, as you can see from the tracing .0 part. You can also choose the number of digits after the decimal point, by passing   `round()` a second input, 1 for example. You separate different inputs with a comma.
 
 ```
 round(1.73, 1)
 ```
 
-How did I know about these `max()` and `round()` functions? Well, this is something you learn with experience. Whenever you are doing a pretty standard task in Python, you can be pretty sure that there's already a function that can do this for you. A quick internet search will help you out. If you know the name of the function to use, but not how to use it, you can use the `help()` function, like this:
+If you don't know how to use the `round()` function, you can use the `help()` function to open up the documentation on the function, as follows; 
 
 ```
 help(round)
@@ -49,13 +49,21 @@ round(...)
     same type as the number. ndigits may be negative.
 ```
 
-The description here perfectly summarizes it. It's also clear that the function only takes numerical values. What if you call this function with the list `fam_height` from before as an input? Python raises an error:
+It appears that `round()` takes two inputs, also called arguments: `number` and `ndigits`. The first argument you pass has to be a numerical value. From the square brackets around the comma and `ndigits`, you can tell that the second argument is optional. If you don't specify this argument, `round()` automatically rounds your number to zero digits. So this call
 
 ```
-round(fam_height)
+round(1.73)
 ```
 
-In the documentation, you also see these square brackets around the comma and `ndigits`. This tells you that the `ndigits`, the second input to `round`, is optional. You don't have to specify the number of digits to round to. When it's not specified, it defaults to zero digits.
+and this call
+
+```
+round(1.73, 0)
+```
+
+are exactly the same.
+
+Now you know how to use `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a pretty standard task in Python, you can be pretty sure that there's already a function that can do this for you. A quick internet search will help you out.
 
 Off to the exercises now, where you'll learn about interesting functions and how to call them to supercharge your Python code!
 
