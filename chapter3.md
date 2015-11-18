@@ -16,7 +16,7 @@ description : Add chapter description here.
 
 Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. Also the functions `str()`, `int()`, `bool()` and `float()` to switch between data types are built-in functions.
 
-Calling a function is easy. To get the type of `3.0` and store the result as a new variable, `the_type`, you can use the following:
+Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
 
 ```
 the_type = type(3.0)
