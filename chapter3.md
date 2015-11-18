@@ -126,11 +126,22 @@ test_mc("replace me")
 --- type:NormalExercise lang:py xp:100 skills:0
 ## Multiple arguments
 
+The built-in function `sorted()` also takes multiple arguments. Have a look at its documentation by typing `help(sorted)` in the IPython Shell.
 
+You'll see that `sorted()` takes three arguments: `iterable`, `key` and `reverse`. The last two arguments are optional.
+
+In this exercise, you'll only have to specify `iterable` and `inverse`, not `key`. The first input you pass to `sorted()` will obviously be matched to the `iterable` argument, but what about the second input. How can you tell Python that you want to specify `reverse` without changing anything about `key`? Well, you use the `=` for that, inside parenthesis:
+
+```
+sorted(input1, reverse = input2)
+```
+
+Two lists have been created for you on the right. Can you paste them together and sort them in descending order?
 
 *** =instructions
-- instruction 1
-- instruction 2
+- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
+- Call `sorted()` on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
+- Finish off by printing out `full_sorted`.
 
 *** =hint
 hint comes here
@@ -142,17 +153,40 @@ hint comes here
 
 *** =sample_code
 ```{py}
-# sample code
+# Create lists first and second
+first = [11.25, 18.0, 20.0]
+second = [10.75, 9.50]
+
+# Paste together first and second: full
+
+
+# Sort full in descending order: full_sorted
+
+
+# Print out full_sorted
+
 ```
 
 *** =solution
 ```{py}
-# solution code
+# Create lists first and second
+first = [11.25, 18.0, 20.0]
+second = [10.75, 9.50]
+
+# Paste together first and second: full
+full = first + second
+
+# Sort full in descending order: full_sorted
+full_sorted = sorted(full, reverse = True)
+
+# Print out full_sorted
+print(full_sorted)
 ```
 
 *** =sct
 ```{py}
-# sct code
+# TODO VINCENT SCT MAGIC
+success_msg("Cool! Head over to the video on Methods.")
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
