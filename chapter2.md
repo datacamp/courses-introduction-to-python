@@ -12,7 +12,7 @@ description : Add chapter description here.
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create a list
 
-As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group together values.
+As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group values together.
 
 To create a list you use square brackets and commas, like this:
 
