@@ -75,58 +75,63 @@ Off to the exercises now, where you'll learn about interesting functions and how
 
 ## Methods
 
-Calling built-in functions is only a part of the story. In Python, you also have something called methods, which are functions that "belong to" Python objects. Every string, boolean, list, and so on, is a Python object that has a bunch of methods associated with them. You can call these methods, with the dot notation. Let's try to add elements to the list of family heights, this time with the `append()` method.
+Calling built-in functions is only one part of the story. In Python, you also have something called methods, which are functions that "belong to" Python objects. Every string, boolean, list, and so on, is a Python object. Depending on the type, each python objects has a bunch of methods associated with them. You can call these methods with the dot notation. Lists, for example, have the append() method, to add elements. 
+
+Here's the fam_height list again
 
 ```
 fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
+fam_height
 ```
 
-Simply type fam_height, dot, append, and then pass the value you want to add to the list between parentheses, like this:
+To add new elements to it, you can write fam_height, dot, append, with the value you want to add to the list as input in parentheses, like this:
 
 ```
 fam_height.append("me")
 ```
 
-`fam_height` now also contains the string "me":
+`fam_height` was updated and now also contains the string "me":
 
 ```
 fam_height
 ```
 
-To additionally your actual lenght, 179, you can call the append method again:
+You can also your actual lenght, 179, like se:
 
 ```
-x = fam_height.append(179)
+fam_height.append(179)
 ```
 
-The append method is thus called "on" the fam_height list and this list is then extended. Again, how on earth could you know that this function existed? Well, simply typing help(list) - list is the type of Python lists - and browsing through all the methods mentioned there already gives you an idea.
+The append method is thus called "on" the fam_height list and this list is then extended. Again, how on earth could you know that this function existed? Well, you can simply type help(list) - list is the type of Python lists - and start browsing through all the methods that are associated with the list type.
 
-The first method that shows here is __add__ by the way, which represents the plus operator. Remember how the the plus operator was different for strings, integers and lists? Well, the plus operator is actually also a method that was defined for Python objects that are of type list. The only strange thing is that the + operator is an inline version of the __add__ function. These two calls do the exact same thing:
+The first method that shows here is __add__ by the way, which is Python slang for the plus operator. Remember how the the plus operator was different for strings, integers and lists? Well, the plus operator is actually also a method that was defined for Python objects that are of type list. The only strange thing is that the + operator is an inline version of the __add__ function. These two calls do the exact same thing:
 
 ```
 [1, 2, 3] + [4]
 [1, 2, 3].__add__([4])
 ```
 
-
-Some of these methods that belong to Python objects exist for different types, such as the plus operator. Other methods are specific to the Python object you're dealing with. Booleans for example, which have type `bool`, don't offer the `append()` method, as this line of nonsense shows:
+Some of these methods that belong to Python objects exist for different types, such as the plus operator. What these methods do, depends on which kind of type your calling the method. Other methods are specific to the Python object you're dealing with. Booleans for example, which have type `bool`, don't offer the `append()` method. That's why this line of nonsense throws an error:
 
 ```
 True.append(False)
 ```
 
-Let's take a step back here to summarise: you have Python functions, like `print()`, `type()` and `max()`, that you can call like this:
+Let's take a step back here and summarise this: 
+
+you have Python functions, like `print()`, `type()` and `max()`, that you can call like this:
 
 ```
 type(fam_height)
 ```
 
-There's also methods, which are functions that are specific to Python objects. Depending on the the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods _on_ the objects with the dot notation, like this example, where you're asking for the indx of the string `"dad" in the `fam_height` list.
+There's also methods, which are functions that are specific to Python objects. Depending on the the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods _on_ the objects with the dot notation, like this for example.
 
 ```
 fam_height.index("dad")
 ```
 
+Here, we asked for the index of the string `"dad"` in the `fam_height` list.
 It's time to head over to the exercises and add methods to your evergrowing skill set!
 
 ## Packages
