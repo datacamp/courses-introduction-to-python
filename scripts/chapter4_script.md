@@ -1,4 +1,4 @@
-## Introduction to Numpy
+## Intro to Numpy
 
 By now, you are aware that the Python list is pretty powerful: A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. The thing is, when analyzing data, you'll often want to carry out mathematical operations over entire arrays of values, and you want to do this fast. 
 
@@ -72,7 +72,7 @@ numpy_array + numpy_array
 
 Make sure to pay attention when you're working juggling around with different Python types, because the outcome can differ a lot! Now head over to the exercises, to get your own numpy arrays rolling.
 
-## Numpy and 2D arrays
+## 2D Numpy arrays
 
 Let's have another look at the python lists we've created in the previous video:
 
