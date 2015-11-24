@@ -56,78 +56,54 @@ numpy_array + numpy_array
 
 ## 2D Numpy arrays
 
-Let's have another look at the python lists we've created in the previous video:
+Let's recreate the numpy arrays from the previous video:
 
-```
-np_height = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
-np_weight = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
-```
-
-If you ask for the type of these lists,
-
-```
-type(np_height)
-type(np_weight)
-```
-
-Python tells you that they are `numpy` dot `ndarray`. `numpy` dot tells you that the type comes from the numpy package. `ndarray` stands for n-dimensional array. The arrays `np_height` and `np_weights` are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 though.
+If you ask for the type of these arrays, <PAUSE>, Python tells you that they are `numpy` dot `ndarray`. `numpy` dot tells you it's a type that was defined in the numpy package. `ndarray` stands for n-dimensional array. The arrays `np_height` and `np_weights` are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
 
 You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this:
 
-```
-np_hw = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
-                  [65.4, 59.2, 63.6, 88.4, 68.7]])
-```
+If you print out `np_2d` now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From `np_2d.shape`, you can see that we indeed have 2 rows and 5 columns. Shape is a so-called attribute of the ndarray `np2d` here. 
 
-If you print out `np_hw` now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array.
-
-```
-np_hw
-```
-
-shape is a so-called attribute of the ndarray. Also here, the same Numpy rule applies: an array can contain a single type. If you change one float to be numeric, all the array elements will be coerced to characters, to end up with a homogenous array:
-
-```
-np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
-          [65.4, 59.2, 63.6, 88.4, "68.7"]])
-```
+Also for 2D arrays, the Numpy rule applies: an array can contain a single type. If you change one float to be numeric, all the array elements will be coerced to characters, to end up with a homogenous array.
 
 You can think of the 2D numpy array as an improved list of lists: you can subset it as a regular list of lists, but you can also do more advanced subsetting and perform calculations directly on the arrays. 
 
 Suppose you want the first row, and then the third element in that row. To select the row, you need index 0 in square brackets. To then select the third element, you put 2 in square brackets, like this:
 
-```
-np_hw[0][2]
-```
-
 There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before:
-
-```
-np_hw[0,2]
-```
 
 This syntax opens much more possibilities though: you can create both row-wise and column-wise subsets. This call, for example, selects the first row of the 2d array:
 
-```
-np_hw[0,:]
-```
+The colon tells Python to include a slice going from beginning to end, remember? So you're telling Python to take the first row, and then all columns. Just the same, you can do this for columns too. This call selects the entire column with index 2, so the height and weight of the third family member:
 
-The colon tells Python to include a slice going from beginning to end, remember? Here, you're telling Python to take the first row, and then all columns. Just the same, you can do this for columns too. This call selects the entire column with index 2, so the height and weight of the third family member:
+Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting...
 
 ```
-np_hw[:,2]
+import numpy as np
+np_height = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
+np_weight = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
+type(np_height)
+type(np_weight)
+np_2d = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
+                  [65.4, 59.2, 63.6, 88.4, 68.7]])
+np_2d
+np_2d.shape
+np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
+          [65.4, 59.2, 63.6, 88.4, "68.7"]])
+          
+np_2d[0][2]
+np_2d[0,2]
+np_2d[0,:]
+np_2d[:,2]
 ```
-
-Finally, 2D numpy arrays enable you to element-wise calculations, the same way you did it with 1D numpy arrays. That's something you can experiment out in the exercises, along with creating and subsetting 2D numpy arrays! Exciting, isn't it?!
-
 
 ## Basic Statistics with Numpy
 
-A typical first step in analyzing your data, is getting to know your data. For the Numpy arrays from before, this is pretty easy, because it isn't a lot of data. But imagine you conduct a city-wide survey where you ask 5000 people about their height and weight. You'll probably end up with something like this: a 2D numpy array, which I named `np_hw_city`, that has 5000 rows, corresponding to the 5000 people, and two columns, corresponding to the height and the weight.
+A typical first step in analyzing your data, is getting to know your data. For the Numpy arrays from before, this is pretty easy, because it isn't a lot of data. But imagine you conduct a city-wide survey where you ask 5000 people about their height and weight. You'll probably end up with something like this: a 2D numpy array, which I named `np_2d_city`, that has 5000 rows, corresponding to the 5000 people, and two columns, corresponding to the height and the weight.
 
 ```
 # build height and weight
-np_hw_city = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
+np_2d_city = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
           [65.4, 59.2, 63.6, 88.4, 68.7]]).transpose()
 ```
 
@@ -136,27 +112,27 @@ Simply staring at these numbers as a zombie won't give you any insights. What yo
 For starters, you can try to find out the average height of these 5000 people, with Numpy's mean function. Because it's a function from the Numpy package, don't forget to start with "np dot". 
 
 ```
-np.mean(np_hw_city[:,0])
+np.mean(np_2d_city[:,0])
 ```
 
 Of course, I first had to do a subsetting operation to get the height column from the matrix. It appears that on average, people are xxx meters tall. What about the median height? This is the height of the middle person if you sort all persons from small to tall. Instead of writing complicated python code to figure this out, you can simply use Numpy's `median()` function:
 
 ```
-np.median(np_hw_city[:,0])
+np.median(np_2d_city[:,0])
 ```
 
-You can do similar things for the weight column in `np_hw_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
+You can do similar things for the weight column in `np_2d_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
 
 Apart from `mean()` and `median()`, there's also other functions, like `correlate()` to check if for example height and weight are correlated,
 
 ```
-np.correlate(np_hw_city[:,0], np_hw_city[:,1])
+np.correlate(np_2d_city[:,0], np_2d_city[:,1])
 ```
 
 `std()`, for standard deviation. 
 
 ```
-np.sdt(np_hw_city[:,0]
+np.sdt(np_2d_city[:,0]
 ```
 
 Numpy also features more basic functions, such as `sum()` and `sort()`, which also exist in the basic Python distribution. However, the big difference here is speed. Because Numpy enforces a single data type in an array, it can use optimized C code behind the scenes, making your analysis superfast. 
