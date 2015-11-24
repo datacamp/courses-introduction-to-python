@@ -12,7 +12,7 @@ description : Add chapter description here.
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Your first Numpy array
+## Your First Numpy Array
 
 In this chapter, we're going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of Numpy, a powerful package to do data science.
 
@@ -299,6 +299,122 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 //player.vimeo.com/video/108225030
 ```
 
+--- type:NormalExercise lang:python xp:100 skills:2
+## Build a 2D Numpy array
+
+*** =instructions
+- instruction1
+
+*** =hint
+
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+
+```
+
+*** =sct
+```{python}
+success_msg("Great job!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Subsetting 2D Numpy Array
+
+*** =instructions
+- instruction1
+
+*** =hint
+
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+
+```
+
+*** =sct
+```{python}
+success_msg("Great job!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Subsetting 2D Numpy Array (2)
+
+*** =instructions
+- instruction1
+
+*** =hint
+
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+
+```
+
+*** =sct
+```{python}
+success_msg("Great job!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## 2D Arithmetic
+
+*** =instructions
+- instruction1
+
+*** =hint
+
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+
+```
+
+*** =sct
+```{python}
+success_msg("Great job!")
+```
+
 --- type:VideoExercise lang:python xp:50 skills:2
 ## Basic Statistics with Numpy
 
@@ -306,5 +422,3 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 ```{python}
 //player.vimeo.com/video/108225030
 ```
-
-
