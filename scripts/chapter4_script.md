@@ -36,7 +36,7 @@ fam_height = [1.73, 1.68, 1.71, 1.89, 1.79]
 fam_height
 fam_weight = [65.4, 59.2, 63.6, 88.4, 68.7]
 fam_weight
-fam_height / fam_weight ** 2
+fam_weight / fam_height ** 2
 
 import numpy as np
 np_height = np.array(fam_height)
