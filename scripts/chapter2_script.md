@@ -63,97 +63,65 @@ fam_height[1:4]
 
 After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
 
-Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that you wrongly measure your dad's height; it's not up to date as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 centimters. To change this list element, which is at index 7, you can use this line:
-
-```
-fam_height[7] = 1.86
-```
+Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that after another look at `fam_height`, you realize that your dad's height is not up to date anymore as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 centimters. To change this list element, which is at index 7, you can use this line:
 
 If you now check out fam_height, you'll see that the value is updated:
 
-```
-fam_height
-```
-
 You can even change an entire list slice at once. To change the elements "elise" and 1.73, you can do something like this:
-
-```
-fam_height[0:1] <- ["ellie", 1.74]
-```
 
 Notice here, that your resulting subset is a list, so you have to pass a list with the same length to make the replacement.
 
 Do you still remember how the plus operator was different for strings and integers? Well, it's again different for lists. If you use the plus sign with two lists, Python simply pastes together their contents in a single list. Suppose you want to add your own name and height to the fam height list. This will do the trick:
 
-```
-fam_height + ["me", 1.79]
-```
-
 Of course, you can also store this new list in a variable, `fam_height_ext` for example.
-
-```
-fam_height_ext = fam_height + ["me", 1.79]
-```
 
 Finally, deleting a list is also pretty straightforward, you'll have to use `del` here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
 
-```
-del(fam_height[2])
-```
-
-If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by index. If you again run the same line, you're again removing the element at index 2, which is emma's length, 168 centimeters:
-
-```
-del(fam_height[2])
-fam_height
-```
+If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by one index. If you again run the same line, you're again removing the element at index 2, which is emma's length, 168 centimeters:
 
 Understanding how Python lists actually work behind the scenes becomes pretty important now. What actually happens when you create a new list, `x`, like this?
-
-```
-x = ["a", "b", "c"]
-```
 
 Well, in a simplified sense, you're storing a list in your computer memory, and store the 'address' of that list, so where the list is in your computer memory, in `x`. This means that `x` does not actually contain all the list elements, it rather contains a reference to the list. For basic operations, the difference is not that important, but it becomes more so when you start copying lists. Let me clarify this with an example.
 
 Let's store the list `x` as a new variable `y`, by simply using the equals sign:
 
-```
-y = x
-```
-
 Let's now change the element with index one in the list `y`, as follows:
-
-```
-y[1] = "z"
-y
-```
 
 The funky thing is that if you now check out `x` again, also here the second element was changed:
 
-```
-x
-```
-
-That's because when you copied x to y with the equals sign, you copied the address of the list, not the actual values themselves. Wehn you're updating an element the list, though, it's one and the same list in the computer memory your changing. The references that are stored in `x` and `y` point to this list, so the update is visible both from `x` and `y`.
+That's because when you copied x to y with the equals sign, you copied the address of the list, not the actual values themselves. When you're updating an element the list, though, it's one and the same list in the computer memory your changing. The references that are stored in `x` and `y` point to this list, so the update is visible both from `x` and `y`.
 
 If you want to create a list `y` that points to a new list in the memory with the same variables, you'll need to use something else than the equals sign. You can use the `list()` function, like this, or use slicing to select all list elements explicitly.
 
-```
-x = ["a", "b", "c"]
-y = list(x)
-y = x[:]
-```
-
 If you now make a change to the list `y` points to, `x` is not affected:
-
-```
-y[1] = "z"
-x
-```
 
 If this was a bit too much to take in, don't worry. The exercises will help you understand list manipulation and the subtle inner workings of lists. I'm sure you'll do great!
 
+```
+fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
+fam_height
+fam_height[7] = 1.86
+fam_height
+fam_height[0:1] = ["ellie", 1.74]
+fam_height + ["me", 1.79]
+fam_height_ext = fam_height + ["me", 1.79]
+del(fam_height[2])
+fam_height
+del(fam_height[2])
+fam_height
+
+x = ["a", "b", "c"]
+y = x
+y[1] = "z"
+y
+x
+
+x = ["a", "b", "c"]
+y = list(x)
+y = x[:]
+y[1] = "z"
+x
+```
 
 
 ## MUTABLE VS IMMUTABLE STUFF
