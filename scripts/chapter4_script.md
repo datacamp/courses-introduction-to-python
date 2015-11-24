@@ -99,42 +99,38 @@ np_2d[:,2]
 
 ## Basic Statistics with Numpy
 
-A typical first step in analyzing your data, is getting to know your data. For the Numpy arrays from before, this is pretty easy, because it isn't a lot of data. But imagine you conduct a city-wide survey where you ask 5000 people about their height and weight. You'll probably end up with something like this: a 2D numpy array, which I named `np_2d_city`, that has 5000 rows, corresponding to the 5000 people, and two columns, corresponding to the height and the weight.
+A typical first step in analyzing your data, is getting to know your data in the first place. For the Numpy arrays from before, this is pretty easy, because it isn't a lot of data. However, as a data scientist, you'll be crunching thousands, if not millions or billions of numbers.
 
-```
-# build height and weight
-np_2d_city = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
-          [65.4, 59.2, 63.6, 88.4, 68.7]]).transpose()
-```
+Imagine you conduct a city-wide survey where you ask 5000 adults about their height and weight. You end up with something like this: a 2D numpy array, which I named `np_city`, that has 5000 rows, corresponding to the 5000 people, and two columns, corresponding to the height and the weight.
 
-Simply staring at these numbers as a zombie won't give you any insights. What you _can_ do, though, is generating summarizing statistics about your data. Aside from an efficient data structure for number crunching, it happens that Numpy is also good at doing these kinds of things. 
+Simply staring at these numbers like a zombie won't give you any insights. What you _can_ do, though, is generating summarizing statistics about your data. Aside from an efficient data structure for number crunching, it happens that Numpy is also good at doing these kinds of things. 
 
-For starters, you can try to find out the average height of these 5000 people, with Numpy's mean function. Because it's a function from the Numpy package, don't forget to start with "np dot". 
-
-```
-np.mean(np_2d_city[:,0])
-```
+For starters, you can try to find out the average height of these 5000 people, with Numpy's mean function. Because it's a function from the Numpy package, don't forget to start with "np dot".
 
 Of course, I first had to do a subsetting operation to get the height column from the matrix. It appears that on average, people are xxx meters tall. What about the median height? This is the height of the middle person if you sort all persons from small to tall. Instead of writing complicated python code to figure this out, you can simply use Numpy's `median()` function:
 
-```
-np.median(np_2d_city[:,0])
-```
-
-You can do similar things for the weight column in `np_2d_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
+You can do similar things for the weight column in `np_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
 
 Apart from `mean()` and `median()`, there's also other functions, like `correlate()` to check if for example height and weight are correlated,
 
-```
-np.correlate(np_2d_city[:,0], np_2d_city[:,1])
-```
-
-`std()`, for standard deviation. 
-
-```
-np.sdt(np_2d_city[:,0]
-```
+and `std()`, for standard deviation. 
 
 Numpy also features more basic functions, such as `sum()` and `sort()`, which also exist in the basic Python distribution. However, the big difference here is speed. Because Numpy enforces a single data type in an array, it can use optimized C code behind the scenes, making your analysis superfast. 
 
-Finally, another great tool to get some sense of your data is to visualize it, but that's something for later. First, head over to the exercises to learn how to explore your Numpy arrays!
+By the way, the data we started with, `np_city`, was simulated using numpy function as well: I created 5000 samples of a random distribution to create the `heights` and `weights` arrays, and then used `column_stack` to paste them together as two columns. Another thing that Numpy can do!
+
+Another great tool to get some sense of your data is to visualize it, but that's something for later. First, head over to the exercises to learn how to explore your Numpy arrays!
+
+```
+import numpy as np
+np_city = np.column_stack((np.random.normal(1.75, 0.20, 5000), np.random.normal(60.32, 15, 5000)))
+np_city
+np.mean(np_city[:,0])
+np.median(np_city[:,0])
+np.correlate(np_city[:,0], np_city[:,1])
+np.std(np_city[:,0])
+
+heights = np.random.normal(1.75, 0.20, 5000)
+weights = np.random.normal(60.32, 15, 5000)
+np_city = np.column_stack((heights, weights))
+```
