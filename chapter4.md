@@ -90,11 +90,14 @@ Being a huge baseball fan, you call the MLB, the Major League of Baseball, and a
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-height = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")['Height'].tolist()
+mlb = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
+height = mlb['Height'].tolist()
 ```
 
 *** =sample_code
 ```{python}
+# height is available as a regular list
+
 # Import numpy
 import numpy as np
 
@@ -113,6 +116,8 @@ import numpy as np
 
 *** =solution
 ```{python}
+# height is available as a regular list
+
 # Import numpy
 import numpy as np
 
@@ -155,8 +160,9 @@ It's now possible to calculate the BMI of each baseball player. Python code to c
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-weight = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")['Weight'].tolist()
-height = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")['Height'].tolist()
+mlb = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
+height = mlb['Height'].tolist()
+weight = mlb['Weight'].tolist()
 ```
 
 *** =sample_code
@@ -166,6 +172,8 @@ height = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_
 
 *** =solution
 ```{python}
+# height and weight are available as a regular lists
+
 # Import numpy
 import numpy as np
 
@@ -249,12 +257,15 @@ The script on the right already contains code that imports `numpy` as `np`, and 
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-weight = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")['Weight'].tolist()
-height = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")['Height'].tolist()
+mlb = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
+height = mlb['Height'].tolist()
+weight = mlb['Weight'].tolist()
 ```
 
 *** =sample_code
 ```{python}
+# height and weight are available as a regular lists
+
 # Import numpy
 import numpy as np
 
@@ -271,6 +282,8 @@ np_height = np.array(height)
 
 *** =solution
 ```{python}
+# height and weight are available as a regular lists
+
 # Import numpy
 import numpy as np
 
@@ -302,39 +315,66 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Build a 2D Numpy array
 
-Before you continue with the analysis of all the baseball data, you're going to start by building a smaller 2D Numpy array first. Typically, you build such a Numpy array, also called a Numpy Matrix, from a list of lists:
+Previously, you've worked with the height and weight of Major League Baseball players. Maybe it makes more sense to restructure all this information in a 2D Numpy array, or a matrix if you will. This matrix should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns, for height and weight.
 
-```
-import numpy as np
-my_list = [["a", "b"], ["c", "d"], ["e", "f"]]
-np.array(my_list)
-```
+The MLB was as kind to pass you the data in a different structure: as a Python list of lists, where each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
 
+Can you store the data as a 2D array to unlock the extra functionality?
 
 *** =instructions
-- 
+- Use `np.array()` to create a 2D Numpy array from `baseball`. Name this Numpy matrix `np_baseball`.
+- Print out the type of `np_baseball`.
+- Print out the `shape` attribute of `np_baseball`. Use `.shape`.
 
 *** =hint
-
+- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D Numpy array in `np_baseball`.
+- Use `print()` in combination with `type()` for the second instruction.
+- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
 
 *** =pre_exercise_code
 ```{python}
-# pec
+import pandas as pd
+baseball = pd.read_csv("~/courses/courses-introduction-to-python/datasets/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
 ```
 
 *** =sample_code
 ```{python}
+# baseball is available as a regular list of lists
+
+# Import numpy package
+import numpy as np
+
+# Create a 2D Numpy array from baseball: np_baseball
+
+
+# Print out the type of np_baseball
+
+
+# Print out the shape of np_baseball
 
 ```
 
 *** =solution
 ```{python}
+# baseball is available as a regular list of lists
 
+# Import numpy package
+import numpy as np
+
+# Create a 2D Numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the type of np_baseball
+print(type(np_baseball))
+
+# Print out the shape of np_baseball
+print(np_baseball.shape)
 ```
 
 *** =sct
 ```{python}
-success_msg("Great job!")
+# TO DO VINCENT SCT MAGIC
+success_msg("Slick! Time to show off some killer features of multi-dimensional Numpy arrays!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
