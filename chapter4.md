@@ -90,7 +90,7 @@ Being a huge baseball fan, you call the MLB, the Major League of Baseball, and a
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-mlb = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
+mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
 height = mlb['Height'].tolist()
 ```
 
@@ -160,7 +160,7 @@ It's now possible to calculate the BMI of each baseball player. Python code to c
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-mlb = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
+mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
 height = mlb['Height'].tolist()
 weight = mlb['Weight'].tolist()
 ```
@@ -257,7 +257,7 @@ The script on the right already contains code that imports `numpy` as `np`, and 
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-mlb = pd.read_csv("https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
+mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
 height = mlb['Height'].tolist()
 weight = mlb['Weight'].tolist()
 ```
@@ -334,7 +334,7 @@ Can you store the data as a 2D array to unlock the extra functionality?
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("~/courses/courses-introduction-to-python/datasets/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
 ```
 
 *** =sample_code
@@ -410,7 +410,7 @@ The code that converts the pre-loaded `baseball` list to a 2D Numpy array is alr
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("~/courses/courses-introduction-to-python/datasets/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
 ```
 
 *** =sample_code
@@ -490,7 +490,7 @@ The code to build the Numpy matrix `np_baseball` from the `baseball` lists of li
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("~/courses/courses-introduction-to-python/datasets/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
 ```
 
 *** =sample_code
@@ -564,7 +564,7 @@ np_mat + np_mat
 ```{python}
 import pandas as pd
 import numpy as np
-baseball = pd.read_csv("~/courses/courses-introduction-to-python/datasets/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
 n = len(baseball)
 update = np.column_stack((np.random.normal(1, 0.20, n), 
                           np.random.normal(0, 10, n), 
