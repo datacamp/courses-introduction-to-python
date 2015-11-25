@@ -629,71 +629,151 @@ success_msg("Great job! Notice how with very little code, you can change all val
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Average versus median
 
-Assignment comes here. Use Markdown for text formatting.
+You now know about Nupy functions to a get a better feeling for your data. It basically comes down to importing nupmy, and then calling several simple functions on the numpy arrays:
+
+```
+import numpy as np
+x = [1, 4, 8, 10, 12]
+np.average(x)
+np.median(x)
+```
+
+The baseball data is available as a 2D Numpy matrix with 3 columns (height, weight, age) and 1015 rows. The name of this Numpy matrix is `np_baseball`. However, when restructuring the data, something went wrong: some height values are abnormally high. Follow the instructions and discover which summary statistic is most suited if you're dealing with so-called _outliers_.
 
 *** =instructions
-- instruction 1
-- instruction 2
+- Create Numpy array `np_height`, that is equal to first column of `np_baseball`.
+- Print out the average of `np_height`.
+- Print out the median of `np_height`.
 
 *** =hint
-hint comes here
+- Use Numpy matrix subsetting: `[:,0]` is a part of the solution.
+- If `numpy` is imported as `np`, you can use `np.average()` to get the average of a Numpy array. Don't forget to throw in a `print()` call.
+- For the last instruction, use `np.median()`.
 
 *** =pre_exercise_code
 ```{python}
-# pec
+np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
+np_baseball[slice(0, 1015, 50), 0] = np_baseball[slice(0, 1015, 50), 0]*1000
 ```
 
 *** =sample_code
 ```{python}
-# sample code
+# np_baseball is available
+
+# Import numpy
+import numpy as np
+
+# Create np_height from np_baseball
+
+
+# Print out the average of np_height
+
+
+# Print out the median of np_width
+
 ```
 
 *** =solution
 ```{python}
-# solution code
+# np_baseball is available
+
+# Import numpy
+import numpy as np
+
+# Create np_height from np_baseball
+np_height = np_baseball[:,0]
+
+# Print out the average of np_height
+print(np.average(np_height))
+
+# Print out the median of np_width
+print(np.median(np_height))
 ```
 
 *** =sct
 ```{python}
-# sct code
+# TODO VINCENT SCT MAGIC
+success_msg("An average length of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the average, to get a first hunch for the overall distribution of the entire dataset.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Explore the baseball data
 
-Assignment comes here. Use Markdown for text formatting.
+Because the average and median are so far apart, you decide to complain with Major League Baseball. They found the errror and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
+
+The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
 *** =instructions
-- instruction 1
-- instruction 2
+- The code to print out the average height is already included. Complete the code for the median height.
+- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`.
+- Do big players tend to be heavier? Use `np.correlate()` to store the correlation between the first and second column of `np_baseball` in `corr`.
 
 *** =hint
 hint comes here
 
 *** =pre_exercise_code
 ```{python}
-# pec
+np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
 ```
 
 *** =sample_code
 ```{python}
-# sample code
+# np_baseball is available
+
+# Import numpy
+import numpy as np
+
+# Print average height (first column)
+avg = np.average(np_baseball[:,0])
+print("Average: " + str(avg))
+
+# Print median height
+med = ___
+print("Median: " + str(med))
+
+# Print out the standard deviation on height
+stddev = ___
+print("Standard Deviation: " + str(stddev))
+
+# Print out correlation between first and second column
+corr = ___
+print("Correlation: " + str(corr))
 ```
 
 *** =solution
 ```{python}
-# solution code
+# np_baseball is available
+
+# Import numpy
+import numpy as np
+
+# Print average height (first column)
+avg = np.average(np_baseball[:,0])
+print("Average: " + str(avg))
+
+# Print median height
+med = np.median(np_baseball[:,0])
+print("Median: " + str(med))
+
+# Print out the standard deviation on height
+stddev = np.std(np_baseball[:,0])
+print("Standard Deviation: " + str(stddev))
+
+# Print out correlation between first and second column
+corr = np.correlate(np_baseball[:,0], np_baseball[:,1])
+print("Correlation: " + str(corr))
 ```
 
 *** =sct
 ```{python}
 # sct code
+success_msg("This time, median and ")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Explore the baseball data (2)
+## Blend it all together
 
-Assignment comes here. Use Markdown for text formatting.
+To wrap up on this chapter, you're going through the entire process: you'll convert regular Python lists to Numpy arrays, combine them into a 2D Numpy array, and generate some summary statistics on them!
 
 *** =instructions
 - instruction 1
