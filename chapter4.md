@@ -775,7 +775,7 @@ success_msg("This time, median and ")
 
 To wrap up on this chapter, you're going through the entire process: you'll convert regular Python lists to Numpy arrays, combine them into a 2D Numpy array, and generate some summary statistics on them!
 
-
+Todo vincent, no inspiration for super-awesome example.
 
 *** =instructions
 - instruction 1
