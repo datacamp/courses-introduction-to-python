@@ -27,7 +27,7 @@ After you've created your very own Python list, you might wonder how you can acc
 
 The number three refers to the _index_ of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the float 1.68, has index 3. To select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
 
-You can also count backwards, using negative indices. This is useful if you want to get some elements at the end of your list. To get your dad's height, for example, you'll need the index -1. These are the negative indices for all list elements.
+You can also count backwards, using negative ubdexes. This is useful if you want to get some elements at the end of your list. To get your dad's height, for example, you'll need the index -1. These are the negative indexes for all list elements.
 
 This means that this line and this line, return the same result:
 
@@ -63,7 +63,7 @@ fam_height[1:4]
 
 After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
 
-Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that after another look at `fam_height`, you realize that your dad's height is not up to date anymore as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 centimters. To change this list element, which is at index 7, you can use this line:
+Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that after another look at `fam_height`, you realize that your dad's height is not up to date anymore as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 meters. To change this list element, which is at index 7, you can use this line:
 
 If you now check out fam_height, you'll see that the value is updated:
 
@@ -77,7 +77,7 @@ Of course, you can also store this new list in a variable, `fam_height_ext` for 
 
 Finally, deleting a list is also pretty straightforward, you'll have to use `del` here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
 
-If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by one index. If you again run the same line, you're again removing the element at index 2, which is emma's length, 168 centimeters:
+If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by one index. If you again run the same line, you're again removing the element at index 2, which is emma's length, 1.68 centimeters:
 
 Understanding how Python lists actually work behind the scenes becomes pretty important now. What actually happens when you create a new list, `x`, like this?
 
@@ -89,7 +89,7 @@ Let's now change the element with index one in the list `y`, as follows:
 
 The funky thing is that if you now check out `x` again, also here the second element was changed:
 
-That's because when you copied x to y with the equals sign, you copied the address of the list, not the actual values themselves. When you're updating an element the list, though, it's one and the same list in the computer memory your changing. The references that are stored in `x` and `y` point to this list, so the update is visible both from `x` and `y`.
+That's because when you copied x to y with the equals sign, you copied the reference to the list, not the actual values themselves. When you're updating an element the list, though, it's one and the same list in the computer memory your changing.Both `x` and `y` point to this list, so the update is visible from both.
 
 If you want to create a list `y` that points to a new list in the memory with the same variables, you'll need to use something else than the equals sign. You can use the `list()` function, like this, or use slicing to select all list elements explicitly.
 

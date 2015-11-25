@@ -634,7 +634,7 @@ You now know about Nupy functions to a get a better feeling for your data. It ba
 ```
 import numpy as np
 x = [1, 4, 8, 10, 12]
-np.average(x)
+np.mean(x)
 np.median(x)
 ```
 
@@ -642,12 +642,12 @@ The baseball data is available as a 2D Numpy matrix with 3 columns (height, weig
 
 *** =instructions
 - Create Numpy array `np_height`, that is equal to first column of `np_baseball`.
-- Print out the average of `np_height`.
+- Print out the mean of `np_height`.
 - Print out the median of `np_height`.
 
 *** =hint
 - Use Numpy matrix subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use `np.average()` to get the average of a Numpy array. Don't forget to throw in a `print()` call.
+- If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a Numpy array. Don't forget to throw in a `print()` call.
 - For the last instruction, use `np.median()`.
 
 *** =pre_exercise_code
@@ -666,7 +666,7 @@ import numpy as np
 # Create np_height from np_baseball
 
 
-# Print out the average of np_height
+# Print out the mean of np_height
 
 
 # Print out the median of np_width
@@ -683,8 +683,8 @@ import numpy as np
 # Create np_height from np_baseball
 np_height = np_baseball[:,0]
 
-# Print out the average of np_height
-print(np.average(np_height))
+# Print out the mean of np_height
+print(np.mean(np_height))
 
 # Print out the median of np_width
 print(np.median(np_height))
@@ -693,18 +693,18 @@ print(np.median(np_height))
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-success_msg("An average length of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the average, to get a first hunch for the overall distribution of the entire dataset.")
+success_msg("An average length of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get a first hunch for the overall distribution of the entire dataset.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Explore the baseball data
 
-Because the average and median are so far apart, you decide to complain with Major League Baseball. They found the errror and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
+Because the mean and median are so far apart, you decide to complain with Major League Baseball. They found the errror and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
 
 The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
 *** =instructions
-- The code to print out the average height is already included. Complete the code for the median height.
+- The code to print out the mean height is already included. Complete the code for the median height.
 - Use `np.std()` on the first column of `np_baseball` to calculate `stddev`.
 - Do big players tend to be heavier? Use `np.correlate()` to store the correlation between the first and second column of `np_baseball` in `corr`.
 
@@ -723,8 +723,8 @@ np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/in
 # Import numpy
 import numpy as np
 
-# Print average height (first column)
-avg = np.average(np_baseball[:,0])
+# Print mean height (first column)
+avg = np.mean(np_baseball[:,0])
 print("Average: " + str(avg))
 
 # Print median height
@@ -747,8 +747,8 @@ print("Correlation: " + str(corr))
 # Import numpy
 import numpy as np
 
-# Print average height (first column)
-avg = np.average(np_baseball[:,0])
+# Print mean height (first column)
+avg = np.mean(np_baseball[:,0])
 print("Average: " + str(avg))
 
 # Print median height
@@ -774,6 +774,8 @@ success_msg("This time, median and ")
 ## Blend it all together
 
 To wrap up on this chapter, you're going through the entire process: you'll convert regular Python lists to Numpy arrays, combine them into a 2D Numpy array, and generate some summary statistics on them!
+
+
 
 *** =instructions
 - instruction 1
