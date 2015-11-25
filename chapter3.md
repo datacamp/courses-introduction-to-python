@@ -384,3 +384,99 @@ success_msg("replace me")
 //player.vimeo.com/video/108225030
 
 
+--- type:NormalExercise lang:python xp:100 skills:2
+## Import package
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Import specific module
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Import package with local name
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+

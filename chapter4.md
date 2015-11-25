@@ -302,8 +302,17 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Build a 2D Numpy array
 
+Before you continue with the analysis of all the baseball data, you're going to start by building a smaller 2D Numpy array first. Typically, you build such a Numpy array, also called a Numpy Matrix, from a list of lists:
+
+```
+import numpy as np
+my_list = [["a", "b"], ["c", "d"], ["e", "f"]]
+np.array(my_list)
+```
+
+
 *** =instructions
-- instruction1
+- 
 
 *** =hint
 
@@ -422,3 +431,100 @@ success_msg("Great job!")
 ```{python}
 //player.vimeo.com/video/108225030
 ```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Average versus median
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Explore the baseball data
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Explore the baseball data (2)
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- instruction 1
+- instruction 2
+
+*** =hint
+hint comes here
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# sample code
+```
+
+*** =solution
+```{python}
+# solution code
+```
+
+*** =sct
+```{python}
+# sct code
+```
+
