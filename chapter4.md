@@ -8,7 +8,7 @@ description : Add chapter description here.
 
 *** =video_link
 ```{python}
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994268
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -309,7 +309,7 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 
 *** =video_link
 ```{python}
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994270
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -623,7 +623,7 @@ success_msg("Great job! Notice how with very little code, you can change all val
 
 *** =video_link
 ```{python}
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994271
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -802,5 +802,6 @@ hint comes here
 *** =sct
 ```{python}
 # sct code
+success_msg("Wonderful! This exercise marks the end of the intro to python for data science course. See you in a later course!")
 ```
 

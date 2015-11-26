@@ -7,7 +7,7 @@ description : Add chapter description here.
 ## Functions
 
 *** =video_link
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994267
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Familiar functions
@@ -193,7 +193,7 @@ success_msg("Cool! Head over to the video on Python methods.")
 ## Methods
 
 *** =video_link
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994269
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## List Methods
@@ -381,8 +381,7 @@ success_msg("replace me")
 ## Packages
 
 *** =video_link
-//player.vimeo.com/video/108225030
-
+//player.vimeo.com/video/146994272
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Import package
