@@ -7,7 +7,7 @@ description : Add chapter description here.
 ## Lists, what are they?
 
 *** =video_link
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994262
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create a list
@@ -260,7 +260,7 @@ success_msg("Great! Get ready to learn about list subsetting!")
 ## Subsetting lists
 
 *** =video_link
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994264
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subset and conquer
@@ -565,7 +565,7 @@ success_msg("replace me")
 ## List Manipulation
 
 *** =video_link
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994265
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Replace list elements

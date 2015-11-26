@@ -7,7 +7,7 @@ description : An introduction to the basic concepts of Python and its place in t
 ## Hello Python!
 
 *** =video_link
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994261
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## The Python Interface
@@ -187,10 +187,10 @@ success_msg("Time for another video!")
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
-## Variables and types
+## Variables and Types
 
 *** =video_link
-//player.vimeo.com/video/108225030
+//player.vimeo.com/video/146994263
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Variable Assignment
