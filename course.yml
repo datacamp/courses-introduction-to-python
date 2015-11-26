@@ -2,6 +2,7 @@ id: 735
 title: Introduction to Python
 author_field: Filip Schouwenaars
 university: DataCamp
+programming_language: python
 difficulty_level: 1
 time_needed: 4 hours
 author_bio: "Filip is the passionate developer behind many of DataCamp's interactive courses,

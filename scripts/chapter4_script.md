@@ -8,9 +8,9 @@ To calculate the Body Mass Index for each family member in a single call this ti
 
 Python throws an error, because it has no idea how to do calculations with lists. You could solve this by going through each list element one after the other, and calculating the BMI for each person separately, but this is terribly inefficient and tiresome to write.
 
-A way more elegant solution is to use NumPy, or Numeric Python. It's a Python package that, among others, provides a alternative to the regular python list, the numpy array. Where the Python list is simply a compound data type to store python values, you can think of the numpy array more of an actual vector, in the mathematical sense. It becomes easy to perform calculations on entire datasets, and it's pretty fast as well. To start using numpy, you first have to install the package. You'll need to install pip from this link, and then run `pip install numpy`:
+A way more elegant solution is to use NumPy, or Numeric Python. It's a Python package that, among others, provides a alternative to the regular python list, the numpy array. Where the Python list is simply a compound data type to store python values, you can think of the numpy array more of an actual vector, in the mathematical sense. It becomes easy to perform calculations on entire datasets, and it's pretty fast as well. To start using numpy, you first have to install the package. We already did that in the previous video, by executing `pip3 install numpy` in the command line.
 
-To actually start using it in python, you can import the numpy package in your IPython session.
+To actually start using it in python, you can import the numpy package in your session, like this.
 
 The first step is of course creating a numpy array. You do this with Numpy's `array()` function: the input is a regular Python list. Let's create Numpy version of the `fam_height` and `fam_weight` lists from before: `np_height` and `np_weight`:
 
