@@ -391,8 +391,8 @@ As a data scientist, you'll often be confronted with multi-dimension feature spa
 
 For a fancy clustering algorithms, you want to find the circumference $C$ and area $A$ of a circle. When the radius of the circle is `r`, you can calculate $C$ and $A$ as:
 
-$$C = 2 \times \pi \times r$$
-$$A = \pi \times r^2 $$
+$$C = 2 \pi r$$
+$$A = \pi r^2 $$
 
 To use the constant `pi`, you'll need the `math` package. A variable `r` is already coded in the script. Fill in the code to calculate `C` and `A` and see how the `print()` functions create some nice printouts.
 
@@ -413,11 +413,11 @@ To use the constant `pi`, you'll need the `math` package. A variable `r` is alre
 
 *** =sample_code
 ```{python}
-# Import the math package
-
-
 # Definition of radius
 r = 0.43
+
+# Import the math package
+
 
 # Calculate C
 C = 0
@@ -432,11 +432,11 @@ print("Area: " + str(A))
 
 *** =solution
 ```{python}
-# Import the math package
-import math
-
 # Definition of radius
 r = 0.43
+
+# Import the math package
+import math
 
 # Calculate C
 C = 2 * r * math.pi 
@@ -456,17 +456,31 @@ success_msg("Nice!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Specific import
+## Selective import
 
-I - from math import radians. let them do something with radians() (3)
-Assume you’re playing baseball on a field which can be approached by a circle. You hit the ball and from the center of the field it seemed you ran over an angle of 12 degrees. The field has a diameter of 50 meters. How far did you run? Use (50/2)*rad(12)
+General imports, like this:
+
+```
+import math
+```
+
+make all functionality of the entire `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+
+```
+from math import pi
+```
+
+Let's say the Moon's orbit around planet Earth is a perfect circle, with a radius `r` (in km) that is defined in the script.
 
 *** =instructions
-- instruction 1
-- instruction 2
+- So a selective import of the `math` package: you only want to use the `radians` function.
+- Calculate the distance the Moon has travelled if it covered an angle of 12 degrees. Assign the result to `dist`. You can calculate this as $r \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, that you just imported.
+- Print out `dist`.
 
 *** =hint
-hint comes here
+- Use `from math import radians` to do the selective import.
+- You can simply use the `radians()` function now: Pass it the number 12 to get the angle in radians.
+- To print out a variable `x`, simply type `print(x)`.
 
 *** =pre_exercise_code
 ```{python}
@@ -475,64 +489,61 @@ hint comes here
 
 *** =sample_code
 ```{python}
-# sample code
+# Definition of radius
+r = 192500
+
+# Import radians function of math package
+
+
+# Calculate travel distance of Moon if 12 degrees: dist
+
+
+# Print out dist
+
 ```
 
 *** =solution
 ```{python}
-# solution code
+# Definition of radius
+r = 192500
+
+# Import radians function of math package
+from math import radians
+
+# Calculate travel distance of Moon if 12 degrees: dist
+dist = r * radians(12)
+
+# Print out dist
+print(dist)
 ```
 
 *** =sct
 ```{python}
-# sct code
-```
-
---- type:NormalExercise lang:python xp:100 skills:2
-## Import package with local name
-
-I - import math as m. let them do something with m.sin(), m.cos() and m.tan() (3)
-TODO: Come up with a nice exercise on these concepts.
-
-*** =instructions
-- instruction 1
-- instruction 2
-
-*** =hint
-hint comes here
-
-*** =pre_exercise_code
-```{python}
-# pec
-```
-
-*** =sample_code
-```{python}
-# sample code
-```
-
-*** =solution
-```{python}
-# solution code
-```
-
-*** =sct
-```{python}
-# sct code
+# TODO VINCENT SCT MESSAGE
+success_msg("Nice! Head over to the next exercise.")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Different ways of importing
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code. Suppose I want to u
+There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code. 
+
+Suppose you want to do some good old linear algebra. More specifically, you want to use the function `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+
+```
+my_inv([[1,2], [3,4]])
+```
+
+Which `import` statement will you need in order to run the above code without an error?
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- `import scipy`
+- `import scipy.linalg`
+- `from scipy.linalg import my_inv`
+- `from scipy.linalg import inv as my_inv`
 
 *** =hint
-hint
+Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors.
 
 *** =pre_exercise_code
 ```{python}
@@ -541,6 +552,8 @@ hint
 
 *** =sct
 ```{python}
-test_mc(2) # if 2 is the correct option.
+msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
+msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv`."
+success_msg("replace me")
 ```
 
