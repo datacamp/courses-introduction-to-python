@@ -383,17 +383,28 @@ success_msg("replace me")
 *** =video_link
 //player.vimeo.com/video/146994272
 
+
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Import package
 
-Assignment comes here. Use Markdown for text formatting.
+As a data scientist, you'll often be confronted with multi-dimension feature spaces to describe your data. As a refresher, let's do some basic geometry.
+
+For a fancy clustering algorithms, you want to find the circumference $C$ and area $A$ of a circle. When the radius of the circle is `r`, you can calculate $C$ and $A$ as:
+
+$$C = 2 \times \pi \times r$$
+$$A = \pi \times r^2 $$
+
+To use the constant `pi`, you'll need the `math` package. A variable `r` is already coded in the script. Fill in the code to calculate `C` and `A` and see how the `print()` functions create some nice printouts.
 
 *** =instructions
-- instruction 1
-- instruction 2
+- Import the `math` package.
+- Calculate the circumference of the circle and store it in `C`.
+- Calculate the area of the circle and store it in `A`.
 
 *** =hint
-hint comes here
+- You can simply use `import math`, and then refer to `pi` with `math.pi`.
+- Use the equation in the assignment to find `C`. Use `*`
+- Use the equation in the assignment to find `A`. Use `*` and `**`.
 
 *** =pre_exercise_code
 ```{python}
@@ -402,23 +413,53 @@ hint comes here
 
 *** =sample_code
 ```{python}
-# sample code
+# Import the math package
+
+
+# Definition of radius
+r = 0.43
+
+# Calculate C
+C = 0
+
+# Calculate A
+A = 0
+
+# Build printout
+print("Circumference: " + str(C))
+print("Area: " + str(A))
 ```
 
 *** =solution
 ```{python}
-# solution code
+# Import the math package
+import math
+
+# Definition of radius
+r = 0.43
+
+# Calculate C
+C = 2 * r * math.pi 
+
+# Calculate A
+A = math.pi * r ** 2
+
+# Build printout
+print("Circumference: " + str(C))
+print("Area: " + str(A))
 ```
 
 *** =sct
 ```{python}
-# sct code
+# TODO VINCENT SCT MAGIC
+success_msg("Nice!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Import specific module
+## Specific import
 
-Assignment comes here. Use Markdown for text formatting.
+I - from math import radians. let them do something with radians() (3)
+Assume you’re playing baseball on a field which can be approached by a circle. You hit the ball and from the center of the field it seemed you ran over an angle of 12 degrees. The field has a diameter of 50 meters. How far did you run? Use (50/2)*rad(12)
 
 *** =instructions
 - instruction 1
@@ -450,7 +491,8 @@ hint comes here
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Import package with local name
 
-Assignment comes here. Use Markdown for text formatting.
+I - import math as m. let them do something with m.sin(), m.cos() and m.tan() (3)
+TODO: Come up with a nice exercise on these concepts.
 
 *** =instructions
 - instruction 1
@@ -477,5 +519,28 @@ hint comes here
 *** =sct
 ```{python}
 # sct code
+```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2
+## Different ways of importing
+
+There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code. Suppose I want to u
+
+*** =instructions
+- option 1
+- option 2
+- option 3
+
+*** =hint
+hint
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sct
+```{python}
+test_mc(2) # if 2 is the correct option.
 ```
 
