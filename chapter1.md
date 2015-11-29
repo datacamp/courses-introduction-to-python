@@ -187,7 +187,7 @@ success_msg("Time for another video!")
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
-## Variables and Types
+## Variables & Types
 
 *** =video_link
 //player.vimeo.com/video/146994263
