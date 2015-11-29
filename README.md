@@ -6,6 +6,6 @@
 
 ```
 library(datacamp)
-datacamp_login("introtopython@datacamp.com", "testtest", "staging")
+datacamp_login("introtopython@datacamp.com", "testtest", "")
 upload_course(upload_chapters = TRUE, force = TRUE, open = FALSE)
 ```

@@ -131,7 +131,7 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 The code in the script on the right gives some examples.
 
 *** =instructions
-- Suppose you have `$100`, which you can invest with a 10\% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
+- Suppose you have `$100`, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
 
 *** =hint
 - After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
@@ -399,8 +399,8 @@ When you sum two strings for example, you'll get different behavior then when yo
 In the script, some variables with different types have already been created. Up to you get operational on them.
 
 *** =instructions
-- Calculate the product of `mult` and `begin` and store the result in `year1`. 
-- You're multiplying a string and a float here; what do you think the resulting type will be? Find out by printing the type (`type()`) of `year1`.
+- Calculate the product of `mult` and `begin`. Store the result in `year1`.
+- What do you think the resulting type will be? Find out by printing the type (`type()`) of `year1`.
 - Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
 - Print out `doubledesc`. Did you expect this?
 

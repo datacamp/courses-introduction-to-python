@@ -421,10 +421,10 @@ The elements with index 1 and 2 are included, while the element with index three
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Use slicing to create ground_floor
-
+ground_floor = 
 
 # Use slicing to create first_floor
-
+first_floor = 
 
 # Print out ground_floor and first_floor
 ```
@@ -447,7 +447,8 @@ print(first_floor)
 
 *** =sct
 ```{python}
-
+# TODO VINCENT SCT MAGIC
+success_msg("Great!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -470,11 +471,9 @@ x[:]
 
 *** =instructions
 - Use slicing to create the lists `ground_floor` and `first_floor` again, this time without using indices if it's not necessary.
-- Print out the sum of the areas of the bedroom and the bathroom. You can subset `areas` or `first_floor` to do this, that's up to you.
 
 *** =hint
 - To build `ground_floor`, you can use `[:6]`. To build `first_floor`, you can use `[6:]`.
-- You can use standard subsetting techniques to extract the list elements and perform calculations.
 
 *** =pre_exercise_code
 ```{python}
@@ -487,13 +486,10 @@ x[:]
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Alternative slicing to create ground_floor
-
+ground_floor = 
 
 # Alternative slicing to create first_floor
-
-
-# Sum of bedroom and bathroom area
-
+first_floor = 
 ```
 
 *** =solution
@@ -506,9 +502,6 @@ ground_floor = areas[:6]
 
 # Alternative slicing to create first_floor
 first_floor = areas[6:]
-
-# Sum of bedroom and bathroom area
-print(first_floor[1] + first_floor[3])
 ```
 
 *** =sct
@@ -628,16 +621,14 @@ success_msg("Sweet! As the code sample showed, you can also slice a list and rep
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Extend a list
 
-Next to changing elements a list, you sure want to be able to add elements to it, right?
-
-This is dead simple: use the `+` operator:
+Next to changing elements a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-After updating some elements in the `areas` list, you realize that you forgot to mention some parts of your house. Can you add the necessary data?
+You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
 
 *** =instructions
 - Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
@@ -705,7 +696,9 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
          "garage", 15.45]
 ```
 
-You decide to remove the string and float that corresponds to your poolhouse. Which of the code chunks does this correctly?  The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
+There was a mistake; the amount you won with the lottery is not that big after all. The poolhouse isn't going to happen after all. You decide to remove the corresponding string and float from the `areas` list.
+
+Which of the code chunks does this correctly?  The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
 
 ```
 # Use of ;

@@ -87,7 +87,7 @@ Once you know the name of the Python function you want to know, you still have t
 To get help on the `type()` function, for example, you'll want to use this call:
 
 ```
-type(max)
+help(type)
 ```
 
 You typically ask for help interactively, so in the IPython Shell. IPython also offers a more concise way to ask for help:
@@ -118,7 +118,7 @@ msg1 = "Incorrect. `[, arg_name]` is a syntax to specify optional arguments. TOD
 msg2 = "This statement is false. `imag` is not a required argument."
 msg3 = "Perfect!"
 msg4 = "This is almost true, but not entirely. If you don't specify `image`, it is set to 0."
-test_mc("replace me")
+success_msg("replace me")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -347,12 +347,12 @@ As you saw from the previous exercise, a call like this:
 produces `"POOLHOUSE"`. But it doesn't end here. It's super-easy to chain your method calls:
 
 ```
-"poolhouse".upper().center("20")
+"poolhouse".upper().center(20)
 ```
 
 Here, you're first converting `"poolhouse"` to upper case letters, and on the result, you call the `center()` method, that centers `"POOLHOUSE"` in a string of length 20. 
 
-Apart from that, there are also other ways of calling Python methods. Instead of explaining these in detail, I suggest you experiment with the calls below. Can you tell which one is invalid, so which one generates an error?
+Apart from that, there are also other ways of calling Python methods. Experiment with the different Python commands below. Which one will generate an error if you would try to execute them in the Python shell? Put differently, which Python command is invalid?
 
 *** =instructions
 - `(["a", "b", "c"] + ["d"]).index("b")`
@@ -371,9 +371,9 @@ Copy the different options and paste them into the IPython Shell and indicate wh
 *** =sct
 ```{python}
 msg1 = "Incorrect; this call works perfectly fine. First you create a list by pasting together two lists, and then you call the `index()` method on it."
-msg2 = "Incorrect, this call gives no error. `list.__add__(["a", "b", "c"], ["d"])` is equivalent to `["a", "b", "c"] + ["d"]`.
+msg2 = "Incorrect, this call gives no error. `list.__add__([\"a\", \"b\", \"c\"], [\"d\"])` is equivalent to `[\"a\", \"b\", \"c\"] + [\"d\"]`."
 msg3 = "Correct! This call generates an error. If you use methods without calling them _on_ a Python object, you have to use the name of the type followed by a dot, like it option 2 and 4."
-msg4 = "Incorrect, this call works perfectly fine. `list.remove(["a", "b", "c"], "b")` is equivalent to `["a", "b", "c"].remove("b")`.
+msg4 = "Incorrect, this call works perfectly fine. `list.remove([\"a\", \"b\", \"c\"], \"b\")` is equivalent to `[\"a\", \"b\", \"c\"].remove(\"b\")`."
 success_msg("replace me")
 ```
 
@@ -495,7 +495,7 @@ r = 192500
 # Import radians function of math package
 
 
-# Calculate travel distance of Moon if 12 degrees: dist
+# Travel distance of Moon if 12 degrees. Store in dist.
 
 
 # Print out dist
@@ -510,7 +510,7 @@ r = 192500
 # Import radians function of math package
 from math import radians
 
-# Calculate travel distance of Moon if 12 degrees: dist
+# Travel distance of Moon if 12 degrees. Store in dist.
 dist = r * radians(12)
 
 # Print out dist
