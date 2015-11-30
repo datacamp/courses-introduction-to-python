@@ -65,6 +65,7 @@ print(type(np_baseball))
 
 *** =sct
 ```{python}
+# TODO VINCENT SCT MAGIC
 success_msg("Great job!")
 ```
 
@@ -77,15 +78,13 @@ Being a huge baseball fan, you call the MLB, the Major League of Baseball, and a
 
 *** =instructions
 - Create a Numpy array from `height`. Name this new array `np_height`.
-- Print out `np_height`.
 - Multiply `np_height` with `2.54` to convert all weight measurements from inches to centimeters. Store the new values in a new array, `np_height_cm`.
 - Print out `np_height_cm` and check if the output makes sense.
 
 *** =hint
 - Use `np.array()` and pass it `height`. Store the result in `np_height`.
-- To print out a variable `x`, simply type `print(x)` in the Python script.
 - Perform calculations as if `np_height` is a single number: `np_height * factor` is part of the answer.
-- Use `print()` a second time, to print out `np_height_cm` this time.
+- To print out a variable `x`, type `print(x)` in the Python script.
 
 *** =pre_exercise_code
 ```{python}
@@ -200,7 +199,7 @@ success_msg("Wow! It appears that only 1 of the more than 1000 baseball players 
 
 As Filip explained before, Numpy is great to do vector arithmetic. However, if you compare its functionality with regular Python lists, some things have changed. 
 
-First of all, Numpy arrays cannot contain elements with different types. If you try do try to build such a list, coercion takes place. Next, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and Numpy arrays.
+First of all, Numpy arrays cannot contain elements with different types. If you try to build such a list, coercion takes place. Next, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and Numpy arrays.
 
 Have a look at this line of code:
 

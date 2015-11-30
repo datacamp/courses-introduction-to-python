@@ -1,12 +1,16 @@
 ## Lists
 
-Before, you've played around with all kinds of data types. Each variable referenced to a single value, such as a float or a boolean. As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty stupid to create a new python variable for each data point you collected right?
+By now, you've played around with different data types. On the numbers side, there's the `float`, to represent a real number, and the `int`, to represent an integer. Next, we also have `str`, short for string, to represent text in Python, and `bool`, which can be either `True` or `False`. You can store values with these different types in a variable, like this. But in this case, each variable represents a single value.
+
+As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty stupid to create a new python variable for each data point you collected right?
 
 What you can do instead, is store all this information in a python _list_. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
 
 Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here:
 
-More formally, a list is a so-called compound data type, used to group together other values. These values, or elements, can have any type; they can be floats, integer, booleans, but also more advanced Python types, even lists. It's perfectly possible to have a list containing different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
+More formally, a list is a so-called compound data type, used to group together other values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists. 
+
+It's perfectly possible for a list to contain different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
 
 I you check out the type of this list, you will see that it is simply "list":
 

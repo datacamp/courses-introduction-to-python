@@ -57,7 +57,7 @@ Python is a pretty versatile language. For what applications can you use Python?
 - You want to do some quick calculations.
 - For your new business, you want to develop a database-driven website.
 - Your boss asks you to clean and analyze the results of the latest satisfaction survey.
-- All of the above
+- All of the above.
 
 *** =hint
 - Filip mentioned in the video that Python can be used to build practically any piece of software.
@@ -354,7 +354,7 @@ success_msg("Nice!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## What's that type?
 
-To found out the class of a value or a variable that refers to that value, you can use the `type()` function. Suppose you've defined a variable `a`, but you forgot the type of this variable. Simply executing
+To find out the class of a value or a variable that refers to that value, you can use the `type()` function. Suppose you've defined a variable `a`, but you forgot the type of this variable. Simply executing
 
 ```
 type(a)
@@ -392,7 +392,7 @@ success_msg("Replace me")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Operations with other types
 
-Filip mentioned that differnt types behave differently when you work with them.
+Filip mentioned that different types behave differently in Python.
 
 When you sum two strings for example, you'll get different behavior then when you sum two integers or two booleans.
 
@@ -475,8 +475,9 @@ print("I started with $" + begin + " and now have $" + result + ". Awesome!")
 This will not work, though, as you cannot simply sum strings and floats. To do this, you'll need to explicitly convert the types of your variables. You can use the functions `str()`, `int()`, `float()` and `bool()` for this. `str(begin)`, for example, will convert the float `begin` to a string.
 
 *** =instructions
+- Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
 - Fix the code on the right such that the printout runs without errors.
-- Convert the variable `pi_string` to a float, and store this float a new varialbe, `pi_float`.
+- Convert the variable `pi_string` to a float, and store this float a new variable, `pi_float`.
 
 *** =hint
 - You should use `str()` twice!

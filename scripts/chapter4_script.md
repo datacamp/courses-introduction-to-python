@@ -1,26 +1,28 @@
 ## Intro to Numpy
 
-By now, you are aware that the Python list is pretty powerful: A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. When analyzing data, you'll often want to carry out mathematical operations over entire collections of values, and you want to do this fast. With lists, this is a problem.
+By now, you are aware that the Python list is pretty powerful: A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. When analyzing data, you'll often want to carry out operations over entire collections of values, and you want to do this fast. With lists, this is a problem.
 
-To show this, let's retake the heights of your family and yourself. In addition, suppose you've also asked for everybody's weight. It's not very polite, but everything for science, right? You end up with two lists, `fam_height`, and `fam_weight`. The first person is 1.78 meters tall and weighs 75 kilograms.
+Let's retake the heights of your family and yourself. Suppose you've also asked for everybody's weight. It's not very polite, but everything for science, right? You end up with two lists, `fam_height`, and `fam_weight`. The first person is 1.78 meters tall and weighs 75 kilograms.
 
-To calculate the Body Mass Index for each family member in a single call this time, you might want to try something like this.
+If you now want to calculate the Body Mass Index for each family, you'd hope that this call can work, making the calculations element-wise.
 
-Python throws an error, because it has no idea how to do calculations with lists. You could solve this by going through each list element one after the other, and calculating the BMI for each person separately, but this is terribly inefficient and tiresome to write.
+Unfortunately, Python throws an error, because it has no idea how to do calculations with lists. You could solve this by going through each list element one after the other, and calculating the BMI for each person separately, but this is terribly inefficient and tiresome to write.
 
-A way more elegant solution is to use NumPy, or Numeric Python. It's a Python package that, among others, provides a alternative to the regular python list, the numpy array. Where the Python list is simply a compound data type to store python values, you can think of the numpy array more of an actual vector, in the mathematical sense. It becomes easy to perform calculations on entire datasets, and it's pretty fast as well. To start using numpy, you first have to install the package. We already did that in the previous video, by executing `pip3 install numpy` in the command line.
+A way more elegant solution is to use NumPy, or Numeric Python. It's a Python package that, among others, provides a alternative to the regular python list: the Numpy array. The Numpy array is pretty similar to a regular Python list, but has one additional feature: you can perform calculations over all entire arrays. It's really easy, and super-fast as well.
+
+To start using numpy, you first have to install the package. We already did that in the previous video, by executing `pip3 install numpy` in the command line.
 
 To actually start using it in python, you can import the numpy package in your session, like this.
 
-The first step is of course creating a numpy array. You do this with Numpy's `array()` function: the input is a regular Python list. Let's create Numpy version of the `fam_height` and `fam_weight` lists from before: `np_height` and `np_weight`:
+The first step is of course _creating_ a numpy array. You do this with Numpy's `array()` function: the input is a regular Python list. Let's create Numpy version of the `fam_height` and `fam_weight` lists from before: `np_height` and `np_weight`:
 
-Let's now try to calculate everybody's BMI with a single call:
+Let's try to calculate everybody's BMI with a single call again:
 
-This time, it worked fine: the calculations were performed element wise. The first person's BMI was calculated by dividing the first element in `np_weight` by the square of the first element in `np_height`, the second person's BMI was calculated with the second height and weight elements, and so on. A next step could be to find out whose BMI is over 23. You can do this with the greater than sign:
+This time, it worked fine: the calculations were performed element-wise. The first person's BMI was calculated by dividing the first element in `np_weight` by the square of the first element in `np_height`, the second person's BMI was calculated with the second height and weight elements, and so on. A next step could be to find out whose BMI is over 23. You can do this with the greater than sign:
 
-This time, the result is a Numpy array containing booleans: True if the corresponding bmi is above 23, False if it's below. You can do all of this with remarkable ease: Numpy knows how to work with vectors just how Python works with single values, which is pretty awesome if you ask me.
+This time, the result is a Numpy array containing booleans: True if the corresponding bmi is above 23, False if it's below. You can do all of this with remarkable ease: Numpy knows how to work with arrays just how Python works with single values, which is pretty awesome if you ask me.
 
-Of course, you should pay attention. First of all, Numpy can do all of this easily and quickly because it assumes that your Numpy array can only contain values of a single type. It's either an array of booleans, either an array of floats, and so on. If you do try to create an array with different types, like this for example;
+Of course, you should pay attention. First of all, Numpy can do all of this because it assumes that your Numpy array can only contain values of a single type. It's either an array of booleans, either an array of floats, and so on. If you do try to create an array with different types, like this for example;
 
 The Numpy array that results will contain a single type, string in this case. The boolean and the float were both converted, or coerced, as this is called, to strings.
 
@@ -29,7 +31,6 @@ Second, you should know that a Numpy array is simply a new kind of Python type, 
 If you do `python_list + python_list`, the list elements are pasted together, generating a list with 6 elements. If you do this with the numpy arrays, on the other hand, Python will do an element-wise sum of the array:
 
 Make sure to pay attention when you're juggling around with different Python types, because the outcome can differ a lot! Now head over to the exercises, to get your own numpy arrays rolling.
-
 
 ```
 fam_height = [1.73, 1.68, 1.71, 1.89, 1.79]
@@ -70,11 +71,11 @@ You can think of the 2D numpy array as an improved list of lists: you can perfor
 
 Suppose you want the first row, and then the third element in that row. To select the row, you need index 0 in square brackets. To then select the third element, you put 2 in square brackets, like this:
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before:
+There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the column specifies the comma.
 
-This syntax opens much more possibilities though: you can create both row-wise and column-wise subsets. This call, for example, selects the first row of the 2d array:
+This syntax opens much more possibilities though: you can create both row-wise and column-wise subsets. Suppose you want to get the first row of the 2d array. You want the first row, so you put 0 before the comma. You want all columns, so you use a colon after the comma, like this:
 
-The colon tells Python to include a slice going from beginning to end, remember? So you're telling Python to take the first row, and then all columns. Just the same, you can do this for columns too. This call selects the entire column with index 2, so the height and weight of the third family member:
+Just the same, you can do this for columns too. To select the height and weight of the third family member, you can use this call:
 
 Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting...
 
@@ -117,7 +118,7 @@ and `std()`, for standard deviation.
 
 Numpy also features more basic functions, such as `sum()` and `sort()`, which also exist in the basic Python distribution. However, the big difference here is speed. Because Numpy enforces a single data type in an array, it can use optimized C code behind the scenes, making your analysis superfast. 
 
-By the way, the data we started with, `np_city`, was simulated using numpy function as well: I created 5000 samples of a random distribution to create the `heights` and `weights` arrays, and then used `column_stack` to paste them together as two columns. Another thing that Numpy can do!
+Just a sidenote here: If you're wondering how I came up with the data in this video: I simulated it with Numpy functions! I sampled two random distributions 5000 times to create the `heights` and `weights` arrays, and then used `column_stack` to paste them together as two columns. Another thing that Numpy can do!
 
 Another great tool to get some sense of your data is to visualize it, but that's something for later. First, head over to the exercises to learn how to explore your Numpy arrays!
 
