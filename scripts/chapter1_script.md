@@ -4,7 +4,7 @@ Hi, my name is Filip and I'll be your host for _Introduction to Python for Data 
 
 You will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
 
-Python is originally conceived by Guido Van Rossum. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software you can think of. How did this happen? Well, first of all, Python is open source, so it's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these package specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales? There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that. 
+Python is originally conceived by Guido Van Rossum. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software you can think of. How did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these package specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales? There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that. 
 
 Currently, there are two common versions of Python, version 2.7 and 3.5 and later. Apart from some syntactical differences, they are pretty similar, but as support for version 2 will fade over time, our courses focus on Python 3. To install Python 3 on your own system, follow the steps at this URL.
 
@@ -17,24 +17,28 @@ Now that you're all eyes and ears for Python, let's start experimenting. I'll st
 
 Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are simply text files with the extension _dot py_. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the commands from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
 
-If you execute this script in the DataCamp interface, no output will be shown. That's because you have to explicitly use `print()` inside scripts if you want to generate output during executing. Let's wrap our previous calculations in `print()` calls, and rerun the script. This time, the same output as before is generated, great!
+If you execute this script in the DataCamp interface, no output will be shown. That's because you have to explicitly use `print()` inside scripts if you want to generate output during execution. Let's wrap our previous calculations in `print()` calls, and rerun the script. This time, the same output as before is generated, great!
 
 Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
 
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Have fun!
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. In a coding exercise, use the IPython Shell for experimentation, and use the Python sript editor to code the actual answer. Have fun!
 
 
 ## Variables and types
 
-A hugely important concept in practically every programming language, is the variable. Python isn't different: variables are used all the time. You can think of a variable as a way to reference to values in your program for later use. Not sure what I mean? Maybe an example can clarify. Suppose you measure your height and weight, in metric units: you are 1 point 79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, called `height` and `weight`, with an equals sign:
+It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along. You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+
+Suppose you measure your height and weight, in metric units: you are 1 point 79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named `height` and `weight`, with an equals sign:
 
 If you now type the name of the variable, height
 
-Python looks for the value that goes behind the variable, and prints it out.
+Python looks for the variable name, retrieves its value, and prints it out.
 
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows. You can do this with the actual values <PAUSE> but you can just as well use the variables height and weight, like in here.
+Let's now calculate the Body Mass Index, or BMI, which is calculated as follows. You can do this with the actual values <PAUSE> but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
 
 Finally, this version has Python store the result in a new variable, `bmi`. `bmi` now contains the same value as the one you calculated earlier.
+
+In Python, variables are used all the time. They help to make your code reproducible. Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another height, you can simply change the declaration of the height variable, and rerun the script. The `bmi` changes accordingly, because the value of the variable `height` has changed.
 
 So far, we've only worked with numerical values, such as height and weight. In Python, these numbers all have a specific type. You can check out the type of a value with the `type()` function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a decimal part. Python als has a type for integers: `int`, like this example
 

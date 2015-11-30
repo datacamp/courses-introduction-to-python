@@ -89,7 +89,7 @@ A list can contain any Python type. Although it's not really common, a list can 
 
 The printout of the previous exercise wasn't really satisfying: it's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
-The code on the right is the start of solution: for same of the ares, the name of the corresponding room is placed in front. Pay attention here. `"bahtroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earliers.
+The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bahtroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earliers.
 
 *** =instructions
 - Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area.
@@ -107,14 +107,14 @@ The code on the right is the start of solution: for same of the ares, the name o
 *** =sample_code
 ```{python}
 # area variables (in square meters)
-hallway = 11.25
-kitchen = 18.0
-living = 20.0
-bedroom = 10.75
-bathroom = 9.50
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
 
 # Adapt list areas
-areas = [hallway, kitchen, "living room", living, bedroom, "bathroom", bathroom]
+areas = [hall, kit, "living room", liv, bed, "bathroom", bath]
 
 # Print areas
 
@@ -123,14 +123,14 @@ areas = [hallway, kitchen, "living room", living, bedroom, "bathroom", bathroom]
 *** =solution
 ```{python}
 # area variables (in square meters)
-hallway = 11.25
-kitchen = 18.0
-living = 20.0
-bedroom = 10.75
-bathroom = 9.50
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
 
 # Adapt list areas
-areas = ["hallway", hallway, "kitchen", kitchen, "living room", living, "bedroom", bedroom, "bathroom", bathroom]
+areas = ["hallway", hall, "kitchen", kit, "living room", liv, "bedroom", bed, "bathroom", bath]
 
 # Print areas
 print(areas)
@@ -209,16 +209,16 @@ Don't get confused here: `"hallway"` is a string, while `hallway` is a variable,
 *** =sample_code
 ```{python}
 # area variables (in square meters)
-hallway = 11.25
-kitchen = 18.0
-living = 20.0
-bedroom = 10.75
-bathroom = 9.50
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
 
 # house information as list of lists
-house = [["hallway", hallway],
-         ["kitchen", kitchen],
-         ["living room", living]]
+house = [["hallway", hall],
+         ["kitchen", kit],
+         ["living room", liv]]
 
 # Print out house
 
@@ -230,18 +230,18 @@ house = [["hallway", hallway],
 *** =solution
 ```{python}
 # area variables (in square meters)
-hallway = 11.25
-kitchen = 18.0
-living = 20.0
-bedroom = 10.75
-bathroom = 9.50
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
 
 # house information as list of lists
-house = [["hallway", hallway],
-         ["kitchen", kitchen],
-         ["living room", living],
-         ["bedroom", bedroom],
-         ["bathroom", bathroom]]
+house = [["hallway", hall],
+         ["kitchen", kit],
+         ["living room", liv],
+         ["bedroom", bed],
+         ["bathroom", bath]]
 
 # Print out house
 print(house)
@@ -371,7 +371,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 eat_sleep = areas[3] + areas[-3]
 
 # Print the variable eat_sleep
-print(eatslaap)
+print(eat_sleep)
 ```
 
 *** =sct
@@ -548,7 +548,7 @@ house = [["hallway", 11.25],
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`."
+msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `[\"bathroom\", 9.50]`."
 msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
 success_msg("replace me")
@@ -734,9 +734,9 @@ success_msg("Replace me")
 
 At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
 
-The Python code in the script already creates a list with the name `areas`, and a _shallow copy_ of the same list: `areas_copy`. Next, the first element in the `areas_copy` list is changed, and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to one and the same list.
+The Python code in the script already creates a list with the name `areas`, and a copy: `areas_copy`. Next, the first element in the `areas_copy` list is changed, and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to one and the same list.
 
-If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a _deep copy_ of the `areas` list. You can do this with `list()` or by using `[:]`.
+If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with `list()` or by using `[:]`.
 
 *** =instructions
 - Change the second command, that creates the variable `areas_copy`, such that `areas_copy` becomes a _deep copy_ instead of a _shallow copy_. 
