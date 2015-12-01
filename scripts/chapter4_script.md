@@ -2,7 +2,7 @@
 
 By now, you are aware that the Python list is pretty powerful: A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. When analyzing data, you'll often want to carry out operations over entire collections of values, and you want to do this fast. With lists, this is a problem.
 
-Let's retake the heights of your family and yourself. Suppose you've also asked for everybody's weight. It's not very polite, but everything for science, right? You end up with two lists, `fam_height`, and `fam_weight`. The first person is 1.78 meters tall and weighs 75 kilograms.
+Let's retake the heights of your family and yourself. Suppose you've also asked for everybody's weight. It's not very polite, but everything for science, right? You end up with two lists, `fam_height`, and `fam_weight`. The first person is 1.73 meters tall and weighs 65.4 kilograms.
 
 If you now want to calculate the Body Mass Index for each family, you'd hope that this call can work, making the calculations element-wise.
 

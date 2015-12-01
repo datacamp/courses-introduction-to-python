@@ -2,7 +2,7 @@
 
 By now, you've played around with different data types. On the numbers side, there's the `float`, to represent a real number, and the `int`, to represent an integer. Next, we also have `str`, short for string, to represent text in Python, and `bool`, which can be either `True` or `False`. You can store values with these different types in a variable, like this. But in this case, each variable represents a single value.
 
-As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be pretty stupid to create a new python variable for each data point you collected right?
+As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be inconvenient to create a new python variable for each data point you collected right?
 
 What you can do instead, is store all this information in a python _list_. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
 
@@ -79,9 +79,9 @@ Do you still remember how the plus operator was different for strings and intege
 
 Of course, you can also store this new list in a variable, `fam_height_ext` for example.
 
-Finally, deleting a list is also pretty straightforward, you'll have to use `del` here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
+Finally, deleting elements from a list is also pretty straightforward, you'll have to use `del` here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
 
-If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by one index. If you again run the same line, you're again removing the element at index 2, which is emma's length, 1.68 centimeters:
+If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by one index. If you again run the same line, you're again removing the element at index 2, which is emma's height, 1.68 centimeters:
 
 Understanding how Python lists actually work behind the scenes becomes pretty important now. What actually happens when you create a new list, `x`, like this?
 

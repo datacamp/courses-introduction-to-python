@@ -8,7 +8,7 @@ Python is originally conceived by Guido Van Rossum. What started as a hobby proj
 
 Currently, there are two common versions of Python, version 2.7 and 3.5 and later. Apart from some syntactical differences, they are pretty similar, but as support for version 2 will fade over time, our courses focus on Python 3. To install Python 3 on your own system, follow the steps at this URL.
 
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can simply type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. What about mutliplying 2.3 and 6? The shell can handle it. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. What about mutliplying 2.3 and 6? The shell can handle it. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
 
 ```
 4 + 5
@@ -17,12 +17,11 @@ Now that you're all eyes and ears for Python, let's start experimenting. I'll st
 
 Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are simply text files with the extension _dot py_. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the commands from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
 
-If you execute this script in the DataCamp interface, no output will be shown. That's because you have to explicitly use `print()` inside scripts if you want to generate output during execution. Let's wrap our previous calculations in `print()` calls, and rerun the script. This time, the same output as before is generated, great!
+If you execute this script in the DataCamp interface, you won't see any output. That's because you have to explicitly use `print()` inside scripts if you want to generate output during execution. Let's wrap our previous calculations in `print()` calls, and rerun the script. This time, the same output as before is generated, great!
 
 Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
 
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. In a coding exercise, use the IPython Shell for experimentation, and use the Python sript editor to code the actual answer. Have fun!
-
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. In a coding exercise, use the IPython Shell for experimentation, and use the Python sript editor to code and submit the actual answer. Have fun!
 
 ## Variables and types
 
@@ -34,13 +33,13 @@ If you now type the name of the variable, height
 
 Python looks for the variable name, retrieves its value, and prints it out.
 
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows. You can do this with the actual values <PAUSE> but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meter. You can do this with the actual values <PAUSE> but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
 
 Finally, this version has Python store the result in a new variable, `bmi`. `bmi` now contains the same value as the one you calculated earlier.
 
 In Python, variables are used all the time. They help to make your code reproducible. Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another height, you can simply change the declaration of the height variable, and rerun the script. The `bmi` changes accordingly, because the value of the variable `height` has changed.
 
-So far, we've only worked with numerical values, such as height and weight. In Python, these numbers all have a specific type. You can check out the type of a value with the `type()` function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a decimal part. Python als has a type for integers: `int`, like this example
+So far, we've only worked with numerical values, such as height and weight. In Python, these numbers all have a specific type. You can check out the type of a value with the `type()` function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python als has a type for integers: `int`, like this example
 
 To do data science, you'll need more than ints and floats, though. Python features tons of other data types. The most common ones are strings and booleans. 
 
