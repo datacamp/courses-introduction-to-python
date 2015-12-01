@@ -489,7 +489,7 @@ The code to build the Numpy matrix `np_baseball` from the `baseball` lists of li
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
+  baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
 ```
 
 *** =sample_code

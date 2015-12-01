@@ -126,12 +126,12 @@ success_msg("Great!")
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations:
 
 - Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right: for example `4**2` will give `16`.
-- Modulo: `%%`. It returns the remainder of the division of the number to the left by the number on its right, for example `18 %% 7` equals `4`.
+- Modulo: `%`. It returns the remainder of the division of the number to the left by the number on its right, for example `18 % 7` equals `4`.
 
 The code in the script on the right gives some examples.
 
 *** =instructions
-- Suppose you have `$100`, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
+Suppose you have `$100`, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
 
 *** =hint
 - After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
@@ -477,7 +477,7 @@ This will not work, though, as you cannot simply sum strings and floats. To do t
 *** =instructions
 - Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
 - Fix the code on the right such that the printout runs without errors.
-- Convert the variable `pi_string` to a float, and store this float a new variable, `pi_float`.
+- Convert the variable `pi_string` to a float, and store this float as a new variable, `pi_float`.
 
 *** =hint
 - You should use `str()` twice!
@@ -533,9 +533,9 @@ Now that you know something more about combining different sources of informatio
 Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
 
 *** =instructions
-- `"The correct answer to this multiple choice exercise is answer number " + 2`
 - `"I can add integers, like "  + str(5) + " to strings."`
 - `"I said " + ("Hey " * 2) + "Hey!"`
+- `"The correct answer to this multiple choice exercise is answer number " + 2`
 - `True + False`
 
 *** =hint
@@ -548,8 +548,8 @@ Which one of these will throw an error? You can always copy and paste this code 
 
 *** =sct
 ```{python}
-msg1 = "Correct! Because you're not converting `2` to a string with `str()`, this will give an error."
-msg2 = msg3 = msg4 = "Incorrect, this command runs perfectly fine."
+msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
+msg3 = "Correct! Because you're not converting `2` to a string with `str()`, this will give an error."
 success_msg("Replace me")
 ```
 
