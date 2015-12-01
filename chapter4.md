@@ -16,7 +16,7 @@ description : Add chapter description here.
 
 In this chapter, we're going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of Numpy, a powerful package to do data science.
 
-A list `baseball` has already been defined in the Python script, representing the height of some baseballers in centimeters. Can you add some code here and there to create a Numpy array from it?
+A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code here and there to create a Numpy array from it?
 
 *** =instructions
 - Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
@@ -24,7 +24,7 @@ A list `baseball` has already been defined in the Python script, representing th
 - Print out the type of `np_baseball` to check that you got it right.
 
 *** =hint
-- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a numpy function.
+- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a Numpy function.
 - `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
 - To print out the type of a variable `x`, simply type `print(type(x))`.
 
@@ -70,7 +70,7 @@ success_msg("Great job!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Baseballers' height
+## baseball players' height
 
 Being a huge baseball fan, you call the MLB, the Major League of Baseball, and ask around for more statistics on the height of the main players. They pass you along more data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it, and convert the units to centimeters?
 
@@ -141,7 +141,7 @@ success_msg("Nice! In the blink of an eye, Numpy performs multiplications on mor
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Lightweight baseballers
+## Lightweight baseball players
 
 Next to height, the MLB also offers you to analyze their weight data.. Again, both are available as regular Python lists: `height` and `weight`; height is in inches, weight is in pounds.
 
@@ -397,7 +397,7 @@ np_x = np.array(x)
 np_x[:,0]
 ```
 
-For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indices before the column refer to the rows, those after the column refer to the columns. The `:` tells Python to include all rows, or all columns, respectively.
+For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the column refer to the rows, those after the column refer to the columns. The `:` tells Python to include all rows, or all columns, respectively.
 
 The code that converts the pre-loaded `baseball` list to a 2D Numpy array is already in the script. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
@@ -636,7 +636,7 @@ success_msg("Great job! Notice how with very little code, you can change all val
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Average versus median
 
-You now know about Numpy functions to a get a better feeling for your data. It basically comes down to importing Numpy, and then calling several simple functions on the numpy arrays:
+You now know about Numpy functions to a get a better feeling for your data. It basically comes down to importing Numpy, and then calling several simple functions on the Numpy arrays:
 
 ```
 import numpy as np
@@ -707,7 +707,7 @@ success_msg("An average length of 1586 inches, that doesn't sound right, does it
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Explore the baseball data
 
-Because the mean and median are so far apart, you decide to complain with Major League Baseball. They found the errror and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
+Because the mean and median are so far apart, you decide to complain with Major League Baseball. They found the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
 
 The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
@@ -784,7 +784,7 @@ success_msg("This time, median and ")
 
 To wrap up on this chapter, you're going through the entire process: you'll convert regular Python lists to Numpy arrays, combine them into a 2D Numpy array, and generate some summary statistics on them!
 
-Todo vincent, no inspiration for super-awesome example.
+Todo vincent, no inspiration for super-awesome example ;-)
 
 *** =instructions
 - instruction 1

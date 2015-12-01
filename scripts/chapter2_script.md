@@ -31,7 +31,7 @@ After you've created your very own Python list, you might wonder how you can acc
 
 The number three refers to the _index_ of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the float 1.68, has index 3. To select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
 
-You can also count backwards, using negative ubdexes. This is useful if you want to get some elements at the end of your list. To get your dad's height, for example, you'll need the index -1. These are the negative indexes for all list elements.
+You can also count backwards, using negative indexes. This is useful if you want to get some elements at the end of your list. To get your dad's height, for example, you'll need the index -1. These are the negative indexes for all list elements.
 
 This means that this line and this line, return the same result:
 
@@ -39,7 +39,7 @@ Apart from indexing, there's also something called slicing, which allows you to 
 
 Can you guess what it'll return? A list with the the float 1.68, the string "mom", and the float 1.71, corresponding to the 4th, 5th and 6th element in the list maybe? Let's see what the output is.
 
-Apparently, only the elements with index 3 and 4, get returned. In general, this is the syntax: the index you specify before the colon, so where the slice begins, is included, while the index you specify after the colon, where the slice ends, is not.
+Apparently, only the elements with index 3 and 4, get returned. In general, this is the syntax: the index you specify before the colon, so where the slice starts, is included, while the index you specify after the colon, where the slice ends, is not.
 
 With this in mind, can you tell what this call will return? <PAUSE>
 
