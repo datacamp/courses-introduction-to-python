@@ -85,7 +85,7 @@ success_msg("Nice! A list is way better here, isn't it?")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create list with different types
 
-A list can contain any Python type. Although it's not really common, a list can also contain different types: you can strings, floats and booleans, all in the same list. 
+A list can contain any Python type. Although it's not really common, a list can also contain different types: you can put strings, floats and booleans, all in the same list. 
 
 The printout of the previous exercise wasn't really satisfying: it's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
@@ -265,7 +265,7 @@ success_msg("Great! Get ready to learn about list subsetting!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subset and conquer
 
-Subsetting Python lists is a piece of cake. Take the code sample below, that creates a list `x` and then selects "b" from it; this is the second element, so with index 1. You can also use negative subsetting.
+Subsetting Python lists is a piece of cake. Take the code sample below, that creates a list `x` and then selects "b" from it; this is the second element, so it has index 1. You can also use negative indexing.
 
 ```
 x = list["a", "b", "c", "d"]
@@ -398,17 +398,17 @@ x = ["a", "b", "c", "d"]
 x[1:3]
 ```
 
-The elements with index 1 and 2 are included, while the element with index three is not.
+The elements with index 1 and 2 are included, while the element with index 3 is not.
 
 *** =instructions
-- Use slicing to create a list, `ground_floor`, that contains the first 6 elements of `areas`.
-- Do a similar thing to create a new variable, `first_floor`, that contains the last 4 elements of `areas`.
-- Print both `ground_floor` and `first_floor` using `print()`.
+- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
+- Do a similar thing to create a new variable, `upstairs`, that contains the last 4 elements of `areas`.
+- Print both `downstairs` and `upstairs` using `print()`.
 
 *** =hint
-- Use the brackets `[0:6]` to build `ground_floor`.
-- Use the barckets `[6:10]` to build `first_floor`.
-- Simply add two `print()` calls to the script to print out `ground_floor` and `first_floor`.
+- Use the brackets `[0:6]` to build `downstairs`.
+- Use the barckets `[6:10]` to build `upstairs`.
+- Simply add two `print()` calls to the script to print out `downstairs` and `upstairs`.
 
 *** =pre_exercise_code
 ```{python}
@@ -420,13 +420,13 @@ The elements with index 1 and 2 are included, while the element with index three
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Use slicing to create ground_floor
-ground_floor = 
+# Use slicing to create downstairs
+downstairs = 
 
-# Use slicing to create first_floor
-first_floor = 
+# Use slicing to create upstairs
+upstairs = 
 
-# Print out ground_floor and first_floor
+# Print out downstairs and upstairs
 ```
 
 *** =solution
@@ -434,15 +434,15 @@ first_floor =
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Use slicing to create ground_floor
-ground_floor = areas[0:6]
+# Use slicing to create downstairs
+downstairs = areas[0:6]
 
-# Use slicing to create first_floor
-first_floor = areas[6:10]
+# Use slicing to create upstairs
+upstairs = areas[6:10]
 
-# Print out ground_floor and first_floor
-print(ground_floor)
-print(first_floor)
+# Print out downstairs and upstairs
+print(downstairs)
+print(upstairs)
 ```
 
 *** =sct
@@ -470,10 +470,10 @@ x[:]
 ```
 
 *** =instructions
-- Use slicing to create the lists `ground_floor` and `first_floor` again, this time without using indices if it's not necessary.
+- Use slicing to create the lists `downstairs` and `upstairs` again, this time without using indices if it's not necessary.
 
 *** =hint
-- To build `ground_floor`, you can use `[:6]`. To build `first_floor`, you can use `[6:]`.
+- To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
 
 *** =pre_exercise_code
 ```{python}
@@ -485,11 +485,11 @@ x[:]
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Alternative slicing to create ground_floor
-ground_floor = 
+# Alternative slicing to create downstairs
+downstairs = 
 
-# Alternative slicing to create first_floor
-first_floor = 
+# Alternative slicing to create upstairs
+upstairs = 
 ```
 
 *** =solution
@@ -497,11 +497,11 @@ first_floor =
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Alternative slicing to create ground_floor
-ground_floor = areas[:6]
+# Alternative slicing to create downstairs
+downstairs = areas[:6]
 
-# Alternative slicing to create first_floor
-first_floor = areas[6:]
+# Alternative slicing to create upstairs
+upstairs = areas[6:]
 ```
 
 *** =sct
@@ -687,7 +687,7 @@ del(x[1])
 
 Pay attention here: as soon as you remove an element from a list, the indices of the elements that come after the deleted element all change!
 
-The updated and extended version of `areas` that you've built in the previous exercises is coded below.
+The updated and extended version of `areas` that you've built in the previous exercises is coded below. You can copy and paste this into the IPython Shell to play around with the result.
 
 ```
 areas = ["hallway", 11.25, "kitchen", 18.0, 
@@ -698,16 +698,18 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
 
 There was a mistake; the amount you won with the lottery is not that big after all. The poolhouse isn't going to happen after all. You decide to remove the corresponding string and float from the `areas` list.
 
-Which of the code chunks does this correctly?  The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
+The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
 
 ```
-# Use of ;
+# Same line
 command1; command2
 
 # Separate lines
 command1
 command2
 ```
+
+Which of the code chunks will do the job for us?  
 
 *** =instructions
 - `del(areas[10]); del(areas[11])`
@@ -734,12 +736,12 @@ success_msg("Replace me")
 
 At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
 
-The Python code in the script already creates a list with the name `areas`, and a copy: `areas_copy`. Next, the first element in the `areas_copy` list is changed, and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to one and the same list.
+The Python code in the script already creates a list with the name `areas`, and a copy: `areas_copy`. Next, the first element in the `areas_copy` list is changed, and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
 
 If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with `list()` or by using `[:]`.
 
 *** =instructions
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` becomes a _deep copy_ instead of a _shallow copy_. 
+- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`
 - Now, changes made to `areas_copy` shouldn't affect `areas`. Hit _Submit Answer_ to check this.
 
 *** =hint
@@ -783,6 +785,6 @@ print(areas)
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-success_msg("Nice! The difference between shallow and deep copies is subtle, but can be really important. Try to keep in mind how a list actually in stored in the computer's memory.")
+success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list actually in stored in the computer's memory.")
 ```
 
