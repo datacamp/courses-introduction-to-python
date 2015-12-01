@@ -30,7 +30,7 @@ A list `baseball` has already been defined in the Python script, representing th
 
 *** =pre_exercise_code
 ```{python}
-# pec
+import numpy as np
 ```
 
 *** =sample_code
@@ -72,7 +72,7 @@ success_msg("Great job!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Baseballers' height
 
-Being a huge baseball fan, you call the MLB, the Major League of Baseball, and ask around for more statistics on the height of the main players. They pass you along more data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it, and convert the unit to centimeters?
+Being a huge baseball fan, you call the MLB, the Major League of Baseball, and ask around for more statistics on the height of the main players. They pass you along more data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it, and convert the units to centimeters?
 
 `height` is already available and the `numpy` package is loaded, so you can start straight away. (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights))
 
@@ -91,6 +91,7 @@ Being a huge baseball fan, you call the MLB, the Major League of Baseball, and a
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
 height = mlb['Height'].tolist()
+import numpy as np
 ```
 
 *** =sample_code
@@ -106,7 +107,7 @@ import numpy as np
 # Print out np_height
 
 
-# Convert np_height to feet: np_height_cm
+# Convert np_height to cm: np_height_cm
 
 
 # Print np_height_cm
@@ -126,7 +127,7 @@ np_height = np.array(height)
 # Print out np_height
 print(np_height)
 
-# Convert np_height to feet: np_height_cm
+# Convert np_height to cm: np_height_cm
 np_height_cm = np_height * 2.54
 
 # Print np_height_cm
@@ -162,6 +163,7 @@ import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
 height = mlb['Height'].tolist()
 weight = mlb['Weight'].tolist()
+import numpy as np
 ```
 
 *** =sample_code
@@ -259,6 +261,7 @@ import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
 height = mlb['Height'].tolist()
 weight = mlb['Weight'].tolist()
+import numpy as np
 ```
 
 *** =sample_code
@@ -304,7 +307,7 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
-## Numpy 2D array
+## Numpy 2D Arrays
 
 *** =video_link
 ```{python}
@@ -334,6 +337,7 @@ Can you store the data as a 2D array to unlock the extra functionality?
 ```{python}
 import pandas as pd
 baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
+import numpy as np
 ```
 
 *** =sample_code
@@ -373,11 +377,12 @@ print(np_baseball.shape)
 *** =sct
 ```{python}
 # TO DO VINCENT SCT MAGIC
+test_object("np_baseball")
 success_msg("Slick! Time to show off some killer features of multi-dimensional Numpy arrays!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Subsetting 2D Numpy Array
+## Subsetting 2D Numpy Arrays
 
 If your 2D Numpy arrays has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below, where the elements `"a"` and `"c"` are extracted from a list of lists. 
 
@@ -410,6 +415,7 @@ The code that converts the pre-loaded `baseball` list to a 2D Numpy array is alr
 ```{python}
 import pandas as pd
 baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
+import numpy as np
 ```
 
 *** =sample_code
@@ -425,7 +431,7 @@ np_baseball = np.array(baseball)
 # Print out the 50th row of np_baseball
 
 
-# Select the entire second colum of np_baseball: np_weight
+# Select the entire second column of np_baseball: np_weight
 
 
 # Print out height of 124th player
@@ -445,7 +451,7 @@ np_baseball = np.array(baseball)
 # Print out the 50th row of np_baseball
 np_baseball[49,:]
 
-# Select the entire second colum of np_baseball: np_weight
+# Select the entire second column of np_baseball: np_weight
 np_weight = np_baseball[:,1]
 
 # Print out height of 124th player
@@ -459,7 +465,7 @@ success_msg("This is going well!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Subsetting 2D Numpy Array (2)
+## Subsetting 2D Numpy Arrays (2)
 
 Apart from selecting single elements, entire columns or entire rows from a 2D Numpy array, it's also perfectly possible to create a "sub-matrix" of the matrix you started with. You can do this with slicing. 
 
@@ -489,7 +495,8 @@ The code to build the Numpy matrix `np_baseball` from the `baseball` lists of li
 *** =pre_exercise_code
 ```{python}
 import pandas as pd
-  baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
+import numpy as np
 ```
 
 *** =sample_code
@@ -568,6 +575,7 @@ n = len(baseball)
 update = np.column_stack((np.random.normal(1, 0.20, n), 
                           np.random.normal(0, 10, n), 
                           np.ones(n)))
+import numpy as np
 ```
 
 *** =sample_code
@@ -628,7 +636,7 @@ success_msg("Great job! Notice how with very little code, you can change all val
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Average versus median
 
-You now know about Nupy functions to a get a better feeling for your data. It basically comes down to importing nupmy, and then calling several simple functions on the numpy arrays:
+You now know about Numpy functions to a get a better feeling for your data. It basically comes down to importing Numpy, and then calling several simple functions on the numpy arrays:
 
 ```
 import numpy as np
@@ -653,6 +661,7 @@ The baseball data is available as a 2D Numpy matrix with 3 columns (height, weig
 ```{python}
 np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
 np_baseball[slice(0, 1015, 50), 0] = np_baseball[slice(0, 1015, 50), 0]*1000
+import numpy as np
 ```
 
 *** =sample_code
@@ -713,6 +722,7 @@ hint comes here
 *** =pre_exercise_code
 ```{python}
 np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
+import numpy as np
 ```
 
 *** =sample_code
@@ -785,7 +795,7 @@ hint comes here
 
 *** =pre_exercise_code
 ```{python}
-# pec
+import numpy as np
 ```
 
 *** =sample_code

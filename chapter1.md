@@ -204,12 +204,12 @@ x = 5
 You can now use the name of this variable, `x`, instead of the actual value, `5`.
 
 *** =instructions
-- Create a variable `begin` with the value 100.
-- Check out this variable by typing `print(begin)` in the script.
+- Create a variable `savings` with the value 100.
+- Check out this variable by typing `print(savings)` in the script.
 
 *** =hint
-- Type `begin = 100`.
-- After creating the variable `begin`, you can type `print(begin)`.
+- Type `savings = 100`.
+- After creating the variable `savings`, you can type `print(savings)`.
 
 *** =pre_exercise_code
 ```{python}
@@ -218,20 +218,20 @@ You can now use the name of this variable, `x`, instead of the actual value, `5`
 
 *** =sample_code
 ```{python}
-# Create a variable begin
+# Create a variable savings
 
 
-# Print out begin
+# Print out savings
 
 ```
 
 *** =solution
 ```{python}
-# Create a variable begin
-begin = 100
+# Create a variable savings
+savings = 100
 
-# Print out begin
-print(begin)
+# Print out savings
+print(savings)
 ```
 
 *** =sct
@@ -249,16 +249,16 @@ Remember how you calculated the money you ended up with after 7 years of investi
 100 * 1.10 ** 7
 ```
 
-Instead of calculating with the actual values, you can use variables instead. The `begin` variable you've created in the previous exercise represents the \$100 you started with. Up to you to create a new variable to represent `1.10` and then redo the calculations!
+Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the \$100 you started with. Up to you to create a new variable to represent `1.10` and then redo the calculations!
 
 *** =instructions
-- Create a variable `mult`, equal to `1.10`. 
-- Use `begin` and `mult` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
+- Create a variable `factor`, equal to `1.10`. 
+- Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
 - Print out the value of `result`.
 
 *** =hint
-- To create the variable `mult`, use `mult = 1.10`.
-- In the example code block of the assignment, replace `100` with `begin` and `1.10` with `mult`: `begin * mult ** 7`.
+- To create the variable `factor`, use `factor = 1.10`.
+- In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
 - Use the `print()` function to print the value of a variable.
 
 *** =pre_exercise_code
@@ -268,10 +268,10 @@ Instead of calculating with the actual values, you can use variables instead. Th
 
 *** =sample_code
 ```{python}
-# Create a variable begin
-begin = 100
+# Create a variable savings
+savings = 100
 
-# Create a variable mult
+# Create a variable factor
 
 
 # Calculate result
@@ -282,14 +282,14 @@ begin = 100
 
 *** =solution
 ```{python}
-# Create a variable begin
-begin = 100
+# Create a variable savings
+savings = 100
 
-# Create a variable mult
-mult = 1.1
+# Create a variable factor
+factor = 1.1
 
 # Calculate result
-result = begin * mult ** 7
+result = savings * factor ** 7
 
 # Print out result
 print(result)
@@ -298,7 +298,7 @@ print(result)
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-success_msg("Awesome! If you now change `begin` and submit your script again, `result` will change as well.")
+success_msg("Awesome! If you now change `savings` and submit your script again, `result` will change as well.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -306,12 +306,12 @@ success_msg("Awesome! If you now change `begin` and submit your script again, `r
 
 In the previous exercise, you have worked with two Python data types:
 
-- `int`, or integer: numerical value without a decimal part. `begin`, with the value `100` is an example.
-- `float`: numerical value that has both an integer and decimal part. `mult`, with the value `1.10` is a float.
+- `int`, or integer: numerical value without a fractional part. `savings`, with the value `100` is an example.
+- `float`: numerical value that has both an integer and fractional part. `factor`, with the value `1.10` is a float.
 
 Next to numerical data types, there are two other very common data types:
 
-- `str`, or string: type to represent text. You use double quotes to build a string.
+- `str`, or string: type to represent text. You can use single and double quotes to build a string.
 - `bool`, or boolean: type to represent logical values. Can only be `True` or `False`.
 
 *** =instructions
@@ -365,10 +365,10 @@ will tell you the type of `a`.
 We already went ahead and created three variables: `result`, `better` and `worse`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
 
 *** =instructions
-- `result` is of type `int`, `better` is of type `str`, `worse` is of type `bool`
-- `result` is of type `float`, `better` is of type `bool`, `worse` is of type `str`
-- `result` is of type `float`, `better` is of type `str`, `worse` is of type `bool`
-- `result` is of type `int`, `better` is of type `bool`, `worse` is of type `str`
+- `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
+- `a` is of type `float`, `b` is of type `bool`, `c` is of type `str`
+- `a` is of type `float`, `b` is of type `str`, `c` is of type `bool`
+- `a` is of type `int`, `b` is of type `bool`, `c` is of type `str`
 
 *** =hint
 Use `type(result)`, `type(better)` and `type(worse)` inside the IPython Shell to find out about the variables' types.
@@ -382,10 +382,10 @@ worse = False
 
 *** =sct
 ```{python}
-msg1 = "The type of `result` is not `int`. Try out `type(result)` and see for yourself."
-msg2 = "`better` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
+msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
+msg2 = "`b` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
 msg3 = "Correcto perfecto!"
-msg4 = "None of the variable's types is correct here. Try `type(result)` and see what type this variable is."
+msg4 = "None of the variable's types is correct here. Try `type(a)` and see what type this variable is."
 success_msg("Replace me")
 ```
 
@@ -396,16 +396,16 @@ Filip mentioned that different types behave differently in Python.
 
 When you sum two strings for example, you'll get different behavior then when you sum two integers or two booleans.
 
-In the script, some variables with different types have already been created. Up to you get operational on them.
+In the script, some variables with different types have already been created. Up to you to use them.
 
 *** =instructions
-- Calculate the product of `mult` and `begin`. Store the result in `year1`.
+- Calculate the product of `savings` and `factor`. Store the result in `year1`.
 - What do you think the resulting type will be? Find out by printing the type (`type()`) of `year1`.
 - Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
 - Print out `doubledesc`. Did you expect this?
 
 *** =hint
-- Assign `mult * begin` to a new variable, `year1`.
+- Assign `factor * savings` to a new variable, `year1`.
 - To print the type of a variable `x`, use `print(type(x))`.
 - Assign `desc + desc` to a new variable, `doubledesc`.
 - To print a variable `x`, write `print(x)` in the script.
@@ -418,11 +418,11 @@ In the script, some variables with different types have already been created. Up
 *** =sample_code
 ```{python}
 # Several variables to experiment with
-begin = 100
-mult = 1.1
+savings = 100
+factor = 1.1
 desc = "compound interest"
 
-# Assign product of mult and begin to year1
+# Assign product of factor and savings to year1
 
 
 # Print the type of year1
@@ -438,12 +438,12 @@ desc = "compound interest"
 *** =solution
 ```{python}
 # Several variables to experiment with
-begin = 100
-mult = 1.1
+savings = 100
+factor = 1.1
 desc = "compound interest"
 
-# Assign product of mult and begin to year1
-year1 = begin * mult
+# Assign product of savings and factor to year1
+year1 = savings * factor
 
 # Print the type of year1
 print(type(year1))
@@ -466,13 +466,13 @@ success_msg("Nice. Notice how `desc + desc` causes the strings to be pasted toge
 
 The `+` operator to paste together two strings can be very useful in building up custom messages.
 
-Suppose for example that you've calculated the return of your investment, and want to summarise the results in a string. Assuming the floats `begin` and `result` are defined, you can try something like this:
+Suppose for example that you've calculated the return of your investment, and want to summarise the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
 
 ```
-print("I started with $" + begin + " and now have $" + result + ". Awesome!")
+print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 ```
 
-This will not work, though, as you cannot simply sum strings and floats. To do this, you'll need to explicitly convert the types of your variables. You can use the functions `str()`, `int()`, `float()` and `bool()` for this. `str(begin)`, for example, will convert the float `begin` to a string.
+This will not work, though, as you cannot simply sum strings and floats. To do this, you'll need to explicitly convert the types of your variables. You can use the functions `str()`, `int()`, `float()` and `bool()` for this. `str(savings)`, for example, will convert the float `savings` to a string.
 
 *** =instructions
 - Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
@@ -490,12 +490,12 @@ This will not work, though, as you cannot simply sum strings and floats. To do t
 
 *** =sample_code
 ```{python}
-# Definition of begin and result
-begin = 100
+# Definition of savings and result
+savings = 100
 result = 100 * 1.10 ** 7
 
 # Fix the printout
-print("I started with $" + begin + " and now have $" + result + ". Awesome!")
+print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 
 # Definition of pi_string
 pi_string = "3.1415926"
@@ -506,12 +506,12 @@ pi_string = "3.1415926"
 
 *** =solution
 ```{python}
-# Definition of begin and result
-begin = 100
+# Definition of savings and result
+savings = 100
 result = 100 * 1.10 ** 7
 
 # Fix the printout
-print("I started with $" + str(begin) + " and now have $" + str(result) + ". Awesome!")
+print("I started with $" + str(savings) + " and now have $" + str(result) + ". Awesome!")
 
 # Definition of pi_string
 pi_string = "3.1415926"

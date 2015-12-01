@@ -28,7 +28,7 @@ b = 4
 my_list = [a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your crib are stored in separate variables for now, as shown in the script.
+After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
 
 *** =instructions
 - Create a list, `areas`, that contains the area of the hallway, kitchen, living room, bedroom and bathroom, in this order.
@@ -89,7 +89,7 @@ A list can contain any Python type. Although it's not really common, a list can 
 
 The printout of the previous exercise wasn't really satisfying: it's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
-The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bahtroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earliers.
+The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bathroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earliers.
 
 *** =instructions
 - Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area.
@@ -185,7 +185,7 @@ success_msg("Replace me")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## List of lists
 
-As a data scientst, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
 
 Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea. 
 
@@ -295,13 +295,13 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Select the second element from areas
+# Print out second element from areas
 
 
-# Select the last element from areas
+# Print out last element from areas
 
 
-# Select the element representing the area of the living room
+# Print out the element representing the area of the living room
 
 ```
 
@@ -310,26 +310,27 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Select the second element from areas
+# Print out second element from areas
 print(areas[1])
 
-# Select the last element from areas
+# Print out last element from areas
 print(areas[-1])
 
-# Select the element representing the area of the living room
+# Print out the element representing the area of the living room
 print(areas[5])
 ```
 
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
+test_output_contains("20.0", no_output_msg = "Make sure to correctly subset the list to select the are of the living room.")
 success_msg("Good job!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subset and calculate
 
-After you've extracted values from a list, you can use them to perform additional calculations. Take this example, were the second and fourth element of a list `x` are extracted and pasted together using the `+` operator:
+After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted and pasted together using the `+` operator:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -339,8 +340,8 @@ print(el2 + el4)
 ```
 
 *** =instructions
-- Using a combination of list subsetting and variable assignment, create new variable `eat_sleep`, that contains the sum of the area of the kitchen and the area of the bedroom.
-- Print this new variable `eat_sleep`.
+- Using a combination of list subsetting and variable assignment, create new variable `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
+- Print this new variable `eat_sleep_area`.
 
 *** =hint
 hint comes here
@@ -355,10 +356,10 @@ hint comes here
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Create the variable eat_sleep: sum of kitchen and bedroom area
+# Create the variable eat_sleep_area: sum of kitchen and bedroom area
 
 
-# Print the variable eat_sleep
+# Print the variable eat_sleep_area
 
 ```
 
@@ -367,11 +368,11 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Create the variable eat_sleep: sum of kitchen and bedroom area
-eat_sleep = areas[3] + areas[-3]
+# Create the variable eat_sleep_area: sum of kitchen and bedroom area
+eat_sleep_area = areas[3] + areas[-3]
 
-# Print the variable eat_sleep
-print(eat_sleep)
+# Print the variable eat_sleep_area
+print(eat_sleep_area)
 ```
 
 *** =sct
@@ -722,6 +723,10 @@ You can simply try all the different options to see if they work. Just make sure
 
 *** =pre_exercise_code
 ```{python}
+areas = ["hallway", 11.25, "kitchen", 18.0, 
+        "chill zone", 20.0, "bedroom", 10.75, 
+         "bathroom", 10.50, "poolhouse", 24.5, 
+         "garage", 15.45]
 ```
 
 *** =sct
