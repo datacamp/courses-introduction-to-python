@@ -89,7 +89,7 @@ A list can contain any Python type. Although it's not really common, a list can 
 
 The printout of the previous exercise wasn't really satisfying: it's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
-The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bathroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earliers.
+The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bathroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earlier.
 
 *** =instructions
 - Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area.
@@ -387,12 +387,12 @@ success_msg("Bellissimo!")
 Selecting single values of a list is just one part of the story. It's also possible to _slice_ your list, which comes down to selecting multiple elements from your list. Use the following syntax:
 
 ```
-my_list[begin:end]
+my_list[start:end]
 ```
 
-The `begin` index will be included, while the `end` index is _not_.
+The `start` index will be included, while the `end` index is _not_.
 
-The code sample below shows an example, where the second and third element, corresponding to indices 1 and 2, are selected from a list `x`:
+The code sample below shows an example, where the second and third element, corresponding to indexes 1 and 2, are selected from a list `x`:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -461,7 +461,7 @@ In the video, Filip only discussed the syntax where you specify both where to be
 my_list[begin:end]
 ```
 
-However, it's also possible not to specify these indices. If you don't specify the `begin` index, Python figures out that you want to start your slice at the beginning of your list. If you don't specify the `end` index, the slice will go all the way to the last element of your list. To experiment with this, try the following commands in the IPython Shell:
+However, it's also possible not to specify these indexes. If you don't specify the `begin` index, Python figures out that you want to start your slice at the beginning of your list. If you don't specify the `end` index, the slice will go all the way to the last element of your list. To experiment with this, try the following commands in the IPython Shell:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -471,7 +471,7 @@ x[:]
 ```
 
 *** =instructions
-- Use slicing to create the lists `downstairs` and `upstairs` again, this time without using indices if it's not necessary.
+- Use slicing to create the lists `downstairs` and `upstairs` again, this time without using indexes if it's not necessary.
 
 *** =hint
 - To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
@@ -686,7 +686,7 @@ x = ["a", "b", "c", "d"]
 del(x[1])
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indices of the elements that come after the deleted element all change!
+Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
 
 The updated and extended version of `areas` that you've built in the previous exercises is coded below. You can copy and paste this into the IPython Shell to play around with the result.
 

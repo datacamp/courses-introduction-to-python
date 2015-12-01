@@ -362,7 +362,7 @@ type(a)
 
 will tell you the type of `a`.
 
-We already went ahead and created three variables: `result`, `better` and `worse`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
+We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
 
 *** =instructions
 - `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
@@ -371,7 +371,7 @@ We already went ahead and created three variables: `result`, `better` and `worse
 - `a` is of type `int`, `b` is of type `bool`, `c` is of type `str`
 
 *** =hint
-Use `type(result)`, `type(better)` and `type(worse)` inside the IPython Shell to find out about the variables' types.
+Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out about the variables' types.
 
 *** =pre_exercise_code
 ```{python}
@@ -466,7 +466,7 @@ success_msg("Nice. Notice how `desc + desc` causes the strings to be pasted toge
 
 The `+` operator to paste together two strings can be very useful in building up custom messages.
 
-Suppose for example that you've calculated the return of your investment, and want to summarise the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
+Suppose for example that you've calculated the return of your investment, and want to summarize the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
 
 ```
 print("I started with $" + savings + " and now have $" + result + ". Awesome!")
