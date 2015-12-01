@@ -8,7 +8,7 @@ What you can do instead, is store all this information in a python _list_. You c
 
 Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here:
 
-More formally, a list is a so-called compound data type, used to group together other values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists. 
+More formally, a list is a way to give a single name to a collection of values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists. 
 
 It's perfectly possible for a list to contain different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
 
@@ -93,7 +93,7 @@ Let's now change the element with index one in the list `y`, as follows:
 
 The funky thing is that if you now check out `x` again, also here the second element was changed:
 
-That's because when you copied x to y with the equals sign, you copied the reference to the list, not the actual values themselves. When you're updating an element the list, though, it's one and the same list in the computer memory your changing.Both `x` and `y` point to this list, so the update is visible from both.
+That's because when you copied x to y with the equals sign, you copied the reference to the list, not the actual values themselves. When you're updating an element the list, though, it's one and the same list in the computer memory your changing. Both `x` and `y` point to this list, so the update is visible from both.
 
 If you want to create a list `y` that points to a new list in the memory with the same variables, you'll need to use something else than the equals sign. You can use the `list()` function, like this, or use slicing to select all list elements explicitly.
 
