@@ -12,20 +12,12 @@ description : Add chapter description here.
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create a list
 
-As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group values together.
-
-To create a list you use square brackets and commas, like this:
+As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group values together:
 
 ```
-my_list = ["my", "first", "list"]
-```
-
-You can also use variables you've created beforehand:
-
-```
-a = 2
-b = 4
-my_list = [a, b]
+a = "is"
+b = "nice"
+my_list = ["my", "list", a, b]
 ```
 
 After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
@@ -189,15 +181,15 @@ As a data scientist, you'll often be dealing with a lot of data, and it will mak
 
 Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea. 
 
-Don't get confused here: `"hallway"` is a string, while `hallway` is a variable, representing the float `11.25` that you've specified earlier.
+Don't get confused here: `"hallway"` is a string, while `hall` is a variable: the float `11.25` that you've specified earlier.
 
 *** =instructions
-- Finish the list of lists, so that it also contains the bedroom and bathroom data.
+- Finish the list of lists so that it also contains the bedroom and bathroom data.
 - Print out `house`; does this way of structuring your data make more sense?
 - Print out the type of `house`. Are you still dealing with a list?
 
 *** =hint
-- Add _sublists_ to the `house` list by adding `["bedroom", bedroom]` and `["bathroom", bathroom]` inside the square brackets.
+- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
 - To print a variable `x`, write `print(x)` on a new line in the Python script.
 - To print out the type of a variable `x`, you can use `print(type(x))`.
 
@@ -330,13 +322,11 @@ success_msg("Good job!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subset and calculate
 
-After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted and pasted together using the `+` operator:
+After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted. The strings that result are pasted together using the `+` operator:
 
 ```
 x = ["a", "b", "c", "d"]
-el2 = x[1]
-el4 = x[3]
-print(el2 + el4)
+print(x[1] + x[3])
 ```
 
 *** =instructions
@@ -514,7 +504,7 @@ success_msg("Wonderful!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Subsetting lists of lists
 
-You saw before that a Python list can contain practically anything; even other lists. To subset lists of lists, you can use the same techniques as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
+You saw before that a Python list can contain practically anything; even other lists. To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
 
 ```
 x = [["a", "b", "c"], 
@@ -530,9 +520,9 @@ What will `house[-1][1]` return? `house`, the list of lists you've created befor
 
 *** =instructions
 - A float: the kitchen area
-- A string: "kitchen"
+- A string: `"kitchen"`
 - A float: the bathroom area
-- A string: "bathroom"
+- A string: `"bathroom"`
 
 *** =hint
 `house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`. What's the result if you then subset this sublist with `[1]`? You can always try out the command in the IPython Shell!
@@ -622,7 +612,7 @@ success_msg("Sweet! As the code sample showed, you can also slice a list and rep
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Extend a list
 
-Next to changing elements a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+Next to changing elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
 
 ```
 x = ["a", "b", "c", "d"]

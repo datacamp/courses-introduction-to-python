@@ -102,13 +102,13 @@ import numpy as np
 import numpy as np
 
 # Create a Numpy array from height: np_height
-
+np_height = 
 
 # Print out np_height
 
 
 # Convert np_height to cm: np_height_cm
-
+np_height_cm = 
 
 # Print np_height_cm
 
@@ -148,7 +148,7 @@ Next to height, the MLB also offers you to analyze their weight data.. Again, bo
 It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a Numpy array with the correct units is already available. Follow the instructions step by step and finish the game!
 
 *** =instructions
-- Create a Numpy array from the `weights` list with the correct units: multiply with `0.453592` to go from pounds to kilograms. Store the resulting Numpy array as `np_weight_kg`.
+- Create a Numpy array from the `weight` list with the correct units: multiply with `0.453592` to go from pounds to kilograms. Store the resulting Numpy array as `np_weight_kg`.
 - Use `np_height_m` and `np_weight_kg` to calculate the BMI of each player. Use the following equation: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Save the resulting numpy array as `bmi`.
 - Write `print(sum(bmi < 20))` to count the number of baseball players with a low BMI.
 
@@ -168,7 +168,22 @@ import numpy as np
 
 *** =sample_code
 ```{python}
-# sample code
+# height and weight are available as a regular lists
+
+# Import numpy
+import numpy as np
+
+# Create array from height with correct units: np_height_m
+np_height_m
+
+# Create array from weight with correct units: np_weight_kg 
+np_weight_kg = 
+
+# Calculate the BMI: bmi
+bmi = np_weight_kg / np_height_m ** 2
+
+# Print the number of lightweight baseball players
+print(sum(bmi < 20))
 ```
 
 *** =solution
@@ -201,7 +216,9 @@ success_msg("Wow! It appears that only 1 of the more than 1000 baseball players 
 
 As Filip explained before, Numpy is great to do vector arithmetic. However, if you compare its functionality with regular Python lists, some things have changed. 
 
-First of all, Numpy arrays cannot contain elements with different types. If you try to build such a list, coercion takes place. Next, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and Numpy arrays.
+First of all, Numpy arrays cannot contain elements with different types. If you try to build such a list, some of the elments' types are changed to end up with a homogenous list. This is known as _type coercion_. 
+
+Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and Numpy arrays.
 
 Have a look at this line of code:
 
@@ -248,8 +265,8 @@ np_x[1]
 The script on the right already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as Numpy arrays.
 
 *** =instructions
-- Subset `np_weights`: print out the element at index 50.
-- Print out a sub-array of `np_heights`: It contains the elements at index 100 up to **and including** index 110
+- Subset `np_weight`: print out the element at index 50.
+- Print out a sub-array of `np_height`: It contains the elements at index 100 up to **and including** index 110
 
 *** =hint
 - Make sure to wrap a `print()` call around your subsetting operations.
@@ -271,14 +288,14 @@ import numpy as np
 # Import numpy
 import numpy as np
 
-# Store weight and heights lists as numpy arrays
+# Store weight and height lists as numpy arrays
 np_weight = np.array(weight)
 np_height = np.array(height)
 
 # Print out the weight at index 50
 
 
-# Print out sub-array of np_heights: index 100 up to and including index 110
+# Print out sub-array of np_height: index 100 up to and including index 110
 
 ```
 
@@ -289,14 +306,14 @@ np_height = np.array(height)
 # Import numpy
 import numpy as np
 
-# Store weight and heights lists as numpy arrays
+# Store weight and height lists as numpy arrays
 np_weight = np.array(weight)
 np_height = np.array(height)
 
 # Print out the weight at index 50
 print(np_weight[50])
 
-# Print out sub-array of np_heights: index 100 up to and including index 110
+# Print out sub-array of np_height: index 100 up to and including index 110
 print(np_height[100:110])
 ```
 
@@ -471,6 +488,8 @@ Apart from selecting single elements, entire columns or entire rows from a 2D Nu
 
 As an example, check out the following calls, that builds a 3-by-3 Numpy matrix and then select the lower right 2-by-2 corner from it:
 
+![image](https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/block1.png)
+
 ```
 import numpy as np
 x = [["a", "b", "c"],
@@ -559,12 +578,14 @@ np_mat + np_mat
 `np_baseball` is coded for you; it's again a 2D Numpy array with 3 columns, representing height, weight and age.
 
 *** =instructions
-- You managed to get hold on updates for weight, height and age of all baseball players. It is available as a Numpy matrix, `update`. Add `np_baseball` and `update` and print out the result.
+- You managed to get hold on the changes in weight, height and age of all baseball players. It is available as a Numpy matrix, `update`. Add `np_baseball` and `update` and print out the result.
 - You want to convert the units of height and weight. As a first step, create a Numpy array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
 - Multiply `np_baseball` with `conversion` and print out the result.
 
 *** =hint
-
+- `np_baseball + update` will do a element-wise summation of the two Numpy matrixes.
+- Create a Numpy array with `np.array()`; the input is a regular Python list with three elements.
+- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
 
 *** =pre_exercise_code
 ```{python}
@@ -659,6 +680,7 @@ The baseball data is available as a 2D Numpy matrix with 3 columns (height, weig
 
 *** =pre_exercise_code
 ```{python}
+import pandas as pd
 np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
 np_baseball[slice(0, 1015, 50), 0] = np_baseball[slice(0, 1015, 50), 0]*1000
 import numpy as np
@@ -721,6 +743,7 @@ hint comes here
 
 *** =pre_exercise_code
 ```{python}
+import pandas as pd
 np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
 import numpy as np
 ```

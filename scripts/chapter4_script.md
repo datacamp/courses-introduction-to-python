@@ -118,7 +118,7 @@ and `std()`, for standard deviation.
 
 Numpy also features more basic functions, such as `sum()` and `sort()`, which also exist in the basic Python distribution. However, the big difference here is speed. Because Numpy enforces a single data type in an array, it can use optimized C code behind the scenes, making your analysis superfast. 
 
-Just a sidenote here: If you're wondering how I came up with the data in this video: I simulated it with Numpy functions! I sampled two random distributions 5000 times to create the `heights` and `weights` arrays, and then used `column_stack` to paste them together as two columns. Another thing that Numpy can do!
+Just a sidenote here: If you're wondering how I came up with the data in this video: I simulated it with Numpy functions! I sampled two random distributions 5000 times to create the `height` and `weight` arrays, and then used `column_stack` to paste them together as two columns. Another thing that Numpy can do!
 
 Another great tool to get some sense of your data is to visualize it, but that's something for later. First, head over to the exercises to learn how to explore your Numpy arrays!
 
@@ -131,7 +131,7 @@ np.median(np_city[:,0])
 np.correlate(np_city[:,0], np_city[:,1])
 np.std(np_city[:,0])
 
-heights = np.round(np.random.normal(1.75, 0.20, 5000), 2)
-weights = np.round(np.random.normal(60.32, 15, 5000), 2)
-np_city = np.column_stack((heights, weights))
+height = np.round(np.random.normal(1.75, 0.20, 5000), 2)
+weight = np.round(np.random.normal(60.32, 15, 5000), 2)
+np_city = np.column_stack((height, weight))
 ```

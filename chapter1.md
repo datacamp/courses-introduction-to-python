@@ -12,7 +12,7 @@ description : An introduction to the basic concepts of Python and its place in t
 --- type:NormalExercise lang:python xp:100 skills:2
 ## The Python Interface
 
-In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
+In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`my_script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
 You can hit _Submit Answer_ as often as you want: you will not loose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
@@ -20,7 +20,7 @@ You can also use the IPython Shell interactively: simply type commands and hit E
 
 *** =instructions
 - Experiment in the IPython Shell: type 5 / 8, for example.
-- Add another line of code to the Python script that prints out the sum of `7 and 10`.
+- Add another line of code to the Python script (`my_script.py`) that prints out the sum of `7 and 10`.
 - Hit _Submit Answer_ to execute the python script and receive feedback.
 
 *** =hint
@@ -298,7 +298,7 @@ print(result)
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-success_msg("Awesome! If you now change `savings` and submit your script again, `result` will change as well.")
+success_msg("Awesome! If you now change the value of `savings` and submit your script again, `result` will change as well.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -306,8 +306,8 @@ success_msg("Awesome! If you now change `savings` and submit your script again, 
 
 In the previous exercise, you have worked with two Python data types:
 
-- `int`, or integer: numerical value without a fractional part. `savings`, with the value `100` is an example.
-- `float`: numerical value that has both an integer and fractional part. `factor`, with the value `1.10` is a float.
+- `int`, or integer: number without a fractional part. `savings`, with the value `100` is an example.
+- `float`: number that has both an integer and fractional part. `factor`, with the value `1.10` is a float.
 
 Next to numerical data types, there are two other very common data types:
 
@@ -352,9 +352,9 @@ success_msg("Nice!")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
-## What's that type?
+## Guess the type
 
-To find out the class of a value or a variable that refers to that value, you can use the `type()` function. Suppose you've defined a variable `a`, but you forgot the type of this variable. Simply executing
+To find out the type of a value or a variable that refers to that value, you can use the `type()` function. Suppose you've defined a variable `a`, but you forgot the type of this variable. Simply executing
 
 ```
 type(a)
@@ -400,7 +400,7 @@ In the script, some variables with different types have already been created. Up
 
 *** =instructions
 - Calculate the product of `savings` and `factor`. Store the result in `year1`.
-- What do you think the resulting type will be? Find out by printing the type (`type()`) of `year1`.
+- What do you think the resulting type will be? Find out by printing the type of `year1`.
 - Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
 - Print out `doubledesc`. Did you expect this?
 
