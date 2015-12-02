@@ -8,7 +8,7 @@ What you can do instead, is store all this information in a python _list_. You c
 
 Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here:
 
-More formally, a list is a way to give a single name to a collection of values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists. 
+More formally, a list is a way to give a single name to a collection of values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists. Take this example, ADD STUFF HERE
 
 It's perfectly possible for a list to contain different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
 
@@ -27,9 +27,9 @@ type(fam_height)
 
 ## Subsetting lists
 
-After you've created your very own Python list, you might wonder how you can access information in the list. Suppose you want to select the height of your youngest sister, emma. As you can see from fam_height here, her height is 1.68 meters, and this integer is the fourth element in the list. To access this element, you'll need this line of code.
+After you've created your very own Python list, you might wonder how you can access information in the list. Python uses the index to do this. Have a look at `fam_height` again here. The first element in the list has index 0, the second element has index 1, and so on. Suppose that you want to select the height of emma, the float 1.68. It's the fourth element, so it has index 3. To select it, you use 3 inside square brackets:
 
-The number three refers to the _index_ of the list element. Because python uses so-called zero-based indexing, the first element in the list has index 0, the second element has index 1, and so on. This means that the fourth element, the float 1.68, has index 3. To select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
+Similarly, to select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
 
 You can also count backwards, using negative indexes. This is useful if you want to get some elements at the end of your list. To get your dad's height, for example, you'll need the index -1. These are the negative indexes for all list elements.
 
@@ -39,13 +39,17 @@ Apart from indexing, there's also something called slicing, which allows you to 
 
 Can you guess what it'll return? A list with the the float 1.68, the string "mom", and the float 1.71, corresponding to the 4th, 5th and 6th element in the list maybe? Let's see what the output is.
 
-Apparently, only the elements with index 3 and 4, get returned. In general, this is the syntax: the index you specify before the colon, so where the slice starts, is included, while the index you specify after the colon, where the slice ends, is not.
+Apparently, only the elements with index 3 and 4, get returned. The element with index 5 is not included. In general, this is the syntax: the index you specify before the colon, so where the slice starts, is included, while the index you specify after the colon, where the slice ends, is not.
 
 With this in mind, can you tell what this call will return? <PAUSE>
 
 You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. 
 
-You can use this colon operator in many other ways, but I'll save that for the exercises. There, you'll continue to work on the list you've created yourself before and use different subsetting methods to get exactly the piece of information you need!
+You can also choose to just leave out the index before or after the colon. If you leave out the index where the slice should begin, you're telling Python to start the slice from index 0, like this example.
+
+If you leave out the index where the slice should end, you include all elements up to and including the last element in the list, like here:
+
+Now it's time to head over to the exercises, where you will continue to work on the list you've created yourself before. You'll use different subsetting methods to get exactly the piece of information you need!
 
 
 ```
@@ -59,6 +63,8 @@ fam_height[-2]
 fam_height
 fam_height[3:5]
 fam_height[1:4]
+fam_height[:4]
+fam_height[5:]
 ```
 
 
@@ -126,26 +132,3 @@ y = x[:]
 y[1] = "z"
 x
 ```
-
-
-## MUTABLE VS IMMUTABLE STUFF
-
-You can do all of this because a Python list is a so-called mutable type. After you've created a list, you can make changes to it. Types like strings, integers and booleans, on the other hand, are not mutable, or immutable: You can't tell integer 3 to become 7:
-
-```
-3 = 7
-```
-
-This is different than creating a variable, say `x`, that pionts to the value 3:
-
-```
-x = 3
-```
-
-And afterwards changing `x`:
-
-```
-x = 7
-```
-
-This call didn't change 3 to be 7. instead, Python stored the value 7 in memory, and now has `x` pointing to 7, not to three.

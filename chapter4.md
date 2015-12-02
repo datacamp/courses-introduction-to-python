@@ -70,11 +70,11 @@ success_msg("Great job!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## baseball players' height
+## Baseball players' height
 
 Being a huge baseball fan, you call the MLB, the Major League of Baseball, and ask around for more statistics on the height of the main players. They pass you along more data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it, and convert the units to centimeters?
 
-`height` is already available and the `numpy` package is loaded, so you can start straight away. (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights))
+`height` is already available and the `numpy` package is loaded, so you can start straight away (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
 
 *** =instructions
 - Create a Numpy array from `height`. Name this new array `np_height`.

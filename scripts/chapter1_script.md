@@ -32,7 +32,7 @@ Let's now calculate the Body Mass Index, or BMI, which is calculated as follows,
 
 Finally, this version has Python store the result in a new variable, `bmi`. `bmi` now contains the same value as the one you calculated earlier.
 
-In Python, variables are used all the time. They help to make your code reproducible. Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another height, you can simply change the declaration of the height variable, and rerun the script. The `bmi` changes accordingly, because the value of the variable `height` has changed.
+In Python, variables are used all the time. They help to make your code reproducible. Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight, you can simply change the declaration of the weight variable, and rerun the script. The `bmi` changes accordingly, because the value of the variable `weight` has changed.
 
 So far, we've only worked with numerical values, such as height and weight. In Python, these numbers all have a specific type. You can check out the type of a value with the `type()` function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python als has a type for integers: `int`, like this example
 
