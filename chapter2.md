@@ -1,6 +1,6 @@
 ---
 title_meta  : Chapter 2
-title       : Lists
+title       : Python Lists
 description : Add chapter description here.
 
 --- type:VideoExercise lang:python xp:50 skills:2
