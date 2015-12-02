@@ -2,7 +2,7 @@
 
 By now, you are aware that the Python list is pretty powerful: A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. When analyzing data, you'll often want to carry out operations over entire collections of values, and you want to do this fast. With lists, this is a problem.
 
-Let's retake the heights of your family and yourself. Suppose you've also asked for everybody's weight. It's not very polite, but everything for science, right? You end up with two lists, `fam_height`, and `fam_weight`. The first person is 1.73 meters tall and weighs 65.4 kilograms.
+Let's retake the heights of your family and yourself. Suppose you've also asked for everybody's weight. It's not very polite, but everything for science, right? You end up with two lists, `height`, and `weight`. The first person is 1.73 meters tall and weighs 65.4 kilograms.
 
 If you now want to calculate the Body Mass Index for each family, you'd hope that this call can work, making the calculations element-wise.
 
@@ -14,7 +14,7 @@ To start using numpy, you first have to install the package. We already did that
 
 To actually start using it in python, you can import the numpy package in your session, like this.
 
-The first step is of course _creating_ a numpy array. You do this with Numpy's `array()` function: the input is a regular Python list. Let's create Numpy version of the `fam_height` and `fam_weight` lists from before: `np_height` and `np_weight`:
+The first step is of course _creating_ a numpy array. You do this with Numpy's `array()` function: the input is a regular Python list. Let's create Numpy version of the `height` and `weight` lists from before: `np_height` and `np_weight`:
 
 Let's try to calculate everybody's BMI with a single call again:
 
@@ -33,16 +33,16 @@ If you do `python_list + python_list`, the list elements are pasted together, ge
 Make sure to pay attention when you're juggling around with different Python types, because the outcome can differ a lot! Now head over to the exercises, to get your own numpy arrays rolling.
 
 ```
-fam_height = [1.73, 1.68, 1.71, 1.89, 1.79]
-fam_height
-fam_weight = [65.4, 59.2, 63.6, 88.4, 68.7]
-fam_weight
-fam_weight / fam_height ** 2
+height = [1.73, 1.68, 1.71, 1.89, 1.79]
+height
+weight = [65.4, 59.2, 63.6, 88.4, 68.7]
+weight
+weight / height ** 2
 
 import numpy as np
-np_height = np.array(fam_height)
+np_height = np.array(height)
 np_height
-np_weight = np.array(fam_weight)
+np_weight = np.array(weight)
 np_weight
 bmi = np_weight / np_height ** 2
 bmi

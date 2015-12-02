@@ -1,33 +1,46 @@
 ## Lists
 
-By now, you've played around with different data types. On the numbers side, there's the `float`, to represent a real number, and the `int`, to represent an integer. Next, we also have `str`, short for string, to represent text in Python, and `bool`, which can be either `True` or `False`. You can store values with these different types in a variable, like this. But in this case, each variable represents a single value.
+By now, you've played around with different data types. On the numbers side, there's the `float`, to represent a real number, and the `int`, to represent an integer. Next, we also have `str`, short for string, to represent text in Python, and `bool`, which can be either `True` or `False`. You can save these values as a variable, like these examples show. Each variable then represents a _single_ value.
 
-As a data scientist, you'll often want to work with more than that. If you for example want to measure the height of everybody in your family, and store this information in python, it would be inconvenient to create a new python variable for each data point you collected right?
+As a data scientist, you'll often want to work with many data points. If you for example want to measure the height of everybody in your family, and store this information in python, it would be inconvenient to create a new python variable for each data point you collected right?
 
 What you can do instead, is store all this information in a python _list_. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
 
 Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here:
 
-More formally, a list is a way to give a single name to a collection of values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists. Take this example, ADD STUFF HERE
+A list is a way to give a single name to a collection of values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists.
 
-It's perfectly possible for a list to contain different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues:
+It's perfectly possible for a list to contain different types. Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues.
 
-I you check out the type of this list, you will see that it is simply "list":
+But that's not all. I just told you that lists can also contain lists themselves. Instead of putting the strings in between the numbers, you can create little sublists for each member of the family. One for liz, one for emma and so on. Now, you can tell Python that these sublists are the elements of another list, that I named fam2: the little lists are wrapped in square brackets and separated with commas. If you now print out fam2, you see that we have a list of lists. The main list contains 4 sub lists.
 
-This means we're dealing with a new Python type next to the strings, booleans, integers and floats you already know about. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
+We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about: the list. These calls show that both `fam` and `fam2` are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
 ```
+height = 1.73
+tall = True
+height1 = 1.73
+height2 = 1.68
+height3 = 1.71
+height4 = 1.89
+
+
 [1.73, 1.68, 1.71, 1.89]
-fam_height = [1.73, 1.68, 1.71, 1.89]
-fam_height
-fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
-fam_height
-type(fam_height)
+fam = [1.73, 1.68, 1.71, 1.89]
+fam
+fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
+fam
+
+fam2 = [["liz", 1.73], ["emma", 1.68], ["mom", 1.71], ["dad", 1.89]]
+fam2
+
+type(fam)
+type(fam2)
 ```
 
 ## Subsetting lists
 
-After you've created your very own Python list, you might wonder how you can access information in the list. Python uses the index to do this. Have a look at `fam_height` again here. The first element in the list has index 0, the second element has index 1, and so on. Suppose that you want to select the height of emma, the float 1.68. It's the fourth element, so it has index 3. To select it, you use 3 inside square brackets:
+After you've created your very own Python list, you might wonder how you can access information in the list. Python uses the index to do this. Have a look at `fam` again here. The first element in the list has index 0, the second element has index 1, and so on. Suppose that you want to select the height of emma, the float 1.68. It's the fourth element, so it has index 3. To select it, you use 3 inside square brackets:
 
 Similarly, to select the string "dad" from the list, which is the sevent element in the list, you'll need to put the index 6 inside square brackets:
 
@@ -43,7 +56,7 @@ Apparently, only the elements with index 3 and 4, get returned. The element with
 
 With this in mind, can you tell what this call will return? <PAUSE>
 
-You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam_height list. 
+You probably guessed correctly that this call gives you a list with three elements, corresponding to the elements with index 1, 2 and 3 of the fam list. 
 
 You can also choose to just leave out the index before or after the colon. If you leave out the index where the slice should begin, you're telling Python to start the slice from index 0, like this example.
 
@@ -53,18 +66,18 @@ Now it's time to head over to the exercises, where you will continue to work on 
 
 
 ```
-fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
-fam_height
-fam_height[3]
-fam_height[-1]
-fam_height[6]
-fam_height[-2]
+fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
+fam
+fam[3]
+fam[-1]
+fam[6]
+fam[-2]
 
-fam_height
-fam_height[3:5]
-fam_height[1:4]
-fam_height[:4]
-fam_height[5:]
+fam
+fam[3:5]
+fam[1:4]
+fam[:4]
+fam[5:]
 ```
 
 
@@ -73,21 +86,19 @@ fam_height[5:]
 
 After creation and subsetting, the final piece of the Python lists puzzle is manipulation, so ways to change elements in your list, or to add elements to and remove elements from your list.
 
-Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that after another look at `fam_height`, you realize that your dad's height is not up to date anymore as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 meters. To change this list element, which is at index 7, you can use this line:
+Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that after another look at `fam`, you realize that your dad's height is not up to date anymore as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 meters. To change this list element, which is at index 7, you can use this line:
 
-If you now check out fam_height, you'll see that the value is updated:
+If you now check out fam, you'll see that the value is updated:
 
-You can even change an entire list slice at once. To change the elements "elise" and 1.73, you can do something like this:
-
-Notice here, that your resulting subset is a list, so you have to pass a list with the same length to make the replacement.
+You can even change an entire list slice at once. To change the elements "liz" and 1.73, you access the first two elements with zero colon 2, and then assign a new list to it.
 
 Do you still remember how the plus operator was different for strings and integers? Well, it's again different for lists. If you use the plus sign with two lists, Python simply pastes together their contents in a single list. Suppose you want to add your own name and height to the fam height list. This will do the trick:
 
-Of course, you can also store this new list in a variable, `fam_height_ext` for example.
+Of course, you can also store this new list in a variable, `fam_ext` for example.
 
 Finally, deleting elements from a list is also pretty straightforward, you'll have to use `del` here. Take this line, for example, that deletes the element with index 2, so "emma", from the list:
 
-If you check out fam_height now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by one index. If you again run the same line, you're again removing the element at index 2, which is emma's height, 1.68 centimeters:
+If you check out fam now, you'll see that the "emma" string is gone now. Because you've removed an index, all elements that came after "emma" scooted over by one index. If you again run the same line, you're again removing the element at index 2, which is emma's height, 1.68 centimeters:
 
 Understanding how Python lists actually work behind the scenes becomes pretty important now. What actually happens when you create a new list, `x`, like this?
 
@@ -108,17 +119,18 @@ If you now make a change to the list `y` points to, `x` is not affected:
 If this was a bit too much to take in, don't worry. The exercises will help you understand list manipulation and the subtle inner workings of lists. I'm sure you'll do great!
 
 ```
-fam_height = ["elise", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
-fam_height
-fam_height[7] = 1.86
-fam_height
-fam_height[0:1] = ["ellie", 1.74]
-fam_height + ["me", 1.79]
-fam_height_ext = fam_height + ["me", 1.79]
-del(fam_height[2])
-fam_height
-del(fam_height[2])
-fam_height
+fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
+fam
+fam[7] = 1.86
+fam
+fam[0:2] = ["lisa", 1.74]
+fam
+fam + ["me", 1.79]
+fam_ext = fam + ["me", 1.79]
+del(fam[2])
+fam
+del(fam[2])
+fam
 
 x = ["a", "b", "c"]
 y = x
