@@ -279,9 +279,9 @@ success_msg("Great!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## String Methods
 
-Lists are not the only Python types that have methods associated. Strings, floats, integers and booleans, are also types, and also come prepacked with a bunch of useful methods. Follow the instructions closely to discover some string methods. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+Lists are not the only Python types that have methods associated with them. Strings, floats, integers and booleans, are also types, and also come prepacked with a bunch of useful methods. Follow the instructions closely to discover some string methods. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
 
-A string `room` has already been created to do some experimentation with.
+A string `room` has already been created for you to experiment with.
 
 *** =instructions
 - Use the `upper()` method on `room` and store the result in `room_up`.
@@ -387,9 +387,9 @@ success_msg("replace me")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Import package
 
-As a data scientist, you'll often be confronted with multi-dimension feature spaces to describe your data. As a refresher, let's do some basic geometry.
+As a data scientist, some notions of geometry never hurt. Let's refresh some of the basics.
 
-For a fancy clustering algorithms, you want to find the circumference $C$ and area $A$ of a circle. When the radius of the circle is `r`, you can calculate $C$ and $A$ as:
+For a fancy clustering algorithm, you want to find the circumference $C$ and area $A$ of a circle. When the radius of the circle is `r`, you can calculate $C$ and $A$ as:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
@@ -473,8 +473,8 @@ from math import pi
 Let's say the Moon's orbit around planet Earth is a perfect circle, with a radius `r` (in km) that is defined in the script.
 
 *** =instructions
-- So a selective import of the `math` package: you only want to use the `radians` function.
-- Calculate the distance the Moon has travelled if it covered an angle of 12 degrees. Assign the result to `dist`. You can calculate this as $r \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, that you just imported.
+- Perform a selective import from the `math` package: you only want to use the `radians` function.
+- Calculate the distance the Moon has travelled if it covered an angle of 12 degrees. Assign the result to `dist`. You can calculate this as $r \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, which you just imported.
 - Print out `dist`.
 
 *** =hint
