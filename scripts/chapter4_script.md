@@ -116,7 +116,7 @@ Apart from `mean()` and `median()`, there's also other functions, like `correlat
 
 and `std()`, for standard deviation. 
 
-Numpy also features more basic functions, such as `sum()` and `sort()`, which also exist in the basic Python distribution. However, the big difference here is speed. Because Numpy enforces a single data type in an array, it can use optimized C code behind the scenes, making your analysis superfast. 
+Numpy also features more basic functions, such as `sum()` and `sort()`, which also exist in the basic Python distribution. However, the big difference here is speed. Because Numpy enforces a single data type in an array, it can drastically speed up the calculations.
 
 Just a sidenote here: If you're wondering how I came up with the data in this video: I simulated it with Numpy functions! I sampled two random distributions 5000 times to create the `height` and `weight` arrays, and then used `column_stack` to paste them together as two columns. Another thing that Numpy can do!
 
