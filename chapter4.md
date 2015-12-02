@@ -141,7 +141,7 @@ success_msg("Nice! In the blink of an eye, Numpy performs multiplications on mor
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## Lightweight baseball players
+## Baseball player's BMI
 
 Next to height, the MLB also offers you to analyze their weight data.. Again, both are available as regular Python lists: `height` and `weight`; height is in inches, weight is in pounds.
 
@@ -150,12 +150,12 @@ It's now possible to calculate the BMI of each baseball player. Python code to c
 *** =instructions
 - Create a Numpy array from the `weight` list with the correct units: multiply with `0.453592` to go from pounds to kilograms. Store the resulting Numpy array as `np_weight_kg`.
 - Use `np_height_m` and `np_weight_kg` to calculate the BMI of each player. Use the following equation: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Save the resulting numpy array as `bmi`.
-- Write `print(sum(bmi < 20))` to count the number of baseball players with a low BMI.
+- Print out `bmi`.
 
 *** =hint
 - Use a similar approach as the code that calculates `np_height_m`. This time, though, the you have to work with `height` and multiply with `0.453592`.
 - To calculate the `bmi`, you will need the `\` and `**` operators.
-- Copy the code from the third instruction to the Python script.
+- To print out a variable `x`, type `print(x)` in the script.
 
 *** =pre_exercise_code
 ```{python}
@@ -182,8 +182,8 @@ np_weight_kg =
 # Calculate the BMI: bmi
 bmi = np_weight_kg / np_height_m ** 2
 
-# Print the number of lightweight baseball players
-print(sum(bmi < 20))
+# Print out bmi
+print(bmi)
 ```
 
 *** =solution
@@ -202,14 +202,105 @@ np_weight_kg = np.array(weight) * 0.453592
 # Calculate the BMI: bmi
 bmi = np_weight_kg / np_height_m ** 2
 
-# Print the number of lightweight baseball players
-print(sum(bmi < 20))
+# Print out bmi
+print(bmi)
 ```
 
 *** =sct
 ```{python}
-success_msg("Wow! It appears that only 1 of the more than 1000 baseball players has a BMI under 20!")
+success_msg("Cool! Time to step up your game!")
 ```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Lightweight baseball players
+
+To subset both regular Python lists and Numpy arrays, you can use square brackets:
+
+```
+x = [4 , 9 , 6, 3, 1]
+x[1]
+import numpy as np
+y = np.array(x)
+y[1]
+```
+
+For Numpy specifically, you can also use boolean Numpy arrays:
+
+```
+high = y > 5
+y[high]
+```
+
+The code that calculates the BMI of all baseball players is already included. Follow the instructions and reveal interesting things from the data!
+
+*** =instructions
+- Create a boolean Numpy array: the element of the array should be `True` if the corresponding baseball player's BMI is below 21. You can use the `<` operator for this. Name the array `light`.
+- Print the array `light`.
+- Print out a Numpy array with the BMIs of all baseball players whose BMI is below 21. Use `light` inside square brackets to do a selection on the `bmi` array.
+
+*** =hint
+- `bmi > 30` will give you a boolean Numpy array in which the elements are `True` if the corresponding player's BMI is over 30.
+- To print out a variable `x`, type `print(x)` in the Python script.
+- `bmi[light]` will return the array you need. Don't forget to wrap a `print()` call around it!
+
+*** =pre_exercise_code
+```{python}
+import pandas as pd
+mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
+height = mlb['Height'].tolist()
+weight = mlb['Weight'].tolist()
+import numpy as np
+```
+
+*** =sample_code
+```{python}
+# height and weight are available as a regular lists
+
+# Import numpy
+import numpy as np
+
+# Calculate the BMI: bmi
+np_height_m = np.array(height) * 0.0254
+np_weight_kg = np.array(weight) * 0.453592
+bmi = np_weight_kg / np_height_m ** 2
+
+# Create the light array
+
+
+# Print out light
+
+
+# Print out BMIs of all baseball players whose BMI is below 21
+
+```
+
+*** =solution
+```{python}
+# height and weight are available as a regular lists
+
+# Import numpy
+import numpy as np
+
+# Calculate the BMI: bmi
+np_height_m = np.array(height) * 0.0254
+np_weight_kg = np.array(weight) * 0.453592
+bmi = np_weight_kg / np_height_m ** 2
+
+# Create the light array
+light = bmi < 21
+
+# Print out light
+print(light)
+
+# Print out BMIs of all baseball players whose BMI is below 21
+print(bmi[light])
+```
+
+*** =sct
+```{python}
+success_msg("Wow! It appears that only 11 of the more than 1000 baseball players have a BMI under 21!")
+```
+
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Numpy Side Effects
