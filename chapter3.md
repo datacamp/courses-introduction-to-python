@@ -82,18 +82,13 @@ success_msg("Great job!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Help!
 
-Once you know the name of the Python function you want to know, you still have to figure out how you will use it. Ironically, you have to ask for information on function with another function: `help()`.
+Once you know the name of the Python function you want to know, you still have to figure out how you will use it. Ironically, you have to ask for information on function with another function: `help()`. In IPython specifically, you can also use `?`.
 
-To get help on the `type()` function, for example, you'll want to use this call:
-
-```
-help(type)
-```
-
-You typically ask for help interactively, so in the IPython Shell. IPython also offers a more concise way to ask for help:
+To get help on the `max()` function, for example, you can use one of these calls:
 
 ```
-?type
+help(max)
+?max
 ```
 
 Use the Shell on the right to open up the documentation on `complex()`. Which of the following statements is true?

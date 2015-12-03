@@ -1,6 +1,6 @@
 ## Functions, what are they?
 
-In this video, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. Print, for example, is a function to print out values when your executing a script. But what is a function? Simply put, a function is a piece of reusable code that is aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
+In this video, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. Print, for example, is a function to print out values when you're executing a script. But what is a function? Simply put, a function is a piece of reusable code, aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
 
 Suppose you have the list containing only the heights of your family, fam:
 
@@ -10,20 +10,21 @@ The output makes sense: 1.89, the highest number in the list.
 
 `max()` worked kind of like a black box here: you passed it a list, then the implementation of `max()`, that you don't know, did its magic, and produced an output. How `max()` actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own implementation, which made your life easier.
 
-Of course, it's possible to also assign the result of a function call to a new variable, like here:
+Of course, it's possible to also assign the result of a function call to a new variable, like here. Now `tallest` is just like any other variable; you can use to continue your fancy calculations.
 
-Another one of these built-in functions is `round()`. It takes a float and rounds it to 0 digits after the decimal point, as this example shows:
+Another one of these built-in functions is `round()`. It takes two inputs: first, a number you want to round, and second, the precision with which to round, so how many digits behind the decimal point you want to keep. Say you want to round `1.68` to one decimal place. The first input is 1.68, the second input is 1. You separate the inputs with a comma:
 
+But there's more. It's perfectly possible to call the `round()` function with only one input, like this. <PAUSE>. This time, Python figured out that you didn't specify the second input, and automatically chooses to round the number to the closest integer. 
 
-You can tell from the .0 part that the result is still a float. You can also choose the number of digits after the decimal point, by passing   `round()` a second input, 1 for example. You separate different inputs with a comma.
+To understand why both approaches work, let's open up the documentation. You can do this with yet another function, `help`, as follows:
 
-If you don't know how to use the `round()` function, you can use the `help()` function to open up the documentation on the function, as follows; 
+It appears that `round()` takes two inputs. In Python, these inputs, also called arguments, have names: `number` and `ndigits`. When you call the function `round()`, with these two inputs, Python matches the inputs to the arguments: `number` is set to `1.68` and `ndigits` is set to 1. Next, The `round()` function does its calculations with `number` and `ndigits` as if they are variables in a Python script. We don't know exactly what code Python executes. What _is_ important, though, is that the function produces an output, namely the number 1.68 rounded to 1 decimal place.
 
-It appears that `round()` takes two inputs, also called arguments: `number` and `ndigits`. The first argument you pass has to be a numerical value. From the square brackets around the comma and `ndigits`, you can tell that the second argument is optional. If you don't specify this argument, `round()` automatically rounds your number to zero digits. So this call <PAUSE> and this call <PAUSE> are equivalent.
+If you call the function `round()` with only one input, Python again tries to match the inputs to the arguments. There's no input to match to the `ndigits` argument though. Luckily, the internal machinery of the `round()` function knows how to handle this. When `ndigits` is not specified, the function simply rounds to the closest integer and returns that integer. That's why we got the number 2.
 
-Now you know how to use `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a pretty standard task in Python, you can be pretty sure that there's already a function that can do this for you. A quick internet search will help you out.
+How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma dn the `ndigits` here. This tells us that you can call `round()` in this form, as well as in this one. In other words, `ndigits` is an optional argument.
 
-Head over to the interactive exercises, to learn about interesting functions and how to call them to supercharge your Python code!
+Now you know how to use both `max()` and `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight it in the interactive exercises!
 
 ```
 fam = [1.73, 1.68, 1.71, 1.89]
@@ -33,12 +34,10 @@ max(fam)
 tallest = max(fam)
 tallest
 
-round(1.73)
-round(1.73, 1)
+round(1.68, 1)
+round(1.68)
 
 help(round)
-round(1.73)
-round(1.73, 0)
 ```
 
 ## Methods
