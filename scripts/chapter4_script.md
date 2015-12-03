@@ -132,7 +132,7 @@ Simply staring at these numbers like a zombie won't give you any insights. What 
 
 For starters, you can try to find out the average height of these 5000 people, with Numpy's mean function. Because it's a function from the Numpy package, don't forget to start with "np dot".
 
-Of course, I first had to do a subsetting operation to get the height column from the matrix. It appears that on average, people are 1.75 meters tall. What about the median height? This is the height of the middle person if you sort all persons from small to tall. Instead of writing complicated python code to figure this out, you can simply use Numpy's `median()` function:
+Of course, I first had to do a subsetting operation to get the height column from the 2D array. It appears that on average, people are 1.75 meters tall. What about the median height? This is the height of the middle person if you sort all persons from small to tall. Instead of writing complicated python code to figure this out, you can simply use Numpy's `median()` function:
 
 You can do similar things for the weight column in `np_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
 
