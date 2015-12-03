@@ -425,14 +425,14 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Build a 2D Numpy array
 
-Previously, you've worked with the height and weight of Major League Baseball players. Maybe it makes more sense to restructure all this information in a 2D Numpy array, or a matrix if you will. This matrix should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns, for height and weight.
+Previously, you've worked with the height and weight of Major League Baseball players. Maybe it makes more sense to restructure all this information in a 2D Numpy array. This array should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns, for height and weight.
 
 The MLB was again very helpful and passed you the data in a different structure: as a Python list of lists, where each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
 
 Can you store the data as a 2D array to unlock the extra functionality?
 
 *** =instructions
-- Use `np.array()` to create a 2D Numpy array from `baseball`. Name this Numpy matrix `np_baseball`.
+- Use `np.array()` to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
 - Print out the type of `np_baseball`.
 - Print out the `shape` attribute of `np_baseball`. Use `.shape`.
 
@@ -575,9 +575,9 @@ success_msg("This is going well!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subsetting 2D Numpy Arrays (2)
 
-Apart from selecting single elements, entire columns or entire rows from a 2D Numpy array, it's also perfectly possible to create a "sub-matrix" of the matrix you started with. You can do this with slicing. 
+Apart from selecting single elements, entire columns or entire rows from a 2D Numpy array, it's also perfectly possible to create a "sub 2d array" of the 2D array you started with. You can do this with slicing. 
 
-As an example, check out the following calls, that builds a 3-by-3 Numpy matrix and then select the lower right 2-by-2 corner from it:
+As an example, check out the following calls, that builds a 3-by-3 Numpy array and then select the lower right 2-by-2 corner from it:
 
 ![image](https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/block1.png)
 
@@ -592,11 +592,11 @@ np_x[1:, 1:]
 
 Still remember the principle? The slice is written as `begin:end`: The `begin` is included, the `end` index is not.
 
-The code to build the Numpy matrix `np_baseball` from the `baseball` lists of lists is already included. This time, `np_baseball` contains three columns, corresponding to height, weight and age of the Major Baseball League players. Can you do the correct subsetting operations?
+The code to build the 2D Numpy array `np_baseball` from the `baseball` lists of lists is already included. This time, `np_baseball` contains three columns, corresponding to height, weight and age of the Major Baseball League players. Can you do the correct subsetting operations?
 
 *** =instructions
 - Print out the first first and second column of the first ten rows, so row index 0 up to and including row index 9
-- Print out a sub-matrix containing all three columns in the row indexes XXX up to __and including__ XXX. These are all the players of the XXX.
+- Print out a sub-array containing all three columns in the row indexes XXX up to __and including__ XXX. These are all the players of the XXX.
 
 *** =hint
 - For the first instruction, you can use `[:10, :].
@@ -669,12 +669,12 @@ np_mat + np_mat
 `np_baseball` is coded for you; it's again a 2D Numpy array with 3 columns, representing height, weight and age.
 
 *** =instructions
-- You managed to get hold on the changes in weight, height and age of all baseball players. It is available as a Numpy matrix, `update`. Add `np_baseball` and `update` and print out the result.
+- You managed to get hold on the changes in weight, height and age of all baseball players. It is available as a 2D Numpy array, `update`. Add `np_baseball` and `update` and print out the result.
 - You want to convert the units of height and weight. As a first step, create a Numpy array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
 - Multiply `np_baseball` with `conversion` and print out the result.
 
 *** =hint
-- `np_baseball + update` will do a element-wise summation of the two Numpy matrixes.
+- `np_baseball + update` will do a element-wise summation of the two Numpy arrays.
 - Create a Numpy array with `np.array()`; the input is a regular Python list with three elements.
 - `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
 
@@ -757,7 +757,7 @@ np.mean(x)
 np.median(x)
 ```
 
-The baseball data is available as a 2D Numpy matrix with 3 columns (height, weight, age) and 1015 rows. The name of this Numpy matrix is `np_baseball`. However, when restructuring the data, something went wrong: some height values are abnormally high. Follow the instructions and discover which summary statistic is most suited if you're dealing with so-called _outliers_.
+The baseball data is available as a 2D Numpy array with 3 columns (height, weight, age) and 1015 rows. The name of this Numpy array is `np_baseball`. However, when restructuring the data, something went wrong: some height values are abnormally high. Follow the instructions and discover which summary statistic is most suited if you're dealing with so-called _outliers_.
 
 *** =instructions
 - Create Numpy array `np_height`, that is equal to first column of `np_baseball`.
@@ -765,7 +765,7 @@ The baseball data is available as a 2D Numpy matrix with 3 columns (height, weig
 - Print out the median of `np_height`.
 
 *** =hint
-- Use Numpy matrix subsetting: `[:,0]` is a part of the solution.
+- Use 2D Numpy subsetting: `[:,0]` is a part of the solution.
 - If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a Numpy array. Don't forget to throw in a `print()` call.
 - For the last instruction, use `np.median()`.
 
