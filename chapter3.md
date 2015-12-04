@@ -398,7 +398,7 @@ $$A = \pi r^2 $$
 To use the constant `pi`, you'll need the `math` package. A variable `r` is already coded in the script. Fill in the code to calculate `C` and `A` and see how the `print()` functions create some nice printouts.
 
 *** =instructions
-- Import the `math` package.
+- Import the `math` package. Now you can access the constant `pi` with `math.pi`.
 - Calculate the circumference of the circle and store it in `C`.
 - Calculate the area of the circle and store it in `A`.
 
@@ -475,7 +475,7 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 *** =instructions
 - Perform a selective import from the `math` package: you only want to use the `radians` function.
-- Calculate the distance the Moon has travelled if it covered an angle of 12 degrees. Assign the result to `dist`. You can calculate this as $r \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, which you just imported.
+- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, which you just imported.
 - Print out `dist`.
 
 *** =hint
@@ -529,7 +529,7 @@ success_msg("Nice! Head over to the next exercise.")
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code. 
 
-Suppose you want to do some good old linear algebra. More specifically, you want to use the function `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Suppose you want to use the function `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 
 ```
 my_inv([[1,2], [3,4]])
