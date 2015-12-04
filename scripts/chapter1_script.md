@@ -12,7 +12,7 @@ Now that you're all eyes and ears for Python, let's start experimenting. I'll st
 
 Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are simply text files with the extension _dot p y_. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the commands from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
 
-If you execute this script in the DataCamp interface, you won't see any output. That's because you have to explicitly use `print()` inside scripts if you want to generate output during execution. Let's wrap our previous calculations in `print()` calls, and rerun the script. This time, the same output as before is generated, great!
+If you execute this script in the DataCamp interface, there's no output.. That's because you have to explicitly use `print()` inside scripts if you want to generate output during execution. Let's wrap our previous calculations in `print()` calls, and rerun the script. This time, the same output as before is generated, great!
 
 Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
 
