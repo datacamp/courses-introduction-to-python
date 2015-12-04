@@ -22,9 +22,9 @@ It appears that `round()` takes two inputs. In Python, these inputs, also called
 
 If you call the function `round()` with only one input, Python again tries to match the inputs to the arguments. There's no input to match to the `ndigits` argument though. Luckily, the internal machinery of the `round()` function knows how to handle this. When `ndigits` is not specified, the function simply rounds to the closest integer and returns that integer. That's why we got the number 2.
 
-How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma dn the `ndigits` here. This tells us that you can call `round()` in this form, as well as in this one. In other words, `ndigits` is an optional argument.
+How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma dn the `ndigits` here. This tells us that you can call `round()` in this form, as well as in this one. In other words, `ndigits` is an optional argument. Actually, Python offers yet another way to show that a function has optional arguments, but that's something for the exercises.
 
-Now you know how to use both `max()` and `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight it in the interactive exercises!
+By now, you have an idea about how to _use_ `max()` and `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight it in the interactive exercises!
 
 ```
 fam = [1.73, 1.68, 1.71, 1.89]
@@ -42,45 +42,65 @@ help(round)
 
 ## Methods
 
-Calling built-in functions is only one part of the story. In Python, you also have something called methods, which are functions that "belong to" Python objects. Every string, boolean, list, and so on, is a Python object, and depending type, each python object has a bunch of methods associated with them. You can call these methods with the dot notation. Lists, for example, have the append() method, to add elements. 
+Built-in functions are only one part of the Python story. You already know about functions such as `max()`, to get the maximum of a list, `len()`, to get the length of a list or a string, and so on. But what about other basic things, such getting the index of a specific list element, or reversing a list? You can look very hard for built-in functions that do this, but you won't find them.
 
-Here's the fam list again:
+In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python object. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already now: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list. But next to that, they also offer a bunch range of so-called "methods". You can think of methods as functions that "belong to" Python objects. Each string has methods, such as capitalize and replace, but each float and list has methods as well, like the ones you see here. 
 
-To add new elements to it, you can write fam, dot, append, with the value you want to add to the list as input in parentheses, like this.
+Enough for the theory now; let's try to use a method! Suppose you want to get the index of the string "mom" in the `fam` list. `fam` is an Python object with the type `list`, and has a method named `index()`, that does just that. To call the method, you use the dot notation, like this. The only input is the string "mom", the element you want to get the index for. 
 
-`fam` was updated and now also contains the string "me":
+Python returns 4, which indeed is the index of the string "mom". I called the index() method "on" the fam list here, and the output was 4. Similarly, I can use the `count()` method on the `fam` list to count the number of times `1.73` occurs in the list:
 
-You can also add your actual lenght, 1.79, like so:
+Python gives me 1, which makes sense, because only liz is 1.73 meters tall. 
 
-The append method is thus called "on" the fam list and this list is then extended. Again, how on earth could you know that this function existed? Well, you can simply type help(list) - list is the type of Python lists - and start browsing through all the methods that are associated with the list type.
 
-The first method that shows here is __add__ by the way, which is Python slang for the plus operator. This means that the plus operator is also a method available for lists. The only strange thing is that the + operator is an inline version of the __add__ moethod. These two calls do the exact same thing. Other types also have this add method, but the implementation is different. That's the thing: different types can have the same method name, but these methods can behave differently.
+But lists are not the only Python objects that have methods associated. Also floats, integers, booleans and strings are Python objects that have specific methods associated. Take the variable `sister` for example, that represents a string.
 
-Of course, there are also methods that are specific to the Python object you're dealing with. Booleans for example, which have type `bool`, don't offer the `append()` method. That's why this line of nonsense throws an error:
+You can call the method `capitalize()` on `sister`, without any inputs. It returns a string where the first letter is capitalized now:
 
-Let's take a step back here and summarise this: 
+Or what if you want to replace some parts of the string with other parts: not a problem. Just call the method replace on sister, with two appropriate inputs:
 
-you have Python functions, like `print()`, `type()` and `max()`, that you can call like this:
+In the output, "z" is replaced with "sa".
 
-There's also methods, which are functions that are specific to Python objects. Depending on the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods _on_ the objects with the dot notation, like this for example.
+I guess it's clear by now: in Python, everything is an object, and each object has specific methods associated. Depending on the type of the object, list, string, float, whatever, the available methods are different. A string object like `sister` has a replace method, but a list like `fam` doesn't have this, as you can see from this error. Objects of different types can have methods with the same name: Take the `index()` method. It's available for both strings and lists. If you call it on a string, you get the index of the letters in the string; If you call it on a list, you get the index of the element in the list. This means that, depending on the type of the object, the methods behave differently.
 
-Here, we asked for the index of the string `"dad"` in the `fam` list.
-It's time to get some exercise and add methods to your evergrowing skill set!
+Before I unleash you on some exercises on methods, there's one more thing I want to tell you. Some methods can change the objects they are called on. Let's retake the `fam` list, and call the `append()` method on it. As the input, we pass a string we want to add to the list:
+
+Python doesn't generate an output, but if we check the `fam` list again, we see that it has been extended with the string `"me"`:
+
+There was no need to reassign the result of the call to the `fam` list again. Let's do this again, this time to add my length to the list:
+
+Again, the fam list was extended:
+
+This is pretty cool, because you can write very concise code to update your data structures on the fly, but it can also be pretty dangerous. Some method calls don't change the object they're called on, while others do, so watch out.
+
+Let's take a step back here and summarise this. you have Python functions, like print(), type() and max(), that you can call like this:
+There's also methods, which are functions that are specific to Python objects. Depending on the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods on the objects with the dot notation, like this for example.
+
+There's much more to tell about Python objects, methods and how Python works internally, but for now, let's stick to what I've talked about here. It's time to get some exercises and add methods to your evergrowing skillset!
 
 ```
+sister = "liz"
+height = 1.73
 fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
+
+fam
+fam.index("mom")
+fam.count(1.73)
+
+sister
+sister.capitalize()
+sister.replace("z", "sa")
+
+sister.replace("z", "sa")
+fam.replace("mom", "mommy")
+sister.index("z")
+fam.index("mom")
+
 fam
 fam.append("me")
 fam
 fam.append(1.79)
 fam
-# help(list)
-[1, 2, 3] + [4]
-[1, 2, 3].__add__([4])
-True.append(False)
-
-type(fam)
-fam.index("dad")
 ```
 
 ## Packages
@@ -124,6 +144,8 @@ Now, you don't need any prefix to call the norm function:
 There's no clear reason to use only import statements, or only from import statements, both have their pros and cons. The import version makes it easy to import the entire module, but you have to write more code. If you're using from import, you make it very clear which items of a module you're using, but you lose context about the function. It's clearer what numpy.linarg.norm() does, instead of just using norm(), right?
 
 Off to the exercises now, where you can practice on different ways of importing packages and modules yourself!
+
+
 
 ```
 import numpy

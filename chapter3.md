@@ -27,8 +27,8 @@ output = function_name(input)
 ```
 
 *** =instructions
-- Use `type()` to get the type of `var1`; store the result as `out1`.
-- Print out `out1` using the `print()` function. This function doesn't return anything, so there's no need to store the output in a new variable.
+- Use `print()` in combination with `type()` to print out the type of `var1`; store the result as `out1`.
+- Use `len()` to get the length of the list `var1`. Wrap it in a `print()` call to directly print it out.
 - Use `int()` to convert `var2` to an integer. Store the output as `out2`.
 
 *** =hint
@@ -47,10 +47,10 @@ output = function_name(input)
 var1 = [1, 2, 3, 4]
 var2 = True
 
-# Store the type of var1 in out1
+# Print out type of var1
 
 
-# Print out out1
+# Print out length of var1
 
 
 # Convert var2 to an integer: out2
@@ -63,11 +63,11 @@ var2 = True
 var1 = [1, 2, 3, 4]
 var2 = True
 
-# Store the type of var1 in out1
-out1 = type(var1)
+# Print out type of var1
+print(type(var1))
 
-# Print out out1
-print(out1)
+# Print out length of var1
+print(len(var1))
 
 # Convert var2 to an integer: out2
 out2 = int(var2)
@@ -76,8 +76,9 @@ out2 = int(var2)
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-success_msg("Great job!")
+success_msg("Great job! The `len()` function is extremely useful: it also works on strings to count the number of characters!")
 ```
+
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Help!
@@ -94,7 +95,7 @@ help(max)
 Use the Shell on the right to open up the documentation on `complex()`. Which of the following statements is true?
 
 *** =instructions
-- `complex()` takes two arguments: `real` and `[, image]`.
+- `complex()` takes two arguments: `real` and `[, imag]`.
 - `complex()` takes two arguments: `real` and `imag`. Both these arguments are required.
 - `complex()` takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
 - `complex()` takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
@@ -109,7 +110,7 @@ The help file shows `complex(real[, imag])`. Do you remember what Filip told you
 
 *** =sct
 ```{python}
-msg1 = "Incorrect. `[, arg_name]` is a syntax to specify optional arguments. TODO VINCENT IS THIS CORRECT?"
+msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
 msg2 = "This statement is false. `imag` is not a required argument."
 msg3 = "Perfect!"
 msg4 = "This is almost true, but not entirely. If you don't specify `image`, it is set to 0."
@@ -119,9 +120,11 @@ success_msg("replace me")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Multiple arguments
 
-The built-in function `sorted()` also takes multiple arguments. Have a look at its documentation by typing `help(sorted)` in the IPython Shell.
+In the previous exercise, the square brackets around `imag` in the documentation showed that the `imag` was an optional argument. But Python also uses a different way to tell users about arguments being optional.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key` and `reverse`. The last two arguments are optional.
+Have a look at the documentation of `sorted()` by typing `help(sorted)` in the IPython Shell.
+
+You'll see that `sorted()` takes three arguments: `iterable`, `key` and `reverse`. `key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
 
 In this exercise, you'll only have to specify `iterable` and `inverse`, not `key`. The first input you pass to `sorted()` will obviously be matched to the `iterable` argument, but what about the second input. How can you tell Python that you want to specify `reverse` without changing anything about `key`? Well, you use the `=` for that, inside parenthesis:
 
@@ -191,90 +194,9 @@ success_msg("Cool! Head over to the video on Python methods.")
 //player.vimeo.com/video/146994269
 
 --- type:NormalExercise lang:python xp:100 skills:2
-## List Methods
-
-From the video, you now know that the `+` operator is actually the `__add__` method that belongs to lists. However, there are tons of other methods. In this exercise, you'll be experimenting with:
-
-- `append()`, to add elements to a list,
-- `index()`, to get the index of the first element of a list that matches its input and
-- `remove()`, to remove an the first element of a list that matches the input.
-
-Before you start, try these examples in the IPython Shell:
-
-```
-x = ["a", "b", "c", "d"]
-x.append("e")
-x.index("b")
-x.remove("c")
-print(x)
-```
-
-You'll be working on the list with the area of different parts of the house: `areas`.
-
-*** =instructions
-- Use `append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out the index of the element in `areas` that is equal to `20.0`.
-- Use `remove()` to delete the number `18.0` from the `areas` list.
-- After all these operations, print `areas` to see what it contains.
-
-*** =hint
-- Use the same syntax as the code samples: `areas.append(___)`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- `remove()` works differently than `del`. With `remove()` you have to pass the actual value of the element you want to remove, not the index.
-- To print out a variable `x`, simply write `print(x)`.
-
-*** =pre_exercise_code
-```{python}
-# pec
-```
-
-*** =sample_code
-```{python}
-# Create list areas
-areas = [11.25, 18.0, 20.0, 10.75, 9.50]
-
-# Use append twice to add poolhouse and garage size
-
-
-
-# Print out the index of the element 20.0
-
-
-# Remove the number 18.0 from areas
-
-
-# Print areas
-```
-
-*** =solution
-```{python}
-# Create list areas
-areas = [11.25, 18.0, 20.0, 10.75, 9.50]
-
-# Use append twice to add poolhouse and garage size
-areas.append(24.5)
-areas.append(15.45)
-
-# Print out the index of the room that has area 20.0
-print(areas.index(20.0))
-
-# Remove the number 18.0 from areas
-areas.remove(18.0)
-
-# Print areas
-print(areas)
-```
-
-*** =sct
-```{python}
-# TODO VINCENT SCT MAGIC
-success_msg("Great!")
-```
-
---- type:NormalExercise lang:python xp:100 skills:2
 ## String Methods
 
-Lists are not the only Python types that have methods associated with them. Strings, floats, integers and booleans, are also types, and also come prepacked with a bunch of useful methods. Follow the instructions closely to discover some string methods. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
 
 A string `room` has already been created for you to experiment with.
 
@@ -327,49 +249,133 @@ print(room.count("o"))
 *** =sct
 ```{python}
 # TODO VINCENT SCT MAGIC
-success_msg("Nice! Notice the difference: the `append()` method changed the list it was called on, while the `upper()` method doesn't change the string it was called on. It depends on the method you're using.")
+success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:2
-## Valid Method Calls
 
-As you saw from the previous exercise, a call like this:
+--- type:NormalExercise lang:python xp:100 skills:2
+## List Methods
 
-```
-"poolhouse".upper()
-```
+Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans, are also types, and also come prepacked with a bunch of useful methods. In this exercise, you'll be experimenting with:
 
-produces `"POOLHOUSE"`. But it doesn't end here. It's super-easy to chain your method calls:
+- `index()`, to get the index of the first element of a list that matches its input and
+- `count()`, to get the number of time an element appears in a list.
 
-```
-"poolhouse".upper().center(20)
-```
-
-Here, you're first converting `"poolhouse"` to upper case letters, and on the result, you call the `center()` method, that centers `"POOLHOUSE"` in a string of length 20. 
-
-Apart from that, there are also other ways of calling Python methods. Experiment with the different Python commands below. Which one will generate an error if you would try to execute them in the Python shell? Put differently, which Python command is invalid?
+You'll be working on the list with the area of different parts of a house: `areas`.
 
 *** =instructions
-- `(["a", "b", "c"] + ["d"]).index("b")`
-- `list.__add__(["a", "b", "c"], ["d"]).index("b")`
-- `remove(["a", "b", "c"], "b")`
-- `list.remove(["a", "b", "c"], "b")`
+- Use the `index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
+- Call `count()` on `areas` to find out how many times `14.5` appears in the list. Again, simply print out this number.
 
 *** =hint
-Copy the different options and paste them into the IPython Shell and indicate which one generates an error.
+- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
+- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
 
 *** =pre_exercise_code
 ```{python}
 # pec
 ```
 
+*** =sample_code
+```{python}
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Print out the index of the element 20.0
+
+
+# Print out how often 14.5 appears in area
+
+
+```
+
+*** =solution
+```{python}
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Print out the index of the element 20.0
+print(areas.index(20.0))
+
+# Print out how often 14.5 appears in area
+print(areas.count(14.5))
+```
+
 *** =sct
 ```{python}
-msg1 = "Incorrect; this call works perfectly fine. First you create a list by pasting together two lists, and then you call the `index()` method on it."
-msg2 = "Incorrect, this call gives no error. `list.__add__([\"a\", \"b\", \"c\"], [\"d\"])` is equivalent to `[\"a\", \"b\", \"c\"] + [\"d\"]`."
-msg3 = "Correct! This call generates an error. If you use methods without calling them _on_ a Python object, you have to use the name of the type followed by a dot, like it option 2 and 4."
-msg4 = "Incorrect, this call works perfectly fine. `list.remove([\"a\", \"b\", \"c\"], \"b\")` is equivalent to `[\"a\", \"b\", \"c\"].remove(\"b\")`."
-success_msg("replace me")
+# TODO VINCENT SCT MAGIC
+success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## List Methods (2)
+
+Most list methods will change the list they're called on. Examples are:
+
+- `append()`, that adds an element to the list it is called on,
+- `remove()`, that removes the first element of a list that matches the input, and
+- `reverse()`, that reverses the order of the elements in the list it is called on.
+
+You'll be working on the list with the area of different parts of the house: `areas`.
+
+*** =instructions
+- Use `append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
+- Print out `areas`
+- Use the `reverse()` method to reverse the order of the elements in `areas`.
+- Print out `areas` once more.
+
+*** =hint
+- For the first instruction, use the `areas.append(___)` call twice.
+- To print out a variable `x`, simply write `print(x)`.
+- The `reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
+- To print out a variable `x`, simply write `print(x)`.
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Use append twice to add poolhouse and garage size
+
+
+
+# Print out areas
+
+
+# Reverse the orders of the elements in areas
+
+
+# Print out areas
+```
+
+*** =solution
+```{python}
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Use append twice to add poolhouse and garage size
+areas.append(24.5)
+areas.append(15.45)
+
+# Print out areas
+print(areas)
+
+# Reverse the orders of the elements in areas
+areas.reverse()
+
+# Print out areas
+print(areas)
+```
+
+*** =sct
+```{python}
+# TODO VINCENT SCT MAGIC
+success_msg("Great!")
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
