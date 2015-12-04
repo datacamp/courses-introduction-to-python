@@ -22,9 +22,9 @@ It appears that `round()` takes two inputs. In Python, these inputs, also called
 
 If you call the function `round()` with only one input, Python again tries to match the inputs to the arguments. There's no input to match to the `ndigits` argument though. Luckily, the internal machinery of the `round()` function knows how to handle this. When `ndigits` is not specified, the function simply rounds to the closest integer and returns that integer. That's why we got the number 2.
 
-How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma dn the `ndigits` here. This tells us that you can call `round()` in this form, as well as in this one. In other words, `ndigits` is an optional argument. Actually, Python offers yet another way to show that a function has optional arguments, but that's something for the exercises.
+How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma and the `ndigits` here. This tells us that you can call `round()` in this form, as well as in this one. In other words, `ndigits` is an optional argument. Actually, Python offers yet another way to show that a function has optional arguments, but that's something for the exercises.
 
-By now, you have an idea about how to _use_ `max()` and `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight it in the interactive exercises!
+By now, you have an idea about how to _use_ `max()` and `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight to it in the interactive exercises!
 
 ```
 fam = [1.73, 1.68, 1.71, 1.89]
@@ -44,7 +44,7 @@ help(round)
 
 Built-in functions are only one part of the Python story. You already know about functions such as `max()`, to get the maximum of a list, `len()`, to get the length of a list or a string, and so on. But what about other basic things, such getting the index of a specific list element, or reversing a list? You can look very hard for built-in functions that do this, but you won't find them.
 
-In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python object. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already now: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list. But next to that, they also offer a bunch range of so-called "methods". You can think of methods as functions that "belong to" Python objects. Each string has methods, such as capitalize and replace, but each float and list has methods as well, like the ones you see here. 
+In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python object. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already know: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list. But next to that, they also offer a bunch range of so-called "methods". You can think of methods as functions that "belong to" Python objects. Each string has methods, such as capitalize and replace, but each float and list has methods as well, like the ones you see here. 
 
 Enough for the theory now; let's try to use a method! Suppose you want to get the index of the string "mom" in the `fam` list. `fam` is an Python object with the type `list`, and has a method named `index()`, that does just that. To call the method, you use the dot notation, like this. The only input is the string "mom", the element you want to get the index for. 
 
@@ -105,7 +105,7 @@ fam
 
 ## Packages
 
-By now, I hope you're convinced that python functions and methods are extremely powerful: you can basically use other people's code to solve your own problems. However, adding all functions and methods that have been written up to now to the same Python distribution would be a mess. There would be tons and tons of code in there, that you'll never use. Maintaining all of this code would also be a real pain.
+By now, I hope you're convinced that python functions and methods are extremely powerful: you can basically use other people's code to solve your own problems. However, adding all functions and methods that have been written up to now to the same Python distribution would be a mess. There would be tons and tons of code in there, that you'll never use. Also, maintaining all of this code would be a real pain.
 
 This is where packages come into play. You can think of package as a directory of Python scripts. Each such script is a so-called module. These modules specify functions, methods and new Python types aimed at solving particular problems. There are thousands of Python packages available from the internet. Among them are packages for data science: there's numpy to efficiently work with arrays, matplotlib for data visualization, scikit-learn for machine learning, and many others.
 
@@ -132,10 +132,6 @@ As I told you before, a package is a collection of modules. For big packages, th
 If you only plan to use the `linalg` subpackage and not the entire `numpy` package, you can make your import statement more specific, like this:
 
 and then use this line of code to use the norm() function. To use it, you have to explicitly name the package, subpackage and function you're using with dots in between.
-
-You can do a similar import with this line of code:
-
-With this `from import` version, though, you don't have to include the numpy part anymore:
 
 You can also explicitly import only the `norm()` function of the linalg subpackage:
 
