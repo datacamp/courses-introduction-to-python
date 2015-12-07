@@ -69,6 +69,7 @@ Now it's time to head over to the exercises, where you will continue to work on 
 fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
 fam
 fam[3]
+fam[6]
 fam[-1]
 fam[6]
 fam[-2]

@@ -201,7 +201,7 @@ Strings come with a bunch of methods. Follow the instructions closely to discove
 A string `room` has already been created for you to experiment with.
 
 *** =instructions
-- Use the `upper()` method on `room` and store the result in `room_up`.
+- Use the `upper()` method on `room` and store the result in `room_up`. Use the dot notation.
 - Print out `room` and `room_up`. Did both change?
 - Print out the number of o's on the variable `room`: call `count()` on `room` and pass the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
 

@@ -20,7 +20,7 @@ You can also use the IPython Shell interactively: simply type commands and hit E
 
 *** =instructions
 - Experiment in the IPython Shell: type 5 / 8, for example.
-- Add another line of code to the Python script (`my_script.py`) that prints out the sum of `7 and 10`.
+- Add another line of code to the Python script (`my_script.py`) that prints out the sum of `7` and `10`.
 - Hit _Submit Answer_ to execute the python script and receive feedback.
 
 *** =hint
@@ -131,7 +131,7 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 The code in the script on the right gives some examples.
 
 *** =instructions
-Suppose you have `$100`, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
+Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
 
 *** =hint
 - After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
@@ -307,7 +307,7 @@ success_msg("Awesome! If you now change the value of `savings` and submit your s
 In the previous exercise, you have worked with two Python data types:
 
 - `int`, or integer: number without a fractional part. `savings`, with the value `100` is an example.
-- `float`: number that has both an integer and fractional part. `factor`, with the value `1.10` is a float.
+- `float`, or floating point: number that has both an integer and fractional part, separated by a point. `factor`, with the value `1.10` is a float.
 
 Next to numerical data types, there are two other very common data types:
 
@@ -375,9 +375,9 @@ Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out abou
 
 *** =pre_exercise_code
 ```{python}
-result = 100*1.1**7
-better = "True"
-worse = False
+a = 100*1.1**7
+b = "True"
+c = False
 ```
 
 *** =sct
@@ -394,7 +394,7 @@ success_msg("Replace me")
 
 Filip mentioned that different types behave differently in Python.
 
-When you sum two strings for example, you'll get different behavior then when you sum two integers or two booleans.
+When you sum two strings for example, you'll get different behavior than when you sum two integers or two booleans.
 
 In the script, some variables with different types have already been created. Up to you to use them.
 
