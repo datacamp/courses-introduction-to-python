@@ -8,7 +8,7 @@ Say that you want to get the maximum value in this list. Instead of writing your
 
 The output makes sense: 1.89, the highest number in the list. 
 
-`max()` worked kind of like a black box here: you passed it a list, then the implementation of `max()`, that you don't know, did its magic, and produced an output. How `max()` actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own implementation, which made your life easier.
+`max()` worked kind of like a black box here: you passed it a list, then the implementation of `max()`, that you don't know, did its magic, and produced an output. How `max()` actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own code, which made your life easier.
 
 Of course, it's possible to also assign the result of a function call to a new variable, like here. Now `tallest` is just like any other variable; you can use to continue your fancy calculations.
 
@@ -42,7 +42,7 @@ help(round)
 
 ## Methods
 
-Built-in functions are only one part of the Python story. You already know about functions such as `max()`, to get the maximum of a list, `len()`, to get the length of a list or a string, and so on. But what about other basic things, such getting the index of a specific list element, or reversing a list? You can look very hard for built-in functions that do this, but you won't find them.
+Built-in functions are only one part of the Python story. You already know about functions such as `max()`, to get the maximum of a list, `len()`, to get the length of a list or a string, and so on. But what about other basic things, such getting the index of a specific element in the list, or reversing a list? You can look very hard for built-in functions that do this, but you won't find them.
 
 In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python object. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already know: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list. But next to that, Python objects also come with a bunch of so-called "methods". You can think of methods as _functions_ that "belong to" Python objects. A Python object of type string has methods, such as capitalize and replace, but also objects of type float and list have specific methods depending on the type.
 
@@ -67,7 +67,7 @@ Before I unleash you on some exercises on methods, there's one more thing I want
 
 Python doesn't generate an output, but if we check the `fam` list again, we see that it has been extended with the string `"me"`:
 
-There was no need to reassign the result of the call to the `fam` list again. Let's do this again, this time to add my length to the list:
+Let's do this again, this time to add my length to the list:
 
 Again, the fam list was extended:
 

@@ -136,7 +136,7 @@ Of course, I first had to do a subsetting operation to get the height column fro
 
 You can do similar things for the weight column in `np_city`. Often, these summarizing statistics will provide you with a "sanity check" of the data. If you end up with a average weight of 2000 kilograms, you're measurements are most likely incorrect.
 
-Apart from `mean()` and `median()`, there's also other functions, like `correlate()` to check if for example height and weight are correlated,
+Apart from `mean()` and `median()`, there's also other functions, like `corrcoeff()` to check if for example height and weight are correlated,
 
 and `std()`, for standard deviation. 
 
@@ -152,7 +152,7 @@ np_city = np.column_stack((np.random.normal(1.75, 0.20, 5000), np.random.normal(
 np_city
 np.mean(np_city[:,0])
 np.median(np_city[:,0])
-np.correlate(np_city[:,0], np_city[:,1])
+np.corrcoef(np_city[:,0], np_city[:,1])
 np.std(np_city[:,0])
 
 height = np.round(np.random.normal(1.75, 0.20, 5000), 2)
