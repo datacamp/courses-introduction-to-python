@@ -1,10 +1,10 @@
 ## Functions, what are they?
 
-In this video, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. Print, for example, is a function to print out values when you're executing a script. But what is a function? Simply put, a function is a piece of reusable code, aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
+In this video, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. type, for example, is a function that returns the type of a value. But what is a function? Simply put, a function is a piece of reusable code, aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
 
 Suppose you have the list containing only the heights of your family, fam:
 
-Say that you want to get the maximum value in this list. Instead of writing your own piece of Python code that goes through the list and finds the highest value, you can also use Python's `max()` function. This is one of Python's built-in functions, just like `print()`. We simply pass `fam` to `max()` inside parentheses:
+Say that you want to get the maximum value in this list. Instead of writing your own piece of Python code that goes through the list and finds the highest value, you can also use Python's `max()` function. This is one of Python's built-in functions, just like `type()`. We simply pass `fam` to `max()` inside parentheses:
 
 The output makes sense: 1.89, the highest number in the list. 
 
@@ -44,9 +44,9 @@ help(round)
 
 Built-in functions are only one part of the Python story. You already know about functions such as `max()`, to get the maximum of a list, `len()`, to get the length of a list or a string, and so on. But what about other basic things, such getting the index of a specific list element, or reversing a list? You can look very hard for built-in functions that do this, but you won't find them.
 
-In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python object. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already know: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list. But next to that, they also offer a bunch range of so-called "methods". You can think of methods as functions that "belong to" Python objects. Each string has methods, such as capitalize and replace, but each float and list has methods as well, like the ones you see here. 
+In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python object. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already know: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list. But next to that, Python objects also come with a bunch of so-called "methods". You can think of methods as _functions_ that "belong to" Python objects. A Python object of type string has methods, such as capitalize and replace, but also objects of type float and list have specific methods depending on the type.
 
-Enough for the theory now; let's try to use a method! Suppose you want to get the index of the string "mom" in the `fam` list. `fam` is an Python object with the type `list`, and has a method named `index()`, that does just that. To call the method, you use the dot notation, like this. The only input is the string "mom", the element you want to get the index for. 
+Enough for the theory now; let's try to use a method! Suppose you want to get the index of the string "mom" in the `fam` list. `fam` is an Python object with the type `list`, and has a method named `index()`. To call the method, you use the dot notation, like this. The only input is the string "mom", the element you want to get the index for. 
 
 Python returns 4, which indeed is the index of the string "mom". I called the index() method "on" the fam list here, and the output was 4. Similarly, I can use the `count()` method on the `fam` list to count the number of times `1.73` occurs in the list:
 
@@ -73,7 +73,7 @@ Again, the fam list was extended:
 
 This is pretty cool, because you can write very concise code to update your data structures on the fly, but it can also be pretty dangerous. Some method calls don't change the object they're called on, while others do, so watch out.
 
-Let's take a step back here and summarise this. you have Python functions, like print(), type() and max(), that you can call like this:
+Let's take a step back here and summarise this. you have Python functions, like type(), max() and round(), that you can call like this:
 There's also methods, which are functions that are specific to Python objects. Depending on the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods on the objects with the dot notation, like this for example.
 
 There's much more to tell about Python objects, methods and how Python works internally, but for now, let's stick to what I've talked about here. It's time to get some exercises and add methods to your evergrowing skillset!
