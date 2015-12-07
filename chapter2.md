@@ -84,7 +84,7 @@ The printout of the previous exercise wasn't really satisfying: it's just a list
 The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bathroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earlier.
 
 *** =instructions
-- Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area.
+- Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area. More specifically, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
 - Print `areas` again; is the printout more informative this time?
 
 *** =hint
@@ -346,7 +346,7 @@ hint comes here
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Create the variable eat_sleep_area: sum of kitchen and bedroom area
+# Sum of kitchen and bedroom area: eat_sleep_area
 
 
 # Print the variable eat_sleep_area
@@ -358,7 +358,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Create the variable eat_sleep_area: sum of kitchen and bedroom area
+# Sum of kitchen and bedroom area: eat_sleep_area
 eat_sleep_area = areas[3] + areas[-3]
 
 # Print the variable eat_sleep_area
@@ -382,7 +382,7 @@ my_list[start:end]
 
 The `start` index will be included, while the `end` index is _not_.
 
-The code sample below shows an example, where the second and third element, corresponding to indexes 1 and 2, are selected from a list `x`:
+The code sample below shows an example. A list with `"b"` and `"c"`, corresponding to indexes 1 and 2, are selected from a list `x`:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -412,10 +412,10 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Use slicing to create downstairs
-downstairs = 
+
 
 # Use slicing to create upstairs
-upstairs = 
+
 
 # Print out downstairs and upstairs
 ```
@@ -477,10 +477,10 @@ x[:]
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Alternative slicing to create downstairs
-downstairs = 
+
 
 # Alternative slicing to create upstairs
-upstairs = 
+
 ```
 
 *** =solution

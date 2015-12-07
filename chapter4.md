@@ -102,13 +102,13 @@ import numpy as np
 import numpy as np
 
 # Create a Numpy array from height: np_height
-np_height = 
+
 
 # Print out np_height
 
 
 # Convert np_height to cm: np_height_cm
-np_height_cm = 
+
 
 # Print np_height_cm
 
@@ -143,7 +143,7 @@ success_msg("Nice! In the blink of an eye, Numpy performs multiplications on mor
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Baseball player's BMI
 
-Next to height, the MLB also offers you to analyze their weight data.. Again, both are available as regular Python lists: `height` and `weight`; height is in inches, weight is in pounds.
+Next to height, the MLB also offers you to analyze their weight data. Again, both are available as regular Python lists: `height` and `weight`; height is in inches, weight is in pounds.
 
 It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a Numpy array with the correct units is already available. Follow the instructions step by step and finish the game!
 
@@ -174,10 +174,10 @@ import numpy as np
 import numpy as np
 
 # Create array from height with correct units: np_height_m
-np_height_m
+
 
 # Create array from weight with correct units: np_weight_kg 
-np_weight_kg = 
+
 
 # Calculate the BMI: bmi
 bmi = np_weight_kg / np_height_m ** 2
@@ -485,7 +485,7 @@ print(np_baseball.shape)
 *** =sct
 ```{python}
 # TO DO VINCENT SCT MAGIC
-test_object("np_baseball")
+# test_object("np_baseball")
 success_msg("Slick! Time to show off some killer features of multi-dimensional Numpy arrays!")
 ```
 
@@ -505,7 +505,7 @@ np_x = np.array(x)
 np_x[:,0]
 ```
 
-For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the column refer to the rows, those after the column refer to the columns. The `:` tells Python to include all rows, or all columns, respectively.
+For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the column refer to the rows, those after the column refer to the columns. The `:` is for slicing: in this example, it tells Python to include all rows.
 
 The code that converts the pre-loaded `baseball` list to a 2D Numpy array is already in the script. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
@@ -557,13 +557,13 @@ import numpy as np
 np_baseball = np.array(baseball)
 
 # Print out the 50th row of np_baseball
-np_baseball[49,:]
+print(np_baseball[49,:])
 
 # Select the entire second column of np_baseball: np_weight
 np_weight = np_baseball[:,1]
 
 # Print out height of 124th player
-np_baseball[123, 1]
+print(np_baseball[123, 1])
 ```
 
 *** =sct
@@ -827,10 +827,12 @@ The Python script on the right already includes code to print out informative me
 *** =instructions
 - The code to print out the mean height is already included. Complete the code for the median height.
 - Use `np.std()` on the first column of `np_baseball` to calculate `stddev`.
-- Do big players tend to be heavier? Use `np.correlate()` to store the correlation between the first and second column of `np_baseball` in `corr`.
+- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
 
 *** =hint
-hint comes here
+- Use `np.median()` to calculate the median. Make sure to select to correct column first!
+- Subset the same column when calculating the standard deviation with `np.std()`.
+- Use `np_baseball[:,0]` and `np_baseball[:,1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
 
 *** =pre_exercise_code
 ```{python}
@@ -851,15 +853,15 @@ avg = np.mean(np_baseball[:,0])
 print("Average: " + str(avg))
 
 # Print median height
-med = ___
+med = 
 print("Median: " + str(med))
 
 # Print out the standard deviation on height
-stddev = ___
+stddev = 
 print("Standard Deviation: " + str(stddev))
 
 # Print out correlation between first and second column
-corr = ___
+corr = 
 print("Correlation: " + str(corr))
 ```
 
@@ -883,14 +885,14 @@ stddev = np.std(np_baseball[:,0])
 print("Standard Deviation: " + str(stddev))
 
 # Print out correlation between first and second column
-corr = np.correlate(np_baseball[:,0], np_baseball[:,1])
+corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])
 print("Correlation: " + str(corr))
 ```
 
 *** =sct
 ```{python}
 # sct code
-success_msg("This time, median and ")
+success_msg("Great! Time to use all of your new data science skills in the last exercise!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
