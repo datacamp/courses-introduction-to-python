@@ -579,8 +579,6 @@ Apart from selecting single elements, entire columns or entire rows from a 2D Nu
 
 As an example, check out the following calls, that builds a 3-by-3 Numpy array and then select the lower right 2-by-2 corner from it:
 
-![image](https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/block1.png)
-
 ```
 import numpy as np
 x = [["a", "b", "c"],
