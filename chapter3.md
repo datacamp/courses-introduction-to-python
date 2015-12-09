@@ -1,7 +1,7 @@
 ---
 title_meta  : Chapter 3
-title       : Functions and packages
-description : Add chapter description here.
+title       : Functions and Packages
+description : To leverage the code that brilliant Python developers have written, you'll learn about using functions, methods and packages. This will help you to reduce the amount of code you need to solve challenging problems!
 
 --- type:VideoExercise lang:python xp:50 skills:2
 ## Functions

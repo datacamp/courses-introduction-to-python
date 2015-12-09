@@ -8,8 +8,17 @@ time_needed: 4 hours
 author_bio: "Filip is the passionate developer behind many of DataCamp's interactive courses,
   covering both Python and R. Under the motto 'Eat your own dog food', he
   leverages the techniques DataCamp teaches its students to perform data analysis
-  for DataCamp. Filip holds degrees in Electrical Engineering and Artificial Intelligence."
-description: asdfasdf
+  for DataCamp. Filip holds degrees in Electrical Engineering and Artificial Intelligence.
+  <br><br>
+  <strong>Patrick Varilly (Dataminded)</strong> has been closely involved throughout the development of this course. His feedback has been extremely helpful.
+  <br><br>
+  <strong>Vincent Vankrunkelsven</strong> has a put a great effort in outlining and reviewing this course. He also programmed the logic to give students the feedback they need in the interactive coding challenges.
+  <br><br>
+  Our video guy <strong>Fernando Silva</strong> did a tremendous job in directing, recording and editing the tutorial videos."
+description: Python is an general purpose programming language that is becoming more and more popular to do data science. 
+  Companies world-wide are using Python to harvest insights from their data and get a competitve edge. Unlike other Python
+  tutorials, this course focuses on Python specifically for data science. You will learn about powerful ways to store and manipulate data
+  as well as cool data science tools to start your own analyses.
 chapters:
   chapter1.md: 1842
   chapter2.md: 1851

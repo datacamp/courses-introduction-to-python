@@ -1,7 +1,7 @@
 ---
 title_meta  : Chapter 1
 title       : Python Basics
-description : An introduction to the basic concepts of Python and its place in the Data Science community
+description : An introduction to the basic concepts of Python. Learn to use Python both interatively and through a script. Create your first variables and acquaint yourself with Python's basic data types.
 
 --- type:VideoExercise lang:python xp:50 skills:2
 ## Hello Python!
