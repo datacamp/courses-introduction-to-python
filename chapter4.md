@@ -1,15 +1,13 @@
 ---
 title_meta  : Chapter 4
 title       : Numpy
-description : Add chapter description here.
+description : Numpy is a Python package to efficiently do data science. Learn to work with the Numpy array, a faster and more powerful alternative to the list, and take your first steps in data exploration.
 
 --- type:VideoExercise lang:python xp:50 skills:2
-## Intro to Numpy
+## Numpy
 
 *** =video_link
-```{python}
 //player.vimeo.com/video/146994268
-```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Your First Numpy Array
@@ -415,12 +413,10 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
-## Numpy 2D Arrays
+## 2D Numpy Arrays
 
 *** =video_link
-```{python}
 //player.vimeo.com/video/146994270
-```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Build a 2D Numpy array
@@ -736,12 +732,10 @@ success_msg("Great job! Notice how with very little code, you can change all val
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
-## Basic Statistics with Numpy
+## Numpy: Basic Statistics
 
 *** =video_link
-```{python}
 //player.vimeo.com/video/146994271
-```
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Average versus median
