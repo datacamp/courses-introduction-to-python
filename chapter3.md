@@ -75,8 +75,23 @@ out2 = int(var2)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
-success_msg("Great job! The `len()` function is extremely useful: it also works on strings to count the number of characters!")
+msg = "You don't have to change or edit the predefined variables."
+test_object("var1", undefined_msg = msg, incorrect_msg = msg)
+test_object("var2", undefined_msg = msg, incorrect_msg = msg)
+
+test_function("print", 1)
+test_function("type", 1)
+
+test_function("print", 2)
+test_function("len", 1)
+
+test_object("out2", do_eval = False)
+
+test_function("int", not_called_msg = "Use <code>int()</code> to make an integer from <code>var2</code> and assign to <code>out2</code>.",
+                     incorrect_msg = "Use <code>int()</code> with the correct variables. You should pass <code>var2</code> to it."
+)
+test_object("out2", incorrect_msg = "Make sure to assign the correct value to <code>out2</code>.")
+success_msg("Great job! The <code>len()</code> function is extremely useful: it also works on strings to count the number of characters!")
 ```
 
 
@@ -114,7 +129,7 @@ msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
 msg2 = "This statement is false. `imag` is not a required argument."
 msg3 = "Perfect!"
 msg4 = "This is almost true, but not entirely. If you don't specify `image`, it is set to 0."
-success_msg("replace me")
+test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -183,7 +198,20 @@ print(full_sorted)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "You don't have to change or edit the predefined variables."
+test_object("first", undefined_msg = msg, incorrect_msg = msg)
+test_object("second", undefined_msg = msg, incorrect_msg = msg)
+
+msg = "Use '+' to append <code>second</code> to <code>first</code>."
+test_operator(1, not_found_msg = msg,
+                 incorrect_op_msg =  msg,
+                 incorrect_result_msg = msg)
+
+test_object("full_sorted", do_eval = False)
+test_function("sorted")
+test_object("full_sorted", 
+            incorrect_msg = "Use <code>sorted()</code> with <code>full</code> as a first argument and <code>reverse = True</code> to assign the correct value to <code>full_sorted</code>.")
+
 success_msg("Cool! Head over to the video on Python methods.")
 ```
 
@@ -248,7 +276,25 @@ print(room.count("o"))
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "You don't have to change or edit the predefined variables."
+test_object("room", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("room_up", do_eval = False)
+test_function("room.upper", 
+        not_called_msg = "Don't forget to call the <code>upper()</code> method of the <code>pool</code> object using the <code>.</code> notation.")
+test_object("room_up")
+
+msg = "Print out <code>%s</code> using <code>print()</code>"
+test_function("print", 1, incorrect_msg = msg % "room")
+test_function("print", 2, incorrect_msg = msg % "room_up")
+
+msg = "Don't forget to count the o's in <code>room</code> by calling the <code>count()</code> method on it with the correct argument."
+test_function("room.count", 
+              not_called_msg = msg,
+              incorrect_msg = msg)
+test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in <code>room</code>.")
+
+
 success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
@@ -303,7 +349,21 @@ print(areas.count(14.5))
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "You don't have to change or edit the predefined variables."
+test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+
+msg = "Don't forget to find the index of <code>20.0</code> in <code>areas</code> by calling the <code>index()</code> method on it with the correct argument."
+test_function("areas.index", 
+              not_called_msg = msg,
+              incorrect_msg = msg)
+test_function("print", 1, not_called_msg = "Don't forget to print out the index of <code>20.0</code> in <code>areas</code>.")
+
+msg = "Don't forget to count the number of times <code>14.5</code> appears in <code>areas</code> by calling the <code>count()</code> method on it with the correct argument."
+test_function("areas.count", 
+              not_called_msg = msg,
+              incorrect_msg = msg)
+test_function("print", 2, not_called_msg = "Don't forget to print out the count of <code>14.5</code> in <code>areas</code>.")
+
 success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
 ```
 
@@ -374,7 +434,24 @@ print(areas)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "You don't have to change or edit the predefined variables."
+test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+
+msg = "Use <code>append</code> on <code>areas</code> to append it the %s time with <code>%d</code>"
+test_function("areas.append", 1,
+              not_called_msg = msg % ("first", 24.5),
+              incorrect_msg = msg % ("first", 24.5))
+test_function("areas.append", 2,
+              not_called_msg = msg % ("second", 15.45),
+              incorrect_msg = msg % ("second", 15.45))
+              
+test_function("print", 1)
+
+msg = "Use <code>reverse</code> on <code>areas</code> to reverse it."
+test_function("areas.reverse", 
+              not_called_msg = msg,
+              incorrect_msg = msg)
+
 success_msg("Great!")
 ```
 
@@ -452,7 +529,22 @@ print("Area: " + str(A))
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "You don't have to change or edit the predefined variables."
+test_object("r", undefined_msg = msg, incorrect_msg = msg)
+
+test_import("math", same_as = False)
+
+test_object("C", do_eval = False)
+test_operator(1, incorrect_result_msg = "Your calculation of <code>C</code> is not quite correct. You should use <code>math.pi</code>.")
+test_object("C")
+
+test_object("A", do_eval = False)
+test_operator(2, incorrect_result_msg = "Your calculation of <code>A</code> is not quite correct. You should use <code>math.pi</code>.")
+test_object("A")
+
+test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
+test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
+
 success_msg("Nice!")
 ```
 
@@ -520,7 +612,17 @@ print(dist)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MESSAGE
+msg = "You don't have to change or edit the predefined variables."
+test_object("r", undefined_msg = msg, incorrect_msg = msg)
+
+test_import("math.radians", same_as = False)
+
+test_object("dist", do_eval = False)
+test_function("radians", 1, not_called_msg = "Your calculation of <code>dist</code> is not quite correct. You should use <code>radians()</code>.")
+test_object("dist")
+
+test_function("print")
+
 success_msg("Nice! Head over to the next exercise.")
 ```
 
@@ -555,6 +657,6 @@ Try the different import statements in the IPython shell and see which one cause
 ```{python}
 msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv`."
-success_msg("replace me")
+test_mc(4, [msg1, msg2, msg3, msg4])
 ```
 

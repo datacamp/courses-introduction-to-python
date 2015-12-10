@@ -70,7 +70,17 @@ print(areas)
 
 *** =sct
 ```{python}
-#TODO VINCENT SCT MAGIC
+msg = "Don't remove or edit the predefined variables!"
+test_object("hallway", undefined_msg = msg, incorrect_msg = msg)
+test_object("kitchen", undefined_msg = msg, incorrect_msg = msg)
+test_object("living", undefined_msg = msg, incorrect_msg = msg)
+test_object("bedroom", undefined_msg = msg, incorrect_msg = msg)
+test_object("bathroom", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order.")
+
+test_function("print")
+
 success_msg("Nice! A list is way better here, isn't it?")
 ```
 
@@ -130,7 +140,17 @@ print(areas)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "Don't remove or edit the predefined variables!"
+test_object("hall", undefined_msg = msg, incorrect_msg = msg)
+test_object("kit", undefined_msg = msg, incorrect_msg = msg)
+test_object("liv", undefined_msg = msg, incorrect_msg = msg)
+test_object("bed", undefined_msg = msg, incorrect_msg = msg)
+test_object("bath", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("areas", incorrect_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here!")
+
+test_function("print")
+
 success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
 ```
 
@@ -145,7 +165,7 @@ my_list = [el1, el2, el3]
 
 Can you tell which ones of the following lines of Python code are valid ways to build a list?
 
-A. `[1 3 4 2]`  
+A. `[1, 3, 4, 2]`  
 B. `[[1, 2, 3], [4, 5, 7]]`  
 C. `[1 + 2, "a" * 5, 3]`  
 
@@ -166,12 +186,11 @@ Try out all the different lines in the Python shell and see which ones generate 
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
 msg1 = "Correct! As funny as they may look, all these commands are valid ways to build a Python list."
 msg2 = "Command B is valid, but it's not the only one!"
 msg3 = "Both command B and C are valid; what about command A? Try it out in the console."
 msg4 = "Command C is valid, but it's not the only one!"
-success_msg("Replace me")
+test_mc(1,[msg1,msg2,msg3,msg4])
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -244,7 +263,20 @@ print(type(house))
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "Don't remove or edit the predefined variables!"
+test_object("hall", undefined_msg = msg, incorrect_msg = msg)
+test_object("kit", undefined_msg = msg, incorrect_msg = msg)
+test_object("liv", undefined_msg = msg, incorrect_msg = msg)
+test_object("bed", undefined_msg = msg, incorrect_msg = msg)
+test_object("bath", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area.")
+
+test_function("print")
+
+test_function("type")
+test_function("print", 2)
+    
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
 
@@ -314,8 +346,13 @@ print(areas[5])
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
-test_output_contains("20.0", no_output_msg = "Make sure to correctly subset the list to select the are of the living room.")
+msg = "Don't remove or edit the predefined <code>areas</code> list."
+test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+
+msg = "In your %dst <code>print()</code>${{line ? at line ${line}}}, make sure select the correct element from <code>areas</code>.${{expected ? Expected <code>${expected}</code>, but got <code>${result}</code>.}}"
+for i in range(1,4):
+  test_function("print", index = i, incorrect_msg = msg % i)
+
 success_msg("Good job!")
 ```
 
@@ -367,7 +404,12 @@ print(eat_sleep_area)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "Don't remove or edit the predefined <code>areas</code> list."
+test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("eat_sleep_area")
+
+test_function("print")
 success_msg("Bellissimo!")
 ```
 
@@ -438,7 +480,15 @@ print(upstairs)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "Don't remove or edit the predefined <code>areas</code> list."
+test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("downstairs", incorrect_msg = "Use the <code>areas</code> and slicing to select the elements you want for <code>downstairs</code>. You should use <code>0:6</code>")
+test_object("upstairs", incorrect_msg = "Use the <code>areas</code> and slicing to select the elements you want for <code>upstairs</code>. You should use <code>6:10</code>")
+
+test_function("print", 1)
+test_function("print", 2)
+
 success_msg("Great!")
 ```
 
@@ -497,7 +547,16 @@ upstairs = areas[6:]
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "Don't remove or edit the predefined <code>areas</code> list."
+test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+
+msg = "Use the <code>areas</code> and slicing to select the elements you want for <code>%s</code>. You should use <code>%s</code>"
+
+test_object("downstairs", incorrect_msg = msg % ("downstairs",":6"))
+test_student_typed("\[\\s*:6\\s*\]", not_typed_msg = msg % ("downstairs",":6"))
+test_object("upstairs", incorrect_msg = msg % ("upstairs","6:"))
+test_student_typed("\[\\s*6:\\s*\]", not_typed_msg = msg % ("upstairs","6:"))
+
 success_msg("Wonderful!")
 ```
 
@@ -538,11 +597,10 @@ house = [["hallway", 11.25],
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
 msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `[\"bathroom\", 9.50]`."
 msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
-success_msg("replace me")
+test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2
@@ -605,7 +663,8 @@ areas[4] = "chill zone"
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+test_object("areas",
+            incorrect_msg = "Your changes to <code>areas</code> did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!")
 success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list, to update multiple elements in a single command.")
 ```
 
@@ -662,7 +721,23 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "Don't remove or edit the predefined <code>areas</code> list."
+test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("areas_1", do_eval = False)
+msg = "Use the '+' operator to add <code>[\"poolhouse\", 24.5]</code> to <code>areaas_1</code>."
+test_operator(1, not_found_msg = msg,
+                 incorrect_op_msg = msg,
+                 incorrect_result_msg = msg +". Watch out for typo's.")
+test_object("areas_1")
+
+test_object("areas_2", do_eval = False)
+msg = "Use the '+' operator to add <code>[\"poolhouse\", 24.5]</code> to <code>areaas_1</code>."
+test_operator(1, not_found_msg = msg,
+                 incorrect_op_msg = msg,
+                 incorrect_result_msg = msg +". Watch out for typo's.")
+test_object("areas_2")
+
 success_msg("Cool! The list is shaping up nicely!")
 ```
 
@@ -723,7 +798,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
 ```{python}
 msg1 = msg2 = msg4 = "This code chunk will not correctly remove the poolhouse-related information. Try again."
 msg3 = "Correct! You'll learn about easier ways to remove specific elements from Python lists later on."
-success_msg("Replace me")
+test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -779,7 +854,13 @@ print(areas)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+test_object("areas", undefined_msg = "Don't remove the predefined <code>areas</code> list.", 
+                     incorrect_msg = "Be sure to edit the copy, not the original <code>areas</code> list.")
+test_object("areas_copy", undefined_msg = "Define <code>areas_copy</code>, a copy of <code>areas</code>", 
+                          incorrect_msg = "Be sure to edit <code>areas_copy</code>, as instructed.")
+                     
+test_function("print")
+
 success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list actually in stored in the computer's memory.")
 ```
 
