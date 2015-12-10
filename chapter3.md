@@ -27,7 +27,7 @@ output = function_name(input)
 ```
 
 *** =instructions
-- Use `print()` in combination with `type()` to print out the type of `var1`; store the result as `out1`.
+- Use `print()` in combination with `type()` to print out the type of `var1`.
 - Use `len()` to get the length of the list `var1`. Wrap it in a `print()` call to directly print it out.
 - Use `int()` to convert `var2` to an integer. Store the output as `out2`.
 
