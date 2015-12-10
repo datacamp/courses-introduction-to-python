@@ -86,8 +86,8 @@ Being a huge baseball fan, you call the MLB, the Major League of Baseball, and a
 
 *** =instructions
 - Create a Numpy array from `height`. Name this new array `np_height`.
-- Multiply `np_height` with `2.54` to convert all weight measurements from inches to centimeters. Store the new values in a new array, `np_height_cm`.
-- Print out `np_height_cm` and check if the output makes sense.
+- Multiply `np_height` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
+- Print out `np_height_m` and check if the output makes sense.
 
 *** =hint
 - Use `np.array()` and pass it `height`. Store the result in `np_height`.
@@ -115,10 +115,10 @@ import numpy as np
 # Print out np_height
 
 
-# Convert np_height to cm: np_height_cm
+# Convert np_height to m: np_height_m
 
 
-# Print np_height_cm
+# Print np_height_m
 
 ```
 
@@ -135,11 +135,11 @@ np_height = np.array(height)
 # Print out np_height
 print(np_height)
 
-# Convert np_height to cm: np_height_cm
-np_height_cm = np_height * 2.54
+# Convert np_height to m: np_height_m
+np_height_m = np_height * 0.0254
 
-# Print np_height_cm
-print(np_height_cm)
+# Print np_height_m
+print(np_height_m)
 ```
 
 *** =sct
@@ -153,9 +153,9 @@ test_object("np_height")
 
 test_function("print", 1)
 
-test_object("np_height_cm", do_eval = False)
+test_object("np_height_m", do_eval = False)
 test_operator(1)
-test_object("np_height_cm")
+test_object("np_height_m")
 
 test_function("print", 2)
 
@@ -196,16 +196,16 @@ import numpy as np
 import numpy as np
 
 # Create array from height with correct units: np_height_m
-
+np_height_m = np.array(height) * 0.0254
 
 # Create array from weight with correct units: np_weight_kg 
 
 
 # Calculate the BMI: bmi
-bmi = np_weight_kg / np_height_m ** 2
+
 
 # Print out bmi
-print(bmi)
+
 ```
 
 *** =solution
