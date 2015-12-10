@@ -387,7 +387,7 @@ import numpy as np
 *** =sct
 ```{python}
 msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job!"
+msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
 test_mc(2, [msg1, msg2, msg3, msg4])
 ```
 
@@ -399,6 +399,7 @@ You've seen it with your own eyes: Python lists and Numpy arrays sometimes behav
 ```
 x = ["a", "b", "c"]
 x[1]
+
 np_x = np.array(x)
 np_x[1]
 ```
@@ -574,7 +575,7 @@ np_x = np.array(x)
 np_x[:,0]
 ```
 
-For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the column refer to the rows, those after the column refer to the columns. The `:` is for slicing: in this example, it tells Python to include all rows.
+For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the comma refer to the rows, those after the comma refer to the columns. The `:` is for slicing: in this example, it tells Python to include all rows.
 
 The code that converts the pre-loaded `baseball` list to a 2D Numpy array is already in the script. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
@@ -671,7 +672,7 @@ Still remember the principle? The slice is written as `begin:end`: The `begin` i
 The code to build the 2D Numpy array `np_baseball` from the `baseball` lists of lists is already included. This time, `np_baseball` contains three columns, corresponding to height, weight and age of the Major Baseball League players. Can you do the correct subsetting operations?
 
 *** =instructions
-- Print out the first first and second column of the first ten rows, so row index 0 up to and including row index 9
+- Print out the first and second column of the first ten rows, so row index 0 up to and including row index 9
 - Print out a sub-array containing all three columns in the row indexes 205 up to __and including__ 235. These are all the players of the *New York Yankees* (NYY).
 
 *** =hint
@@ -892,7 +893,7 @@ import numpy as np
 # Print out the mean of np_height
 
 
-# Print out the median of np_width
+# Print out the median of np_height
 
 ```
 
@@ -909,7 +910,7 @@ np_height = np_baseball[:,0]
 # Print out the mean of np_height
 print(np.mean(np_height))
 
-# Print out the median of np_width
+# Print out the median of np_height
 print(np.median(np_height))
 ```
 
