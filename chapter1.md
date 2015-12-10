@@ -44,8 +44,15 @@ print(7 + 10)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
-success_msg("Well done!")
+msg = "Don't remove the first statement. It is an example which is coded for you!"
+test_operator(1, incorrect_op_msg = msg, incorrect_result_msg = msg, not_found_msg = msg)
+test_operator(2, not_found_msg = "You should add a second operation, as instructed.", 
+  incorrect_op_msg = "Your second operation is wrong, be sure to add `7` to `10`.",
+  incorrect_result_msg = "The operation you added should add up to `17`.")
+test_function("print", 1)
+test_function("print", 2)
+
+success_msg("Great!")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
@@ -69,12 +76,12 @@ Python is a pretty versatile language. For what applications can you use Python?
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
 msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!" 
 msg2 = "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
 msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
 msg4 = "Correct! Python is an extremely versatile language."
-success_msg("Replace me")
+test_mc(4, [msg1, msg2, msg3, msg4])
+
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -115,8 +122,8 @@ print(7 + 10)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC - MAKE SURE THAT ALL KINDS ARE ACCEPTED: 
-# lowercase, uppercase, 2 instead of too, to instead of too and so on.
+test_student_typed("# (A|a)ddition works to(o?)\sprint\(7", not_typed_msg = "Make sure to add the instructed comment before `print(7+10)`.")
+success_msg("You typed the correct comment.")
 success_msg("Great!")
 ```
 
@@ -158,6 +165,7 @@ print(4 ** 2)
 print(18 % 7)
 
 # How much is your $100 worth after 7 years?
+
 ```
 
 *** =solution
@@ -182,7 +190,17 @@ print(100 * 1.1 ** 7)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+msg = "You don't have to change the predefined code. Just add one line at the bottom!"
+for i in range(1,7):
+  test_operator(i, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
+for i in range(1,7):
+  test_function("print", index = i, not_called_msg = msg, incorrect_msg = msg)
+
+test_operator(7, not_found_msg = "Add an operation to calculate what's instructed.", 
+  incorrect_op_msg = "You should use at least one '*' and one '**' operator to calculate what's instructed.",
+  incorrect_result_msg = "You should calculate the total intrest on 100 dollar after 7 years given a 10\% rate.")
+test_function("print", index = 7)
+
 success_msg("Time for another video!")
 ```
 
@@ -236,7 +254,8 @@ print(savings)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+test_object("savings")
+test_function("print")
 success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
 
@@ -297,8 +316,15 @@ print(result)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
-success_msg("Awesome! If you now change the value of `savings` and submit your script again, `result` will change as well.")
+test_object("savings")
+test_object("factor")
+test_object("result", do_eval = False)
+test_operator(3, not_found_msg = "Have you used the correct calculations to calculate result?",
+                 incorrect_op_msg = "Use '*' and '**' to calculate result.",
+                 incorrect_result_msg = "Have you used to correct variables to calculate result?")
+test_object("result", incorrect_msg = "Assign the correct value to result.")
+test_function("print")
+success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -347,7 +373,9 @@ profitable = True
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+test_object("desc")
+test_object("profitable")
+
 success_msg("Nice!")
 ```
 
@@ -386,7 +414,7 @@ msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
 msg2 = "`b` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
 msg3 = "Correcto perfecto!"
 msg4 = "None of the variable's types is correct here. Try `type(a)` and see what type this variable is."
-success_msg("Replace me")
+test_mc(3,[msg1, msg2, msg3, msg4])
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -457,7 +485,22 @@ print(doubledesc)
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+test_object("savings")
+test_object("factor")
+test_object("desc")
+
+test_object("year1", do_eval = False)
+test_operator(3)
+test_object("year1")
+
+test_function("type")
+test_function("print")
+
+test_object("doubledesc", do_eval = False)
+test_operator(4)
+test_object("doubledesc")
+
+test_function("print", 2)
 success_msg("Nice. Notice how `desc + desc` causes the strings to be pasted together.")
 ```
 
@@ -517,12 +560,19 @@ print("I started with $" + str(savings) + " and now have $" + str(result) + ". A
 pi_string = "3.1415926"
 
 # Convert pi_string into float: pi_float
-pi_float = str(pi_string)
+pi_float = float(pi_string)
 ```
 
 *** =sct
 ```{python}
-# TODO VINCENT SCT MAGIC
+test_object("savings")
+test_object("result")
+
+test_function("print")
+
+test_object("pi_string")
+test_object("pi_float")
+
 success_msg("Great! You have a profit of around \$95, that's pretty awesome indeed!")
 ```
 
@@ -550,6 +600,6 @@ Which one of these will throw an error? You can always copy and paste this code 
 ```{python}
 msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
 msg3 = "Correct! Because you're not converting `2` to a string with `str()`, this will give an error."
-success_msg("Replace me")
+test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
