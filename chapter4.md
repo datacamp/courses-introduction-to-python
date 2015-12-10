@@ -367,7 +367,7 @@ Have a look at this line of code:
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-Can you tell which code chunk builds the exact same Python data structure? `numpy` is already imported as `np`, so you can start experimenting in the IPython Shell straight away!
+Can you tell which code chunk builds the exact same Python data structure? The Numpy package is already imported as `np`, so you can start experimenting in the IPython Shell straight away!
 
 *** =instructions
 - `np.array([True, 1, 2, 3, 4, False])`
