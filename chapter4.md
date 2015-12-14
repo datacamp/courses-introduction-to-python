@@ -546,14 +546,14 @@ print(np_baseball.shape)
 ```{python}
 test_import("numpy", same_as = False)
 
-# test_object("np_baseball", do_eval = False)
-# test_function("numpy.array")
-# test_object("np_baseball")
-# 
-# test_function("type")
-# test_function("print", 1)
-# 
-# test_function("print", 2, incorrect_msg = "For the second printout, print the <code>shape</code> field of the <code>np_baseball</code> object using the dot notation: <code>.</code>.")
+test_object("np_baseball", do_eval = False)
+test_function("numpy.array")
+test_object("np_baseball")
+
+test_function("type")
+test_function("print", 1)
+
+test_function("print", 2, incorrect_msg = "For the second printout, print the <code>shape</code> field of the <code>np_baseball</code> object using the dot notation: <code>.</code>.")
 
 success_msg("Slick! Time to show off some killer features of multi-dimensional Numpy arrays!")
 ```
@@ -639,14 +639,14 @@ print(np_baseball[123, 1])
 ```{python}
 test_import("numpy", same_as = False)
 
-# msg = "You don't have to change or edit the predefined variables."
-# test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
-# 
-# test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[49,:]</code>. This will select the 49th row completely.")
-# 
-# test_object("np_weight", incorrect_msg = "Define <code>np_weight</code> by subsetting the <code>np_baseball</code> object with <code>[:,1]</code>. This will select the first column, completely.")
-# 
-# test_function("print", 2, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[123,1]</code>. This will select the first column of the 123th row.")
+msg = "You don't have to change or edit the predefined variables."
+test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
+
+test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[49,:]</code>. This will select the 49th row completely.")
+
+test_object("np_weight", incorrect_msg = "Define <code>np_weight</code> by subsetting the <code>np_baseball</code> object with <code>[:,1]</code>. This will select the first column, completely.")
+
+test_function("print", 2, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[123,1]</code>. This will select the first column of the 123th row.")
 success_msg("This is going well!")
 ```
 
@@ -722,13 +722,13 @@ print(np_baseball[:, 205:236])
 *** =sct
 ```{python}
 test_import("numpy", same_as = False)
-# 
-# msg = "You don't have to change or edit the predefined variables."
-# test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
-# 
-# test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[:2,:10]</code>. This will select the first and the second column and the first ten rows.")
-# 
-# test_function("print", 2, incorrect_msg = "For the second printout, subset the <code>np_baseball</code> object using <code>[205,236]</code>. This will select the all columns of row 205 to and including 235.")
+
+msg = "You don't have to change or edit the predefined variables."
+test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
+
+test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[:2,:10]</code>. This will select the first and the second column and the first ten rows.")
+
+test_function("print", 2, incorrect_msg = "For the second printout, subset the <code>np_baseball</code> object using <code>[205,236]</code>. This will select the all columns of row 205 to and including 235.")
 
 success_msg("Great job!")
 ```
@@ -820,23 +820,23 @@ print(np_baseball * conversion)
 ```{python}
 test_import("numpy")
 
-# msg = "You don't have to change or edit the predefined variables."
-# test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
-# 
-# test_operator(1, not_found_msg = "Use the <code>+</code> operator to add <code>update</code> to <code>np_baseball</code>.",
-#                  incorrect_result_msg = "Are you sure you correctly added <code>update</code> to <code>np_baseball</code>? The resulting numpy array seems to be incorrect.")
-#                  
-# test_function("print", 1)
-# 
-# test_object("conversion", do_eval = False)
-# test_function("numpy.array")
-# test_object("conversion")
-# 
-# 
-# test_operator(2, not_found_msg = "Use the <code>*</code> operator to multiply <code>np_baseball</code> with <code>conversion</code>.",
-#                  incorrect_result_msg = "Are you sure you correctly miltiplied <code>np_baseball</code> with <code>conversion</code>? The resulting numpy array seems to be incorrect.")
-#                  
-# test_function("print", 2)
+msg = "You don't have to change or edit the predefined variables."
+test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
+
+test_operator(1, not_found_msg = "Use the <code>+</code> operator to add <code>update</code> to <code>np_baseball</code>.",
+                 incorrect_result_msg = "Are you sure you correctly added <code>update</code> to <code>np_baseball</code>? The resulting numpy array seems to be incorrect.")
+                 
+test_function("print", 1)
+
+test_object("conversion", do_eval = False)
+test_function("numpy.array")
+test_object("conversion")
+
+
+test_operator(2, not_found_msg = "Use the <code>*</code> operator to multiply <code>np_baseball</code> with <code>conversion</code>.",
+                 incorrect_result_msg = "Are you sure you correctly miltiplied <code>np_baseball</code> with <code>conversion</code>? The resulting numpy array seems to be incorrect.")
+                 
+test_function("print", 2)
 
 success_msg("Great job! Notice how with very little code, you can change all values in your Numpy data structure in a very specific way. This will be very useful in your future as a data scientist!")
 ```
@@ -1008,24 +1008,24 @@ print("Correlation: " + str(corr))
 # sct code
 test_import("numpy")
 
-# msg = "You don't have to change or edit the predefined variables."
-# test_object("avg", undefined_msg = msg, incorrect_msg = msg)
-# test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
-# 
-# test_object("med", do_eval = False)
-# test_function("numpy.median", 1, incorrect_msg = "For assigning <code>med</code>, use <code>np.median()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
-# test_object("med")
-# test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
-# 
-# test_object("stddev", do_eval = False)
-# test_function("numpy.std", 1, incorrect_msg = "For assigning <code>stddev</code>, use <code>np.std()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
-# test_object("stddev")
-# test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
-# 
-# test_object("corr", do_eval = False)
-# test_function("numpy.corrcoef", 1, incorrect_msg = "For assigning <code>med</code>, use <code>np.corrcoef()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
-# test_object("corr")
-# test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
+msg = "You don't have to change or edit the predefined variables."
+test_object("avg", undefined_msg = msg, incorrect_msg = msg)
+test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
+
+test_object("med", do_eval = False)
+test_function("numpy.median", 1, incorrect_msg = "For assigning <code>med</code>, use <code>np.median()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
+test_object("med")
+test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
+
+test_object("stddev", do_eval = False)
+test_function("numpy.std", 1, incorrect_msg = "For assigning <code>stddev</code>, use <code>np.std()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
+test_object("stddev")
+test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
+
+test_object("corr", do_eval = False)
+test_function("numpy.corrcoef", 1, incorrect_msg = "For assigning <code>med</code>, use <code>np.corrcoef()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
+test_object("corr")
+test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
 
 success_msg("Great! Time to use all of your new data science skills in the last exercise!")
 ```
