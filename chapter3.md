@@ -139,12 +139,14 @@ In the previous exercise, the square brackets around `imag` in the documentation
 
 Have a look at the documentation of `sorted()` by typing `help(sorted)` in the IPython Shell.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key` and `reverse`. `key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
+You'll see that `sorted()` takes three arguments: `iterable`, `key` and `reverse`. 
 
-In this exercise, you'll only have to specify `iterable` and `inverse`, not `key`. The first input you pass to `sorted()` will obviously be matched to the `iterable` argument, but what about the second input. How can you tell Python that you want to specify `reverse` without changing anything about `key`? Well, you use the `=` for that, inside parenthesis:
+`key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
+
+In this exercise, you'll only have to specify `iterable` and `inverse`, not `key`. The first input you pass to `sorted()` will obviously be matched to the `iterable` argument, but what about the second input. To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
 
 ```
-sorted(input1, reverse = input2)
+sorted(___, reverse = ___)
 ```
 
 Two lists have been created for you on the right. Can you paste them together and sort them in descending order?
@@ -567,7 +569,7 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 *** =instructions
 - Perform a selective import from the `math` package: you only want to use the `radians` function.
-- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, which you just imported.
+- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r * \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, which you just imported.
 - Print out `dist`.
 
 *** =hint
