@@ -86,8 +86,8 @@ Being a huge baseball fan, you call the MLB, the Major League of Baseball, and a
 
 *** =instructions
 - Create a Numpy array from `height`. Name this new array `np_height`.
-- Multiply `np_height` with `2.54` to convert all weight measurements from inches to centimeters. Store the new values in a new array, `np_height_cm`.
-- Print out `np_height_cm` and check if the output makes sense.
+- Multiply `np_height` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
+- Print out `np_height_m` and check if the output makes sense.
 
 *** =hint
 - Use `np.array()` and pass it `height`. Store the result in `np_height`.
@@ -115,10 +115,10 @@ import numpy as np
 # Print out np_height
 
 
-# Convert np_height to cm: np_height_cm
+# Convert np_height to m: np_height_m
 
 
-# Print np_height_cm
+# Print np_height_m
 
 ```
 
@@ -135,11 +135,11 @@ np_height = np.array(height)
 # Print out np_height
 print(np_height)
 
-# Convert np_height to cm: np_height_cm
-np_height_cm = np_height * 2.54
+# Convert np_height to m: np_height_m
+np_height_m = np_height * 0.0254
 
-# Print np_height_cm
-print(np_height_cm)
+# Print np_height_m
+print(np_height_m)
 ```
 
 *** =sct
@@ -153,9 +153,9 @@ test_object("np_height")
 
 test_function("print", 1)
 
-test_object("np_height_cm", do_eval = False)
+test_object("np_height_m", do_eval = False)
 test_operator(1)
-test_object("np_height_cm")
+test_object("np_height_m")
 
 test_function("print", 2)
 
@@ -196,16 +196,16 @@ import numpy as np
 import numpy as np
 
 # Create array from height with correct units: np_height_m
-
+np_height_m = np.array(height) * 0.0254
 
 # Create array from weight with correct units: np_weight_kg 
 
 
 # Calculate the BMI: bmi
-bmi = np_weight_kg / np_height_m ** 2
+
 
 # Print out bmi
-print(bmi)
+
 ```
 
 *** =solution
@@ -367,7 +367,7 @@ Have a look at this line of code:
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-Can you tell which code chunk builds the exact same Python data structure? `numpy` is already imported as `np`, so you can start experimenting in the IPython Shell straight away!
+Can you tell which code chunk builds the exact same Python data structure? The Numpy package is already imported as `np`, so you can start experimenting in the IPython Shell straight away!
 
 *** =instructions
 - `np.array([True, 1, 2, 3, 4, False])`
@@ -387,7 +387,7 @@ import numpy as np
 *** =sct
 ```{python}
 msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job!"
+msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
 test_mc(2, [msg1, msg2, msg3, msg4])
 ```
 
@@ -399,6 +399,7 @@ You've seen it with your own eyes: Python lists and Numpy arrays sometimes behav
 ```
 x = ["a", "b", "c"]
 x[1]
+
 np_x = np.array(x)
 np_x[1]
 ```
@@ -574,7 +575,7 @@ np_x = np.array(x)
 np_x[:,0]
 ```
 
-For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the column refer to the rows, those after the column refer to the columns. The `:` is for slicing: in this example, it tells Python to include all rows.
+For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the comma refer to the rows, those after the comma refer to the columns. The `:` is for slicing: in this example, it tells Python to include all rows.
 
 The code that converts the pre-loaded `baseball` list to a 2D Numpy array is already in the script. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
@@ -671,7 +672,7 @@ Still remember the principle? The slice is written as `begin:end`: The `begin` i
 The code to build the 2D Numpy array `np_baseball` from the `baseball` lists of lists is already included. This time, `np_baseball` contains three columns, corresponding to height, weight and age of the Major Baseball League players. Can you do the correct subsetting operations?
 
 *** =instructions
-- Print out the first first and second column of the first ten rows, so row index 0 up to and including row index 9
+- Print out the first and second column of the first ten rows, so row index 0 up to and including row index 9
 - Print out a sub-array containing all three columns in the row indexes 205 up to __and including__ 235. These are all the players of the *New York Yankees* (NYY).
 
 *** =hint
@@ -892,7 +893,7 @@ import numpy as np
 # Print out the mean of np_height
 
 
-# Print out the median of np_width
+# Print out the median of np_height
 
 ```
 
@@ -909,7 +910,7 @@ np_height = np_baseball[:,0]
 # Print out the mean of np_height
 print(np.mean(np_height))
 
-# Print out the median of np_width
+# Print out the median of np_height
 print(np.median(np_height))
 ```
 
