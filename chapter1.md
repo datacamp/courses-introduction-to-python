@@ -92,7 +92,7 @@ Something that Filip didn't mention in his videos, is that you can add comments 
 To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`: it is completely ignored during execution.
 
 *** =instructions
-- Above the `print(7 + 10)`, add the comment `Addition works too`.
+- Above the `print(7 + 10)`, add the comment `# Addition works too`.
 
 *** =hint
 hint comes here
@@ -122,8 +122,7 @@ print(7 + 10)
 
 *** =sct
 ```{python}
-test_student_typed("# (A|a)ddition works to(o?)\sprint\(7", not_typed_msg = "Make sure to add the instructed comment before `print(7+10)`.")
-success_msg("You typed the correct comment.")
+test_student_typed("#\s?(A|a)ddition works to(o?)\sprint\(7", not_typed_msg = "Make sure to add the instructed comment before `print(7+10)`.")
 success_msg("Great!")
 ```
 
@@ -213,7 +212,7 @@ success_msg("Time for another video!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Variable Assignment
 
-In Python, a variable allows you to refer to a value with a name. To create a variable, use `=`:
+In Python, a variable allows you to refer to a value with a name. To create a variable, use `=`, like this example:
 
 ```
 x = 5
@@ -226,7 +225,7 @@ You can now use the name of this variable, `x`, instead of the actual value, `5`
 - Check out this variable by typing `print(savings)` in the script.
 
 *** =hint
-- Type `savings = 100`.
+- Type `savings = 100` to create the variable `savings`.
 - After creating the variable `savings`, you can type `print(savings)`.
 
 *** =pre_exercise_code
@@ -324,7 +323,7 @@ test_operator(3, not_found_msg = "Have you used the correct calculations to calc
                  incorrect_result_msg = "Have you used to correct variables to calculate result?")
 test_object("result", incorrect_msg = "Assign the correct value to result.")
 test_function("print")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+success_msg("Great!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -501,7 +500,7 @@ test_operator(4)
 test_object("doubledesc")
 
 test_function("print", 2)
-success_msg("Nice. Notice how `desc + desc` causes the strings to be pasted together.")
+success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -515,11 +514,15 @@ Suppose for example that you've calculated the return of your investment, and wa
 print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 ```
 
-This will not work, though, as you cannot simply sum strings and floats. To do this, you'll need to explicitly convert the types of your variables. You can use the functions `str()`, `int()`, `float()` and `bool()` for this. `str(savings)`, for example, will convert the float `savings` to a string.
+This will not work, though, as you cannot simply sum strings and floats. 
+
+To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need `str()`, to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string. 
+
+Similar functions such as `int()`, `float()` and `bool()` will help you convert Python values into any type.
 
 *** =instructions
 - Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
-- Fix the code on the right such that the printout runs without errors.
+- Fix the code on the right such that the printout runs without errors; use the function `str()` to convert the variables to strings.
 - Convert the variable `pi_string` to a float, and store this float as a new variable, `pi_float`.
 
 *** =hint
@@ -573,7 +576,7 @@ test_function("print")
 test_object("pi_string")
 test_object("pi_float")
 
-success_msg("Great! You have a profit of around \$95, that's pretty awesome indeed!")
+success_msg("Great! You have a profit of around \$95; that's pretty awesome indeed!")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
