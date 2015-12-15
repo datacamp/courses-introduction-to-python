@@ -486,23 +486,92 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 *** =video_link
 //player.vimeo.com/video/146994270
 
+
 --- type:NormalExercise lang:python xp:100 skills:2
-## Build a 2D Numpy array
+## Your First 2D Numpy Array
 
-Previously, you've worked with the height and weight of Major League Baseball players. Maybe it makes more sense to restructure all this information in a 2D Numpy array. This array should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns, for height and weight.
+Before working on the actual MLB data, let's try to create a 2D Numpy array from a small list of lists.
 
-The MLB was again very helpful and passed you the data in a different structure: as a Python list of lists, where each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
-
-Can you store the data as a 2D array to unlock the extra functionality?
+In this exercise, `baseball` is a list of lists: The main list contains 4 elements; each of these elements is a list containing the height and the weight of 5 baseball players, is this order. `baseball` is already coded for you in the script.
 
 *** =instructions
 - Use `np.array()` to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`. Use `.shape`.
+- Print out the type of `np_baseball`. 
+- Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
+
+*** =hint
+- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D Numpy array in `np_baseball`.
+- Use `print()` in combination with `type()` for the second instruction.
+- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+
+*** =pre_exercise_code
+```{python}
+# pec
+```
+
+*** =sample_code
+```{python}
+# Create baseball, a list of lists
+baseball = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
+
+# Create a 2D Numpy array from baseball: np_baseball
+
+
+# Print out the type of np_baseball
+
+
+# Print out the shape of np_baseball
+
+```
+
+*** =solution
+```{python}
+# Create baseball, a list of lists
+baseball = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
+
+# Create a 2D Numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the type of np_baseball
+print(type(np_baseball))
+
+# Print out the shape of np_baseball
+print(np_baseball.shape)
+```
+
+*** =sct
+```{python}
+# TO DO SCT
+
+msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
+test_function("type", 1, incorrect_msg = msg)
+test_function("print", 1, incorrect_msg = msg)
+
+success_msg("Great! You're ready to convert the actual MLB data to a 2D Numpy array now!")
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:2
+## Baseball data in 2D form
+
+You have another look at the MLB data, and realize that it makes more sense to restructure all this information in a 2D Numpy array. This array should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns, for height and weight.
+
+The MLB was again very helpful and passed you the data in a different structure: as a Python list of lists, where each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
+
+Can you store the data as a 2D array to unlock Numpy's extra functionality?
+
+*** =instructions
+- Use `np.array()` to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
+- Print out the `shape` attribute of `np_baseball`.
 
 *** =hint
 - `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D Numpy array in `np_baseball`.
-- Use `print()` in combination with `type()` for the second instruction.
 - `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
 
 *** =pre_exercise_code
@@ -522,9 +591,6 @@ import numpy as np
 # Create a 2D Numpy array from baseball: np_baseball
 
 
-# Print out the type of np_baseball
-
-
 # Print out the shape of np_baseball
 
 ```
@@ -539,9 +605,6 @@ import numpy as np
 # Create a 2D Numpy array from baseball: np_baseball
 np_baseball = np.array(baseball)
 
-# Print out the type of np_baseball
-print(type(np_baseball))
-
 # Print out the shape of np_baseball
 print(np_baseball.shape)
 ```
@@ -555,12 +618,7 @@ test_function("numpy.array", not_called_msg = "Be sure to call `np.array()`.",
                              incorrect_msg = "You should call `np.array(baseball)` to make a numpy array out of `baseball`.")
 test_object("np_baseball", incorrect_msg = "Assign the numpy array you created to `np_baseball`.")
 
-msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
-test_function("type", 1, incorrect_msg = msg)
-test_function("print", 1, incorrect_msg = msg)
-
-test_function("print", 2, incorrect_msg = "For the second printout, print the `shape` field of the `np_baseball` object using the dot notation: `.`.")
-
+test_function("print", incorrect_msg = "Print the `shape` field of the `np_baseball` object using the dot notation: `.`.")
 success_msg("Slick! Time to show off some killer features of multi-dimensional Numpy arrays!")
 ```
 
@@ -654,89 +712,6 @@ test_object("np_weight", incorrect_msg = "Define `np_weight` by subsetting the `
 
 test_function("print", 2, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[123,1]`. This will select the first column of the 123th row.")
 success_msg("This is going well!")
-```
-
---- type:NormalExercise lang:python xp:100 skills:2
-## Subsetting 2D Numpy Arrays (2)
-
-Apart from selecting single elements, entire columns or entire rows from a 2D Numpy array, it's also perfectly possible to create a "sub 2d array" of the 2D array you started with. You can do this with slicing. 
-
-As an example, check out the following calls, that builds a 3-by-3 Numpy array and then select the lower right 2-by-2 corner from it:
-
-```
-import numpy as np
-x = [["a", "b", "c"],
-     ["d", "e", "f"],
-     ["g", "h", "i"]]
-np_x = np.array(x)
-np_x[1:, 1:]
-```
-
-Still remember the principle? The slice is written as `begin:end`: The `begin` is included, the `end` index is not.
-
-The code to build the 2D Numpy array `np_baseball` from the `baseball` lists of lists is already included. This time, `np_baseball` contains three columns, corresponding to height, weight and age of the Major Baseball League players. Can you do the correct subsetting operations?
-
-*** =instructions
-- Print out the first and second column of the first ten rows, so row index 0 up to and including row index 9
-- Print out a sub-array containing all three columns in the row indexes 205 up to __and including__ 235. These are all the players of the *New York Yankees* (NYY).
-
-*** =hint
-- For the first instruction, you can use `[:10, :].
-- For the second instruction, you can use `[:, 205:236]`.
-
-*** =pre_exercise_code
-```{python}
-import pandas as pd
-baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
-import numpy as np
-```
-
-*** =sample_code
-```{python}
-# baseball is available as a regular list of lists
-
-# Import numpy package
-import numpy as np
-
-# Create np_baseball (3 cols)
-np_baseball = np.array(baseball)
-
-# Print out first and second column of first ten rows
-
-
-# Print out all three columns for row indexes 205 up to and including 235
-
-```
-
-*** =solution
-```{python}
-# baseball is available as a regular list of lists
-
-# Import numpy package
-import numpy as np
-
-# Create np_baseball (3 cols)
-np_baseball = np.array(baseball)
-
-# Print out first and second column of first ten rows
-print(np_baseball[:2, :10])
-
-# Print out all three columns for row indexes 205 up to and including 235
-print(np_baseball[:, 205:236])
-```
-
-*** =sct
-```{python}
-test_import("numpy", same_as = False)
-
-msg = "You don't have to change or remove the predefined variables."
-test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
-
-test_function("print", 1, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[:2,:10]`. This will select the first and the second column and the first ten rows.")
-
-test_function("print", 2, incorrect_msg = "For the second printout, subset the `np_baseball` object using `[205,236]`. This will select the all columns of row 205 to and including 235.")
-
-success_msg("Great job!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2
@@ -1149,4 +1124,3 @@ test_function("print", 2, incorrect_msg = "Don't forget to print out the result 
 
 success_msg("Wonderful! You were right. The disbelievers were wrong! This exercise marks the end of the intro to python for data science course. See you in a later course!")
 ```
-
