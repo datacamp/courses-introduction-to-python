@@ -63,7 +63,7 @@ print(type(np_baseball))
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 
 test_import("numpy", same_as = False)
@@ -337,7 +337,7 @@ print(bmi[light])
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("np_height_m", undefined_msg = msg, incorrect_msg = msg)
 test_object("np_weight_kg", undefined_msg = msg, incorrect_msg = msg)
 test_object("bmi", undefined_msg = msg, incorrect_msg = msg)
@@ -464,7 +464,7 @@ print(np_height[100:111])
 
 test_import("numpy", same_as = False)
 
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("np_height", undefined_msg = msg, incorrect_msg = msg)
 test_object("np_weight", undefined_msg = msg, incorrect_msg = msg)
 
@@ -640,7 +640,7 @@ print(np_baseball[123, 1])
 ```{python}
 test_import("numpy", same_as = False)
 
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
 test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[49,:]</code>. This will select the 49th row completely.")
@@ -724,7 +724,7 @@ print(np_baseball[:, 205:236])
 ```{python}
 test_import("numpy", same_as = False)
 
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
 test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[:2,:10]</code>. This will select the first and the second column and the first ten rows.")
@@ -821,7 +821,7 @@ print(np_baseball * conversion)
 ```{python}
 test_import("numpy")
 
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
 test_operator(1, not_found_msg = "Use the <code>+</code> operator to add <code>update</code> to <code>np_baseball</code>.",
@@ -1009,7 +1009,7 @@ print("Correlation: " + str(corr))
 # sct code
 test_import("numpy")
 
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("avg", undefined_msg = msg, incorrect_msg = msg)
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
