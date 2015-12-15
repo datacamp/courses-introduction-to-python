@@ -12,7 +12,7 @@ description : "Learn to store, access and manipulate data in lists: the first st
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create a list
 
-As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group values (or variables representing values) together:
+As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group values together:
 
 ```
 a = "is"
@@ -23,11 +23,11 @@ my_list = ["my", "list", a, b]
 After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
 
 *** =instructions
-- Create a list, `areas`, that contains the values of the predefined variables, in the same order.
+- Create a list, `areas`, that contains the area of the hallway, kitchen, living room, bedroom and bathroom, in this order.
 - Print `areas` with the `print()` function.
 
 *** =hint
-- You can use the variables that have already been created to build the list: `areas = [hallway, kitchen, ...]`. Don't use quotes, as you're refering to variables here!
+- You can use the variables that have already been created to build the list: `areas = [hallway, kitchen, ...]`.
 - Put `print(areas)` in your script to print out the list when submitting.
 
 *** =pre_exercise_code
@@ -38,11 +38,11 @@ After measuring the height of your family, you decide to collect some informatio
 *** =sample_code
 ```{python}
 # area variables (in square meters)
-hall = 11.25
-kit = 18.0
-liv = 20.0
-bed = 10.75
-bath = 9.50
+hallway = 11.25
+kitchen = 18.0
+living = 20.0
+bedroom = 10.75
+bathroom = 9.50
 
 # Create list areas
 
@@ -54,15 +54,15 @@ bath = 9.50
 
 *** =solution
 ```{python}
-# area variables (in square meters)
-hall = 11.25
-kit = 18.0
-liv = 20.0
-bed = 10.75
-bath = 9.50
+# Area variables (in square meters)
+hallway = 11.25
+kitchen = 18.0
+living = 20.0
+bedroom = 10.75
+bathroom = 9.50
 
 # Create list areas
-areas = [hall, kit, liv, bed, bath]
+areas = [hallway, kitchen, living, bedroom, bathroom]
 
 # Print areas
 print(areas)
@@ -71,15 +71,15 @@ print(areas)
 *** =sct
 ```{python}
 msg = "Don't remove or edit the predefined variables!"
-test_object("hall", undefined_msg = msg, incorrect_msg = msg)
-test_object("kit", undefined_msg = msg, incorrect_msg = msg)
-test_object("liv", undefined_msg = msg, incorrect_msg = msg)
-test_object("bed", undefined_msg = msg, incorrect_msg = msg)
-test_object("bath", undefined_msg = msg, incorrect_msg = msg)
+test_object("hallway", undefined_msg = msg, incorrect_msg = msg)
+test_object("kitchen", undefined_msg = msg, incorrect_msg = msg)
+test_object("living", undefined_msg = msg, incorrect_msg = msg)
+test_object("bedroom", undefined_msg = msg, incorrect_msg = msg)
+test_object("bathroom", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order.")
+test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order. Watch out for typo's.")
 
-test_function("print")
+test_function("print", incorrect_msg = "Print out the `areas` list you created by using `print(areas)`.")
 
 success_msg("Nice! A list is way better here, isn't it?")
 ```
@@ -147,7 +147,7 @@ test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("areas", incorrect_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here!")
+test_object("areas", incorrect_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typo's.")
 
 test_function("print")
 
@@ -270,12 +270,13 @@ test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area.")
+test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typo's!")
 
-test_function("print")
+test_function("print", 1, incorrect_msg = "First, just print out the value of `house` like this: `print(house)`.")
 
-test_function("type")
-test_function("print", 2)
+msg = "Make sure to print out the type of `house` like this: `print(type(house))`."
+test_function("type", incorrect_msg = msg)
+test_function("print", 2, incorrect_msg = msg)
     
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
@@ -346,10 +347,10 @@ print(areas[5])
 
 *** =sct
 ```{python}
-msg = "Don't remove or edit the predefined <code>areas</code> list."
+msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "In call %d of <code>print()</code>${{line ? at line ${line}}}, make sure select the correct element from <code>areas</code>.${{expected ? Expected <code>${expected}</code>, but got <code>${result}</code>.}}"
+msg = "In your %dst `print()`${{line ? at line ${line}}}, make sure select the correct element from `areas`.${{expected ? Expected `${expected}`, but got `${result}`.}}"
 for i in range(1,4):
   test_function("print", index = i, incorrect_msg = msg % i)
 
@@ -371,8 +372,7 @@ print(x[1] + x[3])
 - Print this new variable `eat_sleep_area`.
 
 *** =hint
-- Use square brackets to select the elements at index `3` and `-3` and then use `+` to add them.
-- To print out a variable `x`, write `print(x)` on a new line in the script.
+hint comes here
 
 *** =pre_exercise_code
 ```{python}
@@ -405,12 +405,17 @@ print(eat_sleep_area)
 
 *** =sct
 ```{python}
-msg = "Don't remove or edit the predefined <code>areas</code> list."
+msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("eat_sleep_area")
+test_object("eat_sleep_area", do_eval = False)
+msg1 = "You can add the two areas by using the `+` operator once."
+msg2 = "Be sure to select the correct values from the `areas` vector."
+test_operator(1, not_found_msg = msg1, incorrect_op_msg = msg1, incorrect_result_msg = msg2)
+test_object("eat_sleep_area", incorrect_msg = "Be sure to assign the correct value to `eat_sleep_area`.")
 
-test_function("print")
+test_function("print", incorrect_msg = "Print out the value you found, stored in `eat_sleep_area`. Use `print(eat_sleep_area)`.")
+
 success_msg("Bellissimo!")
 ```
 
@@ -481,14 +486,14 @@ print(upstairs)
 
 *** =sct
 ```{python}
-msg = "Don't remove or edit the predefined <code>areas</code> list."
+msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("downstairs", incorrect_msg = "Use the <code>areas</code> and slicing to select the elements you want for <code>downstairs</code>. You should use <code>0:6</code>")
-test_object("upstairs", incorrect_msg = "Use the <code>areas</code> and slicing to select the elements you want for <code>upstairs</code>. You should use <code>6:10</code>")
+test_object("downstairs", incorrect_msg = "Your definition of `downstairs` is incorrect. Use `areas[...]` and slicing to select the elements you want. You could use `0:6` where the dots are, for example.")
+test_object("upstairs", incorrect_msg = "Your definition of `upstairs` is incorrect. Use `areas[...]` and slicing to select the elements you want. You could use `6:10` where the dots are, for example.")
 
-test_function("print", 1)
-test_function("print", 2)
+test_function("print", 1, incorrect_msg = "First, print out `downstairs` using `print(downstairs)`.")
+test_function("print", 2, incorrect_msg = "First, print out `upstairs` using `print(upstairs)`.")
 
 success_msg("Great!")
 ```
@@ -548,15 +553,15 @@ upstairs = areas[6:]
 
 *** =sct
 ```{python}
-msg = "Don't remove or edit the predefined <code>areas</code> list."
+msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Use the <code>areas</code> and slicing to select the elements you want for <code>%s</code>. You should use <code>%s</code>"
+msg = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
 
 test_object("downstairs", incorrect_msg = msg % ("downstairs",":6"))
-test_student_typed("\[\\s*:6\\s*\]", not_typed_msg = msg % ("downstairs",":6"))
+test_student_typed("\[\\s*:(6|-4)\\s*\]", not_typed_msg = msg % ("downstairs",":6"))
 test_object("upstairs", incorrect_msg = msg % ("upstairs","6:"))
-test_student_typed("\[\\s*6:\\s*\]", not_typed_msg = msg % ("upstairs","6:"))
+test_student_typed("\[\\s*(6|-4):\\s*\]", not_typed_msg = msg % ("upstairs","6:"))
 
 success_msg("Wonderful!")
 ```
@@ -579,9 +584,9 @@ x[2][:2]
 What will `house[-1][1]` return? `house`, the list of lists you've created before, is already defined for you, so you can experiment with it in the IPython Shell.
 
 *** =instructions
-- A float: 18.0
+- A float: the kitchen area
 - A string: `"kitchen"`
-- A float: 9.5
+- A float: the bathroom area
 - A string: `"bathroom"`
 
 *** =hint
@@ -665,7 +670,7 @@ areas[4] = "chill zone"
 *** =sct
 ```{python}
 test_object("areas",
-            incorrect_msg = "Your changes to <code>areas</code> did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!")
+            incorrect_msg = "Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!")
 success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list, to update multiple elements in a single command.")
 ```
 
@@ -722,19 +727,19 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 *** =sct
 ```{python}
-msg = "Don't remove or edit the predefined <code>areas</code> list."
+msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("areas_1", do_eval = False)
-msg = "Use the '+' operator to add <code>[\"poolhouse\", 24.5]</code> to <code>areaas_1</code>."
+msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areaas_1`."
 test_operator(1, not_found_msg = msg,
                  incorrect_op_msg = msg,
                  incorrect_result_msg = msg +". Watch out for typo's.")
 test_object("areas_1")
 
 test_object("areas_2", do_eval = False)
-msg = "Use the '+' operator to add <code>[\"poolhouse\", 24.5]</code> to <code>areaas_1</code>."
-test_operator(1, not_found_msg = msg,
+msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areaas_2`."
+test_operator(2, not_found_msg = msg,
                  incorrect_op_msg = msg,
                  incorrect_result_msg = msg +". Watch out for typo's.")
 test_object("areas_2")
@@ -782,10 +787,10 @@ Which of the code chunks will do the job for us?
 - `del(areas[10]); del(areas[11])`
 - `del(areas[10:11])`
 - `del(areas[-4:-2])`
-- `del(areas[-4]); del(areas[-4])`
+- `del(areas[-3]); del(areas[-3])`
 
 *** =hint
-You can simply try all the different options to see if they work. Just make sure to re-initialize the `areas` list again before you try a new option!
+You can simply try all the different options to see if they work. Just make sure to re-initialize the `areas` list again before you try a new option.
 
 *** =pre_exercise_code
 ```{python}
@@ -855,12 +860,12 @@ print(areas)
 
 *** =sct
 ```{python}
-test_object("areas", undefined_msg = "Don't remove the predefined <code>areas</code> list.", 
-                     incorrect_msg = "Be sure to edit the copy, not the original <code>areas</code> list.")
-test_object("areas_copy", undefined_msg = "Define <code>areas_copy</code>, a copy of <code>areas</code>", 
-                          incorrect_msg = "Be sure to edit <code>areas_copy</code>, as instructed.")
+test_object("areas", undefined_msg = "Don't remove the predefined `areas` list.", 
+                     incorrect_msg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy.")
+test_object("areas_copy", undefined_msg = "Define `areas_copy`, a copy of `areas`", 
+                          incorrect_msg = "Be sure to edit `areas_copy`, as instructed.")
                      
-test_function("print")
+test_function("print", incorrect_msg = "Print out the original list `areas` by using `print(areas)`.")
 
 success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list actually in stored in the computer's memory.")
 ```
