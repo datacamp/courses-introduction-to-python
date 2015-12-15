@@ -79,19 +79,21 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("var1", undefined_msg = msg, incorrect_msg = msg)
 test_object("var2", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("print", 1)
-test_function("type", 1)
+msg = "Make sure to print out the type of `var1` like this: `print(type(var1))`."
+test_function("type", 1, incorrect_msg = msg)
+test_function("print", 1, incorrect_msg = msg)
 
-test_function("print", 2)
-test_function("len", 1)
+msg = "Make sure to print out the length of `var1` like this: `print(len(var1))`."
+test_function("len", 1, incorrect_msg = msg)
+test_function("print", 2, incorrect_msg = msg)
 
 test_object("out2", do_eval = False)
 
-test_function("int", not_called_msg = "Use <code>int()</code> to make an integer from <code>var2</code> and assign to <code>out2</code>.",
-                     incorrect_msg = "Use <code>int()</code> with the correct variables. You should pass <code>var2</code> to it."
+test_function("int", not_called_msg = "Use `int()` to make an integer of `var2` and assign to `out2`.",
+                     incorrect_msg = "Use `int()` with the correct variables. You should pass `var2` to it."
 )
-test_object("out2", incorrect_msg = "Make sure to assign the correct value to <code>out2</code>.")
-success_msg("Great job! The <code>len()</code> function is extremely useful: it also works on strings to count the number of characters!")
+test_object("out2", incorrect_msg = "Make sure to assign the correct value to `out2`.")
+success_msg("Great job! The `len()` function is extremely useful: it also works on strings to count the number of characters!")
 ```
 
 
@@ -204,15 +206,15 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("first", undefined_msg = msg, incorrect_msg = msg)
 test_object("second", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Use '+' to append <code>second</code> to <code>first</code>."
+msg = "Use `+` to append `second` to `first`."
 test_operator(1, not_found_msg = msg,
                  incorrect_op_msg =  msg,
-                 incorrect_result_msg = msg)
+                 incorrect_result_msg = msg + " Mind the order!")
 
 test_object("full_sorted", do_eval = False)
 test_function("sorted")
 test_object("full_sorted", 
-            incorrect_msg = "Use <code>sorted()</code> with <code>full</code> as a first argument and <code>reverse = True</code> to assign the correct value to <code>full_sorted</code>.")
+            incorrect_msg = "Assign the correct value to `full_sorted`. This variable should contain the result of your call of `sorted()`.")
 
 success_msg("Cool! Head over to the video on Python methods.")
 ```
@@ -283,18 +285,18 @@ test_object("room", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("room_up", do_eval = False)
 test_function("room.upper", 
-        not_called_msg = "Don't forget to call the <code>upper()</code> method of the <code>pool</code> object using the <code>.</code> notation.")
+        not_called_msg = "Don't forget to call the `upper()` method of the `pool` object using the `.` notation.")
 test_object("room_up")
 
-msg = "Print out <code>%s</code> using <code>print()</code>"
+msg = "Print out `%s` using `print()`"
 test_function("print", 1, incorrect_msg = msg % "room")
 test_function("print", 2, incorrect_msg = msg % "room_up")
 
-msg = "Don't forget to count the o's in <code>room</code> by calling the <code>count()</code> method on it with the correct argument."
+msg = "Don't forget to count the o's in `room` by calling the `count()` method on it with the correct argument."
 test_function("room.count", 
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in <code>room</code>.")
+test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in `room`.")
 
 
 success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
@@ -354,17 +356,17 @@ print(areas.count(14.5))
 msg = "You don't have to change or remove the predefined variables."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Don't forget to find the index of <code>20.0</code> in <code>areas</code> by calling the <code>index()</code> method on it with the correct argument."
+msg = "Don't forget to find the index of `20.0` in `areas` by calling the `index()` method on it with the correct argument."
 test_function("areas.index", 
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 1, not_called_msg = "Don't forget to print out the index of <code>20.0</code> in <code>areas</code>.")
+test_function("print", 1, not_called_msg = "Don't forget to print out the index of `20.0` in `areas`.")
 
-msg = "Don't forget to count the number of times <code>14.5</code> appears in <code>areas</code> by calling the <code>count()</code> method on it with the correct argument."
+msg = "Don't forget to count the number of times `14.5` appears in `areas` by calling the `count()` method on it with the correct argument."
 test_function("areas.count", 
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 2, not_called_msg = "Don't forget to print out the count of <code>14.5</code> in <code>areas</code>.")
+test_function("print", 2, not_called_msg = "Don't forget to print out the count of `14.5` in `areas`.")
 
 success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
 ```
@@ -439,20 +441,22 @@ print(areas)
 msg = "You don't have to change or remove the predefined variables."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Use <code>append</code> on <code>areas</code> to append it the %s time with <code>%d</code>"
+msg = "Use the `append` method on `areas` to expand with `%d` the %s time."
 test_function("areas.append", 1,
-              not_called_msg = msg % ("first", 24.5),
-              incorrect_msg = msg % ("first", 24.5))
+              not_called_msg = msg % ( 24.5, "first"),
+              incorrect_msg = msg % ( 24.5, "first"))
 test_function("areas.append", 2,
-              not_called_msg = msg % ("second", 15.45),
-              incorrect_msg = msg % ("second", 15.45))
+              not_called_msg = msg % (15.45, "second"),
+              incorrect_msg = msg % (15.45, "second"))
               
-test_function("print", 1)
+test_function("print", 1, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
 
-msg = "Use <code>reverse</code> on <code>areas</code> to reverse it."
+msg = "Use the `reverse` method on `areas` to reverse it."
 test_function("areas.reverse", 
               not_called_msg = msg,
               incorrect_msg = msg)
+
+test_function("print", 2, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
 
 success_msg("Great!")
 ```
@@ -537,13 +541,14 @@ test_object("r", undefined_msg = msg, incorrect_msg = msg)
 test_import("math", same_as = False)
 
 test_object("C", do_eval = False)
-test_operator(1, incorrect_result_msg = "Your calculation of <code>C</code> is not quite correct. You should use <code>math.pi</code>.")
+test_operator(1, incorrect_result_msg = "Your calculation of `C` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
 test_object("C")
 
 test_object("A", do_eval = False)
-test_operator(2, incorrect_result_msg = "Your calculation of <code>A</code> is not quite correct. You should use <code>math.pi</code>.")
+test_operator(2, incorrect_result_msg = "Your calculation of `A` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
 test_object("A")
 
+msg = "You don't have to change or remove the predefined print functions."
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 
@@ -620,10 +625,10 @@ test_object("r", undefined_msg = msg, incorrect_msg = msg)
 test_import("math.radians", same_as = False)
 
 test_object("dist", do_eval = False)
-test_function("radians", 1, not_called_msg = "Your calculation of <code>dist</code> is not quite correct. You should use <code>radians()</code>.")
-test_object("dist")
+test_function("radians", 1, not_called_msg = "Your calculation of `dist` is not quite correct. You should use `radians()` of the `math` package using the dot notation (`.`).")
+test_object("dist", incorrect = "Assign the result of your calculations to `dist`.")
 
-test_function("print")
+test_function("print", incorrect_msg = "Make sure to print out `dist` using `print(dist)`.")
 
 success_msg("Nice! Head over to the next exercise.")
 ```

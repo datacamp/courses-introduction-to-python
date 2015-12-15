@@ -66,14 +66,16 @@ print(type(np_baseball))
 msg = "You don't have to change or remove the predefined variables."
 test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_import("numpy", same_as = False)
+test_import("numpy")
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array")
+test_function("np.array")
 test_object("np_baseball")
 
-test_function("type")
-test_function("print")
+msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
+test_function("type", 1, incorrect_msg = msg)
+test_function("print", 1, incorrect_msg = msg)
+
 success_msg("Great job!")
 ```
 
@@ -151,13 +153,13 @@ test_object("np_height", do_eval = False)
 test_function("numpy.array")
 test_object("np_height")
 
-test_function("print", 1)
+test_function("print", 1, incorrect_msg = "Print out `np_height` with `print(np_height)`.")
 
 test_object("np_height_m", do_eval = False)
-test_operator(1)
-test_object("np_height_m")
+test_operator(1, incorrect_result_msg = "Your calculation of `np_height_m` is not quite correct, be sure to multily `np_height` with `0.0254`.")
+test_object("np_height_m", incorrect_msg = "Assign the result of your calculation to `np_height_m`.")
 
-test_function("print", 2)
+test_function("print", 2, incorrect_msg = "Print out `np_height_m` with `print(np_height_m)`.")
 
 success_msg("Nice! In the blink of an eye, Numpy performs multiplications on more than 1000 height measurements.")
 ```
@@ -232,21 +234,20 @@ print(bmi)
 ```{python}
 test_import("numpy", same_as = False)
 
-test_object("np_height_m", do_eval = False)
-test_function("numpy.array", 1, incorrect_msg = "For assigning <code>np_height_m</code>, use <code>np.array(height)</code>.")
-test_operator(1)
-test_object("np_height_m")
+msg = "The variable `np_height_m` was defined for you. You don't have to change or remove it!"
+test_object("np_height_m", incorrect_msg = msg, undefined_msg = msg)
 
 test_object("np_weight_kg", do_eval = False)
-test_function("numpy.array", 2, incorrect_msg = "For assigning <code>np_weight_kg</code>, use <code>np.array(weight)</code>.")
-test_operator(2)
-test_object("np_weight_kg")
+test_function("numpy.array", 2, incorrect_msg = "For assigning `np_weight_kg`, use `np.array(weight)`.")
+test_operator(2, incorrect_result_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
+test_object("np_weight_kg", incorrect_msg = "Assign the result of your calculation to `np_weight_kg`.")
 
 test_object("bmi", do_eval = False)
-test_operator(3)
-test_object("bmi")
+test_operator(3, incorrect_result_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
+test_object("bmi", incorrect_msg = "Assign the result of your calculation to `bmi`.")
 
-test_function("print")
+test_function("print", 1, incorrect_msg = "Print out `bmi` with `print(bmi)`.")
+
 success_msg("Cool! Time to step up your game!")
 ```
 
@@ -342,11 +343,11 @@ test_object("np_height_m", undefined_msg = msg, incorrect_msg = msg)
 test_object("np_weight_kg", undefined_msg = msg, incorrect_msg = msg)
 test_object("bmi", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("light", incorrect_msg = "Use the <code><</code> boolean operator to define <code>light</code>. <code>bmi</code> should be smaller than <code>21</code>.")
+test_object("light", incorrect_msg = "Use the `<` boolean operator to define `light`. `bmi` should be smaller than `21`.")
 
-test_function("print", 1)
+test_function("print", 1, incorrect_msg = "Print out `light` with `print(light)`.")
 
-test_function("print", 2, incorrect_msg = "For the second printout, use <code>light</code> as an index for <code>bmi</code>.")
+test_function("print", 2, incorrect_msg = "For the second printout, use `light` as an index for `bmi`.")
 
 success_msg("Wow! It appears that only 11 of the more than 1000 baseball players have a BMI under 21!")
 ```
@@ -469,10 +470,10 @@ test_object("np_height", undefined_msg = msg, incorrect_msg = msg)
 test_object("np_weight", undefined_msg = msg, incorrect_msg = msg)
 
 test_function("print", 1,
-              incorrect_msg = "For the first printout, subset <code>np_weight</code> to select the 50th element.")
+              incorrect_msg = "For the first printout, subset `np_weight` to select the 50th element.")
 
 test_function("print", 2,
-              incorrect_msg = "For the second printout, subset <code>np_height</code> to select the 100th to 110th element, included. You can use the slicing operator: <code>:</code>, just make sure to put in the correct ending index.")
+              incorrect_msg = "For the second printout, subset `np_height` to select the 100th to 110th element, included. You can use the slicing operator: `:`, just make sure to put in the correct ending index.")
 
 success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 ```
@@ -548,13 +549,15 @@ print(np_baseball.shape)
 test_import("numpy", same_as = False)
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array")
-test_object("np_baseball")
+test_function("numpy.array", not_called_msg = "Be sure to call `np.array()`.", 
+                             incorrect_msg = "You should call `np.array(baseball)` to make a numpy array out of `baseball`.")
+test_object("np_baseball", incorrect_msg = "Assign the numpy array you created to `np_baseball`.")
 
-test_function("type")
-test_function("print", 1)
+msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
+test_function("type", 1, incorrect_msg = msg)
+test_function("print", 1, incorrect_msg = msg)
 
-test_function("print", 2, incorrect_msg = "For the second printout, print the <code>shape</code> field of the <code>np_baseball</code> object using the dot notation: <code>.</code>.")
+test_function("print", 2, incorrect_msg = "For the second printout, print the `shape` field of the `np_baseball` object using the dot notation: `.`.")
 
 success_msg("Slick! Time to show off some killer features of multi-dimensional Numpy arrays!")
 ```
@@ -643,11 +646,11 @@ test_import("numpy", same_as = False)
 msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[49,:]</code>. This will select the 49th row completely.")
+test_function("print", 1, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[49,:]`. This will select the 49th row completely.")
 
-test_object("np_weight", incorrect_msg = "Define <code>np_weight</code> by subsetting the <code>np_baseball</code> object with <code>[:,1]</code>. This will select the first column, completely.")
+test_object("np_weight", incorrect_msg = "Define `np_weight` by subsetting the `np_baseball` object with `[:,1]`. This will select the first column, completely.")
 
-test_function("print", 2, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[123,1]</code>. This will select the first column of the 123th row.")
+test_function("print", 2, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[123,1]`. This will select the first column of the 123th row.")
 success_msg("This is going well!")
 ```
 
@@ -727,9 +730,9 @@ test_import("numpy", same_as = False)
 msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("print", 1, incorrect_msg = "For the first printout, subset the <code>np_baseball</code> object using <code>[:2,:10]</code>. This will select the first and the second column and the first ten rows.")
+test_function("print", 1, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[:2,:10]`. This will select the first and the second column and the first ten rows.")
 
-test_function("print", 2, incorrect_msg = "For the second printout, subset the <code>np_baseball</code> object using <code>[205,236]</code>. This will select the all columns of row 205 to and including 235.")
+test_function("print", 2, incorrect_msg = "For the second printout, subset the `np_baseball` object using `[205,236]`. This will select the all columns of row 205 to and including 235.")
 
 success_msg("Great job!")
 ```
@@ -824,20 +827,21 @@ test_import("numpy")
 msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_operator(1, not_found_msg = "Use the <code>+</code> operator to add <code>update</code> to <code>np_baseball</code>.",
-                 incorrect_result_msg = "Are you sure you correctly added <code>update</code> to <code>np_baseball</code>? The resulting numpy array seems to be incorrect.")
+test_operator(1, not_found_msg = "Use the `+` operator to add `update` to `np_baseball`.",
+                 incorrect_result_msg = "Are you sure you correctly added `update` to `np_baseball`? The resulting numpy array seems to be incorrect.")
                  
-test_function("print", 1)
+test_function("print", 1, incorrect_msg = "Print out the result of `np_baseball + update` using `print(np_baseball + update)`.")
 
 test_object("conversion", do_eval = False)
-test_function("numpy.array")
-test_object("conversion")
+msg = "Create the `conversion` object using `np.array(...)`. Fill in the correct list on the dots."
+test_function("numpy.array", not_called_msg = msg, incorrect_msg = msg)
+test_object("conversion", incorrect_msg = "Assign the object you created with `np.array()` to `conversion`.")
 
 
-test_operator(2, not_found_msg = "Use the <code>*</code> operator to multiply <code>np_baseball</code> with <code>conversion</code>.",
-                 incorrect_result_msg = "Are you sure you correctly miltiplied <code>np_baseball</code> with <code>conversion</code>? The resulting numpy array seems to be incorrect.")
+test_operator(2, not_found_msg = "Use the `*` operator to multiply `np_baseball` with `conversion`.",
+                 incorrect_result_msg = "Are you sure you correctly miltiplied `np_baseball` with `conversion`? The resulting numpy array seems to be incorrect.")
                  
-test_function("print", 2)
+test_function("print", 2, incorrect_msg = "Print out the result of `np_baseball * conversion` using `print(np_baseball * conversion)`.")
 
 success_msg("Great job! Notice how with very little code, you can change all values in your Numpy data structure in a very specific way. This will be very useful in your future as a data scientist!")
 ```
@@ -918,15 +922,15 @@ print(np.median(np_height))
 ```{python}
 test_import("numpy", same_as = False)
 
-test_object("np_height", incorrect_msg = "Make sure to use the correct subsetting operation to define <code>np_height</code>.")
+test_object("np_height", incorrect_msg = "Make sure to use the correct subsetting operation to define `np_height`.")
 
-test_function("numpy.mean", incorrect_msg = "Pass <code>np_height</code> as an argument to the <code>mean</code> function of <code>numpy</code> to print out the correct value for the first printout. Don't forget to use the dot notation: <code>.</code>.")
+test_function("numpy.mean", incorrect_msg = "Pass `np_height` as an argument to the `mean` function of `numpy` to print out the correct value for the first printout. Don't forget to use the dot notation: `.`.")
 
-test_function("print", 1)
+test_function("print", 1, incorrect_msg = "Print out the result of your calculations using `print(np.mean(np_height))`.")
 
-test_function("numpy.median", incorrect_msg = "Pass <code>np_height</code> as an argument to the <code>median</code> function of <code>numpy</code> to print out the correct value for the second printout. Don't forget to use the dot notation: <code>.</code>.")
+test_function("numpy.median", incorrect_msg = "Pass `np_height` as an argument to the `median` function of `numpy` to print out the correct value for the second printout. Don't forget to use the dot notation: `.`.")
 
-test_function("print", 2)
+test_function("print", 2, incorrect_msg = "Print out the result of your calculations using `print(np.median(np_height))`.")
 
 success_msg("An average length of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get a first hunch for the overall distribution of the entire dataset.")
 ```
@@ -1014,17 +1018,17 @@ test_object("avg", undefined_msg = msg, incorrect_msg = msg)
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
 test_object("med", do_eval = False)
-test_function("numpy.median", 1, incorrect_msg = "For assigning <code>med</code>, use <code>np.median()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
+test_function("numpy.median", 1, incorrect_msg = "To assign `med`, use `np.median()`. Make sure to pass it the correct column of `np_baseball`.")
 test_object("med")
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 
 test_object("stddev", do_eval = False)
-test_function("numpy.std", 1, incorrect_msg = "For assigning <code>stddev</code>, use <code>np.std()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
+test_function("numpy.std", 1, incorrect_msg = "To assign `stddev`, use `np.std()`. Make sure to pass it the correct column of `np_baseball`.")
 test_object("stddev")
 test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
 
 test_object("corr", do_eval = False)
-test_function("numpy.corrcoef", 1, incorrect_msg = "For assigning <code>med</code>, use <code>np.corrcoef()</code>. Make sure to pass it the correct column of <code>np_baseball</code>.")
+test_function("numpy.corrcoef", 1, incorrect_msg = "To assign `med`, use `np.corrcoef()`. Make sure to pass it the correct column of `np_baseball`.")
 test_object("corr")
 test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
 
