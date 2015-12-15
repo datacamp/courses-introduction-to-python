@@ -127,17 +127,11 @@ Using this numpy dot prefix all the time can become pretty tiring, so you can al
 
 Now, instead of numpy.array(), you'll have to use np.array() to use Numpy's array function:
 
-As I told you before, a package is a collection of modules. For big packages, these modules are typically organized into several subpackages, which are again directories. Numpy, for example, has the `linalg` subpackage, which then contains the linalg module. Among many others, this module contains the `norm()` function. Because `numpy` is imported as `np`, you can already call it like this:
+There are cases in which you only need one specific function of a package instead. Python allows you to make this explicit in your code. Suppose that we only want to use the array() function from the Numpy package. Instead of doing import numpy, you can instead do from numpy import array, like this:
 
-If you only plan to use the `linalg` subpackage and not the entire `numpy` package, you can make your import statement more specific, like this:
+This time, you can simply call the array function like this, no need to use numpy dot here. 
 
-and then use this line of code to use the norm() function. To use it, you have to explicitly name the package, subpackage and function you're using with dots in between.
-
-You can also explicitly import only the `norm()` function of the linalg subpackage:
-
-Now, you don't need any prefix to call the norm function:
-
-There's no clear reason to use only `import X` statements, or only `from X import Y` statements, both have their pros and cons. The `import X` version makes it easy to import the entire module, but you have to write more code. If you're using `from X import Y`, you make it very clear which items of a module you're using, but you lose context about the function. It's clearer what numpy.linarg.norm() does, instead of just using norm(), right?
+This from import version to use specific parts of a package can be useful to limit the amount of coding, but you're also loosing some of the context. Suppose you're working in a long Python script. You import the array function from numpy at the very top, and way later, you actually use this array function. Somebody else who's reading your code might have forgotten that this array function is a specific Numpy function; it's not clear from the function call. In that respect, the more standard import numpy call is preferred: In this case, your function call is numpy.array(), making it very clear that you're working with Numpy. At the end of the day, it's a matter of personal preference; up to you to decide what you think is most convenient!
 
 Off to the exercises now, where you can practice on different ways of importing packages and modules yourself!
 
@@ -147,9 +141,6 @@ array([1, 2, 3])
 numpy.array([1, 2, 3])
 import numpy as np
 np.array([1, 2, 3])
-np.linalg.norm([3, 4])
-import numpy.linalg
-numpy.linalg.norm([3, 4])
-from numpy.linalg import norm
-norm([3, 4])
+from numpy import array
+array([1, 2, 3])
 ```
