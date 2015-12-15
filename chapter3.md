@@ -15,7 +15,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Familiar functions
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. Also the functions `str()`, `int()`, `bool()` and `float()` to switch between data types are built-in functions.
+Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). Also the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types are built-in functions.
 
 Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
 
@@ -30,13 +30,13 @@ output = function_name(input)
 ```
 
 *** =instructions
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the length of the list `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an integer. Store the output as `out2`.
+- Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) to print out the type of `var1`.
+- Use [`len()`](https://docs.python.org/3/library/functions.html#len) to get the length of the list `var1`. Wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call to directly print it out.
+- Use [`int()`](https://docs.python.org/3/library/functions.html#int) to convert `var2` to an integer. Store the output as `out2`.
 
 *** =hint
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
+- Call the [`type()`](https://docs.python.org/3/library/functions.html#type) function like this: `type(var1)`.
+- Call [`print()`](https://docs.python.org/3/library/functions.html#print) like you did so many times before. Simply put the variable you want to print in parentheses.
 - `int(x)` will convert `x` to an integer.
 
 *** =pre_exercise_code
@@ -92,33 +92,33 @@ test_function("print", 2, incorrect_msg = msg)
 
 test_object("out2", do_eval = False)
 
-test_function("int", not_called_msg = "Use `int()` to make an integer of `var2` and assign to `out2`.",
-                     incorrect_msg = "Use `int()` with the correct variables. You should pass `var2` to it."
+test_function("int", not_called_msg = "Use [`int()`](https://docs.python.org/3/library/functions.html#int) to make an integer of `var2` and assign to `out2`.",
+                     incorrect_msg = "Use [`int()`](https://docs.python.org/3/library/functions.html#int) with the correct variables. You should pass `var2` to it."
 )
 test_object("out2", incorrect_msg = "Make sure to assign the correct value to `out2`.")
-success_msg("Great job! The `len()` function is extremely useful: it also works on strings to count the number of characters!")
+success_msg("Great job! The [`len()`](https://docs.python.org/3/library/functions.html#len) function is extremely useful: it also works on strings to count the number of characters!")
 ```
 
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Help!
 
-Once you know the name of the Python function you want to know, you still have to figure out how you will use it. Ironically, you have to ask for information on function with another function: `help()`. In IPython specifically, you can also use `?`.
+Once you know the name of the Python function you want to know, you still have to figure out how you will use it. Ironically, you have to ask for information on function with another function: [`help()`](https://docs.python.org/3/library/functions.html#help). In IPython specifically, you can also use `?`.
 
-To get help on the `max()` function, for example, you can use one of these calls:
+To get help on the [`max()`](https://docs.python.org/3/library/functions.html#max) function, for example, you can use one of these calls:
 
 ```
 help(max)
 ?max
 ```
 
-Use the Shell on the right to open up the documentation on `complex()`. Which of the following statements is true?
+Use the Shell on the right to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
 
 *** =instructions
-- `complex()` takes two arguments: `real` and `[, imag]`.
-- `complex()` takes two arguments: `real` and `imag`. Both these arguments are required.
-- `complex()` takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
-- `complex()` takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `[, imag]`.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. Both these arguments are required.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
 
 *** =hint
 The help file shows `complex(real[, imag])`. Do you remember what Filip told you about these square brackets?
@@ -142,13 +142,13 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 
 In the previous exercise, the square brackets around `imag` in the documentation showed that the `imag` was an optional argument. But Python also uses a different way to tell users about arguments being optional.
 
-Have a look at the documentation of `sorted()` by typing `help(sorted)` in the IPython Shell.
+Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the IPython Shell.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key` and `reverse`. 
+You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) takes three arguments: `iterable`, `key` and `reverse`. 
 
 `key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
 
-In this exercise, you'll only have to specify `iterable` and `inverse`, not `key`. The first input you pass to `sorted()` will obviously be matched to the `iterable` argument, but what about the second input. To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
+In this exercise, you'll only have to specify `iterable` and `inverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will obviously be matched to the `iterable` argument, but what about the second input. To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
 
 ```
 sorted(___, reverse = ___)
@@ -158,13 +158,13 @@ Two lists have been created for you on the right. Can you paste them together an
 
 *** =instructions
 - Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
+- Call [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
 - Finish off by printing out `full_sorted`.
 
 *** =hint
 - Simply sum `first` and `second` as if they are two numbers, and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse = True`.
-- To print out a variable, use `print()`.
+- Use [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) with two inputs: `full` and `reverse = True`.
+- To print out a variable, use [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 *** =pre_exercise_code
 ```{python}
@@ -217,7 +217,7 @@ test_operator(1, not_found_msg = msg,
 test_object("full_sorted", do_eval = False)
 test_function("sorted")
 test_object("full_sorted", 
-            incorrect_msg = "Assign the correct value to `full_sorted`. This variable should contain the result of your call of `sorted()`.")
+            incorrect_msg = "Assign the correct value to `full_sorted`. This variable should contain the result of your call of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted).")
 
 success_msg("Cool! Head over to the video on Python methods.")
 ```
@@ -236,14 +236,14 @@ Strings come with a bunch of methods. Follow the instructions closely to discove
 A string `room` has already been created for you to experiment with.
 
 *** =instructions
-- Use the `upper()` method on `room` and store the result in `room_up`. Use the dot notation.
+- Use the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method on `room` and store the result in `room_up`. Use the dot notation.
 - Print out `room` and `room_up`. Did both change?
-- Print out the number of o's on the variable `room`: call `count()` on `room` and pass the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
+- Print out the number of o's on the variable `room`: call [`count()`](https://docs.python.org/3/library/functions.html#count) on `room` and pass the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
 
 *** =hint
-- You can call the `upper()` method an `room` without additional inputs.
+- You can call the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method an `room` without additional inputs.
 - To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `room.count(___)` call in a `print()` function so that you print it out.
+- Make sure to wrap your `room.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
 
 *** =pre_exercise_code
 ```{python}
@@ -288,21 +288,21 @@ test_object("room", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("room_up", do_eval = False)
 test_function("room.upper", 
-        not_called_msg = "Don't forget to call the `upper()` method of the `pool` object using the `.` notation.")
+        not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method of the `pool` object using the `.` notation.")
 test_object("room_up")
 
-msg = "Print out `%s` using `print()`"
+msg = "Print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"
 test_function("print", 1, incorrect_msg = msg % "room")
 test_function("print", 2, incorrect_msg = msg % "room_up")
 
-msg = "Don't forget to count the o's in `room` by calling the `count()` method on it with the correct argument."
+msg = "Don't forget to count the o's in `room` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument."
 test_function("room.count", 
               not_called_msg = msg,
               incorrect_msg = msg)
 test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in `room`.")
 
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
 
@@ -311,18 +311,18 @@ success_msg("Nice! Notice from the printouts that the `upper()` method does not 
 
 Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans, are also types, and also come prepacked with a bunch of useful methods. In this exercise, you'll be experimenting with:
 
-- `index()`, to get the index of the first element of a list that matches its input and
-- `count()`, to get the number of time an element appears in a list.
+- [`index()`](https://docs.python.org/3/library/functions.html#index), to get the index of the first element of a list that matches its input and
+- [`count()`](https://docs.python.org/3/library/functions.html#count), to get the number of time an element appears in a list.
 
 You'll be working on the list with the area of different parts of a house: `areas`.
 
 *** =instructions
-- Use the `index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `count()` on `areas` to find out how many times `14.5` appears in the list. Again, simply print out this number.
+- Use the [`index()`](https://docs.python.org/3/library/functions.html#index) method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
+- Call [`count()`](https://docs.python.org/3/library/functions.html#count) on `areas` to find out how many times `14.5` appears in the list. Again, simply print out this number.
 
 *** =hint
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
+- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 
 *** =pre_exercise_code
 ```{python}
@@ -359,13 +359,13 @@ print(areas.count(14.5))
 msg = "You don't have to change or remove the predefined variables."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Don't forget to find the index of `20.0` in `areas` by calling the `index()` method on it with the correct argument."
+msg = "Don't forget to find the index of `20.0` in `areas` by calling the [`index()`](https://docs.python.org/3/library/functions.html#index) method on it with the correct argument."
 test_function("areas.index", 
               not_called_msg = msg,
               incorrect_msg = msg)
 test_function("print", 1, not_called_msg = "Don't forget to print out the index of `20.0` in `areas`.")
 
-msg = "Don't forget to count the number of times `14.5` appears in `areas` by calling the `count()` method on it with the correct argument."
+msg = "Don't forget to count the number of times `14.5` appears in `areas` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument."
 test_function("areas.count", 
               not_called_msg = msg,
               incorrect_msg = msg)
@@ -379,22 +379,22 @@ success_msg("Nice! These were examples of `list` methods that did not change the
 
 Most list methods will change the list they're called on. Examples are:
 
-- `append()`, that adds an element to the list it is called on,
-- `remove()`, that removes the first element of a list that matches the input, and
-- `reverse()`, that reverses the order of the elements in the list it is called on.
+- [`append()`](https://docs.python.org/3/library/functions.html#append), that adds an element to the list it is called on,
+- [`remove()`](https://docs.python.org/3/library/functions.html#remove), that removes the first element of a list that matches the input, and
+- [`reverse()`](https://docs.python.org/3/library/functions.html#reverse), that reverses the order of the elements in the list it is called on.
 
 You'll be working on the list with the area of different parts of the house: `areas`.
 
 *** =instructions
-- Use `append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
+- Use [`append()`](https://docs.python.org/3/library/functions.html#append) twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
 - Print out `areas`
-- Use the `reverse()` method to reverse the order of the elements in `areas`.
+- Use the [`reverse()`](https://docs.python.org/3/library/functions.html#reverse) method to reverse the order of the elements in `areas`.
 - Print out `areas` once more.
 
 *** =hint
 - For the first instruction, use the `areas.append(___)` call twice.
 - To print out a variable `x`, simply write `print(x)`.
-- The `reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
+- The [`reverse()`](https://docs.python.org/3/library/functions.html#reverse) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
 - To print out a variable `x`, simply write `print(x)`.
 
 *** =pre_exercise_code
@@ -481,7 +481,7 @@ For a fancy clustering algorithm, you want to find the circumference $C$ and are
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-To use the constant `pi`, you'll need the `math` package. A variable `r` is already coded in the script. Fill in the code to calculate `C` and `A` and see how the `print()` functions create some nice printouts.
+To use the constant `pi`, you'll need the `math` package. A variable `r` is already coded in the script. Fill in the code to calculate `C` and `A` and see how the [`print()`](https://docs.python.org/3/library/functions.html#print) functions create some nice printouts.
 
 *** =instructions
 - Import the `math` package. Now you can access the constant `pi` with `math.pi`.
@@ -577,12 +577,12 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 *** =instructions
 - Perform a selective import from the `math` package: you only want to use the `radians` function.
-- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r * \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the `radians()` function, which you just imported.
+- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r * \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/functions.html#radians) function, which you just imported.
 - Print out `dist`.
 
 *** =hint
 - Use `from math import radians` to do the selective import.
-- You can simply use the `radians()` function now: Pass it the number 12 to get the angle in radians.
+- You can simply use the [`radians()`](https://docs.python.org/3/library/functions.html#radians) function now: Pass it the number 12 to get the angle in radians.
 - To print out a variable `x`, simply type `print(x)`.
 
 *** =pre_exercise_code
@@ -628,7 +628,7 @@ test_object("r", undefined_msg = msg, incorrect_msg = msg)
 test_import("math.radians", same_as = False)
 
 test_object("dist", do_eval = False)
-test_function("radians", 1, not_called_msg = "Your calculation of `dist` is not quite correct. You should use `radians()` of the `math` package using the dot notation (`.`).")
+test_function("radians", 1, not_called_msg = "Your calculation of `dist` is not quite correct. You should use [`radians()`](https://docs.python.org/3/library/functions.html#radians) of the `math` package using the dot notation (`.`).")
 test_object("dist", incorrect = "Assign the result of your calculations to `dist`.")
 
 test_function("print", incorrect_msg = "Make sure to print out `dist` using `print(dist)`.")
@@ -641,7 +641,7 @@ success_msg("Nice! Head over to the next exercise.")
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code. 
 
-Suppose you want to use the function `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Suppose you want to use the function [`inv()`](https://docs.python.org/3/library/functions.html#inv), which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 
 ```
 my_inv([[1,2], [3,4]])
@@ -666,7 +666,7 @@ Try the different import statements in the IPython shell and see which one cause
 *** =sct
 ```{python}
 msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv`."
+msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: [`inv()`](https://docs.python.org/3/library/functions.html#inv) is now available as `my_inv`."
 test_mc(4, [msg1, msg2, msg3, msg4])
 ```
 

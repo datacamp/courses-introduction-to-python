@@ -26,7 +26,7 @@ After measuring the height of your family, you decide to collect some informatio
 
 *** =instructions
 - Create a list, `areas`, that contains the area of the hallway, kitchen, living room, bedroom and bathroom, in this order.
-- Print `areas` with the `print()` function.
+- Print `areas` with the [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 
 *** =hint
 - You can use the variables that have already been created to build the list: `areas = [hallway, kitchen, ...]`.
@@ -308,8 +308,8 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 - Select the element representing the area of the living room and print it out.
 
 *** =hint
-- Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a `print()` call.
-- Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a `print()` call.
+- Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
+- Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - The element representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
 
 *** =pre_exercise_code
@@ -352,7 +352,7 @@ print(areas[5])
 msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "In your %dst `print()`${{line ? at line ${line}}}, make sure select the correct element from `areas`.${{expected ? Expected `${expected}`, but got `${result}`.}}"
+msg = "In your %dst [`print()`](https://docs.python.org/3/library/functions.html#print)${{line ? at line ${line}}}, make sure select the correct element from `areas`.${{expected ? Expected `${expected}`, but got `${result}`.}}"
 for i in range(1,4):
   test_function("print", index = i, incorrect_msg = msg % i)
 
@@ -445,12 +445,12 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 *** =instructions
 - Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
 - Do a similar thing to create a new variable, `upstairs`, that contains the last 4 elements of `areas`.
-- Print both `downstairs` and `upstairs` using `print()`.
+- Print both `downstairs` and `upstairs` using [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 *** =hint
 - Use the brackets `[0:6]` to build `downstairs`.
 - Use the barckets `[6:10]` to build `upstairs`.
-- Simply add two `print()` calls to the script to print out `downstairs` and `upstairs`.
+- Simply add two [`print()`](https://docs.python.org/3/library/functions.html#print) calls to the script to print out `downstairs` and `upstairs`.
 
 *** =pre_exercise_code
 ```{python}
@@ -817,7 +817,7 @@ At the end of the video, Filip explained how Python lists work behind the scenes
 
 The Python code in the script already creates a list with the name `areas`, and a copy: `areas_copy`. Next, the first element in the `areas_copy` list is changed, and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
 
-If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with `list()` or by using `[:]`.
+If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with [`list()`](https://docs.python.org/3/library/functions.html#func-list) or by using `[:]`.
 
 *** =instructions
 - Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`

@@ -71,7 +71,7 @@ test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 test_import("numpy")
 
 test_object("np_baseball", do_eval = False)
-test_function("np.array")
+test_function("numpy.array") 
 test_object("np_baseball")
 
 msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
