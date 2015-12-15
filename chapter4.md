@@ -1038,35 +1038,113 @@ success_msg("Great! Time to use all of your new data science skills in the last 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Blend it all together
 
-To wrap up on this chapter, you're going through the entire process: you'll convert regular Python lists to Numpy arrays, combine them into a 2D Numpy array, and generate some summary statistics on them!
+In the last exercises you've learned everything there is to know about heights and weights of baseball players. Now it's time to dive into another sport: soccer.
 
-Todo vincent, no inspiration for super-awesome example ;-)
+You've contacted the FIFA for some data and they handed you two lists. The lists are the following: 
+```
+positions = ['GK', 'M', 'A', 'D', ...]
+heights = [191, 184, 185, 180, ...]
+```
+Each element in the lists corresponds to a player. The first list, `positions`, contains strings and these represent the position where the player plays. The possible positions are: `'GK'` (goalkeeper), `'M'` (midfield), `'A'` (attack) and `'D'` (defense). The second list, `heights`, contains integers: the height of the player in cm. The first player in the lists is a goalkeeper and is pretty tall, 191 cm.
+
+You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you so you are determined to show them using the data you received from the FIFA and your newly acquired Python skills.
 
 *** =instructions
-- instruction 1
-- instruction 2
+- Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
+- Extract all the heights of the goalkeepers. You can use a little trick here: use `np_positions == 'GK'` as an index for `np_heights`. Assign the result to `gk_heights`.
+- Extract all the heights of the all the other players. This time use `np_positions != 'GK'` as an index for `np_heights`. Assign the result to `other_heights`.
+- Print out the median height of the goalkeepers using `np.median()`.
+- Do the same for the other players. Print out their median height.
 
 *** =hint
-hint comes here
+- Use `np.array()` to convert the lists to numpy arrays.
+- You should use `np_heights[np_positions == 'GK']` to extract the heights of all goalkeepers. Don't forget to assign the result to `gk_heights`.
+- You should use `np_heights[np_positions != 'GK']` to extract the heights of all other players. Don't forget to assign the result to `other_heights`.
+- Print out the median height of the goalkeepers using `np.median(gk_heights)`.
+- Print out the median height of the other players using `np.median(other_heights)`.
 
 *** =pre_exercise_code
 ```{python}
-import numpy as np
+import pandas as pd
+fifa =  pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/fifa.csv", skipinitialspace=True, usecols=['position', 'height'])
+positions = list(fifa.position)
+heights = list(fifa.height)
 ```
 
 *** =sample_code
 ```{python}
-# sample code
+# heights and positions are available as lists
+
+# Import numpy
+import numpy as np
+
+# Convert positions and heights to numpy arrays: np_positions, np_heights
+
+
+
+# Heights of the goalkeepers: gk_heights
+
+
+# Heights of the other players: other_heights
+
+
+# Print out the median height of goalkeepers
+
+
+# Print out the median height of other players
+
 ```
 
 *** =solution
 ```{python}
-# solution code
+# heights and positions are available as lists
+
+# Import numpy
+import numpy as np
+
+# Convert positions and heights to numpy arrays: np_positions, np_heights
+np_positions = np.array(positions)
+np_heights = np.array(heights)
+
+# Heights of the goalkeepers: gk_heights
+gk_heights = np_heights[np_positions == 'GK']
+
+# Heights of the other players: other_heights
+other_heights = np_heights[np_positions != 'GK']
+
+# Print out the median height of goalkeepers
+print(np.median(gk_heights))
+
+# Print out the median height of other players
+print(np.median(other_heights))
 ```
 
 *** =sct
 ```{python}
-# sct code
-success_msg("Wonderful! This exercise marks the end of the intro to python for data science course. See you in a later course!")
+test_import("numpy")
+
+msg = "Convert the regular lists to numpy lists using `np.array()`. This function takes one argument: the regular list itself!"
+test_object("np_positions", do_eval = False)
+test_function("numpy.array", 1, not_called_msg = msg, incorrect_msg = msg)
+test_object("np_positions", incorrect_msg = "Assign the converted numpy array of `positions` to `np_positions`.")
+
+test_object("np_heights", do_eval = False)
+test_function("numpy.array", 2, not_called_msg = msg, incorrect_msg = msg)
+test_object("np_heights", incorrect_msg = "Assign the converted numpy array of `heights` to `np_heights`.")
+
+test_object("gk_heights", incorrect_msg = "You can use `[np_positions == 'GK']` as an index of `np_heights` to find the heights of all goalkeepers, `gk_heights`. You can use a hint if you're stuck!")
+test_object("other_heights", incorrect_msg = "You can use `[np_positions != 'GK']` as an index of `np_heights` to find the heights of all other players, `other_heights`. You can use a hint if you're stuck!")
+
+msg = "Use `np.median(%s)` to find the median height of %s."
+
+gk_msg = msg % ("gk_heights", "goalkeepers")
+test_function("numpy.median", 1, not_called_msg = gk_msg, incorrect_msg = gk_msg)
+test_function("print", 1, incorrect_msg = "Don't forget to print out the result for the goalkeepers.")
+
+other_msg = msg % ("other_heights", "other players")
+test_function("numpy.median", 2, not_called_msg = other_msg, incorrect_msg = other_msg)
+test_function("print", 2, incorrect_msg = "Don't forget to print out the result for the other players.")
+
+success_msg("Wonderful! You were right. The disbelievers were wrong! This exercise marks the end of the intro to python for data science course. See you in a later course!")
 ```
 

@@ -372,7 +372,8 @@ print(x[1] + x[3])
 - Print this new variable `eat_sleep_area`.
 
 *** =hint
-hint comes here
+- Add `areas[3]` to `areas[-3]` to calculate `eat_sleep_area`.
+- Print out `eat_sleep_area`: `print(eat_sleep_area)`.
 
 *** =pre_exercise_code
 ```{python}
