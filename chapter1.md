@@ -319,7 +319,7 @@ print(result)
 
 *** =sct
 ```{python}
-test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!"
+test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
                        incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
                        
 test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
@@ -379,7 +379,7 @@ profitable = True
 *** =sct
 ```{python}
 test_object("desc", incorrect_msg = "Assign the value `\"compound interest\"` to the variable `desc`.")
-test_object("profitable", incorrect_msg = "Assign the value `True` to the variable `profitable`.)
+test_object("profitable", incorrect_msg = "Assign the value `True` to the variable `profitable`.")
 
 success_msg("Nice!")
 ```
@@ -601,7 +601,7 @@ test_object("pi_float", do_eval = False)
 test_function("float", incorrect_msg = "Pass `pi_string` to `float()` in order to convert it to a float.")
 test_object("pi_float", incorrect_msg = "Assign the correct value to `pi_float`.")
 
-success_msg("Great! You have a profit of around \$95; that's pretty awesome indeed!")
+success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
