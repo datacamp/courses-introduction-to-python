@@ -8,8 +8,4 @@
 library(datacamp)
 datacamp_login("introtopython@datacamp.com", "testtest", "")
 upload_course(upload_chapters = TRUE, force = TRUE, open = FALSE)
-datacamp_login("introtopython@datacamp.com", "testtest", "staging")
-upload_course(upload_chapters = TRUE, force = TRUE, open = FALSE)
-datacamp_login("introtopython@datacamp.com", "testtest", "dev")
-upload_course(upload_chapters = TRUE, force = TRUE, open = FALSE)
 ```
