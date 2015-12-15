@@ -2,7 +2,9 @@
 title_meta  : Chapter 4
 title       : Numpy
 description : Numpy is a Python package to efficiently do data science. Learn to work with the Numpy array, a faster and more powerful alternative to the list, and take your first steps in data exploration.
-
+attachments :
+  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch4_slides.pdf
+  
 --- type:VideoExercise lang:python xp:50 skills:2
 ## Numpy
 
