@@ -75,7 +75,7 @@ out2 = int(var2)
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("var1", undefined_msg = msg, incorrect_msg = msg)
 test_object("var2", undefined_msg = msg, incorrect_msg = msg)
 
@@ -200,7 +200,7 @@ print(full_sorted)
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("first", undefined_msg = msg, incorrect_msg = msg)
 test_object("second", undefined_msg = msg, incorrect_msg = msg)
 
@@ -278,7 +278,7 @@ print(room.count("o"))
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("room", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("room_up", do_eval = False)
@@ -351,7 +351,7 @@ print(areas.count(14.5))
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
 msg = "Don't forget to find the index of <code>20.0</code> in <code>areas</code> by calling the <code>index()</code> method on it with the correct argument."
@@ -436,7 +436,7 @@ print(areas)
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
 msg = "Use <code>append</code> on <code>areas</code> to append it the %s time with <code>%d</code>"
@@ -531,7 +531,7 @@ print("Area: " + str(A))
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("r", undefined_msg = msg, incorrect_msg = msg)
 
 test_import("math", same_as = False)
@@ -614,7 +614,7 @@ print(dist)
 
 *** =sct
 ```{python}
-msg = "You don't have to change or edit the predefined variables."
+msg = "You don't have to change or remove the predefined variables."
 test_object("r", undefined_msg = msg, incorrect_msg = msg)
 
 test_import("math.radians", same_as = False)

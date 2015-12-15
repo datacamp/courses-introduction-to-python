@@ -46,11 +46,14 @@ print(7 + 10)
 ```{python}
 msg = "Don't remove the first statement. It is an example which is coded for you!"
 test_operator(1, incorrect_op_msg = msg, incorrect_result_msg = msg, not_found_msg = msg)
+test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
+
 test_operator(2, not_found_msg = "You should add a second operation, as instructed.", 
   incorrect_op_msg = "Your second operation is wrong, be sure to add `7` to `10`.",
   incorrect_result_msg = "The operation you added should add up to `17`.")
-test_function("print", 1)
-test_function("print", 2)
+test_function("print", 2,
+  not_called_msg = "Remember that you should call `print()` to print out the result of your calculation.",
+  incorrect_msg = "You should type `print(7 + 10)` to print out the result of your calculation.")
 
 success_msg("Great!")
 ```
@@ -122,7 +125,7 @@ print(7 + 10)
 
 *** =sct
 ```{python}
-test_student_typed("#\s?(A|a)ddition works to(o?)\sprint\(7", not_typed_msg = "Make sure to add the instructed comment before `print(7+10)`.")
+test_student_typed("#\s*(\w+) works (\w+)\s*print\(7", not_typed_msg = "Make sure to add the instructed comment right before `print(7+10)`.")
 success_msg("Great!")
 ```
 
@@ -192,13 +195,14 @@ print(100 * 1.1 ** 7)
 msg = "You don't have to change the predefined code. Just add one line at the bottom!"
 for i in range(1,7):
   test_operator(i, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
-for i in range(1,7):
   test_function("print", index = i, not_called_msg = msg, incorrect_msg = msg)
 
 test_operator(7, not_found_msg = "Add an operation to calculate what's instructed.", 
   incorrect_op_msg = "You should use at least one '*' and one '**' operator to calculate what's instructed.",
-  incorrect_result_msg = "You should calculate the total intrest on 100 dollar after 7 years given a 10\% rate.")
-test_function("print", index = 7)
+  incorrect_result_msg = "You should calculate the total interest on 100 dollar after 7 years given a 10% rate.")
+test_function("print", index = 7, 
+  not_called_msg = "Don't forget to print out your result with `print()`.",
+  incorrect_msg = "Print out your result using `print(100 * 1.1 ** 7)`.")
 
 success_msg("Time for another video!")
 ```
@@ -253,8 +257,8 @@ print(savings)
 
 *** =sct
 ```{python}
-test_object("savings")
-test_function("print")
+test_object("savings", incorrect_msg = "Assign `100` to the variable `savings`.")
+test_function("print", incorrect_msg = "Print out `savings`, the variable you created, using `print(savings)`.")
 success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
 
@@ -315,14 +319,16 @@ print(result)
 
 *** =sct
 ```{python}
-test_object("savings")
-test_object("factor")
+test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!"
+                       incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
+                       
+test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
 test_object("result", do_eval = False)
-test_operator(3, not_found_msg = "Have you used the correct calculations to calculate result?",
+test_operator(3, not_found_msg = "Have you used the correct calculations to calculate `result`?",
                  incorrect_op_msg = "Use '*' and '**' to calculate result.",
                  incorrect_result_msg = "Have you used to correct variables to calculate result?")
-test_object("result", incorrect_msg = "Assign the correct value to result.")
-test_function("print")
+test_object("result", incorrect_msg = "Assign the correct value to `result`.")
+test_function("print", incorrect_msg = "You should print out the result using `print(result)`.")
 success_msg("Great!")
 ```
 
@@ -372,8 +378,8 @@ profitable = True
 
 *** =sct
 ```{python}
-test_object("desc")
-test_object("profitable")
+test_object("desc", incorrect_msg = "Assign the value `\"compound interest\"` to the variable `desc`.")
+test_object("profitable", incorrect_msg = "Assign the value `True` to the variable `profitable`.)
 
 success_msg("Nice!")
 ```
@@ -484,13 +490,16 @@ print(doubledesc)
 
 *** =sct
 ```{python}
-test_object("savings")
-test_object("factor")
-test_object("desc")
+msg = "You don't have to change or remove the predefined variables."
+test_object("savings", undefined_msg = msg, incorrect_msg = msg)
+test_object("factor", undefined_msg = msg, incorrect_msg = msg)
+test_object("desc", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("year1", do_eval = False)
-test_operator(3)
-test_object("year1")
+test_operator(3, not_found_msg = "Calculate `year1` using the `*` operator.",
+                 incorrect_op_msg = "To calculate `year1`, you should use `*` once.",
+                 incorrect_result_msg = "You should use `savings` and `factor` to calculate `year1`. Take a look at the hint if you're stuck.")
+test_object("year1", incorrect_msg = "Assign the correct value you calculated to `year1`.")
 
 test_function("type")
 test_function("print")
