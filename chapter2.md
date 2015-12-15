@@ -2,7 +2,9 @@
 title_meta  : Chapter 2
 title       : Python Lists
 description : "Learn to store, access and manipulate data in lists: the first step towards efficiently working with huge amounts of data."
-
+attachments :
+  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf
+  
 --- type:VideoExercise lang:python xp:50 skills:2
 ## Lists, what are they?
 
