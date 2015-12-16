@@ -127,7 +127,7 @@ Using this numpy dot prefix all the time can become pretty tiring, so you can al
 
 Now, instead of numpy.array(), you'll have to use np.array() to use Numpy's array function:
 
-There are cases in which you only need one specific function of a package instead. Python allows you to make this explicit in your code. Suppose that we only want to use the array() function from the Numpy package. Instead of doing import numpy, you can instead do from numpy import array, like this:
+There are cases in which you only need one specific function of a package. Python allows you to make this explicit in your code. Suppose that we only want to use the array() function from the Numpy package. Instead of doing import numpy, you can instead do from numpy import array, like this:
 
 This time, you can simply call the array function like this, no need to use numpy dot here. 
 
