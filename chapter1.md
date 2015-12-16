@@ -14,7 +14,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:2
 ## The Python Interface
 
-In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`my_script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
+In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
 You can hit _Submit Answer_ as often as you want: you will not loose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
@@ -22,7 +22,7 @@ You can also use the IPython Shell interactively: simply type commands and hit E
 
 *** =instructions
 - Experiment in the IPython Shell: type 5 / 8, for example.
-- Add another line of code to the Python script (`my_script.py`) that prints out the sum of `7` and `10`.
+- Add another line of code to the Python script: `print(7 + 10)`. It will print out the sum of `7` and `10`.
 - Hit _Submit Answer_ to execute the python script and receive feedback.
 
 *** =hint
