@@ -288,7 +288,7 @@ test_object("room", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("room_up", do_eval = False)
 test_function("room.upper", 
-        not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method of the `pool` object using the `.` notation.")
+        not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `pool` object using the `.` notation.")
 test_object("room_up")
 
 msg = "Print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"
@@ -302,7 +302,7 @@ test_function("room.count",
 test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in `room`.")
 
 
-success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
 
