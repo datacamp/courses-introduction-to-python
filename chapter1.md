@@ -22,7 +22,7 @@ You can also use the IPython Shell interactively: simply type commands and hit E
 
 *** =instructions
 - Experiment in the IPython Shell: type 5 / 8, for example.
-- Add another line of code to the Python script: `print(7 + 10)`. It will print out the sum of `7` and `10`.
+- Add another line of code to the Python script: `print(7 + 10)`.
 - Hit _Submit Answer_ to execute the python script and receive feedback.
 
 *** =hint
