@@ -54,7 +54,7 @@ test_operator(2, not_found_msg = "You should add a second operation, as instruct
   incorrect_op_msg = "Your second operation is wrong, be sure to add `7` to `10`.",
   incorrect_result_msg = "The operation you added should add up to `17`.")
 test_function("print", 2,
-  not_called_msg = "Remember that you should call `print()` to print out the result of your calculation.",
+  not_called_msg = "Remember that you should call [`print()`](https://docs.python.org/3/library/functions.html#print) to print out the result of your calculation.",
   incorrect_msg = "You should type `print(7 + 10)` to print out the result of your calculation.")
 
 success_msg("Great!")
@@ -100,7 +100,7 @@ To add comments to your Python script, you can use the `#` tag. These comments a
 - Above the `print(7 + 10)`, add the comment `# Addition works too`.
 
 *** =hint
-hint comes here
+- For this exercise you only have to add one line of comments. It won't do anything. Add `# Addition works too` right above `print(7 + 10)`.
 
 *** =pre_exercise_code
 ```{python}
@@ -200,10 +200,10 @@ for i in range(1,7):
   test_function("print", index = i, not_called_msg = msg, incorrect_msg = msg)
 
 test_operator(7, not_found_msg = "Add an operation to calculate what's instructed.", 
-  incorrect_op_msg = "You should use at least one '*' and one '**' operator to calculate what's instructed.",
+  incorrect_op_msg = "You should use at least one `*` and one `**` operator to calculate what's instructed.",
   incorrect_result_msg = "You should calculate the total interest on 100 dollar after 7 years given a 10% rate.")
 test_function("print", index = 7, 
-  not_called_msg = "Don't forget to print out your result with `print()`.",
+  not_called_msg = "Don't forget to print out your result with [`print()`](https://docs.python.org/3/library/functions.html#print).",
   incorrect_msg = "Print out your result using `print(100 * 1.1 ** 7)`.")
 
 success_msg("Time for another video!")
@@ -283,7 +283,7 @@ Instead of calculating with the actual values, you can use variables instead. Th
 *** =hint
 - To create the variable `factor`, use `factor = 1.10`.
 - In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
-- Use the `print()` function to print the value of a variable.
+- Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
 
 *** =pre_exercise_code
 ```{python}
@@ -327,7 +327,7 @@ test_object("savings", undefined_msg = "The variable `savings` was defined for y
 test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
 test_object("result", do_eval = False)
 test_operator(3, not_found_msg = "Have you used the correct calculations to calculate `result`?",
-                 incorrect_op_msg = "Use '*' and '**' to calculate result.",
+                 incorrect_op_msg = "Use `*` and `**` to calculate `result`.",
                  incorrect_result_msg = "Have you used to correct variables to calculate result?")
 test_object("result", incorrect_msg = "Assign the correct value to `result`.")
 test_function("print", incorrect_msg = "You should print out the result using `print(result)`.")
@@ -389,7 +389,7 @@ success_msg("Nice!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Guess the type
 
-To find out the type of a value or a variable that refers to that value, you can use the `type()` function. Suppose you've defined a variable `a`, but you forgot the type of this variable. Simply executing
+To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. Simply executing
 
 ```
 type(a)
@@ -532,18 +532,18 @@ print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 
 This will not work, though, as you cannot simply sum strings and floats. 
 
-To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need `str()`, to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string. 
+To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string. 
 
-Similar functions such as `int()`, `float()` and `bool()` will help you convert Python values into any type.
+Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
 *** =instructions
 - Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
-- Fix the code on the right such that the printout runs without errors; use the function `str()` to convert the variables to strings.
+- Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
 - Convert the variable `pi_string` to a float, and store this float as a new variable, `pi_float`.
 
 *** =hint
-- You should use `str()` twice!
-- Use `float()` on `pi_string` and store the result in `pi_float`.
+- You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
+- Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
 
 *** =pre_exercise_code
 ```{python}
@@ -600,7 +600,7 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("pi_float", do_eval = False)
-test_function("float", incorrect_msg = "Pass `pi_string` to `float()` in order to convert it to a float.")
+test_function("float", incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.")
 test_object("pi_float", incorrect_msg = "Assign the correct value to `pi_float`.")
 
 success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
@@ -629,7 +629,7 @@ Which one of these will throw an error? You can always copy and paste this code 
 *** =sct
 ```{python}
 msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
-msg3 = "Correct! Because you're not converting `2` to a string with `str()`, this will give an error."
+msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
