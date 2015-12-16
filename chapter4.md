@@ -20,12 +20,12 @@ A list `baseball` has already been defined in the Python script, representing th
 
 *** =instructions
 - Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use `np.array()` to create a Numpy array from `baseball`. Name this array `np_baseball`.
+- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a Numpy array from `baseball`. Name this array `np_baseball`.
 - Print out the type of `np_baseball` to check that you got it right.
 
 *** =hint
 - `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a Numpy function.
-- `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
+- [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) should take on input `baseball`. Assign the result of the function call to `np_baseball`.
 - To print out the type of a variable `x`, simply type `print(type(x))`.
 
 *** =pre_exercise_code
@@ -71,8 +71,9 @@ test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 test_import("numpy")
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array") 
-test_object("np_baseball")
+test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
+                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(baseball)`.") 
+test_object("np_baseball", incorrect_msg = "Assign the correct value to `np_baseball`.")
 
 msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
 test_function("type", 1, incorrect_msg = msg)
@@ -94,7 +95,7 @@ Being a huge baseball fan, you call the MLB, the Major League of Baseball, and a
 - Print out `np_height_m` and check if the output makes sense.
 
 *** =hint
-- Use `np.array()` and pass it `height`. Store the result in `np_height`.
+- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) and pass it `height`. Store the result in `np_height`.
 - Perform calculations as if `np_height` is a single number: `np_height * factor` is part of the answer.
 - To print out a variable `x`, type `print(x)` in the Python script.
 
@@ -152,8 +153,9 @@ print(np_height_m)
 test_import("numpy", same_as = False)
 
 test_object("np_height", do_eval = False)
-test_function("numpy.array")
-test_object("np_height")
+test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
+                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(np_height)`.") 
+test_object("np_height", incorrect_msg = "Assign the correct value to `np_height`.")
 
 test_function("print", 1, incorrect_msg = "Print out `np_height` with `print(np_height)`.")
 
@@ -240,7 +242,8 @@ msg = "The variable `np_height_m` was defined for you. You don't have to change 
 test_object("np_height_m", incorrect_msg = msg, undefined_msg = msg)
 
 test_object("np_weight_kg", do_eval = False)
-test_function("numpy.array", 2, incorrect_msg = "For assigning `np_weight_kg`, use `np.array(weight)`.")
+test_function("numpy.array", 2, not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).", 
+                                incorrect_msg = "To assign `np_weight_kg`, use `np.array(weight)`.")
 test_operator(2, incorrect_result_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
 test_object("np_weight_kg", incorrect_msg = "Assign the result of your calculation to `np_weight_kg`.")
 
@@ -283,7 +286,7 @@ The code that calculates the BMI of all baseball players is already included. Fo
 *** =hint
 - `bmi > 30` will give you a boolean Numpy array in which the elements are `True` if the corresponding player's BMI is over 30.
 - To print out a variable `x`, type `print(x)` in the Python script.
-- `bmi[light]` will return the array you need. Don't forget to wrap a `print()` call around it!
+- `bmi[light]` will return the array you need. Don't forget to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it!
 
 *** =pre_exercise_code
 ```{python}
@@ -414,7 +417,7 @@ The script on the right already contains code that imports `numpy` as `np`, and 
 - Print out a sub-array of `np_height`: It contains the elements at index 100 up to **and including** index 110
 
 *** =hint
-- Make sure to wrap a `print()` call around your subsetting operations.
+- Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around your subsetting operations.
 - Use `[100:111]` to get the elements from index 100 up to and including index 110.
 
 *** =pre_exercise_code
@@ -495,14 +498,14 @@ Before working on the actual MLB data, let's try to create a 2D Numpy array from
 In this exercise, `baseball` is a list of lists: The main list contains 4 elements; each of these elements is a list containing the height and the weight of 5 baseball players, is this order. `baseball` is already coded for you in the script.
 
 *** =instructions
-- Use `np.array()` to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
+- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
 - Print out the type of `np_baseball`. 
 - Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
 
 *** =hint
-- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D Numpy array in `np_baseball`.
-- Use `print()` in combination with `type()` for the second instruction.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+- `baseball` is already coded for you in the script. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D Numpy array in `np_baseball`.
+- Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) for the second instruction.
+- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
 
 *** =pre_exercise_code
 ```{python}
@@ -547,11 +550,19 @@ print(np_baseball.shape)
 
 *** =sct
 ```{python}
-# TO DO SCT
+msg = "You don't have to change or remove the predefined variables."
+test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 
+test_object("np_baseball", do_eval = False)
+test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).", 
+                             incorrect_msg = "You should call `np.array(baseball)` to make a 2D numpy array out of `baseball`.")
+test_object("np_baseball", incorrect_msg = "Assign the correct value to `np_baseball`.")                           
+  
 msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
 test_function("type", 1, incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
+
+test_function("print", 2, incorrect_msg = "You can print the shape of `np_baseball` like this: `np_baseball.shape`.")
 
 success_msg("Great! You're ready to convert the actual MLB data to a 2D Numpy array now!")
 ```
@@ -567,12 +578,12 @@ The MLB was again very helpful and passed you the data in a different structure:
 Can you store the data as a 2D array to unlock Numpy's extra functionality?
 
 *** =instructions
-- Use `np.array()` to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
+- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
 - Print out the `shape` attribute of `np_baseball`.
 
 *** =hint
-- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D Numpy array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+- `baseball` is already available in the Python environment. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D Numpy array in `np_baseball`.
+- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
 
 *** =pre_exercise_code
 ```{python}
@@ -614,11 +625,12 @@ print(np_baseball.shape)
 test_import("numpy", same_as = False)
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array", not_called_msg = "Be sure to call `np.array()`.", 
-                             incorrect_msg = "You should call `np.array(baseball)` to make a numpy array out of `baseball`.")
+test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).", 
+                             incorrect_msg = "You should call `np.array(baseball)` to make a 2D numpy array out of `baseball`.")
 test_object("np_baseball", incorrect_msg = "Assign the numpy array you created to `np_baseball`.")
 
 test_function("print", incorrect_msg = "Print the `shape` field of the `np_baseball` object using the dot notation: `.`.")
+
 success_msg("Slick! Time to show off some killer features of multi-dimensional Numpy arrays!")
 ```
 
@@ -650,7 +662,7 @@ The code that converts the pre-loaded `baseball` list to a 2D Numpy array is alr
 *** =hint
 - You need row index 49 in the first instruction! More specifically, you'll want to use `[49,:]`.
 - To select the entire second column, you'll need `[:,1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a `print()` statement.
+- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a [`print()`](https://docs.python.org/3/library/functions.html#print) statement.
 
 *** =pre_exercise_code
 ```{python}
@@ -740,8 +752,8 @@ np_mat + np_mat
 
 *** =hint
 - `np_baseball + update` will do a element-wise summation of the two Numpy arrays.
-- Create a Numpy array with `np.array()`; the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
+- Create a Numpy array with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); the input is a regular Python list with three elements.
+- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 
 *** =pre_exercise_code
 ```{python}
@@ -812,7 +824,7 @@ test_function("print", 1, incorrect_msg = "Print out the result of `np_baseball 
 test_object("conversion", do_eval = False)
 msg = "Create the `conversion` object using `np.array(...)`. Fill in the correct list on the dots."
 test_function("numpy.array", not_called_msg = msg, incorrect_msg = msg)
-test_object("conversion", incorrect_msg = "Assign the object you created with `np.array()` to `conversion`.")
+test_object("conversion", incorrect_msg = "Assign the object you created with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to `conversion`.")
 
 
 test_operator(2, not_found_msg = "Use the `*` operator to multiply `np_baseball` with `conversion`.",
@@ -850,8 +862,8 @@ The baseball data is available as a 2D Numpy array with 3 columns (height, weigh
 
 *** =hint
 - Use 2D Numpy subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a Numpy array. Don't forget to throw in a `print()` call.
-- For the last instruction, use `np.median()`.
+- If `numpy` is imported as `np`, you can use [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html) to get the mean of a Numpy array. Don't forget to throw in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
+- For the last instruction, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).
 
 *** =pre_exercise_code
 ```{python}
@@ -901,11 +913,11 @@ test_import("numpy", same_as = False)
 
 test_object("np_height", incorrect_msg = "Make sure to use the correct subsetting operation to define `np_height`.")
 
-test_function("numpy.mean", incorrect_msg = "Pass `np_height` as an argument to the `mean` function of `numpy` to print out the correct value for the first printout. Don't forget to use the dot notation: `.`.")
+test_function("numpy.mean", not_called_msg = "Don't forget to call [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html).", incorrect_msg = "Pass `np_height` as an argument to the `mean` function of `np` to print out the correct value for the first printout. Don't forget to use the dot notation: `.`.")
 
 test_function("print", 1, incorrect_msg = "Print out the result of your calculations using `print(np.mean(np_height))`.")
 
-test_function("numpy.median", incorrect_msg = "Pass `np_height` as an argument to the `median` function of `numpy` to print out the correct value for the second printout. Don't forget to use the dot notation: `.`.")
+test_function("numpy.median", not_called_msg = "Don't forget to call [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "Pass `np_height` as an argument to the `median` function of `np` to print out the correct value for the second printout. Don't forget to use the dot notation: `.`.")
 
 test_function("print", 2, incorrect_msg = "Print out the result of your calculations using `print(np.median(np_height))`.")
 
@@ -921,13 +933,13 @@ The Python script on the right already includes code to print out informative me
 
 *** =instructions
 - The code to print out the mean height is already included. Complete the code for the median height.
-- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`.
-- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
+- Use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) on the first column of `np_baseball` to calculate `stddev`.
+- Do big players tend to be heavier? Use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to store the correlation between the first and second column of `np_baseball` in `corr`.
 
 *** =hint
-- Use `np.median()` to calculate the median. Make sure to select to correct column first!
-- Subset the same column when calculating the standard deviation with `np.std()`.
-- Use `np_baseball[:,0]` and `np_baseball[:,1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
+- Use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) to calculate the median. Make sure to select to correct column first!
+- Subset the same column when calculating the standard deviation with [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).
+- Use `np_baseball[:,0]` and `np_baseball[:,1]` to select the first and second columns; these are the inputs to [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).
 
 *** =pre_exercise_code
 ```{python}
@@ -995,17 +1007,17 @@ test_object("avg", undefined_msg = msg, incorrect_msg = msg)
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
 test_object("med", do_eval = False)
-test_function("numpy.median", 1, incorrect_msg = "To assign `med`, use `np.median()`. Make sure to pass it the correct column of `np_baseball`.")
+test_function("numpy.median", 1, not_called_msg = "Don't forget to call [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "To assign `med`, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Make sure to pass it the correct column of `np_baseball`.")
 test_object("med")
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 
 test_object("stddev", do_eval = False)
-test_function("numpy.std", 1, incorrect_msg = "To assign `stddev`, use `np.std()`. Make sure to pass it the correct column of `np_baseball`.")
+test_function("numpy.std", 1, not_called_msg = "Don't forget to call [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).", incorrect_msg = "To assign `stddev`, use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html). Make sure to pass it the correct column of `np_baseball`.")
 test_object("stddev")
 test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
 
 test_object("corr", do_eval = False)
-test_function("numpy.corrcoef", 1, incorrect_msg = "To assign `med`, use `np.corrcoef()`. Make sure to pass it the correct column of `np_baseball`.")
+test_function("numpy.corrcoef", 1, not_called_msg = "Don't forget to call [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).", incorrect_msg = "To assign `med`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct column of `np_baseball`.")
 test_object("corr")
 test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
 
@@ -1030,11 +1042,11 @@ You're fairly confident that the median height of goalkeepers is higher than tha
 - Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
 - Extract all the heights of the goalkeepers. You can use a little trick here: use `np_positions == 'GK'` as an index for `np_heights`. Assign the result to `gk_heights`.
 - Extract all the heights of the all the other players. This time use `np_positions != 'GK'` as an index for `np_heights`. Assign the result to `other_heights`.
-- Print out the median height of the goalkeepers using `np.median()`.
+- Print out the median height of the goalkeepers using [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).
 - Do the same for the other players. Print out their median height.
 
 *** =hint
-- Use `np.array()` to convert the lists to numpy arrays.
+- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to convert the lists to numpy arrays.
 - You should use `np_heights[np_positions == 'GK']` to extract the heights of all goalkeepers. Don't forget to assign the result to `gk_heights`.
 - You should use `np_heights[np_positions != 'GK']` to extract the heights of all other players. Don't forget to assign the result to `other_heights`.
 - Print out the median height of the goalkeepers using `np.median(gk_heights)`.
@@ -1100,7 +1112,7 @@ print(np.median(other_heights))
 ```{python}
 test_import("numpy")
 
-msg = "Convert the regular lists to numpy lists using `np.array()`. This function takes one argument: the regular list itself!"
+msg = "Convert the regular lists to numpy lists using [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array). This function takes one argument: the regular list itself!"
 test_object("np_positions", do_eval = False)
 test_function("numpy.array", 1, not_called_msg = msg, incorrect_msg = msg)
 test_object("np_positions", incorrect_msg = "Assign the converted numpy array of `positions` to `np_positions`.")
