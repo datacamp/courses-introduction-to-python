@@ -509,7 +509,7 @@ In this exercise, `baseball` is a list of lists: The main list contains 4 elemen
 
 *** =pre_exercise_code
 ```{python}
-# pec
+import numpy as np
 ```
 
 *** =sample_code
@@ -519,6 +519,9 @@ baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
+
+# Import numpy
+import numpy as np
 
 # Create a 2D Numpy array from baseball: np_baseball
 
@@ -538,6 +541,9 @@ baseball = [[180, 78.4],
             [210, 98.5],
             [188, 75.2]]
 
+# Import numpy
+import numpy as np
+
 # Create a 2D Numpy array from baseball: np_baseball
 np_baseball = np.array(baseball)
 
@@ -552,6 +558,8 @@ print(np_baseball.shape)
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
 test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
+
+test_import("numpy", same_as = False)
 
 test_object("np_baseball", do_eval = False)
 test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).", 
@@ -761,9 +769,7 @@ import pandas as pd
 import numpy as np
 baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
 n = len(baseball)
-update = np.column_stack((np.random.normal(1, 0.20, n), 
-                          np.random.normal(0, 10, n), 
-                          np.ones(n)))
+update = np.array(pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/update.csv", header = None))
 import numpy as np
 ```
 
@@ -932,9 +938,9 @@ Because the mean and median are so far apart, you decide to complain with the ML
 The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
 *** =instructions
-- The code to print out the mean height is already included. Complete the code for the median height.
-- Use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) on the first column of `np_baseball` to calculate `stddev`.
-- Do big players tend to be heavier? Use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to store the correlation between the first and second column of `np_baseball` in `corr`.
+- The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.
+- Use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) on the first column of `np_baseball` to calculate `stddev`. Replace `None` with the correct code.
+- Do big players tend to be heavier? Use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to store the correlation between the first and second column of `np_baseball` in `corr`. Replace `None` with the correct code.
 
 *** =hint
 - Use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) to calculate the median. Make sure to select to correct column first!
@@ -946,7 +952,6 @@ The Python script on the right already includes code to print out informative me
 import pandas as pd
 np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
 import numpy as np
-__REPLACE_THIS__ = 0
 ```
 
 *** =sample_code
@@ -960,16 +965,16 @@ import numpy as np
 avg = np.mean(np_baseball[:,0])
 print("Average: " + str(avg))
 
-# Print median height
-med = __REPLACE_THIS__
+# Print median height. Replace 'None'
+med = None
 print("Median: " + str(med))
 
-# Print out the standard deviation on height
-stddev = __REPLACE_THIS__
+# Print out the standard deviation on height. Replace 'None'
+stddev = None
 print("Standard Deviation: " + str(stddev))
 
-# Print out correlation between first and second column
-corr = __REPLACE_THIS__
+# Print out correlation between first and second column. Replace 'None'
+corr = None
 print("Correlation: " + str(corr))
 ```
 
@@ -984,15 +989,15 @@ import numpy as np
 avg = np.mean(np_baseball[:,0])
 print("Average: " + str(avg))
 
-# Print median height
+# Print median height. Replace 'None'
 med = np.median(np_baseball[:,0])
 print("Median: " + str(med))
 
-# Print out the standard deviation on height
+# Print out the standard deviation on height. Replace 'None'
 stddev = np.std(np_baseball[:,0])
 print("Standard Deviation: " + str(stddev))
 
-# Print out correlation between first and second column
+# Print out correlation between first and second column. Replace 'None'
 corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])
 print("Correlation: " + str(corr))
 ```
@@ -1042,8 +1047,8 @@ You're fairly confident that the median height of goalkeepers is higher than tha
 - Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
 - Extract all the heights of the goalkeepers. You can use a little trick here: use `np_positions == 'GK'` as an index for `np_heights`. Assign the result to `gk_heights`.
 - Extract all the heights of the all the other players. This time use `np_positions != 'GK'` as an index for `np_heights`. Assign the result to `other_heights`.
-- Print out the median height of the goalkeepers using [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).
-- Do the same for the other players. Print out their median height.
+- Print out the median height of the goalkeepers using [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Replace `None` with the correct code.
+- Do the same for the other players. Print out their median height. Replace `None` with the correct code.
 
 *** =hint
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to convert the lists to numpy arrays.
@@ -1077,11 +1082,11 @@ import numpy as np
 # Heights of the other players: other_heights
 
 
-# Print out the median height of goalkeepers
+# Print out the median height of goalkeepers. Replace 'None'
+print("Median height of goalkeepers: " + str(None))
 
-
-# Print out the median height of other players
-
+# Print out the median height of other players. Replace 'None'
+print("Median height of other players: " + str(None))
 ```
 
 *** =solution
@@ -1101,11 +1106,11 @@ gk_heights = np_heights[np_positions == 'GK']
 # Heights of the other players: other_heights
 other_heights = np_heights[np_positions != 'GK']
 
-# Print out the median height of goalkeepers
-print(np.median(gk_heights))
+# Print out the median height of goalkeepers. Replace 'None'
+print("Median height of goalkeepers: " + str(np.median(gk_heights)))
 
-# Print out the median height of other players
-print(np.median(other_heights))
+# Print out the median height of other players. Replace 'None'
+print("Median height of other players: " + str(np.median(other_heights)))
 ```
 
 *** =sct
