@@ -236,12 +236,12 @@ Strings come with a bunch of methods. Follow the instructions closely to discove
 A string `room` has already been created for you to experiment with.
 
 *** =instructions
-- Use the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method on `room` and store the result in `room_up`. Use the dot notation.
+- Use the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` and store the result in `room_up`. Use the dot notation.
 - Print out `room` and `room_up`. Did both change?
-- Print out the number of o's on the variable `room`: call [`count()`](https://docs.python.org/3/library/functions.html#count) on `room` and pass the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
+- Print out the number of o's on the variable `room`: call [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `room` and pass the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
 
 *** =hint
-- You can call the [`upper()`](https://docs.python.org/3/library/functions.html#upper) method an `room` without additional inputs.
+- You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method an `room` without additional inputs.
 - To print out a variable `x`, you can write `print(x)`.
 - Make sure to wrap your `room.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
 
@@ -311,14 +311,14 @@ success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.p
 
 Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans, are also types, and also come prepacked with a bunch of useful methods. In this exercise, you'll be experimenting with:
 
-- [`index()`](https://docs.python.org/3/library/functions.html#index), to get the index of the first element of a list that matches its input and
-- [`count()`](https://docs.python.org/3/library/functions.html#count), to get the number of time an element appears in a list.
+- [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index), to get the index of the first element of a list that matches its input and
+- [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count), to get the number of time an element appears in a list.
 
 You'll be working on the list with the area of different parts of a house: `areas`.
 
 *** =instructions
-- Use the [`index()`](https://docs.python.org/3/library/functions.html#index) method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call [`count()`](https://docs.python.org/3/library/functions.html#count) on `areas` to find out how many times `14.5` appears in the list. Again, simply print out this number.
+- Use the [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index) method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
+- Call [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `areas` to find out how many times `14.5` appears in the list. Again, simply print out this number.
 
 *** =hint
 - To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
@@ -379,22 +379,22 @@ success_msg("Nice! These were examples of `list` methods that did not change the
 
 Most list methods will change the list they're called on. Examples are:
 
-- [`append()`](https://docs.python.org/3/library/functions.html#append), that adds an element to the list it is called on,
-- [`remove()`](https://docs.python.org/3/library/functions.html#remove), that removes the first element of a list that matches the input, and
-- [`reverse()`](https://docs.python.org/3/library/functions.html#reverse), that reverses the order of the elements in the list it is called on.
+- [`append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that adds an element to the list it is called on,
+- [`remove()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that removes the first element of a list that matches the input, and
+- [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that reverses the order of the elements in the list it is called on.
 
 You'll be working on the list with the area of different parts of the house: `areas`.
 
 *** =instructions
-- Use [`append()`](https://docs.python.org/3/library/functions.html#append) twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
+- Use [`append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
 - Print out `areas`
-- Use the [`reverse()`](https://docs.python.org/3/library/functions.html#reverse) method to reverse the order of the elements in `areas`.
+- Use the [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method to reverse the order of the elements in `areas`.
 - Print out `areas` once more.
 
 *** =hint
 - For the first instruction, use the `areas.append(___)` call twice.
 - To print out a variable `x`, simply write `print(x)`.
-- The [`reverse()`](https://docs.python.org/3/library/functions.html#reverse) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
+- The [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
 - To print out a variable `x`, simply write `print(x)`.
 
 *** =pre_exercise_code
@@ -577,12 +577,12 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 *** =instructions
 - Perform a selective import from the `math` package: you only want to use the `radians` function.
-- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r * \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/functions.html#radians) function, which you just imported.
+- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r * \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function, which you just imported.
 - Print out `dist`.
 
 *** =hint
 - Use `from math import radians` to do the selective import.
-- You can simply use the [`radians()`](https://docs.python.org/3/library/functions.html#radians) function now: Pass it the number 12 to get the angle in radians.
+- You can simply use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function now: Pass it the number 12 to get the angle in radians.
 - To print out a variable `x`, simply type `print(x)`.
 
 *** =pre_exercise_code
@@ -628,7 +628,7 @@ test_object("r", undefined_msg = msg, incorrect_msg = msg)
 test_import("math.radians", same_as = False)
 
 test_object("dist", do_eval = False)
-test_function("radians", 1, not_called_msg = "Your calculation of `dist` is not quite correct. You should use [`radians()`](https://docs.python.org/3/library/functions.html#radians) of the `math` package using the dot notation (`.`).")
+test_function("radians", 1, not_called_msg = "Your calculation of `dist` is not quite correct. You should use [`radians()`](https://docs.python.org/3/library/math.html#math.radians) of the `math` package using the dot notation (`.`).")
 test_object("dist", incorrect = "Assign the result of your calculations to `dist`.")
 
 test_function("print", incorrect_msg = "Make sure to print out `dist` using `print(dist)`.")
@@ -641,7 +641,7 @@ success_msg("Nice! Head over to the next exercise.")
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code. 
 
-Suppose you want to use the function [`inv()`](https://docs.python.org/3/library/functions.html#inv), which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Suppose you want to use the function [`inv()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linalg.inv.html), which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 
 ```
 my_inv([[1,2], [3,4]])
