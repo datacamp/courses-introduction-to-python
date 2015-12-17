@@ -734,14 +734,14 @@ msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("areas_1", do_eval = False)
-msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areaas_1`."
+msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`."
 test_operator(1, not_found_msg = msg,
                  incorrect_op_msg = msg,
                  incorrect_result_msg = msg +". Watch out for typo's.")
 test_object("areas_1")
 
 test_object("areas_2", do_eval = False)
-msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areaas_2`."
+msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`."
 test_operator(2, not_found_msg = msg,
                  incorrect_op_msg = msg,
                  incorrect_result_msg = msg +". Watch out for typo's.")
