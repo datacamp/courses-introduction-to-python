@@ -616,7 +616,7 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 ## List Manipulation
 
 *** =video_link
-//player.vimeo.com/video/146994265
+//player.vimeo.com/video/149289041
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Replace list elements
