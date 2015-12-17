@@ -29,7 +29,7 @@ After measuring the height of your family, you decide to collect some informatio
 - Print `areas` with the [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 
 *** =hint
-- You can use the variables that have already been created to build the list: `areas = [hallway, kitchen, ...]`.
+- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
 - Put `print(areas)` in your script to print out the list when submitting.
 
 *** =pre_exercise_code
@@ -40,11 +40,11 @@ After measuring the height of your family, you decide to collect some informatio
 *** =sample_code
 ```{python}
 # area variables (in square meters)
-hallway = 11.25
-kitchen = 18.0
-living = 20.0
-bedroom = 10.75
-bathroom = 9.50
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
 
 # Create list areas
 
@@ -57,11 +57,11 @@ bathroom = 9.50
 *** =solution
 ```{python}
 # Area variables (in square meters)
-hallway = 11.25
-kitchen = 18.0
-living = 20.0
-bedroom = 10.75
-bathroom = 9.50
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
 
 # Create list areas
 areas = [hallway, kitchen, living, bedroom, bathroom]
@@ -73,11 +73,11 @@ print(areas)
 *** =sct
 ```{python}
 msg = "Don't remove or edit the predefined variables!"
-test_object("hallway", undefined_msg = msg, incorrect_msg = msg)
-test_object("kitchen", undefined_msg = msg, incorrect_msg = msg)
-test_object("living", undefined_msg = msg, incorrect_msg = msg)
-test_object("bedroom", undefined_msg = msg, incorrect_msg = msg)
-test_object("bathroom", undefined_msg = msg, incorrect_msg = msg)
+test_object("hall", undefined_msg = msg, incorrect_msg = msg)
+test_object("kit", undefined_msg = msg, incorrect_msg = msg)
+test_object("liv", undefined_msg = msg, incorrect_msg = msg)
+test_object("bed", undefined_msg = msg, incorrect_msg = msg)
+test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order. Watch out for typo's.")
 
