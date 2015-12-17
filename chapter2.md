@@ -93,7 +93,7 @@ A list can contain any Python type. Although it's not really common, a list can 
 
 The printout of the previous exercise wasn't really satisfying: it's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
-The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bathroom"` is a string, while `bathroom` is a variable, representing the float `9.50` that you've specified earlier.
+The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bathroom"` is a string, while `bath` is a variable, representing the float `9.50` that you've specified earlier.
 
 *** =instructions
 - Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area. More specifically, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
