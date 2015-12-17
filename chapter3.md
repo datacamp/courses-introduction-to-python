@@ -214,8 +214,8 @@ test_operator(1, not_found_msg = msg,
                  incorrect_op_msg =  msg,
                  incorrect_result_msg = msg + " Mind the order!")
 
-test_object("full_sorted", do_eval = False)
-test_function("sorted")
+test_function("sorted", not_called_msg = "Make sure to call `sorted()` to define `full_sorted`.",
+                        incorrect_msg = "The arguments of `sorted()` are incorrect. Are you set the first argument to `full` and `reverse` to `True`. Use the template provided to you in the description of the exercise and fill in the correct values. Mind typo's!")
 test_object("full_sorted", 
             incorrect_msg = "Assign the correct value to `full_sorted`. This variable should contain the result of your call of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted).")
 
@@ -286,16 +286,14 @@ print(room.count("o"))
 msg = "You don't have to change or remove the predefined variables."
 test_object("room", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("room_up", do_eval = False)
-test_function("room.upper", 
-        not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `pool` object using the `.` notation.")
-test_object("room_up")
+test_function("room.upper", not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `pool` object using the `.` notation. Watch out here, don't forget the parentheses after upper: `room.upper()`.")
+test_object("room_up", incorrect_msg = "Assign the result of your `room.upper()` call to `room_up`.")
 
 msg = "Print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"
 test_function("print", 1, incorrect_msg = msg % "room")
 test_function("print", 2, incorrect_msg = msg % "room_up")
 
-msg = "Don't forget to count the o's in `room` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument."
+msg = "Don't forget to count the o's in `room` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument. Make sure to place the `\"o\"` between double quotes."
 test_function("room.count", 
               not_called_msg = msg,
               incorrect_msg = msg)
@@ -441,25 +439,26 @@ print(areas)
 
 *** =sct
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
-test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-
-msg = "Use the `append` method on `areas` to expand with `%d` the %s time."
+msg = "Use the `append()` method on `areas` to expand with `%s` the %s time."
 test_function("areas.append", 1,
-              not_called_msg = msg % ( 24.5, "first"),
-              incorrect_msg = msg % ( 24.5, "first"))
+              not_called_msg = msg % ( "24.5", "first"),
+              incorrect_msg = msg % ( "24.5", "first"))
 test_function("areas.append", 2,
-              not_called_msg = msg % (15.45, "second"),
-              incorrect_msg = msg % (15.45, "second"))
+              not_called_msg = msg % ("15.45", "second"),
+              incorrect_msg = msg % ("15.45", "second"))
               
-test_function("print", 1, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
-
-msg = "Use the `reverse` method on `areas` to reverse it."
+msg = "Use the `reverse()` method on `areas` to reverse it. Don't forget the parantheses!"
 test_function("areas.reverse", 
               not_called_msg = msg,
               incorrect_msg = msg)
+              
+test_function("print", 1, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
+
+
 
 test_function("print", 2, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
+
+test_object("areas", incorrect_msg = "The final value of `areas` is not correct although you did the correct operations. Did you change the predefined variables?", undefined_msg = "Don't remove `areas`.")
 
 success_msg("Great!")
 ```
@@ -543,12 +542,10 @@ test_object("r", undefined_msg = msg, incorrect_msg = msg)
 
 test_import("math", same_as = False)
 
-test_object("C", do_eval = False)
-test_operator(1, incorrect_result_msg = "Your calculation of `C` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
+test_operator(2, incorrect_result_msg = "Your calculation of `C` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
 test_object("C")
 
-test_object("A", do_eval = False)
-test_operator(2, incorrect_result_msg = "Your calculation of `A` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
+test_operator(3, incorrect_result_msg = "Your calculation of `A` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
 test_object("A")
 
 msg = "You don't have to change or remove the predefined print functions."
