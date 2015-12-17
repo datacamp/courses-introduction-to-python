@@ -148,7 +148,7 @@ You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#so
 
 `key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
 
-In this exercise, you'll only have to specify `iterable` and `inverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will obviously be matched to the `iterable` argument, but what about the second input. To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
+In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will obviously be matched to the `iterable` argument, but what about the second input. To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
 
 ```
 sorted(___, reverse = ___)
