@@ -1022,7 +1022,7 @@ test_object("stddev")
 test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
 
 test_object("corr", do_eval = False)
-test_function("numpy.corrcoef", 1, not_called_msg = "Don't forget to call [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).", incorrect_msg = "To assign `med`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct column of `np_baseball`.")
+test_function("numpy.corrcoef", 1, not_called_msg = "Don't forget to call [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).", incorrect_msg = "To assign `corr`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct columns of `np_baseball`. You have to pass it two columns.")
 test_object("corr")
 test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
 
