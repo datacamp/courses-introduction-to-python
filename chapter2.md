@@ -64,7 +64,7 @@ bed = 10.75
 bath = 9.50
 
 # Create list areas
-areas = [hallway, kitchen, living, bedroom, bathroom]
+areas = [hall, kit, liv, bed, bath]
 
 # Print areas
 print(areas)
