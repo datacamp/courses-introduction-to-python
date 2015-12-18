@@ -1011,17 +1011,14 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("avg", undefined_msg = msg, incorrect_msg = msg)
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
-test_object("med", do_eval = False)
 test_function("numpy.median", 1, not_called_msg = "Don't forget to call [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "To assign `med`, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Make sure to pass it the correct column of `np_baseball`.")
 test_object("med")
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 
-test_object("stddev", do_eval = False)
 test_function("numpy.std", 1, not_called_msg = "Don't forget to call [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).", incorrect_msg = "To assign `stddev`, use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html). Make sure to pass it the correct column of `np_baseball`.")
 test_object("stddev")
 test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
 
-test_object("corr", do_eval = False)
 test_function("numpy.corrcoef", 1, not_called_msg = "Don't forget to call [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).", incorrect_msg = "To assign `corr`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct columns of `np_baseball`. You have to pass it two columns.")
 test_object("corr")
 test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
