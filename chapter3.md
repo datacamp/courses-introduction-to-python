@@ -289,7 +289,7 @@ test_object("room", undefined_msg = msg, incorrect_msg = msg)
 test_function("room.upper", not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `pool` object using the `.` notation. Watch out here, don't forget the parentheses after upper: `room.upper()`.")
 test_object("room_up", incorrect_msg = "Assign the result of your `room.upper()` call to `room_up`.")
 
-msg = "Print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"
+msg = "For the second instruction, print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"
 test_function("print", 1, incorrect_msg = msg % "room")
 test_function("print", 2, incorrect_msg = msg % "room_up")
 
@@ -361,13 +361,13 @@ msg = "Don't forget to find the index of `20.0` in `areas` by calling the [`inde
 test_function("areas.index", 
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 1, not_called_msg = "Don't forget to print out the index of `20.0` in `areas`.")
+test_function("print", 1, not_called_msg = "Don't forget to print out the index of `20.0` in `areas`.", incorrect_msg = "For the first printout, you should use `print(areas.index(20.0))`.")
 
 msg = "Don't forget to count the number of times `14.5` appears in `areas` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument."
 test_function("areas.count", 
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 2, not_called_msg = "Don't forget to print out the count of `14.5` in `areas`.")
+test_function("print", 2, not_called_msg = "Don't forget to print out the count of `14.5` in `areas`.", incorrect_msg = "For the second printout, you should use `print(areas.count(14.5))`.")
 
 success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
 ```
