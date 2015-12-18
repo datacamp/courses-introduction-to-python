@@ -1,17 +1,11 @@
-# DataCamp Introduction to Python: First try
+# Intro to Python for Data Science
 
-- user: introtopython@datacamp.com
-- pass: testtest
-- link: https://campus.datacamp.com/courses/735
+This repository contains the source files for the interactive course "Intro to Python for Data Science", hosted at www.datacamp.com. Feel free to suggest improvements or contact us at support@datacamp.com!
 
-```
-library(datacamp)
-datacamp_login("introtopython@datacamp.com", "testtest", "")
-upload_course(upload_chapters = TRUE, force = TRUE, open = FALSE)
-library(datacamp)
-datacamp_login("introtopython@datacamp.com", "testtest", "staging")
-upload_course(upload_chapters = TRUE, force = TRUE, open = FALSE)
-library(datacamp)
-datacamp_login("introtopython@datacamp.com", "testtest", "dev")
-upload_course(upload_chapters = TRUE, force = TRUE, open = FALSE)
-```
+## Create your own DataCamp course?
+
+This repository can help to get an idea about course creation for the DataCamp platform. You can freely use and adapt this content to create your own interactive courses for our platform. For a full guide on course creation, check out the different manuals at [docs.datacamp.com/teach](http://docs.datacamp.com/teach).
+
+<p align="center">
+<img src="https://s3.amazonaws.com/assets.datacamp.com/img/logo/logo_blue_full.svg" width="250">
+</p>
