@@ -127,7 +127,7 @@ print(7 + 10)
 
 *** =sct
 ```{python}
-test_student_typed("#\s*(\w+) works (\w+)\s*print\(7", not_typed_msg = "Make sure to add the instructed comment right before `print(7+10)`.")
+test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Make sure to add the instructed comment right before `print(7+10)`.")
 success_msg("Great!")
 ```
 

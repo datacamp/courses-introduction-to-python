@@ -790,7 +790,7 @@ Which of the code chunks will do the job for us?
 - `del(areas[10]); del(areas[11])`
 - `del(areas[10:11])`
 - `del(areas[-4:-2])`
-- `del(areas[-3]); del(areas[-3])`
+- `del(areas[-3]); del(areas[-4])`
 
 *** =hint
 You can simply try all the different options to see if they work. Just make sure to re-initialize the `areas` list again before you try a new option.
