@@ -726,7 +726,7 @@ test_import("numpy", same_as = False)
 msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("print", 1, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[49,:]`. This will select the 49th row completely.")
+test_function("print", 1, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[49,:]`. This will select the 50th row completely.")
 
 test_object("np_weight", incorrect_msg = "Define `np_weight` by subsetting the `np_baseball` object with `[:,1]`. This will select the first column, completely.")
 
@@ -827,7 +827,6 @@ test_operator(1, not_found_msg = "Use the `+` operator to add `update` to `np_ba
                  
 test_function("print", 1, incorrect_msg = "Print out the result of `np_baseball + update` using `print(np_baseball + update)`.")
 
-test_object("conversion", do_eval = False)
 msg = "Create the `conversion` object using `np.array(...)`. Fill in the correct list on the dots."
 test_function("numpy.array", not_called_msg = msg, incorrect_msg = msg)
 test_object("conversion", incorrect_msg = "Assign the object you created with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to `conversion`.")

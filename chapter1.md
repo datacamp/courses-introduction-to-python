@@ -16,7 +16,7 @@ attachments :
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
-You can hit _Submit Answer_ as often as you want: you will not loose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+You can hit _Submit Answer_ as often as you want: you will not lose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
 You can also use the IPython Shell interactively: simply type commands and hit Enter. When you work in the shell directly, your code will not be checked for correctness: a great way to experiment.
 
@@ -494,14 +494,11 @@ print(doubledesc)
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
-test_operator(1, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_object("factor", undefined_msg = msg, incorrect_msg = msg)
-test_operator(2, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_object("desc", undefined_msg = msg, incorrect_msg = msg)
 
 
-test_object("year1", do_eval = False)
-test_operator(3, not_found_msg = "Calculate `year1` using the `*` operator.",
+test_operator(1, not_found_msg = "Calculate `year1` using the `*` operator.",
                  incorrect_op_msg = "To calculate `year1`, you should use `*` once.",
                  incorrect_result_msg = "You should use `savings` and `factor` to calculate `year1`. Take a look at the hint if you're stuck.")
 test_object("year1", incorrect_msg = "Assign the correct value you calculated to `year1`.")
@@ -510,9 +507,8 @@ msg = "Make sure to print out the type of `year1` like this: `print(type(year1))
 test_function("type", incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
 
-test_object("doubledesc", do_eval = False)
 msg = "You can add up a string to another string, just type `desc + desc`."
-test_operator(4, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
+test_operator(2, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_object("doubledesc", incorrect_msg  = "Assign the resulting string to `doubledesc`.")
 
 test_function("print", 2, incorrect_msg = "Be sure to print out `double_desc`.")

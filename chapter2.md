@@ -79,7 +79,7 @@ test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order. Watch out for typo's.")
+test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order: `hall`, `kit`, `liv`, `bed` and `bath`. Watch out for typo's. The list doesn't have to contain anything else.")
 
 test_function("print", incorrect_msg = "Print out the `areas` list you created by using `print(areas)`.")
 
@@ -520,7 +520,7 @@ x[:]
 ```
 
 *** =instructions
-- Use slicing to create the lists `downstairs` and `upstairs` again, this time without using indexes if it's not necessary.
+- Use slicing to create the lists `downstairs` and `upstairs` again, this time without using indexes if it's not necessary. Remember `downstairs` are the first 6 elements of `areas` and `upstairs` are the last 4 elements of `areas`.
 
 *** =hint
 - To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
