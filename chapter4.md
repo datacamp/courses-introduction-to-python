@@ -159,9 +159,7 @@ test_object("np_height", incorrect_msg = "Assign the correct value to `np_height
 
 test_function("print", 1, incorrect_msg = "Print out `np_height` with `print(np_height)`.")
 
-test_object("np_height_m", do_eval = False)
-test_operator(1, incorrect_result_msg = "Your calculation of `np_height_m` is not quite correct, be sure to multily `np_height` with `0.0254`.")
-test_object("np_height_m", incorrect_msg = "Assign the result of your calculation to `np_height_m`.")
+test_object("np_height_m", incorrect_msg = "Your calculation of `np_height_m` is not quite correct, be sure to multily `np_height` with `0.0254`.")
 
 test_function("print", 2, incorrect_msg = "Print out `np_height_m` with `print(np_height_m)`.")
 
@@ -1018,8 +1016,7 @@ test_function("numpy.std", 1, not_called_msg = "Don't forget to call [`np.std()`
 test_object("stddev")
 test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
 
-test_function("numpy.corrcoef", 1, not_called_msg = "Don't forget to call [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).", incorrect_msg = "To assign `corr`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct columns of `np_baseball`. You have to pass it two columns.")
-test_object("corr")
+test_object("corr", incorrect_msg = "To assign `corr`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct columns of `np_baseball`. You can pass it two columns.")
 test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
 
 success_msg("Great! Time to use all of your new data science skills in the last exercise!")

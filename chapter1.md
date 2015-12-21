@@ -498,7 +498,7 @@ test_object("factor", undefined_msg = msg, incorrect_msg = msg)
 test_object("desc", undefined_msg = msg, incorrect_msg = msg)
 
 
-test_operator(1, not_found_msg = "Calculate `year1` using the `*` operator.",
+test_operator(3, not_found_msg = "Calculate `year1` using the `*` operator.",
                  incorrect_op_msg = "To calculate `year1`, you should use `*` once.",
                  incorrect_result_msg = "You should use `savings` and `factor` to calculate `year1`. Take a look at the hint if you're stuck.")
 test_object("year1", incorrect_msg = "Assign the correct value you calculated to `year1`.")
@@ -508,7 +508,7 @@ test_function("type", incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
 
 msg = "You can add up a string to another string, just type `desc + desc`."
-test_operator(2, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
+test_operator(4, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_object("doubledesc", incorrect_msg  = "Assign the resulting string to `doubledesc`.")
 
 test_function("print", 2, incorrect_msg = "Be sure to print out `double_desc`.")
