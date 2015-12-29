@@ -25,7 +25,7 @@ my_list = ["my", "list", a, b]
 After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
 
 *** =instructions
-- Create a list, `areas`, that contains the area of the hallway, kitchen, living room, bedroom and bathroom, in this order.
+- Create a list, `areas`, that contains the area of the hallway (`hal`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
 - Print `areas` with the [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 
 *** =hint
@@ -274,12 +274,12 @@ test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typo's!")
 
-test_function("print", 1, incorrect_msg = "First, just print out the value of `house` like this: `print(house)`.")
+test_function("print", 1, incorrect_msg = "For the first printout, just print out the value of `house` like this: `print(house)`.")
 
-msg = "Make sure to print out the type of `house` like this: `print(type(house))`."
-test_function("type", incorrect_msg = msg)
+msg = "For the second printout, make sure to print out the type of `house` like this: `print(type(house))`."
 test_function("print", 2, incorrect_msg = msg)
-    
+test_function("type", not_called_msg = msg, incorrect_msg = msg)
+
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
 
@@ -305,12 +305,12 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 *** =instructions
 - Print out the second element from the `areas` list, so `11.25`.
 - Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the element representing the area of the living room and print it out.
+- Select the number representing the area of the living room and print it out.
 
 *** =hint
 - Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
-- The element representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
+- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
 
 *** =pre_exercise_code
 ```{python}
@@ -328,7 +328,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 # Print out last element from areas
 
 
-# Print out the element representing the area of the living room
+# Print out the area of the living room
 
 ```
 
@@ -343,7 +343,7 @@ print(areas[1])
 # Print out last element from areas
 print(areas[-1])
 
-# Print out the element representing the area of the living room
+# Print out the area of the living room
 print(areas[5])
 ```
 
@@ -352,9 +352,10 @@ print(areas[5])
 msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "In your %dst [`print()`](https://docs.python.org/3/library/functions.html#print)${{line ? at line ${line}}}, make sure select the correct element from `areas`.${{expected ? Expected `${expected}`, but got `${result}`.}}"
+msg = "In your %s [`print()`](https://docs.python.org/3/library/functions.html#print)${{line ? at line ${line}}}, make sure select the correct element from `areas`.${{expected ? Expected `${expected}`, but got `${result}`.}}"
+numb = ["first", "second", "third"]
 for i in range(1,4):
-  test_function("print", index = i, incorrect_msg = msg % i)
+  test_function("print", index = i, incorrect_msg = msg % numb[i-1])
 
 success_msg("Good job!")
 ```
