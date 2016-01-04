@@ -25,7 +25,7 @@ my_list = ["my", "list", a, b]
 After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
 
 *** =instructions
-- Create a list, `areas`, that contains the area of the hallway (`hal`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
+- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
 - Print `areas` with the [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 
 *** =hint
@@ -871,6 +871,6 @@ test_object("areas_copy", undefined_msg = "Define `areas_copy`, a copy of `areas
                      
 test_function("print", incorrect_msg = "Print out the original list `areas` by using `print(areas)`.")
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list actually in stored in the computer's memory.")
+success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
 ```
 

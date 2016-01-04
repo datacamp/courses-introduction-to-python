@@ -493,7 +493,7 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 
 Before working on the actual MLB data, let's try to create a 2D Numpy array from a small list of lists.
 
-In this exercise, `baseball` is a list of lists: The main list contains 4 elements; each of these elements is a list containing the height and the weight of 5 baseball players, is this order. `baseball` is already coded for you in the script.
+In this exercise, `baseball` is a list of lists: The main list contains 4 elements; each of these elements is a list containing the height and the weight of 4 baseball players, is this order. `baseball` is already coded for you in the script.
 
 *** =instructions
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
