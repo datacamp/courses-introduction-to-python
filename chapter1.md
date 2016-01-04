@@ -16,7 +16,7 @@ attachments :
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
-You can hit _Submit Answer_ as often as you want: you will not lose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+You can hit _Submit Answer_ as often as you want: you will not loose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
 You can also use the IPython Shell interactively: simply type commands and hit Enter. When you work in the shell directly, your code will not be checked for correctness: a great way to experiment.
 
@@ -511,7 +511,7 @@ msg = "You can add up a string to another string, just type `desc + desc`."
 test_operator(4, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_object("doubledesc", incorrect_msg  = "Assign the resulting string to `doubledesc`.")
 
-test_function("print", 2, incorrect_msg = "Be sure to print out `double_desc`.")
+test_function("print", 2, incorrect_msg = "Be sure to print out `doubledesc`.")
 success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
 ```
 

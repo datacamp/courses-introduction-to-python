@@ -115,7 +115,7 @@ help(max)
 Use the Shell on the right to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
 
 *** =instructions
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `[, imag]`.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. Both these arguments are required.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
