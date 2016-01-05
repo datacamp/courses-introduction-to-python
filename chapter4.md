@@ -85,17 +85,19 @@ success_msg("Great job!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Baseball players' height
 
-Being a huge baseball fan, you call the MLB, the Major League of Baseball, and ask around for more statistics on the height of the main players. They pass you along more data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it, and convert the units to centimeters?
+You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it and convert the units to centimeters?
 
 `height` is already available and the `numpy` package is loaded, so you can start straight away (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
 
 *** =instructions
 - Create a Numpy array from `height`. Name this new array `np_height`.
+- Print `np_height`.
 - Multiply `np_height` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
 - Print out `np_height_m` and check if the output makes sense.
 
 *** =hint
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) and pass it `height`. Store the result in `np_height`.
+- To print out a variable `x`, type `print(x)` in the Python script.
 - Perform calculations as if `np_height` is a single number: `np_height * factor` is part of the answer.
 - To print out a variable `x`, type `print(x)` in the Python script.
 
@@ -169,18 +171,18 @@ success_msg("Nice! In the blink of an eye, Numpy performs multiplications on mor
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Baseball player's BMI
 
-Next to height, the MLB also offers you to analyze their weight data. Again, both are available as regular Python lists: `height` and `weight`; height is in inches, weight is in pounds.
+The MLB also offers to let you analyze their weight data. Again, both are available as regular Python lists: `height` and `weight`. `height` is in inches and `weight` is in pounds.
 
-It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a Numpy array with the correct units is already available. Follow the instructions step by step and finish the game!
+It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a Numpy array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game!
 
 *** =instructions
-- Create a Numpy array from the `weight` list with the correct units: multiply with `0.453592` to go from pounds to kilograms. Store the resulting Numpy array as `np_weight_kg`.
+- Create a Numpy array from the `weight` list with the correct units. Multiply by `0.453592` to go from pounds to kilograms. Store the resulting Numpy array as `np_weight_kg`.
 - Use `np_height_m` and `np_weight_kg` to calculate the BMI of each player. Use the following equation: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Save the resulting numpy array as `bmi`.
 - Print out `bmi`.
 
 *** =hint
 - Use a similar approach as the code that calculates `np_height_m`. This time, though, the you have to work with `weight` and multiply with `0.453592`.
-- To calculate the `bmi`, you will need the `\` and `**` operators.
+- To calculate the `bmi`, you will need the `/` and `**` operators.
 - To print out a variable `x`, type `print(x)` in the script.
 
 *** =pre_exercise_code
@@ -359,7 +361,7 @@ success_msg("Wow! It appears that only 11 of the more than 1000 baseball players
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Numpy Side Effects
 
-As Filip explained before, Numpy is great to do vector arithmetic. However, if you compare its functionality with regular Python lists, some things have changed. 
+As Filip explained before, Numpy is great to do vector arithmetic. If you compare its functionality with regular Python lists, however, some things have changed. 
 
 First of all, Numpy arrays cannot contain elements with different types. If you try to build such a list, some of the elments' types are changed to end up with a homogenous list. This is known as _type coercion_. 
 
@@ -398,7 +400,7 @@ test_mc(2, [msg1, msg2, msg3, msg4])
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subsetting Numpy Arrays
 
-You've seen it with your own eyes: Python lists and Numpy arrays sometimes behave differently. Luckily, there are still certainties in this world. Subsetting for example: Using the square bracket notation on lists or arrays works exactly the same. To see this for yourself, try the following lines of code in the IPython Shell:
+You've seen it with your own eyes: Python lists and Numpy arrays sometimes behave differently. Luckily, there are still certainties in this world. For example, subsetting (using the square bracket notation on lists or arrays) works exactly the same. To see this for yourself, try the following lines of code in the IPython Shell:
 
 ```
 x = ["a", "b", "c"]
@@ -493,7 +495,7 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 
 Before working on the actual MLB data, let's try to create a 2D Numpy array from a small list of lists.
 
-In this exercise, `baseball` is a list of lists: The main list contains 4 elements; each of these elements is a list containing the height and the weight of 4 baseball players, is this order. `baseball` is already coded for you in the script.
+In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
 
 *** =instructions
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
@@ -503,7 +505,7 @@ In this exercise, `baseball` is a list of lists: The main list contains 4 elemen
 *** =hint
 - `baseball` is already coded for you in the script. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D Numpy array in `np_baseball`.
 - Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) for the second instruction.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
+- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
 
 *** =pre_exercise_code
 ```{python}
@@ -577,9 +579,9 @@ success_msg("Great! You're ready to convert the actual MLB data to a 2D Numpy ar
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Baseball data in 2D form
 
-You have another look at the MLB data, and realize that it makes more sense to restructure all this information in a 2D Numpy array. This array should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns, for height and weight.
+You have another look at the MLB data and realize that it makes more sense to restructure all this information in a 2D Numpy array. This array should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns (for height and weight).
 
-The MLB was again very helpful and passed you the data in a different structure: as a Python list of lists, where each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
+The MLB was, again, very helpful and passed you the data in a different structure, a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
 
 Can you store the data as a 2D array to unlock Numpy's extra functionality?
 
@@ -643,7 +645,7 @@ success_msg("Slick! Time to show off some killer features of multi-dimensional N
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subsetting 2D Numpy Arrays
 
-If your 2D Numpy arrays has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below, where the elements `"a"` and `"c"` are extracted from a list of lists. 
+If your 2D Numpy array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists. 
 
 ```
 # regular list of lists
@@ -656,7 +658,7 @@ np_x = np.array(x)
 np_x[:,0]
 ```
 
-For the regular Python lists, this is a real pain. For 2D Numpy arrays, it's pretty intuitive: the indexes before the comma refer to the rows, those after the comma refer to the columns. The `:` is for slicing: in this example, it tells Python to include all rows.
+For regular Python lists, this is a real pain. For 2D Numpy arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
 
 The code that converts the pre-loaded `baseball` list to a 2D Numpy array is already in the script. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
@@ -735,7 +737,7 @@ success_msg("This is going well!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## 2D Arithmetic
 
-Remember how you calculated the Body Mass Index for all baseball players? Numpy was able to perform all calculations element-wise. For 2D Numpy arrays this isn't any different: you can combine matrices with single numbers, with vectors, and with other matrices.
+Remember how you calculated the Body Mass Index for all baseball players? Numpy was able to perform all calculations element-wise. For 2D Numpy arrays this isn't any different! You can combine matrices with single numbers, with vectors, and with other matrices.
 
 Execute the code below in the IPython shell and see if you understand:
 
@@ -749,7 +751,7 @@ np_mat + np.array([10, 10])
 np_mat + np_mat
 ```
 
-`np_baseball` is coded for you; it's again a 2D Numpy array with 3 columns, representing height, weight and age.
+`np_baseball` is coded for you; it's again a 2D Numpy array with 3 columns representing height, weight and age.
 
 *** =instructions
 - You managed to get hold on the changes in weight, height and age of all baseball players. It is available as a 2D Numpy array, `update`. Add `np_baseball` and `update` and print out the result.
@@ -847,7 +849,7 @@ success_msg("Great job! Notice how with very little code, you can change all val
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Average versus median
 
-You now know about Numpy functions to a get a better feeling for your data. It basically comes down to importing Numpy, and then calling several simple functions on the Numpy arrays:
+You now know how to use Numpy functions to a get a better feeling for your data. It basically comes down to importing Numpy and then calling several simple functions on the Numpy arrays:
 
 ```
 import numpy as np
@@ -856,7 +858,7 @@ np.mean(x)
 np.median(x)
 ```
 
-The baseball data is available as a 2D Numpy array with 3 columns (height, weight, age) and 1015 rows. The name of this Numpy array is `np_baseball`. However, when restructuring the data, something went wrong: some height values are abnormally high. Follow the instructions and discover which summary statistic is most suited if you're dealing with so-called _outliers_.
+The baseball data is available as a 2D Numpy array with 3 columns (height, weight, age) and 1015 rows. The name of this Numpy array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_.
 
 *** =instructions
 - Create Numpy array `np_height`, that is equal to first column of `np_baseball`.
@@ -930,7 +932,7 @@ success_msg("An average length of 1586 inches, that doesn't sound right, does it
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Explore the baseball data
 
-Because the mean and median are so far apart, you decide to complain with the MLB. They found the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
+Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
 
 The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
@@ -1025,16 +1027,16 @@ success_msg("Great! Time to use all of your new data science skills in the last 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Blend it all together
 
-In the last exercises you've learned everything there is to know about heights and weights of baseball players. Now it's time to dive into another sport: soccer.
+In the last few exercises you've learned everything there is to know about heights and weights of baseball players. Now it's time to dive into another sport: soccer.
 
 You've contacted the FIFA for some data and they handed you two lists. The lists are the following: 
 ```
 positions = ['GK', 'M', 'A', 'D', ...]
 heights = [191, 184, 185, 180, ...]
 ```
-Each element in the lists corresponds to a player. The first list, `positions`, contains strings and these represent the position where the player plays. The possible positions are: `'GK'` (goalkeeper), `'M'` (midfield), `'A'` (attack) and `'D'` (defense). The second list, `heights`, contains integers: the height of the player in cm. The first player in the lists is a goalkeeper and is pretty tall, 191 cm.
+Each element in the lists corresponds to a player. The first list, `positions`, contains strings representing each player's position. The possible positions are: `'GK'` (goalkeeper), `'M'` (midfield), `'A'` (attack) and `'D'` (defense). The second list, `heights`, contains integers representing the height of the player in cm. The first player in the lists is a goalkeeper and is pretty tall (191 cm).
 
-You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you so you are determined to show them using the data you received from the FIFA and your newly acquired Python skills.
+You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you, so you are determined to show them using the data you received from FIFA and your newly acquired Python skills.
 
 *** =instructions
 - Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
@@ -1132,5 +1134,5 @@ other_msg = msg % ("other_heights", "other players")
 test_function("numpy.median", 2, not_called_msg = other_msg, incorrect_msg = other_msg)
 test_function("print", 2, incorrect_msg = "Don't forget to print out the result for the other players.")
 
-success_msg("Wonderful! You were right. The disbelievers were wrong! This exercise marks the end of the intro to python for data science course. See you in a later course!")
+success_msg("Wonderful! You were right and the disbelievers were wrong! This exercise marks the end of the Intro to Python for Data Science course. See you in another course!")
 ```

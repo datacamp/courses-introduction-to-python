@@ -1,7 +1,7 @@
 ---
 title_meta  : Chapter 1
 title       : Python Basics
-description : An introduction to the basic concepts of Python. Learn to use Python both interatively and through a script. Create your first variables and acquaint yourself with Python's basic data types.
+description : An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python's basic data types.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf
   
@@ -16,14 +16,14 @@ attachments :
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
-You can hit _Submit Answer_ as often as you want: you will not loose any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+You can hit _Submit Answer_ as often as you want without loosing any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
-You can also use the IPython Shell interactively: simply type commands and hit Enter. When you work in the shell directly, your code will not be checked for correctness: a great way to experiment.
+You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment. 
 
 *** =instructions
-- Experiment in the IPython Shell: type 5 / 8, for example.
+- Experiment in the IPython Shell; type 5 / 8, for example.
 - Add another line of code to the Python script: `print(7 + 10)`.
-- Hit _Submit Answer_ to execute the python script and receive feedback.
+- Hit _Submit Answer_ to execute the Python script and receive feedback.
 
 *** =hint
 - Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
@@ -92,7 +92,7 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Any comments?
 
-Something that Filip didn't mention in his videos, is that you can add comments to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
+Something that Filip didn't mention in his videos is that you can add comments to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
 
 To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`: it is completely ignored during execution.
 
@@ -100,7 +100,7 @@ To add comments to your Python script, you can use the `#` tag. These comments a
 - Above the `print(7 + 10)`, add the comment `# Addition works too`.
 
 *** =hint
-- For this exercise you only have to add one line of comments. It won't do anything. Add `# Addition works too` right above `print(7 + 10)`.
+- For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition works too` right above `print(7 + 10)`.
 
 *** =pre_exercise_code
 ```{python}
@@ -134,7 +134,7 @@ success_msg("Great!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Python as a calculator
 
-Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations:
+Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
 
 - Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right: for example `4**2` will give `16`.
 - Modulo: `%`. It returns the remainder of the division of the number to the left by the number on its right, for example `18 % 7` equals `4`.
@@ -218,7 +218,7 @@ success_msg("Time for another video!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Variable Assignment
 
-In Python, a variable allows you to refer to a value with a name. To create a variable, use `=`, like this example:
+In Python, a variable allows you to refer to a value with a name. To create a variable use `=`, like this example:
 
 ```
 x = 5
@@ -273,7 +273,7 @@ Remember how you calculated the money you ended up with after 7 years of investi
 100 * 1.10 ** 7
 ```
 
-Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the \$100 you started with. Up to you to create a new variable to represent `1.10` and then redo the calculations!
+Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the \$100 you started with. It's up to you to create a new variable to represent `1.10` and then redo the calculations!
 
 *** =instructions
 - Create a variable `factor`, equal to `1.10`. 
@@ -337,15 +337,15 @@ success_msg("Great!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Other variable types
 
-In the previous exercise, you have worked with two Python data types:
+In the previous exercise, you worked with two Python data types:
 
-- `int`, or integer: number without a fractional part. `savings`, with the value `100` is an example.
-- `float`, or floating point: number that has both an integer and fractional part, separated by a point. `factor`, with the value `1.10` is a float.
+- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `factor`, with the value `1.10`, is an example of a float.
 
 Next to numerical data types, there are two other very common data types:
 
-- `str`, or string: type to represent text. You can use single and double quotes to build a string.
-- `bool`, or boolean: type to represent logical values. Can only be `True` or `False`.
+- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
+- `bool`, or boolean: a type to represent logical values. Can only be `True` or `False`.
 
 *** =instructions
 - Create a new string, `desc`, with the value `"compound interest"`.
@@ -389,13 +389,11 @@ success_msg("Nice!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Guess the type
 
-To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. Simply executing
+To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
 
 ```
 type(a)
 ```
-
-will tell you the type of `a`.
 
 We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
 
@@ -429,9 +427,9 @@ test_mc(3,[msg1, msg2, msg3, msg4])
 
 Filip mentioned that different types behave differently in Python.
 
-When you sum two strings for example, you'll get different behavior than when you sum two integers or two booleans.
+When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
 
-In the script, some variables with different types have already been created. Up to you to use them.
+In the script some variables with different types have already been created. It's up to you to use them.
 
 *** =instructions
 - Calculate the product of `savings` and `factor`. Store the result in `year1`.
@@ -518,7 +516,7 @@ success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Type conversion
 
-The `+` operator to paste together two strings can be very useful in building up custom messages.
+Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
 Suppose for example that you've calculated the return of your investment, and want to summarize the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
 
@@ -535,7 +533,7 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 *** =instructions
 - Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
 - Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
-- Convert the variable `pi_string` to a float, and store this float as a new variable, `pi_float`.
+- Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
 *** =hint
 - You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!

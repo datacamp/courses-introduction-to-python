@@ -89,11 +89,11 @@ success_msg("Nice! A list is way better here, isn't it?")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create list with different types
 
-A list can contain any Python type. Although it's not really common, a list can also contain different types: you can put strings, floats and booleans, all in the same list. 
+A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
 
-The printout of the previous exercise wasn't really satisfying: it's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
+The printout of the previous exercise wasn't really satisfying. It's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
-The code on the right is the start of solution: for some of the areas, the name of the corresponding room is placed in front. Pay attention here. `"bathroom"` is a string, while `bath` is a variable, representing the float `9.50` that you've specified earlier.
+The code on the right is the start of a solution. For some of the areas, the name of the corresponding room is already placed in front. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
 
 *** =instructions
 - Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area. More specifically, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
@@ -202,10 +202,10 @@ As a data scientist, you'll often be dealing with a lot of data, and it will mak
 
 Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea. 
 
-Don't get confused here: `"hallway"` is a string, while `hall` is a variable: the float `11.25` that you've specified earlier.
+Don't get confused here: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
 
 *** =instructions
-- Finish the list of lists so that it also contains the bedroom and bathroom data.
+- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order! 
 - Print out `house`; does this way of structuring your data make more sense?
 - Print out the type of `house`. Are you still dealing with a list?
 
@@ -292,7 +292,7 @@ success_msg("Great! Get ready to learn about list subsetting!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subset and conquer
 
-Subsetting Python lists is a piece of cake. Take the code sample below, that creates a list `x` and then selects "b" from it; this is the second element, so it has index 1. You can also use negative indexing.
+Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
 
 ```
 x = list["a", "b", "c", "d"]
@@ -371,7 +371,7 @@ print(x[1] + x[3])
 ```
 
 *** =instructions
-- Using a combination of list subsetting and variable assignment, create new variable `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
+- Using a combination of list subsetting and variable assignment, create a new variable, `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
 - Print this new variable `eat_sleep_area`.
 
 *** =hint
@@ -426,7 +426,7 @@ success_msg("Bellissimo!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Slicing and dicing
 
-Selecting single values of a list is just one part of the story. It's also possible to _slice_ your list, which comes down to selecting multiple elements from your list. Use the following syntax:
+Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
 
 ```
 my_list[start:end]
@@ -521,7 +521,7 @@ x[:]
 ```
 
 *** =instructions
-- Use slicing to create the lists `downstairs` and `upstairs` again, this time without using indexes if it's not necessary. Remember `downstairs` are the first 6 elements of `areas` and `upstairs` are the last 4 elements of `areas`.
+- Use slicing to create the lists `downstairs` and `upstairs` again, but this time without using indexes if it's not necessary. Remember `downstairs` is the first 6 elements of `areas` and `upstairs` is the last 4 elements of `areas`.
 
 *** =hint
 - To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
@@ -573,7 +573,7 @@ success_msg("Wonderful!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Subsetting lists of lists
 
-You saw before that a Python list can contain practically anything; even other lists. To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
+You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
 
 ```
 x = [["a", "b", "c"], 
@@ -585,7 +585,7 @@ x[2][:2]
 
 `x[2]` results in a list, that you can subset again by adding additional square brackets.
 
-What will `house[-1][1]` return? `house`, the list of lists you've created before, is already defined for you, so you can experiment with it in the IPython Shell.
+What will `house[-1][1]` return? `house`, the list of lists that you created before, is already defined for you in the workspace. You can experiment with it in the IPython Shell.
 
 *** =instructions
 - A float: the kitchen area
@@ -622,7 +622,7 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Replace list elements
 
-Replacing list elements is pretty easy: subset the list and assign new values to the subset. You can select single elements, but also change entire list slices at once.
+Replacing list elements is pretty easy. Simply subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
 
 Use the IPython Shell to experiment with the commands below. Can you tell what's happening and why?
 
@@ -632,11 +632,11 @@ x[1] = "r"
 x[2:] = ["s", "t"]
 ```
 
-For this and the following exercises, you'll continue working on the `areas` list, that contains the names and areas of different rooms in a house.
+For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
 
 *** =instructions
 - You did a miscalculation when determining the area of the bathroom; it's 10.50 square meters instead of 9.50. Can you make the changes?
-- Make the `areas` list more trendy: Change "living room" to "chill zone".
+- Make the `areas` list more trendy! Change "living room" to "chill zone".
 
 *** =hint
 - To select the bathroom area, you can use `[-1]`.
@@ -681,7 +681,7 @@ success_msg("Sweet! As the code sample showed, you can also slice a list and rep
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Extend a list
 
-Next to changing elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -692,7 +692,7 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 
 *** =instructions
 - Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45` and name the resulting list `areas_2`.
+- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
 
 *** =hint
 - Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24]`.
@@ -772,7 +772,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
          "garage", 15.45]
 ```
 
-There was a mistake; the amount you won with the lottery is not that big after all. The poolhouse isn't going to happen after all. You decide to remove the corresponding string and float from the `areas` list.
+There was a mistake! The amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You decide to remove the corresponding string and float from the `areas` list.
 
 The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
 
@@ -816,7 +816,7 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 
 At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
 
-The Python code in the script already creates a list with the name `areas`, and a copy: `areas_copy`. Next, the first element in the `areas_copy` list is changed, and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+The Python code in the script already creates a list with the name `areas` and a copy named `areas_copy`. Next, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
 
 If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with [`list()`](https://docs.python.org/3/library/functions.html#func-list) or by using `[:]`.
 

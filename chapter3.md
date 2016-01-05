@@ -15,7 +15,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Familiar functions
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). Also the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types are built-in functions.
+Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). You've also used the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data type. These are built-in functions as well. 
 
 Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
 
@@ -103,7 +103,7 @@ success_msg("Great job! The [`len()`](https://docs.python.org/3/library/function
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2
 ## Help!
 
-Once you know the name of the Python function you want to know, you still have to figure out how you will use it. Ironically, you have to ask for information on function with another function: [`help()`](https://docs.python.org/3/library/functions.html#help). In IPython specifically, you can also use `?`.
+Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: [`help()`](https://docs.python.org/3/library/functions.html#help). In IPython specifically, you can also use `?` before the function name.
 
 To get help on the [`max()`](https://docs.python.org/3/library/functions.html#max) function, for example, you can use one of these calls:
 
@@ -140,7 +140,7 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Multiple arguments
 
-In the previous exercise, the square brackets around `imag` in the documentation showed that the `imag` was an optional argument. But Python also uses a different way to tell users about arguments being optional.
+In the previous exercise, the square brackets around `imag` in the documentation showed us that the `imag` argument is optional. But Python also uses a different way to tell users about arguments being optional.
 
 Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the IPython Shell.
 
@@ -148,7 +148,7 @@ You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#so
 
 `key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
 
-In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will obviously be matched to the `iterable` argument, but what about the second input. To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
+In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will obviously be matched to the `iterable` argument, but what about the second input? To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
 
 ```
 sorted(___, reverse = ___)
@@ -162,7 +162,7 @@ Two lists have been created for you on the right. Can you paste them together an
 - Finish off by printing out `full_sorted`.
 
 *** =hint
-- Simply sum `first` and `second` as if they are two numbers, and assign the result to `full`.
+- Simply sum `first` and `second` as if they are two numbers and assign the result to `full`.
 - Use [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) with two inputs: `full` and `reverse = True`.
 - To print out a variable, use [`print()`](https://docs.python.org/3/library/functions.html#print).
 
@@ -238,10 +238,10 @@ A string `room` has already been created for you to experiment with.
 *** =instructions
 - Use the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` and store the result in `room_up`. Use the dot notation.
 - Print out `room` and `room_up`. Did both change?
-- Print out the number of o's on the variable `room`: call [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `room` and pass the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
+- Print out the number of o's on the variable `room` by calling [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `room` and passing the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
 
 *** =hint
-- You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method an `room` without additional inputs.
+- You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` without any additional inputs.
 - To print out a variable `x`, you can write `print(x)`.
 - Make sure to wrap your `room.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
 
@@ -307,7 +307,7 @@ success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.p
 --- type:NormalExercise lang:python xp:100 skills:2
 ## List Methods
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans, are also types, and also come prepacked with a bunch of useful methods. In this exercise, you'll be experimenting with:
+Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
 
 - [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index), to get the index of the first element of a list that matches its input and
 - [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count), to get the number of times an element appears in a list.
@@ -558,13 +558,7 @@ success_msg("Nice!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Selective import
 
-General imports, like this:
-
-```
-import math
-```
-
-make all functionality of the entire `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
 
 ```
 from math import pi
@@ -573,13 +567,13 @@ from math import pi
 Let's say the Moon's orbit around planet Earth is a perfect circle, with a radius `r` (in km) that is defined in the script.
 
 *** =instructions
-- Perform a selective import from the `math` package: you only want to use the `radians` function.
+- Perform a selective import from the `math` package where you only import the `radians` function.
 - Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r * \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function, which you just imported.
 - Print out `dist`.
 
 *** =hint
 - Use `from math import radians` to do the selective import.
-- You can simply use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function now: Pass it the number 12 to get the angle in radians.
+- You can simply use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function now. Pass the function the number 12 to get the angle in radians.
 - To print out a variable `x`, simply type `print(x)`.
 
 *** =pre_exercise_code
