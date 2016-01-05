@@ -307,7 +307,7 @@ success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.p
 --- type:NormalExercise lang:python xp:100 skills:2
 ## List Methods
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans, are also types and they come prepacked with a bunch of useful methods. In this exercise, you'll be experimenting with:
+Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
 
 - [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index), to get the index of the first element of a list that matches its input and
 - [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count), to get the number of times an element appears in a list.
