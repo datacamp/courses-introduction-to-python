@@ -89,7 +89,7 @@ success_msg("Nice! A list is way better here, isn't it?")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create list with different types
 
-A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including: strings, floats, booleans, etc.
+A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
 
 The printout of the previous exercise wasn't really satisfying. It's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
