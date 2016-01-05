@@ -85,7 +85,7 @@ success_msg("Great job!")
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Baseball players' height
 
-You are a huge baseball fan. You decide to call the MLB (Major League of Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it and convert the units to centimeters?
+You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it and convert the units to centimeters?
 
 `height` is already available and the `numpy` package is loaded, so you can start straight away (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
 
@@ -176,7 +176,7 @@ The MLB also offers to let you analyze their weight data. Again, both are availa
 It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a Numpy array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game!
 
 *** =instructions
-- Create a Numpy array from the `weight` list with the correct units. Multiply with `0.453592` to go from pounds to kilograms. Store the resulting Numpy array as `np_weight_kg`.
+- Create a Numpy array from the `weight` list with the correct units. Multiply by `0.453592` to go from pounds to kilograms. Store the resulting Numpy array as `np_weight_kg`.
 - Use `np_height_m` and `np_weight_kg` to calculate the BMI of each player. Use the following equation: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Save the resulting numpy array as `bmi`.
 - Print out `bmi`.
 
@@ -658,7 +658,7 @@ np_x = np.array(x)
 np_x[:,0]
 ```
 
-For regular Python lists, this is a real pain. For 2D Numpy arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
+For regular Python lists, this is a real pain. For 2D Numpy arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
 
 The code that converts the pre-loaded `baseball` list to a 2D Numpy array is already in the script. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
