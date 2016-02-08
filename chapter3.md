@@ -10,7 +10,7 @@ attachments :
 ## Functions
 
 *** =video_link
-//player.vimeo.com/video/146994267
+//player.vimeo.com/video/154563189
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Familiar functions
@@ -226,7 +226,7 @@ success_msg("Cool! Head over to the video on Python methods.")
 ## Methods
 
 *** =video_link
-//player.vimeo.com/video/146994269
+//player.vimeo.com/video/154563307
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## String Methods

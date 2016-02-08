@@ -9,7 +9,7 @@ attachments :
 ## Numpy
 
 *** =video_link
-//player.vimeo.com/video/146994268
+//player.vimeo.com/video/154563364
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Your First Numpy Array

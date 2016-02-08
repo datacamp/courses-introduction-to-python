@@ -9,7 +9,7 @@ attachments :
 ## Lists, what are they?
 
 *** =video_link
-//player.vimeo.com/video/146994262
+//player.vimeo.com/video/154563059
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create a list
