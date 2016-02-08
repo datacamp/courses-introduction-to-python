@@ -213,7 +213,7 @@ success_msg("Time for another video!")
 ## Variables & Types
 
 *** =video_link
-//player.vimeo.com/video/146994263
+//player.vimeo.com/video/154561704
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Variable Assignment
