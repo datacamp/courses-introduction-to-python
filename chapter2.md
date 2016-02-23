@@ -79,7 +79,7 @@ test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order: `hall`, `kit`, `liv`, `bed` and `bath`. Watch out for typo's. The list doesn't have to contain anything else.")
+test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order: `hall`, `kit`, `liv`, `bed` and `bath`. Watch out for typos. The list doesn't have to contain anything else.")
 
 test_function("print", incorrect_msg = "Print out the `areas` list you created by using `print(areas)`.")
 
@@ -149,7 +149,7 @@ test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("areas", incorrect_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typo's.")
+test_object("areas", incorrect_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos.")
 
 test_function("print")
 
@@ -272,7 +272,7 @@ test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typo's!")
+test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!")
 
 test_function("print", 1, incorrect_msg = "For the first printout, just print out the value of `house` like this: `print(house)`.")
 
@@ -738,14 +738,14 @@ test_object("areas_1", do_eval = False)
 msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`."
 test_operator(1, not_found_msg = msg,
                  incorrect_op_msg = msg,
-                 incorrect_result_msg = msg +". Watch out for typo's.")
+                 incorrect_result_msg = msg +". Watch out for typos.")
 test_object("areas_1")
 
 test_object("areas_2", do_eval = False)
 msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`."
 test_operator(2, not_found_msg = msg,
                  incorrect_op_msg = msg,
-                 incorrect_result_msg = msg +". Watch out for typo's.")
+                 incorrect_result_msg = msg +". Watch out for typos.")
 test_object("areas_2")
 
 success_msg("Cool! The list is shaping up nicely!")
