@@ -11,6 +11,9 @@ attachments :
 *** =video_link
 //player.vimeo.com/video/146994261
 
+*** =video_hls
+//videos.datacamp.com/transcoded/intro_to_python/hls-ch1_1.master.m3u8
+
 --- type:NormalExercise lang:python xp:100 skills:2
 ## The Python Interface
 
@@ -214,6 +217,9 @@ success_msg("Time for another video!")
 
 *** =video_link
 //player.vimeo.com/video/154561704
+
+*** =video_hls
+//videos.datacamp.com/transcoded/intro_to_python/hls-ch1_2.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Variable Assignment
