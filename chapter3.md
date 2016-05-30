@@ -13,7 +13,7 @@ attachments :
 //player.vimeo.com/video/154563189
 
 *** =video_hls
-//videos.datacamp.com/transcoded/intro_to_python/hls-ch3_1.master.m3u8
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_1.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Familiar functions
@@ -232,7 +232,7 @@ success_msg("Cool! Head over to the video on Python methods.")
 //player.vimeo.com/video/154563307
 
 *** =video_hls
-//videos.datacamp.com/transcoded/intro_to_python/hls-ch3_2.master.m3u8
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## String Methods
@@ -476,7 +476,7 @@ success_msg("Great!")
 //player.vimeo.com/video/146994272
 
 *** =video_hls
-//videos.datacamp.com/transcoded/intro_to_python/hls-ch3_3.master.m3u8
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
 
 
 --- type:NormalExercise lang:python xp:100 skills:2
