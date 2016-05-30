@@ -12,7 +12,7 @@ attachments :
 //player.vimeo.com/video/154563059
 
 *** =video_hls
-//videos.datacamp.com/transcoded/intro_to_python/hls-ch2_1.master.m3u8
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_1.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Create a list
@@ -293,7 +293,7 @@ success_msg("Great! Get ready to learn about list subsetting!")
 //player.vimeo.com/video/146994264
 
 *** =video_hls
-//videos.datacamp.com/transcoded/intro_to_python/hls-ch2_2.master.m3u8
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Subset and conquer
@@ -626,7 +626,7 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 //player.vimeo.com/video/149289041
 
 *** =video_hls
-//videos.datacamp.com/transcoded/intro_to_python/hls-ch2_3.master.m3u8
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2
 ## Replace list elements
