@@ -5,13 +5,13 @@ description : "Learn to store, access and manipulate data in lists: the first st
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf
   
---- type:VideoExercise lang:python xp:50 skills:2
+--- type:VideoExercise lang:python xp:50 skills:2 key:f366e876d8
 ## Lists, what are they?
 
 *** =video_link
 //player.vimeo.com/video/154563059
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:e6c527bf41
 ## Create a list
 
 As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group values together:
@@ -86,7 +86,7 @@ test_function("print", incorrect_msg = "Print out the `areas` list you created b
 success_msg("Nice! A list is way better here, isn't it?")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:1702a8bcdc
 ## Create list with different types
 
 A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
@@ -156,7 +156,7 @@ test_function("print")
 success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:2
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:416b80a405
 ## Select the valid list
 
 A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
@@ -195,7 +195,7 @@ msg4 = "Command C is valid, but it's not the only one!"
 test_mc(1,[msg1,msg2,msg3,msg4])
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:9158c577b0
 ## List of lists
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
@@ -283,13 +283,13 @@ test_function("type", not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
 
---- type:VideoExercise lang:python xp:50 skills:2
+--- type:VideoExercise lang:python xp:50 skills:2 key:9e15e5b8a0
 ## Subsetting lists
 
 *** =video_link
 //player.vimeo.com/video/146994264
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:c3ce582e32
 ## Subset and conquer
 
 Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
@@ -360,7 +360,7 @@ for i in range(1,4):
 success_msg("Good job!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:58c969f11f
 ## Subset and calculate
 
 After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted. The strings that result are pasted together using the `+` operator:
@@ -423,7 +423,7 @@ test_function("print", incorrect_msg = "Print out the value you found, stored in
 success_msg("Bellissimo!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:7f08642d18
 ## Slicing and dicing
 
 Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
@@ -502,7 +502,7 @@ test_function("print", 2, incorrect_msg = "First, print out `upstairs` using `pr
 success_msg("Great!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:dfc9a168a3
 ## Slicing and dicing (2)
 
 In the video, Filip only discussed the syntax where you specify both where to begin and end the slice of your list:
@@ -570,7 +570,7 @@ test_student_typed("\[\\s*(6|-4):\\s*\]", not_typed_msg = msg % ("upstairs","6:"
 success_msg("Wonderful!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:2
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:dbbbd306cf
 ## Subsetting lists of lists
 
 You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
@@ -613,13 +613,13 @@ msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathr
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
---- type:VideoExercise lang:python xp:50 skills:2
+--- type:VideoExercise lang:python xp:50 skills:2 key:fbdaaec22a
 ## List Manipulation
 
 *** =video_link
 //player.vimeo.com/video/149289041
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:4e1bba1b55
 ## Replace list elements
 
 Replacing list elements is pretty easy. Simply subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
@@ -678,7 +678,7 @@ test_object("areas",
 success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list, to update multiple elements in a single command.")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:ff0fe8d967
 ## Extend a list
 
 If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
@@ -751,7 +751,7 @@ test_object("areas_2")
 success_msg("Cool! The list is shaping up nicely!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:2
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:85f792356e
 ## Delete list elements
 
 Finally, you can also remove elements from your list. You can do this with the `del` statement:
@@ -811,7 +811,7 @@ msg3 = "Correct! You'll learn about easier ways to remove specific elements from
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2
+--- type:NormalExercise lang:python xp:100 skills:2 key:af72db9915
 ## Inner workings of lists
 
 At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
