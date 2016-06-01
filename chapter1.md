@@ -5,11 +5,15 @@ description : An introduction to the basic concepts of Python. Learn how to use 
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf
   
+
 --- type:VideoExercise lang:python xp:50 skills:2 key:d5509896f7
 ## Hello Python!
 
 *** =video_link
 //player.vimeo.com/video/146994261
+
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_1.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:bdc52f0e19
 ## The Python Interface
@@ -214,6 +218,10 @@ success_msg("Time for another video!")
 
 *** =video_link
 //player.vimeo.com/video/154561704
+
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
+
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:4bf65ad83e
 ## Variable Assignment

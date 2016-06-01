@@ -11,6 +11,10 @@ attachments :
 *** =video_link
 //player.vimeo.com/video/154563059
 
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_1.master.m3u8
+
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:e6c527bf41
 ## Create a list
 
@@ -288,6 +292,9 @@ success_msg("Great! Get ready to learn about list subsetting!")
 
 *** =video_link
 //player.vimeo.com/video/146994264
+
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:c3ce582e32
 ## Subset and conquer
@@ -618,6 +625,9 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 
 *** =video_link
 //player.vimeo.com/video/149289041
+
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:4e1bba1b55
 ## Replace list elements

@@ -12,6 +12,10 @@ attachments :
 *** =video_link
 //player.vimeo.com/video/154563189
 
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_1.master.m3u8
+
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:c422ee929b
 ## Familiar functions
 
@@ -227,6 +231,9 @@ success_msg("Cool! Head over to the video on Python methods.")
 
 *** =video_link
 //player.vimeo.com/video/154563307
+
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:4039302ee0
 ## String Methods
@@ -468,6 +475,9 @@ success_msg("Great!")
 
 *** =video_link
 //player.vimeo.com/video/146994272
+
+*** =video_hls
+//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
 
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:7432a6376f
