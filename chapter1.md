@@ -20,7 +20,7 @@ attachments :
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
-You can hit _Submit Answer_ as often as you want without loosing any experience points. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+You can hit _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
 You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment. 
 
@@ -96,7 +96,7 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 --- type:NormalExercise lang:python xp:100 skills:2 key:7c4a738a13
 ## Any comments?
 
-Something that Filip didn't mention in his videos is that you can add comments to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
+Something that Filip didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
 
 To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`: it is completely ignored during execution.
 
@@ -611,7 +611,7 @@ success_msg("Great! You have a profit of around $95; that's pretty awesome indee
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:3e5f0bdf3a
 ## Can Python handle everything?
 
-Now that you know something more about combining different sources of information, have a look at the 4 Python expressions below.
+Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
 Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
 
 *** =instructions

@@ -18,7 +18,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:2 key:e6c527bf41
 ## Create a list
 
-As opposed to `int`, `bool` etc, a list is a _compound data type_: you can group values together:
+As opposed to `int`, `bool` etc, a list is a **compound data type**: you can group values together:
 
 ```
 a = "is"
