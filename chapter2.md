@@ -358,12 +358,9 @@ print(areas[5])
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-
-msg = "In your %s [`print()`](https://docs.python.org/3/library/functions.html#print)${{line ? at line ${line}}}, make sure select the correct element from `areas`.${{expected ? Expected `${expected}`, but got `${result}`.}}"
-numb = ["first", "second", "third"]
-for i in range(1,4):
-  test_function("print", index = i, incorrect_msg = msg % numb[i-1])
-
+test_function("print", index = 1)
+test_function("print", index = 2)
+test_function("print", index = 3)
 success_msg("Good job!")
 ```
 
