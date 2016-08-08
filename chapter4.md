@@ -12,7 +12,7 @@ attachments :
 //player.vimeo.com/video/154563364
 
 *** =video_hls
-//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch4_1.master.m3u8
+//videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch4_1.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:84cab9d170
 ## Your First Numpy Array
