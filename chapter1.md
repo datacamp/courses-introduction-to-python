@@ -39,12 +39,19 @@ You can also use the IPython Shell interactively by simply typing commands and h
 
 *** =sample_code
 ```{python}
+# example, do not modify!
 print(5 / 8)
+
+# put code below here
+
 ```
 
 *** =solution
 ```{python}
-print(5 / 8)
+# example, do not modify!
+print(5 / 8)  # do not remove!
+
+# put code below here
 print(7 + 10)
 ```
 
