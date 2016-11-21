@@ -613,11 +613,13 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
 
 # check pi_float
-test_object("pi_float", do_eval = False)
-test_function("float", 
+
+test_float = test_function("float", 
                incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.",
                not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float` function.")
-test_object("pi_float", incorrect_msg = "It looks like you used `float` correctly, be sure to assign it to `pi_float`.")
+test_object("pi_float", 
+             incorrect_msg = "It looks like you used `float` correctly, but the value of `pi_float` is incorrect.",
+             undefined_msg = "It looks like you used `float` correctly, but did not assign the result to `pi_float`")
 
 success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
 ```
