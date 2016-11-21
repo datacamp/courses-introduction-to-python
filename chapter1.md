@@ -593,24 +593,31 @@ pi_float = float(pi_string)
 
 *** =sct
 ```{python}
+
+# ensure predefined values are unmodified
 msg = "You don't have to change or remove the predefined variables."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
 test_operator(1, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_object("result", undefined_msg = msg, incorrect_msg = msg)
 test_operator(2, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 
-test_function("str", 1, incorrect_msg = "You should use `str(savings)` first.")
-test_function("str", 2, incorrect_msg = "You should use `str(result)` the second time.")
+# check correctly converted `result` and `savings` in printed string.
+test_function("str", 1, incorrect_msg = "On the line with `print`, be sure you changed `savings` to `str(savings)`.")
+test_function("str", 2, incorrect_msg = "On the line with `print`, be sure you changed `result` to  `str(result)`.")
 msg = "To form the long string, you can use the `+` operator. The only thing you have to edit in the printout is that you have to convert `savings` and `result` to strings."
 test_operator(3, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
 
+# ensure predefined pi_string is unmodified
 msg = "You don't have to change or remove the predefined variables."
 test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
 
+# check pi_float
 test_object("pi_float", do_eval = False)
-test_function("float", incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.")
-test_object("pi_float", incorrect_msg = "Assign the correct value to `pi_float`.")
+test_function("float", 
+               incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.",
+               not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float` function.")
+test_object("pi_float", incorrect_msg = "It looks like you used `float` correctly, be sure to assign it to `pi_float`.")
 
 success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
 ```
