@@ -517,8 +517,8 @@ test_operator(3, not_found_msg = "Calculate `year1` using the `*` operator.",
 test_object("year1", incorrect_msg = "Assign the correct value you calculated to `year1`.")
 
 msg = "Make sure to print out the type of `year1` like this: `print(type(year1))`."
-test_function("type", incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
+test_function("type", incorrect_msg = msg)
 
 msg = "You can add up a string to another string, just type `desc + desc`."
 test_operator(4, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
