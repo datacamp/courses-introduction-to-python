@@ -609,7 +609,7 @@ test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
 # check pi_float
 
 test_function("float",
-              not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function."
+              not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.",
               incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.")
 test_object("pi_float",
              incorrect_msg = "It looks like you used `float` correctly, but the value of `pi_float` is incorrect.",
