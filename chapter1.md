@@ -4,7 +4,7 @@ title       : Python Basics
 description : An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python's basic data types.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf
-  
+
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:d5509896f7
 ## Hello Python!
@@ -22,7 +22,7 @@ In the Python script on the right, you can type Python code to solve the exercis
 
 You can hit _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
-You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment. 
+You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
 
 *** =instructions
 - Experiment in the IPython Shell; type 5 / 8, for example.
@@ -39,35 +39,29 @@ You can also use the IPython Shell interactively by simply typing commands and h
 
 *** =sample_code
 ```{python}
-# example, do not modify!
+# Example, do not modify!
 print(5 / 8)
 
-# put code below here
+# Put code below here
 
 ```
 
 *** =solution
 ```{python}
-# example, do not modify!
-print(5 / 8)  # do not remove!
+# Example, do not modify!
+print(5 / 8)
 
-# put code below here
+# Put code below here
 print(7 + 10)
 ```
 
 *** =sct
 ```{python}
 msg = "Don't remove the first statement. It is an example which is coded for you!"
-test_operator(1, incorrect_op_msg = msg, incorrect_result_msg = msg, not_found_msg = msg)
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
-test_operator(2, not_found_msg = "You should add a second operation, as instructed.", 
-  incorrect_op_msg = "Your second operation is wrong, be sure to add `7` to `10`.",
-  incorrect_result_msg = "The operation you added should add up to `17`.")
-test_function("print", 2,
-  not_called_msg = "Remember that you should call [`print()`](https://docs.python.org/3/library/functions.html#print) to print out the result of your calculation.",
-  incorrect_msg = "You should type `print(7 + 10)` to print out the result of your calculation.")
-
+msg = "Have you added `print(7 + 10)` to the script, in addition to the `print()` command that was already there?"
+test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
 
@@ -92,7 +86,7 @@ Python is a pretty versatile language. For what applications can you use Python?
 
 *** =sct
 ```{python}
-msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!" 
+msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
 msg2 = "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
 msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
 msg4 = "Correct! Python is an extremely versatile language."
@@ -210,10 +204,10 @@ for i in range(1,7):
   test_operator(i, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
   test_function("print", index = i, not_called_msg = msg, incorrect_msg = msg)
 
-test_operator(7, not_found_msg = "Add an operation to calculate what's instructed.", 
+test_operator(7, not_found_msg = "Add an operation to calculate what's instructed.",
   incorrect_op_msg = "You should use at least one `*` and one `**` operator to calculate what's instructed.",
   incorrect_result_msg = "You should calculate the total interest on 100 dollar after 7 years given a 10% rate.")
-test_function("print", index = 7, 
+test_function("print", index = 7,
   not_called_msg = "Don't forget to print out your result with [`print()`](https://docs.python.org/3/library/functions.html#print).",
   incorrect_msg = "Print out your result using `print(100 * 1.1 ** 7)`.")
 
@@ -291,7 +285,7 @@ Remember how you calculated the money you ended up with after 7 years of investi
 Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.10` and then redo the calculations!
 
 *** =instructions
-- Create a variable `factor`, equal to `1.10`. 
+- Create a variable `factor`, equal to `1.10`.
 - Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
 - Print out the value of `result`.
 
@@ -338,7 +332,7 @@ print(result)
 ```{python}
 test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
                        incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
-                       
+
 test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
 test_object("result", do_eval = False)
 test_operator(3, not_found_msg = "Have you used the correct calculations to calculate `result`?",
@@ -539,9 +533,9 @@ Suppose for example that you've calculated the return of your investment, and wa
 print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 ```
 
-This will not work, though, as you cannot simply sum strings and floats. 
+This will not work, though, as you cannot simply sum strings and floats.
 
-To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string. 
+To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string.
 
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
@@ -602,22 +596,22 @@ test_object("result", undefined_msg = msg, incorrect_msg = msg)
 test_operator(2, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 
 # check correctly converted `result` and `savings` in printed string.
-test_function("str", 1, incorrect_msg = "On the line with `print`, be sure you changed `savings` to `str(savings)`.")
-test_function("str", 2, incorrect_msg = "On the line with `print`, be sure you changed `result` to  `str(result)`.")
+test_function("str", 1, incorrect_msg = "On the line with `print()`, be sure you changed `savings` to `str(savings)`.")
+test_function("str", 2, incorrect_msg = "On the line with `print()`, be sure you changed `result` to  `str(result)`.")
 msg = "To form the long string, you can use the `+` operator. The only thing you have to edit in the printout is that you have to convert `savings` and `result` to strings."
 test_operator(3, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
 
 # ensure predefined pi_string is unmodified
-msg = "You don't have to change or remove the predefined variables."
+msg = "You shouldn't have to change or remove the predefined variable `pi_string`."
 test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
 
 # check pi_float
 
-test_float = test_function("float", 
-               incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.",
-               not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float` function.")
-test_object("pi_float", 
+test_function("float",
+              not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function."
+              incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.")
+test_object("pi_float",
              incorrect_msg = "It looks like you used `float` correctly, but the value of `pi_float` is incorrect.",
              undefined_msg = "It looks like you used `float` correctly, but did not assign the result to `pi_float`")
 
