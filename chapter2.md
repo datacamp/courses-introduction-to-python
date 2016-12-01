@@ -733,7 +733,7 @@ areas_2 = areas_1 + ["garage", 15.45]
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-test_object("areas_1", incorrect_msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`. Watch out for typos!"))
+test_object("areas_1", incorrect_msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`. Watch out for typos!")
 test_object("areas_2", incorrect_msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`. Watch out for typos.")
 success_msg("Cool! The list is shaping up nicely!")
 ```
