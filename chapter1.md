@@ -324,7 +324,7 @@ test_object("savings", undefined_msg = "The variable `savings` was defined for y
 test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
 test_object("result", incorrect_msg = "Have you used `*` and `**` to calculate `result`?")
 msg = "Don't forget to print out `result` after assigning it."
-test_print("print", undefined_msg = msg, incorrect_msg = msg)
+test_print(not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
 
