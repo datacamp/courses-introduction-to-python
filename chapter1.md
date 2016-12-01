@@ -30,7 +30,7 @@ You can also use the IPython Shell interactively by simply typing commands and h
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
 *** =hint
-- Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
+Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
 
 *** =pre_exercise_code
 ```{python}
@@ -102,10 +102,10 @@ Something that Filip didn't mention in his videos is that you can add **comments
 To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`: it is completely ignored during execution.
 
 *** =instructions
-- Above the `print(7 + 10)`, add the comment `# Addition works too`.
+Above the `print(7 + 10)`, add the comment `# Addition works too`.
 
 *** =hint
-- For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition works too` right above `print(7 + 10)`.
+For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition works too` right above `print(7 + 10)`.
 
 *** =pre_exercise_code
 ```{python}
@@ -150,7 +150,7 @@ The code in the script on the right gives some examples.
 Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
 
 *** =hint
-- After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
+After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
 
 *** =pre_exercise_code
 ```{python}
@@ -601,7 +601,7 @@ Which one of these will throw an error? You can always copy and paste this code 
 - `True + False`
 
 *** =hint
-- Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
+Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
 
 *** =pre_exercise_code
 ```{python}

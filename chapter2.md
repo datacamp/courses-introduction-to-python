@@ -518,10 +518,10 @@ x[:]
 ```
 
 *** =instructions
-- Use slicing to create the lists `downstairs` and `upstairs` again, but this time without using indexes if it's not necessary. Remember `downstairs` is the first 6 elements of `areas` and `upstairs` is the last 4 elements of `areas`.
+Use slicing to create the lists `downstairs` and `upstairs` again, but this time without using indexes if it's not necessary. Remember `downstairs` is the first 6 elements of `areas` and `upstairs` is the last 4 elements of `areas`.
 
 *** =hint
-- To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
+To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
 
 *** =pre_exercise_code
 ```{python}
@@ -814,7 +814,7 @@ If you want to prevent changes in `areas_copy` to also take effect in `areas`, y
 - Now, changes made to `areas_copy` shouldn't affect `areas`. Hit _Submit Answer_ to check this.
 
 *** =hint
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
 
 *** =pre_exercise_code
 ```{python}
