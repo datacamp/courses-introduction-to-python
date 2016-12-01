@@ -77,7 +77,7 @@ Python is a pretty versatile language. For what applications can you use Python?
 - All of the above.
 
 *** =hint
-- Filip mentioned in the video that Python can be used to build practically any piece of software.
+Filip mentioned in the video that Python can be used to build practically any piece of software.
 
 *** =pre_exercise_code
 ```{python}
