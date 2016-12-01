@@ -213,7 +213,7 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("first", undefined_msg = msg, incorrect_msg = msg)
 test_object("second", undefined_msg = msg, incorrect_msg = msg)
 test_object("full")
-test_function("sorted", params = ['iterable', 'reverse'])
+test_function_v2("sorted", params = ['iterable', 'reverse'])
 test_object("full_sorted", incorrect_msg = "Assign the result of the `sorted()` function to `full_sorted`.")
 success_msg("Cool! Head over to the video on Python methods.")
 ```
