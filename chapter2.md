@@ -4,7 +4,7 @@ title       : Python Lists
 description : "Learn to store, access and manipulate data in lists: the first step towards efficiently working with huge amounts of data."
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf
-  
+
 --- type:VideoExercise lang:python xp:50 skills:2 key:f366e876d8
 ## Lists, what are they?
 
@@ -171,9 +171,9 @@ my_list = [el1, el2, el3]
 
 Can you tell which ones of the following lines of Python code are valid ways to build a list?
 
-A. `[1, 3, 4, 2]`  
-B. `[[1, 2, 3], [4, 5, 7]]`  
-C. `[1 + 2, "a" * 5, 3]`  
+A. `[1, 3, 4, 2]`
+B. `[[1, 2, 3], [4, 5, 7]]`
+C. `[1 + 2, "a" * 5, 3]`
 
 
 *** =instructions
@@ -204,12 +204,12 @@ test_mc(1,[msg1,msg2,msg3,msg4])
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
 
-Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea. 
+Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea.
 
 Don't get confused here: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
 
 *** =instructions
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order! 
+- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
 - Print out `house`; does this way of structuring your data make more sense?
 - Print out the type of `house`. Are you still dealing with a list?
 
@@ -415,15 +415,8 @@ print(eat_sleep_area)
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-
-test_object("eat_sleep_area", do_eval = False)
-msg1 = "You can add the two areas by using the `+` operator once."
-msg2 = "Be sure to select the correct values from the `areas` vector."
-test_operator(1, not_found_msg = msg1, incorrect_op_msg = msg1, incorrect_result_msg = msg2)
-test_object("eat_sleep_area", incorrect_msg = "Be sure to assign the correct value to `eat_sleep_area`.")
-
+test_object("eat_sleep_area", incorrect_msg = "Be sure to assign the correct value to `eat_sleep_area`. You'll need the indices `3` and `-3`.")
 test_function("print", incorrect_msg = "Print out the value you found, stored in `eat_sleep_area`. Use `print(eat_sleep_area)`.")
-
 success_msg("Bellissimo!")
 ```
 
@@ -580,8 +573,8 @@ success_msg("Wonderful!")
 You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
 
 ```
-x = [["a", "b", "c"], 
-     ["d", "e", "f"], 
+x = [["a", "b", "c"],
+     ["d", "e", "f"],
      ["g", "h", "i"]]
 x[2][0]
 x[2][:2]
@@ -602,10 +595,10 @@ What will `house[-1][1]` return? `house`, the list of lists that you created bef
 
 *** =pre_exercise_code
 ```{python}
-house = [["hallway", 11.25], 
-         ["kitchen", 18.0], 
-         ["living room", 20.0], 
-         ["bedroom", 10.75], 
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
          ["bathroom", 9.50]]
 ```
 
@@ -713,7 +706,7 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 *** =sample_code
 ```{python}
 # Create the areas list and make some changes
-areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0, 
+areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
          "bedroom", 10.75, "bathroom", 10.50]
 
 # Add poolhouse data to areas, new list is areas_1
@@ -726,7 +719,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
 *** =solution
 ```{python}
 # Create the areas list (updated version)
-areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0, 
+areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
          "bedroom", 10.75, "bathroom", 10.50]
 
 # Add poolhouse data to areas, new list is areas_1
@@ -740,21 +733,8 @@ areas_2 = areas_1 + ["garage", 15.45]
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-
-test_object("areas_1", do_eval = False)
-msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`."
-test_operator(1, not_found_msg = msg,
-                 incorrect_op_msg = msg,
-                 incorrect_result_msg = msg +". Watch out for typos.")
-test_object("areas_1")
-
-test_object("areas_2", do_eval = False)
-msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`."
-test_operator(2, not_found_msg = msg,
-                 incorrect_op_msg = msg,
-                 incorrect_result_msg = msg +". Watch out for typos.")
-test_object("areas_2")
-
+test_object("areas_1", incorrect_msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`. Watch out for typos!"))
+test_object("areas_2", incorrect_msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`. Watch out for typos.")
 success_msg("Cool! The list is shaping up nicely!")
 ```
 
@@ -773,9 +753,9 @@ Pay attention here: as soon as you remove an element from a list, the indexes of
 The updated and extended version of `areas` that you've built in the previous exercises is coded below. You can copy and paste this into the IPython Shell to play around with the result.
 
 ```
-areas = ["hallway", 11.25, "kitchen", 18.0, 
-        "chill zone", 20.0, "bedroom", 10.75, 
-         "bathroom", 10.50, "poolhouse", 24.5, 
+areas = ["hallway", 11.25, "kitchen", 18.0,
+        "chill zone", 20.0, "bedroom", 10.75,
+         "bathroom", 10.50, "poolhouse", 24.5,
          "garage", 15.45]
 ```
 
@@ -792,7 +772,7 @@ command1
 command2
 ```
 
-Which of the code chunks will do the job for us?  
+Which of the code chunks will do the job for us?
 
 *** =instructions
 - `del(areas[10]); del(areas[11])`
@@ -805,9 +785,9 @@ You can simply try all the different options to see if they work. Just make sure
 
 *** =pre_exercise_code
 ```{python}
-areas = ["hallway", 11.25, "kitchen", 18.0, 
-        "chill zone", 20.0, "bedroom", 10.75, 
-         "bathroom", 10.50, "poolhouse", 24.5, 
+areas = ["hallway", 11.25, "kitchen", 18.0,
+        "chill zone", 20.0, "bedroom", 10.75,
+         "bathroom", 10.50, "poolhouse", 24.5,
          "garage", 15.45]
 ```
 
@@ -873,11 +853,11 @@ print(areas)
 
 *** =sct
 ```{python}
-test_object("areas", undefined_msg = "Don't remove the predefined `areas` list.", 
+test_object("areas", undefined_msg = "Don't remove the predefined `areas` list.",
                      incorrect_msg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy.")
-test_object("areas_copy", undefined_msg = "Define `areas_copy`, a copy of `areas`", 
+test_object("areas_copy", undefined_msg = "Define `areas_copy`, a copy of `areas`",
                           incorrect_msg = "Be sure to edit `areas_copy`, as instructed.")
-                     
+
 test_function("print", incorrect_msg = "Print out the original list `areas` by using `print(areas)`.")
 
 success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")

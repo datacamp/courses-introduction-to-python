@@ -199,18 +199,7 @@ print(100 * 1.1 ** 7)
 
 *** =sct
 ```{python}
-msg = "You don't have to change the predefined code. Just add one line at the bottom!"
-for i in range(1,7):
-  test_operator(i, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
-  test_function("print", index = i, not_called_msg = msg, incorrect_msg = msg)
-
-test_operator(7, not_found_msg = "Add an operation to calculate what's instructed.",
-  incorrect_op_msg = "You should use at least one `*` and one `**` operator to calculate what's instructed.",
-  incorrect_result_msg = "You should calculate the total interest on 100 dollar after 7 years given a 10% rate.")
-test_function("print", index = 7,
-  not_called_msg = "Don't forget to print out your result with [`print()`](https://docs.python.org/3/library/functions.html#print).",
-  incorrect_msg = "Print out your result using `print(100 * 1.1 ** 7)`.")
-
+test_output_contains("194\\.8", no_output_msg = "Have you used the operation `100 * 1.1 ** 7` in a `print()` call?")
 success_msg("Time for another video!")
 ```
 
@@ -332,14 +321,10 @@ print(result)
 ```{python}
 test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
                        incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
-
 test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
-test_object("result", do_eval = False)
-test_operator(3, not_found_msg = "Have you used the correct calculations to calculate `result`?",
-                 incorrect_op_msg = "Use `*` and `**` to calculate `result`.",
-                 incorrect_result_msg = "Have you used to correct variables to calculate result?")
-test_object("result", incorrect_msg = "Assign the correct value to `result`.")
-test_function("print", incorrect_msg = "You should print out the result using `print(result)`.")
+test_object("result", incorrect_msg = "Have you used `*` and `**` to calculate `result`?")
+msg = "Don't forget to print out `result` after assigning it."
+test_print("print", undefined_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
 
@@ -503,21 +488,11 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor", undefined_msg = msg, incorrect_msg = msg)
 test_object("desc", undefined_msg = msg, incorrect_msg = msg)
-
-
-test_operator(3, not_found_msg = "Calculate `year1` using the `*` operator.",
-                 incorrect_op_msg = "To calculate `year1`, you should use `*` once.",
-                 incorrect_result_msg = "You should use `savings` and `factor` to calculate `year1`. Take a look at the hint if you're stuck.")
-test_object("year1", incorrect_msg = "Assign the correct value you calculated to `year1`.")
-
+test_object("year1", incorrect_msg = "Multiply `savings` and `factor` to create the `year1` variable.")
 msg = "Make sure to print out the type of `year1` like this: `print(type(year1))`."
 test_function("print", 1, incorrect_msg = msg)
 test_function("type", incorrect_msg = msg)
-
-msg = "You can add up a string to another string, just type `desc + desc`."
-test_operator(4, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
-test_object("doubledesc", incorrect_msg  = "Assign the resulting string to `doubledesc`.")
-
+test_object("doubledesc", incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?")
 test_function("print", 2, incorrect_msg = "Be sure to print out `doubledesc`.")
 success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
 ```
@@ -591,15 +566,11 @@ pi_float = float(pi_string)
 # ensure predefined values are unmodified
 msg = "You don't have to change or remove the predefined variables."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
-test_operator(1, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 test_object("result", undefined_msg = msg, incorrect_msg = msg)
-test_operator(2, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
 
 # check correctly converted `result` and `savings` in printed string.
-test_function("str", 1, incorrect_msg = "On the line with `print()`, be sure you changed `savings` to `str(savings)`.")
-test_function("str", 2, incorrect_msg = "On the line with `print()`, be sure you changed `result` to  `str(result)`.")
-msg = "To form the long string, you can use the `+` operator. The only thing you have to edit in the printout is that you have to convert `savings` and `result` to strings."
-test_operator(3, not_found_msg = msg, incorrect_op_msg = msg, incorrect_result_msg = msg)
+test_function("str", 1, incorrect_msg = "On the line with `print()`, make sure to change `savings` to `str(savings)`.")
+test_function("str", 2, incorrect_msg = "On the line with `print()`, make sure to changed `result` to  `str(result)`.")
 test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
 
 # ensure predefined pi_string is unmodified
@@ -607,7 +578,6 @@ msg = "You shouldn't have to change or remove the predefined variable `pi_string
 test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
 
 # check pi_float
-
 test_function("float",
               not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.",
               incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.")

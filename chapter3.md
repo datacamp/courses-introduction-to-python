@@ -19,7 +19,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:2 key:c422ee929b
 ## Familiar functions
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). You've also used the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data type. These are built-in functions as well. 
+Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). You've also used the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data type. These are built-in functions as well.
 
 Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
 
@@ -148,7 +148,7 @@ In the previous exercise, the square brackets around `imag` in the documentation
 
 Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the IPython Shell.
 
-You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) takes three arguments: `iterable`, `key` and `reverse`. 
+You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) takes three arguments: `iterable`, `key` and `reverse`.
 
 `key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
 
@@ -212,17 +212,9 @@ print(full_sorted)
 msg = "You don't have to change or remove the predefined variables."
 test_object("first", undefined_msg = msg, incorrect_msg = msg)
 test_object("second", undefined_msg = msg, incorrect_msg = msg)
-
-msg = "Use `+` to append `second` to `first`."
-test_operator(1, not_found_msg = msg,
-                 incorrect_op_msg =  msg,
-                 incorrect_result_msg = msg + " Mind the order!")
-
-test_function("sorted", not_called_msg = "Make sure to call `sorted()` to define `full_sorted`.",
-                        incorrect_msg = "The arguments of `sorted()` are incorrect. Are you set the first argument to `full` and `reverse` to `True`. Use the template provided to you in the description of the exercise and fill in the correct values. Mind typo's!")
-test_object("full_sorted", 
-            incorrect_msg = "Assign the correct value to `full_sorted`. This variable should contain the result of your call of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted).")
-
+test_object("full")
+test_function("sorted", params = ['iterable', 'reverse'])
+test_object("full_sorted", incorrect_msg = "Assign the result of the `sorted()` function to `full_sorted`.")
 success_msg("Cool! Head over to the video on Python methods.")
 ```
 
@@ -301,7 +293,7 @@ test_function("print", 1, incorrect_msg = msg % "room")
 test_function("print", 2, incorrect_msg = msg % "room_up")
 
 msg = "Don't forget to count the o's in `room` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument. Make sure to place the `\"o\"` between double quotes."
-test_function("room.count", 
+test_function("room.count",
               not_called_msg = msg,
               incorrect_msg = msg)
 test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in `room`.")
@@ -365,13 +357,13 @@ msg = "You don't have to change or remove the predefined variables."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
 msg = "Don't forget to find the index of `20.0` in `areas` by calling the [`index()`](https://docs.python.org/3/library/functions.html#index) method on it with the correct argument."
-test_function("areas.index", 
+test_function("areas.index",
               not_called_msg = msg,
               incorrect_msg = msg)
 test_function("print", 1, not_called_msg = "Don't forget to print out the index of `20.0` in `areas`.", incorrect_msg = "For the first printout, you should use `print(areas.index(20.0))`.")
 
 msg = "Don't forget to count the number of times `14.5` appears in `areas` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument."
-test_function("areas.count", 
+test_function("areas.count",
               not_called_msg = msg,
               incorrect_msg = msg)
 test_function("print", 2, not_called_msg = "Don't forget to print out the count of `14.5` in `areas`.", incorrect_msg = "For the second printout, you should use `print(areas.count(14.5))`.")
@@ -453,12 +445,12 @@ test_function("areas.append", 1,
 test_function("areas.append", 2,
               not_called_msg = msg % ("15.45", "second"),
               incorrect_msg = msg % ("15.45", "second"))
-              
+
 msg = "Use the `reverse()` method on `areas` to reverse it. Don't forget the parantheses!"
-test_function("areas.reverse", 
+test_function("areas.reverse",
               not_called_msg = msg,
               incorrect_msg = msg)
-              
+
 test_function("print", 1, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
 
 
@@ -535,7 +527,7 @@ r = 0.43
 import math
 
 # Calculate C
-C = 2 * r * math.pi 
+C = 2 * r * math.pi
 
 # Calculate A
 A = math.pi * r ** 2
@@ -549,19 +541,12 @@ print("Area: " + str(A))
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
 test_object("r", undefined_msg = msg, incorrect_msg = msg)
-
 test_import("math", same_as = False)
-
-test_operator(2, incorrect_result_msg = "Your calculation of `C` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
-test_object("C")
-
-test_operator(3, incorrect_result_msg = "Your calculation of `A` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
-test_object("A")
-
-msg = "You don't have to change or remove the predefined print functions."
+test_object("C", incorrect_msg = "Your calculation of `C` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
+test_object("A", incorrect_msg = "Your calculation of `A` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
+msg = "You don't have to change or remove the predefined `print()` functions at the end."
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
-
 success_msg("Nice!")
 ```
 
@@ -640,7 +625,7 @@ success_msg("Nice! Head over to the next exercise.")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:f1b2675a2a
 ## Different ways of importing
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code. 
+There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
 
 Suppose you want to use the function [`inv()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linalg.inv.html), which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 

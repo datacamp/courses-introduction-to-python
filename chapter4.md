@@ -4,7 +4,7 @@ title       : Numpy
 description : Numpy is a Python package to efficiently do data science. Learn to work with the Numpy array, a faster and more powerful alternative to the list, and take your first steps in data exploration.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch4_slides.pdf
-  
+
 --- type:VideoExercise lang:python xp:50 skills:2 key:ed471f4b00
 ## Numpy
 
@@ -38,7 +38,7 @@ import numpy as np
 
 *** =sample_code
 ```{python}
-# Create list baseball 
+# Create list baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 # Import the numpy package as np
@@ -53,7 +53,7 @@ baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 *** =solution
 ```{python}
-# Create list baseball 
+# Create list baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 # Import the numpy package as np
@@ -75,7 +75,7 @@ test_import("numpy")
 
 test_object("np_baseball", do_eval = False)
 test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
-                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(baseball)`.") 
+                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(baseball)`.")
 test_object("np_baseball", incorrect_msg = "Assign the correct value to `np_baseball`.")
 
 msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
@@ -159,7 +159,7 @@ test_import("numpy", same_as = False)
 
 test_object("np_height", do_eval = False)
 test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
-                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(np_height)`.") 
+                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(np_height)`.")
 test_object("np_height", incorrect_msg = "Assign the correct value to `np_height`.")
 
 test_function("print", 1, incorrect_msg = "Print out `np_height` with `print(np_height)`.")
@@ -207,7 +207,7 @@ import numpy as np
 # Create array from height with correct units: np_height_m
 np_height_m = np.array(height) * 0.0254
 
-# Create array from weight with correct units: np_weight_kg 
+# Create array from weight with correct units: np_weight_kg
 
 
 # Calculate the BMI: bmi
@@ -227,7 +227,7 @@ import numpy as np
 # Create array from height with correct units: np_height_m
 np_height_m = np.array(height) * 0.0254
 
-# Create array from weight with correct units: np_weight_kg 
+# Create array from weight with correct units: np_weight_kg
 np_weight_kg = np.array(weight) * 0.453592
 
 # Calculate the BMI: bmi
@@ -241,21 +241,20 @@ print(bmi)
 ```{python}
 test_import("numpy", same_as = False)
 
+# check np_height_m
 msg = "The variable `np_height_m` was defined for you. You don't have to change or remove it!"
 test_object("np_height_m", incorrect_msg = msg, undefined_msg = msg)
 
+# test np_weight
 test_object("np_weight_kg", do_eval = False)
-test_function("numpy.array", 2, not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).", 
+test_function("numpy.array", 2, not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
                                 incorrect_msg = "To assign `np_weight_kg`, use `np.array(weight)`.")
-test_operator(2, incorrect_result_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
-test_object("np_weight_kg", incorrect_msg = "Assign the result of your calculation to `np_weight_kg`.")
+test_object("np_weight_kg", incorrect_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
 
-test_object("bmi", do_eval = False)
-test_operator(3, incorrect_result_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
-test_object("bmi", incorrect_msg = "Assign the result of your calculation to `bmi`.")
+# check bmi
+test_object("bmi", incorrect_msg = "Are you calculating `bmi` correctly? You can use `np_weight / np_height_m ** 2` for this.")
 
-test_function("print", 1, incorrect_msg = "Print out `bmi` with `print(bmi)`.")
-
+test_function("print", 1, incorrect_msg = "Don't forget to print out `bmi`!")
 success_msg("Cool! Time to step up your game!")
 ```
 
@@ -364,9 +363,9 @@ success_msg("Wow! It appears that only 11 of the more than 1000 baseball players
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:3662ff6637
 ## Numpy Side Effects
 
-As Filip explained before, Numpy is great to do **vector arithmetic**. If you compare its functionality with regular Python lists, however, some things have changed. 
+As Filip explained before, Numpy is great to do **vector arithmetic**. If you compare its functionality with regular Python lists, however, some things have changed.
 
-First of all, Numpy arrays cannot contain elements with different types. If you try to build such a list, some of the elments' types are changed to end up with a homogenous list. This is known as _type coercion_. 
+First of all, Numpy arrays cannot contain elements with different types. If you try to build such a list, some of the elments' types are changed to end up with a homogenous list. This is known as _type coercion_.
 
 Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and Numpy arrays.
 
@@ -505,7 +504,7 @@ In this exercise, `baseball` is a list of lists. The main list contains 4 elemen
 
 *** =instructions
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D Numpy array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`. 
+- Print out the type of `np_baseball`.
 - Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
 
 *** =hint
@@ -568,10 +567,10 @@ test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 test_import("numpy", same_as = False)
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).", 
+test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
                              incorrect_msg = "You should call `np.array(baseball)` to make a 2D numpy array out of `baseball`.")
-test_object("np_baseball", incorrect_msg = "Assign the correct value to `np_baseball`.")                           
-  
+test_object("np_baseball", incorrect_msg = "Assign the correct value to `np_baseball`.")
+
 msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
 test_function("type", 1, incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
@@ -639,7 +638,7 @@ print(np_baseball.shape)
 test_import("numpy", same_as = False)
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).", 
+test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
                              incorrect_msg = "You should call `np.array(baseball)` to make a 2D numpy array out of `baseball`.")
 test_object("np_baseball", incorrect_msg = "Assign the numpy array you created to `np_baseball`.")
 
@@ -651,7 +650,7 @@ success_msg("Slick! Time to show off some killer features of multi-dimensional N
 --- type:NormalExercise lang:python xp:100 skills:2 key:aeca4977f0
 ## Subsetting 2D Numpy Arrays
 
-If your 2D Numpy array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists. 
+If your 2D Numpy array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
 
 ```
 # regular list of lists
@@ -828,19 +827,12 @@ test_import("numpy")
 msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_operator(1, not_found_msg = "Use the `+` operator to add `update` to `np_baseball`.",
-                 incorrect_result_msg = "Are you sure you correctly added `update` to `np_baseball`? The resulting numpy array seems to be incorrect.")
-                 
 test_function("print", 1, incorrect_msg = "Print out the result of `np_baseball + update` using `print(np_baseball + update)`.")
 
 msg = "Create the `conversion` object using `np.array(...)`. Fill in the correct list on the dots."
 test_function("numpy.array", not_called_msg = msg, incorrect_msg = msg)
 test_object("conversion", incorrect_msg = "Assign the object you created with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to `conversion`.")
 
-
-test_operator(2, not_found_msg = "Use the `*` operator to multiply `np_baseball` with `conversion`.",
-                 incorrect_result_msg = "Are you sure you correctly miltiplied `np_baseball` with `conversion`? The resulting numpy array seems to be incorrect.")
-                 
 test_function("print", 2, incorrect_msg = "Print out the result of `np_baseball * conversion` using `print(np_baseball * conversion)`.")
 
 success_msg("Great job! Notice how with very little code, you can change all values in your Numpy data structure in a very specific way. This will be very useful in your future as a data scientist!")
@@ -942,7 +934,7 @@ success_msg("An average length of 1586 inches, that doesn't sound right, does it
 --- type:NormalExercise lang:python xp:100 skills:2 key:4409948807
 ## Explore the baseball data
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns. 
+Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns.
 
 The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
@@ -1039,7 +1031,7 @@ success_msg("Great! Time to use all of your new data science skills in the last 
 
 In the last few exercises you've learned everything there is to know about heights and weights of baseball players. Now it's time to dive into another sport: soccer.
 
-You've contacted the FIFA for some data and they handed you two lists. The lists are the following: 
+You've contacted the FIFA for some data and they handed you two lists. The lists are the following:
 ```
 positions = ['GK', 'M', 'A', 'D', ...]
 heights = [191, 184, 185, 180, ...]
