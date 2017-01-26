@@ -940,7 +940,7 @@ The Python script on the right already includes code to print out informative me
 
 *** =instructions
 - The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.
-- Use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) on the first column of `np_baseball` to calculate `stddev`. Replace `None` with the correct code.
+- Use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html) on the first column of `np_baseball` to calculate `stddev`. Replace `None` with the correct code.
 - Do big players tend to be heavier? Use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to store the correlation between the first and second column of `np_baseball` in `corr`. Replace `None` with the correct code.
 
 *** =hint
