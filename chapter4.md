@@ -363,7 +363,7 @@ success_msg("Wow! It appears that only 11 of the more than 1000 baseball players
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:3662ff6637
 ## Numpy Side Effects
 
-As Filip explained before, Numpy is great to do **vector arithmetic**. If you compare its functionality with regular Python lists, however, some things have changed.
+As Filip explained before, Numpy is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things have changed.
 
 First of all, Numpy arrays cannot contain elements with different types. If you try to build such a list, some of the elments' types are changed to end up with a homogenous list. This is known as _type coercion_.
 
