@@ -224,6 +224,8 @@ x = 5
 
 You can now use the name of this variable, `x`, instead of the actual value, `5`.
 
+Remember, `=` in Python means _assignment_, not equality!
+
 *** =instructions
 - Create a variable `savings` with the value 100.
 - Check out this variable by typing `print(savings)` in the script.
@@ -339,7 +341,7 @@ In the previous exercise, you worked with two Python data types:
 Next to numerical data types, there are two other very common data types:
 
 - `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. Can only be `True` or `False`.
+- `bool`, or boolean: a type to represent logical values. Can only be `True` or `False` (the capitalization is important!).
 
 *** =instructions
 - Create a new string, `desc`, with the value `"compound interest"`.
@@ -614,4 +616,3 @@ msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
 msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
-
