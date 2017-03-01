@@ -150,8 +150,6 @@ Have a look at the documentation of [`sorted()`](https://docs.python.org/3/libra
 
 You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) takes three arguments: `iterable`, `key` and `reverse`.
 
-An _iterable_
-
 `key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
 
 In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will be matched to the `iterable` argument, but what about the second input? To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
@@ -161,6 +159,8 @@ sorted(___, reverse = ___)
 ```
 
 Two lists have been created for you on the right. Can you paste them together and sort them in descending order?
+
+Note: For now, we can understand an [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) as being any collection of objects, e.g. a List. 
 
 *** =instructions
 - Use `+` to merge the contents of `first` and `second` into a new list: `full`.
