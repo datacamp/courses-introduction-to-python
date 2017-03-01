@@ -759,12 +759,12 @@ np_mat + np_mat
 `np_baseball` is coded for you; it's again a 2D Numpy array with 3 columns representing height, weight and age.
 
 *** =instructions
-- You managed to get hold on the changes in weight, height and age of all baseball players. It is available as a 2D Numpy array, `update`. Add `np_baseball` and `update` and print out the result.
+- You managed to get hold on the changes in weight, height and age of all baseball players. It is available as a 2D Numpy array, `updated`. Add `np_baseball` and `updated` and print out the result.
 - You want to convert the units of height and weight. As a first step, create a Numpy array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
 - Multiply `np_baseball` with `conversion` and print out the result.
 
 *** =hint
-- `np_baseball + update` will do a element-wise summation of the two Numpy arrays.
+- `np_baseball + updated` will do a element-wise summation of the two Numpy arrays.
 - Create a Numpy array with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); the input is a regular Python list with three elements.
 - `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 
@@ -774,14 +774,14 @@ import pandas as pd
 import numpy as np
 baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
 n = len(baseball)
-update = np.array(pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/update.csv", header = None))
+updated = np.array(pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/update.csv", header = None))
 import numpy as np
 ```
 
 *** =sample_code
 ```{python}
 # baseball is available as a regular list of lists
-# update is available as 2D Numpy array
+# updated is available as 2D Numpy array
 
 # Import numpy package
 import numpy as np
@@ -789,7 +789,7 @@ import numpy as np
 # Create np_baseball (3 cols)
 np_baseball = np.array(baseball)
 
-# Print out addition of np_baseball and update
+# Print out addition of np_baseball and updated
 
 
 # Create Numpy array: conversion
@@ -802,7 +802,7 @@ np_baseball = np.array(baseball)
 *** =solution
 ```{python}
 # baseball is available as a regular list of lists
-# update is available as 2D Numpy array
+# updated is available as 2D Numpy array
 
 # Import numpy package
 import numpy as np
@@ -810,8 +810,8 @@ import numpy as np
 # Create np_baseball (3 cols)
 np_baseball = np.array(baseball)
 
-# Print out addition of np_baseball and update
-print(np_baseball + update)
+# Print out addition of np_baseball and updated
+print(np_baseball + updated)
 
 # Create Numpy array: conversion
 conversion = np.array([0.0254, 0.453592, 1])
@@ -827,7 +827,7 @@ test_import("numpy")
 msg = "You don't have to change or remove the predefined variables."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("print", 1, incorrect_msg = "Print out the result of `np_baseball + update` using `print(np_baseball + update)`.")
+test_function("print", 1, incorrect_msg = "Print out the result of `np_baseball + updated` using `print(np_baseball + updated)`.")
 
 msg = "Create the `conversion` object using `np.array(...)`. Fill in the correct list on the dots."
 test_function("numpy.array", not_called_msg = msg, incorrect_msg = msg)
