@@ -616,4 +616,3 @@ msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
 msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
-

@@ -742,7 +742,7 @@ success_msg("This is going well!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:1c2378b677
 ## 2D Arithmetic
 
-Remember how you calculated the Body Mass Index for all baseball players? Numpy was able to perform all calculations element-wise. For 2D Numpy arrays this isn't any different! You can combine matrices with single numbers, with vectors, and with other matrices.
+Remember how you calculated the Body Mass Index for all baseball players? Numpy was able to perform all calculations element-wise (element by element). For 2D Numpy arrays this isn't any different! You can combine matrices with single numbers, with vectors, and with other matrices.
 
 Execute the code below in the IPython shell and see if you understand:
 
