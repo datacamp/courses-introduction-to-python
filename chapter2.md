@@ -447,7 +447,7 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 
 *** =hint
 - Use the brackets `[0:6]` to build `downstairs`.
-- Use the barckets `[6:10]` to build `upstairs`.
+- Use the brackets `[6:10]` to build `upstairs`.
 - Simply add two [`print()`](https://docs.python.org/3/library/functions.html#print) calls to the script to print out `downstairs` and `upstairs`.
 
 *** =pre_exercise_code
