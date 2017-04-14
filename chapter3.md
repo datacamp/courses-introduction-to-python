@@ -160,7 +160,7 @@ sorted(___, reverse = ___)
 
 Two lists have been created for you on the right. Can you paste them together and sort them in descending order?
 
-Note: For now, we can understand an [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) as being any collection of objects, e.g. a List. 
+Note: For now, we can understand an [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) as being any collection of objects, e.g. a List.
 
 *** =instructions
 - Use `+` to merge the contents of `first` and `second` into a new list: `full`.
@@ -565,7 +565,7 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 *** =instructions
 - Perform a selective import from the `math` package where you only import the `radians` function.
-- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as $r * \phi$, where $r$ is the radius and $\phi$ is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function, which you just imported.
+- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as `r * phi`, where `r` is the radius and `phi` is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function, which you just imported.
 - Print out `dist`.
 
 *** =hint
@@ -657,4 +657,3 @@ msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements 
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: [`inv()`](https://docs.python.org/3/library/functions.html#inv) is now available as `my_inv`."
 test_mc(4, [msg1, msg2, msg3, msg4])
 ```
-
