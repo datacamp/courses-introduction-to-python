@@ -25,7 +25,7 @@ You can hit _Submit Answer_ as often as you want. If you're stuck, you can click
 You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
 
 *** =instructions
-- Experiment in the IPython Shell; type 5 / 8, for example.
+- Experiment in the IPython Shell; type `5 / 8`, for example.
 - Add another line of code to the Python script: `print(7 + 10)`.
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
@@ -68,7 +68,7 @@ success_msg("Great!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9703b117fb
 ## When to use Python?
 
-Python is a pretty versatile language. For what applications can you use Python?
+Python is a pretty versatile language. For which applications can you use Python?
 
 *** =instructions
 - You want to do some quick calculations.
@@ -99,7 +99,7 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 
 Something that Filip didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
 
-To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`: it is completely ignored during execution.
+To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`; it is completely ignored during execution.
 
 *** =instructions
 Above the `print(7 + 10)`, add the comment `# Addition works too`.
@@ -141,8 +141,8 @@ success_msg("Great!")
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
 
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right: for example `4**2` will give `16`.
-- Modulo: `%`. It returns the remainder of the division of the number to the left by the number on its right, for example `18 % 7` equals `4`.
+- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` will give `16`.
+- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4`.
 
 The code in the script on the right gives some examples.
 
@@ -504,7 +504,7 @@ success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
-Suppose for example that you've calculated the return of your investment, and want to summarize the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
+Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
 
 ```
 print("I started with $" + savings + " and now have $" + result + ". Awesome!")

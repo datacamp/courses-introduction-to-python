@@ -1,12 +1,12 @@
 ---
 title_meta  : Chapter 4
-title       : Numpy
-description : Numpy is a Python package to efficiently do data science. Learn to work with the Numpy array, a faster and more powerful alternative to the list, and take your first steps in data exploration.
+title       : NumPy
+description : NumPy is a Python package to efficiently do data science. Learn to work with the NumPy array, a faster and more powerful alternative to the list, and take your first steps in data exploration.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch4_slides.pdf
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:ed471f4b00
-## Numpy
+## NumPy
 
 *** =video_link
 //player.vimeo.com/video/154563364
@@ -15,7 +15,7 @@ attachments :
 //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch4_1.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:84cab9d170
-## Your First Numpy Array
+## Your First NumPy Array
 
 In this chapter, we're going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of Numpy, a powerful package to do data science.
 
@@ -88,7 +88,7 @@ success_msg("Great job!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:e7e25a89ea
 ## Baseball players' height
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it and convert the units to centimeters?
+You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a Numpy array out of it and convert the units to meters?
 
 `height` is already available and the `numpy` package is loaded, so you can start straight away (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
 
@@ -863,7 +863,7 @@ np.median(x)
 The baseball data is available as a 2D Numpy array with 3 columns (height, weight, age) and 1015 rows. The name of this Numpy array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_.
 
 *** =instructions
-- Create Numpy array `np_height`, that is equal to first column of `np_baseball`.
+- Create Numpy array `np_height` that is equal to first column of `np_baseball`.
 - Print out the mean of `np_height`.
 - Print out the median of `np_height`.
 
@@ -928,7 +928,7 @@ test_function("numpy.median", not_called_msg = "Don't forget to call [`np.median
 
 test_function("print", 2, incorrect_msg = "Print out the result of your calculations using `print(np.median(np_height))`.")
 
-success_msg("An average length of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get a first hunch for the overall distribution of the entire dataset.")
+success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get a first hunch for the overall distribution of the entire dataset.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:4409948807
