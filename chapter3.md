@@ -287,7 +287,7 @@ print(room.count("o"))
 msg = "You don't have to change or remove the predefined variables."
 test_object("room", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("room.upper", not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `pool` object using the `.` notation. Watch out here, don't forget the parentheses after upper: `room.upper()`.")
+test_function("room.upper", not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `room` object using the `.` notation. Watch out here, don't forget the parentheses after upper: `room.upper()`.")
 test_object("room_up", incorrect_msg = "Assign the result of your `room.upper()` call to `room_up`.")
 
 msg = "For the second instruction, print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"

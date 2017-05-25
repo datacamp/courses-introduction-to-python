@@ -365,7 +365,7 @@ success_msg("Wow! It appears that only 11 of the more than 1000 baseball players
 
 As Filip explained before, `numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things have changed.
 
-First of all, `numpy` arrays cannot contain elements with different types. If you try to build such a list, some of the elments' types are changed to end up with a homogenous list. This is known as _type coercion_.
+First of all, `numpy` arrays cannot contain elements with different types. If you try to build such a list, some of the elements' types are changed to end up with a homogeneous list. This is known as _type coercion_.
 
 Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and `numpy` arrays.
 
@@ -665,7 +665,7 @@ np_x[:,0]
 
 For regular Python lists, this is a real pain. For 2D `numpy` arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
 
-The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
+The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
 *** =instructions
 - Print out the 50th row of `np_baseball`.
@@ -759,12 +759,12 @@ np_mat + np_mat
 `np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height, weight and age.
 
 *** =instructions
-- You managed to get hold on the changes in weight, height and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
+- You managed to get hold of the changes in weight, height and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
 - You want to convert the units of height and weight. As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
 - Multiply `np_baseball` with `conversion` and print out the result.
 
 *** =hint
-- `np_baseball + updated` will do a element-wise summation of the two `numpy` arrays.
+- `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
 - Create a `numpy` array with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); the input is a regular Python list with three elements.
 - `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 
@@ -851,7 +851,7 @@ success_msg("Great job! Notice how with very little code, you can change all val
 --- type:NormalExercise lang:python xp:100 skills:2 key:509c588eb6
 ## Average versus median
 
-You now know how to use `numpy` functions to a get a better feeling for your data. It basically comes down to importing `numpy` and then calling several simple functions on the `numpy` arrays:
+You now know how to use `numpy` functions to get a better feeling for your data. It basically comes down to importing `numpy` and then calling several simple functions on the `numpy` arrays:
 
 ```
 import numpy as np
@@ -1031,7 +1031,7 @@ success_msg("Great! Time to use all of your new data science skills in the last 
 
 In the last few exercises you've learned everything there is to know about heights and weights of baseball players. Now it's time to dive into another sport: soccer.
 
-You've contacted the FIFA for some data and they handed you two lists. The lists are the following:
+You've contacted FIFA for some data and they handed you two lists. The lists are the following:
 ```
 positions = ['GK', 'M', 'A', 'D', ...]
 heights = [191, 184, 185, 180, ...]
@@ -1043,7 +1043,7 @@ You're fairly confident that the median height of goalkeepers is higher than tha
 *** =instructions
 - Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
 - Extract all the heights of the goalkeepers. You can use a little trick here: use `np_positions == 'GK'` as an index for `np_heights`. Assign the result to `gk_heights`.
-- Extract all the heights of the all the other players. This time use `np_positions != 'GK'` as an index for `np_heights`. Assign the result to `other_heights`.
+- Extract all the heights of all the other players. This time use `np_positions != 'GK'` as an index for `np_heights`. Assign the result to `other_heights`.
 - Print out the median height of the goalkeepers using [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Replace `None` with the correct code.
 - Do the same for the other players. Print out their median height. Replace `None` with the correct code.
 

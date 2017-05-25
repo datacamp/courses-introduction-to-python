@@ -302,7 +302,7 @@ success_msg("Great! Get ready to learn about list subsetting!")
 Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
 
 ```
-x = list["a", "b", "c", "d"]
+x = ["a", "b", "c", "d"]
 x[1]
 x[-3] # same result!
 ```
