@@ -252,7 +252,7 @@ test_function("numpy.array", 2, not_called_msg = "Be sure to call [`np.array()`]
 test_object("np_weight_kg", incorrect_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
 
 # check bmi
-test_object("bmi", incorrect_msg = "Are you calculating `bmi` correctly? You can use `np_weight / np_height_m ** 2` for this.")
+test_object("bmi", incorrect_msg = "Are you calculating `bmi` correctly? You can use `np_weight_kg / np_height_m ** 2` for this.")
 
 test_function("print", 1, incorrect_msg = "Don't forget to print out `bmi`!")
 success_msg("Cool! Time to step up your game!")
