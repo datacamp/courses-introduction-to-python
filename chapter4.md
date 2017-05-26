@@ -735,7 +735,7 @@ test_function("print", 1, incorrect_msg = "For the first printout, subset the `n
 
 test_object("np_weight", incorrect_msg = "Define `np_weight` by subsetting the `np_baseball` object with `[:,1]`. This will select the first column, completely.")
 
-test_function("print", 2, incorrect_msg = "For the second printout, subset the `np_baseball` object using `[123,0]`. This will select the first column of the 123th row.")
+test_function("print", 2, incorrect_msg = "For the second printout, subset the `np_baseball` object using `[123,0]`. This will select the first column of the 124th row.")
 success_msg("This is going well!")
 ```
 
