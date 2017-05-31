@@ -18,7 +18,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:2 key:e6c527bf41
 ## Create a list
 
-As opposed to `int`, `bool` etc, a list is a **compound data type**: you can group values together:
+As opposed to `int`, `bool` etc., a list is a **compound data type**; you can group values together:
 
 ```
 a = "is"
@@ -100,7 +100,7 @@ The printout of the previous exercise wasn't really satisfying. It's just a list
 The code on the right is the start of a solution. For some of the areas, the name of the corresponding room is already placed in front. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
 
 *** =instructions
-- Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string, and then its area. More specifically, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
+- Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string and then its area. More specifically, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
 - Print `areas` again; is the printout more informative this time?
 
 *** =hint
@@ -302,7 +302,7 @@ success_msg("Great! Get ready to learn about list subsetting!")
 Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
 
 ```
-x = list["a", "b", "c", "d"]
+x = ["a", "b", "c", "d"]
 x[1]
 x[-3] # same result!
 ```
@@ -376,7 +376,7 @@ print(x[1] + x[3])
 
 *** =instructions
 - Using a combination of list subsetting and variable assignment, create a new variable, `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
-- Print this new variable `eat_sleep_area`.
+- Print the new variable `eat_sleep_area`.
 
 *** =hint
 - Add `areas[3]` to `areas[-3]` to calculate `eat_sleep_area`.
@@ -675,7 +675,7 @@ areas[4] = "chill zone"
 ```{python}
 test_object("areas",
             incorrect_msg = "Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!")
-success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list, to update multiple elements in a single command.")
+success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:ff0fe8d967
