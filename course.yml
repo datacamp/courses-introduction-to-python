@@ -14,3 +14,4 @@ description: Python is a general-purpose programming language that is becoming m
   In our Intro to Python class, you will learn about powerful ways to store and manipulate data as well as cool data science tools to start your own analyses.
   Enter DataCamp’s online Python curriculum.
 from: "python-base-prod:12"
+practice_pool_id: 107
