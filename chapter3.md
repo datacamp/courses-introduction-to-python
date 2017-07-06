@@ -231,6 +231,9 @@ success_msg("Cool! Head over to the video on Python methods.")
 *** =video_hls
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
 
+*** =projector_key
+8e3b3ba9da59b2e27e08ead291826bee
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:4039302ee0
 ## String Methods
 
@@ -475,6 +478,8 @@ success_msg("Great!")
 *** =video_hls
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
 
+*** =projector_key
+63b7bc6f2e990ce00a89e5d2960573ec
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:7432a6376f
 ## Import package
