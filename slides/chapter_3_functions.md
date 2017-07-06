@@ -359,16 +359,70 @@ In [8]: help(round)   # Open documentation
 *** =script
 Luckily, the internal machinery of the round() function knows how to handle this. 
 
-
-
---- type:TwoRows key:b59d79fe0c disable_transition:true
+--- type:TwoRows key:d6cd99b054disable_transition:true
 ## `round()`
 
 *** =part1
+```
+In [8]: help(round)   # Open documentation
 
+#  Help on built-in function round in module builtins:
+#
+#  round(...)
+#       round(number[, ndigits]) -> number
+#
+#       Round a number to a given precision in decimal digits 
+#       (default 0 digits). This returns an int when called with 
+#       one argument, otherwise the same type as the number. 
+#       ndigits may be negative.
+```
 
 *** =part2
-
+![](https://s3.amazonaws.com/assets.datacamp.com/production/course_4550/datasets/round_11.png)
 
 *** =script
+When ndigits is not specified, the function simply rounds to the closest integer and returns that integer. That's why we got the number 2.
 
+
+
+--- type:FullSlide key:a1df0f54f8 disable_transition:true
+## `round()`
+
+*** =part1
+```
+In [8]: help(round)   # Open documentation
+
+#  Help on built-in function round in module builtins:
+#
+#  round(...)
+#       round(number[, ndigits]) -> number
+#
+#       Round a number to a given precision in decimal digits 
+#       (default 0 digits). This returns an int when called with 
+#       one argument, otherwise the same type as the number. 
+#       ndigits may be negative.
+```
+- `round(number)` {{1}}
+- `round(number, ndigits)` {{2}}
+
+*** =script
+How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma and the ndigits here. This tells us that you can call round() in this form, as well as in this one. In other words, ndigits is an optional argument. Actually, Python offers yet another way to show that a function has optional arguments, but that's something for the exercises.
+
+--- type:FullSlide key:ac4126e12a
+## Find functions
+
+*** =part1
+- How to know? {{1}}
+- Standard task -> probably function exists! {{2}}
+- The internet is your friend {{3}}
+
+*** =script
+By now, you have an idea about how to use max() and round(), but how could you know that a function such as round() exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. 
+
+
+
+--- type:FinalSlide key:b009533050
+## Let's practice!
+
+*** =script
+Get straight to it in the interactive exercises!
