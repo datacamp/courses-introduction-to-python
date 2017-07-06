@@ -14,6 +14,9 @@ attachments :
 *** =video_hls
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_1.master.m3u8
 
+*** =projector_key
+f1578ad8cecfa295a876ebc3ddf60cbf
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:84cab9d170
 ## Your First NumPy Array
 
