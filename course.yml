@@ -15,3 +15,6 @@ description: Python is a general-purpose programming language that is becoming m
   Enter DataCamp’s online Python curriculum.
 from: "python-base-prod:20"
 practice_pool_id: 107
+datasets:
+  baseball.csv: MLB (baseball)
+  fifa.csv: FIFA (soccer)
