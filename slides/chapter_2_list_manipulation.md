@@ -1,7 +1,14 @@
 ---
 title: List Manipulation
 key: 4d710eb071441989e00e5133eb18af06
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch2_3.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch2_3.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:b159d80fb3
 ## List Manipulation

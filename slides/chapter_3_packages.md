@@ -1,7 +1,14 @@
 ---
 title: Packages
 key: 63b7bc6f2e990ce00a89e5d2960573ec
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch3_3.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch3_3.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:e533c8ca51
 ## Packages

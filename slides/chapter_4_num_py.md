@@ -1,7 +1,14 @@
 ---
 title: NumPy
 key: f1578ad8cecfa295a876ebc3ddf60cbf
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch4_1.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch4_1.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:b4b3a47316
 ## NumPy

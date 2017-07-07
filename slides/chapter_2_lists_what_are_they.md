@@ -1,7 +1,14 @@
 ---
 title: Lists, what are they?
 key: c3b2fa47d2eae2ae1bebf99a0d1ced98
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch2_1.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch2_1.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:3d4e1b442c
 ## Python Lists

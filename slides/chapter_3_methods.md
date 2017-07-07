@@ -1,7 +1,14 @@
 ---
 title: Methods
 key: 8e3b3ba9da59b2e27e08ead291826bee
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch3_2.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch3_2.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:49b518a699
 ## Methods

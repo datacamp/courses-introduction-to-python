@@ -1,7 +1,14 @@
 ---
 title: Subsetting lists
 key: 120c081330aef6035a78d74e9ef8ee8c
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch2_2.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch2_2.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:1873fd5ad9
 ## Subsetting lists

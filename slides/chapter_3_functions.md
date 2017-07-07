@@ -1,7 +1,14 @@
 ---
 title: Functions
 key: 19cac7bced13f18bef5637db1c13580c
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch3_1.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch3_1.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:84e7b00330
 ## Functions

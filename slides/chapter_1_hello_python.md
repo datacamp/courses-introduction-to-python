@@ -1,7 +1,14 @@
 ---
 title: Hello Python!
 key: 0a65626bc1ba0847ea5808aa4c5fdeca
+video_link:
+    hls: https://videos.datacamp.com/transcoded/735_intro_to_python/wb1/hls-ch1_1.master.m3u8
+    mp4: https://videos.datacamp.com/transcoded_mp4/735_intro_to_python/wb1/ch1_1.mp4
 
+transformations:
+    translateX: 55
+    translateY: 0
+    scale: 0.8
 
 --- type:TitleSlide key:e41cf5e0e7
 ## Hello Python!
