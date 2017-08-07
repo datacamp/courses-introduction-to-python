@@ -40,44 +40,6 @@ The result is a Numpy array containing booleans: True if the corresponding bmi i
 
 Using the result of a comparison to make a selection of your data is a very common way to get surprising insights. Learn all about it and the other Numpy basics in the exercises!
 
-```
-height = [1.73, 1.68, 1.71, 1.89, 1.79]
-height
-weight = [65.4, 59.2, 63.6, 88.4, 68.7]
-weight
-weight / height ** 2
-
-import numpy as np
-np_height = np.array(height)
-np_height
-np_weight = np.array(weight)
-np_weight
-bmi = np_weight / np_height ** 2
-bmi
-
-height = [1.73, 1.68, 1.71, 1.89, 1.79]
-weight = [65.4, 59.2, 63.6, 88.4, 68.7]
-weight / height ** 2
-
-np_height = np.array(height)
-np_weight = np.array(weight)
-np_weight / np_height ** 2
-
-np.array([1.0, "is", True])
-python_list = [1, 2, 3]
-numpy_array = np.array([1, 2, 3])
-python_list + python_list
-numpy_array + numpy_array
-
-bmi
-bmi[1]
-bmi > 23
-bmi[bmi > 23]
-
-np.set_printoptions(precision=3)
-bmi
-```
-
 ---
 
 ## 2D Numpy arrays
@@ -106,25 +68,6 @@ Similarly, you can select the weight of all family members like this: you only w
 
 Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting...
 
-```
-import numpy as np
-np_height = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
-np_weight = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
-type(np_height)
-type(np_weight)
-np_2d = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
-                  [65.4, 59.2, 63.6, 88.4, 68.7]])
-np_2d
-np_2d.shape
-np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
-          [65.4, 59.2, 63.6, 88.4, "68.7"]])
-
-np_2d[0]          
-np_2d[0][2]
-np_2d[0,2]
-np_2d[:,1:3]
-np_2d[1,:]
-```
 ---
 
 ## Basic Statistics with Numpy
@@ -150,17 +93,3 @@ Numpy also features more basic functions, such as `sum()` and `sort()`, which al
 Just a sidenote here: If you're wondering how I came up with the data in this video: I simulated it with Numpy functions! I sampled two random distributions 5000 times to create the `height` and `weight` arrays, and then used `column_stack` to paste them together as two columns. Another thing that Numpy can do!
 
 Another great tool to get some sense of your data is to visualize it, but that's something for later. First, head over to the exercises to learn how to explore your Numpy arrays!
-
-```
-import numpy as np
-np_city = np.column_stack((np.random.normal(1.75, 0.20, 5000), np.random.normal(60.32, 15, 5000)))
-np_city
-np.mean(np_city[:,0])
-np.median(np_city[:,0])
-np.corrcoef(np_city[:,0], np_city[:,1])
-np.std(np_city[:,0])
-
-height = np.round(np.random.normal(1.75, 0.20, 5000), 2)
-weight = np.round(np.random.normal(60.32, 15, 5000), 2)
-np_city = np.column_stack((height, weight))
-```
