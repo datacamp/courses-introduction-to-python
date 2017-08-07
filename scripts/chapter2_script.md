@@ -18,28 +18,6 @@ But that's not all. I just told you that lists can also contain lists themselves
 
 We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about: the list. These calls show that both `fam` and `fam2` are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
-```
-height = 1.73
-tall = True
-height1 = 1.73
-height2 = 1.68
-height3 = 1.71
-height4 = 1.89
-
-
-[1.73, 1.68, 1.71, 1.89]
-fam = [1.73, 1.68, 1.71, 1.89]
-fam
-fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
-fam
-
-fam2 = [["liz", 1.73], ["emma", 1.68], ["mom", 1.71], ["dad", 1.89]]
-fam2
-
-type(fam)
-type(fam2)
-```
-
 ---
 
 ## Subsetting lists
@@ -67,23 +45,6 @@ You can also choose to just leave out the index before or after the colon. If yo
 If you leave out the index where the slice should end, you include all elements up to and including the last element in the list, like here:
 
 Now it's time to head over to the exercises, where you will continue to work on the list you've created yourself before. You'll use different subsetting methods to get exactly the piece of information you need!
-
-
-```
-fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
-fam
-fam[3]
-fam[6]
-fam[-1]
-fam[6]
-fam[-2]
-
-fam
-fam[3:5]
-fam[1:4]
-fam[:4]
-fam[5:]
-```
 
 ---
 
@@ -122,30 +83,3 @@ If you want to create a list `y` that points to a new list in the memory with th
 If you now make a change to the list `y` points to, `x` is not affected:
 
 If this was a bit too much to take in, don't worry. The exercises will help you understand list manipulation and the subtle inner workings of lists. I'm sure you'll do great!
-
-```
-fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
-fam
-fam[7] = 1.86
-fam
-fam[0:2] = ["lisa", 1.74]
-fam
-fam + ["me", 1.79]
-fam_ext = fam + ["me", 1.79]
-del(fam[2])
-fam
-del(fam[2])
-fam
-
-x = ["a", "b", "c"]
-y = x
-y[1] = "z"
-y
-x
-
-x = ["a", "b", "c"]
-y = list(x)
-y = x[:]
-y[1] = "z"
-x
-```
