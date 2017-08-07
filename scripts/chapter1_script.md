@@ -1,3 +1,5 @@
+---
+
 ## Hello Python!
 
 Hi, my name is Filip and I'll be your host for _Introduction to Python for Data Science_. It's a long name, but that's to stress something: this is not just another Python tutorial. Instead, the focus will be on using Python specifically for data science. By the end of this course, you'll know about powerful ways to store and manipulate data and to deploy powerful data science tools for your own analyses.
@@ -17,6 +19,8 @@ If you execute this script in the DataCamp interface, there's nothing in the out
 Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
 
 Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python sript editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. Have fun!
+
+---
 
 ## Variables and types
 
