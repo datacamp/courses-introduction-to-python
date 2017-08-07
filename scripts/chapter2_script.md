@@ -1,3 +1,5 @@
+---
+
 ## Lists
 
 By now, you've played around with different data types. On the numbers side, there's the `float`, to represent a real number, and the `int`, to represent an integer. Next, we also have `str`, short for string, to represent text in Python, and `bool`, which can be either `True` or `False`. You can save these values as a variable, like these examples show. Each variable then represents a _single_ value.
@@ -37,6 +39,8 @@ fam2
 type(fam)
 type(fam2)
 ```
+
+---
 
 ## Subsetting lists
 
@@ -81,7 +85,7 @@ fam[:4]
 fam[5:]
 ```
 
-
+---
 
 ## Manipulating lists
 
