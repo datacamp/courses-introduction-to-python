@@ -1,3 +1,5 @@
+---
+
 ## Functions, what are they?
 
 In this video, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. type, for example, is a function that returns the type of a value. But what is a function? Simply put, a function is a piece of reusable code, aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
@@ -39,6 +41,8 @@ round(1.68)
 
 help(round)
 ```
+
+---
 
 ## Methods
 
@@ -102,6 +106,8 @@ fam
 fam.append(1.79)
 fam
 ```
+
+---
 
 ## Packages
 
