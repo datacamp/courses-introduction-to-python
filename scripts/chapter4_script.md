@@ -1,3 +1,5 @@
+---
+
 ## Intro to Numpy
 
 By now, you are aware that the Python list is pretty powerful: A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. When analyzing data, you'll often want to carry out operations over entire collections of values, and you want to do this fast. With lists, this is a problem.
@@ -76,6 +78,8 @@ np.set_printoptions(precision=3)
 bmi
 ```
 
+---
+
 ## 2D Numpy arrays
 
 Let's recreate the numpy arrays from the previous video:
@@ -121,6 +125,7 @@ np_2d[0,2]
 np_2d[:,1:3]
 np_2d[1,:]
 ```
+---
 
 ## Basic Statistics with Numpy
 
