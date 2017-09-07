@@ -502,7 +502,7 @@ success_msg("Great!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:dfc9a168a3
 ## Slicing and dicing (2)
 
-In the video, Filip only discussed the syntax where you specify both where to begin and end the slice of your list:
+In the video, Filip first discussed the syntax where you specify both where to begin and end the slice of your list:
 
 ```
 my_list[begin:end]
