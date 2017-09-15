@@ -15,6 +15,9 @@ attachments :
 *** =video_hls
 //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
 
+*** =projector_key
+5f61a677bf62c17b450465ee849823ee
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:bdc52f0e19
 ## The Python Interface
 
@@ -212,6 +215,9 @@ success_msg("Time for another video!")
 *** =video_hls
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
 
+
+*** =projector_key
+7df0925250c5fb2a647cd76fb09d446e
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:4bf65ad83e
 ## Variable Assignment

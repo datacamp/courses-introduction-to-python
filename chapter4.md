@@ -14,6 +14,9 @@ attachments :
 *** =video_hls
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_1.master.m3u8
 
+*** =projector_key
+cbf80c2cf12e5a3b971598e252e9cb9d
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:84cab9d170
 ## Your First NumPy Array
 
@@ -495,6 +498,9 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_2.master.m3u8
 
 
+*** =projector_key
+e6a2fb8649e4ba94d8a0dc7b03a6de62
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:5cb045bb13
 ## Your First 2D NumPy Array
 
@@ -847,6 +853,9 @@ success_msg("Great job! Notice how with very little code, you can change all val
 *** =video_hls
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_3.master.m3u8
 
+
+*** =projector_key
+3c397bce7e44f4631520d5e5eb7e9433
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:509c588eb6
 ## Average versus median
