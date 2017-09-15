@@ -1,4 +1,4 @@
----
+--- video_exercise_key:ed471f4b00
 
 ## Intro to Numpy
 
@@ -40,7 +40,7 @@ The result is a Numpy array containing booleans: True if the corresponding bmi i
 
 Using the result of a comparison to make a selection of your data is a very common way to get surprising insights. Learn all about it and the other Numpy basics in the exercises!
 
----
+--- video_exercise_key:84e9f3c38d
 
 ## 2D Numpy arrays
 
@@ -68,7 +68,7 @@ Similarly, you can select the weight of all family members like this: you only w
 
 Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting...
 
----
+--- video_exercise_key:16403c5a74
 
 ## Basic Statistics with Numpy
 

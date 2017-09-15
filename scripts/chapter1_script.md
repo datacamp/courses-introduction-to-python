@@ -1,4 +1,4 @@
----
+--- video_exercise_key:d5509896f7
 
 ## Hello Python!
 
@@ -20,7 +20,7 @@ Putting your code in Python scripts instead of manually retyping every step inte
 
 Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python sript editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. Have fun!
 
----
+--- video_exercise_key:ef8356fb92
 
 ## Variables and types
 

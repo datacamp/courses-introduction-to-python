@@ -1,4 +1,4 @@
----
+--- video_exercise_key:f366e876d8
 
 ## Lists
 
@@ -18,7 +18,7 @@ But that's not all. I just told you that lists can also contain lists themselves
 
 We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about: the list. These calls show that both `fam` and `fam2` are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
----
+--- video_exercise_key:9e15e5b8a0
 
 ## Subsetting lists
 
@@ -46,7 +46,7 @@ If you leave out the index where the slice should end, you include all elements 
 
 Now it's time to head over to the exercises, where you will continue to work on the list you've created yourself before. You'll use different subsetting methods to get exactly the piece of information you need!
 
----
+--- video_exercise_key:fbdaaec22a
 
 ## Manipulating lists
 

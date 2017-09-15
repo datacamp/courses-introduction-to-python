@@ -1,4 +1,4 @@
----
+--- video_exercise_key:2dde2f90b8
 
 ## Functions, what are they?
 
@@ -28,7 +28,7 @@ How was I so sure that calling the function with a single input would work? Well
 
 By now, you have an idea about how to _use_ `max()` and `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight to it in the interactive exercises!
 
----
+--- video_exercise_key:e1aaeb300b
 
 ## Methods
 
@@ -68,7 +68,7 @@ There's also methods, which are functions that are specific to Python objects. D
 
 There's much more to tell about Python objects, methods and how Python works internally, but for now, let's stick to what I've talked about here. It's time to get some exercises and add methods to your evergrowing skillset!
 
----
+--- video_exercise_key:2b89c5a9d8
 
 ## Packages
 
