@@ -9,10 +9,10 @@ attachments :
 --- type:VideoExercise lang:python xp:50 skills:2 key:d5509896f7
 ## Hello Python!
 
-*** =video_link
+`@video_link`
 //player.vimeo.com/video/146994261
 
-*** =video_hls
+`@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:bdc52f0e19
@@ -24,20 +24,20 @@ You can hit _Submit Answer_ as often as you want. If you're stuck, you can click
 
 You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
 
-*** =instructions
+`@instructions`
 - Experiment in the IPython Shell; type `5 / 8`, for example.
 - Add another line of code to the Python script: `print(7 + 10)`.
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
-*** =hint
+`@hint`
 Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec comes here
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Example, do not modify!
 print(5 / 8)
@@ -46,7 +46,7 @@ print(5 / 8)
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Example, do not modify!
 print(5 / 8)
@@ -55,7 +55,7 @@ print(5 / 8)
 print(7 + 10)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg = "Don't remove the first statement. It is an example which is coded for you!"
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
@@ -70,21 +70,21 @@ success_msg("Great!")
 
 Python is a pretty versatile language. For which applications can you use Python?
 
-*** =instructions
+`@instructions`
 - You want to do some quick calculations.
 - For your new business, you want to develop a database-driven website.
 - Your boss asks you to clean and analyze the results of the latest satisfaction survey.
 - All of the above.
 
-*** =hint
+`@hint`
 Filip mentioned in the video that Python can be used to build practically any piece of software.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec comes here
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
 msg2 = "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
@@ -101,18 +101,18 @@ Something that Filip didn't mention in his videos is that you can add **comments
 
 To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`; it is completely ignored during execution.
 
-*** =instructions
+`@instructions`
 Above the `print(7 + 10)`, add the comment `# Addition works too`.
 
-*** =hint
+`@hint`
 For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition works too` right above `print(7 + 10)`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec comes here
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Just testing division
 print(5 / 8)
@@ -121,7 +121,7 @@ print(5 / 8)
 print(7 + 10)
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Just testing division
 print(5 / 8)
@@ -130,7 +130,7 @@ print(5 / 8)
 print(7 + 10)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Make sure to add the instructed comment right before `print(7+10)`.")
 success_msg("Great!")
@@ -146,18 +146,18 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 
 The code in the script on the right gives some examples.
 
-*** =instructions
+`@instructions`
 Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
 
-*** =hint
+`@hint`
 After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec comes here
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Addition and subtraction
 print(5 + 5)
@@ -177,7 +177,7 @@ print(18 % 7)
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Addition and subtraction
 print(5 + 5)
@@ -197,7 +197,7 @@ print(18 % 7)
 print(100 * 1.1 ** 7)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_output_contains("194\\.8", no_output_msg = "Have you used the operation `100 * 1.1 ** 7` in a `print()` call?")
 success_msg("Time for another video!")
@@ -206,10 +206,10 @@ success_msg("Time for another video!")
 --- type:VideoExercise lang:python xp:50 skills:2 key:ef8356fb92
 ## Variables & Types
 
-*** =video_link
+`@video_link`
 //player.vimeo.com/video/154561704
 
-*** =video_hls
+`@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
 
 
@@ -226,20 +226,20 @@ You can now use the name of this variable, `x`, instead of the actual value, `5`
 
 Remember, `=` in Python means _assignment_, not equality!
 
-*** =instructions
+`@instructions`
 - Create a variable `savings` with the value 100.
 - Check out this variable by typing `print(savings)` in the script.
 
-*** =hint
+`@hint`
 - Type `savings = 100` to create the variable `savings`.
 - After creating the variable `savings`, you can type `print(savings)`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Create a variable savings
 
@@ -248,7 +248,7 @@ Remember, `=` in Python means _assignment_, not equality!
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Create a variable savings
 savings = 100
@@ -257,7 +257,7 @@ savings = 100
 print(savings)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_object("savings", incorrect_msg = "Assign `100` to the variable `savings`.")
 test_function("print", incorrect_msg = "Print out `savings`, the variable you created, using `print(savings)`.")
@@ -275,22 +275,22 @@ Remember how you calculated the money you ended up with after 7 years of investi
 
 Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.10` and then redo the calculations!
 
-*** =instructions
+`@instructions`
 - Create a variable `factor`, equal to `1.10`.
 - Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
 - Print out the value of `result`.
 
-*** =hint
+`@hint`
 - To create the variable `factor`, use `factor = 1.10`.
 - In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
 - Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Create a variable savings
 savings = 100
@@ -304,7 +304,7 @@ savings = 100
 # Print out result
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Create a variable savings
 savings = 100
@@ -319,7 +319,7 @@ result = savings * factor ** 7
 print(result)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
                        incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
@@ -343,20 +343,20 @@ Next to numerical data types, there are two other very common data types:
 - `str`, or string: a type to represent text. You can use single or double quotes to build a string.
 - `bool`, or boolean: a type to represent logical values. Can only be `True` or `False` (the capitalization is important!).
 
-*** =instructions
+`@instructions`
 - Create a new string, `desc`, with the value `"compound interest"`.
 - Create a new boolean, `profitable`, with the value `True`.
 
-*** =hint
+`@hint`
 - To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
 - Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Create a variable desc
 
@@ -365,7 +365,7 @@ Next to numerical data types, there are two other very common data types:
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Create a variable desc
 desc = "compound interest"
@@ -374,7 +374,7 @@ desc = "compound interest"
 profitable = True
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_object("desc", incorrect_msg = "Assign the value `\"compound interest\"` to the variable `desc`.")
 test_object("profitable", incorrect_msg = "Assign the value `True` to the variable `profitable`.")
@@ -393,23 +393,23 @@ type(a)
 
 We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
 
-*** =instructions
+`@instructions`
 - `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
 - `a` is of type `float`, `b` is of type `bool`, `c` is of type `str`
 - `a` is of type `float`, `b` is of type `str`, `c` is of type `bool`
 - `a` is of type `int`, `b` is of type `bool`, `c` is of type `str`
 
-*** =hint
+`@hint`
 Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out about the variables' types.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 a = 100*1.1**7
 b = "True"
 c = False
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
 msg2 = "`b` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
@@ -427,24 +427,24 @@ When you sum two strings, for example, you'll get different behavior than when y
 
 In the script some variables with different types have already been created. It's up to you to use them.
 
-*** =instructions
+`@instructions`
 - Calculate the product of `savings` and `factor`. Store the result in `year1`.
 - What do you think the resulting type will be? Find out by printing out the type of `year1`.
 - Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
 - Print out `doubledesc`. Did you expect this?
 
-*** =hint
+`@hint`
 - Assign `factor * savings` to a new variable, `year1`.
 - To print the type of a variable `x`, use `print(type(x))`.
 - Assign `desc + desc` to a new variable, `doubledesc`.
 - To print a variable `x`, write `print(x)` in the script.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # no pec
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Several variables to experiment with
 savings = 100
@@ -464,7 +464,7 @@ desc = "compound interest"
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Several variables to experiment with
 savings = 100
@@ -484,7 +484,7 @@ doubledesc = desc + desc
 print(doubledesc)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
@@ -516,21 +516,21 @@ To fix the error, you'll need to explicitly convert the types of your variables.
 
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
-*** =instructions
+`@instructions`
 - Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
 - Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
-*** =hint
+`@hint`
 - You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
 - Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Definition of savings and result
 savings = 100
@@ -546,7 +546,7 @@ pi_string = "3.1415926"
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Definition of savings and result
 savings = 100
@@ -562,7 +562,7 @@ pi_string = "3.1415926"
 pi_float = float(pi_string)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 
 # ensure predefined values are unmodified
@@ -596,21 +596,21 @@ success_msg("Great! You have a profit of around $95; that's pretty awesome indee
 Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
 Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
 
-*** =instructions
+`@instructions`
 - `"I can add integers, like "  + str(5) + " to strings."`
 - `"I said " + ("Hey " * 2) + "Hey!"`
 - `"The correct answer to this multiple choice exercise is answer number " + 2`
 - `True + False`
 
-*** =hint
+`@hint`
 Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 # pec
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
 msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."

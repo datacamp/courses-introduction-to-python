@@ -8,10 +8,10 @@ attachments :
 --- type:VideoExercise lang:python xp:50 skills:2 key:ed471f4b00
 ## NumPy
 
-*** =video_link
+`@video_link`
 //player.vimeo.com/video/154563364
 
-*** =video_hls
+`@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_1.master.m3u8
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:84cab9d170
@@ -21,22 +21,22 @@ In this chapter, we're going to dive into the world of baseball. Along the way, 
 
 A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code here and there to create a `numpy` array from it?
 
-*** =instructions
+`@instructions`
 - Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a `numpy` array from `baseball`. Name this array `np_baseball`.
 - Print out the type of `np_baseball` to check that you got it right.
 
-*** =hint
+`@hint`
 - `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
 - [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) should take on input `baseball`. Assign the result of the function call to `np_baseball`.
 - To print out the type of a variable `x`, simply type `print(type(x))`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Create list baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
@@ -51,7 +51,7 @@ baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Create list baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
@@ -66,7 +66,7 @@ np_baseball = np.array(baseball)
 print(type(np_baseball))
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
 test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
@@ -92,19 +92,19 @@ You are a huge baseball fan. You decide to call the MLB (Major League Baseball) 
 
 `height` is already available and the `numpy` package is loaded, so you can start straight away (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
 
-*** =instructions
+`@instructions`
 - Create a `numpy` array from `height`. Name this new array `np_height`.
 - Print `np_height`.
 - Multiply `np_height` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
 - Print out `np_height_m` and check if the output makes sense.
 
-*** =hint
+`@hint`
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) and pass it `height`. Store the result in `np_height`.
 - To print out a variable `x`, type `print(x)` in the Python script.
 - Perform calculations as if `np_height` is a single number: `np_height * factor` is part of the answer.
 - To print out a variable `x`, type `print(x)` in the Python script.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
@@ -112,7 +112,7 @@ height = mlb['Height'].tolist()
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # height is available as a regular list
 
@@ -132,7 +132,7 @@ import numpy as np
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # height is available as a regular list
 
@@ -152,7 +152,7 @@ np_height_m = np_height * 0.0254
 print(np_height_m)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 # sct code
 test_import("numpy", same_as = False)
@@ -178,17 +178,17 @@ The MLB also offers to let you analyze their weight data. Again, both are availa
 
 It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a `numpy` array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game!
 
-*** =instructions
+`@instructions`
 - Create a `numpy` array from the `weight` list with the correct units. Multiply by `0.453592` to go from pounds to kilograms. Store the resulting `numpy` array as `np_weight_kg`.
 - Use `np_height_m` and `np_weight_kg` to calculate the BMI of each player. Use the following equation: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Save the resulting `numpy` array as `bmi`.
 - Print out `bmi`.
 
-*** =hint
+`@hint`
 - Use a similar approach as the code that calculates `np_height_m`. This time, though, the you have to work with `weight` and multiply with `0.453592`.
 - To calculate the `bmi`, you will need the `/` and `**` operators.
 - To print out a variable `x`, type `print(x)` in the script.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
@@ -197,7 +197,7 @@ weight = mlb['Weight'].tolist()
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # height and weight are available as a regular lists
 
@@ -217,7 +217,7 @@ np_height_m = np.array(height) * 0.0254
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # height and weight are available as a regular lists
 
@@ -237,7 +237,7 @@ bmi = np_weight_kg / np_height_m ** 2
 print(bmi)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_import("numpy", same_as = False)
 
@@ -280,17 +280,17 @@ y[high]
 
 The code that calculates the BMI of all baseball players is already included. Follow the instructions and reveal interesting things from the data!
 
-*** =instructions
+`@instructions`
 - Create a boolean `numpy` array: the element of the array should be `True` if the corresponding baseball player's BMI is below 21. You can use the `<` operator for this. Name the array `light`.
 - Print the array `light`.
 - Print out a `numpy` array with the BMIs of all baseball players whose BMI is below 21. Use `light` inside square brackets to do a selection on the `bmi` array.
 
-*** =hint
+`@hint`
 - `bmi > 30` will give you a boolean `numpy` array in which the elements are `True` if the corresponding player's BMI is over 30.
 - To print out a variable `x`, type `print(x)` in the Python script.
 - `bmi[light]` will return the array you need. Don't forget to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it!
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
@@ -299,7 +299,7 @@ weight = mlb['Weight'].tolist()
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # height and weight are available as a regular lists
 
@@ -321,7 +321,7 @@ bmi = np_weight_kg / np_height_m ** 2
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # height and weight are available as a regular lists
 
@@ -343,7 +343,7 @@ print(light)
 print(bmi[light])
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
 test_object("np_height_m", undefined_msg = msg, incorrect_msg = msg)
@@ -377,22 +377,22 @@ np.array([True, 1, 2]) + np.array([3, 4, False])
 
 Can you tell which code chunk builds the exact same Python object? The `numpy` package is already imported as `np`, so you can start experimenting in the IPython Shell straight away!
 
-*** =instructions
+`@instructions`
 - `np.array([True, 1, 2, 3, 4, False])`
 - `np.array([4, 3, 0]) + np.array([0, 2, 2])`
 - `np.array([1, 1, 2]) + np.array([3, 4, -1])`
 - `np.array([0, 1, 2, 3, 4, 5])`
 
 
-*** =hint
+`@hint`
 Copy the different code chunks and paste them in the IPython Shell. See which output matches the one generated by `np.array([True, 1, 2]) + np.array([3, 4, False])`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import numpy as np
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
 msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
@@ -414,15 +414,15 @@ np_x[1]
 
 The script on the right already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
 
-*** =instructions
+`@instructions`
 - Subset `np_weight`: print out the element at index 50.
 - Print out a sub-array of `np_height`: It contains the elements at index 100 up to **and including** index 110
 
-*** =hint
+`@hint`
 - Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around your subsetting operations.
 - Use `[100:111]` to get the elements from index 100 up to and including index 110.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
@@ -431,7 +431,7 @@ weight = mlb['Weight'].tolist()
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # height and weight are available as a regular lists
 
@@ -449,7 +449,7 @@ np_height = np.array(height)
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # height and weight are available as a regular lists
 
@@ -467,7 +467,7 @@ print(np_weight[50])
 print(np_height[100:111])
 ```
 
-*** =sct
+`@sct`
 ```{python}
 
 test_import("numpy", same_as = False)
@@ -488,10 +488,10 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 --- type:VideoExercise lang:python xp:50 skills:2 key:84e9f3c38d
 ## 2D NumPy Arrays
 
-*** =video_link
+`@video_link`
 //player.vimeo.com/video/146994270
 
-*** =video_hls
+`@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_2.master.m3u8
 
 
@@ -502,22 +502,22 @@ Before working on the actual MLB data, let's try to create a 2D `numpy` array fr
 
 In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
 
-*** =instructions
+`@instructions`
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
 - Print out the type of `np_baseball`.
 - Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
 
-*** =hint
+`@hint`
 - `baseball` is already coded for you in the script. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D `numpy` array in `np_baseball`.
 - Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) for the second instruction.
 - `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
@@ -538,7 +538,7 @@ import numpy as np
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
@@ -559,7 +559,7 @@ print(type(np_baseball))
 print(np_baseball.shape)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
 test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
@@ -590,22 +590,22 @@ The MLB was, again, very helpful and passed you the data in a different structur
 
 Can you store the data as a 2D array to unlock `numpy`'s extra functionality?
 
-*** =instructions
+`@instructions`
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
 - Print out the `shape` attribute of `np_baseball`.
 
-*** =hint
+`@hint`
 - `baseball` is already available in the Python environment. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D `numpy` array in `np_baseball`.
 - `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # baseball is available as a regular list of lists
 
@@ -619,7 +619,7 @@ import numpy as np
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # baseball is available as a regular list of lists
 
@@ -633,7 +633,7 @@ np_baseball = np.array(baseball)
 print(np_baseball.shape)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_import("numpy", same_as = False)
 
@@ -667,24 +667,24 @@ For regular Python lists, this is a real pain. For 2D `numpy` arrays, however, i
 
 The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
 
-*** =instructions
+`@instructions`
 - Print out the 50th row of `np_baseball`.
 - Make a new variable, `np_weight`, containing the entire second column of `np_baseball`.
 - Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
 
-*** =hint
+`@hint`
 - You need row index 49 in the first instruction! More specifically, you'll want to use `[49,:]`.
 - To select the entire second column, you'll need `[:,1]`.
 - For the last instruction, use `[123, 0]`; don't forget to wrap it all in a [`print()`](https://docs.python.org/3/library/functions.html#print) statement.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # baseball is available as a regular list of lists
 
@@ -704,7 +704,7 @@ np_baseball = np.array(baseball)
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # baseball is available as a regular list of lists
 
@@ -724,7 +724,7 @@ np_weight = np_baseball[:,1]
 print(np_baseball[123, 0])
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_import("numpy", same_as = False)
 
@@ -758,17 +758,17 @@ np_mat + np_mat
 
 `np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height, weight and age.
 
-*** =instructions
+`@instructions`
 - You managed to get hold of the changes in weight, height and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
 - You want to convert the units of height and weight. As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
 - Multiply `np_baseball` with `conversion` and print out the result.
 
-*** =hint
+`@hint`
 - `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
 - Create a `numpy` array with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); the input is a regular Python list with three elements.
 - `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 import numpy as np
@@ -778,7 +778,7 @@ updated = np.array(pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/cour
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # baseball is available as a regular list of lists
 # updated is available as 2D numpy array
@@ -799,7 +799,7 @@ np_baseball = np.array(baseball)
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # baseball is available as a regular list of lists
 # updated is available as 2D numpy array
@@ -820,7 +820,7 @@ conversion = np.array([0.0254, 0.453592, 1])
 print(np_baseball * conversion)
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_import("numpy")
 
@@ -841,10 +841,10 @@ success_msg("Great job! Notice how with very little code, you can change all val
 --- type:VideoExercise lang:python xp:50 skills:2 key:16403c5a74
 ## NumPy: Basic Statistics
 
-*** =video_link
+`@video_link`
 //player.vimeo.com/video/146994271
 
-*** =video_hls
+`@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_3.master.m3u8
 
 
@@ -862,17 +862,17 @@ np.median(x)
 
 The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_.
 
-*** =instructions
+`@instructions`
 - Create `numpy` array `np_height` that is equal to first column of `np_baseball`.
 - Print out the mean of `np_height`.
 - Print out the median of `np_height`.
 
-*** =hint
+`@hint`
 - Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
 - If `numpy` is imported as `np`, you can use [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html) to get the mean of a Numpy array. Don't forget to throw in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - For the last instruction, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
@@ -880,7 +880,7 @@ np_baseball[slice(0, 1015, 50), 0] = np_baseball[slice(0, 1015, 50), 0]*1000
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # np_baseball is available
 
@@ -897,7 +897,7 @@ import numpy as np
 
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # np_baseball is available
 
@@ -914,7 +914,7 @@ print(np.mean(np_height))
 print(np.median(np_height))
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_import("numpy", same_as = False)
 
@@ -938,24 +938,24 @@ Because the mean and median are so far apart, you decide to complain to the MLB.
 
 The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
-*** =instructions
+`@instructions`
 - The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.
 - Use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html) on the first column of `np_baseball` to calculate `stddev`. Replace `None` with the correct code.
 - Do big players tend to be heavier? Use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to store the correlation between the first and second column of `np_baseball` in `corr`. Replace `None` with the correct code.
 
-*** =hint
+`@hint`
 - Use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) to calculate the median. Make sure to select to correct column first!
 - Subset the same column when calculating the standard deviation with [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).
 - Use `np_baseball[:,0]` and `np_baseball[:,1]` to select the first and second columns; these are the inputs to [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
 import numpy as np
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # np_baseball is available
 
@@ -979,7 +979,7 @@ corr = None
 print("Correlation: " + str(corr))
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # np_baseball is available
 
@@ -1003,7 +1003,7 @@ corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])
 print("Correlation: " + str(corr))
 ```
 
-*** =sct
+`@sct`
 ```{python}
 # sct code
 test_import("numpy")
@@ -1040,21 +1040,21 @@ Each element in the lists corresponds to a player. The first list, `positions`, 
 
 You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you, so you are determined to show them using the data you received from FIFA and your newly acquired Python skills.
 
-*** =instructions
+`@instructions`
 - Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
 - Extract all the heights of the goalkeepers. You can use a little trick here: use `np_positions == 'GK'` as an index for `np_heights`. Assign the result to `gk_heights`.
 - Extract all the heights of all the other players. This time use `np_positions != 'GK'` as an index for `np_heights`. Assign the result to `other_heights`.
 - Print out the median height of the goalkeepers using [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Replace `None` with the correct code.
 - Do the same for the other players. Print out their median height. Replace `None` with the correct code.
 
-*** =hint
+`@hint`
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to convert the lists to numpy arrays.
 - You should use `np_heights[np_positions == 'GK']` to extract the heights of all goalkeepers. Don't forget to assign the result to `gk_heights`.
 - You should use `np_heights[np_positions != 'GK']` to extract the heights of all other players. Don't forget to assign the result to `other_heights`.
 - Print out the median height of the goalkeepers using `np.median(gk_heights)`.
 - Print out the median height of the other players using `np.median(other_heights)`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{python}
 import pandas as pd
 fifa =  pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/fifa.csv", skipinitialspace=True, usecols=['position', 'height'])
@@ -1062,7 +1062,7 @@ positions = list(fifa.position)
 heights = list(fifa.height)
 ```
 
-*** =sample_code
+`@sample_code`
 ```{python}
 # heights and positions are available as lists
 
@@ -1086,7 +1086,7 @@ print("Median height of goalkeepers: " + str(None))
 print("Median height of other players: " + str(None))
 ```
 
-*** =solution
+`@solution`
 ```{python}
 # heights and positions are available as lists
 
@@ -1110,7 +1110,7 @@ print("Median height of goalkeepers: " + str(np.median(gk_heights)))
 print("Median height of other players: " + str(np.median(other_heights)))
 ```
 
-*** =sct
+`@sct`
 ```{python}
 test_import("numpy")
 
