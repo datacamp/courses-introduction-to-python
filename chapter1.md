@@ -6,8 +6,16 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf
 
 
---- type:VideoExercise lang:python xp:50 skills:2 key:d5509896f7
+---
 ## Hello Python!
+
+```yaml
+type: VideoExercise
+lang: python
+xp: 50
+skills: 2
+key: d5509896f7
+```
 
 `@video_link`
 //player.vimeo.com/video/146994261
@@ -15,8 +23,16 @@ attachments :
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
 
---- type:NormalExercise lang:python xp:100 skills:2 key:bdc52f0e19
+---
 ## The Python Interface
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: bdc52f0e19
+```
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. DataCamp checks whether your submission is correct and gives you feedback.
 
@@ -65,8 +81,16 @@ test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9703b117fb
+---
 ## When to use Python?
+
+```yaml
+type: MultipleChoiceExercise
+lang: python
+xp: 50
+skills: 2
+key: 9703b117fb
+```
 
 Python is a pretty versatile language. For which applications can you use Python?
 
@@ -94,8 +118,16 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2 key:7c4a738a13
+---
 ## Any comments?
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 7c4a738a13
+```
 
 Something that Filip didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
 
@@ -136,8 +168,16 @@ test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Mak
 success_msg("Great!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2 key:0f7c039428
+---
 ## Python as a calculator
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 0f7c039428
+```
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
 
@@ -203,8 +243,16 @@ test_output_contains("194\\.8", no_output_msg = "Have you used the operation `10
 success_msg("Time for another video!")
 ```
 
---- type:VideoExercise lang:python xp:50 skills:2 key:ef8356fb92
+---
 ## Variables & Types
+
+```yaml
+type: VideoExercise
+lang: python
+xp: 50
+skills: 2
+key: ef8356fb92
+```
 
 `@video_link`
 //player.vimeo.com/video/154561704
@@ -213,8 +261,16 @@ success_msg("Time for another video!")
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
 
 
---- type:NormalExercise lang:python xp:100 skills:2 key:4bf65ad83e
+---
 ## Variable Assignment
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 4bf65ad83e
+```
 
 In Python, a variable allows you to refer to a value with a name. To create a variable use `=`, like this example:
 
@@ -264,8 +320,16 @@ test_function("print", incorrect_msg = "Print out `savings`, the variable you cr
 success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2 key:ff06cedeb4
+---
 ## Calculations with variables
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: ff06cedeb4
+```
 
 Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
 
@@ -330,8 +394,16 @@ test_print(not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2 key:006b48561f
+---
 ## Other variable types
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 006b48561f
+```
 
 In the previous exercise, you worked with two Python data types:
 
@@ -382,8 +454,16 @@ test_object("profitable", incorrect_msg = "Assign the value `True` to the variab
 success_msg("Nice!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:b35f67514c
+---
 ## Guess the type
+
+```yaml
+type: MultipleChoiceExercise
+lang: python
+xp: 50
+skills: 2
+key: b35f67514c
+```
 
 To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
 
@@ -418,8 +498,16 @@ msg4 = "None of the variable's types is correct here. Try `type(a)` and see what
 test_mc(3,[msg1, msg2, msg3, msg4])
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2 key:4d0d83cc02
+---
 ## Operations with other types
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 4d0d83cc02
+```
 
 Filip mentioned that different types behave differently in Python.
 
@@ -499,8 +587,16 @@ test_function("print", 2, incorrect_msg = "Be sure to print out `doubledesc`.")
 success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:2 key:085bb602b9
+---
 ## Type conversion
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 085bb602b9
+```
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
@@ -590,8 +686,16 @@ test_object("pi_float",
 success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:3e5f0bdf3a
+---
 ## Can Python handle everything?
+
+```yaml
+type: MultipleChoiceExercise
+lang: python
+xp: 50
+skills: 2
+key: 3e5f0bdf3a
+```
 
 Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
 Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
