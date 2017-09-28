@@ -27,7 +27,7 @@ Calling a function is easy. To get the type of `3.0` and store the output as a n
 result = type(3.0)
 ```
 
-The general recipe for calling functions is thus:
+The general recipe for calling functions and saving the result to a variable is thus:
 
 ```
 output = function_name(input)
