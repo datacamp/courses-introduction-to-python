@@ -116,16 +116,16 @@ help(max)
 ?max
 ```
 
-Use the Shell on the right to open up the documentation on [`getattr()`](https://docs.python.org/3/library/functions.html#getattr). Which of the following statements is true?
+Use the Shell on the right to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
 
 *** =instructions
-- [`getattr()`](https://docs.python.org/3/library/functions.html#getattr) takes exactly three arguments: `object`, `name`, and `[, default]`.
-- [`getattr()`](https://docs.python.org/3/library/functions.html#getattr) takes three arguments: `object` and `name`, and `default`. All of these arguments are required.
-- [`getattr()`](https://docs.python.org/3/library/functions.html#getattr) takes three arguments: `object`, `name`, and `default`. `object` and `name` are required arguments, `default` is an optional argument.
-- [`getattr()`](https://docs.python.org/3/library/functions.html#getattr) takes three arguments: `object`, `name`, and `default`. If you don't specify `default`, it is set to 1 by Python.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. Both these arguments are required.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
 
 *** =hint
-The help file shows `getattr(object, name[, default])`. Do you remember what Filip told you about these square brackets?
+The help file shows `complex(real[, imag])`. Do you remember what Filip told you about these square brackets?
 
 *** =pre_exercise_code
 ```{python}
@@ -134,10 +134,10 @@ The help file shows `getattr(object, name[, default])`. Do you remember what Fil
 
 *** =sct
 ```{python}
-msg1 = "Incorrect. `[, default]` shows that `default` is an optional argument."
-msg2 = "This statement is false. `default` is not a required argument."
+msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
+msg2 = "This statement is false. `imag` is not a required argument."
 msg3 = "Perfect!"
-msg4 = "If you don't specify `default`, the function will raise an error if the `name` attribute doesn't exist."
+msg4 = "This is almost true, but not entirely. If you don't specify `image`, it is set to 0."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
