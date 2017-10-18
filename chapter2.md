@@ -935,8 +935,6 @@ The Python code in the script already creates a list with the name `areas` and a
 
 If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with [`list()`](https://docs.python.org/3/library/functions.html#func-list) or by using `[:]`.
 
-*Watch out! `list()` and `[:]` might not copy properly if you put complex things in your lists.*
-
 `@instructions`
 - Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`
 - Now, changes made to `areas_copy` shouldn't affect `areas`. Hit _Submit Answer_ to check this.

@@ -43,7 +43,7 @@ Calling a function is easy. To get the type of `3.0` and store the output as a n
 result = type(3.0)
 ```
 
-The general recipe for calling functions is thus:
+The general recipe for calling functions and saving the result to a variable is thus:
 
 ```
 output = function_name(input)
@@ -284,8 +284,10 @@ Strings come with a bunch of methods. Follow the instructions closely to discove
 
 A string `room` has already been created for you to experiment with.
 
+
+=======
 `@instructions`
-- Use the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` and store the result in `room_up`. Use the dot notation.
+- Use the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` and store the result in `room_up`. Use the syntax for calling methods that you learned in the previous video.
 - Print out `room` and `room_up`. Did both change?
 - Print out the number of o's on the variable `room` by calling [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `room` and passing the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
 
