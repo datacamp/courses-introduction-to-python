@@ -2,11 +2,11 @@
 
 ## Lists
 
-By now, you've played around with different data types. On the numbers side, there's the `float`, to represent a real number, and the `int`, to represent an integer. Next, we also have `str`, short for string, to represent text in Python, and `bool`, which can be either `True` or `False`. You can save these values as a variable, like these examples show. Each variable then represents a _single_ value.
+By now, you've played around with different data types. On the numbers side, there's the float, to represent a real number, and the int, to represent an integer. Next, we also have str, short for string, to represent text in Python, and bool, which can be either True or False. You can save these values as a variable, like these examples show. Each variable then represents a single value.
 
 As a data scientist, you'll often want to work with many data points. If you for example want to measure the height of everybody in your family, and store this information in Python, it would be inconvenient to create a new python variable for each point you collected right?
 
-What you can do instead, is store all this information in a Python _list_. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
+What you can do instead, is store all this information in a Python list. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
 
 Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here.
 
@@ -16,13 +16,13 @@ It's perfectly possible for a list to contain different types as well. Suppose, 
 
 But that's not all. I just told you that lists can also contain lists themselves. Instead of putting the strings in between the numbers, you can create little sublists for each member of the family. One for liz, one for emma and so on. Now, you can tell Python that these sublists are the elements of another list, that I named fam2: the little lists are wrapped in square brackets and separated with commas. If you now print out fam2, you see that we have a list of lists. The main list contains 4 sub-lists.
 
-We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about: the list. These calls show that both `fam` and `fam2` are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
+We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about: the list. These calls show that both fam and fam2 are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
 
 --- video_exercise_key:9e15e5b8a0
 
 ## Subsetting lists
 
-After you've created your very own Python list, you might wonder how you can access information in the list. Python uses the index to do this. Have a look at the `fam` list again here. The first element in the list has index 0, the second element has index 1, and so on. Suppose that you want to select the height of emma, the float 1.68. It's the fourth element, so it has index 3. To select it, you use 3 inside square brackets.
+After you've created your very own Python list, you might wonder how you can access information in the list. Python uses the index to do this. Have a look at the fam list again here. The first element in the list has index 0, the second element has index 1, and so on. Suppose that you want to select the height of emma, the float 1.68. It's the fourth element, so it has index 3. To select it, you use 3 inside square brackets.
 
 Similarly, to select the string "dad" from the list, which is the seventh element in the list, you'll need to put the index 6 inside square brackets.
 
