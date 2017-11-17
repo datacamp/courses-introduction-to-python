@@ -22,6 +22,9 @@ key: ed471f4b00
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_1.master.m3u8
 
+*** =projector_key
+cbf80c2cf12e5a3b971598e252e9cb9d
+
 ---
 ## Your First NumPy Array
 
@@ -558,6 +561,8 @@ key: 84e9f3c38d
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_2.master.m3u8
 
+*** =projector_key
+e6a2fb8649e4ba94d8a0dc7b03a6de62
 
 ---
 ## Your First 2D NumPy Array
@@ -951,6 +956,8 @@ key: 16403c5a74
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_3.master.m3u8
 
+*** =projector_key
+3c397bce7e44f4631520d5e5eb7e9433
 
 ---
 ## Average versus median

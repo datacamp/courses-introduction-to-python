@@ -22,6 +22,8 @@ key: f366e876d8
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch2_1.master.m3u8
 
+*** =projector_key
+84258dc00ac8e6f277086d60255e8244
 
 ---
 ## Create a list
@@ -343,6 +345,9 @@ key: 9e15e5b8a0
 
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
+
+*** =projector_key
+47e0948980f8c77be2071a892b32ec8b
 
 ---
 ## Subset and conquer
@@ -714,6 +719,9 @@ key: fbdaaec22a
 
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
+
+*** =projector_key
+823af3a8a05cb88df3f2b0dca71cec7f
 
 ---
 ## Replace list elements

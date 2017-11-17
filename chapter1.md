@@ -23,7 +23,11 @@ key: d5509896f7
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
 
+*** =projector_key
+5f61a677bf62c17b450465ee849823ee
+
 ---
+
 ## The Python Interface
 
 ```yaml
@@ -260,8 +264,11 @@ key: ef8356fb92
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
 
+*** =projector_key
+7df0925250c5fb2a647cd76fb09d446e
 
 ---
+
 ## Variable Assignment
 
 ```yaml
