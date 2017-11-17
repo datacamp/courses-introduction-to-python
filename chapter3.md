@@ -23,6 +23,8 @@ key: 2dde2f90b8
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch3_1.master.m3u8
 
+*** =projector_key
+abe8835964fe3385a3f0283b7a605f5f
 
 ---
 ## Familiar functions
@@ -268,6 +270,9 @@ key: e1aaeb300b
 
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
+
+*** =projector_key
+cf2471efdf2df82d911fb0cfcf0466f6
 
 ---
 ## String Methods
@@ -547,6 +552,8 @@ key: 2b89c5a9d8
 `@video_hls`
 //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
 
+*** =projector_key
+c550d2f388d2718361d55e101c6c3887
 
 ---
 ## Import package
