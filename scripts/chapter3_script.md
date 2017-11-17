@@ -1,3 +1,5 @@
+---
+
 ## Functions, what are they?
 
 In this video, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. type, for example, is a function that returns the type of a value. But what is a function? Simply put, a function is a piece of reusable code, aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
@@ -26,19 +28,7 @@ How was I so sure that calling the function with a single input would work? Well
 
 By now, you have an idea about how to _use_ `max()` and `round()`, but how could you know that a function such as `round()` exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight to it in the interactive exercises!
 
-```
-fam = [1.73, 1.68, 1.71, 1.89]
-fam
-max(fam)
-
-tallest = max(fam)
-tallest
-
-round(1.68, 1)
-round(1.68)
-
-help(round)
-```
+---
 
 ## Methods
 
@@ -78,30 +68,7 @@ There's also methods, which are functions that are specific to Python objects. D
 
 There's much more to tell about Python objects, methods and how Python works internally, but for now, let's stick to what I've talked about here. It's time to get some exercises and add methods to your evergrowing skillset!
 
-```
-sister = "liz"
-height = 1.73
-fam = ["liz", 1.73, "emma", 1.68, "mom", 1.71, "dad", 1.89]
-
-fam
-fam.index("mom")
-fam.count(1.73)
-
-sister
-sister.capitalize()
-sister.replace("z", "sa")
-
-sister.replace("z", "sa")
-fam.replace("mom", "mommy")
-sister.index("z")
-fam.index("mom")
-
-fam
-fam.append("me")
-fam
-fam.append(1.79)
-fam
-```
+---
 
 ## Packages
 
@@ -134,13 +101,3 @@ This time, you can simply call the array function like this, no need to use nump
 This from import version to use specific parts of a package can be useful to limit the amount of coding, but you're also loosing some of the context. Suppose you're working in a long Python script. You import the array function from numpy at the very top, and way later, you actually use this array function. Somebody else who's reading your code might have forgotten that this array function is a specific Numpy function; it's not clear from the function call. In that respect, the more standard import numpy call is preferred: In this case, your function call is numpy.array(), making it very clear that you're working with Numpy. At the end of the day, it's a matter of personal preference; up to you to decide what you think is most convenient!
 
 Off to the exercises now, where you can practice on different ways of importing packages and modules yourself!
-
-```
-import numpy
-array([1, 2, 3])
-numpy.array([1, 2, 3])
-import numpy as np
-np.array([1, 2, 3])
-from numpy import array
-array([1, 2, 3])
-```
