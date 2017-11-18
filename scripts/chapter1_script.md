@@ -12,13 +12,13 @@ Currently, there are two common versions of Python, version 2.7 and 3.5 and late
 
 Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
 
-Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are simply text files with the extension .py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
+Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
 
-If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print() inside scripts if you want to generate output during execution. Let's wrap our previous calculation a in print() call, and rerun the script. This time, the same output as before is generated, great!
+If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print() inside scripts if you want to generate output during execution. Let's wrap our previous calculation in a print() call, and rerun the script. This time, the same output as before is generated, great!
 
 Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
 
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python sript editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. Have fun!
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. Have fun!
 
 --- video_exercise_key:ef8356fb92
 
