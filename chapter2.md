@@ -815,7 +815,7 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 - Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24]`.
+- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
 - To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
 
 `@pre_exercise_code`
