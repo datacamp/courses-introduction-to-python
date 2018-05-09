@@ -620,7 +620,7 @@ To fix the error, you'll need to explicitly convert the types of your variables.
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
 `@instructions`
-- Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
+- Hit _Run Code_ to run the code on the right. Try to understand the error message.
 - Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
