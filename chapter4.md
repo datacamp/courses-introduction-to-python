@@ -1132,23 +1132,35 @@ print("Correlation: " + str(corr))
 
 `@sct`
 ```{python}
-# sct code
-test_import("numpy")
+Ex().has_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
-test_object("avg", undefined_msg = msg, incorrect_msg = msg)
-test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
+msg = "You shouldn't change or remove the predefined `avg` variable."
+Ex().check_object("avg", missing_msg=msg, expand_msg="").has_equal_value(incorrect_msg=msg)
 
-test_function("numpy.median", 1, not_called_msg = "Don't forget to call [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "To assign `med`, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Make sure to pass it the correct column of `np_baseball`.")
-test_object("med")
-test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
+missing = "Have you used [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) to calculate the median?"
+incorrect = "To calculate `med`, pass the first column of `np_baseball` to `numpy.median()`. The example of `np.mean()` shows how it's done."
+Ex().test_correct(
+  check_object("med").has_equal_value(),
+  check_function("numpy.median", index=0, missing_msg=missing, expand_msg="").check_args(0).has_equal_value(incorrect_msg=incorrect)
+)
 
-test_function("numpy.std", 1, not_called_msg = "Don't forget to call [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).", incorrect_msg = "To assign `stddev`, use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html). Make sure to pass it the correct column of `np_baseball`.")
-test_object("stddev")
-test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
+missing = "Have you used [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html) to calculate the standard deviation?"
+incorrect = "To calculate `stddev`, pass the first column of `np_baseball` to `numpy.std()`. The example of `np.mean()` shows how it's done."
+Ex().test_correct(
+  check_object("stddev").has_equal_value(),
+  check_function("numpy.std", index=0, missing_msg=missing, expand_msg="").check_args(0).has_equal_value(incorrect_msg=incorrect)
+)
 
-test_object("corr", incorrect_msg = "To assign `corr`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct columns of `np_baseball`. You can pass it two columns.")
-test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
+missing = "Have you used [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to calculate the correlation?"
+incorrect1 = "To calculate `corr`, the first argument to `np.corrcoef()` should be the first column of `np_baseball`, similar to how did it before."
+incorrect2 = "To calculate `corr`, the second argument to `np.corrcoef()` should be the second column of `np_baseball`. Instead of `[:,1]`, use `[:,2]` this time."
+Ex().test_correct(
+  check_object("corr").has_equal_value(),
+  check_function("numpy.corrcoef", index=0, missing_msg=missing, expand_msg="").multi(
+    check_args(0, missing_msg=incorrect1).has_equal_value(incorrect_msg=incorrect1),
+    check_args(1, missing_msg=incorrect2).has_equal_value(incorrect_msg=incorrect2)
+  )
+)
 
 success_msg("Great! Time to use all of your new data science skills in the last exercise!")
 ```
