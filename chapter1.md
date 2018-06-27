@@ -392,12 +392,14 @@ print(result)
 
 `@sct`
 ```{python}
-test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
-                       incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
-test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
-test_object("result", incorrect_msg = "Have you used `*` and `**` to calculate `result`?")
-msg = "Don't forget to print out `result` after assigning it."
-test_print(not_called_msg = msg, incorrect_msg = msg)
+Ex().test_correct(
+  check_object("result", expand_msg="").has_equal_value(incorrect_msg = "Have you used `*` and `**` to calculate `result`?"),
+  multi(
+    check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!", expand_msg="").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
+    check_object("factor", expand_msg="").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
+  )
+)
+Ex().has_printout(0, not_printed_msg="Don't forget to print out `result` at the end of your script.")
 success_msg("Great!")
 ```
 
