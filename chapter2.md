@@ -94,16 +94,16 @@ print(areas)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined variables!"
-test_object("hall", undefined_msg = msg, incorrect_msg = msg)
-test_object("kit", undefined_msg = msg, incorrect_msg = msg)
-test_object("liv", undefined_msg = msg, incorrect_msg = msg)
-test_object("bed", undefined_msg = msg, incorrect_msg = msg)
-test_object("bath", undefined_msg = msg, incorrect_msg = msg)
+objs = ["hall", "kit", "liv", "bed", "bath"]
+predef_msg = "Don't remove or edit the predefined variables!"
+areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `hall`, `kit`, `liv`, `bed` and `bath`. Watch out for typos. The list doesn't have to contain anything else."
 
-test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order: `hall`, `kit`, `liv`, `bed` and `bath`. Watch out for typos. The list doesn't have to contain anything else.")
+Ex().test_correct(
+  check_object("areas").has_equal_value(incorrect_msg = areas_msg),
+  multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
+)
 
-test_function("print", incorrect_msg = "Print out the `areas` list you created by using `print(areas)`.")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
 
 success_msg("Nice! A list is way better here, isn't it?")
 ```
@@ -172,16 +172,16 @@ print(areas)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined variables!"
-test_object("hall", undefined_msg = msg, incorrect_msg = msg)
-test_object("kit", undefined_msg = msg, incorrect_msg = msg)
-test_object("liv", undefined_msg = msg, incorrect_msg = msg)
-test_object("bed", undefined_msg = msg, incorrect_msg = msg)
-test_object("bath", undefined_msg = msg, incorrect_msg = msg)
+objs = ["hall", "kit", "liv", "bed", "bath"]
+predef_msg = "Don't remove or edit the predefined variables!"
+areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
 
-test_object("areas", incorrect_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos.")
+Ex().test_correct(
+  check_object("areas").has_equal_value(incorrect_msg = areas_msg),
+  multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
+)
 
-test_function("print")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
 
 success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
 ```
@@ -311,20 +311,17 @@ print(type(house))
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined variables!"
-test_object("hall", undefined_msg = msg, incorrect_msg = msg)
-test_object("kit", undefined_msg = msg, incorrect_msg = msg)
-test_object("liv", undefined_msg = msg, incorrect_msg = msg)
-test_object("bed", undefined_msg = msg, incorrect_msg = msg)
-test_object("bath", undefined_msg = msg, incorrect_msg = msg)
+objs = ["hall", "kit", "liv", "bed", "bath"]
+predef_msg = "Don't remove or edit the predefined variables!"
+house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
 
-test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!")
+Ex().test_correct(
+  check_object("house").has_equal_value(incorrect_msg = house_msg),
+  multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
+)
 
-test_function("print", 1, incorrect_msg = "For the first printout, just print out the value of `house` like this: `print(house)`.")
-
-msg = "For the second printout, make sure to print out the type of `house` like this: `print(type(house))`."
-test_function("print", 2, incorrect_msg = msg)
-test_function("type", not_called_msg = msg, incorrect_msg = msg)
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the type of the `house` variable?")
 
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
@@ -391,13 +388,13 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Print out second element from areas
-
+print(areas[_])
 
 # Print out last element from areas
-
+print(areas[__])
 
 # Print out the area of the living room
-
+print(areas[_])
 ```
 
 `@solution`
@@ -418,10 +415,10 @@ print(areas[5])
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
-test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-test_function("print", index = 1)
-test_function("print", index = 2)
-test_function("print", index = 3)
+Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
+Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
+Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
+Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
 success_msg("Good job!")
 ```
 
@@ -483,9 +480,9 @@ print(eat_sleep_area)
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
-test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-test_object("eat_sleep_area", incorrect_msg = "Be sure to assign the correct value to `eat_sleep_area`. You'll need the indices `3` and `-3`.")
-test_function("print", incorrect_msg = "Print out the value you found, stored in `eat_sleep_area`. Use `print(eat_sleep_area)`.")
+Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
+Ex().check_object("eat_sleep_area").has_equal_value(incorrect_msg = "Be sure to assign the correct value to `eat_sleep_area`. You'll need the indices `3` and `-3`.")
+Ex().has_printout(0, not_printed_msg = "Don't forget to print it out `eat_sleap_area` after calculating it!")
 success_msg("Bellissimo!")
 ```
 
@@ -565,13 +562,14 @@ print(upstairs)
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
-test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-test_object("downstairs", incorrect_msg = "Your definition of `downstairs` is incorrect. Use `areas[...]` and slicing to select the elements you want. You could use `0:6` where the dots are, for example.")
-test_object("upstairs", incorrect_msg = "Your definition of `upstairs` is incorrect. Use `areas[...]` and slicing to select the elements you want. You could use `6:10` where the dots are, for example.")
+patt = "Your definition of `%s` is incorrect. Use `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
+Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
+Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ('upstairs', '6:10'))
 
-test_function("print", 1, incorrect_msg = "First, print out `downstairs` using `print(downstairs)`.")
-test_function("print", 2, incorrect_msg = "First, print out `upstairs` using `print(upstairs)`.")
+Ex().has_printout(0, not_printed_msg = "Have you printed out `downstairs` after calculating it?")
+Ex().has_printout(1, not_printed_msg = "Have you printed out `upstairs` after calculating it?")
 
 success_msg("Great!")
 ```
@@ -640,14 +638,11 @@ upstairs = areas[6:]
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
-test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-msg = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
-
-test_object("downstairs", incorrect_msg = msg % ("downstairs",":6"))
-test_student_typed("\[\\s*:(6|-4)\\s*\]", not_typed_msg = msg % ("downstairs",":6"))
-test_object("upstairs", incorrect_msg = msg % ("upstairs","6:"))
-test_student_typed("\[\\s*(6|-4):\\s*\]", not_typed_msg = msg % ("upstairs","6:"))
+patt = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
+Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
+Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
 
 success_msg("Wonderful!")
 ```
@@ -785,9 +780,18 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-test_object("areas",
-            incorrect_msg = "Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!")
-success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.")
+bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
+chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the bathroom area.'
+Ex().test_correct(
+  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  multi(
+    has_equal_ast(code = 'areas[-1]', incorrect_msg = bathroom_msg),
+    has_equal_ast(code = '10.5', incorrect_msg = bathroom_msg),
+    has_equal_ast(code = 'areas[4]', incorrect_msg = chillzone_msg),
+    has_equal_ast(code = '"chill zone"', incorrect_msg = chillzone_msg)
+  )
+)
+success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
 ```
 
 ---
@@ -852,9 +856,9 @@ areas_2 = areas_1 + ["garage", 15.45]
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
-test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-test_object("areas_1", incorrect_msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`. Watch out for typos!")
-test_object("areas_2", incorrect_msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`. Watch out for typos.")
+Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`. Watch out for typos!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`. Watch out for typos.")
 success_msg("Cool! The list is shaping up nicely!")
 ```
 
@@ -903,6 +907,7 @@ command2
 Which of the code chunks will do the job for us?
 
 `@instructions`
+
 - `del(areas[10]); del(areas[11])`
 - `del(areas[10:11])`
 - `del(areas[-4:-2])`
@@ -944,7 +949,7 @@ The Python code in the script already creates a list with the name `areas` and a
 If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with [`list()`](https://docs.python.org/3/library/functions.html#func-list) or by using `[:]`.
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`
+- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`.
 - Now, changes made to `areas_copy` shouldn't affect `areas`. Hit _Submit Answer_ to check this.
 
 `@hint`
@@ -987,12 +992,17 @@ print(areas)
 
 `@sct`
 ```{python}
-test_object("areas", undefined_msg = "Don't remove the predefined `areas` list.",
-                     incorrect_msg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy.")
-test_object("areas_copy", undefined_msg = "Define `areas_copy`, a copy of `areas`",
-                          incorrect_msg = "Be sure to edit `areas_copy`, as instructed.")
+Ex().test_correct(
+  check_object("areas_copy").has_equal_ast(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
+  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+)
 
-test_function("print", incorrect_msg = "Print out the original list `areas` by using `print(areas)`.")
+mmsg = "Don't remove the predefined `areas` list."
+imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+Ex().test_correct(
+  check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
+  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+)
 
 success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
 ```
