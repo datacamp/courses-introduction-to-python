@@ -61,11 +61,6 @@ output = function_name(input)
 - Call [`print()`](https://docs.python.org/3/library/functions.html#print) like you did so many times before. Simply put the variable you want to print in parentheses.
 - `int(x)` will convert `x` to an integer.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Create variables var1 and var2
@@ -153,11 +148,6 @@ Use the Shell on the right to open up the documentation on [`complex()`](https:/
 `@hint`
 The help file shows `complex(real[, imag])`. Do you remember what Filip told you about these square brackets?
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sct`
 ```{python}
 msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
@@ -205,11 +195,6 @@ Note: For now, we can understand an [_iterable_](https://docs.python.org/2/gloss
 - Simply sum `first` and `second` as if they are two numbers and assign the result to `full`.
 - Use [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) with two inputs: `full` and `reverse = True`.
 - To print out a variable, use [`print()`](https://docs.python.org/3/library/functions.html#print).
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -299,11 +284,6 @@ A string `room` has already been created for you to experiment with.
 - To print out a variable `x`, you can write `print(x)`.
 - Make sure to wrap your `room.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # string to experiment with: room
@@ -384,11 +364,6 @@ You'll be working on the list with the area of different parts of a house: `area
 - To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 - To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Create list areas
@@ -464,11 +439,6 @@ You'll be working on the list with the area of different parts of the house: `ar
 - To print out a variable `x`, simply write `print(x)`.
 - The [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
 - To print out a variable `x`, simply write `print(x)`.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -583,11 +553,6 @@ To use the constant `pi`, you'll need the `math` package. A variable `r` is alre
 - Use the equation in the assignment to find `C`. Use `*`
 - Use the equation in the assignment to find `A`. Use `*` and `**`.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Definition of radius
@@ -668,11 +633,6 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 - You can simply use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function now. Pass the function the number 12 to get the angle in radians.
 - To print out a variable `x`, simply type `print(x)`.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Definition of radius
@@ -748,11 +708,6 @@ Which `import` statement will you need in order to run the above code without an
 
 `@hint`
 Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sct`
 ```{python}
