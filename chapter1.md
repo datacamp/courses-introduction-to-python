@@ -52,11 +52,6 @@ You can also use the IPython Shell interactively by simply typing commands and h
 `@hint`
 Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
 
-`@pre_exercise_code`
-```{python}
-# pec comes here
-```
-
 `@sample_code`
 ```{python}
 # Example, do not modify!
@@ -77,12 +72,8 @@ print(7 + 10)
 
 `@sct`
 ```{python}
-msg = "Don't remove the first statement. It is an example which is coded for you!"
-test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
-
-msg = "Have you added `print(7 + 10)` to the script, in addition to the `print()` command that was already there?"
-test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
-success_msg("Great!")
+Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the sum of 7 and 10?")
+success_msg("Great! On to the next one!")
 ```
 
 ---
@@ -107,11 +98,6 @@ Python is a pretty versatile language. For which applications can you use Python
 `@hint`
 Filip mentioned in the video that Python can be used to build practically any piece of software.
 
-`@pre_exercise_code`
-```{python}
-# pec comes here
-```
-
 `@sct`
 ```{python}
 msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
@@ -119,7 +105,6 @@ msg2 = "Incorrect. There is a very popular framework to build database-driven we
 msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
 msg4 = "Correct! Python is an extremely versatile language."
 test_mc(4, [msg1, msg2, msg3, msg4])
-
 ```
 
 ---
@@ -138,19 +123,14 @@ Something that Filip didn't mention in his videos is that you can add **comments
 To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`; it is completely ignored during execution.
 
 `@instructions`
-Above the `print(7 + 10)`, add the comment `# Addition works too`.
+Above the `print(7 + 10)`, add the comment `# Addition`.
 
 `@hint`
-For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition works too` right above `print(7 + 10)`.
-
-`@pre_exercise_code`
-```{python}
-# pec comes here
-```
+For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
 
 `@sample_code`
 ```{python}
-# Just testing division
+# Division
 print(5 / 8)
 
 
@@ -159,16 +139,16 @@ print(7 + 10)
 
 `@solution`
 ```{python}
-# Just testing division
+# Division
 print(5 / 8)
 
-# Addition works too
+# Addition
 print(7 + 10)
 ```
 
 `@sct`
 ```{python}
-test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Make sure to add the instructed comment right before `print(7+10)`.")
+Ex().has_code("#\s*(\w+)[\s.!?]*print\s*\(\s*7", not_typed_msg = "Make sure to add the comment right before `print(7 + 10)`.")
 success_msg("Great!")
 ```
 
@@ -195,11 +175,6 @@ Suppose you have $100, which you can invest with a 10% return each year. After o
 
 `@hint`
 After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
-
-`@pre_exercise_code`
-```{python}
-# pec comes here
-```
 
 `@sample_code`
 ```{python}
@@ -243,7 +218,7 @@ print(100 * 1.1 ** 7)
 
 `@sct`
 ```{python}
-test_output_contains("194\\.8", no_output_msg = "Have you used the operation `100 * 1.1 ** 7` in a `print()` call?")
+Ex().has_printout(6, not_printed_msg = "Have you used the operation `100 * 1.1 ** 7` in a `print()` call?")
 success_msg("Time for another video!")
 ```
 
@@ -297,11 +272,6 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 - Type `savings = 100` to create the variable `savings`.
 - After creating the variable `savings`, you can type `print(savings)`.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Create a variable savings
@@ -322,8 +292,8 @@ print(savings)
 
 `@sct`
 ```{python}
-test_object("savings", incorrect_msg = "Assign `100` to the variable `savings`.")
-test_function("print", incorrect_msg = "Print out `savings`, the variable you created, using `print(savings)`.")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
+Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, using `print(savings)`.")
 success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
 
@@ -355,11 +325,6 @@ Instead of calculating with the actual values, you can use variables instead. Th
 - To create the variable `factor`, use `factor = 1.10`.
 - In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
 - Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -393,7 +358,7 @@ print(result)
 `@sct`
 ```{python}
 Ex().test_correct(
-  check_object("result", expand_msg="").has_equal_value(incorrect_msg = "Have you used `*` and `**` to calculate `result`?"),
+  check_object("result", expand_msg="").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
   multi(
     check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!", expand_msg="").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
     check_object("factor", expand_msg="").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
@@ -432,11 +397,6 @@ Next to numerical data types, there are two other very common data types:
 - To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
 - Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Create a variable desc
@@ -457,9 +417,8 @@ profitable = True
 
 `@sct`
 ```{python}
-test_object("desc", incorrect_msg = "Assign the value `\"compound interest\"` to the variable `desc`.")
-test_object("profitable", incorrect_msg = "Assign the value `True` to the variable `profitable`.")
-
+Ex().check_object("desc").has_equal_value(incorrect_msg="Assign the value `\"compound interest\"` to the variable `desc`. Beware of typos and capitalization.")
+Ex().check_object("profitable").has_equal_value(incorrect_msg="Assign the value `True` to the variable `profitable`.")
 success_msg("Nice!")
 ```
 
@@ -583,16 +542,19 @@ print(doubledesc)
 
 `@sct`
 ```{python}
+# predefined
 msg = "You don't have to change or remove the predefined variables."
-test_object("savings", undefined_msg = msg, incorrect_msg = msg)
-test_object("factor", undefined_msg = msg, incorrect_msg = msg)
-test_object("desc", undefined_msg = msg, incorrect_msg = msg)
-test_object("year1", incorrect_msg = "Multiply `savings` and `factor` to create the `year1` variable.")
-msg = "Make sure to print out the type of `year1` like this: `print(type(year1))`."
-test_function("print", 1, incorrect_msg = msg)
-test_function("type", incorrect_msg = msg)
-test_object("doubledesc", incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?")
-test_function("print", 2, incorrect_msg = "Be sure to print out `doubledesc`.")
+objs = ["savings", "factor", "desc", "year1"]
+Ex().multi([ check_object(obj, missing_msg=msg).has_equal_value(incorrect_msg=msg) for obj in objs ])
+
+# check year1 and printout
+Ex().check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `factor` to create the `year1` variable.")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year1`.")
+
+# check doubledesc and prinout
+Ex().check_object("doubledesc").has_equal_value(incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?")
+Ex().has_printout(1, not_printed_msg = "Don't forget to print out `doubledesc`.")
+
 success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
 ```
 
@@ -629,11 +591,6 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 `@hint`
 - You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
 - Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -672,25 +629,22 @@ pi_float = float(pi_string)
 
 # ensure predefined values are unmodified
 msg = "You don't have to change or remove the predefined variables."
-test_object("savings", undefined_msg = msg, incorrect_msg = msg)
-test_object("result", undefined_msg = msg, incorrect_msg = msg)
+check_object("savings", missing_msg=msg).has_equal_ast(incorrect_msg=msg)
+check_object("result", missing_msg=msg).has_equal_ast(incorrect_msg=msg)
 
 # check correctly converted `result` and `savings` in printed string.
-test_function("str", 1, incorrect_msg = "On the line with `print()`, make sure to change `savings` to `str(savings)`.")
-test_function("str", 2, incorrect_msg = "On the line with `print()`, make sure to changed `result` to  `str(result)`.")
-test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
+Ex().check_function("str", 0).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `savings` into a string with `str(savings)`.")
+Ex().check_function("str", 1).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `result` into a string `str(result)`.")
 
 # ensure predefined pi_string is unmodified
 msg = "You shouldn't have to change or remove the predefined variable `pi_string`."
-test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
+Ex().check_object("pi_string", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 # check pi_float
-test_function("float",
-              not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.",
-              incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.")
-test_object("pi_float",
-             incorrect_msg = "It looks like you used `float` correctly, but the value of `pi_float` is incorrect.",
-             undefined_msg = "It looks like you used `float` correctly, but did not assign the result to `pi_float`")
+Ex().test_correct(
+  check_object("pi_float", missing_msg="It looks like you used `float` correctly, but did not assign the result to `pi_float`").has_equal_value(incorrect_msg="It looks like you used `float` correctly, but the value of `pi_float` is incorrect."),
+  check_function("float", missing_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.").has_equal_value(incorrect_msg="Use `float(pi_string)` in order to convert `pi_string` to a float.")
+)
 
 success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
 ```
@@ -717,11 +671,6 @@ Which one of these will throw an error? You can always copy and paste this code 
 
 `@hint`
 Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sct`
 ```{python}
