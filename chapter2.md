@@ -54,11 +54,6 @@ After measuring the height of your family, you decide to collect some informatio
 - You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
 - Put `print(areas)` in your script to print out the list when submitting.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # area variables (in square meters)
@@ -132,11 +127,6 @@ The code on the right is the start of a solution. For some of the areas, the nam
 `@hint`
 - The strings `"living room"` and `"bathroom"` have already been placed into the list. Do the same thing for `"hallway"`, `"kitchen"` and `"bedroom"`.
 - To print `areas`, simply type `print(areas)`.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -219,11 +209,6 @@ C. `[1 + 2, "a" * 5, 3]`
 `@hint`
 Try out all the different lines in the Python shell and see which ones generate an error. Maybe none of them go wrong?
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sct`
 ```{python}
 msg1 = "Correct! As funny as they may look, all these commands are valid ways to build a Python list."
@@ -259,11 +244,6 @@ Don't get confused here: `"hallway"` is a string, while `hall` is a variable tha
 - Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
 - To print a variable `x`, write `print(x)` on a new line in the Python script.
 - To print out the type of a variable `x`, you can use `print(type(x))`.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -377,11 +357,6 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 - Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Create the areas list
@@ -447,11 +422,6 @@ print(x[1] + x[3])
 `@hint`
 - Add `areas[3]` to `areas[-3]` to calculate `eat_sleep_area`.
 - Print out `eat_sleep_area`: `print(eat_sleep_area)`.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -523,11 +493,6 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 - Use the brackets `[0:6]` to build `downstairs`.
 - Use the brackets `[6:10]` to build `upstairs`.
 - Simply add two [`print()`](https://docs.python.org/3/library/functions.html#print) calls to the script to print out `downstairs` and `upstairs`.
-
-`@pre_exercise_code`
-```{python}
-# no pec
-```
 
 `@sample_code`
 ```{python}
@@ -605,11 +570,6 @@ Use slicing to create the lists `downstairs` and `upstairs` again, but this time
 
 `@hint`
 To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -749,11 +709,6 @@ For this and the following exercises, you'll continue working on the `areas` lis
 - To select the bathroom area, you can use `[-1]`.
 - To select the `"living room"` element, you can use `[4]`. Next, use `= "chill zone"` to change this element.
 
-`@pre_exercise_code`
-```{python}
-# pec
-```
-
 `@sample_code`
 ```{python}
 # Create the areas list
@@ -821,11 +776,6 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 `@hint`
 - Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
 - To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
-
-`@pre_exercise_code`
-```{python}
-# pec
-```
 
 `@sample_code`
 ```{python}
@@ -954,11 +904,6 @@ If you want to prevent changes in `areas_copy` to also take effect in `areas`, y
 
 `@hint`
 Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
-
-`@pre_exercise_code`
-```{python}
-# no pec
-```
 
 `@sample_code`
 ```{python}
