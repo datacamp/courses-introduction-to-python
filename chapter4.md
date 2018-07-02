@@ -234,7 +234,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height and weight are available as a regular lists
+# height and weight are available as regular lists
 
 # Import numpy
 import numpy as np
@@ -254,7 +254,7 @@ np_height_m = np.array(height) * 0.0254
 
 `@solution`
 ```{python}
-# height and weight are available as a regular lists
+# height and weight are available as regular lists
 
 # Import numpy
 import numpy as np
