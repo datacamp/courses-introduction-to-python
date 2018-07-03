@@ -96,23 +96,19 @@ out2 = int(var2)
 `@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
-test_object("var1", undefined_msg = msg, incorrect_msg = msg)
-test_object("var2", undefined_msg = msg, incorrect_msg = msg)
+Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
+Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-msg = "Make sure to print out the type of `var1` like this: `print(type(var1))`."
-test_function("type", 1, incorrect_msg = msg)
-test_function("print", 1, incorrect_msg = msg)
+patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
+Ex().has_printout(0, not_printed_msg = patt % 'type')
+Ex().has_printout(1, not_printed_msg = patt % 'length')
 
-msg = "Make sure to print out the length of `var1` like this: `print(len(var1))`."
-test_function("len", 1, incorrect_msg = msg)
-test_function("print", 2, incorrect_msg = msg)
-
-test_object("out2", do_eval = False)
-
-test_function("int", not_called_msg = "Use [`int()`](https://docs.python.org/3/library/functions.html#int) to make an integer of `var2` and assign to `out2`.",
-                     incorrect_msg = "Use [`int()`](https://docs.python.org/3/library/functions.html#int) with the correct variables. You should pass `var2` to it."
+int_miss_msg = "Have you used [`int()`](https://docs.python.org/3/library/functions.html#int) to make an integer of `var2`?"
+int_incorr_msg = "Have you passed `var2` to [`int()`](https://docs.python.org/3/library/functions.html#int)?"
+Ex().test_correct(
+  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-test_object("out2", incorrect_msg = "Make sure to assign the correct value to `out2`.")
 success_msg("Great job! The [`len()`](https://docs.python.org/3/library/functions.html#len) function is extremely useful; it also works on strings to count the number of characters!")
 ```
 
@@ -230,12 +226,19 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
-test_object("first", undefined_msg = msg, incorrect_msg = msg)
-test_object("second", undefined_msg = msg, incorrect_msg = msg)
-test_object("full")
-test_function_v2("sorted", params = ['iterable', 'reverse'])
-test_object("full_sorted", incorrect_msg = "Assign the result of the `sorted()` function to `full_sorted`.")
+msg = "You don't have to change or remove the already variables `first` and `second`."
+Ex().multi(
+  check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
+  check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
+)
+Ex().test_correct(
+  check_object("full").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_function("sorted").multi(
+    check_args(0).has_equal_value(),
+    check_args('reverse').has_equal_value()
+  )
+)
+
 success_msg("Cool! Head over to the video on Python methods.")
 ```
 
@@ -272,67 +275,70 @@ key: 4039302ee0
 
 Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
 
-A string `room` has already been created for you to experiment with.
+A string `place` has already been created for you to experiment with.
 
 `@instructions`
-- Use the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` and store the result in `room_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `room` and `room_up`. Did both change?
-- Print out the number of o's on the variable `room` by calling [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `room` and passing the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
+- Use the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
+- Print out `place` and `place_up`. Did both change?
+- Print out the number of o's on the variable `place` by calling [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
 
 `@hint`
-- You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` without any additional inputs.
+- You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `place` without any additional inputs.
 - To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `room.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
+- Make sure to wrap your `place.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
 
 `@sample_code`
 ```{python}
-# string to experiment with: room
-room = "poolhouse"
+# string to experiment with: place
+place = "poolhouse"
 
-# Use upper() on room: room_up
-
-
-# Print out room and room_up
+# Use upper() on place: place_up
 
 
-# Print out the number of o's in room
+# Print out place and place_up
+
+
+# Print out the number of o's in place
 
 ```
 
 `@solution`
 ```{python}
-# string to experiment with: room
-room = "poolhouse"
+# string to experiment with: place
+place = "poolhouse"
 
-# Use upper() on room: room_up
-room_up = room.upper()
+# Use upper() on place: place_up
+place_up = place.upper()
 
-# Print out room and room_up
-print(room)
-print(room_up)
+# Print out place and place_up
+print(place)
+print(place_up)
 
-# Print out the number of o's in room
-print(room.count("o"))
+# Print out the number of o's in place
+print(place.count('o'))
 ```
 
 `@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
-test_object("room", undefined_msg = msg, incorrect_msg = msg)
+Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-test_function("room.upper", not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `room` object using the `.` notation. Watch out here, don't forget the parentheses after upper: `room.upper()`.")
-test_object("room_up", incorrect_msg = "Assign the result of your `room.upper()` call to `room_up`.")
+# check place_up
+Ex().test_correct(
+  check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+  check_function("place.upper", signature=False)
+)
 
-msg = "For the second instruction, print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"
-test_function("print", 1, incorrect_msg = msg % "room")
-test_function("print", 2, incorrect_msg = msg % "room_up")
+# check printouts
+patt = "Don't forget to print out `%s`."
+Ex().has_printout(0, not_printed_msg=patt % "place")
+Ex().has_printout(1, not_printed_msg=patt % "place_up")
 
-msg = "Don't forget to count the o's in `room` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument. Make sure to place the `\"o\"` between double quotes."
-test_function("room.count",
-              not_called_msg = msg,
-              incorrect_msg = msg)
-test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in `room`.")
-
+# check count of place
+Ex().test_correct(
+  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  check_function("place.count", signature=False).check_args(0).has_equal_value()
+)
 
 success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
@@ -358,7 +364,7 @@ You'll be working on the list with the area of different parts of a house: `area
 
 `@instructions`
 - Use the [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index) method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `areas` to find out how many times `14.5` appears in the list. Again, simply print out this number.
+- Call [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
 
 `@hint`
 - To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
@@ -372,7 +378,7 @@ areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 # Print out the index of the element 20.0
 
 
-# Print out how often 14.5 appears in areas
+# Print out how often 9.50 appears in areas
 
 
 ```
@@ -385,26 +391,29 @@ areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 # Print out the index of the element 20.0
 print(areas.index(20.0))
 
-# Print out how often 14.5 appears in areas
-print(areas.count(14.5))
+# Print out how often 9.50 appears in areas
+print(areas.count(9.50))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
-test_object("areas", undefined_msg = msg, incorrect_msg = msg)
+predef_msg = "You don't have to change or remove the predefined list `areas`."
 
-msg = "Don't forget to find the index of `20.0` in `areas` by calling the [`index()`](https://docs.python.org/3/library/functions.html#index) method on it with the correct argument."
-test_function("areas.index",
-              not_called_msg = msg,
-              incorrect_msg = msg)
-test_function("print", 1, not_called_msg = "Don't forget to print out the index of `20.0` in `areas`.", incorrect_msg = "For the first printout, you should use `print(areas.index(20.0))`.")
+Ex().test_correct(
+  has_printout(0, not_printed_msg="You have calculated the index of element 20.0 correctly; now make sure to print it!"),
+  multi(
+    check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg),
+    check_function('areas.index', signature=False).check_args(0).has_equal_value()
+  )
+)
 
-msg = "Don't forget to count the number of times `14.5` appears in `areas` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument."
-test_function("areas.count",
-              not_called_msg = msg,
-              incorrect_msg = msg)
-test_function("print", 2, not_called_msg = "Don't forget to print out the count of `14.5` in `areas`.", incorrect_msg = "For the second printout, you should use `print(areas.count(14.5))`.")
+Ex().test_correct(
+  has_printout(1, not_printed_msg="You have calculated the number of times `9.50` appears correctly; now make sure to print it!"),
+  multi(
+    check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg),
+    check_function('areas.count', signature=False).has_equal_value()
+  )
+)
 
 success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
 ```
@@ -479,26 +488,13 @@ print(areas)
 
 `@sct`
 ```{python}
-msg = "Use the `append()` method on `areas` to expand with `%s` the %s time."
-test_function("areas.append", 1,
-              not_called_msg = msg % ( "24.5", "first"),
-              incorrect_msg = msg % ( "24.5", "first"))
-test_function("areas.append", 2,
-              not_called_msg = msg % ("15.45", "second"),
-              incorrect_msg = msg % ("15.45", "second"))
-
-msg = "Use the `reverse()` method on `areas` to reverse it. Don't forget the parantheses!"
-test_function("areas.reverse",
-              not_called_msg = msg,
-              incorrect_msg = msg)
-
-test_function("print", 1, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
-
-
-
-test_function("print", 2, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
-
-test_object("areas", incorrect_msg = "The final value of `areas` is not correct although you did the correct operations. Did you change the predefined variables?", undefined_msg = "Don't remove `areas`.")
+Ex().multi(
+  check_function("areas.append", index=0, signature=False).check_args(0).has_equal_value(),
+  check_function("areas.append", index=1, signature=False).check_args(0).has_equal_value(),
+  check_function("print", index=0).check_args(0).has_equal_ast(),
+  check_function("areas.reverse", index=0, signature=False),
+  check_function("print", index=1).check_args(0).has_equal_ast()
+)
 
 success_msg("Great!")
 ```
@@ -594,14 +590,20 @@ print("Area: " + str(A))
 `@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
-test_object("r", undefined_msg = msg, incorrect_msg = msg)
-test_import("math", same_as = False)
-test_object("C", incorrect_msg = "Your calculation of `C` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
-test_object("A", incorrect_msg = "Your calculation of `A` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
-msg = "You don't have to change or remove the predefined `print()` functions at the end."
-test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
-test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
-success_msg("Nice!")
+patt = "Your calculation of `%s` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`)."
+Ex().multi(
+  check_object('r', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+  has_import('math', same_as=False),
+  check_object('C').has_equal_value(incorrect_msg=patt%'C'),
+  check_object('C').has_equal_value(incorrect_msg=patt%'A'),
+)
+
+Ex().multi(
+  has_printout(0, not_printed_msg = "__JINJA__:Keep the `{{sol_call}}` call to print out the circumference."),
+  has_printout(1, not_printed_msg = "__JINJA__:Keep the `{{sol_call}}` call to print out the area.")
+)
+
+success_msg("Nice! If you know how to deal with functions from packages, the power of _a lot_ of Python programmers is at your fingertips!")
 ```
 
 ---
@@ -666,15 +668,16 @@ print(dist)
 `@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
-test_object("r", undefined_msg = msg, incorrect_msg = msg)
+Ex().check_object("r", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-test_import("math.radians", not_imported_msg = "Be sure to import [`radians()`](https://docs.python.org/3/library/math.html#math.radians) from the `math` package. You should use the `from ___ import ___` notation.", incorrect_as_msg = "Don't set any alias for [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Just type `from math import radians`.")
+Ex().has_import("math.radians", not_imported_msg = "Be sure to import [`radians()`](https://docs.python.org/3/library/math.html#math.radians) from the `math` package. You should use the `from ___ import ___` notation.", incorrect_as_msg = "Don't set any alias for [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Just type `from math import radians`.")
 
-test_object("dist", do_eval = False)
-test_function("math.radians", 1, incorrect_msg = "Call [`radians()`](https://docs.python.org/3/library/math.html#math.radians) with argument `12`.", not_called_msg = "Your calculation of `dist` is not quite correct. You should use [`radians()`](https://docs.python.org/3/library/math.html#math.radians) from the `math` package. If you imported correctly, you don't have to use the dot (`.`) notation.")
-test_object("dist", incorrect_msg = "Assign the result of your calculations to `dist`.")
+Ex().test_correct(
+  check_object("dist").has_equal_value(),
+  check_function("math.radians", signature=False).check_args(0).has_equal_value()
+)
 
-test_function("print", incorrect_msg = "Make sure to print out `dist` using `print(dist)`.")
+Ex().has_printout(0)
 
 success_msg("Nice! Head over to the next exercise.")
 ```
