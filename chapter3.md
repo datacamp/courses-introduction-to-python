@@ -105,7 +105,7 @@ Ex().has_printout(1, not_printed_msg = patt % 'length')
 
 int_miss_msg = "Have you used [`int()`](https://docs.python.org/3/library/functions.html#int) to make an integer of `var2`?"
 int_incorr_msg = "Have you passed `var2` to [`int()`](https://docs.python.org/3/library/functions.html#int)?"
-Ex().test_correct(
+Ex().check_correct(
   check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
@@ -231,7 +231,7 @@ Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
-Ex().test_correct(
+Ex().check_correct(
   check_object("full").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
@@ -323,19 +323,18 @@ print(place.count('o'))
 msg = "You don't have to change or remove the predefined variables."
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-# check place_up
-Ex().test_correct(
-  check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
-  check_function("place.upper", signature=False)
-)
-
-# check printouts
 patt = "Don't forget to print out `%s`."
 Ex().has_printout(0, not_printed_msg=patt % "place")
-Ex().has_printout(1, not_printed_msg=patt % "place_up")
+Ex().check_correct(
+    has_printout(1, not_printed_msg=patt % "place_up"),
+    check_correct(
+        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_function("place.upper", signature=False)
+    )
+)    
 
 # check count of place
-Ex().test_correct(
+Ex().check_correct(
   has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
@@ -399,7 +398,7 @@ print(areas.count(9.50))
 ```{python}
 predef_msg = "You don't have to change or remove the predefined list `areas`."
 
-Ex().test_correct(
+Ex().check_correct(
   has_printout(0, not_printed_msg="You have calculated the index of element 20.0 correctly; now make sure to print it!"),
   multi(
     check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg),
@@ -407,7 +406,7 @@ Ex().test_correct(
   )
 )
 
-Ex().test_correct(
+Ex().check_correct(
   has_printout(1, not_printed_msg="You have calculated the number of times `9.50` appears correctly; now make sure to print it!"),
   multi(
     check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg),
@@ -590,17 +589,17 @@ print("Area: " + str(A))
 `@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
-patt = "Your calculation of `%s` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`)."
+patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
 Ex().multi(
   check_object('r', missing_msg=msg).has_equal_value(incorrect_msg=msg),
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
-  check_object('C').has_equal_value(incorrect_msg=patt%'A'),
+  check_object('A').has_equal_value(incorrect_msg=patt%'A')
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep the `{{sol_call}}` call to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep the `{{sol_call}}` call to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
+  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
 )
 
 success_msg("Nice! If you know how to deal with functions from packages, the power of _a lot_ of Python programmers is at your fingertips!")
@@ -672,7 +671,7 @@ Ex().check_object("r", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().has_import("math.radians", not_imported_msg = "Be sure to import [`radians()`](https://docs.python.org/3/library/math.html#math.radians) from the `math` package. You should use the `from ___ import ___` notation.", incorrect_as_msg = "Don't set any alias for [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Just type `from math import radians`.")
 
-Ex().test_correct(
+Ex().check_correct(
   check_object("dist").has_equal_value(),
   check_function("math.radians", signature=False).check_args(0).has_equal_value()
 )

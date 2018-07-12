@@ -89,11 +89,11 @@ print(type(np_baseball))
 ```{python}
 predef_msg = "You don't have to change or remove the predefined variables."
 Ex().has_import("numpy")
-Ex().test_correct(
+Ex().check_correct(
   check_object("np_baseball"),
   multi(
     check_object("baseball", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg),
-    check_function("numpy.array").check_args(0).has_equal_value()
+    check_function("numpy.array").check_args(0).has_equal_ast()
   )
 )
 
@@ -180,15 +180,15 @@ print(np_height_m)
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().test_correct(
+Ex().check_correct(
   has_printout(0),
-  test_correct(
+  check_correct(
     check_object('np_height').has_equal_value(),
-    check_function('numpy.array').check_args(0).has_equal_value()
+    check_function('numpy.array').check_args(0).has_equal_ast()
   )
 )
 
-Ex().test_correct(
+Ex().check_correct(
   has_printout(1),
   check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height * 0.0254` to calculate `np_height_m`.")
 )
@@ -279,19 +279,19 @@ msg = "The variable `np_height_m` was defined for you. You don't have to change 
 Ex().check_object("np_height_m", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 
 # check np_weight_kg
-Ex().test_correct(
+Ex().check_correct(
   check_object("np_weight_kg"),
   multi(
-    check_function("numpy.array", index=1).check_args(0).has_equal_value(),
+    check_function("numpy.array", index=1).check_args(0).has_equal_ast(),
     has_code('0.453592', not_typed_msg="Make sure to multiply `np.array(weight)` with `0.453592` to get the weights in kg.")
   )
 )
 
 # check bmi
 patt = "You need to use `%s` in your calculation of `bmi`"
-Ex().test_correct(
+Ex().check_correct(
   has_printout(0),
-  test_correct(
+  check_correct(
     check_object('bmi').has_equal_value(),
     multi(
       has_code('np_weight_kg', not_typed_msg = patt % 'np_weight_kg'),
@@ -406,12 +406,12 @@ Ex().multi(
   check_object("bmi", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 )
 
-Ex().test_correct(
+Ex().check_correct(
     multi(
        has_printout(0),
        has_printout(1)
     ),
-    check_object("light").has_equal_value(incorrect_msg = "Use the `bmi < 21` to define `light`")
+    check_object("light").has_equal_value(incorrect_msg = "Use `bmi < 21` to define `light`")
 )
 
 success_msg("Wow! It appears that only 11 of the more than 1000 baseball players have a BMI under 21!")
@@ -502,7 +502,6 @@ import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
 height = mlb['Height'].tolist()
 weight = mlb['Weight'].tolist()
-import numpy as np
 ```
 
 `@sample_code`
@@ -601,11 +600,6 @@ In this exercise, `baseball` is a list of lists. The main list contains 4 elemen
 - Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) for the second instruction.
 - `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
 
-`@pre_exercise_code`
-```{python}
-import numpy as np
-```
-
 `@sample_code`
 ```{python}
 # Create baseball, a list of lists
@@ -654,14 +648,14 @@ msg = "You don't have to change or remove the predefined variables."
 Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 Ex().has_import("numpy", same_as = False)
 
-Ex().test_correct(
+Ex().check_correct(
     multi(
         has_printout(0),
         has_printout(1)
     ),
-    test_correct(
+    check_correct(
         check_object('np_baseball').has_equal_value(),
-        check_function('numpy.array').check_args(0).has_equal_value()
+        check_function('numpy.array').check_args(0).has_equal_ast()
     )
 )
 
@@ -733,9 +727,9 @@ print(np_baseball.shape)
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().test_correct(
+Ex().check_correct(
     has_printout(0),
-    test_correct(
+    check_correct(
         check_object('np_baseball').has_equal_value(),
         check_function('numpy.array').check_args(0).has_equal_ast()
     )
@@ -839,10 +833,9 @@ Ex().multi(
 
 Ex().has_printout(0)
 
-Ex().test_correct(
-    has_printout(1),
-    check_object('np_weight').has_equal_value(incorrect_msg = "Define `np_weight` by subsetting the `np_baseball` object with `[:,1]`. This will select the first column, completely.")
-)
+Ex().check_object('np_weight').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight`. This will select the entire first column.")
+
+Ex().has_printout(1)
 
 success_msg("This is going well!")
 ```
@@ -945,9 +938,9 @@ Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg 
 
 Ex().has_printout(0)
 
-Ex().test_correct(
+Ex().check_correct(
     has_printout(1),
-    test_correct(
+    check_correct(
         check_object('conversion').has_equal_value(),
         check_function('numpy.array', index = 1).check_args(0).has_equal_value()
     )    
@@ -1056,14 +1049,14 @@ Ex().has_import("numpy", same_as = False)
 
 Ex().check_object("np_height").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
 
-Ex().test_correct(
+Ex().check_correct(
     has_printout(0),
-    check_function('numpy.mean').has_equal_value()
+    check_function('numpy.mean').has_equal_ast()
 )
 
-Ex().test_correct(
+Ex().check_correct(
     has_printout(1),
-    check_function('numpy.median').has_equal_value()
+    check_function('numpy.median').has_equal_ast()
 )
 
 success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get an idea about the overall distribution of the entire dataset.")
@@ -1154,28 +1147,28 @@ print("Correlation: " + str(corr))
 Ex().has_import("numpy")
 
 msg = "You shouldn't change or remove the predefined `avg` variable."
-Ex().check_object("avg", missing_msg=msg, expand_msg="").has_equal_value(incorrect_msg=msg)
+Ex().check_object("avg", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-missing = "Have you used [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) to calculate the median?"
+missing = "Have you used `np.median()` to calculate the median?"
 incorrect = "To calculate `med`, pass the first column of `np_baseball` to `numpy.median()`. The example of `np.mean()` shows how it's done."
-Ex().test_correct(
+Ex().check_correct(
   check_object("med").has_equal_value(),
-  check_function("numpy.median", index=0, missing_msg=missing, expand_msg="").check_args(0).has_equal_value(incorrect_msg=incorrect)
+  check_function("numpy.median", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html) to calculate the standard deviation?"
+missing = "Have you used `np.std()` to calculate the standard deviation?"
 incorrect = "To calculate `stddev`, pass the first column of `np_baseball` to `numpy.std()`. The example of `np.mean()` shows how it's done."
-Ex().test_correct(
+Ex().check_correct(
   check_object("stddev").has_equal_value(),
-  check_function("numpy.std", index=0, missing_msg=missing, expand_msg="").check_args(0).has_equal_value(incorrect_msg=incorrect)
+  check_function("numpy.std", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to calculate the correlation?"
+missing = "Have you used `np.corrcoef()` to calculate the correlation?"
 incorrect1 = "To calculate `corr`, the first argument to `np.corrcoef()` should be the first column of `np_baseball`, similar to how did it before."
 incorrect2 = "To calculate `corr`, the second argument to `np.corrcoef()` should be the second column of `np_baseball`. Instead of `[:,1]`, use `[:,2]` this time."
-Ex().test_correct(
+Ex().check_correct(
   check_object("corr").has_equal_value(),
-  check_function("numpy.corrcoef", index=0, missing_msg=missing, expand_msg="").multi(
+  check_function("numpy.corrcoef", index=0, missing_msg=missing).multi(
     check_args(0, missing_msg=incorrect1).has_equal_value(incorrect_msg=incorrect1),
     check_args(1, missing_msg=incorrect2).has_equal_value(incorrect_msg=incorrect2)
   )
@@ -1283,25 +1276,25 @@ Ex().has_import("numpy")
 msg_gk_heights = "You can use `[np_positions == 'GK']` as an index of `np_heights` to find the heights of all goalkeepers, `gk_heights`."
 msg_other_heights = "You can use `[np_positions != 'GK']` as an index of `np_heights` to find the heights of all other players, `other_heights`."
 
-Ex().test_correct(
+Ex().check_correct(
     multi(
         has_printout(0),
         has_printout(1)
     ),
     multi(
-        test_correct(
+        check_correct(
             multi(
                 check_object('gk_heights').has_equal_value(incorrect_msg=msg_gk_heights),
                 check_object('other_heights').has_equal_value(incorrect_msg=msg_other_heights)
             ),
             multi(
-                test_correct(
-                    check_object("np_positions").has_equal_value(incorrect_msg="Assign the converted numpy array of `positions` to `np_positions`."),
-                    check_function('numpy.array', index=0).check_args(0).has_equal_value(incorrect_msg="Use `positions`.")
+                check_correct(
+                    check_object("np_positions").has_equal_value(incorrect_msg="Assign the numpy array version of `positions` to `np_positions`."),
+                    check_function('numpy.array', index=0).check_args(0).has_equal_ast()
                 ),
-                test_correct(
-                    check_object("np_heights").has_equal_value(incorrect_msg="Assign the converted numpy array of `heights` to `np_heights`."),
-                    check_function('numpy.array', index=1).check_args(0).has_equal_value(incorrect_msg="Use `heights`.")
+                check_correct(
+                    check_object("np_heights").has_equal_value(incorrect_msg="Assign the numpy array version of `heights` to `np_heights`."),
+                    check_function('numpy.array', index=1).check_args(0).has_equal_ast()
                 )
             )
         ),

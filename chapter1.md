@@ -178,19 +178,15 @@ After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How muc
 
 `@sample_code`
 ```{python}
-# Addition and subtraction
+# Addition, subtraction
 print(5 + 5)
 print(5 - 5)
 
-# Multiplication and division
+# Multiplication, division, modulo, and exponentiation
 print(3 * 5)
 print(10 / 2)
-
-# Exponentiation
-print(4 ** 2)
-
-# Modulo
 print(18 % 7)
+print(4 ** 2)
 
 # How much is your $100 worth after 7 years?
 
@@ -198,19 +194,15 @@ print(18 % 7)
 
 `@solution`
 ```{python}
-# Addition and subtraction
+# Addition, subtraction
 print(5 + 5)
 print(5 - 5)
 
-# Multiplication and division
+# Multiplication, division, modulo, and exponentiation
 print(3 * 5)
 print(10 / 2)
-
-# Exponentiation
-print(4 ** 2)
-
-# Modulo
 print(18 % 7)
+print(4 ** 2)
 
 # How much is your $100 worth after 7 years?
 print(100 * 1.1 ** 7)
@@ -218,7 +210,7 @@ print(100 * 1.1 ** 7)
 
 `@sct`
 ```{python}
-Ex().has_printout(6, not_printed_msg = "Have you used the operation `100 * 1.1 ** 7` in a `print()` call?")
+Ex().has_printout(6, not_printed_msg = "Have you used `print(100 * 1.1 ** 7)` to print out the result of your calculations?")
 success_msg("Time for another video!")
 ```
 
@@ -293,7 +285,7 @@ print(savings)
 `@sct`
 ```{python}
 Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, using `print(savings)`.")
+Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
 success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
 
@@ -357,11 +349,11 @@ print(result)
 
 `@sct`
 ```{python}
-Ex().test_correct(
-  check_object("result", expand_msg="").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
+Ex().check_correct(
+  check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
   multi(
-    check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!", expand_msg="").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-    check_object("factor", expand_msg="").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
+    check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
+    check_object("factor").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
   )
 )
 Ex().has_printout(0, not_printed_msg="Don't forget to print out `result` at the end of your script.")
@@ -417,8 +409,8 @@ profitable = True
 
 `@sct`
 ```{python}
-Ex().check_object("desc").has_equal_value(incorrect_msg="Assign the value `\"compound interest\"` to the variable `desc`. Beware of typos and capitalization.")
-Ex().check_object("profitable").has_equal_value(incorrect_msg="Assign the value `True` to the variable `profitable`.")
+Ex().check_object("desc").has_equal_value()
+Ex().check_object("profitable").has_equal_value()
 success_msg("Nice!")
 ```
 
@@ -495,14 +487,8 @@ In the script some variables with different types have already been created. It'
 - Assign `desc + desc` to a new variable, `doubledesc`.
 - To print a variable `x`, write `print(x)` in the script.
 
-`@pre_exercise_code`
-```{python}
-# no pec
-```
-
 `@sample_code`
 ```{python}
-# Several variables to experiment with
 savings = 100
 factor = 1.1
 desc = "compound interest"
@@ -522,7 +508,6 @@ desc = "compound interest"
 
 `@solution`
 ```{python}
-# Several variables to experiment with
 savings = 100
 factor = 1.1
 desc = "compound interest"
@@ -545,15 +530,24 @@ print(doubledesc)
 # predefined
 msg = "You don't have to change or remove the predefined variables."
 objs = ["savings", "factor", "desc", "year1"]
-Ex().multi([ check_object(obj, missing_msg=msg).has_equal_value(incorrect_msg=msg) for obj in objs ])
+Ex().multi(
+    check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('factor', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('desc', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('year1', missing_msg=msg).has_equal_value(incorrect_msg=msg)
+)
 
 # check year1 and printout
-Ex().check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `factor` to create the `year1` variable.")
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year1`.")
+Ex().multi(
+    check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `factor` to create the `year1` variable."),
+    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year1`.")
+)
 
 # check doubledesc and prinout
-Ex().check_object("doubledesc").has_equal_value(incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?")
-Ex().has_printout(1, not_printed_msg = "Don't forget to print out `doubledesc`.")
+Ex().multi(
+    check_object("doubledesc").has_equal_value(incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?"),
+    has_printout(1, not_printed_msg = "Don't forget to print out `doubledesc`.")
+)
 
 success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
 ```
@@ -629,21 +623,26 @@ pi_float = float(pi_string)
 
 # ensure predefined values are unmodified
 msg = "You don't have to change or remove the predefined variables."
-check_object("savings", missing_msg=msg).has_equal_ast(incorrect_msg=msg)
-check_object("result", missing_msg=msg).has_equal_ast(incorrect_msg=msg)
+Ex().multi(
+    check_object("savings", missing_msg=msg).has_equal_ast(incorrect_msg=msg),
+    check_object("result", missing_msg=msg).has_equal_ast(incorrect_msg=msg)
+)
 
-# check correctly converted `result` and `savings` in printed string.
-Ex().check_function("str", 0).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `savings` into a string with `str(savings)`.")
-Ex().check_function("str", 1).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `result` into a string `str(result)`.")
-
-# ensure predefined pi_string is unmodified
-msg = "You shouldn't have to change or remove the predefined variable `pi_string`."
-Ex().check_object("pi_string", missing_msg=msg).has_equal_value(incorrect_msg=msg)
+Ex().check_correct(
+    has_printout(0),
+    multi(
+        check_function("str", 0).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `savings` into a string with `str(savings)`."),
+        check_function("str", 1).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `result` into a string `str(result)`.")
+    )
+)
 
 # check pi_float
-Ex().test_correct(
-  check_object("pi_float", missing_msg="It looks like you used `float` correctly, but did not assign the result to `pi_float`").has_equal_value(incorrect_msg="It looks like you used `float` correctly, but the value of `pi_float` is incorrect."),
-  check_function("float", missing_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.").has_equal_value(incorrect_msg="Use `float(pi_string)` in order to convert `pi_string` to a float.")
+Ex().check_correct(
+    check_object("pi_float").has_equal_value(),
+    multi(
+        check_object("pi_string").has_equal_value(),
+        check_function("float", missing_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.").has_equal_value(incorrect_msg="Use `float(pi_string) to create the variable `pi_float`.")
+    )
 )
 
 success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
@@ -674,7 +673,9 @@ Copy and paste the different expressions into the IPython Shell and try to figur
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
+msg1 = "Incorrect, this command runs perfectly fine."
+msg2 = "It's perfectly possible to 'multiply strings' in Python..."
 msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
+msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
