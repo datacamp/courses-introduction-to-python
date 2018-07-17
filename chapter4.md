@@ -234,7 +234,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height and weight are available as a regular lists
+# height and weight are available as regular lists
 
 # Import numpy
 import numpy as np
@@ -254,7 +254,7 @@ np_height_m = np.array(height) * 0.0254
 
 `@solution`
 ```{python}
-# height and weight are available as a regular lists
+# height and weight are available as regular lists
 
 # Import numpy
 import numpy as np
@@ -857,11 +857,11 @@ np_mat + np.array([10, 10])
 np_mat + np_mat
 ```
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height, weight and age.
+`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years).
 
 `@instructions`
-- You managed to get hold of the changes in weight, height and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
-- You want to convert the units of height and weight. As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
+- You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
+- You want to convert the units of height and weight to metric (meters and kilograms respectively). As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
 - Multiply `np_baseball` with `conversion` and print out the result.
 
 `@hint`

@@ -163,7 +163,7 @@ The help file shows `complex(real[, imag])`. Do you remember what Filip told you
 msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
 msg2 = "This statement is false. `imag` is not a required argument."
 msg3 = "Perfect!"
-msg4 = "This is almost true, but not entirely. If you don't specify `image`, it is set to 0."
+msg4 = "This is almost true, but not entirely. If you don't specify `imag`, it is set to 0."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
