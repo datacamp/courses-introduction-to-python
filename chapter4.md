@@ -490,7 +490,7 @@ The script on the right already contains code that imports `numpy` as `np`, and 
 
 `@instructions`
 - Subset `np_weight` by printing out the element at index 50.
-- Print out a sub-array of `np_height` that contains the elements at index 100 up to **and including** index 110
+- Print out a sub-array of `np_height` that contains the elements at index 100 up to **and including** index 110.
 
 `@hint`
 - Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around your subsetting operations.
