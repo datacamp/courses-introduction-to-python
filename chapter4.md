@@ -288,7 +288,7 @@ Ex().check_correct(
 )
 
 # check bmi
-patt = "You need to use `%s` in your calculation of `bmi`"
+patt = "You need to use `%s` in your calculation of `bmi`."
 Ex().check_correct(
   has_printout(0),
   check_correct(
