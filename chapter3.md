@@ -545,8 +545,8 @@ To use the constant `pi`, you'll need the `math` package. A variable `r` is alre
 
 `@hint`
 - You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment to find `C`. Use `*`
-- Use the equation in the assignment to find `A`. Use `*` and `**`.
+- Use the equation in the assignment text to find `C`. Use `*`
+- Use the equation in the assignment text to find `A`. Use `*` and `**`.
 
 `@sample_code`
 ```{python}
