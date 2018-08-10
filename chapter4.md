@@ -462,7 +462,7 @@ import numpy as np
 ```{python}
 msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
 msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
-test_mc(2, [msg1, msg2, msg3, msg4])
+Ex().has_chosen(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---

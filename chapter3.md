@@ -150,7 +150,7 @@ msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
 msg2 = "This statement is false. `imag` is not a required argument."
 msg3 = "Perfect!"
 msg4 = "This is almost true, but not entirely. If you don't specify `imag`, it is set to 0."
-test_mc(3, [msg1, msg2, msg3, msg4])
+Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
@@ -715,5 +715,5 @@ Try the different import statements in the IPython shell and see which one cause
 ```{python}
 msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: [`inv()`](https://docs.python.org/3/library/functions.html#inv) is now available as `my_inv()`."
-test_mc(4, [msg1, msg2, msg3, msg4])
+Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
