@@ -104,7 +104,7 @@ msg1 = "Incorrect. Python can do simple and quick calculations, but it is much m
 msg2 = "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
 msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
 msg4 = "Correct! Python is an extremely versatile language."
-test_mc(4, [msg1, msg2, msg3, msg4])
+Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
 
 ---
@@ -455,7 +455,7 @@ msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
 msg2 = "`b` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
 msg3 = "Correcto perfecto!"
 msg4 = "None of the variable's types is correct here. Try `type(a)` and see what type this variable is."
-test_mc(3,[msg1, msg2, msg3, msg4])
+Ex().has_chosen(3,[msg1, msg2, msg3, msg4])
 ```
 
 ---
@@ -677,5 +677,5 @@ msg1 = "Incorrect, this command runs perfectly fine."
 msg2 = "It's perfectly possible to 'multiply strings' in Python..."
 msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
-test_mc(3, [msg1, msg2, msg3, msg4])
+Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```

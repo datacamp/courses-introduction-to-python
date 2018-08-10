@@ -220,7 +220,7 @@ msg1 = "Correct! As funny as they may look, all these commands are valid ways to
 msg2 = "Command B is valid, but it's not the only one!"
 msg3 = "Both command B and C are valid; what about command A? Try it out in the console."
 msg4 = "Command C is valid, but it's not the only one!"
-test_mc(1,[msg1,msg2,msg3,msg4])
+Ex().has_chosen(1,[msg1,msg2,msg3,msg4])
 ```
 
 ---
@@ -665,7 +665,7 @@ house = [["hallway", 11.25],
 msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `[\"bathroom\", 9.50]`."
 msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
-test_mc(3, [msg1, msg2, msg3, msg4])
+Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
@@ -890,7 +890,7 @@ msg1 = "If you first remove `areas[10]`, all elements after index 10 move up a s
 msg2 = "`areas[10:11])` will only select the element at index `10`."
 msg3 = "Correct! You'll learn about easier ways to remove specific elements from Python lists later on."
 msg4 = "This code chunk will not correctly remove the poolhouse-related information. Try again."
-test_mc(3, [msg1, msg2, msg3, msg4])
+Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
