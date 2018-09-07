@@ -949,7 +949,7 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_ast(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
+  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
   check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
 )
 

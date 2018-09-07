@@ -624,8 +624,8 @@ pi_float = float(pi_string)
 # ensure predefined values are unmodified
 msg = "You don't have to change or remove the predefined variables."
 Ex().multi(
-    check_object("savings", missing_msg=msg).has_equal_ast(incorrect_msg=msg),
-    check_object("result", missing_msg=msg).has_equal_ast(incorrect_msg=msg)
+    check_object("savings", missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object("result", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
 Ex().check_correct(
