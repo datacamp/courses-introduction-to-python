@@ -12,7 +12,7 @@ Unfortunately, Python throws an error, because it has no idea how to do calculat
 
 A way more elegant solution is to use NumPy, or Numeric Python. It's a Python package that, among others, provides a alternative to the regular python list: the Numpy array. The Numpy array is pretty similar to the list, but has additional features, such as the ability to perform calculations over entire arrays. It's really easy, and super-fast as well.
 
-The Numpy package is already installed on DataCamp's servers, but if you want to work with it on your own system, go to the command line and execute pip3 install numpy. [HBA] anaconda? could also remove? requires command line know how  [/HBA]
+The Numpy package is already installed on DataCamp's servers, but if you want to work with it on your own system, go to the command line and execute pip3 install numpy.
 
 Next, to actually use Numpy in your Python session, you can import the numpy package, like this.
 
