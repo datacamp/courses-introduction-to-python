@@ -2,7 +2,7 @@
 
 ## Lists
 
-By now, you've played around with different data types and I hope you've had as much fun as I have! On the numbers side, there's the float, to represent a real number, and the int, to represent an integer. Next, we also have str, short for string, to represent text in Python, and bool, which can be either True or False. You can save these values as a variable, like these examples show. Each variable then represents a single value.
+Welcome back, aspiring Pythonista! By now, you've played around with different data types and I hope you've had as much fun as I have! On the numbers side, there's the float, to represent a real number, and the int, to represent an integer. Next, we also have str, short for string, to represent text in Python, and bool, which can be either True or False. You can save these values as a variable, like these examples show. Each variable then represents a single value.
 
 As a data scientist, you'll often want to work with many data points. If you for example want to measure the height of everybody in your family, and store this information in Python, it would be inconvenient to create a new python variable for each point you collected right?
 
@@ -16,7 +16,7 @@ It's perfectly possible for a list to contain different types as well. Suppose, 
 
 But that's not all. I just told you that lists can also contain lists themselves. Instead of putting the strings in between the numbers, you can create little sublists for each member of the family. One for liz, one for emma and so on. Now, you can tell Python that these sublists are the elements of another list, that I named fam2: the little lists are wrapped in square brackets and separated with commas. If you now print out fam2, you see that we have a list of lists. The main list contains 4 sub-lists.
 
-We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about: the list. These calls show that both fam and fam2 are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first!
+We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about: the list. These calls show that both fam and fam2 are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step, and have you experiment with list creation first! Go get it!
 
 --- video_exercise_key:9e15e5b8a0
 
@@ -44,13 +44,13 @@ You can also choose to just leave out the index before or after the colon. If yo
 
 If you leave out the index where the slice should end, you include all elements up to and including the last element in the list, like here.
 
-Now it's time to head over to the exercises, where you will continue to work on the list you've already created yourself. You'll use different subsetting methods to get exactly the piece of information you need!
+Now it's time to head over to the exercises, where you will continue to work on the list you've already created yourself. You'll use different subsetting methods to get exactly the piece of information you need! Time to jump back into learning by doing.
 
 --- video_exercise_key:fbdaaec22a
 
 ## Manipulating lists
 
-After creation and subsetting, the final piece of the Python lists puzzle is manipulation: these are ways to change elements in your list, or to add elements to and remove elements from your list.
+Whoa, you're doing super well. So now, after creation and subsetting, the final piece of the Python lists puzzle is manipulation: these are ways to change elements in your list, or to add elements to and remove elements from your list.
 
 Changing list elements is pretty straightforward. You use the same square brackets that we've used to subset lists, and then assign new elements to it using the equals sign. Suppose that after another look at `fam`, you realize that your dad's height is not up to date anymore, as he's shrinking with age. Instead of 1.89 meters, it should be 1.86 meters. To change this list element, which is at index 7, you can use this line of code.
 

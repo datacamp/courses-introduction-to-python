@@ -2,7 +2,7 @@
 
 ## Functions, what are they?
 
-In this video, I'm going to introduce you to functions. Functions aren't entirely new for you actually: you've already used them. type(), for example, is a function that returns the type of a value. But what is a function? Simply put, a function is a piece of reusable code, aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
+In this video, I'm going to introduce you to functions. Once you learn about them, you won't be able to stop using them. I sure can't! Functions aren't entirely new for you actually: you've already used them. type(), for example, is a function that returns the type of a value. But what is a function? Simply put, a function is a piece of reusable code, aimed at solving a particular task. You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
 
 Suppose you have the list containing only the heights of your family, fam:
 
@@ -66,13 +66,13 @@ This is pretty cool, because you can write very concise code to update your data
 Let's take a step back here and summarise this. you have Python functions, like type(), max() and round(), that you can call like this.
 There's also methods, which are functions that are specific to Python objects. Depending on the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods on the objects with the dot notation, like this, for example.
 
-There's much more to tell about Python objects, methods and how Python works internally, but for now, let's stick to what I've talked about here. It's time to get some exercises and add methods to your evergrowing skillset!
+There's much more to tell about Python objects, methods and how Python works internally, but for now, let's stick to what I've talked about here. It's time to get some exercises and add methods to your evergrowing skillset! Let's get you coding again!
 
 --- video_exercise_key:2b89c5a9d8
 
 ## Packages
 
-By now, I hope you're convinced that python functions and methods are extremely powerful: you can basically use other people's code to solve your own problems. However, adding all functions and methods that have been written up to now to the same Python distribution would be a mess. There would be tons and tons of code in there, that you'll never use. Also, maintaining all of this code would be a real pain.
+By now, I hope you're convinced that python functions and methods are extremely powerful: you can basically use other people's code to solve your own problems. That's amazing! However, adding all functions and methods that have been written up to now to the same Python distribution would be a mess. There would be tons and tons of code in there, that you'll never use. Also, maintaining all of this code would be a real pain.
 
 This is where packages come into play. You can think of packages as a directory of Python scripts. Each such script is a so-called module. These modules specify functions, methods and new Python types aimed at solving particular problems. There are thousands of Python packages available from the internet. Among them are packages for data science: there's numpy to efficiently work with arrays, matplotlib for data visualization, and scikit-learn for machine learning.
 
@@ -100,4 +100,4 @@ This time, you can simply call the array function like this, no need to use nump
 
 This from import version to use specific parts of a package can be useful to limit the amount of coding, but you're also losing some of the context. Suppose you're working in a long Python script. You import the array function from numpy at the very top, and way later, you actually use this array function. Somebody else who's reading your code might have forgotten that this array function is a specific Numpy function; it's not clear from the function call. In that respect, the more standard import numpy as np call is preferred: In this case, your function call is np.array(), making it very clear that you're working with Numpy. At the end of the day, it's a matter of personal preference; up to you to decide what you think is most convenient!
 
-Off to the exercises now, where you can practice on different ways of importing packages and modules yourself!
+Off to the exercises now, where you can practice different ways of importing packages and modules yourself! You're well on your way to  becoming a Pythonista data science ninja.

@@ -2,7 +2,7 @@
 
 ## Intro to Numpy
 
-By now, you are aware that the Python list is pretty powerful. A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. When analyzing data, you'll often want to carry out operations over entire collections of values, and you want to do this fast. With lists, this is a problem.
+Wow you've done well and, by now, you're aware that the Python list is pretty powerful. A list can hold any type and can hold different types at the same time. You can also change, add and remove elements. This is wonderful, but one feature is missing, a feature that is super important for aspiring data scientists as yourself. When analyzing data, you'll often want to carry out operations over entire collections of values, and you want to do this fast. With lists, this is a problem.
 
 Let's retake the heights of your family and yourself. Suppose you've also asked for everybody's weight. It's not very polite, but everything for science, right? You end up with two lists, height, and weight. The first person is 1.73 meters tall and weighs 65.4 kilograms.
 
@@ -44,7 +44,7 @@ Using the result of a comparison to make a selection of your data is a very comm
 
 ## 2D Numpy arrays
 
-Let's recreate the numpy arrays from the previous video.
+Well done, you legend. Let's now recreate the numpy arrays from the previous video.
 
 If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
 
@@ -92,4 +92,4 @@ Numpy also features more basic functions, such as sum() and sort(), which also e
 
 Just a sidenote here: If you're wondering how we came up with the data in this video: we simulated it with Numpy functions! We sampled two random distributions 5000 times to create the height and weight arrays, and then used column_stack to paste them together as two columns. Another awesome thing that Numpy can do! and that you'll learn to do in the next course ;)
 
-Another great tool to get some sense of your data is to visualize it, but that's something for the next course also. First, head over to the exercises to learn how to explore your Numpy arrays!
+Another great tool to get some sense of your data is to visualize it, but that's something for the next course also. First, head over to the exercises to learn how to explore your Numpy arrays and so many congrats on making it this far! You've come such a long way.
