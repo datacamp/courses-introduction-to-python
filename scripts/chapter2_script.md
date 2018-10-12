@@ -22,7 +22,7 @@ We're dealing with a new Python type here, next to the strings, booleans, intege
 
 ## Subsetting lists
 
-After you've created your very own Python list, you'll need to know how to  information in the list. Python uses something called an index to do this. Have a look at the fam list again here. The first element in the list has index 0, the second element has index 1, and so on. Suppose that you want to select the height of emma, the float 1.68. It's the fourth element, so it has index 3. To select it, you use 3 inside square brackets.
+After you've created your very own Python list, you'll need to know how to access information in the list. Python uses something called an index to do this. Have a look at the fam list again here. The first element in the list has index 0, the second element has index 1, and so on. Suppose that you want to select the height of emma, the float 1.68. It's the fourth element, so it has index 3. To select it, you use 3 inside square brackets.
 
 Similarly, to select the string "dad" from the list, which is the seventh element in the list, you'll need to put the index 6 inside square brackets.  The fact that the index starts at zero is called zero-indexing.
 
