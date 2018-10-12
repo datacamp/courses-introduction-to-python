@@ -44,7 +44,7 @@ You can also choose to just leave out the index before or after the colon. If yo
 
 If you leave out the index where the slice should end, you include all elements up to and including the last element in the list, like here.
 
-Now it's time to head over to the exercises, where you will continue to work on the list you've alraedy created yourself. You'll use different subsetting methods to get exactly the piece of information you need!
+Now it's time to head over to the exercises, where you will continue to work on the list you've already created yourself. You'll use different subsetting methods to get exactly the piece of information you need!
 
 --- video_exercise_key:fbdaaec22a
 
