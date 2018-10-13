@@ -18,7 +18,7 @@ Another one of these built-in functions is round(). It takes two inputs: first, 
 
 But wait: there's more. It's perfectly possible to call the round() function with only one input, like this. This time, Python figured out that you didn't specify the second input, and automatically chooses to round the number to the closest integer.
 
-To understand why both approaches work, let's open up the documentation. You can do this with yet another function, `help`, as follows.
+To understand why both approaches work, let's open up the documentation. You can do this with yet another function, `help`, like this.
 
 It appears that round() takes two inputs. In Python, these inputs, also called arguments, have names: number and ndigits. When you call the function round(), with these two inputs, Python matches the inputs to the arguments: number is set to 1.68 and ndigits is set to 1. Next, The round() function does its calculations with number and ndigits as if they are variables in a Python script. We don't know exactly what code Python executes. What is important, though, is that the function produces an output, namely the number 1.68 rounded to 1 decimal place.
 
@@ -32,9 +32,11 @@ By now, you have an idea about how to use max() and round(), but how could you k
 
 ## Methods
 
-Built-in functions are only one part of the Python story. You already know about functions such as max(), to get the maximum of a list, len(), to get the length of a list or a string, and so on. But what about other basic things, such getting the index of a specific element in the list, or reversing a list? You can look very hard for built-in functions that do this, but you won't find them.
+Built-in functions are only one part of the Python story. You already know about functions such as max(), to get the maximum of a list, len(), to get the length of a list or a string, and so on. But what about other basic things, such getting the index of a specific element in the list, or reversing a list? You can look for built-in functions that do this, but you won't find them.
 
-In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python objects. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already know: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list. But next to that, Python objects also come with a bunch of so-called "methods". You can think of methods as functions that "belong to" Python objects. A Python object of type string has methods, such as capitalize and replace, but also objects of type float and list have specific methods depending on the type.
+In the past exercises, you've already created a bunch of variables. Among other Python types, you've created strings, floats and lists, like the ones you see here. Each one of these values or data structures are so-called Python objects. This string is an object, this float is an object, but this list is also an object. These objects have a specific type, that you already know: string, float, and list, and of course they represent the values you gave them, such as "liz", 1.73 and an entire list.
+
+But in addition to this, Python objects also come with a bunch of so-called "methods". You can think of methods as functions that "belong to" Python objects. A Python object of type string has methods, such as capitalize and replace, but also objects of type float and list have specific methods depending on the type.
 
 Enough for the theory now; let's try to use a method! Suppose you want to get the index of the string "mum" in the fam list. fam is an Python object with the type list, and has a method named index(). To call the method, you use the dot notation, like this. The only input is the string "mum", the element you want to get the index for.
 
@@ -43,7 +45,7 @@ Python returns 4, which indeed is the index of the string "mum". I called the in
 Python gives me 1, which makes sense, because only liz is 1.73 meters tall.
 
 
-But lists are not the only Python objects that have methods associated. Also floats, integers, booleans and strings are Python objects that have specific methods associated with them. Take the variable `sister` for example, that represents a string.
+But lists are not the only Python objects that have associated methods. Also floats, integers, booleans and strings are Python objects that have specific methods associated with them. Take the variable `sister`, for example, that represents a string.
 
 You can call the method capitalize() on sister, without any inputs. It returns a string where the first letter is capitalized now.
 
@@ -51,20 +53,23 @@ Or what if you want to replace some parts of the string with other parts? Not a 
 
 In the output, "z" is replaced with "sa".
 
-TO be absolutely clear: in Python, everything is an object, and each object has specific methods associated. Depending on the type of the object, list, string, float, whatever, the available methods are different. A string object like sister has a replace method, but a list like fam doesn't have this, as you can see from this error. Objects of different types can have methods with the same name: Take the index() method. It's available for both strings and lists. If you call it on a string, you get the index of the letters in the string; If you call it on a list, you get the index of the element in the list. This means that, depending on the type of the object, the methods behave differently.
+To be absolutely clear: in Python, everything is an object, and each object has specific methods associated. Depending on the type of the object, list, string, float, whatever, the available methods are different. A string object like sister has a replace method, but a list like fam doesn't have this, as you can see from this error. 
+
+Objects of different types can have methods with the same name: Take the index() method. It's available for both strings and lists. If you call it on a string, you get the index of the letters in the string; If you call it on a list, you get the index of the element in the list. This means that, depending on the type of the object, the methods behave differently.
 
 Before I unleash you on some exercises on methods, there's one more thing I want to tell you. Some methods can change the objects they are called on. Let's retake the fam list, and call the append() method on it. As the input, we pass a string we want to add to the list.
 
 Python doesn't generate an output, but if we check the `fam` list again, we see that it has been extended with the string "me".
 
-Let's do this again, this time to add my length to the list.
+Let's do this again, this time to add my height to the list.
 
 Again, the fam list was extended.
 
 This is pretty cool, because you can write very concise code to update your data structures on the fly, but it can also be pretty dangerous. Some method calls don't change the object they're called on, while others do, so watch out.
 
 Let's take a step back here and summarise this. you have Python functions, like type(), max() and round(), that you can call like this.
-There's also methods, which are functions that are specific to Python objects. Depending on the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods on the objects with the dot notation, like this, for example.
+
+There are also methods, which are functions that are specific to Python objects. Depending on the type of the Python object you're dealing with, you'll be able to use different methods and they behave differently. You can call methods on the objects with the dot notation, like this, for example.
 
 There's much more to tell about Python objects, methods and how Python works internally, but for now, let's stick to what I've talked about here. It's time to get some exercises and add methods to your evergrowing skillset! Let's get you coding again!
 
@@ -74,11 +79,11 @@ There's much more to tell about Python objects, methods and how Python works int
 
 By now, I hope you're convinced that python functions and methods are extremely powerful: you can basically use other people's code to solve your own problems. That's amazing! However, adding all functions and methods that have been written up to now to the same Python distribution would be a mess. There would be tons and tons of code in there, that you'll never use. Also, maintaining all of this code would be a real pain.
 
-This is where packages come into play. You can think of packages as a directory of Python scripts. Each such script is a so-called module. These modules specify functions, methods and new Python types aimed at solving particular problems. There are thousands of Python packages available from the internet. Among them are packages for data science: there's numpy to efficiently work with arrays, matplotlib for data visualization, and scikit-learn for machine learning.
+This is where packages come into play. You can think of packages as a directory of Python scripts. Each script is a so-called module. These modules specify functions, methods and new Python types aimed at solving particular problems. There are thousands of Python packages available from the internet. Among them are packages for data science: there's numpy to efficiently work with arrays, matplotlib for data visualization, and scikit-learn for machine learning.
 
 Not all these packages are available in Python by default. To use Python packages, you'll first have to install them on your own system, and then put code in your script to tell Python that you want to use these packages.
 
-Datacamp already has all necessary packages installed for you, but if you want to install them on your own system, you'll want to use pip, a package maintenance system for Python. If you go to this URL, you can download the file get-pip.py. Next, you go to the terminal, and execute python3 get-pip.py. Now you can use pip to actually install a Python package of your choosing. Suppose we want to install the numpy package, which you'll learn about in the next chapter. You type pip3 install numpy. You have to use the commands python3 and pip3 here to tell our system that we're working with Python version 3. [HBA] We should really get people using anaconda TBD [/HBA]
+Datacamp already has all necessary packages installed for you, but if you want to install them on your own system, you can use pip, for example, a package maintenance system for Python. If you go to this URL, you can download the file get-pip.py. Next, you go to the terminal, and execute python3 get-pip.py. Now you can use pip to actually install a Python package of your choosing. Suppose we want to install the numpy package, which you'll learn about in the next chapter. You type pip3 install numpy. You have to use the commands python3 and pip3 here to tell our system that we're working with Python version 3.
 
 Now that the package is installed, you can actually start using it in one of your Python scripts. Before you can do this, you should import the package, or a specific module of the package. You can do this with the import statement.
 
@@ -94,10 +99,10 @@ Using this numpy dot prefix all the time can become pretty tiring, so you can al
 
 Now, instead of numpy.array(), you'll have to use np.array() to use Numpy's array function.
 
-There are cases in which you only need one specific function of a package. Python allows you to make this explicit in your code. Suppose that we only want to use the array() function from the Numpy package. Instead of doing import numpy, you can instead do from numpy import array, like this.
+There are cases in which you only need one specific function of a package. Python allows you to make this explicit in your code. Suppose that we only want to use the array() function from the Numpy package. Instead of writing import numpy, you can instead write from numpy import array, like this.
 
 This time, you can simply call the array function like this, no need to use numpy dot here.
 
-This from import version to use specific parts of a package can be useful to limit the amount of coding, but you're also losing some of the context. Suppose you're working in a long Python script. You import the array function from numpy at the very top, and way later, you actually use this array function. Somebody else who's reading your code might have forgotten that this array function is a specific Numpy function; it's not clear from the function call. In that respect, the more standard import numpy as np call is preferred: In this case, your function call is np.array(), making it very clear that you're working with Numpy. At the end of the day, it's a matter of personal preference; up to you to decide what you think is most convenient!
+This from "import version" to use specific parts of a package can be useful, but you're also losing some of the context. Suppose you're working in a long Python script. You import the array function from numpy at the very top, and way later, you actually use this array function. Somebody else who's reading your code might have forgotten that this array function is a specific Numpy function; it's not clear from the function call. In that respect, the more standard import numpy as np call is preferred: In this case, your function call is np.array(), making it very clear that you're working with Numpy. 
 
 Off to the exercises now, where you can practice different ways of importing packages and modules yourself! You're well on your way to  becoming a Pythonista data science ninja.
