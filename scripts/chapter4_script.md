@@ -22,7 +22,7 @@ Let's try to calculate everybody's BMI with a single call again.
 
 This time, it worked fine: the calculations were performed element-wise. The first person's BMI was calculated by dividing the first element in np_weight by the square of the first element in np_height, the second person's BMI was calculated with the second height and weight elements, and so on.
 
-Let's do a quick comparison here. First, we tried to do calculations with regular lists, like this, but this gave us an error, because Python doesn't now how to do calculations with lists like we want them to. Next, these regular lists where converted to Numpy arrays. The same operations now work without any problem: Numpy knows how to work with arrays as if they are single values, which is pretty awesome if you ask me.
+Let's do a quick comparison here. First, we tried to do calculations with regular lists, like this, but this gave us an error, because Python doesn't know how to do calculations with lists like we want them to. Next, these regular lists were converted to Numpy arrays. The same operations now work without any problem: Numpy knows how to work with arrays as if they are single values, which is pretty awesome if you ask me.
 
 You should still pay attention, though. First of all, Numpy can do all of this so easily because it assumes that your Numpy array can only contain values of a single type. It's either an array of floats, either an array of booleans, and so on. If you do try to create an array with different types, like this for example, the resulting Numpy array will contain a single type, string in this case. The boolean and the float were both converted to strings.
 
@@ -50,7 +50,7 @@ If you ask for the type of these arrays, Python tells you that they are numpy.nd
 
 You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like. Note that the syntax for accessing an attribute looks a bit like calling a method but they are NOT the same. Remember that methods have round brackets after them and you can see here that attributes do not.
+If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like. Note that the syntax for accessing an attribute looks a bit like calling a method but they are NOT the same. Remember that methods have round brackets after them and you can see here that attributes do not.
 
 Also for 2D arrays, the Numpy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogenous array.
 
@@ -72,17 +72,17 @@ Finally, 2D numpy arrays enable you to do element-wise calculations, the same wa
 
 ## Basic Statistics with Numpy
 
-A typical first step in analyzing your data, is getting to know your data in the first place. For the Numpy arrays from before, this is pretty easy, because it isn't a lot of data. However, as a data scientist, you'll be crunching thousands, if not millions or billions of numbers.
+A typical first step in analyzing your data, is getting to know your data in the first place. For the Numpy arrays from before, this is pretty easy, because there isn't a lot of data. However, as a data scientist, you'll be crunching thousands, if not millions or billions of numbers.
 
 Imagine you conduct a city-wide survey where you ask 5000 adults about their height and weight. You end up with something like this: a 2D numpy array, which I named np_city, that has 5000 rows, corresponding to the 5000 people, and two columns, corresponding to the height and the weight.
 
-Simply staring at these numbers like a zombie won't give you any insights. And zombies can't even interpret numbers coreectly, any way. What you can do, though, is generate summary statistics about your data. Aside from an efficient data structure for number crunching, it happens that Numpy is also good at doing these kinds of things.
+Simply staring at these numbers like a zombie won't give you any insights. And zombies can't even interpret numbers correctly, any way. What you can do, though, is generate summary statistics about your data. Aside from an efficient data structure for number crunching, it happens that Numpy is also good at doing these kinds of things.
 
-For starters, you can try to find out the average height of these 5000 people, with Numpy's mean function. Because it's a function from the Numpy package, don't forget to start with np..
+For starters, you can try to find out the average height of these 5000 people, with Numpy's mean function. Because it's a function from the Numpy package, don't forget to start with np dot.
 
-Of course, I first had to do a subsetting operation to get the height column from the 2D array. It appears that on average, people are 1.75 meters tall. What about the median height? This is the height of the middle person if you sort all persons from small to tall. Instead of writing complicated python code to figure this out, you can simply use Numpy's median() function:
+Of course, I first had to do a subsetting operation to get the height column from the 2D array. It appears that on average, people are 1.75 meters tall. What about the median height? This is the height of the middle person if you sort all people from small to tall. Instead of writing complicated python code to figure this out, you can simply use Numpy's median() function:
 
-You can do similar things for the weight column in np_city. Often, these summary statistics will provide you with a "sanity check" of your data. If you end up with a average weight of 2000 kilograms, your measurements are probably incorrect.
+You can do similar things for the weight column in np_city. Often, these summary statistics will provide you with a "sanity check" of your data. If you end up with an average weight of 2000 kilograms, your measurements are probably incorrect.
 
 Apart from mean() and median(), there's also other functions, like corrcoeff() to check if for example height and weight are correlated,
 
