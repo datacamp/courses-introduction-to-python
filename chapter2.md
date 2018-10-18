@@ -1,39 +1,36 @@
 ---
-title_meta  : Chapter 2
-title       : Python Lists
-description : "Learn to store, access and manipulate data in lists: the first step towards efficiently working with huge amounts of data."
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf
-
+title_meta: 'Chapter 2'
+title: 'Python Lists'
+description: 'Learn to store, access and manipulate data in lists: the first step towards efficiently working with huge amounts of data.'
+attachments:
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf'
 ---
+
 ## Lists, what are they?
 
 ```yaml
 type: VideoExercise
+key: f366e876d8
 lang: python
 xp: 50
 skills: 2
-key: f366e876d8
+video_link: //player.vimeo.com/video/154563059
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch2_1.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/154563059
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch2_1.master.m3u8
-
-*** =projector_key
+`@projector_key`
 84258dc00ac8e6f277086d60255e8244
 
 ---
+
 ## Create a list
 
 ```yaml
 type: NormalExercise
+key: e6c527bf41
 lang: python
 xp: 100
 skills: 2
-key: e6c527bf41
 ```
 
 As opposed to `int`, `bool` etc., a list is a **compound data type**; you can group values together:
@@ -53,6 +50,11 @@ After measuring the height of your family, you decide to collect some informatio
 `@hint`
 - You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
 - Put `print(areas)` in your script to print out the list when submitting.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -110,14 +112,15 @@ success_msg("Nice! A list is way better here, isn't it?")
 ```
 
 ---
+
 ## Create list with different types
 
 ```yaml
 type: NormalExercise
+key: 1702a8bcdc
 lang: python
 xp: 100
 skills: 2
-key: 1702a8bcdc
 ```
 
 A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
@@ -132,6 +135,11 @@ The code on the right is the start of a solution. For some of the areas, the nam
 
 `@hint`
 The first three 4 elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -182,14 +190,15 @@ success_msg("Nice! This list contains both strings and floats, but that's not a 
 ```
 
 ---
+
 ## Select the valid list
 
 ```yaml
 type: MultipleChoiceExercise
+key: 416b80a405
 lang: python
 xp: 50
 skills: 2
-key: 416b80a405
 ```
 
 A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
@@ -204,8 +213,7 @@ A. `[1, 3, 4, 2]`
 B. `[[1, 2, 3], [4, 5, 7]]`
 C. `[1 + 2, "a" * 5, 3]`
 
-
-`@instructions`
+`@possible_answers`
 - A, B and C
 - B
 - B and C
@@ -213,6 +221,11 @@ C. `[1 + 2, "a" * 5, 3]`
 
 `@hint`
 Try out all the different lines in the Python shell and see which ones generate an error. Maybe none of them go wrong?
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sct`
 ```{python}
@@ -224,14 +237,15 @@ Ex().has_chosen(1,[msg1,msg2,msg3,msg4])
 ```
 
 ---
+
 ## List of lists
 
 ```yaml
 type: NormalExercise
+key: 9158c577b0
 lang: python
 xp: 100
 skills: 2
-key: 9158c577b0
 ```
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
@@ -249,6 +263,11 @@ Don't get confused here: `"hallway"` is a string, while `hall` is a variable tha
 - Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
 - To print a variable `x`, write `print(x)` on a new line in the Python script.
 - To print out the type of a variable `x`, you can use `print(type(x))`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -317,34 +336,32 @@ success_msg("Great! Get ready to learn about list subsetting!")
 ```
 
 ---
+
 ## Subsetting lists
 
 ```yaml
 type: VideoExercise
+key: 9e15e5b8a0
 lang: python
 xp: 50
 skills: 2
-key: 9e15e5b8a0
+video_link: //player.vimeo.com/video/146994264
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/146994264
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
-
-*** =projector_key
+`@projector_key`
 47e0948980f8c77be2071a892b32ec8b
 
 ---
+
 ## Subset and conquer
 
 ```yaml
 type: NormalExercise
+key: c3ce582e32
 lang: python
 xp: 100
 skills: 2
-key: c3ce582e32
 ```
 
 Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
@@ -366,6 +383,11 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 - Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -408,14 +430,15 @@ success_msg("Good job!")
 ```
 
 ---
+
 ## Subset and calculate
 
 ```yaml
 type: NormalExercise
+key: 58c969f11f
 lang: python
 xp: 100
 skills: 2
-key: 58c969f11f
 ```
 
 After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted. The strings that result are pasted together using the `+` operator:
@@ -432,6 +455,11 @@ print(x[1] + x[3])
 `@hint`
 - Add `areas[3]` to `areas[-3]` to calculate `eat_sleep_area`.
 - Print out `eat_sleep_area`: `print(eat_sleep_area)`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -467,14 +495,15 @@ success_msg("Bellissimo!")
 ```
 
 ---
+
 ## Slicing and dicing
 
 ```yaml
 type: NormalExercise
+key: 7f08642d18
 lang: python
 xp: 100
 skills: 2
-key: 7f08642d18
 ```
 
 Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
@@ -503,6 +532,11 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 - Use the brackets `[0:6]` to build `downstairs`.
 - Use the brackets `[6:10]` to build `upstairs`.
 - Simply add two [`print()`](https://docs.python.org/3/library/functions.html#print) calls to the script to print out `downstairs` and `upstairs`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -550,14 +584,15 @@ success_msg("Great!")
 ```
 
 ---
+
 ## Slicing and dicing (2)
 
 ```yaml
 type: NormalExercise
+key: dfc9a168a3
 lang: python
 xp: 100
 skills: 2
-key: dfc9a168a3
 ```
 
 In the video, Filip first discussed the syntax where you specify both where to begin and end the slice of your list:
@@ -580,6 +615,11 @@ Use slicing to create the lists `downstairs` and `upstairs` again, but this time
 
 `@hint`
 To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -618,14 +658,15 @@ success_msg("Wonderful!")
 ```
 
 ---
+
 ## Subsetting lists of lists
 
 ```yaml
 type: MultipleChoiceExercise
+key: dbbbd306cf
 lang: python
 xp: 50
 skills: 2
-key: dbbbd306cf
 ```
 
 You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
@@ -642,7 +683,7 @@ x[2][:2]
 
 What will `house[-1][1]` return? `house`, the list of lists that you created before, is already defined for you in the workspace. You can experiment with it in the IPython Shell.
 
-`@instructions`
+`@possible_answers`
 - A float: the kitchen area
 - A string: `"kitchen"`
 - A float: the bathroom area
@@ -669,34 +710,32 @@ Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## List Manipulation
 
 ```yaml
 type: VideoExercise
+key: fbdaaec22a
 lang: python
 xp: 50
 skills: 2
-key: fbdaaec22a
+video_link: //player.vimeo.com/video/149289041
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/149289041
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
-
-*** =projector_key
+`@projector_key`
 823af3a8a05cb88df3f2b0dca71cec7f
 
 ---
+
 ## Replace list elements
 
 ```yaml
 type: NormalExercise
+key: 4e1bba1b55
 lang: python
 xp: 100
 skills: 2
-key: 4e1bba1b55
 ```
 
 Replacing list elements is pretty easy. Simply subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
@@ -718,6 +757,11 @@ For this and the following exercises, you'll continue working on the `areas` lis
 `@hint`
 - Use `areas[-1] = ___` to update the bathroom area. Can you fill in the blanks?
 - Similarly, you can use `areas[4] = ___` to update the element `"living room"`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -760,14 +804,15 @@ success_msg('Sweet! As the code sample showed, you can also slice a list and rep
 ```
 
 ---
+
 ## Extend a list
 
 ```yaml
 type: NormalExercise
+key: ff0fe8d967
 lang: python
 xp: 100
 skills: 2
-key: ff0fe8d967
 ```
 
 If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
@@ -786,6 +831,11 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 `@hint`
 - Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
 - To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -823,14 +873,15 @@ success_msg("Cool! The list is shaping up nicely!")
 ```
 
 ---
+
 ## Delete list elements
 
 ```yaml
 type: MultipleChoiceExercise
+key: 85f792356e
 lang: python
 xp: 50
 skills: 2
-key: 85f792356e
 ```
 
 Finally, you can also remove elements from your list. You can do this with the `del` statement:
@@ -866,8 +917,7 @@ command2
 
 Which of the code chunks will do the job for us?
 
-`@instructions`
-
+`@possible_answers`
 - `del(areas[10]); del(areas[11])`
 - `del(areas[10:11])`
 - `del(areas[-4:-2])`
@@ -894,14 +944,15 @@ Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Inner workings of lists
 
 ```yaml
 type: NormalExercise
+key: af72db9915
 lang: python
 xp: 100
 skills: 2
-key: af72db9915
 ```
 
 At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
@@ -915,6 +966,11 @@ Change the second command, that creates the variable `areas_copy`, such that `ar
 
 `@hint`
 Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -962,4 +1018,3 @@ Ex().check_correct(
 
 success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
 ```
-
