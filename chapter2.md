@@ -375,9 +375,9 @@ x[-3] # same result!
 Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
 
 `@instructions`
-- Print out the second element from the `areas` list, so `11.25`.
+- Print out the second element from the `areas` list (it has the value `11.25`).
 - Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room and print it out.
+- Select the number representing the area of the living room (`20.0`) and print it out.
 
 `@hint`
 - Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
