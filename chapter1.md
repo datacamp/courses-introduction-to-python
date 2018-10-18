@@ -324,19 +324,19 @@ skills: 2
 Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
 
 ```
-100 * 1.10 ** 7
+100 * 1.1 ** 7
 ```
 
-Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.10` and then redo the calculations!
+Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.1` and then redo the calculations!
 
 `@instructions`
-- Create a variable `factor`, equal to `1.10`.
+- Create a variable `factor`, equal to `1.1`.
 - Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
 - Print out the value of `result`.
 
 `@hint`
-- To create the variable `factor`, use `factor = 1.10`.
-- In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
+- To create the variable `factor`, use `factor = 1.1`.
+- In the example code block of the assignment, replace `100` with `savings` and `1.1` with `factor`: `savings * factor ** 7`.
 - Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
 
 `@pre_exercise_code`
@@ -356,6 +356,7 @@ savings = 100
 
 
 # Print out result
+
 ```
 
 `@solution`
@@ -375,14 +376,10 @@ print(result)
 
 `@sct`
 ```{python}
-Ex().check_correct(
-  check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
-  multi(
-    check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-    check_object("factor").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
-  )
-)
-Ex().has_printout(0, not_printed_msg="Don't forget to print out `result` at the end of your script.")
+Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
+Ex().check_object("factor").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
+Ex().check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?")
+Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
 success_msg("Great!")
 ```
 
