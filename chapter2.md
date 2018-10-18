@@ -611,10 +611,12 @@ x[:]
 ```
 
 `@instructions`
-Use slicing to create the lists `downstairs` and `upstairs` again, but this time without using indexes if it's not necessary. Remember `downstairs` is the first 6 elements of `areas` and `upstairs` is the last 4 elements of `areas`.
+- Create `downstairs` again, as the first `6` elements of `areas`. This time, simplify the slicing by omitting the `begin` index.
+- Create `upstairs` again, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
 
 `@hint`
-To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
+- To get the first 5 elements of a list, `l`, you would use `l[:5]`.
+- To get everything except the first 5 elements, you would use `l[5:]`.
 
 `@pre_exercise_code`
 ```{python}
