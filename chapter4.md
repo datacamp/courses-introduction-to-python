@@ -1050,7 +1050,7 @@ print(np.median(np_height_in))
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().check_object("np_height").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
+Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
 
 Ex().check_correct(
     has_printout(0),
