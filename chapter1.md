@@ -330,13 +330,13 @@ Remember how you calculated the money you ended up with after 7 years of investi
 Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.1` and then redo the calculations!
 
 `@instructions`
-- Create a variable `factor`, equal to `1.1`.
-- Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
+- Create a variable `growth_multiplier`, equal to `1.1`.
+- Create a variable, `result`, equal to the amount of money you saved after `7` years. 
 - Print out the value of `result`.
 
 `@hint`
-- To create the variable `factor`, use `factor = 1.1`.
-- In the example code block of the assignment, replace `100` with `savings` and `1.1` with `factor`: `savings * factor ** 7`.
+- To create the variable `growth_multiplier`, use `growth_multiplier = 1.1`.
+- In the example code block of the assignment, replace `100` with `savings` and `1.1` with `growth_multiplier`: `savings * growth_multiplier ** 7`.
 - Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
 
 `@pre_exercise_code`
@@ -349,7 +349,7 @@ Instead of calculating with the actual values, you can use variables instead. Th
 # Create a variable savings
 savings = 100
 
-# Create a variable factor
+# Create a variable growth_multiplier
 
 
 # Calculate result
@@ -364,11 +364,11 @@ savings = 100
 # Create a variable savings
 savings = 100
 
-# Create a variable factor
-factor = 1.1
+# Create a variable growth_multiplier
+growth_multiplier = 1.1
 
 # Calculate result
-result = savings * factor ** 7
+result = savings * growth_multiplier ** 7
 
 # Print out result
 print(result)
@@ -377,7 +377,7 @@ print(result)
 `@sct`
 ```{python}
 Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-Ex().check_object("factor").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
+Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="The value of `growth_multiplier` should be `1.1`.")
 Ex().check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?")
 Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
 success_msg("Great!")
@@ -398,7 +398,7 @@ skills: 2
 In the previous exercise, you worked with two Python data types:
 
 - `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `factor`, with the value `1.10`, is an example of a float.
+- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `growth_multiplier`, with the value `1.1`, is an example of a float.
 
 Next to numerical data types, there are two other very common data types:
 
@@ -507,13 +507,13 @@ When you sum two strings, for example, you'll get different behavior than when y
 In the script some variables with different types have already been created. It's up to you to use them.
 
 `@instructions`
-- Calculate the product of `savings` and `factor`. Store the result in `year1`.
+- Calculate the product of `savings` and `growth_multiplier`. Store the result in `year1`.
 - What do you think the resulting type will be? Find out by printing out the type of `year1`.
 - Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
 - Print out `doubledesc`. Did you expect this?
 
 `@hint`
-- Assign `factor * savings` to a new variable, `year1`.
+- Assign `growth_multiplier * savings` to a new variable, `year1`.
 - To print the type of a variable `x`, use `print(type(x))`.
 - Assign `desc + desc` to a new variable, `doubledesc`.
 - To print a variable `x`, write `print(x)` in the script.
@@ -526,10 +526,10 @@ In the script some variables with different types have already been created. It'
 `@sample_code`
 ```{python}
 savings = 100
-factor = 1.1
+growth_multiplier = 1.1
 desc = "compound interest"
 
-# Assign product of factor and savings to year1
+# Assign product of growth_multiplier and savings to year1
 
 
 # Print the type of year1
@@ -545,11 +545,11 @@ desc = "compound interest"
 `@solution`
 ```{python}
 savings = 100
-factor = 1.1
+growth_multiplier = 1.1
 desc = "compound interest"
 
-# Assign product of savings and factor to year1
-year1 = savings * factor
+# Assign product of savings and growth_multiplier to year1
+year1 = savings * growth_multiplier
 
 # Print the type of year1
 print(type(year1))
@@ -565,17 +565,17 @@ print(doubledesc)
 ```{python}
 # predefined
 msg = "You don't have to change or remove the predefined variables."
-objs = ["savings", "factor", "desc", "year1"]
+objs = ["savings", "growth_multiplier", "desc", "year1"]
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('factor', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('growth_multiplier', missing_msg=msg).has_equal_value(incorrect_msg=msg),
     check_object('desc', missing_msg=msg).has_equal_value(incorrect_msg=msg),
     check_object('year1', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
 # check year1 and printout
 Ex().multi(
-    check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `factor` to create the `year1` variable."),
+    check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `growth_multiplier` to create the `year1` variable."),
     has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year1`.")
 )
 
