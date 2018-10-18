@@ -110,27 +110,27 @@ xp: 100
 skills: 2
 ```
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
+You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height_in`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
 
 `height` is already available and the `numpy` package is loaded, so you can start straight away (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
 
 `@instructions`
-- Create a `numpy` array from `height`. Name this new array `np_height`.
-- Print `np_height`.
-- Multiply `np_height` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
+- Create a `numpy` array from `height_in`. Name this new array `np_height_in`.
+- Print `np_height_in`.
+- Multiply `np_height_in` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
 - Print out `np_height_m` and check if the output makes sense.
 
 `@hint`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) and pass it `height`. Store the result in `np_height`.
+- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) and pass it `height`. Store the result in `np_height_in`.
 - To print out a variable `x`, type `print(x)` in the Python script.
-- Perform calculations as if `np_height` is a single number: `np_height * factor` is part of the answer.
+- Perform calculations as if `np_height_in` is a single number: `np_height_in * conversion_factor` is part of the answer.
 - To print out a variable `x`, type `print(x)` in the Python script.
 
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
-height = mlb['Height'].tolist()
+height_in = mlb['Height'].tolist()
 import numpy as np
 ```
 
@@ -141,7 +141,7 @@ import numpy as np
 # Import numpy
 import numpy as np
 
-# Create a numpy array from height: np_height
+# Create a numpy array from height: np_height_in
 
 
 # Print out np_height
@@ -161,14 +161,14 @@ import numpy as np
 # Import numpy
 import numpy as np
 
-# Create a numpy array from height: np_height
-np_height = np.array(height)
+# Create a numpy array from height_in: np_height_in
+np_height_in = np.array(height_in)
 
-# Print out np_height
-print(np_height)
+# Print out np_height_in
+print(np_height_in)
 
 # Convert np_height to m: np_height_m
-np_height_m = np_height * 0.0254
+np_height_m = np_height_in * 0.0254
 
 # Print np_height_m
 print(np_height_m)
@@ -181,14 +181,14 @@ Ex().has_import("numpy", same_as = False)
 Ex().check_correct(
   has_printout(0),
   check_correct(
-    check_object('np_height').has_equal_value(),
+    check_object('np_height_in').has_equal_value(),
     check_function('numpy.array').check_args(0).has_equal_ast()
   )
 )
 
 Ex().check_correct(
   has_printout(1),
-  check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height * 0.0254` to calculate `np_height_m`.")
+  check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height_in * 0.0254` to calculate `np_height_m`.")
 )
 
 success_msg("Nice! In the blink of an eye, `numpy` performs multiplications on more than 1000 height measurements.")
@@ -206,12 +206,12 @@ xp: 100
 skills: 2
 ```
 
-The MLB also offers to let you analyze their weight data. Again, both are available as regular Python lists: `height` and `weight`. `height` is in inches and `weight` is in pounds.
+The MLB also offers to let you analyze their weight data. Again, both are available as regular Python lists: `height_in` and `weight`. `height_in` is in inches and `weight_lb` is in pounds.
 
 It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a `numpy` array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game!
 
 `@instructions`
-- Create a `numpy` array from the `weight` list with the correct units. Multiply by `0.453592` to go from pounds to kilograms. Store the resulting `numpy` array as `np_weight_kg`.
+- Create a `numpy` array from the `weight_lb` list with the correct units. Multiply by `0.453592` to go from pounds to kilograms. Store the resulting `numpy` array as `np_weight_kg`.
 - Use `np_height_m` and `np_weight_kg` to calculate the BMI of each player. Use the following equation: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Save the resulting `numpy` array as `bmi`.
 - Print out `bmi`.
 
@@ -224,8 +224,8 @@ It's now possible to calculate the BMI of each baseball player. Python code to c
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
-height = mlb['Height'].tolist()
-weight = mlb['Weight'].tolist()
+height_in = mlb['Height'].tolist()
+weight_lb = mlb['Weight'].tolist()
 import numpy as np
 ```
 
@@ -236,10 +236,10 @@ import numpy as np
 # Import numpy
 import numpy as np
 
-# Create array from height with correct units: np_height_m
-np_height_m = np.array(height) * 0.0254
+# Create array from height_in with metric units: np_height_m
+np_height_m = np.array(height_in) * 0.0254
 
-# Create array from weight with correct units: np_weight_kg
+# Create array from weight_lb with metric units: np_weight_kg
 
 
 # Calculate the BMI: bmi
@@ -256,11 +256,11 @@ np_height_m = np.array(height) * 0.0254
 # Import numpy
 import numpy as np
 
-# Create array from height with correct units: np_height_m
-np_height_m = np.array(height) * 0.0254
+# Create array from height_in with metric units: np_height_m
+np_height_m = np.array(height_in) * 0.0254
 
-# Create array from weight with correct units: np_weight_kg
-np_weight_kg = np.array(weight) * 0.453592
+# Create array from weight_lb with metric units: np_weight_kg
+np_weight_kg = np.array(weight_lb) * 0.453592
 
 # Calculate the BMI: bmi
 bmi = np_weight_kg / np_height_m ** 2
@@ -282,7 +282,7 @@ Ex().check_correct(
   check_object("np_weight_kg"),
   multi(
     check_function("numpy.array", index=1).check_args(0).has_equal_ast(),
-    has_code('0.453592', not_typed_msg="Make sure to multiply `np.array(weight)` with `0.453592` to get the weights in kg.")
+    has_code('0.453592', not_typed_msg="Make sure to multiply `np.array(weight_lb)` with `0.453592` to get the weights in kg.")
   )
 )
 
@@ -348,8 +348,8 @@ The code that calculates the BMI of all baseball players is already included. Fo
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
-height = mlb['Height'].tolist()
-weight = mlb['Weight'].tolist()
+height_in = mlb['Height'].tolist()
+weight_lb = mlb['Weight'].tolist()
 import numpy as np
 ```
 
@@ -361,8 +361,8 @@ import numpy as np
 import numpy as np
 
 # Calculate the BMI: bmi
-np_height_m = np.array(height) * 0.0254
-np_weight_kg = np.array(weight) * 0.453592
+np_height_m = np.array(height_in) * 0.0254
+np_weight_kg = np.array(weight_lb) * 0.453592
 bmi = np_weight_kg / np_height_m ** 2
 
 # Create the light array
@@ -383,8 +383,8 @@ bmi = np_weight_kg / np_height_m ** 2
 import numpy as np
 
 # Calculate the BMI: bmi
-np_height_m = np.array(height) * 0.0254
-np_weight_kg = np.array(weight) * 0.453592
+np_height_m = np.array(height_in) * 0.0254
+np_weight_kg = np.array(weight_lb) * 0.453592
 bmi = np_weight_kg / np_height_m ** 2
 
 # Create the light array
@@ -500,8 +500,8 @@ The script on the right already contains code that imports `numpy` as `np`, and 
 ```{python}
 import pandas as pd
 mlb = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")
-height = mlb['Height'].tolist()
-weight = mlb['Weight'].tolist()
+height_in = mlb['Height'].tolist()
+weight_lb = mlb['Weight'].tolist()
 ```
 
 `@sample_code`
@@ -512,8 +512,8 @@ weight = mlb['Weight'].tolist()
 import numpy as np
 
 # Store weight and height lists as numpy arrays
-np_weight = np.array(weight)
-np_height = np.array(height)
+np_weight_lb = np.array(weight_lb)
+np_height_in = np.array(height_in)
 
 # Print out the weight at index 50
 
@@ -530,14 +530,14 @@ np_height = np.array(height)
 import numpy as np
 
 # Store weight and height lists as numpy arrays
-np_weight = np.array(weight)
-np_height = np.array(height)
+np_weight_lb = np.array(weight_lb)
+np_height_in = np.array(height_in)
 
 # Print out the weight at index 50
-print(np_weight[50])
+print(np_weight_lb[50])
 
 # Print out sub-array of np_height: index 100 up to and including index 110
-print(np_height[100:111])
+print(np_height_in[100:111])
 ```
 
 `@sct`
@@ -545,8 +545,8 @@ print(np_height[100:111])
 Ex().has_import("numpy", same_as=False)
 msg = "You don't have to change or remove the predefined variables."
 Ex().multi(
-    check_object("np_height", missing_msg=msg).has_equal_value(incorrect_msg = msg),
-    check_object("np_weight", missing_msg=msg).has_equal_value(incorrect_msg = msg)
+    check_object("np_height_in", missing_msg=msg).has_equal_value(incorrect_msg = msg),
+    check_object("np_weight_lb", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 )
 
 Ex().has_printout(0)
@@ -772,7 +772,7 @@ The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is a
 
 `@instructions`
 - Print out the 50th row of `np_baseball`.
-- Make a new variable, `np_weight`, containing the entire second column of `np_baseball`.
+- Make a new variable, `np_weight_lb`, containing the entire second column of `np_baseball`.
 - Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
 
 `@hint`
@@ -821,7 +821,7 @@ np_baseball = np.array(baseball)
 print(np_baseball[49,:])
 
 # Select the entire second column of np_baseball: np_weight
-np_weight = np_baseball[:,1]
+np_weight_lb = np_baseball[:,1]
 
 # Print out height of 124th player
 print(np_baseball[123, 0])
@@ -837,7 +837,7 @@ Ex().multi(
 
 Ex().has_printout(0)
 
-Ex().check_object('np_weight').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight`. This will select the entire first column.")
+Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight_lb`. This will select the entire first column.")
 
 Ex().has_printout(1)
 
@@ -995,9 +995,9 @@ np.median(x)
 The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_.
 
 `@instructions`
-- Create `numpy` array `np_height` that is equal to first column of `np_baseball`.
-- Print out the mean of `np_height`.
-- Print out the median of `np_height`.
+- Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
+- Print out the mean of `np_height_in`.
+- Print out the median of `np_height_in`.
 
 `@hint`
 - Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
@@ -1019,13 +1019,13 @@ import numpy as np
 # Import numpy
 import numpy as np
 
-# Create np_height from np_baseball
+# Create np_height_in from np_baseball
 
 
-# Print out the mean of np_height
+# Print out the mean of np_height_in
 
 
-# Print out the median of np_height
+# Print out the median of np_height_in
 
 ```
 
@@ -1036,14 +1036,14 @@ import numpy as np
 # Import numpy
 import numpy as np
 
-# Create np_height from np_baseball
-np_height = np_baseball[:,0]
+# Create np_height_in from np_baseball
+np_height_in = np_baseball[:,0]
 
-# Print out the mean of np_height
-print(np.mean(np_height))
+# Print out the mean of np_height_in
+print(np.mean(np_height_in))
 
-# Print out the median of np_height
-print(np.median(np_height))
+# Print out the median of np_height_in
+print(np.median(np_height_in))
 ```
 
 `@sct`
