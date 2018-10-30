@@ -800,7 +800,7 @@ np_baseball = np.array(baseball)
 # Print out the 50th row of np_baseball
 
 
-# Select the entire second column of np_baseball: np_weight
+# Select the entire second column of np_baseball: np_weight_lb
 
 
 # Print out height of 124th player
@@ -820,7 +820,7 @@ np_baseball = np.array(baseball)
 # Print out the 50th row of np_baseball
 print(np_baseball[49,:])
 
-# Select the entire second column of np_baseball: np_weight
+# Select the entire second column of np_baseball: np_weight_lb
 np_weight_lb = np_baseball[:,1]
 
 # Print out height of 124th player
