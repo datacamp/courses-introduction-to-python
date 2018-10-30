@@ -489,8 +489,8 @@ np_x[1]
 The script on the right already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
 
 `@instructions`
-- Subset `np_weight` by printing out the element at index 50.
-- Print out a sub-array of `np_height` that contains the elements at index 100 up to **and including** index 110.
+- Subset `np_weight_lb` by printing out the element at index 50.
+- Print out a sub-array of `np_height_in` that contains the elements at index 100 up to **and including** index 110.
 
 `@hint`
 - Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around your subsetting operations.
