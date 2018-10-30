@@ -1,29 +1,24 @@
 ---
-title_meta  : Chapter 1
-title       : Python Basics
-description : An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python's basic data types.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf
-
-
+title_meta: 'Chapter 1'
+title: 'Python Basics'
+description: 'An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python''s basic data types.'
+attachments:
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf'
 ---
+
 ## Hello Python!
 
 ```yaml
 type: VideoExercise
+key: d5509896f7
 lang: python
 xp: 50
 skills: 2
-key: d5509896f7
+video_link: //player.vimeo.com/video/146994261
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/146994261
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
-
-*** =projector_key
+`@projector_key`
 5f61a677bf62c17b450465ee849823ee
 
 ---
@@ -32,10 +27,10 @@ key: d5509896f7
 
 ```yaml
 type: NormalExercise
+key: bdc52f0e19
 lang: python
 xp: 100
 skills: 2
-key: bdc52f0e19
 ```
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. _Submit Answer_ checks whether your submission is correct and gives you feedback.
@@ -51,6 +46,11 @@ You can also use the IPython Shell interactively by simply typing commands and h
 
 `@hint`
 Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -77,19 +77,20 @@ success_msg("Great! On to the next one!")
 ```
 
 ---
+
 ## When to use Python?
 
 ```yaml
 type: MultipleChoiceExercise
+key: 9703b117fb
 lang: python
 xp: 50
 skills: 2
-key: 9703b117fb
 ```
 
 Python is a pretty versatile language. For which applications can you use Python?
 
-`@instructions`
+`@possible_answers`
 - You want to do some quick calculations.
 - For your new business, you want to develop a database-driven website.
 - Your boss asks you to clean and analyze the results of the latest satisfaction survey.
@@ -97,6 +98,11 @@ Python is a pretty versatile language. For which applications can you use Python
 
 `@hint`
 Filip mentioned in the video that Python can be used to build practically any piece of software.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sct`
 ```{python}
@@ -108,14 +114,15 @@ Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Any comments?
 
 ```yaml
 type: NormalExercise
+key: 7c4a738a13
 lang: python
 xp: 100
 skills: 2
-key: 7c4a738a13
 ```
 
 Something that Filip didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
@@ -127,6 +134,11 @@ Above the `print(7 + 10)`, add the comment `# Addition`.
 
 `@hint`
 For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -153,14 +165,15 @@ success_msg("Great!")
 ```
 
 ---
+
 ## Python as a calculator
 
 ```yaml
 type: NormalExercise
+key: 0f7c039428
 lang: python
 xp: 100
 skills: 2
-key: 0f7c039428
 ```
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
@@ -175,6 +188,11 @@ Suppose you have $100, which you can invest with a 10% return each year. After o
 
 `@hint`
 After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -215,23 +233,20 @@ success_msg("Time for another video!")
 ```
 
 ---
+
 ## Variables & Types
 
 ```yaml
 type: VideoExercise
+key: ef8356fb92
 lang: python
 xp: 50
 skills: 2
-key: ef8356fb92
+video_link: //player.vimeo.com/video/154561704
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/154561704
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
-
-*** =projector_key
+`@projector_key`
 7df0925250c5fb2a647cd76fb09d446e
 
 ---
@@ -240,10 +255,10 @@ key: ef8356fb92
 
 ```yaml
 type: NormalExercise
+key: 4bf65ad83e
 lang: python
 xp: 100
 skills: 2
-key: 4bf65ad83e
 ```
 
 In Python, a variable allows you to refer to a value with a name. To create a variable use `=`, like this example:
@@ -263,6 +278,11 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 `@hint`
 - Type `savings = 100` to create the variable `savings`.
 - After creating the variable `savings`, you can type `print(savings)`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -290,46 +310,53 @@ success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
 
 ---
+
 ## Calculations with variables
 
 ```yaml
 type: NormalExercise
+key: ff06cedeb4
 lang: python
 xp: 100
 skills: 2
-key: ff06cedeb4
 ```
 
 Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
 
 ```
-100 * 1.10 ** 7
+100 * 1.1 ** 7
 ```
 
-Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.10` and then redo the calculations!
+Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.1` and then redo the calculations!
 
 `@instructions`
-- Create a variable `factor`, equal to `1.10`.
-- Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
+- Create a variable `growth_multiplier`, equal to `1.1`.
+- Create a variable, `result`, equal to the amount of money you saved after `7` years. 
 - Print out the value of `result`.
 
 `@hint`
-- To create the variable `factor`, use `factor = 1.10`.
-- In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
+- To create the variable `growth_multiplier`, use `growth_multiplier = 1.1`.
+- In the example code block of the assignment, replace `100` with `savings` and `1.1` with `growth_multiplier`: `savings * growth_multiplier ** 7`.
 - Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
 # Create a variable savings
 savings = 100
 
-# Create a variable factor
+# Create a variable growth_multiplier
 
 
 # Calculate result
 
 
 # Print out result
+
 ```
 
 `@solution`
@@ -337,11 +364,11 @@ savings = 100
 # Create a variable savings
 savings = 100
 
-# Create a variable factor
-factor = 1.1
+# Create a variable growth_multiplier
+growth_multiplier = 1.1
 
 # Calculate result
-result = savings * factor ** 7
+result = savings * growth_multiplier ** 7
 
 # Print out result
 print(result)
@@ -349,32 +376,29 @@ print(result)
 
 `@sct`
 ```{python}
-Ex().check_correct(
-  check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
-  multi(
-    check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-    check_object("factor").has_equal_value(incorrect_msg="The value of `factor` should be `1.1`.")
-  )
-)
-Ex().has_printout(0, not_printed_msg="Don't forget to print out `result` at the end of your script.")
+Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
+Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="The value of `growth_multiplier` should be `1.1`.")
+Ex().check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?")
+Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
 success_msg("Great!")
 ```
 
 ---
+
 ## Other variable types
 
 ```yaml
 type: NormalExercise
+key: 006b48561f
 lang: python
 xp: 100
 skills: 2
-key: 006b48561f
 ```
 
 In the previous exercise, you worked with two Python data types:
 
 - `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `factor`, with the value `1.10`, is an example of a float.
+- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `growth_multiplier`, with the value `1.1`, is an example of a float.
 
 Next to numerical data types, there are two other very common data types:
 
@@ -388,6 +412,11 @@ Next to numerical data types, there are two other very common data types:
 `@hint`
 - To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
 - Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -415,14 +444,15 @@ success_msg("Nice!")
 ```
 
 ---
+
 ## Guess the type
 
 ```yaml
 type: MultipleChoiceExercise
+key: b35f67514c
 lang: python
 xp: 50
 skills: 2
-key: b35f67514c
 ```
 
 To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
@@ -433,7 +463,7 @@ type(a)
 
 We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
 
-`@instructions`
+`@possible_answers`
 - `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
 - `a` is of type `float`, `b` is of type `bool`, `c` is of type `str`
 - `a` is of type `float`, `b` is of type `str`, `c` is of type `bool`
@@ -459,14 +489,15 @@ Ex().has_chosen(3,[msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Operations with other types
 
 ```yaml
 type: NormalExercise
+key: 4d0d83cc02
 lang: python
 xp: 100
 skills: 2
-key: 4d0d83cc02
 ```
 
 Filip mentioned that different types behave differently in Python.
@@ -476,24 +507,29 @@ When you sum two strings, for example, you'll get different behavior than when y
 In the script some variables with different types have already been created. It's up to you to use them.
 
 `@instructions`
-- Calculate the product of `savings` and `factor`. Store the result in `year1`.
+- Calculate the product of `savings` and `growth_multiplier`. Store the result in `year1`.
 - What do you think the resulting type will be? Find out by printing out the type of `year1`.
 - Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
 - Print out `doubledesc`. Did you expect this?
 
 `@hint`
-- Assign `factor * savings` to a new variable, `year1`.
+- Assign `growth_multiplier * savings` to a new variable, `year1`.
 - To print the type of a variable `x`, use `print(type(x))`.
 - Assign `desc + desc` to a new variable, `doubledesc`.
 - To print a variable `x`, write `print(x)` in the script.
 
+`@pre_exercise_code`
+```{python}
+
+```
+
 `@sample_code`
 ```{python}
 savings = 100
-factor = 1.1
+growth_multiplier = 1.1
 desc = "compound interest"
 
-# Assign product of factor and savings to year1
+# Assign product of growth_multiplier and savings to year1
 
 
 # Print the type of year1
@@ -509,11 +545,11 @@ desc = "compound interest"
 `@solution`
 ```{python}
 savings = 100
-factor = 1.1
+growth_multiplier = 1.1
 desc = "compound interest"
 
-# Assign product of savings and factor to year1
-year1 = savings * factor
+# Assign product of savings and growth_multiplier to year1
+year1 = savings * growth_multiplier
 
 # Print the type of year1
 print(type(year1))
@@ -529,17 +565,17 @@ print(doubledesc)
 ```{python}
 # predefined
 msg = "You don't have to change or remove the predefined variables."
-objs = ["savings", "factor", "desc", "year1"]
+objs = ["savings", "growth_multiplier", "desc", "year1"]
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('factor', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('growth_multiplier', missing_msg=msg).has_equal_value(incorrect_msg=msg),
     check_object('desc', missing_msg=msg).has_equal_value(incorrect_msg=msg),
     check_object('year1', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
 # check year1 and printout
 Ex().multi(
-    check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `factor` to create the `year1` variable."),
+    check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `growth_multiplier` to create the `year1` variable."),
     has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year1`.")
 )
 
@@ -553,14 +589,15 @@ success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `
 ```
 
 ---
+
 ## Type conversion
 
 ```yaml
 type: NormalExercise
+key: 085bb602b9
 lang: python
 xp: 100
 skills: 2
-key: 085bb602b9
 ```
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
@@ -585,6 +622,11 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 `@hint`
 - You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
 - Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -649,20 +691,21 @@ success_msg("Great! You have a profit of around $95; that's pretty awesome indee
 ```
 
 ---
+
 ## Can Python handle everything?
 
 ```yaml
 type: MultipleChoiceExercise
+key: 3e5f0bdf3a
 lang: python
 xp: 50
 skills: 2
-key: 3e5f0bdf3a
 ```
 
 Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
 Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
 
-`@instructions`
+`@possible_answers`
 - `"I can add integers, like "  + str(5) + " to strings."`
 - `"I said " + ("Hey " * 2) + "Hey!"`
 - `"The correct answer to this multiple choice exercise is answer number " + 2`
@@ -670,6 +713,11 @@ Which one of these will throw an error? You can always copy and paste this code 
 
 `@hint`
 Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sct`
 ```{python}
