@@ -279,7 +279,7 @@ Ex().check_object("np_height_m", missing_msg=msg).has_equal_value(incorrect_msg 
 
 # check np_weight_kg
 Ex().check_correct(
-  check_object("np_weight_kg"),
+  check_object("np_weight_kg").has_equal_value(),
   multi(
     check_function("numpy.array", index=1).check_args(0).has_equal_ast(),
     has_code('0.453592', not_typed_msg="Make sure to multiply `np.array(weight_lb)` with `0.453592` to get the weights in kg.")
