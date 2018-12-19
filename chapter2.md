@@ -796,10 +796,8 @@ chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the bathroom ar
 Ex().check_correct(
   check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
   multi(
-    has_equal_ast(code = 'areas[-1]', incorrect_msg = bathroom_msg),
-    has_equal_ast(code = '10.5', incorrect_msg = bathroom_msg),
-    has_equal_ast(code = 'areas[4]', incorrect_msg = chillzone_msg),
-    has_equal_ast(code = '"chill zone"', incorrect_msg = chillzone_msg)
+    has_equal_ast(code = 'areas[-1] = 10.5', incorrect_msg = bathroom_msg),
+    has_equal_ast(code = 'areas[4] = "chill zone"', incorrect_msg = chillzone_msg),
   )
 )
 success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
