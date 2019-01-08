@@ -41,11 +41,11 @@ You can also use the IPython Shell interactively by simply typing commands and h
 
 `@instructions`
 - Experiment in the IPython Shell; type `5 / 8`, for example.
-- Add another line of code to the Python script: `print(7 + 10)`.
+- Add another line of code to the Python script on the top-right (not in the Shell): `print(7 + 10)`.
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
 `@hint`
-Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
+Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and hit 'Submit Answer'.
 
 `@pre_exercise_code`
 ```{python}

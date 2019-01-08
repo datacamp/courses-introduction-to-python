@@ -141,13 +141,13 @@ import numpy as np
 # Import numpy
 import numpy as np
 
-# Create a numpy array from height: np_height_in
+# Create a numpy array from height_in: np_height_in
 
 
-# Print out np_height
+# Print out np_height_in
 
 
-# Convert np_height to m: np_height_m
+# Convert np_height_in to m: np_height_m
 
 
 # Print np_height_m
@@ -167,7 +167,7 @@ np_height_in = np.array(height_in)
 # Print out np_height_in
 print(np_height_in)
 
-# Convert np_height to m: np_height_m
+# Convert np_height_in to m: np_height_m
 np_height_m = np_height_in * 0.0254
 
 # Print np_height_m
@@ -518,7 +518,7 @@ np_height_in = np.array(height_in)
 # Print out the weight at index 50
 
 
-# Print out sub-array of np_height: index 100 up to and including index 110
+# Print out sub-array of np_height_in: index 100 up to and including index 110
 
 ```
 
@@ -536,7 +536,7 @@ np_height_in = np.array(height_in)
 # Print out the weight at index 50
 print(np_weight_lb[50])
 
-# Print out sub-array of np_height: index 100 up to and including index 110
+# Print out sub-array of np_height_in: index 100 up to and including index 110
 print(np_height_in[100:111])
 ```
 
