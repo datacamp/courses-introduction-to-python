@@ -1,40 +1,36 @@
 ---
-title_meta  : Chapter 3
-title       : Functions and Packages
-description : To leverage the code that brilliant Python developers have written, you'll learn about using functions, methods and packages. This will help you to reduce the amount of code you need to solve challenging problems!
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch3_slides.pdf
-
-
+title_meta: 'Chapter 3'
+title: 'Functions and Packages'
+description: 'To leverage the code that brilliant Python developers have written, you''ll learn about using functions, methods and packages. This will help you to reduce the amount of code you need to solve challenging problems!'
+attachments:
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch3_slides.pdf'
 ---
+
 ## Functions
 
 ```yaml
 type: VideoExercise
+key: 2dde2f90b8
 lang: python
 xp: 50
 skills: 2
-key: 2dde2f90b8
+video_link: //player.vimeo.com/video/154563189
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch3_1.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/154563189
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch3_1.master.m3u8
-
-*** =projector_key
+`@projector_key`
 abe8835964fe3385a3f0283b7a605f5f
 
 ---
+
 ## Familiar functions
 
 ```yaml
 type: NormalExercise
+key: c422ee929b
 lang: python
 xp: 100
 skills: 2
-key: c422ee929b
 ```
 
 Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). You've also used the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types. These are built-in functions as well.
@@ -60,6 +56,11 @@ output = function_name(input)
 - Call the [`type()`](https://docs.python.org/3/library/functions.html#type) function like this: `type(var1)`.
 - Call [`print()`](https://docs.python.org/3/library/functions.html#print) like you did so many times before. Simply put the variable you want to print in parentheses.
 - `int(x)` will convert `x` to an integer.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -112,16 +113,16 @@ Ex().check_correct(
 success_msg("Great job! The [`len()`](https://docs.python.org/3/library/functions.html#len) function is extremely useful; it also works on strings to count the number of characters!")
 ```
 
-
 ---
+
 ## Help!
 
 ```yaml
 type: MultipleChoiceExercise
+key: 679b852978
 lang: python
 xp: 50
 skills: 2
-key: 679b852978
 ```
 
 Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: [`help()`](https://docs.python.org/3/library/functions.html#help). In IPython specifically, you can also use `?` before the function name.
@@ -135,7 +136,7 @@ help(max)
 
 Use the Shell on the right to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
 
-`@instructions`
+`@possible_answers`
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. Both these arguments are required.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
@@ -143,6 +144,11 @@ Use the Shell on the right to open up the documentation on [`complex()`](https:/
 
 `@hint`
 The help file shows `complex(real[, imag])`. Do you remember what Filip told you about these square brackets?
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sct`
 ```{python}
@@ -154,14 +160,15 @@ Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Multiple arguments
 
 ```yaml
 type: NormalExercise
+key: e30486d7c1
 lang: python
 xp: 100
 skills: 2
-key: e30486d7c1
 ```
 
 In the previous exercise, the square brackets around `imag` in the documentation showed us that the `imag` argument is optional. But Python also uses a different way to tell users about arguments being optional.
@@ -191,6 +198,11 @@ Note: For now, we can understand an [_iterable_](https://docs.python.org/2/gloss
 - Simply sum `first` and `second` as if they are two numbers and assign the result to `full`.
 - Use [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) with two inputs: `full` and `reverse = True`.
 - To print out a variable, use [`print()`](https://docs.python.org/3/library/functions.html#print).
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -243,34 +255,32 @@ success_msg("Cool! Head over to the video on Python methods.")
 ```
 
 ---
+
 ## Methods
 
 ```yaml
 type: VideoExercise
+key: e1aaeb300b
 lang: python
 xp: 50
 skills: 2
-key: e1aaeb300b
+video_link: //player.vimeo.com/video/154563307
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/154563307
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
-
-*** =projector_key
+`@projector_key`
 cf2471efdf2df82d911fb0cfcf0466f6
 
 ---
+
 ## String Methods
 
 ```yaml
 type: NormalExercise
+key: 4039302ee0
 lang: python
 xp: 100
 skills: 2
-key: 4039302ee0
 ```
 
 Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
@@ -286,6 +296,11 @@ A string `place` has already been created for you to experiment with.
 - You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `place` without any additional inputs.
 - To print out a variable `x`, you can write `print(x)`.
 - Make sure to wrap your `place.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -342,16 +357,16 @@ Ex().check_correct(
 success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
-
 ---
+
 ## List Methods
 
 ```yaml
 type: NormalExercise
+key: 0dbe8ed695
 lang: python
 xp: 100
 skills: 2
-key: 0dbe8ed695
 ```
 
 Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
@@ -368,6 +383,11 @@ You'll be working on the list with the area of different parts of a house: `area
 `@hint`
 - To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 - To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -418,14 +438,15 @@ success_msg("Nice! These were examples of `list` methods that did not change the
 ```
 
 ---
+
 ## List Methods (2)
 
 ```yaml
 type: NormalExercise
+key: 1fbeab82d0
 lang: python
 xp: 100
 skills: 2
-key: 1fbeab82d0
 ```
 
 Most list methods will change the list they're called on. Examples are:
@@ -447,6 +468,11 @@ You'll be working on the list with the area of different parts of the house: `ar
 - To print out a variable `x`, simply write `print(x)`.
 - The [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
 - To print out a variable `x`, simply write `print(x)`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -499,34 +525,32 @@ success_msg("Great!")
 ```
 
 ---
+
 ## Packages
 
 ```yaml
 type: VideoExercise
+key: 2b89c5a9d8
 lang: python
 xp: 50
 skills: 2
-key: 2b89c5a9d8
+video_link: //player.vimeo.com/video/146994272
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
 ```
 
-`@video_link`
-//player.vimeo.com/video/146994272
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
-
-*** =projector_key
+`@projector_key`
 c550d2f388d2718361d55e101c6c3887
 
 ---
+
 ## Import package
 
 ```yaml
 type: NormalExercise
+key: 7432a6376f
 lang: python
 xp: 100
 skills: 2
-key: 7432a6376f
 ```
 
 As a data scientist, some notions of geometry never hurt. Let's refresh some of the basics.
@@ -547,6 +571,11 @@ To use the constant `pi`, you'll need the `math` package. A variable `r` is alre
 - You can simply use `import math`, and then refer to `pi` with `math.pi`.
 - Use the equation in the assignment text to find `C`. Use `*`
 - Use the equation in the assignment text to find `A`. Use `*` and `**`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -606,14 +635,15 @@ success_msg("Nice! If you know how to deal with functions from packages, the pow
 ```
 
 ---
+
 ## Selective import
 
 ```yaml
 type: NormalExercise
+key: fe65eff50a
 lang: python
 xp: 100
 skills: 2
-key: fe65eff50a
 ```
 
 General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
@@ -633,6 +663,11 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 - Use `from math import radians` to do the selective import.
 - You can simply use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function now. Pass the function the number 12 to get the angle in radians.
 - To print out a variable `x`, simply type `print(x)`.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sample_code`
 ```{python}
@@ -682,14 +717,15 @@ success_msg("Nice! Head over to the next exercise.")
 ```
 
 ---
+
 ## Different ways of importing
 
 ```yaml
 type: MultipleChoiceExercise
+key: f1b2675a2a
 lang: python
 xp: 50
 skills: 2
-key: f1b2675a2a
 ```
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
@@ -702,7 +738,7 @@ my_inv([[1,2], [3,4]])
 
 Which `import` statement will you need in order to run the above code without an error?
 
-`@instructions`
+`@possible_answers`
 - `import scipy`
 - `import scipy.linalg`
 - `from scipy.linalg import my_inv`
@@ -710,6 +746,11 @@ Which `import` statement will you need in order to run the above code without an
 
 `@hint`
 Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors.
+
+`@pre_exercise_code`
+```{python}
+
+```
 
 `@sct`
 ```{python}
