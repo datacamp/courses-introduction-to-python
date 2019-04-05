@@ -295,7 +295,7 @@ Ex().check_correct(
     multi(
       has_code('np_weight_kg', not_typed_msg = patt % 'np_weight_kg'),
       has_code('np_height_m', not_typed_msg = patt % 'np_height_m'),
-      has_code('**', not_typed_msg = patt % '**')
+      has_code('**', pattern = False, not_typed_msg = patt % '**')
     )
   )
 )
