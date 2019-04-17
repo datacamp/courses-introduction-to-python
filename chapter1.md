@@ -73,7 +73,10 @@ print(7 + 10)
 
 `@sct`
 ```{python}
-Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the sum of 7 and 10?")
+Ex().check_correct(
+  has_printout(1, not_printed_msg = "Have you used `{{sol_call}}` to print out the sum of 7 and 10?"),
+  check_function('print', 1, signature=False).check_args(0).has_equal_value()    
+)
 success_msg("Great! On to the next one!")
 ```
 
