@@ -6,23 +6,6 @@ attachments:
     slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch3_slides.pdf'
 ---
 
-## Functions
-
-```yaml
-type: VideoExercise
-key: 2dde2f90b8
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154563189
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch3_1.master.m3u8
-```
-
-`@projector_key`
-abe8835964fe3385a3f0283b7a605f5f
-
----
-
 ## Familiar functions
 
 ```yaml
@@ -253,23 +236,6 @@ Ex().check_correct(
 
 success_msg("Cool! Head over to the video on Python methods.")
 ```
-
----
-
-## Methods
-
-```yaml
-type: VideoExercise
-key: e1aaeb300b
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154563307
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
-```
-
-`@projector_key`
-cf2471efdf2df82d911fb0cfcf0466f6
 
 ---
 
@@ -526,23 +492,6 @@ success_msg("Great!")
 
 ---
 
-## Packages
-
-```yaml
-type: VideoExercise
-key: 2b89c5a9d8
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/146994272
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
-```
-
-`@projector_key`
-c550d2f388d2718361d55e101c6c3887
-
----
-
 ## Import package
 
 ```yaml
@@ -758,3 +707,42 @@ msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements 
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: [`inv()`](https://docs.python.org/3/library/functions.html#inv) is now available as `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
+
+---
+
+## Packages
+
+```yaml
+type: VideoExercise
+key: ab96a17c5e
+xp: 50
+```
+
+`@projector_key`
+cedcfb34350be8545599768f96695cdd
+
+---
+
+## Methods
+
+```yaml
+type: VideoExercise
+key: 2b66cb66b1
+xp: 50
+```
+
+`@projector_key`
+8e387776f3a264a745128b68aa8d8f83
+
+---
+
+## Functions
+
+```yaml
+type: VideoExercise
+key: 5c5f365930
+xp: 50
+```
+
+`@projector_key`
+1204d914b0e53100529827e07441ee6c

@@ -6,23 +6,6 @@ attachments:
     slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_4527/slides/ch4_slides.pdf'
 ---
 
-## NumPy
-
-```yaml
-type: VideoExercise
-key: ed471f4b00
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154563364
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_1.master.m3u8
-```
-
-`@projector_key`
-cbf80c2cf12e5a3b971598e252e9cb9d
-
----
-
 ## Your First NumPy Array
 
 ```yaml
@@ -557,23 +540,6 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 
 ---
 
-## 2D NumPy Arrays
-
-```yaml
-type: VideoExercise
-key: 84e9f3c38d
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/146994270
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_2.master.m3u8
-```
-
-`@projector_key`
-e6a2fb8649e4ba94d8a0dc7b03a6de62
-
----
-
 ## Your First 2D NumPy Array
 
 ```yaml
@@ -956,23 +922,6 @@ success_msg("Great job! Notice how with very little code, you can change all val
 
 ---
 
-## NumPy: Basic Statistics
-
-```yaml
-type: VideoExercise
-key: 16403c5a74
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/146994271
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_3.master.m3u8
-```
-
-`@projector_key`
-3c397bce7e44f4631520d5e5eb7e9433
-
----
-
 ## Average versus median
 
 ```yaml
@@ -1312,3 +1261,42 @@ Ex().check_correct(
 
 success_msg("Wonderful! You were right and the disbelievers were wrong! This exercise marks the end of the Intro to Python for Data Science course. See you in another course!")
 ```
+
+---
+
+## Numpy: Basic Statistics
+
+```yaml
+type: VideoExercise
+key: 287995e488
+xp: 50
+```
+
+`@projector_key`
+34495ba457d74296794d2a122c9b6e19
+
+---
+
+## 2D Numpy Arrays
+
+```yaml
+type: VideoExercise
+key: 1241efac7a
+xp: 50
+```
+
+`@projector_key`
+ae3238dcc7feb9adecfee0c395fc8dc8
+
+---
+
+## Numpy
+
+```yaml
+type: VideoExercise
+key: f4545baa53
+xp: 50
+```
+
+`@projector_key`
+a0487c26210f6b71ea98f917734cea3a

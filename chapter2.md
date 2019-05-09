@@ -6,23 +6,6 @@ attachments:
     slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf'
 ---
 
-## Lists, what are they?
-
-```yaml
-type: VideoExercise
-key: f366e876d8
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154563059
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch2_1.master.m3u8
-```
-
-`@projector_key`
-84258dc00ac8e6f277086d60255e8244
-
----
-
 ## Create a list
 
 ```yaml
@@ -334,23 +317,6 @@ Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` t
 
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
-
----
-
-## Subsetting lists
-
-```yaml
-type: VideoExercise
-key: 9e15e5b8a0
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/146994264
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
-```
-
-`@projector_key`
-47e0948980f8c77be2071a892b32ec8b
 
 ---
 
@@ -713,23 +679,6 @@ Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 
 ---
 
-## List Manipulation
-
-```yaml
-type: VideoExercise
-key: fbdaaec22a
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/149289041
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
-```
-
-`@projector_key`
-823af3a8a05cb88df3f2b0dca71cec7f
-
----
-
 ## Replace list elements
 
 ```yaml
@@ -1018,3 +967,42 @@ Ex().check_correct(
 
 success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
 ```
+
+---
+
+## Manipulating Lists
+
+```yaml
+type: VideoExercise
+key: d7fe818b3a
+xp: 50
+```
+
+`@projector_key`
+355ed52d2fb0d67508c6a311b7cbc6d3
+
+---
+
+## Subsetting Lists
+
+```yaml
+type: VideoExercise
+key: c076b5a69c
+xp: 50
+```
+
+`@projector_key`
+fc15ba5cb9485456df8589130b519ea3
+
+---
+
+## Python Lists
+
+```yaml
+type: VideoExercise
+key: a5886d213f
+xp: 50
+```
+
+`@projector_key`
+a0530c4542f10988847b2dbb91f717c3

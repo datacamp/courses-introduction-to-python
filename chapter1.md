@@ -7,23 +7,6 @@ attachments:
 free_preview: true
 ---
 
-## Hello Python!
-
-```yaml
-type: VideoExercise
-key: d5509896f7
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/146994261
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
-```
-
-`@projector_key`
-5f61a677bf62c17b450465ee849823ee
-
----
-
 ## The Python Interface
 
 ```yaml
@@ -232,23 +215,6 @@ print(100 * 1.1 ** 7)
 Ex().has_printout(6, not_printed_msg = "Have you used `print(100 * 1.1 ** 7)` to print out the result of your calculations?")
 success_msg("Time for another video!")
 ```
-
----
-
-## Variables & Types
-
-```yaml
-type: VideoExercise
-key: ef8356fb92
-lang: python
-xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154561704
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
-```
-
-`@projector_key`
-7df0925250c5fb2a647cd76fb09d446e
 
 ---
 
@@ -728,3 +694,29 @@ msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](ht
 msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
+
+---
+
+## Variables and Types
+
+```yaml
+type: VideoExercise
+key: c2e396792e
+xp: 50
+```
+
+`@projector_key`
+433dcfcfedaee070cbf440491c402e3b
+
+---
+
+## Hello Python!
+
+```yaml
+type: VideoExercise
+key: f644a48d5d
+xp: 50
+```
+
+`@projector_key`
+d8fcd4c930027fa4e1c3870c7e7e0ff1
