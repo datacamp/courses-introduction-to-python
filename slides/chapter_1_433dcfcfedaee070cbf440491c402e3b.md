@@ -1,30 +1,29 @@
 ---
-title: Insert title here
+title: 'Insert title here'
 key: 433dcfcfedaee070cbf440491c402e3b
-
 ---
+
 ## Variables and Types
 
 ```yaml
-type: "TitleSlide"
-key: "dc8b62f1c8"
+type: TitleSlide
+key: dc8b62f1c8
 ```
 
 `@lower_third`
 name: Full Name
 title: Instructor
 
-
 `@script`
 
 
-
 ---
+
 ## Variable
 
 ```yaml
-type: "FullSlide"
-key: "36ec318b41"
+type: FullSlide
+key: 36ec318b41
 ```
 
 `@part1`
@@ -38,17 +37,16 @@ height
 1.79
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## Calculate BMI
 
 ```yaml
-type: "FullSlide"
-key: "fe1b10a93b"
+type: FullSlide
+key: fe1b10a93b
 ```
 
 `@part1`
@@ -92,51 +90,48 @@ bmi
 21.4413
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## Reproducibility
 
 ```yaml
-type: "FullSlide"
-key: "9980f47f9d"
+type: FullSlide
+key: 9980f47f9d
 ```
 
 `@part1`
 
 
 
-
 `@script`
 
 
-
 ---
+
 ## Reproducibility
 
 ```yaml
-type: "FullSlide"
-key: "a4e899f00f"
+type: FullSlide
+key: a4e899f00f
 ```
 
 `@part1`
 
 
 
-
 `@script`
 
 
-
 ---
+
 ## Python Types
 
 ```yaml
-type: "FullSlide"
-key: "9d86084ad4"
+type: FullSlide
+key: 9d86084ad4
 ```
 
 `@part1`
@@ -157,17 +152,16 @@ type(day_of_week)
 int
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## Python Types (2)
 
 ```yaml
-type: "FullSlide"
-key: "d971d34e6a"
+type: FullSlide
+key: d971d34e6a
 ```
 
 `@part1`
@@ -190,17 +184,16 @@ type(z)
 bool
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## Python Types (3)
 
 ```yaml
-type: "FullSlide"
-key: "24601e2af0"
+type: FullSlide
+key: 24601e2af0
 ```
 
 `@part1`
@@ -220,19 +213,16 @@ key: "24601e2af0"
 'abcd'
 ```
 
-
 `@script`
-
 
 
 ---
+
 ## Let's practice!
 
 ```yaml
-type: "FinalSlide"
-key: "b7fc40db4d"
+type: FinalSlide
+key: b7fc40db4d
 ```
 
 `@script`
-
-

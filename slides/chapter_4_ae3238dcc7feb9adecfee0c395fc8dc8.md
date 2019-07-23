@@ -1,30 +1,29 @@
 ---
-title: Insert title here
+title: 'Insert title here'
 key: ae3238dcc7feb9adecfee0c395fc8dc8
-
 ---
+
 ## 2D Numpy Arrays
 
 ```yaml
-type: "TitleSlide"
-key: "0cc8abf493"
+type: TitleSlide
+key: 0cc8abf493
 ```
 
 `@lower_third`
 name: Full Name
 title: Instructor
 
-
 `@script`
 
 
-
 ---
+
 ## Type of Numpy Arrays
 
 ```yaml
-type: "FullSlide"
-key: "1b9db47fd2"
+type: FullSlide
+key: 1b9db47fd2
 ```
 
 `@part1`
@@ -47,17 +46,16 @@ type(np_weight)
 numpy.ndarray
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## 2D Numpy Arrays
 
 ```yaml
-type: "FullSlide"
-key: "ebb550dcba"
+type: FullSlide
+key: ebb550dcba
 ```
 
 `@part1`
@@ -95,17 +93,16 @@ np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
 
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## Subsetting
 
 ```yaml
-type: "FullSlide"
-key: "e0062fa1e4"
+type: FullSlide
+key: e0062fa1e4
 ```
 
 `@part1`
@@ -136,17 +133,16 @@ np_2d[0,2]
 1.71
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## Subsetting
 
 ```yaml
-type: "FullSlide"
-key: "5417c722e9"
+type: FullSlide
+key: 5417c722e9
 ```
 
 `@part1`
@@ -186,17 +182,16 @@ array([[  1.68,   1.71],
        [ 59.2 ,  63.6 ]])
 ```
 
-
 `@script`
 
 
-
 ---
+
 ## Subsetting
 
 ```yaml
-type: "FullSlide"
-key: "e71d2fc8b8"
+type: FullSlide
+key: e71d2fc8b8
 ```
 
 `@part1`
@@ -244,19 +239,16 @@ np_2d[1,:]
 array([ 65.4,  59.2,  63.6,  88.4,  68.7])
 ```
 
-
 `@script`
-
 
 
 ---
+
 ## Let's practice!
 
 ```yaml
-type: "FinalSlide"
-key: "6047b27c09"
+type: FinalSlide
+key: 6047b27c09
 ```
 
 `@script`
-
-
