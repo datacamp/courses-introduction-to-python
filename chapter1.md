@@ -7,6 +7,19 @@ attachments:
 free_preview: true
 ---
 
+## Hello Python!
+
+```yaml
+type: VideoExercise
+key: f644a48d5d
+xp: 50
+```
+
+`@projector_key`
+d8fcd4c930027fa4e1c3870c7e7e0ff1
+
+---
+
 ## The Python Interface
 
 ```yaml
@@ -707,16 +720,3 @@ xp: 50
 
 `@projector_key`
 433dcfcfedaee070cbf440491c402e3b
-
----
-
-## Hello Python!
-
-```yaml
-type: VideoExercise
-key: f644a48d5d
-xp: 50
-```
-
-`@projector_key`
-d8fcd4c930027fa4e1c3870c7e7e0ff1

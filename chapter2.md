@@ -6,6 +6,19 @@ attachments:
     slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf'
 ---
 
+## Python Lists
+
+```yaml
+type: VideoExercise
+key: a5886d213f
+xp: 50
+```
+
+`@projector_key`
+a0530c4542f10988847b2dbb91f717c3
+
+---
+
 ## Create a list
 
 ```yaml
@@ -993,16 +1006,3 @@ xp: 50
 
 `@projector_key`
 fc15ba5cb9485456df8589130b519ea3
-
----
-
-## Python Lists
-
-```yaml
-type: VideoExercise
-key: a5886d213f
-xp: 50
-```
-
-`@projector_key`
-a0530c4542f10988847b2dbb91f717c3

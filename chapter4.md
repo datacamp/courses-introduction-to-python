@@ -6,6 +6,19 @@ attachments:
     slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_4527/slides/ch4_slides.pdf'
 ---
 
+## Numpy
+
+```yaml
+type: VideoExercise
+key: f4545baa53
+xp: 50
+```
+
+`@projector_key`
+a0487c26210f6b71ea98f917734cea3a
+
+---
+
 ## Your First NumPy Array
 
 ```yaml
@@ -1287,16 +1300,3 @@ xp: 50
 
 `@projector_key`
 ae3238dcc7feb9adecfee0c395fc8dc8
-
----
-
-## Numpy
-
-```yaml
-type: VideoExercise
-key: f4545baa53
-xp: 50
-```
-
-`@projector_key`
-a0487c26210f6b71ea98f917734cea3a

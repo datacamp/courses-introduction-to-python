@@ -6,6 +6,19 @@ attachments:
     slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch3_slides.pdf'
 ---
 
+## Functions
+
+```yaml
+type: VideoExercise
+key: 5c5f365930
+xp: 50
+```
+
+`@projector_key`
+1204d914b0e53100529827e07441ee6c
+
+---
+
 ## Familiar functions
 
 ```yaml
@@ -733,16 +746,3 @@ xp: 50
 
 `@projector_key`
 8e387776f3a264a745128b68aa8d8f83
-
----
-
-## Functions
-
-```yaml
-type: VideoExercise
-key: 5c5f365930
-xp: 50
-```
-
-`@projector_key`
-1204d914b0e53100529827e07441ee6c
