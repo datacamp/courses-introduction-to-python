@@ -418,21 +418,12 @@ print(areas.count(9.50))
 ```{python}
 predef_msg = "You don't have to change or remove the predefined list `areas`."
 
-Ex().check_correct(
-  has_printout(0, not_printed_msg="You have calculated the index of element 20.0 correctly; now make sure to print it!"),
-  multi(
-    check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg),
-    check_function('areas.index', signature=False).check_args(0).has_equal_value()
-  )
-)
+Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
-Ex().check_correct(
-  has_printout(1, not_printed_msg="You have calculated the number of times `9.50` appears correctly; now make sure to print it!"),
-  multi(
-    check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg),
-    check_function('areas.count', signature=False).has_equal_value()
-  )
-)
+Ex().check_function("print", index=0).check_args(0).check_function('areas.index', signature=False).check_args(0).has_equal_value()
+
+
+Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
 success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
 ```
