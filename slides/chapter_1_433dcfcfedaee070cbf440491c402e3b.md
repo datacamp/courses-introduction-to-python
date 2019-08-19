@@ -11,7 +11,7 @@ key: dc8b62f1c8
 ```
 
 `@lower_third`
-name: Full Name
+name: Filip Schouwenaars
 title: Instructor
 
 `@script`
