@@ -55,7 +55,6 @@ height = 1.79
 weight = 68.7
 ```
 
-CodeCogsEqn (1).pdf
 
 ```py
 height
@@ -103,8 +102,7 @@ key: 9980f47f9d
 ```
 
 `@part1`
-
-
+
 
 `@script`
 
@@ -119,8 +117,7 @@ key: a4e899f00f
 ```
 
 `@part1`
-
-
+
 
 `@script`
 
@@ -166,7 +163,7 @@ key: d971d34e6a
 
 `@part1`
 ```py
-x = \"body mass index\"
+x = "body mass index"
 y = 'this works too'
 type(y)
 ```

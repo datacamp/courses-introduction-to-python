@@ -109,8 +109,7 @@ key: 693ba1cd14
 ```
 
 `@part1`
-interface.png
-interface.png
+
 
 `@script`
 
