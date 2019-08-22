@@ -1,7 +1,7 @@
 ---
 title_meta: 'Chapter 3'
 title: 'Functions and Packages'
-description: 'To leverage the code that brilliant Python developers have written, you''ll learn about using functions, methods and packages. This will help you to reduce the amount of code you need to solve challenging problems!'
+description: 'You''ll learn how to use functions, methods, and packages to efficiently leverage the code that brilliant Python developers have written. The goal is to reduce the amount of code you need to solve challenging problems!'
 attachments:
     slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch3_slides.pdf'
 ---
