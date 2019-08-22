@@ -185,7 +185,7 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 The code in the script on the right gives some examples.
 
 `@instructions`
-Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
+Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code to calculate how much money you end up with after 7 years.
 
 `@hint`
 After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
@@ -616,8 +616,8 @@ To fix the error, you'll need to explicitly convert the types of your variables.
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
 `@instructions`
-- Hit _Run Code_ to run the code on the right. Try to understand the error message.
-- Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
+- Hit _Run Code_ to run the code. Try to understand the error message.
+- Fix the code such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
 `@hint`
