@@ -103,7 +103,7 @@ np_2d.shape
 ```
 
 ```out
-2 rows, 5 columns
+(2, 5) # 2 rows, 5 columns
 ```
 
 ```py
