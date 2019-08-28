@@ -15,7 +15,6 @@ name: Filip Schouwenaars
 title: Instructor
 
 `@script`
-
 Hi, my name is Filip and I'll be your host for Introduction to Python for Data Science. It's a long name, but that's to stress something: this is not just another Python tutorial. Instead, the focus will be on using Python specifically for data science. By the end of this course, you'll know about powerful ways to store and manipulate data and to deploy cool data science tools for your own analyses.
 
 
