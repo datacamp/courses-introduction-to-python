@@ -252,6 +252,19 @@ success_msg("Cool! Head over to the video on Python methods.")
 
 ---
 
+## Methods
+
+```yaml
+type: VideoExercise
+key: 2b66cb66b1
+xp: 50
+```
+
+`@projector_key`
+8e387776f3a264a745128b68aa8d8f83
+
+---
+
 ## String Methods
 
 ```yaml
@@ -505,6 +518,19 @@ success_msg("Great!")
 
 ---
 
+## Packages
+
+```yaml
+type: VideoExercise
+key: ab96a17c5e
+xp: 50
+```
+
+`@projector_key`
+cedcfb34350be8545599768f96695cdd
+
+---
+
 ## Import package
 
 ```yaml
@@ -720,29 +746,3 @@ msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements 
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: [`inv()`](https://docs.python.org/3/library/functions.html#inv) is now available as `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
-
----
-
-## Packages
-
-```yaml
-type: VideoExercise
-key: ab96a17c5e
-xp: 50
-```
-
-`@projector_key`
-cedcfb34350be8545599768f96695cdd
-
----
-
-## Methods
-
-```yaml
-type: VideoExercise
-key: 2b66cb66b1
-xp: 50
-```
-
-`@projector_key`
-8e387776f3a264a745128b68aa8d8f83
