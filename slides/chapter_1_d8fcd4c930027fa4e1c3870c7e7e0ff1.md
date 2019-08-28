@@ -34,7 +34,7 @@ disable_transition: true
 ![im1.png](https://assets.datacamp.com/production/repositories/288/datasets/855eb1b4bc76c5adc2372bbd2f1575d1b75079cc/im1.png)
 
 `@script`
-In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
+In this course, 
 
 ---
 
@@ -50,7 +50,7 @@ disable_transition: true
 ![im2.png](https://assets.datacamp.com/production/repositories/288/datasets/17f43b4f62280f29b8b4d8351a014fae10e4227b/im2.png)
 
 `@script`
-
+you will learn Python for Data Science through video lessons, 
 
 ---
 
@@ -66,7 +66,7 @@ disable_transition: true
 ![im3.png](https://assets.datacamp.com/production/repositories/288/datasets/99a374c5ee5855662c2c0bde73cc9a0d0c7faaf4/im3.png)
 
 `@script`
-
+like this one, and interactive exercises. 
 
 ---
 
@@ -82,7 +82,7 @@ disable_transition: true
 ![im4.png](https://assets.datacamp.com/production/repositories/288/datasets/0f7f11a8f122eccf859f6f5d48b8288db0b050f5/im4.png)
 
 `@script`
-
+You get your own Python session where you can experiment and 
 
 ---
 
@@ -98,7 +98,7 @@ disable_transition: true
 ![im5.png](https://assets.datacamp.com/production/repositories/288/datasets/a756a72331b81ae53dbbf2c6a5bd20a6a7e0b579/im5.png)
 
 `@script`
-
+try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
 
 ---
 
@@ -114,7 +114,7 @@ disable_transition: true
 ![im6.png](https://assets.datacamp.com/production/repositories/288/datasets/4d0e0d9307b116dd76030735c1413fab9a4a152e/im6.png)
 
 `@script`
-
+You're learning by doing, while receiving customized and instant feedback on your work.
 
 ---
 
@@ -130,7 +130,7 @@ disable_transition: true
 ![im7.png](https://assets.datacamp.com/production/repositories/288/datasets/72fa767e3001998d758adb3c31776eb099955902/im7.png)
 
 `@script`
-
+while receiving customized and instant feedback on your work.
 
 ---
 
@@ -146,7 +146,7 @@ disable_transition: true
 ![im8.png](https://assets.datacamp.com/production/repositories/288/datasets/134217f52690e2a0aad8cbadb95e3d91a83f1d3f/im8.png)
 
 `@script`
-
+ and instant feedback on your work.
 
 ---
 
@@ -210,7 +210,7 @@ disable_transition: true
 ![im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/ca1d916c81bbf54c3ba1e0deb3706783f3556c4b/im_1.png)
 
 `@script`
-Let's start off simple and use Python as a calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+Let's start off simple and use Python as a calculator. Let me type 4 + 5 
 
 
 
@@ -228,7 +228,7 @@ disable_transition: true
 ![im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/c82051c3a5857c7bc8077ec05004e6639cc0580e/im_2.png)
 
 `@script`
-
+and hit Enter. 
 
 ---
 
@@ -244,7 +244,7 @@ disable_transition: true
 ![im_3.png](https://assets.datacamp.com/production/repositories/288/datasets/17e1bf08fd2111fe2fd0f2c31ad2b505b1198461/im_3.png)
 
 `@script`
-
+Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
 
 ---
 
