@@ -53,6 +53,12 @@ key: 36ec318b41
 ```
 
 `@part1`
+- Specific, case-sensitive name
+
+- Call up value through variable name
+
+- 1.79 m - 68.7 kg
+
 ```py
 height = 1.79
 weight = 68.7
@@ -128,7 +134,16 @@ key: 9980f47f9d
 ```
 
 `@part1`
+```py
+height = 1.79
+weight = 68.7
+bmi = weight / height ** 2
+print(bmi)
+```
 
+```out
+21.4413
+```
 
 `@script`
 
@@ -143,6 +158,16 @@ key: a4e899f00f
 ```
 
 `@part1`
+```py
+height = 1.79
+weight = 74.2
+bmi = weight / height ** 2
+print(bmi)
+```
+
+```out
+23.1578
+```
 
 
 `@script`
@@ -220,6 +245,8 @@ key: 24601e2af0
 ```
 
 `@part1`
+- Different type = different behavior!
+
 ```py
 2 + 3
 ```
