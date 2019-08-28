@@ -191,7 +191,7 @@ key: 43a91a7217
 Execute Python commands
 
 `@script`
-
+Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. 
 
 ---
 
@@ -207,6 +207,8 @@ disable_transition: true
 ![im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/ca1d916c81bbf54c3ba1e0deb3706783f3556c4b/im_1.png)
 
 `@script`
+Let's start off simple and use Python as a calculator. Let me type 4 + 5 and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+
 
 
 ---
