@@ -271,7 +271,7 @@ python scripts. These python scripts are simply text files with the extension (d
 
 ---
 
-## IPython Shell
+## Python Script
 
 ```yaml
 type: FullSlide
@@ -286,7 +286,7 @@ that can be found here in DataCamp's interface.
 
 ---
 
-## IPython Shell
+## Python Script
 
 ```yaml
 type: FullSlide
@@ -302,7 +302,7 @@ The next step is executing the script, by clicking 'Submit Answer'.
 
 ---
 
-## IPython Shell
+## Python Script
 
 ```yaml
 type: FullSlide
@@ -318,7 +318,7 @@ If you execute this script in the DataCamp interface, there's nothing in the out
 
 ---
 
-## IPython Shell
+## Python Script
 
 ```yaml
 type: FullSlide
@@ -334,7 +334,7 @@ and rerun the script.
 
 ---
 
-## IPython Shell
+## Python Script
 
 ```yaml
 type: FullSlide
@@ -350,7 +350,7 @@ This time, the
 
 ---
 
-## IPython Shell
+## Python Script
 
 ```yaml
 type: FullSlide
