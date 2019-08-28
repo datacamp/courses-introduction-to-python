@@ -100,7 +100,7 @@ disable_transition: true
 ![im5.png](https://assets.datacamp.com/production/repositories/288/datasets/a756a72331b81ae53dbbf2c6a5bd20a6a7e0b579/im5.png)
 
 `@script`
-try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
+try to come up with the correct code to solve the instructions. 
 
 ---
 
@@ -116,7 +116,7 @@ disable_transition: true
 ![im6.png](https://assets.datacamp.com/production/repositories/288/datasets/4d0e0d9307b116dd76030735c1413fab9a4a152e/im6.png)
 
 `@script`
-You're learning by doing, while receiving customized and instant feedback on your work.
+You're learning by doing, 
 
 ---
 
@@ -132,7 +132,7 @@ disable_transition: true
 ![im7.png](https://assets.datacamp.com/production/repositories/288/datasets/72fa767e3001998d758adb3c31776eb099955902/im7.png)
 
 `@script`
-while receiving customized and instant feedback on your work.
+while receiving customized 
 
 ---
 
