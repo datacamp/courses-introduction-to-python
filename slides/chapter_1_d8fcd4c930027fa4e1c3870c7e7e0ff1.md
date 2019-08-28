@@ -324,7 +324,7 @@ key: 78ef256bc0
 
 
 `@script`
-
+Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
 
 ---
 
