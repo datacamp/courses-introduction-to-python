@@ -263,7 +263,7 @@ Have a look at this line of code, that sums two integers, and then this line of 
 
 For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists. 
 
 ---
 
@@ -275,3 +275,4 @@ key: b7fc40db4d
 ```
 
 `@script`
+Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
