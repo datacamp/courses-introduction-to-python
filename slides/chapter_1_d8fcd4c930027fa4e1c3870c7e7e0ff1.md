@@ -196,7 +196,7 @@ key: 43a91a7217
 `@part1`
 Execute Python commands
 
-![ch_1_1_slides.002.png](https://assets.datacamp.com/production/repositories/288/datasets/cb6182b201754f60f34c183b1fc90fcacfa2eaf3/ch_1_1_slides.002.png)
+![im_interface.png](https://assets.datacamp.com/production/repositories/288/datasets/baae2c2c02551284c4253583b4396307b3561a15/im_interface.png)
 
 `@script`
 Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here.
@@ -363,42 +363,10 @@ key: 693ba1cd14
 ```
 
 `@part1`
-![ch_1_1_slides.001.png](https://assets.datacamp.com/production/repositories/288/datasets/f70371d1d3dcc8eb318c30132c95a6189e85726a/ch_1_1_slides.001.png)
+![im_interface.png](https://assets.datacamp.com/production/repositories/288/datasets/baae2c2c02551284c4253583b4396307b3561a15/im_interface.png)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises.
-
----
-
-## DataCamp Interface
-
-```yaml
-type: FullSlide
-key: 0ee37fba22
-disable_transition: true
-```
-
-`@part1`
-![ch_1_1_slides.002.png](https://assets.datacamp.com/production/repositories/288/datasets/cb6182b201754f60f34c183b1fc90fcacfa2eaf3/ch_1_1_slides.002.png)
-
-`@script`
-Use the IPython Shell for experimentation,
-
----
-
-## DataCamp Interface
-
-```yaml
-type: FullSlide
-key: a88cc5ac35
-disable_transition: true
-```
-
-`@part1`
-![ch_1_1_slides.003.png](https://assets.datacamp.com/production/repositories/288/datasets/358eec4f33b609c324279c6b0c51017c3d598d86/ch_1_1_slides.003.png)
-
-`@script`
-and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
 
 ---
 
