@@ -358,6 +358,8 @@ key: 693ba1cd14
 ![ch_1_1_slides.001.png](https://assets.datacamp.com/production/repositories/288/datasets/f70371d1d3dcc8eb318c30132c95a6189e85726a/ch_1_1_slides.001.png)
 
 `@script`
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. 
+
 
 
 ---
@@ -402,3 +404,4 @@ key: 7445cd202e
 ```
 
 `@script`
+Have fun!
