@@ -344,23 +344,7 @@ disable_transition: true
 ![im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/1194f04fed22a8350de661431655c15d2c7ff6bb/im_7.png)
 
 `@script`
-This time, the
-
----
-
-## Python Script
-
-```yaml
-type: FullSlide
-key: 7a8790e347
-disable_transition: true
-```
-
-`@part1`
-![im_9.png](https://assets.datacamp.com/production/repositories/288/datasets/a80a8f82d55a3baa3e29e7c0471b7eab2aa9201b/im_9.png)
-
-`@script`
-same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
+This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
 
 ---
 
