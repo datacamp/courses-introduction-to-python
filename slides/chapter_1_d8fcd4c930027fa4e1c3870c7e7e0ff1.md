@@ -180,17 +180,19 @@ key: 3f23b93572
 ```
 
 `@part1`
-- Guido Van Rossum
+- Guido Van Rossum{{1}}
 
-- General Purpose: build anything
+- General Purpose: build anything{{2}}
 
-- Open Source! Free!
+- Open Source! Free!{{3}}
 
-- Python Packages, also for Data Science
+- Python Packages, also for Data Science{{4}}
 
-	- Many applications and fields
+- Many applications and fields{{5}}
 
-- Version 3.x - https://www.python.org/downloads/
+- Version 3.x - https://www.python.org/downloads/{{6}}
+
+
 
 `@script`
 Python was conceived by Guido Van Rossum. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
@@ -336,11 +338,13 @@ key: 78ef256bc0
 ```
 
 `@part1`
-- Text Files - .py
+- Text Files - .py{{1}}
 
-- List of Python Commands
+- List of Python Commands{{2}}
 
-- Similar to typing in IPython Shell
+- Similar to typing in IPython Shell{{3}}
+
+
 
 `@script`
 
@@ -355,34 +359,41 @@ key: 693ba1cd14
 ```
 
 `@part1`
-
+![ch_1_1_slides.001.png](https://assets.datacamp.com/production/repositories/288/datasets/f70371d1d3dcc8eb318c30132c95a6189e85726a/ch_1_1_slides.001.png)
 
 `@script`
 
 
 ---
 
-## What you will learn
+## DataCamp Interface
 
 ```yaml
 type: FullSlide
-key: c758c70698
+key: 0ee37fba22
+disable_transition: true
 ```
 
 `@part1`
-- Python
-
-- Specifically for Data Science
-
-- Store data
-
-- Manipulate data
-
-- Tools for data analysis
+![ch_1_1_slides.002.png](https://assets.datacamp.com/production/repositories/288/datasets/cb6182b201754f60f34c183b1fc90fcacfa2eaf3/ch_1_1_slides.002.png)
 
 `@script`
-You will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
 
+
+---
+
+## DataCamp Interface
+
+```yaml
+type: FullSlide
+key: a88cc5ac35
+disable_transition: true
+```
+
+`@part1`
+![ch_1_1_slides.003.png](https://assets.datacamp.com/production/repositories/288/datasets/358eec4f33b609c324279c6b0c51017c3d598d86/ch_1_1_slides.003.png)
+
+`@script`
 
 
 ---
