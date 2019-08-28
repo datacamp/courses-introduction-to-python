@@ -333,6 +333,19 @@ success_msg("Great! Get ready to learn about list subsetting!")
 
 ---
 
+## Subsetting Lists
+
+```yaml
+type: VideoExercise
+key: c076b5a69c
+xp: 50
+```
+
+`@projector_key`
+fc15ba5cb9485456df8589130b519ea3
+
+---
+
 ## Subset and conquer
 
 ```yaml
@@ -692,6 +705,19 @@ Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 
 ---
 
+## Manipulating Lists
+
+```yaml
+type: VideoExercise
+key: d7fe818b3a
+xp: 50
+```
+
+`@projector_key`
+355ed52d2fb0d67508c6a311b7cbc6d3
+
+---
+
 ## Replace list elements
 
 ```yaml
@@ -980,29 +1006,3 @@ Ex().check_correct(
 
 success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
 ```
-
----
-
-## Manipulating Lists
-
-```yaml
-type: VideoExercise
-key: d7fe818b3a
-xp: 50
-```
-
-`@projector_key`
-355ed52d2fb0d67508c6a311b7cbc6d3
-
----
-
-## Subsetting Lists
-
-```yaml
-type: VideoExercise
-key: c076b5a69c
-xp: 50
-```
-
-`@projector_key`
-fc15ba5cb9485456df8589130b519ea3
