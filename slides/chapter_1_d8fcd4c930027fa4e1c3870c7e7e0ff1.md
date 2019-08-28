@@ -103,6 +103,7 @@ Now that you've got an idea about different ways of working with Python, I sugge
 ```yaml
 type: FullSlide
 key: 30ee08a725
+disable_transition: true
 ```
 
 `@part1`
@@ -118,6 +119,7 @@ key: 30ee08a725
 ```yaml
 type: FullSlide
 key: a093f0b659
+disable_transition: true
 ```
 
 `@part1`
@@ -133,6 +135,7 @@ key: a093f0b659
 ```yaml
 type: FullSlide
 key: cff110c262
+disable_transition: true
 ```
 
 `@part1`
@@ -148,6 +151,7 @@ key: cff110c262
 ```yaml
 type: FullSlide
 key: 42962f0d17
+disable_transition: true
 ```
 
 `@part1`
@@ -163,6 +167,7 @@ key: 42962f0d17
 ```yaml
 type: FullSlide
 key: 3262829f32
+disable_transition: true
 ```
 
 `@part1`
@@ -178,6 +183,7 @@ key: 3262829f32
 ```yaml
 type: FullSlide
 key: fde7ff1ea9
+disable_transition: true
 ```
 
 `@part1`
@@ -193,6 +199,7 @@ key: fde7ff1ea9
 ```yaml
 type: FullSlide
 key: c9dd1edd75
+disable_transition: true
 ```
 
 `@part1`
@@ -208,6 +215,7 @@ key: c9dd1edd75
 ```yaml
 type: FullSlide
 key: b6b5c151b9
+disable_transition: true
 ```
 
 `@part1`
@@ -242,6 +250,7 @@ key: 78ef256bc0
 ```yaml
 type: FullSlide
 key: 524e4c20a7
+disable_transition: true
 ```
 
 `@part1`
@@ -257,6 +266,7 @@ key: 524e4c20a7
 ```yaml
 type: FullSlide
 key: a4f0f4cf69
+disable_transition: true
 ```
 
 `@part1`
@@ -272,6 +282,7 @@ key: a4f0f4cf69
 ```yaml
 type: FullSlide
 key: b1718925d8
+disable_transition: true
 ```
 
 `@part1`
@@ -287,6 +298,7 @@ key: b1718925d8
 ```yaml
 type: FullSlide
 key: 717d124175
+disable_transition: true
 ```
 
 `@part1`
@@ -302,6 +314,7 @@ key: 717d124175
 ```yaml
 type: FullSlide
 key: 373fd0a03d
+disable_transition: true
 ```
 
 `@part1`
@@ -317,6 +330,7 @@ key: 373fd0a03d
 ```yaml
 type: FullSlide
 key: c7a9d02fb6
+disable_transition: true
 ```
 
 `@part1`
@@ -332,6 +346,7 @@ key: c7a9d02fb6
 ```yaml
 type: FullSlide
 key: 65dc2d6b9c
+disable_transition: true
 ```
 
 `@part1`
