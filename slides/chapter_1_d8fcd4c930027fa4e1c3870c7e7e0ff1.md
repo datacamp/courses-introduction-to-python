@@ -162,18 +162,22 @@ key: 3f23b93572
 `@part1`
 - Guido Van Rossum{{1}}
 
-- General Purpose: build anything{{2}}
+- PHOTO{{2}}
 
-- Open Source! Free!{{3}}
+- General Purpose: build anything{{3}}
 
-- Python Packages, also for Data Science{{4}}
+- Open Source! Free!{{4}}
 
-	- Many applications and fields{{5}}
+- Python Packages, also for Data Science{{5}}
 
-- Version 3.x - https://www.python.org/downloads/{{6}}
+	- Many applications and fields{{6}}
+
+- Version 3.x - https://www.python.org/downloads/{{7}}
 
 `@script`
-Python was conceived by Guido Van Rossum. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
+Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
+People often refer to python as the swiss army knife of programming languages as you can do almost anything with it.
+In this course, we'll start to build up your data science coding skills bit by bit, so make sure to stick around to see how powerful the language can be.
 
 Currently, there are two common versions of Python, version 2-point-7 and 3-point-5 and later. Apart from some syntactical differences, they are pretty similar, but as support for version 2 will fade over time, our courses focus on Python 3. To install Python 3 on your own system, follow the steps at this URL.
 
