@@ -98,6 +98,126 @@ Now that you've got an idea about different ways of working with Python, I sugge
 
 ---
 
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 30ee08a725
+```
+
+`@part1`
+![im1.png](https://assets.datacamp.com/production/repositories/288/datasets/855eb1b4bc76c5adc2372bbd2f1575d1b75079cc/im1.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: a093f0b659
+```
+
+`@part1`
+![im2.png](https://assets.datacamp.com/production/repositories/288/datasets/17f43b4f62280f29b8b4d8351a014fae10e4227b/im2.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: cff110c262
+```
+
+`@part1`
+![im3.png](https://assets.datacamp.com/production/repositories/288/datasets/99a374c5ee5855662c2c0bde73cc9a0d0c7faaf4/im3.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 42962f0d17
+```
+
+`@part1`
+![im4.png](https://assets.datacamp.com/production/repositories/288/datasets/0f7f11a8f122eccf859f6f5d48b8288db0b050f5/im4.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 3262829f32
+```
+
+`@part1`
+![im5.png](https://assets.datacamp.com/production/repositories/288/datasets/a756a72331b81ae53dbbf2c6a5bd20a6a7e0b579/im5.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: fde7ff1ea9
+```
+
+`@part1`
+![im6.png](https://assets.datacamp.com/production/repositories/288/datasets/4d0e0d9307b116dd76030735c1413fab9a4a152e/im6.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: c9dd1edd75
+```
+
+`@part1`
+![im7.png](https://assets.datacamp.com/production/repositories/288/datasets/72fa767e3001998d758adb3c31776eb099955902/im7.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: b6b5c151b9
+```
+
+`@part1`
+![im8.png](https://assets.datacamp.com/production/repositories/288/datasets/134217f52690e2a0aad8cbadb95e3d91a83f1d3f/im8.png)
+
+`@script`
+
+
+---
+
 ## Python Script
 
 ```yaml
@@ -111,6 +231,126 @@ key: 78ef256bc0
 - List of Python Commands
 
 - Similar to typing in IPython Shell
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 524e4c20a7
+```
+
+`@part1`
+![im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/ca1d916c81bbf54c3ba1e0deb3706783f3556c4b/im_1.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: a4f0f4cf69
+```
+
+`@part1`
+![im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/c82051c3a5857c7bc8077ec05004e6639cc0580e/im_2.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: b1718925d8
+```
+
+`@part1`
+![im_3.png](https://assets.datacamp.com/production/repositories/288/datasets/17e1bf08fd2111fe2fd0f2c31ad2b505b1198461/im_3.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 717d124175
+```
+
+`@part1`
+![im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/2504cc9b039dd4b8d59406e49b7321b1ecde4646/im_4.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 373fd0a03d
+```
+
+`@part1`
+![im_5.png](https://assets.datacamp.com/production/repositories/288/datasets/703e4622c7207a86742b3b5cc3c6267fbd2530ab/im_5.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: c7a9d02fb6
+```
+
+`@part1`
+![im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/10d02b979555223b15a058ce7d70b64176d70efd/im_6.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 65dc2d6b9c
+```
+
+`@part1`
+![im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/1194f04fed22a8350de661431655c15d2c7ff6bb/im_7.png)
+
+`@script`
+
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 7a8790e347
+```
+
+`@part1`
+![im_9.png](https://assets.datacamp.com/production/repositories/288/datasets/a80a8f82d55a3baa3e29e7c0471b7eab2aa9201b/im_9.png)
 
 `@script`
 
