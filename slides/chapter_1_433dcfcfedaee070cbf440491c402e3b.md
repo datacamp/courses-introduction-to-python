@@ -15,7 +15,7 @@ name: Filip Schouwenaars
 title: Instructor
 
 `@script`
-It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along. You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along. You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
 
 Suppose you measure your height and weight, in metric units: you are 1-point-79 meters tall, and weigh 68-point-7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
 
