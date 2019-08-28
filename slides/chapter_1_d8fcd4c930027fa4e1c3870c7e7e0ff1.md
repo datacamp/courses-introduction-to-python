@@ -35,6 +35,8 @@ disable_transition: true
 `@part1`
 ![im1.png](https://assets.datacamp.com/production/repositories/288/datasets/855eb1b4bc76c5adc2372bbd2f1575d1b75079cc/im1.png)
 
+![v2_im1.png](https://assets.datacamp.com/production/repositories/288/datasets/b05b2904f73909da21b2f22652ce114d196f7041/v2_im1.png)
+
 `@script`
 In this course,
 
@@ -49,7 +51,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im2.png](https://assets.datacamp.com/production/repositories/288/datasets/17f43b4f62280f29b8b4d8351a014fae10e4227b/im2.png)
+![v2_im2.png](https://assets.datacamp.com/production/repositories/288/datasets/3abe63cb44314a94f7ee62f65caa19074edd31ab/v2_im2.png)
 
 `@script`
 you will learn Python for Data Science through video lessons,
@@ -65,7 +67,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im3.png](https://assets.datacamp.com/production/repositories/288/datasets/99a374c5ee5855662c2c0bde73cc9a0d0c7faaf4/im3.png)
+![v2_im3.png](https://assets.datacamp.com/production/repositories/288/datasets/d0e58c2a475062673219e4200a6e962001e35f71/v2_im3.png)
 
 `@script`
 like this one, and interactive exercises.
@@ -81,7 +83,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im4.png](https://assets.datacamp.com/production/repositories/288/datasets/0f7f11a8f122eccf859f6f5d48b8288db0b050f5/im4.png)
+![v2_im4.png](https://assets.datacamp.com/production/repositories/288/datasets/f0b0039d206746083f06e16f6d1adb99b6cbb087/v2_im4.png)
 
 `@script`
 You get your own Python session where you can experiment and
@@ -97,7 +99,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im5.png](https://assets.datacamp.com/production/repositories/288/datasets/a756a72331b81ae53dbbf2c6a5bd20a6a7e0b579/im5.png)
+![v2_im5.png](https://assets.datacamp.com/production/repositories/288/datasets/fcd1643b0f3a9d8cbe3139dd277e31f153ca887d/v2_im5.png)
 
 `@script`
 try to come up with the correct code to solve the instructions.
@@ -113,7 +115,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im6.png](https://assets.datacamp.com/production/repositories/288/datasets/4d0e0d9307b116dd76030735c1413fab9a4a152e/im6.png)
+![v2_im6.png](https://assets.datacamp.com/production/repositories/288/datasets/33849bdc917d30124a9935842898ffef158c77a2/v2_im6.png)
 
 `@script`
 You're learning by doing,
@@ -129,7 +131,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im7.png](https://assets.datacamp.com/production/repositories/288/datasets/72fa767e3001998d758adb3c31776eb099955902/im7.png)
+![v2_im7.png](https://assets.datacamp.com/production/repositories/288/datasets/1afe1c43d1a7277fa333637266fdb36630723462/v2_im7.png)
 
 `@script`
 while receiving customized
@@ -145,7 +147,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im8.png](https://assets.datacamp.com/production/repositories/288/datasets/134217f52690e2a0aad8cbadb95e3d91a83f1d3f/im8.png)
+![v2_im8.png](https://assets.datacamp.com/production/repositories/288/datasets/7871bfa81d5f84bf56e1d89c20bdfab86beb3f89/v2_im8.png)
 
 `@script`
 and instant feedback on your work.
@@ -210,7 +212,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/ca1d916c81bbf54c3ba1e0deb3706783f3556c4b/im_1.png)
+![v2_im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/92b564ad29678d3f128399ceed9cde4350c7a885/v2_im_1.png)
 
 `@script`
 Let's start off simple and use Python as a calculator. Let me type 4 + 5
@@ -226,7 +228,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/c82051c3a5857c7bc8077ec05004e6639cc0580e/im_2.png)
+![v2_im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/70799d49563b79a8709b2edb325462760a22d204/v2_im_2.png)
 
 `@script`
 and hit Enter.
@@ -243,6 +245,8 @@ disable_transition: true
 
 `@part1`
 ![im_3.png](https://assets.datacamp.com/production/repositories/288/datasets/17e1bf08fd2111fe2fd0f2c31ad2b505b1198461/im_3.png)
+
+![v2_im_3.png](https://assets.datacamp.com/production/repositories/288/datasets/61055aa5adf6d3181fa46274f74059d42e1bea91/v2_im_3.png)
 
 `@script`
 Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
@@ -265,6 +269,8 @@ key: 78ef256bc0
 
 - Similar to typing in IPython Shell{{3}}
 
+
+
 `@script`
 python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now,
 
@@ -278,7 +284,7 @@ key: 719d500511
 ```
 
 `@part1`
-![im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/c82051c3a5857c7bc8077ec05004e6639cc0580e/im_2.png)
+![v2_im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/70799d49563b79a8709b2edb325462760a22d204/v2_im_2.png)
 
 `@script`
 that can be found here in DataCamp's interface.
@@ -294,7 +300,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/2504cc9b039dd4b8d59406e49b7321b1ecde4646/im_4.png)
+![v2_im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/02376d8fcd175c8fef1e16c65688e385ebca68ea/v2_im_4.png)
 
 `@script`
 The next step is executing the script, by clicking 'Submit Answer'.
@@ -310,7 +316,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im_5.png](https://assets.datacamp.com/production/repositories/288/datasets/703e4622c7207a86742b3b5cc3c6267fbd2530ab/im_5.png)
+![v2_im_5.png](https://assets.datacamp.com/production/repositories/288/datasets/719ede3350f29b3a159f3c63c325657589874537/v2_im_5.png)
 
 `@script`
 If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution. Let's wrap our previous calculation in a print call,
@@ -326,7 +332,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/10d02b979555223b15a058ce7d70b64176d70efd/im_6.png)
+![v2_im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/730a523d51d9d67476a0d0f139a8024fcbc29ce8/v2_im_6.png)
 
 `@script`
 and rerun the script.
@@ -342,7 +348,7 @@ disable_transition: true
 ```
 
 `@part1`
-![im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/1194f04fed22a8350de661431655c15d2c7ff6bb/im_7.png)
+![v2_im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/d91c419b565eaa2626b69b2ddad7c68e5438dd48/v2_im_7.png)
 
 `@script`
 This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
