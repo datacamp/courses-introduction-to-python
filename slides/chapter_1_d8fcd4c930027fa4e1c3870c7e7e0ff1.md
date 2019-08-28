@@ -180,6 +180,21 @@ Currently, there are two common versions of Python, version 2-point-7 and 3-poin
 
 ---
 
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: 43a91a7217
+```
+
+`@part1`
+
+
+`@script`
+
+
+---
+
 ## IPython Shell
 
 ```yaml
