@@ -100,7 +100,7 @@ disable_transition: true
 ![im5.png](https://assets.datacamp.com/production/repositories/288/datasets/a756a72331b81ae53dbbf2c6a5bd20a6a7e0b579/im5.png)
 
 `@script`
-try to come up with the correct code to solve the instructions. 
+try to come up with the correct code to solve the instructions.
 
 ---
 
@@ -116,7 +116,7 @@ disable_transition: true
 ![im6.png](https://assets.datacamp.com/production/repositories/288/datasets/4d0e0d9307b116dd76030735c1413fab9a4a152e/im6.png)
 
 `@script`
-You're learning by doing, 
+You're learning by doing,
 
 ---
 
@@ -132,7 +132,7 @@ disable_transition: true
 ![im7.png](https://assets.datacamp.com/production/repositories/288/datasets/72fa767e3001998d758adb3c31776eb099955902/im7.png)
 
 `@script`
-while receiving customized 
+while receiving customized
 
 ---
 
@@ -173,7 +173,6 @@ key: 3f23b93572
 - Version 3.x - https://www.python.org/downloads/{{7}}
 
 `@part2`
-
 ![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png){{2}}
 
 `@script`
