@@ -246,6 +246,29 @@ disable_transition: true
 `@script`
 Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
 
+IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called 
+
+---
+
+## Python Script
+
+```yaml
+type: FullSlide
+key: 78ef256bc0
+```
+
+`@part1`
+- Text Files - .py{{1}}
+
+- List of Python Commands{{2}}
+
+- Similar to typing in IPython Shell{{3}}
+
+
+
+`@script`
+python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now, 
+
 ---
 
 ## IPython Shell
@@ -260,7 +283,7 @@ disable_transition: true
 ![im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/2504cc9b039dd4b8d59406e49b7321b1ecde4646/im_4.png)
 
 `@script`
-
+that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
 
 ---
 
@@ -324,27 +347,6 @@ key: 7a8790e347
 
 `@script`
 
-
----
-
-## Python Script
-
-```yaml
-type: FullSlide
-key: 78ef256bc0
-```
-
-`@part1`
-- Text Files - .py{{1}}
-
-- List of Python Commands{{2}}
-
-- Similar to typing in IPython Shell{{3}}
-
-
-
-`@script`
-Apart from interactively working with Python, you can also have Python run so called python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
 
 ---
 
