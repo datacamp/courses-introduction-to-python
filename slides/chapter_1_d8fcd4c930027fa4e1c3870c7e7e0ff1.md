@@ -245,7 +245,7 @@ key: 78ef256bc0
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -261,7 +261,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -277,7 +277,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -293,7 +293,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -309,7 +309,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -325,7 +325,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -341,7 +341,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -357,7 +357,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
