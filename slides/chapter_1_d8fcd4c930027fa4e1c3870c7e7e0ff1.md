@@ -269,8 +269,6 @@ key: 78ef256bc0
 
 - Similar to typing in IPython Shell{{3}}
 
-
-
 `@script`
 python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now,
 
