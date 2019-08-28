@@ -20,8 +20,7 @@ title: Data Scientist at DataCamp
 `@script`
 Hi, my name is Hugo and I'll be your host for Introduction to Python for Data Science.
 
-I'm a data scientist and educator at DataCamp and host of the DataFramed podcast, which you must check out. 
-
+I'm a data scientist and educator at DataCamp and host of the DataFramed podcast, which you must check out.
 
 ---
 
@@ -37,7 +36,7 @@ disable_transition: true
 ![im1.png](https://assets.datacamp.com/production/repositories/288/datasets/855eb1b4bc76c5adc2372bbd2f1575d1b75079cc/im1.png)
 
 `@script`
-In this course, 
+In this course,
 
 ---
 
@@ -53,7 +52,7 @@ disable_transition: true
 ![im2.png](https://assets.datacamp.com/production/repositories/288/datasets/17f43b4f62280f29b8b4d8351a014fae10e4227b/im2.png)
 
 `@script`
-you will learn Python for Data Science through video lessons, 
+you will learn Python for Data Science through video lessons,
 
 ---
 
@@ -69,7 +68,7 @@ disable_transition: true
 ![im3.png](https://assets.datacamp.com/production/repositories/288/datasets/99a374c5ee5855662c2c0bde73cc9a0d0c7faaf4/im3.png)
 
 `@script`
-like this one, and interactive exercises. 
+like this one, and interactive exercises.
 
 ---
 
@@ -85,7 +84,7 @@ disable_transition: true
 ![im4.png](https://assets.datacamp.com/production/repositories/288/datasets/0f7f11a8f122eccf859f6f5d48b8288db0b050f5/im4.png)
 
 `@script`
-You get your own Python session where you can experiment and 
+You get your own Python session where you can experiment and
 
 ---
 
@@ -149,7 +148,7 @@ disable_transition: true
 ![im8.png](https://assets.datacamp.com/production/repositories/288/datasets/134217f52690e2a0aad8cbadb95e3d91a83f1d3f/im8.png)
 
 `@script`
- and instant feedback on your work.
+and instant feedback on your work.
 
 ---
 
@@ -173,14 +172,10 @@ key: 3f23b93572
 
 - Version 3.x - https://www.python.org/downloads/{{6}}
 
-
-
 `@script`
 Python was conceived by Guido Van Rossum. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
 
 Currently, there are two common versions of Python, version 2-point-7 and 3-point-5 and later. Apart from some syntactical differences, they are pretty similar, but as support for version 2 will fade over time, our courses focus on Python 3. To install Python 3 on your own system, follow the steps at this URL.
-
-
 
 ---
 
@@ -197,7 +192,7 @@ Execute Python commands
 ![ch_1_1_slides.002.png](https://assets.datacamp.com/production/repositories/288/datasets/cb6182b201754f60f34c183b1fc90fcacfa2eaf3/ch_1_1_slides.002.png)
 
 `@script`
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. 
+Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here.
 
 ---
 
@@ -213,9 +208,7 @@ disable_transition: true
 ![im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/ca1d916c81bbf54c3ba1e0deb3706783f3556c4b/im_1.png)
 
 `@script`
-Let's start off simple and use Python as a calculator. Let me type 4 + 5 
-
-
+Let's start off simple and use Python as a calculator. Let me type 4 + 5
 
 ---
 
@@ -231,7 +224,7 @@ disable_transition: true
 ![im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/c82051c3a5857c7bc8077ec05004e6639cc0580e/im_2.png)
 
 `@script`
-and hit Enter. 
+and hit Enter.
 
 ---
 
@@ -249,7 +242,7 @@ disable_transition: true
 `@script`
 Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
 
-IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called 
+IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called
 
 ---
 
@@ -267,10 +260,8 @@ key: 78ef256bc0
 
 - Similar to typing in IPython Shell{{3}}
 
-
-
 `@script`
-python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now, 
+python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line. Let's put the command from before in a script now,
 
 ---
 
@@ -285,7 +276,7 @@ key: 719d500511
 ![im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/c82051c3a5857c7bc8077ec05004e6639cc0580e/im_2.png)
 
 `@script`
-that can be found here in DataCamp's interface. 
+that can be found here in DataCamp's interface.
 
 ---
 
@@ -317,7 +308,7 @@ disable_transition: true
 ![im_5.png](https://assets.datacamp.com/production/repositories/288/datasets/703e4622c7207a86742b3b5cc3c6267fbd2530ab/im_5.png)
 
 `@script`
-If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution. Let's wrap our previous calculation in a print call, 
+If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution. Let's wrap our previous calculation in a print call,
 
 ---
 
@@ -333,7 +324,7 @@ disable_transition: true
 ![im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/10d02b979555223b15a058ce7d70b64176d70efd/im_6.png)
 
 `@script`
-and rerun the script. 
+and rerun the script.
 
 ---
 
@@ -349,7 +340,7 @@ disable_transition: true
 ![im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/1194f04fed22a8350de661431655c15d2c7ff6bb/im_7.png)
 
 `@script`
-This time, the 
+This time, the
 
 ---
 
@@ -366,8 +357,6 @@ key: 7a8790e347
 `@script`
 same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
 
-
-
 ---
 
 ## DataCamp Interface
@@ -381,8 +370,7 @@ key: 693ba1cd14
 ![ch_1_1_slides.001.png](https://assets.datacamp.com/production/repositories/288/datasets/f70371d1d3dcc8eb318c30132c95a6189e85726a/ch_1_1_slides.001.png)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. 
-
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises.
 
 ---
 
@@ -398,7 +386,7 @@ disable_transition: true
 ![ch_1_1_slides.002.png](https://assets.datacamp.com/production/repositories/288/datasets/cb6182b201754f60f34c183b1fc90fcacfa2eaf3/ch_1_1_slides.002.png)
 
 `@script`
-Use the IPython Shell for experimentation, 
+Use the IPython Shell for experimentation,
 
 ---
 
@@ -414,8 +402,7 @@ disable_transition: true
 ![ch_1_1_slides.003.png](https://assets.datacamp.com/production/repositories/288/datasets/358eec4f33b609c324279c6b0c51017c3d598d86/ch_1_1_slides.003.png)
 
 `@script`
-and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. 
-
+and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
 
 ---
 
