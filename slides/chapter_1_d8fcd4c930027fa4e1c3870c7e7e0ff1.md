@@ -353,6 +353,7 @@ This time, the
 ```yaml
 type: FullSlide
 key: 7a8790e347
+disable_transition: true
 ```
 
 `@part1`

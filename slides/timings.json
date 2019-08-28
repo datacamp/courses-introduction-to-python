@@ -129,7 +129,99 @@
     {
       "timing": 0.458835738952972,
       "state": {
-        "indexh": 10
+        "indexh": 10,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.5180493163644451,
+      "state": {
+        "indexh": 11,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.5402401398608419,
+      "state": {
+        "indexh": 12,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.5455703077163538,
+      "state": {
+        "indexh": 13,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.6599779193514582,
+      "state": {
+        "indexh": 14,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.6724835577319018,
+      "state": {
+        "indexh": 14,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.689344447696935,
+      "state": {
+        "indexh": 14,
+        "indexf": 1
+      }
+    },
+    {
+      "timing": 0.7071014038569212,
+      "state": {
+        "indexh": 14,
+        "indexf": 2
+      }
+    },
+    {
+      "timing": 0.7275099507791124,
+      "state": {
+        "indexh": 15,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.738814557186065,
+      "state": {
+        "indexh": 16,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.7568588409068661,
+      "state": {
+        "indexh": 17,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.8191338586037987,
+      "state": {
+        "indexh": 18,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.824456891034219,
+      "state": {
+        "indexh": 19,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.8315586980118429,
+      "state": {
+        "indexh": 20,
+        "indexf": -1
       }
     }
   ]
