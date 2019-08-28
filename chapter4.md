@@ -553,6 +553,19 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 
 ---
 
+## 2D Numpy Arrays
+
+```yaml
+type: VideoExercise
+key: 1241efac7a
+xp: 50
+```
+
+`@projector_key`
+ae3238dcc7feb9adecfee0c395fc8dc8
+
+---
+
 ## Your First 2D NumPy Array
 
 ```yaml
@@ -935,6 +948,19 @@ success_msg("Great job! Notice how with very little code, you can change all val
 
 ---
 
+## Numpy: Basic Statistics
+
+```yaml
+type: VideoExercise
+key: 287995e488
+xp: 50
+```
+
+`@projector_key`
+34495ba457d74296794d2a122c9b6e19
+
+---
+
 ## Average versus median
 
 ```yaml
@@ -1274,29 +1300,3 @@ Ex().check_correct(
 
 success_msg("Wonderful! You were right and the disbelievers were wrong! This exercise marks the end of the Intro to Python for Data Science course. See you in another course!")
 ```
-
----
-
-## Numpy: Basic Statistics
-
-```yaml
-type: VideoExercise
-key: 287995e488
-xp: 50
-```
-
-`@projector_key`
-34495ba457d74296794d2a122c9b6e19
-
----
-
-## 2D Numpy Arrays
-
-```yaml
-type: VideoExercise
-key: 1241efac7a
-xp: 50
-```
-
-`@projector_key`
-ae3238dcc7feb9adecfee0c395fc8dc8
