@@ -15,23 +15,8 @@ name: Filip Schouwenaars
 title: Instructor
 
 `@script`
+
 Hi, my name is Filip and I'll be your host for Introduction to Python for Data Science. It's a long name, but that's to stress something: this is not just another Python tutorial. Instead, the focus will be on using Python specifically for data science. By the end of this course, you'll know about powerful ways to store and manipulate data and to deploy cool data science tools for your own analyses.
-
-
-
----
-
-## How you will learn
-
-```yaml
-type: FullSlide
-key: 207f1ae782
-```
-
-`@part1`
-Execute Python commands
-
-`@script`
 
 
 ---
@@ -48,7 +33,7 @@ disable_transition: true
 ![im1.png](https://assets.datacamp.com/production/repositories/288/datasets/855eb1b4bc76c5adc2372bbd2f1575d1b75079cc/im1.png)
 
 `@script`
-
+You will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
 
 ---
 
