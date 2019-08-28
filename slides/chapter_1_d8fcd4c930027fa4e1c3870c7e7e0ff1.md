@@ -361,7 +361,9 @@ key: 7a8790e347
 ![im_9.png](https://assets.datacamp.com/production/repositories/288/datasets/a80a8f82d55a3baa3e29e7c0471b7eab2aa9201b/im_9.png)
 
 `@script`
-same output as before is generated, great!
+same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
+
+
 
 ---
 
@@ -376,8 +378,7 @@ key: 693ba1cd14
 ![ch_1_1_slides.001.png](https://assets.datacamp.com/production/repositories/288/datasets/f70371d1d3dcc8eb318c30132c95a6189e85726a/ch_1_1_slides.001.png)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. 
-
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. 
 
 
 ---
@@ -394,7 +395,7 @@ disable_transition: true
 ![ch_1_1_slides.002.png](https://assets.datacamp.com/production/repositories/288/datasets/cb6182b201754f60f34c183b1fc90fcacfa2eaf3/ch_1_1_slides.002.png)
 
 `@script`
-
+Use the IPython Shell for experimentation, 
 
 ---
 
@@ -410,6 +411,7 @@ disable_transition: true
 ![ch_1_1_slides.003.png](https://assets.datacamp.com/production/repositories/288/datasets/358eec4f33b609c324279c6b0c51017c3d598d86/ch_1_1_slides.003.png)
 
 `@script`
+and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness. 
 
 
 ---
@@ -422,4 +424,4 @@ key: 7445cd202e
 ```
 
 `@script`
-Have fun!
+Get coding and don't forget to have fun!
