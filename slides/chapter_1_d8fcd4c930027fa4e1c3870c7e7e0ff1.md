@@ -201,25 +201,6 @@ Currently, there are two common versions of Python, version 2-point-7 and 3-poin
 
 ---
 
-## Python Script
-
-```yaml
-type: FullSlide
-key: 78ef256bc0
-```
-
-`@part1`
-- Text Files - .py
-
-- List of Python Commands
-
-- Similar to typing in IPython Shell
-
-`@script`
-
-
----
-
 ## IPython Shell
 
 ```yaml
@@ -341,6 +322,25 @@ key: 7a8790e347
 
 `@part1`
 ![im_9.png](https://assets.datacamp.com/production/repositories/288/datasets/a80a8f82d55a3baa3e29e7c0471b7eab2aa9201b/im_9.png)
+
+`@script`
+
+
+---
+
+## Python Script
+
+```yaml
+type: FullSlide
+key: 78ef256bc0
+```
+
+`@part1`
+- Text Files - .py
+
+- List of Python Commands
+
+- Similar to typing in IPython Shell
 
 `@script`
 
