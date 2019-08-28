@@ -231,6 +231,19 @@ success_msg("Time for another video!")
 
 ---
 
+## Variables and Types
+
+```yaml
+type: VideoExercise
+key: c2e396792e
+xp: 50
+```
+
+`@projector_key`
+433dcfcfedaee070cbf440491c402e3b
+
+---
+
 ## Variable Assignment
 
 ```yaml
@@ -707,16 +720,3 @@ msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](ht
 msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
-
----
-
-## Variables and Types
-
-```yaml
-type: VideoExercise
-key: c2e396792e
-xp: 50
-```
-
-`@projector_key`
-433dcfcfedaee070cbf440491c402e3b
