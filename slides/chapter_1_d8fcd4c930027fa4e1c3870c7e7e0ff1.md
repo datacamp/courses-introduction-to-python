@@ -98,7 +98,7 @@ Now that you've got an idea about different ways of working with Python, I sugge
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -114,7 +114,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -130,7 +130,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -146,7 +146,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -162,7 +162,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -178,7 +178,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -194,7 +194,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
@@ -210,7 +210,7 @@ disable_transition: true
 
 ---
 
-## Insert title here...
+## IPython Shell
 
 ```yaml
 type: FullSlide
