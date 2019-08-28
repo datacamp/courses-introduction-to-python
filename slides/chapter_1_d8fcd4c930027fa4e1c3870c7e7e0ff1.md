@@ -275,6 +275,21 @@ python scripts. These python scripts are simply text files with the extension (d
 
 ```yaml
 type: FullSlide
+key: 719d500511
+```
+
+`@part1`
+![im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/c82051c3a5857c7bc8077ec05004e6639cc0580e/im_2.png)
+
+`@script`
+that can be found here in DataCamp's interface. 
+
+---
+
+## IPython Shell
+
+```yaml
+type: FullSlide
 key: 717d124175
 disable_transition: true
 ```
@@ -283,7 +298,7 @@ disable_transition: true
 ![im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/2504cc9b039dd4b8d59406e49b7321b1ecde4646/im_4.png)
 
 `@script`
-that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'.
+The next step is executing the script, by clicking 'Submit Answer'.
 
 ---
 
@@ -299,7 +314,7 @@ disable_transition: true
 ![im_5.png](https://assets.datacamp.com/production/repositories/288/datasets/703e4622c7207a86742b3b5cc3c6267fbd2530ab/im_5.png)
 
 `@script`
-
+If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution. Let's wrap our previous calculation in a print call, 
 
 ---
 
@@ -315,7 +330,7 @@ disable_transition: true
 ![im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/10d02b979555223b15a058ce7d70b64176d70efd/im_6.png)
 
 `@script`
-
+and rerun the script. 
 
 ---
 
@@ -331,7 +346,7 @@ disable_transition: true
 ![im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/1194f04fed22a8350de661431655c15d2c7ff6bb/im_7.png)
 
 `@script`
-
+This time, the 
 
 ---
 
@@ -346,7 +361,7 @@ key: 7a8790e347
 ![im_9.png](https://assets.datacamp.com/production/repositories/288/datasets/a80a8f82d55a3baa3e29e7c0471b7eab2aa9201b/im_9.png)
 
 `@script`
-
+same output as before is generated, great!
 
 ---
 
