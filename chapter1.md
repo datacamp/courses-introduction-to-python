@@ -58,7 +58,7 @@ Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and
 # Example, do not modify!
 print(5 / 8)
 
-# Put code below here
+# Print the sum of 7 and 10
 
 ```
 
@@ -185,7 +185,7 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 The code in the script on the right gives some examples.
 
 `@instructions`
-Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code to calculate how much money you end up with after 7 years.
+Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code to calculate how much money you end up with after 7 years, and print the result.
 
 `@hint`
 After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
