@@ -599,5 +599,37 @@
         "indexf": -1
       }
     }
+  ],
+  "slides/chapter_2_fc15ba5cb9485456df8589130b519ea3.md": [
+    {
+      "timing": 0,
+      "state": {
+        "indexh": 0,
+        "indexf": -1
+      }
+    }
+  ],
+  "slides/chapter_2_355ed52d2fb0d67508c6a311b7cbc6d3.md": [
+    {
+      "timing": 0,
+      "state": {
+        "indexh": 0,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.001672973879810585,
+      "state": {
+        "indexh": 0,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.03946281454201404,
+      "state": {
+        "indexh": 1,
+        "indexf": -1
+      }
+    }
   ]
 }
