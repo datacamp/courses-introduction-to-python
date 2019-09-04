@@ -248,23 +248,23 @@ key: 24601e2af0
 ```
 
 `@part1`
-- Different type = different behavior!
-
 ```py
 2 + 3
-```
+```{{1}}
 
 ```out
 5
-```
+```{{1}}
 
 ```py
 'ab' + 'cd'
-```
+```{{2}}
 
 ```out
 'abcd'
-```
+```{{2}}
+
+- Different type = different behavior!{{3}}
 
 `@script`
 Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
