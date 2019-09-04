@@ -178,20 +178,20 @@ key: 9d86084ad4
 `@part1`
 ```py
 type(bmi)
-```
+```{{1}}
 
 ```out
 float
-```
+```{{1}}
 
 ```py
 day_of_week = 5
 type(day_of_week)
-```
+```{{2}}
 
 ```out
 int
-```
+```{{2}}
 
 `@script`
 In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
