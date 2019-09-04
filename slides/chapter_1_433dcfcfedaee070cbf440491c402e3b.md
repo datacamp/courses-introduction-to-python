@@ -211,21 +211,23 @@ key: d971d34e6a
 ```py
 x = "body mass index"
 y = 'this works too'
+```{{1}}
+```py
 type(y)
-```
+```{{2}}
 
 ```out
 str
-```
+```{{2}}
 
 ```py
 z = True
 type(z)
-```
+```{{3}}
 
 ```out
 bool
-```
+```{{3}}
 
 `@script`
 Python features tons of other data types. The most common ones are strings and booleans.
