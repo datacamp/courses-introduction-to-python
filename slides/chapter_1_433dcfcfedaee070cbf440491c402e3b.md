@@ -71,8 +71,6 @@ key: fe1b10a93b
 height = 1.79
 weight = 68.7
 ```
-
-
 ```py
 height
 ```
