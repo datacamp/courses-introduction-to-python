@@ -64,6 +64,7 @@ Python looks for the variable name, retrieves its value, and prints it out.
 ```yaml
 type: TwoColumns
 key: fe1b10a93b
+code_zoom: 80
 ```
 
 `@part1`
@@ -78,6 +79,8 @@ height
 ```out
 1.79
 ```
+
+$$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
 
 `@part2`
 ```py
