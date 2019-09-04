@@ -12,7 +12,7 @@ key: 0cc8abf493
 
 `@lower_third`
 name: Hugo Bowne-Anderson
-title: Instructor
+title: Data Scientist at DataCamp
 
 `@script`
 Let's recreate the numpy arrays from the previous video.
