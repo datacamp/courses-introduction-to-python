@@ -32,19 +32,21 @@ key: 36ec318b41
 `@part1`
 - Specific, case-sensitive name
 
-- Call up value through variable name
+- Call up value through variable name{{1}}
 
-- 1.79 m - 68.7 kg
+- 1.79 m - 68.7 kg{{2}}
 
 ```py
 height = 1.79
 weight = 68.7
+```{{3}}
+```py
 height
-```
+```{{4}}
 
 ```out
 1.79
-```
+```{{4}}
 
 `@script`
 You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
