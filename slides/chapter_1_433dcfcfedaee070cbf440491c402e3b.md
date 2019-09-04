@@ -14,7 +14,7 @@ key: dc8b62f1c8
 ```
 
 `@lower_third`
-name: Filip Schouwenaars
+name: Hugo Bowne-Anderson
 title: Instructor, DataCamp
 
 `@script`

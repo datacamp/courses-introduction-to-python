@@ -11,7 +11,7 @@ key: 0cc8abf493
 ```
 
 `@lower_third`
-name: Filip Schouwenaars
+name: Hugo Bowne-Anderson
 title: Instructor
 
 `@script`
