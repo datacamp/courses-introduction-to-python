@@ -85,28 +85,28 @@ $$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
 `@part2`
 ```py
 68.7 / 1.79 ** 2
-```
+```{{2}}
 
 ```out
 21.4413
-```
+```{{2}}
 
 ```py
 weight / height ** 2
-```
+```{{3}}
 
 ```out
 21.4413
-```
+```{{3}}
 
 ```py
 bmi = weight / height ** 2
 bmi
-```
+```{{4}}
 
 ```out
 21.4413
-```
+```{{4}}
 
 `@script`
 Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68-point-7, and height to 1-point-79.
