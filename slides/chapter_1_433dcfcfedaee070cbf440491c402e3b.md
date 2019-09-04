@@ -137,9 +137,7 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight, you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
-
-So far, we've only worked with numerical values, such as height and weight.
+Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight, 
 
 ---
 
@@ -148,12 +146,13 @@ So far, we've only worked with numerical values, such as height and weight.
 ```yaml
 type: FullSlide
 key: a4e899f00f
+disable_transition: true
 ```
 
 `@part1`
 ```py
 height = 1.79
-weight = 74.2
+weight = 74.2 # <-
 bmi = weight / height ** 2
 print(bmi)
 ```
@@ -163,7 +162,9 @@ print(bmi)
 ```
 
 `@script`
+you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
 
+So far, we've only worked with numerical values, such as height and weight.
 
 ---
 
