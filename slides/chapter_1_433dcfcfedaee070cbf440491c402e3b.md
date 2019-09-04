@@ -15,7 +15,7 @@ name: Filip Schouwenaars
 title: Instructor, DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along. 
+Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
 
 ---
 
@@ -52,8 +52,6 @@ If you now type the name of the variable, height,
 
 Python looks for the variable name, retrieves its value, and prints it out.
 
-
-
 ---
 
 ## Calculate BMI
@@ -79,7 +77,6 @@ height
 ```
 
 `@part2`
-
 ```py
 68.7 / 1.79 ** 2
 ```
@@ -110,7 +107,7 @@ Let's now calculate the Body Mass Index, or BMI, which is calculated as follows,
 
 Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
 
-In Python, variables are used all the time. They help to make your code reproducible. 
+In Python, variables are used all the time. They help to make your code reproducible.
 
 ---
 
@@ -136,7 +133,7 @@ print(bmi)
 `@script`
 Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight, you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
 
-So far, we've only worked with numerical values, such as height and weight. 
+So far, we've only worked with numerical values, such as height and weight.
 
 ---
 
@@ -192,7 +189,7 @@ int
 `@script`
 In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
 
-To do data science, you'll need more than ints and floats, though. 
+To do data science, you'll need more than ints and floats, though.
 
 ---
 
@@ -230,7 +227,7 @@ A string is Python's way to represent text. You can use both double and single q
 
 The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
 
-There's something special about Python data types. 
+There's something special about Python data types.
 
 ---
 
@@ -265,7 +262,7 @@ Have a look at this line of code, that sums two integers, and then this line of 
 
 For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists. 
+In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
 
 ---
 
