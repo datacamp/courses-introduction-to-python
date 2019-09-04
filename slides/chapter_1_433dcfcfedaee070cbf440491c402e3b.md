@@ -12,7 +12,7 @@ key: dc8b62f1c8
 
 `@lower_third`
 name: Filip Schouwenaars
-title: Instructor
+title: Instructor, DataCamp
 
 `@script`
 Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along. 
