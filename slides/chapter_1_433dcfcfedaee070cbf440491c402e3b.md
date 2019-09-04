@@ -59,7 +59,7 @@ Python looks for the variable name, retrieves its value, and prints it out.
 ## Calculate BMI
 
 ```yaml
-type: FullSlide
+type: TwoColumns
 key: fe1b10a93b
 ```
 
@@ -77,6 +77,8 @@ height
 ```out
 1.79
 ```
+
+`@part2`
 
 ```py
 68.7 / 1.79 ** 2
