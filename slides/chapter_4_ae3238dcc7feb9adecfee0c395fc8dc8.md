@@ -53,6 +53,8 @@ key: 1b9db47fd2
 import numpy as np
 np_height = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
 np_weight = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
+```
+```py
 type(np_height)
 ```
 
@@ -78,6 +80,7 @@ numpy.ndarray
 ```yaml
 type: FullSlide
 key: ebb550dcba
+code_zoom: 60
 ```
 
 `@part1`
@@ -154,6 +157,7 @@ np_2d[0][2]
 ```yaml
 type: FullSlide
 key: 5417c722e9
+code_zoom: 70
 ```
 
 `@part1`
@@ -192,6 +196,7 @@ array([[1.68, 1.71],
 ```yaml
 type: FullSlide
 key: e71d2fc8b8
+code_zoom: 60
 ```
 
 `@part1`
