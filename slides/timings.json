@@ -1097,5 +1097,39 @@
         "indexf": 0
       }
     }
+  ],
+  "slides/chapter_4_34495ba457d74296794d2a122c9b6e19.md": [
+    {
+      "timing": 0,
+      "state": {
+        "indexh": 0,
+        "indexf": -1
+      }
+    }
+  ],
+  "slides/chapter_4_a0487c26210f6b71ea98f917734cea3a.md": [
+    {
+      "timing": 0,
+      "state": {
+        "indexh": 0,
+        "indexf": -1
+      }
+    }
+  ],
+  "slides/chapter_3_cedcfb34350be8545599768f96695cdd.md": [
+    {
+      "timing": 0,
+      "state": {
+        "indexh": 0,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.0016339295605876417,
+      "state": {
+        "indexh": 0,
+        "indexf": 0
+      }
+    }
   ]
 }
