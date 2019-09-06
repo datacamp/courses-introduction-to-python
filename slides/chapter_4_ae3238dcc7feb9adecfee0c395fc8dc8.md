@@ -128,6 +128,7 @@ np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
 ```yaml
 type: FullSlide
 key: e0062fa1e4
+code_zoom: 60
 ```
 
 `@part1`
@@ -157,7 +158,7 @@ np_2d[0][2]
 ```yaml
 type: FullSlide
 key: 5417c722e9
-code_zoom: 70
+code_zoom: 60
 ```
 
 `@part1`
