@@ -120,6 +120,13 @@ code_zoom: 60
 ```
 
 `@part1`
+```out
+           0       1       2       3       4
+           
+array([[  1.73,   1.68,   1.71,   1.89,   1.79],     0
+       [  65.4,   59.2,   63.6,   88.4,   68.7]])    1
+```
+
 ```py
 np_2d[0]
 ```
@@ -141,8 +148,8 @@ np_2d[:,1:3]
 ```
 
 ```out
-array([[1.68, 1.71],
-       [59.2 , 63.6]])
+array([[  1.68,  1.71],
+       [ 59.2 , 63.6 ]])
 ```
 
 ```py
@@ -162,11 +169,26 @@ To then select the third element, you can extend the same call with another pair
 
 There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned.
 
-Once you get used to it, this syntax is more intuitive and opens up more possibilities. Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Once you get used to it, this syntax is more intuitive and opens up more possibilities. 
+
+---
+
+## Insert title here...
+
+```yaml
+type: FullSlide
+key: feb75c975c
+```
+
+`@part1`
+
+
+`@script`
+Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
 
 Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
 
 ---
 
