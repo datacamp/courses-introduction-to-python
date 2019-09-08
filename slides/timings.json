@@ -1389,6 +1389,55 @@
         "indexh": 7,
         "indexf": -1
       }
+    },
+    {
+      "timing": 0.5768892674388447,
+      "state": {
+        "indexh": 7,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.5897783984924699,
+      "state": {
+        "indexh": 7,
+        "indexf": 1
+      }
+    },
+    {
+      "timing": 0.6244069913989276,
+      "state": {
+        "indexh": 7,
+        "indexf": 2
+      }
+    },
+    {
+      "timing": 0.6329809489482306,
+      "state": {
+        "indexh": 7,
+        "indexf": 3
+      }
+    },
+    {
+      "timing": 0.6487343697609214,
+      "state": {
+        "indexh": 8,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.6618186864654386,
+      "state": {
+        "indexh": 8,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.7336305143361925,
+      "state": {
+        "indexh": 9,
+        "indexf": -1
+      }
     }
   ],
   "slides/chapter_4_34495ba457d74296794d2a122c9b6e19.md": [
