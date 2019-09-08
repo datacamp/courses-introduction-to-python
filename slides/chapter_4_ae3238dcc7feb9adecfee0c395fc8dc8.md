@@ -75,7 +75,6 @@ code_zoom: 60
 np_2d = np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
                   [65.4, 59.2, 63.6, 88.4, 68.7]])
 ```{{1}}
-
 ```py
 np_2d
 ```{{2}}
@@ -96,13 +95,13 @@ np_2d.shape
 ```py
 np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
           [65.4, 59.2, 63.6, 88.4, "68.7"]])
-```
+```{{4}}
 
 ```out
 array([['1.73', '1.68', '1.71', '1.89', '1.79'],
        ['65.4', '59.2', '63.6', '88.4', '68.7']],
       dtype='<U32')
-```
+```{{4}}
 
 `@script`
 You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
