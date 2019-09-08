@@ -26,6 +26,7 @@ Well done you legend! Let's recreate the numpy arrays from the previous video.
 ```yaml
 type: FullSlide
 key: 1b9db47fd2
+code_zoom: 90
 ```
 
 `@part1`
@@ -34,6 +35,7 @@ import numpy as np
 np_height = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
 np_weight = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```
+
 ```py
 type(np_height)
 ```
@@ -116,7 +118,7 @@ Also for 2D arrays, the Numpy rule applies: an array can only contain a single t
 ```yaml
 type: FullSlide
 key: e71d2fc8b8
-code_zoom: 60
+code_zoom: 80
 ```
 
 `@part1`
@@ -132,7 +134,36 @@ np_2d[0]
 ```
 
 ```out
-array([1.73, 1.68, 1.71, 1.89, 1.79])
+array([ 1.73,  1.68,  1.71,  1.89,  1.79])
+```
+
+
+
+`@script`
+You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+
+Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets.
+
+To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2, 
+Once you get used to it, this syntax is more intuitive and opens up more possibilities. 
+
+---
+
+## Subsetting
+
+```yaml
+type: FullSlide
+key: 57a1fb1581
+disable_transition: true
+code_zoom: 80
+```
+
+`@part1`
+```out
+           0       1       2       3       4
+           
+array([[  1.73,   1.68,   1.71,   1.89,   1.79],     0
+       [  65.4,   59.2,   63.6,   88.4,   68.7]])    1
 ```
 
 ```py
@@ -141,6 +172,39 @@ np_2d[0][2]
 
 ```out
 1.71
+```
+
+```py
+np_2d[0,2]
+```{{1}}
+
+```out
+1.71
+```{{1}}
+
+`@script`
+like this. Basically you're selecting the row, and then from that row do another selection.
+
+There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned.
+
+
+---
+
+## Subsetting
+
+```yaml
+type: FullSlide
+key: feb75c975c
+disable_transition: true
+code_zoom: 80
+```
+
+`@part1`
+```out
+           0       1       2       3       4
+           
+array([[  1.73,   1.68,   1.71,   1.89,   1.79],     0
+       [  65.4,   59.2,   63.6,   88.4,   68.7]])    1
 ```
 
 ```py
@@ -157,31 +221,8 @@ np_2d[1,:]
 ```
 
 ```out
-array([65.4, 59.2, 63.6, 88.4, 68.7])
+array([  65.4,  59.2,  63.6,  88.4,  68.7])
 ```
-
-`@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
-
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets.
-
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2, like this. Basically you're selecting the row, and then from that row do another selection.
-
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned.
-
-Once you get used to it, this syntax is more intuitive and opens up more possibilities. 
-
----
-
-## Insert title here...
-
-```yaml
-type: FullSlide
-key: feb75c975c
-```
-
-`@part1`
-
 
 `@script`
 Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
