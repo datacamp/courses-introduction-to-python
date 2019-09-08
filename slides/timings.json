@@ -677,6 +677,68 @@
         "indexh": 4,
         "indexf": -1
       }
+    },
+    {
+      "timing": 0.45140850547190475,
+      "state": {
+        "indexh": 4,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.5701899900180148,
+      "state": {
+        "indexh": 4,
+        "indexf": 1
+      }
+    },
+    {
+      "timing": 0.622699714396069,
+      "state": {
+        "indexh": 4,
+        "indexf": 2
+      }
+    },
+    {
+      "timing": 0.7054929379418935,
+      "state": {
+        "indexh": 4,
+        "indexf": 3
+      }
+    },
+    {
+      "timing": 0.7414187774846519,
+      "state": {
+        "indexh": 4,
+        "indexf": 4
+      }
+    },
+    {
+      "timing": 0.8033314841740911,
+      "state": {
+        "indexh": 5,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.8430838862589054,
+      "state": {
+        "indexh": 5,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.8903795304490586,
+      "state": {
+        "indexh": 5,
+        "indexf": 1
+      }
+    },
+    {
+      "timing": 0.9099276872328292,
+      "state": {
+        "indexh": 6
+      }
     }
   ],
   "slides/chapter_2_355ed52d2fb0d67508c6a311b7cbc6d3.md": [
