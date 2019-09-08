@@ -1843,14 +1843,42 @@
       }
     },
     {
-      "timing": 0.7783519772902575,
+      "timing": 0.5763926195428003,
+      "state": {
+        "indexh": 6,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.6965969079939668,
       "state": {
         "indexh": 7,
         "indexf": -1
       }
     },
     {
-      "timing": 0.9776113437228403,
+      "timing": 0.7099408970827711,
+      "state": {
+        "indexh": 7,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.7340558800561704,
+      "state": {
+        "indexh": 7,
+        "indexf": 1
+      }
+    },
+    {
+      "timing": 0.7599265365130382,
+      "state": {
+        "indexh": 7,
+        "indexf": 2
+      }
+    },
+    {
+      "timing": 0.7795531674208145,
       "state": {
         "indexh": 8,
         "indexf": -1
