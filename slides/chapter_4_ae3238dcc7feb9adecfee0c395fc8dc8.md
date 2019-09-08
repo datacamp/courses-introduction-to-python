@@ -20,8 +20,6 @@ title: Data Scientist at DataCamp
 `@script`
 Well done you legend! Let's now recreate the numpy arrays from the previous video.
 
-
-
 ---
 
 ## Type of Numpy Arrays
@@ -57,8 +55,6 @@ numpy.ndarray
 
 `@script`
 If you ask for the type of these arrays, Python tells you that they are numpy-dot-ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
-
-
 
 ---
 
@@ -110,8 +106,6 @@ If you print out np_2d now, you'll see that it is a rectangular data structure: 
 
 Also for 2D arrays, the Numpy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
 
-
-
 ---
 
 ## Subsetting
@@ -138,15 +132,12 @@ np_2d[0]
 array([ 1.73,  1.68,  1.71,  1.89,  1.79])
 ```
 
-
-
 `@script`
 You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
 
 Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2, 
-
+To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
 
 ---
 
@@ -186,8 +177,7 @@ np_2d[0,2]
 `@script`
 like this. Basically you're selecting the row, and then from that row do another selection.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities. 
-
+There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
 
 ---
 
