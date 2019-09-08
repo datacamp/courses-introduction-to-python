@@ -18,7 +18,7 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's recreate the numpy arrays from the previous video.
+Well done you legend! Let's now recreate the numpy arrays from the previous video.
 
 
 
