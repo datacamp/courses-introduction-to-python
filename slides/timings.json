@@ -1312,6 +1312,83 @@
         "indexh": 5,
         "indexf": -1
       }
+    },
+    {
+      "timing": 0.3282510308794704,
+      "state": {
+        "indexh": 5,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.3552761963391209,
+      "state": {
+        "indexh": 5,
+        "indexf": 1
+      }
+    },
+    {
+      "timing": 0.3933502840763826,
+      "state": {
+        "indexh": 5,
+        "indexf": 2
+      }
+    },
+    {
+      "timing": 0.41947355224951266,
+      "state": {
+        "indexh": 5,
+        "indexf": 3
+      }
+    },
+    {
+      "timing": 0.4702400473567137,
+      "state": {
+        "indexh": 6,
+        "indexf": -1
+      }
+    },
+    {
+      "timing": 0.48771748627338685,
+      "state": {
+        "indexh": 6,
+        "indexf": 0
+      }
+    },
+    {
+      "timing": 0.4988785202823599,
+      "state": {
+        "indexh": 6,
+        "indexf": 1
+      }
+    },
+    {
+      "timing": 0.5131195184173984,
+      "state": {
+        "indexh": 6,
+        "indexf": 2
+      }
+    },
+    {
+      "timing": 0.5423533650473551,
+      "state": {
+        "indexh": 6,
+        "indexf": 3
+      }
+    },
+    {
+      "timing": 0.5565535222203116,
+      "state": {
+        "indexh": 6,
+        "indexf": 4
+      }
+    },
+    {
+      "timing": 0.5726500532110702,
+      "state": {
+        "indexh": 7,
+        "indexf": -1
+      }
     }
   ],
   "slides/chapter_4_34495ba457d74296794d2a122c9b6e19.md": [
