@@ -145,7 +145,7 @@ You can think of the 2D numpy array as an improved list of lists: you can perfor
 Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets.
 
 To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2, 
-Once you get used to it, this syntax is more intuitive and opens up more possibilities. 
+
 
 ---
 
@@ -185,7 +185,7 @@ np_2d[0,2]
 `@script`
 like this. Basically you're selecting the row, and then from that row do another selection.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned.
+There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities. 
 
 
 ---
