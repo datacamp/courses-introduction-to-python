@@ -10,16 +10,12 @@ attachments:
 
 ```yaml
 type: VideoExercise
-key: 2dde2f90b8
-lang: python
+key: 5c5f365930
 xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154563189
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch3_1.master.m3u8
 ```
 
 `@projector_key`
-abe8835964fe3385a3f0283b7a605f5f
+1204d914b0e53100529827e07441ee6c
 
 ---
 
@@ -260,16 +256,12 @@ success_msg("Cool! Head over to the video on Python methods.")
 
 ```yaml
 type: VideoExercise
-key: e1aaeb300b
-lang: python
+key: 2b66cb66b1
 xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154563307
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
 ```
 
 `@projector_key`
-cf2471efdf2df82d911fb0cfcf0466f6
+8e387776f3a264a745128b68aa8d8f83
 
 ---
 
@@ -521,16 +513,12 @@ success_msg("Great!")
 
 ```yaml
 type: VideoExercise
-key: 2b89c5a9d8
-lang: python
+key: ab96a17c5e
 xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/146994272
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
 ```
 
 `@projector_key`
-c550d2f388d2718361d55e101c6c3887
+cedcfb34350be8545599768f96695cdd
 
 ---
 

@@ -11,16 +11,12 @@ free_preview: true
 
 ```yaml
 type: VideoExercise
-key: d5509896f7
-lang: python
+key: f644a48d5d
 xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/146994261
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
 ```
 
 `@projector_key`
-5f61a677bf62c17b450465ee849823ee
+d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
@@ -235,20 +231,16 @@ success_msg("Time for another video!")
 
 ---
 
-## Variables & Types
+## Variables and Types
 
 ```yaml
 type: VideoExercise
-key: ef8356fb92
-lang: python
+key: c2e396792e
 xp: 50
-skills: 2
-video_link: //player.vimeo.com/video/154561704
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
 ```
 
 `@projector_key`
-7df0925250c5fb2a647cd76fb09d446e
+433dcfcfedaee070cbf440491c402e3b
 
 ---
 
