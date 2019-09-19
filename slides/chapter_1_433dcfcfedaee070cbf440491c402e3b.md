@@ -7,7 +7,7 @@ video_link:
 transformations:
     translateX: 52
     translateY: 0
-    scale: 0.9
+    scale: 1
 ---
 
 ## Variables and Types
