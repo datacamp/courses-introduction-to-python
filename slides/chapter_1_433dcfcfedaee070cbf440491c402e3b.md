@@ -5,7 +5,7 @@ video_link:
     mp4: 'https://s3.amazonaws.com/videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
     hls: 'https://s3.amazonaws.com/videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8'
 transformations:
-    translateX: -15
+    translateX: 52
     translateY: 0
     scale: 0.9
 ---
