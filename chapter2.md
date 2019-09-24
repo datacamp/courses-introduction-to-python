@@ -587,7 +587,7 @@ xp: 100
 skills: 2
 ```
 
-In the video, Filip first discussed the syntax where you specify both where to begin and end the slice of your list:
+In the video, Hugo first discussed the syntax where you specify both where to begin and end the slice of your list:
 
 ```
 my_list[begin:end]

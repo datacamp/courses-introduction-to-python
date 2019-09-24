@@ -139,7 +139,7 @@ Use the Shell on the right to open up the documentation on [`complex()`](https:/
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
 
 `@hint`
-The help file shows `complex(real[, imag])`. Do you remember what Filip told you about these square brackets?
+The help file shows `complex(real[, imag])`. Do you remember what Hugo told you about these square brackets?
 
 `@pre_exercise_code`
 ```{python}
