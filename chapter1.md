@@ -20,7 +20,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## The Python Interface
+## How it works
 
 ```yaml
 type: NormalExercise
