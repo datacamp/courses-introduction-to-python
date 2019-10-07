@@ -30,7 +30,7 @@ xp: 100
 skills: 2
 ```
 
-In the editor on the right you should type Python code to solve the exercises. When you hit the 'Submit Answer' button, every line of code is interpreted and executed by R and you get a message whether or not your code was correct. The output of your Python code is shown in the console in the lower right corner.
+In the editor on the right you should type Python code to solve the exercises. When you hit the 'Submit Answer' button, every line of code is interpreted and executed by Python and you get a message whether or not your code was correct. The output of your Python code is shown in the console in the lower right corner.
 
 Python makes use of the `#` sign to add comments, so that you and others can understand what the Python code is about. Just like Twitter! Comments are not run as Python code, so they will not influence your result. For example, *Print 5 + 8* in the editor on the right is a comment.
 
