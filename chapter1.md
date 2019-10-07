@@ -38,11 +38,10 @@ You can also execute Python commands straight in the console. This is a good way
 
 `@instructions`
 - In the editor there is already some sample code. *Can you see which lines are Python code and which are comments?*
-- In the Python script (not in the Shell) print 7 plus 10.
-- Hit _Submit Answer_ to execute the Python script and receive feedback.
+- Add a line of code that prints 7 plus 10 and hit the _Submit Answer_ button.
 
 `@hint`
-Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and hit 'Submit Answer'.
+Write `print(7 + 10)` in the script editor (not in the shell) and hit 'Submit Answer'.
 
 `@pre_exercise_code`
 ```{python}
