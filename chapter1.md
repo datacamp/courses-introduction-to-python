@@ -30,11 +30,11 @@ xp: 100
 skills: 2
 ```
 
-In the Python script, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. _Submit Answer_ checks whether your submission is correct and gives you feedback.
+In the editor on the right you should type Python code to solve the exercises. When you hit the 'Submit Answer' button, every line of code is interpreted and executed by R and you get a message whether or not your code was correct. The output of your Python code is shown in the console in the lower right corner.
 
-You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+Python makes use of the `#` sign to add comments, so that you and others can understand what the Python code is about. Just like Twitter! Comments are not run as Python code, so they will not influence your result. For example, *Print 5 + 8* in the editor on the right is a comment.
 
-You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
+You can also execute Python commands straight in the console. This is a good way to experiment with Python code, as your submission is not checked for correctness.
 
 `@instructions`
 - In the editor there is already some sample code. *Can you see which lines are Python code and which are comments?*
