@@ -1441,21 +1441,35 @@
       }
     },
     {
-      "timing": 0.7553707707484715,
+      "timing": 0.756750599050686,
       "state": {
         "indexh": 9,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7621950295472553,
+      "timing": 0.7710240918647784,
       "state": {
         "indexh": 9,
         "indexf": 1
       }
     },
     {
-      "timing": 0.8727404284290932,
+      "timing": 0.790735105750906,
+      "state": {
+        "indexh": 9,
+        "indexf": 2
+      }
+    },
+    {
+      "timing": 0.8179227111110821,
+      "state": {
+        "indexh": 9,
+        "indexf": 3
+      }
+    },
+    {
+      "timing": 0.8675818217665615,
       "state": {
         "indexh": 10,
         "indexf": -1
