@@ -716,7 +716,7 @@ Copy and paste the different expressions into the IPython Shell and try to figur
 ```{python}
 msg1 = "Incorrect, this command runs perfectly fine."
 msg2 = "It's perfectly possible to 'multiply strings' in Python..."
-msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
+msg3 = "Correct! Because you're not converting `2` to a string with [str()](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
