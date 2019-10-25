@@ -595,15 +595,15 @@ skills: 2
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
-Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
+Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the integer `savings` and float `result` are defined, you can try something like this:
 
 ```
 print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 ```
 
-This will not work, though, as you cannot simply sum strings and floats.
+This will not work, though, as you cannot simply sum strings and integers/floats.
 
-To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string.
+To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
 
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
@@ -716,7 +716,7 @@ Copy and paste the different expressions into the IPython Shell and try to figur
 ```{python}
 msg1 = "Incorrect, this command runs perfectly fine."
 msg2 = "It's perfectly possible to 'multiply strings' in Python..."
-msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
+msg3 = "Correct! Because you're not converting `2` to a string with [str()](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
