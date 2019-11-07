@@ -73,7 +73,7 @@ Currently, there are two common versions of Python, version 2-point-7 and 3-poin
 
 ---
 
-## IPython Shell
+## IPython Shell 
 
 ```yaml
 type: FullSlide
@@ -81,12 +81,12 @@ key: 43a91a7217
 ```
 
 `@part1`
-Execute Python commands
+**Execute Python commands**
 
-![im_interface.png](https://assets.datacamp.com/production/repositories/288/datasets/baae2c2c02551284c4253583b4396307b3561a15/im_interface.png)
+![im_interface.png](https://assets.datacamp.com/production/repositories/288/datasets/6d7582936bef6e37a9d7c8631a331eb82c288cbb/shell_selected.png)
 
 `@script`
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here.
+Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
 
 ---
 
@@ -99,42 +99,10 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/92b564ad29678d3f128399ceed9cde4350c7a885/v2_im_1.png)
+![v2_im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/fdab8fd3b088d6514d3f9a34326f47792bc50d64/shell_gif.gif)
 
 `@script`
-Let's start off simple and use Python as a calculator. Let me type 4 + 5
-
----
-
-## IPython Shell
-
-```yaml
-type: FullSlide
-key: a4f0f4cf69
-disable_transition: true
-```
-
-`@part1`
-![v2_im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/70799d49563b79a8709b2edb325462760a22d204/v2_im_2.png)
-
-`@script`
-and hit Enter.
-
----
-
-## IPython Shell
-
-```yaml
-type: FullSlide
-key: b1718925d8
-disable_transition: true
-```
-
-`@part1`
-![v2_im_3.png](https://assets.datacamp.com/production/repositories/288/datasets/61055aa5adf6d3181fa46274f74059d42e1bea91/v2_im_3.png)
-
-`@script`
-Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
 
 IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called
 
