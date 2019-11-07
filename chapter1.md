@@ -369,11 +369,11 @@ print(result)
 
 `@sct`
 ```{python}
-Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="The value of `growth_multiplier` should be `1.1`.")
-Ex().check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?")
-Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
-success_msg("Great!")
+# Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
+# Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="The value of `growth_multiplier` should be `1.1`.")
+# Ex().check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?")
+# Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
+# success_msg("Great!")
 ```
 
 ---

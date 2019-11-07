@@ -248,8 +248,6 @@ disable_transition: true
 ```
 
 `@part1`
-![im_3.png](https://assets.datacamp.com/production/repositories/288/datasets/17e1bf08fd2111fe2fd0f2c31ad2b505b1198461/im_3.png)
-
 ![v2_im_3.png](https://assets.datacamp.com/production/repositories/288/datasets/61055aa5adf6d3181fa46274f74059d42e1bea91/v2_im_3.png)
 
 `@script`
@@ -267,9 +265,9 @@ key: 78ef256bc0
 ```
 
 `@part1`
-- Text Files - .py{{1}}
+- Text files - .py{{1}}
 
-- List of Python Commands{{2}}
+- List of Python commands{{2}}
 
 - Similar to typing in IPython Shell{{3}}
 
@@ -286,7 +284,7 @@ key: 719d500511
 ```
 
 `@part1`
-![v2_im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/70799d49563b79a8709b2edb325462760a22d204/v2_im_2.png)
+![v2_im_2.png](https://assets.datacamp.com/production/repositories/288/datasets/2b1f6bdde6857bb4aaee2f31b91abe93c917989b/script_0_selected.png)
 
 `@script`
 that can be found here in DataCamp's interface.
@@ -302,7 +300,7 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/02376d8fcd175c8fef1e16c65688e385ebca68ea/v2_im_4.png)
+![v2_im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/382ece0fbd9ab930d650de358a47c0284d740d5c/script_1_selected.png)
 
 `@script`
 The next step is executing the script, by clicking 'Submit Answer'.
@@ -318,7 +316,7 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im_5.png](https://assets.datacamp.com/production/repositories/288/datasets/719ede3350f29b3a159f3c63c325657589874537/v2_im_5.png)
+![v2_im_5.png](https://assets.datacamp.com/production/repositories/288/datasets/375c52f446625e75a4c4fe84b24487256610aca1/script_1.png)
 
 `@script`
 If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution. Let's wrap our previous calculation in a print call,
@@ -334,7 +332,7 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/730a523d51d9d67476a0d0f139a8024fcbc29ce8/v2_im_6.png)
+![v2_im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/497e0fa9f5a4e8c2dcd02df04513470281a06fc0/script_3.png)
 
 `@script`
 and rerun the script.
@@ -350,7 +348,7 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/d91c419b565eaa2626b69b2ddad7c68e5438dd48/v2_im_7.png)
+![v2_im_7.png](https://assets.datacamp.com/production/repositories/288/datasets/497e0fa9f5a4e8c2dcd02df04513470281a06fc0/script_3.png)
 
 `@script`
 This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
