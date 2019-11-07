@@ -73,7 +73,7 @@ Currently, there are two common versions of Python, version 2-point-7 and 3-poin
 
 ---
 
-## IPython Shell 
+## IPython Shell
 
 ```yaml
 type: FullSlide
