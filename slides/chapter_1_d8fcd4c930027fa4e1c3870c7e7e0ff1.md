@@ -52,17 +52,17 @@ key: 3f23b93572
 ```
 
 `@part1`
-![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 40){{2}}
+![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 40){{1}}
 
-- General Purpose: build anything{{3}}
+- General purpose: build anything{{2}}
 
-- Open Source! Free!{{4}}
+- Open source! Free!{{3}}
 
-- Python Packages, also for Data Science{{5}}
+- Python packages, also for data science{{4}}
 
-	- Many applications and fields{{6}}
+	- Many applications and fields{{5}}
 
-- Version 3.x - https://www.python.org/downloads/{{7}}
+- Version 3.x - https://www.python.org/downloads/{{6}}
 
 `@script`
 Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
