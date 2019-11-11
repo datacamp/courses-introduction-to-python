@@ -3,7 +3,7 @@ title_meta: 'Chapter 4'
 title: NumPy
 description: 'NumPy is a fundamental Python package to efficiently practice data science. Learn to work with powerful tools in the NumPy array, and get started with data exploration.'
 attachments:
-    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_4527/slides/ch4_slides.pdf'
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter1.pdf'
 ---
 
 ## Numpy
