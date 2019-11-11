@@ -106,7 +106,7 @@ Ex().check_correct(
   check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The [`len()`](https://docs.python.org/3/library/functions.html#len) function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
 ```
 
 ---
