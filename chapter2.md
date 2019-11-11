@@ -3,7 +3,7 @@ title_meta: 'Chapter 2'
 title: 'Python Lists'
 description: 'Learn to store, access, and manipulate data in lists: the first step toward efficiently working with huge amounts of data.'
 attachments:
-    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch2_slides.pdf'
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter2.pdf'
 ---
 
 ## Python Lists
