@@ -3,7 +3,7 @@ title_meta: 'Chapter 1'
 title: 'Python Basics'
 description: 'An introduction to the basic concepts of Python. Learn how to use Python interactively and by using a script. Create your first variables and acquaint yourself with Python''s basic data types.'
 attachments:
-    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf'
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter1.pdf'
 free_preview: true
 ---
 
@@ -370,8 +370,15 @@ print(result)
 `@sct`
 ```{python}
 Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="The value of `growth_multiplier` should be `1.1`.")
-Ex().check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?")
+Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="Did you assign the correct value to `growth_multiplier`?")
+Ex().check_correct(
+  check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
+  multi(
+    has_code("savings\s*\*\s*\(*\s*growth_multiplier", not_typed_msg = "Did you multiply `savings` by `growth_multiplier ** 7`?"),      
+    has_code("growth_multiplier\s*\*\*\s*7", not_typed_msg = "Did you raise `growth_multiplier` to the power of `7` using `**`?")   
+  )
+)
+
 Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
 success_msg("Great!")
 ```
