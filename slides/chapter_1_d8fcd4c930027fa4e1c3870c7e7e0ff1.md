@@ -52,7 +52,7 @@ key: 3f23b93572
 ```
 
 `@part1`
-![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 40){{1}}
+![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
 
 - General purpose: build anything{{2}}
 
@@ -155,7 +155,7 @@ code_zoom: 90
 ```
 
 `@part1`
-![v2_im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/c3db89a4e008471ce1c4a80ed7abf39036635fec/script_2.gif)
+![v2_im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/c3db89a4e008471ce1c4a80ed7abf39036635fec/script_2.gif = 96)
 - Use `print()` to generate output from script
 
 `@script`
