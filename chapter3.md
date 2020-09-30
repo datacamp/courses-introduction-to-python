@@ -130,7 +130,7 @@ help(max)
 ?max
 ```
 
-Use the Shell on the right to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
+Use the Shell to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
 
 `@possible_answers`
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
@@ -181,7 +181,7 @@ In this exercise, you'll only have to specify `iterable` and `reverse`, not `key
 sorted(___, reverse = ___)
 ```
 
-Two lists have been created for you on the right. Can you paste them together and sort them in descending order?
+Two lists have been created for you in the editor. Can you paste them together and sort them in descending order?
 
 Note: For now, we can understand an [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) as being any collection of objects, e.g. a List.
 
@@ -346,7 +346,7 @@ Ex().check_correct(
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Nice! Notice from the printouts that the <a href=https://docs.python.org/3/library/stdtypes.html#str.upper><code>upper()</code></a> method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
 ---
