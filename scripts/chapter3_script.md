@@ -6,11 +6,11 @@ In this video, I'm going to introduce you to functions. Functions aren't entirel
 
 Suppose you have the list containing only the heights of your family, fam:
 
-Say that you want to get the maximum value in this list. Instead of writing your own piece of Python code that goes through the list and finds the highest value, you can also use Python's max() function. This is one of Python's built-in functions, just like type(). We simply pass fam to max() inside parentheses.
+Say that you want to get the maximum value in this list. Instead of writing your piece of Python code that goes through the list and finds the highest value, you can also use Python's max() function. This is one of Python's built-in functions, just like type(). We simply pass fam to max() inside parentheses.
 
-The output makes sense: 1.89, the highest number in the list. 
+The output makes sense: 1.89, the highest number on the list. 
 
-max() worked kind of like a black box here: you passed it a list, then the implementation of `max()`, that you don't know, did its magic, and produced an output. How max() actually did this, is not important to you, it just does what it's supposed to, and you didn't have to write your own code, which made your life easier.
+max() worked kind of like a black box here: you passed it a list, then the implementation of `max()`, that you don't know, did its magic, and produced an output. How max() did this, is not important to you, it just does what it's supposed to, and you didn't have to write your code, which made your life easier.
 
 Of course, it's possible to also assign the result of a function call to a new variable, like here. Now `tallest` is just like any other variable; you can use to continue your fancy calculations.
 
@@ -24,7 +24,7 @@ It appears that round() takes two inputs. In Python, these inputs, also called a
 
 If you call the function round() with only one input, Python again tries to match the inputs to the arguments. There's no input to match to the ndigits argument though. Luckily, the internal machinery of the round() function knows how to handle this. When ndigits is not specified, the function simply rounds to the closest integer and returns that integer. That's why we got the number 2.
 
-How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma and the ndigits here. This tells us that you can call round() in this form, as well as in this one. In other words, ndigits is an optional argument. Actually, Python offers yet another way to show that a function has optional arguments, but that's something for the exercises.
+How was I so sure that calling the function with a single input would work? Well, in the documentation, there are square brackets around the comma and the ndigits here. This tells us that you can call round() in this form, as well as in this one. In other words, ndigits is an optional argument. Python offers yet another way to show that a function has optional arguments, but that's something for the exercises.
 
 By now, you have an idea about how to use max() and round(), but how could you know that a function such as round() exists in Python in the first place? Well, this is something you will learn with time. Whenever you are doing a rather standard task in Python, you can be pretty sure that there's already a function that can do this for you. In that case, you should definitely use it! Just do a quick internet search and you'll find the function you need with a nice usage example. And there is of course DataCamp, where you'll also learn about powerful functions and how to use them. Get straight to it in the interactive exercises!
 
