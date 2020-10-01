@@ -1,4 +1,4 @@
-# Intro to Python for Data Science
+# Introduction to Python for Data Science
 
 - Teach: https://www.datacamp.com/teach/repositories/288
 - Campus: https://www.datacamp.com/courses/intro-to-python-for-data-science
