@@ -86,7 +86,7 @@ key: 43a91a7217
 ![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/4eee529b34a70821e3a7b5d4d7ce5a929f81225e/ipython_shell.png)
 
 `@script`
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the 
+Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the
 
 ---
 
@@ -178,8 +178,6 @@ code_zoom: 90
 ![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/fc6ad8ca0c4d2007fc8803f97730e3af134a4b4e/python_script_print.gif = 96)
 
 - Use `print()` to generate output from script
-
-
 
 `@script`
 Let's wrap our previous calculation in a print call, and rerun the script. This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
