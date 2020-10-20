@@ -1,144 +1,150 @@
 {
   "slides/chapter_1_d8fcd4c930027fa4e1c3870c7e7e0ff1.md": [
     {
-      "timing": 0,
       "state": {
-        "indexh": 0,
-        "indexf": -1
-      }
+        "indexf": -1,
+        "indexh": 0
+      },
+      "timing": 0
     },
     {
-      "timing": 0.0015375960084173645,
       "state": {
-        "indexh": 0,
-        "indexf": 0
-      }
+        "indexf": 0,
+        "indexh": 0
+      },
+      "timing": 0.010829247918432025
     },
     {
-      "timing": 0.0503669851675051,
       "state": {
         "indexh": 1,
         "indexf": -1
-      }
+      },
+      "timing": 0.05254825896074808
     },
     {
-      "timing": 0.12668909056458286,
       "state": {
         "indexh": 2,
         "indexf": -1
-      }
+      },
+      "timing": 0.12710505498219107
     },
     {
-      "timing": 0.14289060193921846,
       "state": {
-        "indexh": 2,
-        "indexf": 0
-      }
+        "indexf": 0,
+        "indexh": 2
+      },
+      "timing": 0.13598041939130184
     },
     {
-      "timing": 0.1655369643293359,
       "state": {
-        "indexh": 2,
-        "indexf": 1
-      }
+        "indexf": 1,
+        "indexh": 2
+      },
+      "timing": 0.18036219774763307
     },
     {
-      "timing": 0.2054581152312505,
       "state": {
-        "indexh": 2,
-        "indexf": 2
-      }
+        "indexf": 2,
+        "indexh": 2
+      },
+      "timing": 0.20522025491833
     },
     {
-      "timing": 0.22498399148897782,
       "state": {
-        "indexh": 2,
-        "indexf": 3
-      }
+        "indexf": 3,
+        "indexh": 2
+      },
+      "timing": 0.22119263741738218
     },
     {
-      "timing": 0.2809030459302564,
       "state": {
-        "indexh": 2,
-        "indexf": 4
-      }
+        "indexf": 4,
+        "indexh": 2
+      },
+      "timing": 0.254919558277252
     },
     {
-      "timing": 0.39542013309746576,
       "state": {
-        "indexh": 2,
-        "indexf": 5
-      }
+        "indexf": 5,
+        "indexh": 2
+      },
+      "timing": 0.39858648075843195
     },
     {
-      "timing": 0.458835738952972,
       "state": {
         "indexh": 3,
         "indexf": -1
-      }
+      },
+      "timing": 0.4596270018973265
     },
     {
-      "timing": 0.5292787551879883,
       "state": {
         "indexh": 4,
         "indexf": -1
-      }
+      },
+      "timing": 0.4827047813498119
     },
     {
-      "timing": 0.6599779193514582,
       "state": {
         "indexh": 5,
         "indexf": -1
-      }
+      },
+      "timing": 0.5324096836357366
     },
     {
-      "timing": 0.6724835577319018,
-      "state": {
-        "indexh": 5,
-        "indexf": 0
-      }
-    },
-    {
-      "timing": 0.689344447696935,
-      "state": {
-        "indexh": 5,
-        "indexf": 1
-      }
-    },
-    {
-      "timing": 0.7071014038569212,
-      "state": {
-        "indexh": 5,
-        "indexf": 2
-      }
-    },
-    {
-      "timing": 0.738814557186065,
       "state": {
         "indexh": 6,
         "indexf": -1
-      }
+      },
+      "timing": 0.6612914624198869
     },
     {
-      "timing": 0.8191338586037987,
+      "state": {
+        "indexf": 0,
+        "indexh": 6
+      },
+      "timing": 0.6737181477637504
+    },
+    {
+      "state": {
+        "indexf": 1,
+        "indexh": 6
+      },
+      "timing": 0.6894417987295381
+    },
+    {
+      "state": {
+        "indexf": 2,
+        "indexh": 6
+      },
+      "timing": 0.7009828026986662
+    },
+    {
       "state": {
         "indexh": 7,
         "indexf": -1
-      }
+      },
+      "timing": 0.7153918490366251
     },
     {
-      "timing": 0.9085627770536637,
       "state": {
         "indexh": 8,
         "indexf": -1
-      }
+      },
+      "timing": 0.8080350083755936
     },
     {
-      "timing": 0.976034025159755,
       "state": {
         "indexh": 9,
         "indexf": -1
-      }
+      },
+      "timing": 0.9101227881363252
+    },
+    {
+      "state": {
+        "indexh": 10
+      },
+      "timing": 0.9775895940021816
     }
   ],
   "slides/chapter_1_433dcfcfedaee070cbf440491c402e3b.md": [
