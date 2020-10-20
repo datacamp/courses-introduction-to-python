@@ -175,7 +175,7 @@ code_zoom: 90
 ```
 
 `@part1`
-![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/fc6ad8ca0c4d2007fc8803f97730e3af134a4b4e/python_script_print.gif = 96)
+![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/2d3ab5a6fc88d905270498c03d74442500e47fcf/python_script_print.gif = 96)
 
 - Use `print()` to generate output from script
 
