@@ -37,7 +37,7 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im1.png](https://assets.datacamp.com/production/repositories/288/datasets/1a484bc99a2af22d7f24b70c9054443a371f66c9/intro_gif.gif)
+![v2_im1.png](https://assets.datacamp.com/production/repositories/288/datasets/9be9b8c494b16db52812067a5155c121cc24d3a0/interface_1.gif = 35)
 
 `@script`
 In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
@@ -83,7 +83,7 @@ key: 43a91a7217
 `@part1`
 **Execute Python commands**
 
-![im_interface.png](https://assets.datacamp.com/production/repositories/288/datasets/6d7582936bef6e37a9d7c8631a331eb82c288cbb/shell_selected.png)
+![im_interface.png](https://assets.datacamp.com/production/repositories/288/datasets/cb4f300fb1650a14e3737393296f776ec1de47b7/shell_mobile.png = 30)
 
 `@script`
 Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
@@ -99,7 +99,7 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/fdab8fd3b088d6514d3f9a34326f47792bc50d64/shell_gif.gif)
+![v2_im_1.png](https://assets.datacamp.com/production/repositories/288/datasets/a6a02975e3d672729d3a489273cdd5f41822651a/shell.gif = 35)
 
 `@script`
 Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
@@ -122,7 +122,7 @@ key: 78ef256bc0
 
 - Similar to typing in IPython Shell{{3}}
 
-![](https://assets.datacamp.com/production/repositories/288/datasets/e796d683f23a93859149146a91c884e0ff6990ec/script_0_selected.png) {{3}}
+![](https://assets.datacamp.com/production/repositories/288/datasets/5d77655dae41c68303804f0d7fe71b76013a0dfb/mobile_script.png  = 25) {{3}}
 
 `@script`
 python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line.
@@ -138,7 +138,7 @@ disable_transition: true
 ```
 
 `@part1`
-![v2_im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/1815bd762e807095f2e6ddaf529556a6fa8117b5/script_1.gif)
+![v2_im_4.png](https://assets.datacamp.com/production/repositories/288/datasets/35ec04874bf66ac8f4bdbc402a27ed83d7c8905e/mobile_script.gif = 32)
 
 `@script`
 Let's put the command from before in a script now, that can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
@@ -155,7 +155,7 @@ code_zoom: 90
 ```
 
 `@part1`
-![v2_im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/c3db89a4e008471ce1c4a80ed7abf39036635fec/script_2.gif = 96)
+![v2_im_6.png](https://assets.datacamp.com/production/repositories/288/datasets/35ec04874bf66ac8f4bdbc402a27ed83d7c8905e/mobile_script.gif = 32)
 - Use `print()` to generate output from script
 
 `@script`

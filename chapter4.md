@@ -482,7 +482,7 @@ np_x = np.array(x)
 np_x[1]
 ```
 
-The script on the right already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
+The script in the editor already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
 
 `@instructions`
 - Subset `np_weight_lb` by printing out the element at index 50.
@@ -1067,7 +1067,7 @@ skills: 2
 
 Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns.
 
-The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
+The Python script in the editor already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
 `@instructions`
 - The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.

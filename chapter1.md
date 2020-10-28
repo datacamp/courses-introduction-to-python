@@ -30,19 +30,19 @@ xp: 100
 skills: 2
 ```
 
-In the Python script on the right, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. _Submit Answer_ checks whether your submission is correct and gives you feedback.
+In the **Code** tab at the top of the screen, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit_, your Python script is executed and the output is shown in the **Shell** tab. _Submit_ checks whether your submission is correct and gives you feedback.
 
-You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+You can hit _Run Code_ and _Submit_ as often as you want. If you're stuck, you can tap on the lightbulb icon at the bottom of the screen to get a hint , and ultimately _Show Solution_.
 
-You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
+You can also use the **Shell** interactively by simply typing commands and hitting "Run". When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
 
 `@instructions`
-- Experiment in the IPython Shell; type `5 / 8`, for example.
-- Add another line of code to the Python script on the top-right (not in the Shell): `print(7 + 10)`.
-- Hit _Submit Answer_ to execute the Python script and receive feedback.
+- Experiment in the Shell; type `5 / 8`, for example.
+- Add another line of code to the Python script in the **Code** tab (not in the Shell): `print(7 + 10)`.
+- Hit _Submit_ to execute the Python script and receive feedback.
 
 `@hint`
-Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and hit 'Submit Answer'.
+Simply add `print(7 + 10)` in the script in the Code tab (not in the Shell) and hit 'Submit'.
 
 `@pre_exercise_code`
 ```{python}
@@ -124,10 +124,13 @@ skills: 2
 
 Something that Hugo didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
 
-To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Division`; it is completely ignored during execution.
+To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment in the editor, `# Division`; it is completely ignored during execution.
 
 `@instructions`
-Above the `print(7 + 10)`, add the comment `# Addition`.
+Above the `print(7 + 10)`, add the comment 
+```
+# Addition
+```
 
 `@hint`
 For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
@@ -178,13 +181,13 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 - Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` will give `16`.
 - Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4`.
 
-The code in the script on the right gives some examples.
+The code in the script gives some examples.
 
 `@instructions`
 Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code to calculate how much money you end up with after 7 years, and print the result.
 
 `@hint`
-After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
+After two years you have `100 * 1.1 * 1.1 = 100  * (1.1 ** 2)`. How much do you have after 7 years then?
 
 `@pre_exercise_code`
 ```{python}
@@ -461,7 +464,7 @@ To find out the type of a value or a variable that refers to that value, you can
 type(a)
 ```
 
-We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
+We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell to discover their type. Which of the following options is correct?
 
 `@possible_answers`
 - `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
