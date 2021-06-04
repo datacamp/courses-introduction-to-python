@@ -646,7 +646,7 @@ Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = ms
 
 patt = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
-Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
+Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs","6:"))
 
 success_msg("Wonderful!")
 ```
