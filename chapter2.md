@@ -1,9 +1,12 @@
 ---
-title_meta: 'Chapter 2'
-title: 'Python Lists'
-description: 'Learn to store, access, and manipulate data in lists: the first step toward efficiently working with huge amounts of data.'
+title_meta: Chapter 2
+title: Python Lists
+description: >-
+  Learn to store, access, and manipulate data in lists: the first step toward
+  efficiently working with huge amounts of data.
 attachments:
-    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter2.pdf'
+  slides_link: >-
+    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter2.pdf
 ---
 
 ## Python Lists
@@ -26,7 +29,8 @@ type: NormalExercise
 key: e6c527bf41
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 As opposed to `int`, `bool` etc., a list is a **compound data type**; you can group values together:
@@ -116,7 +120,8 @@ type: NormalExercise
 key: 1702a8bcdc
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
@@ -194,7 +199,8 @@ type: MultipleChoiceExercise
 key: 416b80a405
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
@@ -241,7 +247,8 @@ type: NormalExercise
 key: 9158c577b0
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
@@ -353,7 +360,8 @@ type: NormalExercise
 key: c3ce582e32
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
@@ -430,7 +438,8 @@ type: NormalExercise
 key: 58c969f11f
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted. The strings that result are pasted together using the `+` operator:
@@ -495,7 +504,8 @@ type: NormalExercise
 key: 7f08642d18
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
@@ -584,7 +594,8 @@ type: NormalExercise
 key: dfc9a168a3
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 In the video, Hugo first discussed the syntax where you specify both where to begin and end the slice of your list:
@@ -660,7 +671,8 @@ type: MultipleChoiceExercise
 key: dbbbd306cf
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
@@ -725,7 +737,8 @@ type: NormalExercise
 key: 4e1bba1b55
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Replacing list elements is pretty easy. Simply subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
@@ -800,7 +813,8 @@ type: NormalExercise
 key: ff0fe8d967
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
@@ -869,7 +883,8 @@ type: MultipleChoiceExercise
 key: 85f792356e
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 Finally, you can also remove elements from your list. You can do this with the `del` statement:
@@ -940,7 +955,8 @@ type: NormalExercise
 key: af72db9915
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 At the end of the video, Hugo explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
