@@ -1,9 +1,13 @@
 ---
-title_meta: 'Chapter 1'
-title: 'Python Basics'
-description: 'An introduction to the basic concepts of Python. Learn how to use Python interactively and by using a script. Create your first variables and acquaint yourself with Python''s basic data types.'
+title_meta: Chapter 1
+title: Python Basics
+description: >-
+  An introduction to the basic concepts of Python. Learn how to use Python
+  interactively and by using a script. Create your first variables and acquaint
+  yourself with Python's basic data types.
 attachments:
-    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter1.pdf'
+  slides_link: >-
+    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter1.pdf
 free_preview: true
 ---
 
@@ -27,7 +31,8 @@ type: NormalExercise
 key: bdc52f0e19
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 In the **Code** tab at the top of the screen, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit_, your Python script is executed and the output is shown in the **Shell** tab. _Submit_ checks whether your submission is correct and gives you feedback.
@@ -82,7 +87,8 @@ type: MultipleChoiceExercise
 key: 9703b117fb
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 Python is a pretty versatile language. For which applications can you use Python?
@@ -119,7 +125,8 @@ type: NormalExercise
 key: 7c4a738a13
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Something that Hugo didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
@@ -173,7 +180,8 @@ type: NormalExercise
 key: 0f7c039428
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
@@ -254,7 +262,8 @@ type: NormalExercise
 key: 4bf65ad83e
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 In Python, a variable allows you to refer to a value with a name. To create a variable use `=`, like this example:
@@ -314,7 +323,8 @@ type: NormalExercise
 key: ff06cedeb4
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
@@ -395,7 +405,8 @@ type: NormalExercise
 key: 006b48561f
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 In the previous exercise, you worked with two Python data types:
@@ -455,7 +466,8 @@ type: MultipleChoiceExercise
 key: b35f67514c
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
@@ -500,7 +512,8 @@ type: NormalExercise
 key: 4d0d83cc02
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Hugo mentioned that different types behave differently in Python.
@@ -600,7 +613,8 @@ type: NormalExercise
 key: 085bb602b9
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
@@ -702,7 +716,8 @@ type: MultipleChoiceExercise
 key: 3e5f0bdf3a
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
