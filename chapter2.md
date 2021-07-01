@@ -793,7 +793,7 @@ areas[4] = "chill zone"
 `@sct`
 ```{python}
 bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room area.'
+chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
 Ex().check_correct(
   check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
   multi(
