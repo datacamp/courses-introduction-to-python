@@ -1,13 +1,15 @@
 ---
-title: 'Insert title here'
+title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
-    mp4: 'https://s3.amazonaws.com/videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_1.mp4'
-    hls: 'https://s3.amazonaws.com/videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_1.master.m3u8'
+  mp4: >-
+    https://s3.amazonaws.com/videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_1.mp4
+  hls: >-
+    https://s3.amazonaws.com/videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_1.master.m3u8
 transformations:
-    translateX: 50
-    translateY: 0
-    scale: 1
+  translateX: 50
+  translateY: 0
+  scale: 1
 ---
 
 ## Hello Python!

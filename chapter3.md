@@ -1,9 +1,13 @@
 ---
-title_meta: 'Chapter 3'
-title: 'Functions and Packages'
-description: 'You''ll learn how to use functions, methods, and packages to efficiently leverage the code that brilliant Python developers have written. The goal is to reduce the amount of code you need to solve challenging problems!'
+title_meta: Chapter 3
+title: Functions and Packages
+description: >-
+  You'll learn how to use functions, methods, and packages to efficiently
+  leverage the code that brilliant Python developers have written. The goal is
+  to reduce the amount of code you need to solve challenging problems!
 attachments:
-    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter3.pdf'
+  slides_link: >-
+    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter3.pdf
 ---
 
 ## Functions
@@ -26,7 +30,8 @@ type: NormalExercise
 key: c422ee929b
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). You've also used the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types. These are built-in functions as well.
@@ -118,7 +123,8 @@ type: MultipleChoiceExercise
 key: 679b852978
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: [`help()`](https://docs.python.org/3/library/functions.html#help). In IPython specifically, you can also use `?` before the function name.
@@ -164,7 +170,8 @@ type: NormalExercise
 key: e30486d7c1
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 In the previous exercise, the square brackets around `imag` in the documentation showed us that the `imag` argument is optional. But Python also uses a different way to tell users about arguments being optional.
@@ -272,7 +279,8 @@ type: NormalExercise
 key: 4039302ee0
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
@@ -358,7 +366,8 @@ type: NormalExercise
 key: 0dbe8ed695
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
@@ -429,7 +438,8 @@ type: NormalExercise
 key: 1fbeab82d0
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 Most list methods will change the list they're called on. Examples are:
@@ -529,7 +539,8 @@ type: NormalExercise
 key: 7432a6376f
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 As a data scientist, some notions of geometry never hurt. Let's refresh some of the basics.
@@ -622,7 +633,8 @@ type: NormalExercise
 key: fe65eff50a
 lang: python
 xp: 100
-skills: 2
+skills:
+  - 2
 ```
 
 General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
@@ -704,7 +716,8 @@ type: MultipleChoiceExercise
 key: f1b2675a2a
 lang: python
 xp: 50
-skills: 2
+skills:
+  - 2
 ```
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.

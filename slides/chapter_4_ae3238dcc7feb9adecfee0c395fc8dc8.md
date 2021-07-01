@@ -1,13 +1,15 @@
 ---
-title: 'Insert title here'
+title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-    mp4: 'https://s3.amazonaws.com/videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-    hls: 'https://s3.amazonaws.com/videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8'
+  mp4: >-
+    https://s3.amazonaws.com/videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4
+  hls: >-
+    https://s3.amazonaws.com/videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
 transformations:
-    translateX: 50
-    translateY: 0
-    scale: 1
+  translateX: 50
+  translateY: 0
+  scale: 1
 ---
 
 ## 2D Numpy Arrays
