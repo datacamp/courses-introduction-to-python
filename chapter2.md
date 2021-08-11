@@ -2,27 +2,23 @@
 title_meta: Chapter 2
 title: Python Lists
 description: >-
-  Learn to store, access and manipulate data in lists: the first step towards
+  Learn to store, access, and manipulate data in lists: the first step toward
   efficiently working with huge amounts of data.
 attachments:
-  slides_link: 'https://projector-video-pdf-converter.datacamp-staging.com/735/chapter2.pdf'
+  slides_link: >-
+    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter2.pdf
 ---
 
-## Lists, what are they?
+## Python Lists
 
 ```yaml
 type: VideoExercise
-key: f366e876d8
-lang: python
+key: a5886d213f
 xp: 50
-skills:
-  - 2
-video_link: //player.vimeo.com/video/154563059
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch2_1.master.m3u8
 ```
 
 `@projector_key`
-84258dc00ac8e6f277086d60255e8244
+a0530c4542f10988847b2dbb91f717c3
 
 ---
 
@@ -132,10 +128,10 @@ A list can contain any Python type. Although it's not really common, a list can 
 
 The printout of the previous exercise wasn't really satisfying. It's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
-The code on the right is the start of a solution. For some of the areas, the name of the corresponding room is already placed in front. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+The code in the editor is the start of a solution. For some of the areas, the name of the corresponding room is already placed in front. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
 
 `@instructions`
-- Finish the line of code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
+- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
 - Print `areas` again; is the printout more informative this time?
 
 `@hint`
@@ -257,7 +253,7 @@ skills:
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
 
-Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea.
+Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script in the editor can already give you an idea.
 
 Don't get confused here: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
 
@@ -344,21 +340,16 @@ success_msg("Great! Get ready to learn about list subsetting!")
 
 ---
 
-## Subsetting lists
+## Subsetting Lists
 
 ```yaml
 type: VideoExercise
-key: 9e15e5b8a0
-lang: python
+key: c076b5a69c
 xp: 50
-skills:
-  - 2
-video_link: //player.vimeo.com/video/146994264
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
 ```
 
 `@projector_key`
-47e0948980f8c77be2071a892b32ec8b
+fc15ba5cb9485456df8589130b519ea3
 
 ---
 
@@ -607,7 +598,7 @@ skills:
   - 2
 ```
 
-In the video, Filip first discussed the syntax where you specify both where to begin and end the slice of your list:
+In the video, Hugo first discussed the syntax where you specify both where to begin and end the slice of your list:
 
 ```
 my_list[begin:end]
@@ -666,7 +657,7 @@ Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = ms
 
 patt = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
-Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
+Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
 success_msg("Wonderful!")
 ```
@@ -726,21 +717,16 @@ Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 
 ---
 
-## List Manipulation
+## Manipulating Lists
 
 ```yaml
 type: VideoExercise
-key: fbdaaec22a
-lang: python
+key: d7fe818b3a
 xp: 50
-skills:
-  - 2
-video_link: //player.vimeo.com/video/149289041
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
 ```
 
 `@projector_key`
-823af3a8a05cb88df3f2b0dca71cec7f
+355ed52d2fb0d67508c6a311b7cbc6d3
 
 ---
 
@@ -807,12 +793,12 @@ areas[4] = "chill zone"
 `@sct`
 ```{python}
 bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the bathroom area.'
+chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
 Ex().check_correct(
   check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
   multi(
-    has_equal_ast(code = 'areas[-1] = 10.5', incorrect_msg = bathroom_msg),
-    has_equal_ast(code = 'areas[4] = "chill zone"', incorrect_msg = chillzone_msg),
+    has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
+    has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
 success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
@@ -973,14 +959,14 @@ skills:
   - 2
 ```
 
-At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
+At the end of the video, Hugo explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
 
 The Python code in the script already creates a list with the name `areas` and a copy named `areas_copy`. Next, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit _Run Code_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
 
 If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with [`list()`](https://docs.python.org/3/library/functions.html#func-list) or by using `[:]`.
 
 `@instructions`
-Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Hit _Submit Answer_ to check this.
+Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
 
 `@hint`
 Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.

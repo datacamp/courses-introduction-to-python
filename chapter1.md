@@ -3,10 +3,11 @@ title_meta: Chapter 1
 title: Python Basics
 description: >-
   An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and through a script. Create your first variables and acquaint
+  interactively and by using a script. Create your first variables and acquaint
   yourself with Python's basic data types.
 attachments:
-  slides_link: 'https://projector-video-pdf-converter.datacamp-staging.com/735/chapter1.pdf'
+  slides_link: >-
+    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter1.pdf
 free_preview: true
 ---
 
@@ -14,17 +15,12 @@ free_preview: true
 
 ```yaml
 type: VideoExercise
-key: d5509896f7
-lang: python
+key: f644a48d5d
 xp: 50
-skills:
-  - 2
-video_link: //player.vimeo.com/video/146994261
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
 ```
 
 `@projector_key`
-5f61a677bf62c17b450465ee849823ee
+d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
@@ -63,7 +59,7 @@ Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and
 # Example, do not modify!
 print(5 / 8)
 
-# Put code below here
+# Print the sum of 7 and 10
 
 ```
 
@@ -104,7 +100,7 @@ Python is a pretty versatile language. For which applications can you use Python
 - All of the above.
 
 `@hint`
-Filip mentioned in the video that Python can be used to build practically any piece of software.
+Hugo mentioned in the video that Python can be used to build practically any piece of software.
 
 `@pre_exercise_code`
 ```{python}
@@ -133,12 +129,15 @@ skills:
   - 2
 ```
 
-Something that Filip didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
+Something that Hugo didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
 
-To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Division`; it is completely ignored during execution.
+To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment in the editor, `# Division`; it is completely ignored during execution.
 
 `@instructions`
-Above the `print(7 + 10)`, add the comment `# Addition`.
+Above the `print(7 + 10)`, add the comment 
+```
+# Addition
+```
 
 `@hint`
 For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
@@ -190,10 +189,10 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 - Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` will give `16`.
 - Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4`.
 
-The code in the script on the right gives some examples.
+The code in the script gives some examples.
 
 `@instructions`
-Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
+Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code to calculate how much money you end up with after 7 years, and print the result.
 
 `@hint`
 After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
@@ -243,21 +242,16 @@ success_msg("Time for another video!")
 
 ---
 
-## Variables & Types
+## Variables and Types
 
 ```yaml
 type: VideoExercise
-key: ef8356fb92
-lang: python
+key: c2e396792e
 xp: 50
-skills:
-  - 2
-video_link: //player.vimeo.com/video/154561704
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
 ```
 
 `@projector_key`
-7df0925250c5fb2a647cd76fb09d446e
+433dcfcfedaee070cbf440491c402e3b
 
 ---
 
@@ -389,8 +383,15 @@ print(result)
 `@sct`
 ```{python}
 Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="The value of `growth_multiplier` should be `1.1`.")
-Ex().check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?")
+Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="Did you assign the correct value to `growth_multiplier`?")
+Ex().check_correct(
+  check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
+  multi(
+    has_code("savings\s*\*\s*\(*\s*growth_multiplier", not_typed_msg = "Did you multiply `savings` by `growth_multiplier ** 7`?"),      
+    has_code("growth_multiplier\s*\*\*\s*7", not_typed_msg = "Did you raise `growth_multiplier` to the power of `7` using `**`?")   
+  )
+)
+
 Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
 success_msg("Great!")
 ```
@@ -475,7 +476,7 @@ To find out the type of a value or a variable that refers to that value, you can
 type(a)
 ```
 
-We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
+We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell to discover their type. Which of the following options is correct?
 
 `@possible_answers`
 - `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
@@ -515,7 +516,7 @@ skills:
   - 2
 ```
 
-Filip mentioned that different types behave differently in Python.
+Hugo mentioned that different types behave differently in Python.
 
 When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
 
@@ -618,21 +619,21 @@ skills:
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
-Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
+Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the integer `savings` and float `result` are defined, you can try something like this:
 
 ```
 print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 ```
 
-This will not work, though, as you cannot simply sum strings and floats.
+This will not work, though, as you cannot simply sum strings and integers/floats.
 
-To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string.
+To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
 
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
 `@instructions`
-- Hit _Run Code_ to run the code on the right. Try to understand the error message.
-- Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
+- Hit _Run Code_ to run the code. Try to understand the error message.
+- Fix the code such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
 `@hint`
@@ -740,7 +741,7 @@ Copy and paste the different expressions into the IPython Shell and try to figur
 ```{python}
 msg1 = "Incorrect, this command runs perfectly fine."
 msg2 = "It's perfectly possible to 'multiply strings' in Python..."
-msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
+msg3 = "Correct! Because you're not converting `2` to a string with [str()](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
