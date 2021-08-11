@@ -2,24 +2,28 @@
 title_meta: Chapter 3
 title: Functions and Packages
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  To leverage the code that brilliant Python developers have written, you'll
+  learn about using functions, methods and packages. This will help you to
+  reduce the amount of code you need to solve challenging problems!
 attachments:
-  slides_link: >-
-    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter3.pdf
+  slides_link: 'https://projector-video-pdf-converter.datacamp-staging.com/735/chapter3.pdf'
 ---
 
 ## Functions
 
 ```yaml
 type: VideoExercise
-key: 5c5f365930
+key: 2dde2f90b8
+lang: python
 xp: 50
+skills:
+  - 2
+video_link: //player.vimeo.com/video/154563189
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch3_1.master.m3u8
 ```
 
 `@projector_key`
-1204d914b0e53100529827e07441ee6c
+abe8835964fe3385a3f0283b7a605f5f
 
 ---
 
@@ -111,7 +115,7 @@ Ex().check_correct(
   check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("Great job! The [`len()`](https://docs.python.org/3/library/functions.html#len) function is extremely useful; it also works on strings to count the number of characters!")
 ```
 
 ---
@@ -136,7 +140,7 @@ help(max)
 ?max
 ```
 
-Use the Shell to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
+Use the Shell on the right to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
 
 `@possible_answers`
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
@@ -145,7 +149,7 @@ Use the Shell to open up the documentation on [`complex()`](https://docs.python.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
 
 `@hint`
-The help file shows `complex(real[, imag])`. Do you remember what Hugo told you about these square brackets?
+The help file shows `complex(real[, imag])`. Do you remember what Filip told you about these square brackets?
 
 `@pre_exercise_code`
 ```{python}
@@ -188,7 +192,7 @@ In this exercise, you'll only have to specify `iterable` and `reverse`, not `key
 sorted(___, reverse = ___)
 ```
 
-Two lists have been created for you in the editor. Can you paste them together and sort them in descending order?
+Two lists have been created for you on the right. Can you paste them together and sort them in descending order?
 
 Note: For now, we can understand an [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) as being any collection of objects, e.g. a List.
 
@@ -263,12 +267,17 @@ success_msg("Cool! Head over to the video on Python methods.")
 
 ```yaml
 type: VideoExercise
-key: 2b66cb66b1
+key: e1aaeb300b
+lang: python
 xp: 50
+skills:
+  - 2
+video_link: //player.vimeo.com/video/154563307
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_2.master.m3u8
 ```
 
 `@projector_key`
-8e387776f3a264a745128b68aa8d8f83
+cf2471efdf2df82d911fb0cfcf0466f6
 
 ---
 
@@ -354,7 +363,7 @@ Ex().check_correct(
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the [upper()](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
 ---
@@ -523,12 +532,17 @@ success_msg("Great!")
 
 ```yaml
 type: VideoExercise
-key: ab96a17c5e
+key: 2b89c5a9d8
+lang: python
 xp: 50
+skills:
+  - 2
+video_link: //player.vimeo.com/video/146994272
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch3_3.master.m3u8
 ```
 
 `@projector_key`
-cedcfb34350be8545599768f96695cdd
+c550d2f388d2718361d55e101c6c3887
 
 ---
 
@@ -747,6 +761,6 @@ Try the different import statements in the IPython shell and see which one cause
 `@sct`
 ```{python}
 msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: [`inv()`](https://docs.python.org/3/library/functions.html#inv) is now available as `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```

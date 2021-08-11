@@ -2,24 +2,28 @@
 title_meta: Chapter 4
 title: NumPy
 description: >-
-  NumPy is a fundamental Python package to efficiently practice data science.
-  Learn to work with powerful tools in the NumPy array, and get started with
-  data exploration.
+  NumPy is a Python package to efficiently do data science. Learn to work with
+  the NumPy array, a faster and more powerful alternative to the list, and take
+  your first steps in data exploration.
 attachments:
-  slides_link: >-
-    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter4.pdf
+  slides_link: 'https://projector-video-pdf-converter.datacamp-staging.com/735/chapter4.pdf'
 ---
 
-## Numpy
+## NumPy
 
 ```yaml
 type: VideoExercise
-key: f4545baa53
+key: ed471f4b00
+lang: python
 xp: 50
+skills:
+  - 2
+video_link: //player.vimeo.com/video/154563364
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_1.master.m3u8
 ```
 
 `@projector_key`
-a0487c26210f6b71ea98f917734cea3a
+cbf80c2cf12e5a3b971598e252e9cb9d
 
 ---
 
@@ -209,7 +213,7 @@ skills:
   - 2
 ```
 
-The MLB also offers to let you analyze their weight data. Again, both are available as regular Python lists: `height_in` and `weight_lb`. `height_in` is in inches and `weight_lb` is in pounds.
+The MLB also offers to let you analyze their weight data. Again, both are available as regular Python lists: `height_in` and `weight`. `height_in` is in inches and `weight_lb` is in pounds.
 
 It's now possible to calculate the BMI of each baseball player. Python code to convert `height_in` to a `numpy` array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game!
 
@@ -434,7 +438,7 @@ skills:
   - 2
 ```
 
-As Hugo explained before, `numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things have changed.
+As Filip explained before, `numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things have changed.
 
 First of all, `numpy` arrays cannot contain elements with different types. If you try to build such a list, some of the elements' types are changed to end up with a homogeneous list. This is known as _type coercion_.
 
@@ -492,7 +496,7 @@ np_x = np.array(x)
 np_x[1]
 ```
 
-The script in the editor already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
+The script on the right already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
 
 `@instructions`
 - Subset `np_weight_lb` by printing out the element at index 50.
@@ -563,16 +567,21 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 
 ---
 
-## 2D Numpy Arrays
+## 2D NumPy Arrays
 
 ```yaml
 type: VideoExercise
-key: 1241efac7a
+key: 84e9f3c38d
+lang: python
 xp: 50
+skills:
+  - 2
+video_link: //player.vimeo.com/video/146994270
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_2.master.m3u8
 ```
 
 `@projector_key`
-ae3238dcc7feb9adecfee0c395fc8dc8
+e6a2fb8649e4ba94d8a0dc7b03a6de62
 
 ---
 
@@ -962,16 +971,21 @@ success_msg("Great job! Notice how with very little code, you can change all val
 
 ---
 
-## Numpy: Basic Statistics
+## NumPy: Basic Statistics
 
 ```yaml
 type: VideoExercise
-key: 287995e488
+key: 16403c5a74
+lang: python
 xp: 50
+skills:
+  - 2
+video_link: //player.vimeo.com/video/146994271
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v3/hls-ch4_3.master.m3u8
 ```
 
 `@projector_key`
-34495ba457d74296794d2a122c9b6e19
+3c397bce7e44f4631520d5e5eb7e9433
 
 ---
 
@@ -1083,7 +1097,7 @@ skills:
 
 Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns.
 
-The Python script in the editor already includes code to print out informative messages with the different summary statistics. Can you finish the job?
+The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
 `@instructions`
 - The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.
