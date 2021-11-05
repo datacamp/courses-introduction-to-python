@@ -575,7 +575,7 @@ print(upstairs)
 msg = "Don't remove or edit the predefined `areas` list."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalnent."
+patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ('upstairs', '6:10'))
 
