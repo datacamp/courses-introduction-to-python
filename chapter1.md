@@ -198,7 +198,7 @@ After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How muc
 
 `@pre_exercise_code`
 ```{python}
-
+ 
 ```
 
 `@sample_code`
