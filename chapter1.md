@@ -285,7 +285,7 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 
 `@pre_exercise_code`
 ```{python}
-
+ 
 ```
 
 `@sample_code`
