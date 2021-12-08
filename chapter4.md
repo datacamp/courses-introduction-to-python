@@ -137,7 +137,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height is available as a regular list
+# height_in is available as a regular list
 
 # Import numpy
 import numpy as np
@@ -157,7 +157,7 @@ import numpy as np
 
 `@solution`
 ```{python}
-# height is available as a regular list
+# height_in is available as a regular list
 
 # Import numpy
 import numpy as np
@@ -233,7 +233,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height and weight are available as regular lists
+# height_in and weight_lb are available as regular lists
 
 # Import numpy
 import numpy as np
@@ -253,7 +253,7 @@ np_height_m = np.array(height_in) * 0.0254
 
 `@solution`
 ```{python}
-# height and weight are available as regular lists
+# height_in and weight_lb are available as regular lists
 
 # Import numpy
 import numpy as np
@@ -358,7 +358,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height and weight are available as a regular lists
+# height_in and weight_lb are available as a regular lists
 
 # Import numpy
 import numpy as np
@@ -380,7 +380,7 @@ bmi = np_weight_kg / np_height_m ** 2
 
 `@solution`
 ```{python}
-# height and weight are available as a regular lists
+# height_in and weight_lb are available as a regular lists
 
 # Import numpy
 import numpy as np
@@ -511,7 +511,7 @@ weight_lb = mlb['Weight'].tolist()
 
 `@sample_code`
 ```{python}
-# height and weight are available as a regular lists
+# height_in and weight_lb are available as a regular lists
 
 # Import numpy
 import numpy as np
@@ -529,7 +529,7 @@ np_height_in = np.array(height_in)
 
 `@solution`
 ```{python}
-# height and weight are available as a regular lists
+# height_in and weight_lb are available as a regular lists
 
 # Import numpy
 import numpy as np
