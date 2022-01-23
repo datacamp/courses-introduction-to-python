@@ -697,7 +697,7 @@ Can you store the data as a 2D array to unlock `numpy`'s extra functionality?
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
 import numpy as np
 ```
 
@@ -787,7 +787,7 @@ The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is a
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
 import numpy as np
 ```
 
@@ -891,7 +891,7 @@ np_mat + np_mat
 ```{python}
 import pandas as pd
 import numpy as np
-baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix().tolist()
+baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy().tolist()
 n = len(baseball)
 updated = np.array(pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/update.csv", header = None))
 import numpy as np
@@ -1009,7 +1009,7 @@ The baseball data is available as a 2D `numpy` array with 3 columns (height, wei
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
+np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy()
 np_baseball[slice(0, 1015, 50), 0] = np_baseball[slice(0, 1015, 50), 0]*1000
 import numpy as np
 ```
@@ -1097,7 +1097,7 @@ The Python script in the editor already includes code to print out informative m
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].as_matrix()
+np_baseball = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy()
 import numpy as np
 ```
 
