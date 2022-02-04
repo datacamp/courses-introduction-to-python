@@ -135,16 +135,16 @@ help(max)
 ?max
 ```
 
-Use the Shell to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
+Use the IPython Shell to open up the documentation on [`pow()`](https://docs.python.org/3/library/functions.html#pow). Which of the following statements is true?
 
 `@possible_answers`
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. Both these arguments are required.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
+- `pow()` takes three arguments: `base`, `exp`, and `mod`. If you don't specify `mod`, the function will return an error.
+- `pow()` takes three arguments: `base`, `exp`, and `None`. All of these arguments are required.
+- `pow()` takes three arguments: `base`, `exp`, and `mod`. `base` and `exp` are required arguments, `mod` is an optional argument.
+- `pow()` takes two arguments: `exp` and `mod`. If you don't specify `exp`, the function will return an error.
 
 `@hint`
-The help file shows `complex(real[, imag])`. Do you remember what Hugo told you about these square brackets?
+- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
 
 `@pre_exercise_code`
 ```{python}
@@ -153,10 +153,10 @@ The help file shows `complex(real[, imag])`. Do you remember what Hugo told you 
 
 `@sct`
 ```{python}
-msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
-msg2 = "This statement is false. `imag` is not a required argument."
-msg3 = "Perfect!"
-msg4 = "This is almost true, but not entirely. If you don't specify `imag`, it is set to 0."
+msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
+msg2 = "Incorrect. `None` is the default value for the `mod` argument."
+msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
+msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
