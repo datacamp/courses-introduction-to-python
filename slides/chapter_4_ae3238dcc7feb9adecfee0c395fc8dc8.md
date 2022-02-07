@@ -48,7 +48,7 @@ type(np_height)
 ```
 
 ```out
-numpy.ndarray
+<class 'numpy.ndarray'>
 ```
 
 ```py
@@ -56,7 +56,7 @@ type(np_weight)
 ```
 
 ```out
-numpy.ndarray
+<class 'numpy.ndarray'>
 ```
 
 `@script`
