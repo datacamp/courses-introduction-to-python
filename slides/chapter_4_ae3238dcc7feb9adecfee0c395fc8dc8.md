@@ -12,7 +12,7 @@ transformations:
   scale: 1
 ---
 
-## 2D Numpy Arrays
+## 2D NumPy Arrays
 
 ```yaml
 type: TitleSlide

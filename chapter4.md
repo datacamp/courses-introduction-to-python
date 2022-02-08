@@ -9,7 +9,7 @@ attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
 ---
 
-## Numpy
+## NumPy
 
 ```yaml
 type: VideoExercise
@@ -562,7 +562,7 @@ success_msg("Nice! Time to learn something new: 2D NumPy arrays!")
 
 ---
 
-## 2D Numpy Arrays
+## 2D NumPy Arrays
 
 ```yaml
 type: VideoExercise
@@ -961,7 +961,7 @@ success_msg("Great job! Notice how with very little code, you can change all val
 
 ---
 
-## Numpy: Basic Statistics
+## NumPy: Basic Statistics
 
 ```yaml
 type: VideoExercise
