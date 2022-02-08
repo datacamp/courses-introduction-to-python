@@ -28,7 +28,7 @@ Well done you legend! Let's now recreate the numpy arrays from the previous vide
 
 ---
 
-## Type of Numpy Arrays
+## Type of NumPy Arrays
 
 ```yaml
 type: FullSlide
@@ -64,7 +64,7 @@ If you ask for the type of these arrays, Python tells you that they are numpy-do
 
 ---
 
-## 2D Numpy Arrays
+## 2D NumPy Arrays
 
 ```yaml
 type: FullSlide
@@ -110,7 +110,7 @@ You can create a 2D numpy array from a regular Python list of lists. Let's try t
 
 If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d-dot-shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
 
-Also for 2D arrays, the Numpy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
 
 ---
 

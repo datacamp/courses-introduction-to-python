@@ -75,7 +75,7 @@ baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 # Import the numpy package as np
 import numpy as np
 
-# Create a Numpy array from baseball: np_baseball
+# Create a NumPy array from baseball: np_baseball
 np_baseball = np.array(baseball)
 
 # Print out type of np_baseball
@@ -557,7 +557,7 @@ Ex().multi(
 Ex().has_printout(0)
 Ex().has_printout(1)
 
-success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
+success_msg("Nice! Time to learn something new: 2D NumPy arrays!")
 ```
 
 ---
@@ -1003,7 +1003,7 @@ The baseball data is available as a 2D `numpy` array with 3 columns (height, wei
 
 `@hint`
 - Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html) to get the mean of a Numpy array. Don't forget to throw in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
+- If `numpy` is imported as `np`, you can use [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html) to get the mean of a NumPy array. Don't forget to throw in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - For the last instruction, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).
 
 `@pre_exercise_code`
@@ -1080,7 +1080,7 @@ skills:
   - 2
 ```
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns.
+Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D NumPy array `np_baseball`, with three columns.
 
 The Python script in the editor already includes code to print out informative messages with the different summary statistics. Can you finish the job?
 
