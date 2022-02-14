@@ -187,7 +187,7 @@ type(bmi)
 ```{{1}}
 
 ```out
-<class 'float'>
+float
 ```{{1}}
 
 ```py
@@ -196,7 +196,7 @@ type(day_of_week)
 ```{{2}}
 
 ```out
-<class 'int'>
+int
 ```{{2}}
 
 `@script`
@@ -223,7 +223,7 @@ type(y)
 ```{{2}}
 
 ```out
-<class 'str'>
+str
 ```{{2}}
 
 ```py
@@ -232,7 +232,7 @@ type(z)
 ```{{3}}
 
 ```out
-<class 'bool'>
+bool
 ```{{3}}
 
 `@script`
