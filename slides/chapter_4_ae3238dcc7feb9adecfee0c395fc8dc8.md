@@ -33,7 +33,7 @@ Well done you legend! Let's now recreate the numpy arrays from the previous vide
 ```yaml
 type: FullSlide
 key: 1b9db47fd2
-code_zoom: 90
+code_zoom: 100
 ```
 
 `@part1`
@@ -48,7 +48,7 @@ type(np_height)
 ```
 
 ```out
-<class 'numpy.ndarray'>
+numpy.ndarray
 ```
 
 ```py
@@ -56,7 +56,7 @@ type(np_weight)
 ```
 
 ```out
-<class 'numpy.ndarray'>
+numpy.ndarray
 ```
 
 `@script`
@@ -69,7 +69,7 @@ If you ask for the type of these arrays, Python tells you that they are numpy-do
 ```yaml
 type: FullSlide
 key: ebb550dcba
-code_zoom: 60
+code_zoom: 71
 ```
 
 `@part1`
@@ -82,8 +82,8 @@ np_2d
 ```{{2}}
 
 ```out
-array([[1.73, 1.68, 1.71, 1.89, 1.79],
-       [65.4, 59.2, 63.6, 88.4, 68.7]])
+array([[ 1.73,  1.68,  1.71,  1.89,  1.79],
+       [65.4 , 59.2 , 63.6 , 88.4 , 68.7 ]])
 ```{{2}}
 
 ```py
@@ -101,8 +101,7 @@ np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
 
 ```out
 array([['1.73', '1.68', '1.71', '1.89', '1.79'],
-       ['65.4', '59.2', '63.6', '88.4', '68.7']],
-      dtype='<U32')
+       ['65.4', '59.2', '63.6', '88.4', '68.7']], dtype='<U32')
 ```{{4}}
 
 `@script`
@@ -135,7 +134,7 @@ np_2d[0]
 ```
 
 ```out
-array([ 1.73,  1.68,  1.71,  1.89,  1.79])
+array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
@@ -173,7 +172,7 @@ np_2d[0][2]
 ```
 
 ```py
-np_2d[0,2]
+np_2d[0, 2]
 ```{{1}}
 
 ```out
@@ -205,20 +204,20 @@ array([[  1.73,   1.68,   1.71,   1.89,   1.79],     0
 ```
 
 ```py
-np_2d[:,1:3]
+np_2d[:, 1:3]
 ```{{1}}
 
 ```out
-array([[  1.68,  1.71],
-       [ 59.2 , 63.6 ]])
+array([[ 1.68,  1.71],
+       [59.2 , 63.6 ]])
 ```{{1}}
 
 ```py
-np_2d[1,:]
+np_2d[1, :]
 ```{{2}}
 
 ```out
-array([  65.4,  59.2,  63.6,  88.4,  68.7])
+array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
