@@ -849,7 +849,15 @@
       }
     }
   ],
-  "slides/chapter_3_1204d914b0e53100529827e07441ee6c.md": [],
+  "slides/chapter_3_1204d914b0e53100529827e07441ee6c.md": [
+    {
+      "state": {
+        "indexf": -1,
+        "indexh": 0
+      },
+      "timing": 0
+    }
+  ],
   "slides/chapter_3_8e387776f3a264a745128b68aa8d8f83.md": [
     {
       "timing": 0,
