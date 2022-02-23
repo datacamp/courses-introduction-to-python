@@ -580,12 +580,11 @@ print(doubledesc)
 ```{python}
 # predefined
 msg = "You don't have to change or remove the predefined variables."
-objs = ["savings", "growth_multiplier", "desc", "year1"]
+
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
     check_object('growth_multiplier', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('desc', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('year1', missing_msg=msg).has_equal_value(incorrect_msg=msg)
+    check_object('desc', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
 # check year1 and printout
@@ -594,7 +593,7 @@ Ex().multi(
     has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year1`.")
 )
 
-# check doubledesc and prinout
+# check doubledesc and printout
 Ex().multi(
     check_object("doubledesc").has_equal_value(incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?"),
     has_printout(1, not_printed_msg = "Don't forget to print out `doubledesc`.")
