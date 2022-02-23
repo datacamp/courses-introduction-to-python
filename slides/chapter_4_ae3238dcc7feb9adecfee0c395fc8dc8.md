@@ -2,17 +2,16 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: >-
-    https://s3.amazonaws.com/videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4
+  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
   hls: >-
-    https://s3.amazonaws.com/videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
+    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
 transformations:
   translateX: 50
   translateY: 0
   scale: 1
 ---
 
-## 2D Numpy Arrays
+## 2D NumPy Arrays
 
 ```yaml
 type: TitleSlide
@@ -28,12 +27,12 @@ Well done you legend! Let's now recreate the numpy arrays from the previous vide
 
 ---
 
-## Type of Numpy Arrays
+## Type of NumPy Arrays
 
 ```yaml
 type: FullSlide
 key: 1b9db47fd2
-code_zoom: 90
+code_zoom: 100
 ```
 
 `@part1`
@@ -64,12 +63,12 @@ If you ask for the type of these arrays, Python tells you that they are numpy-do
 
 ---
 
-## 2D Numpy Arrays
+## 2D NumPy Arrays
 
 ```yaml
 type: FullSlide
 key: ebb550dcba
-code_zoom: 60
+code_zoom: 71
 ```
 
 `@part1`
@@ -82,8 +81,8 @@ np_2d
 ```{{2}}
 
 ```out
-array([[1.73, 1.68, 1.71, 1.89, 1.79],
-       [65.4, 59.2, 63.6, 88.4, 68.7]])
+array([[ 1.73,  1.68,  1.71,  1.89,  1.79],
+       [65.4 , 59.2 , 63.6 , 88.4 , 68.7 ]])
 ```{{2}}
 
 ```py
@@ -101,8 +100,7 @@ np.array([[1.73, 1.68, 1.71, 1.89, 1.79],
 
 ```out
 array([['1.73', '1.68', '1.71', '1.89', '1.79'],
-       ['65.4', '59.2', '63.6', '88.4', '68.7']],
-      dtype='<U32')
+       ['65.4', '59.2', '63.6', '88.4', '68.7']], dtype='<U32')
 ```{{4}}
 
 `@script`
@@ -110,7 +108,7 @@ You can create a 2D numpy array from a regular Python list of lists. Let's try t
 
 If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d-dot-shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
 
-Also for 2D arrays, the Numpy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
 
 ---
 
@@ -135,7 +133,7 @@ np_2d[0]
 ```
 
 ```out
-array([ 1.73,  1.68,  1.71,  1.89,  1.79])
+array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
@@ -173,7 +171,7 @@ np_2d[0][2]
 ```
 
 ```py
-np_2d[0,2]
+np_2d[0, 2]
 ```{{1}}
 
 ```out
@@ -205,20 +203,20 @@ array([[  1.73,   1.68,   1.71,   1.89,   1.79],     0
 ```
 
 ```py
-np_2d[:,1:3]
+np_2d[:, 1:3]
 ```{{1}}
 
 ```out
-array([[  1.68,  1.71],
-       [ 59.2 , 63.6 ]])
+array([[ 1.68,  1.71],
+       [59.2 , 63.6 ]])
 ```{{1}}
 
 ```py
-np_2d[1,:]
+np_2d[1, :]
 ```{{2}}
 
 ```out
-array([  65.4,  59.2,  63.6,  88.4,  68.7])
+array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`

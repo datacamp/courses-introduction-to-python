@@ -6,8 +6,7 @@ description: >-
   leverage the code that brilliant Python developers have written. The goal is
   to reduce the amount of code you need to solve challenging problems!
 attachments:
-  slides_link: >-
-    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter3.pdf
+  slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 ---
 
 ## Functions
@@ -136,16 +135,16 @@ help(max)
 ?max
 ```
 
-Use the Shell to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
+Use the IPython Shell to open up the documentation on [`pow()`](https://docs.python.org/3/library/functions.html#pow). Which of the following statements is true?
 
 `@possible_answers`
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. Both these arguments are required.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
+- `pow()` takes three arguments: `base`, `exp`, and `mod`. If you don't specify `mod`, the function will return an error.
+- `pow()` takes three arguments: `base`, `exp`, and `None`. All of these arguments are required.
+- `pow()` takes three arguments: `base`, `exp`, and `mod`. `base` and `exp` are required arguments, `mod` is an optional argument.
+- `pow()` takes two arguments: `exp` and `mod`. If you don't specify `exp`, the function will return an error.
 
 `@hint`
-The help file shows `complex(real[, imag])`. Do you remember what Hugo told you about these square brackets?
+- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
 
 `@pre_exercise_code`
 ```{python}
@@ -154,10 +153,10 @@ The help file shows `complex(real[, imag])`. Do you remember what Hugo told you 
 
 `@sct`
 ```{python}
-msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
-msg2 = "This statement is false. `imag` is not a required argument."
-msg3 = "Perfect!"
-msg4 = "This is almost true, but not entirely. If you don't specify `imag`, it is set to 0."
+msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
+msg2 = "Incorrect. `None` is the default value for the `mod` argument."
+msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
+msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
@@ -174,23 +173,23 @@ skills:
   - 2
 ```
 
-In the previous exercise, the square brackets around `imag` in the documentation showed us that the `imag` argument is optional. But Python also uses a different way to tell users about arguments being optional.
+In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
 
 Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the IPython Shell.
 
-You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) takes three arguments: `iterable`, `key` and `reverse`.
+You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) takes three arguments: `iterable`, `key`, and `reverse`.
 
-`key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
+`key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`, by default.
 
-In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will be matched to the `iterable` argument, but what about the second input? To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
+In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will be matched to the `iterable` argument, but what about the second input? To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=` to assign it a new value:
 
 ```
-sorted(___, reverse = ___)
+sorted(____, reverse=____)
 ```
 
-Two lists have been created for you in the editor. Can you paste them together and sort them in descending order?
+Two lists have been created for you. Can you paste them together and sort them in descending order?
 
-Note: For now, we can understand an [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) as being any collection of objects, e.g. a List.
+Note: For now, we can understand an [_iterable_](https://docs.python.org/3/glossary.html#term-iterable) as being any collection of objects, e.g., a List.
 
 `@instructions`
 - Use `+` to merge the contents of `first` and `second` into a new list: `full`.
@@ -198,8 +197,8 @@ Note: For now, we can understand an [_iterable_](https://docs.python.org/2/gloss
 - Finish off by printing out `full_sorted`.
 
 `@hint`
-- Simply sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) with two inputs: `full` and `reverse = True`.
+- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
+- Use [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) with two inputs: `full` and `reverse=True`.
 - To print out a variable, use [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@pre_exercise_code`
@@ -233,7 +232,7 @@ second = [10.75, 9.50]
 full = first + second
 
 # Sort full in descending order: full_sorted
-full_sorted = sorted(full, reverse = True)
+full_sorted = sorted(full, reverse=True)
 
 # Print out full_sorted
 print(full_sorted)
@@ -295,7 +294,7 @@ A string `place` has already been created for you to experiment with.
 `@hint`
 - You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `place` without any additional inputs.
 - To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
+- Make sure to wrap your `place.count(____)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
 
 `@pre_exercise_code`
 ```{python}

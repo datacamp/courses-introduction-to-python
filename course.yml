@@ -9,7 +9,7 @@ description: >-
   Introduction to Python course, you’ll learn about powerful ways to store and
   manipulate data, and helpful data science tools to begin conducting your own
   analyses. Start DataCamp’s online Python curriculum now.
-from: 'python-base-prod:v1.4.0'
+from: 'python-base-prod:v2.0.0'
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

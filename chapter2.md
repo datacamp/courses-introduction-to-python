@@ -5,8 +5,7 @@ description: >-
   Learn to store, access, and manipulate data in lists: the first step toward
   efficiently working with huge amounts of data.
 attachments:
-  slides_link: >-
-    https://s3.amazonaws.com/assets.datacamp.com/production/course_735/slides/chapter2.pdf
+  slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 ---
 
 ## Python Lists
