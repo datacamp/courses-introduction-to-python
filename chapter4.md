@@ -7,6 +7,13 @@ description: >-
   data exploration.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
+lessons:
+  - nb_of_exercises: 7
+    title: Numpy
+  - nb_of_exercises: 5
+    title: 2D Numpy Arrays
+  - nb_of_exercises: 4
+    title: 'Numpy: Basic Statistics'
 ---
 
 ## NumPy
