@@ -8,6 +8,11 @@ description: >-
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
+lessons:
+  - nb_of_exercises: 5
+    title: Hello Python!
+  - nb_of_exercises: 8
+    title: Variables and Types
 ---
 
 ## Hello Python!
