@@ -7,6 +7,13 @@ description: >-
   to reduce the amount of code you need to solve challenging problems!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
+lessons:
+  - nb_of_exercises: 4
+    title: Functions
+  - nb_of_exercises: 4
+    title: Methods
+  - nb_of_exercises: 4
+    title: Packages
 ---
 
 ## Functions

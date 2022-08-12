@@ -6,6 +6,13 @@ description: >-
   efficiently working with huge amounts of data.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
+lessons:
+  - nb_of_exercises: 5
+    title: Python Lists
+  - nb_of_exercises: 6
+    title: Subsetting Lists
+  - nb_of_exercises: 5
+    title: Manipulating Lists
 ---
 
 ## Python Lists
