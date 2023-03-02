@@ -84,7 +84,7 @@ In the **Code** tab at the top of the screen, you can type Python code to solve 
 
 `@sample_code`
 ```{python}
-# Experiment with the code below and hit Run Code
+# Experiment with the code below and hit Run Code, then Sumbit
 print(5 / 8)
 
 print(7 + 10)
@@ -92,7 +92,7 @@ print(7 + 10)
 
 `@solution`
 ```{python}
-# Experiment with the code below and hit Run Code
+# Experiment with the code below and hit Run Code, then Submit
 print(5 / 8)
 
 print(7 + 10)
