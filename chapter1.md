@@ -341,6 +341,8 @@ The formula calculate how much money you have after 7 years of investing $100 ea
 100 * 1.1 ** 7
 ```
 
+This is known as compound interest.
+
 Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.1` and then redo the calculations!
 
 `@instructions`
