@@ -335,7 +335,7 @@ skills:
   - 2
 ```
 
-Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
+The formula calculate how much money you have after 7 years of investing $100 each year with 10% return would look something like this:
 
 ```
 100 * 1.1 ** 7
