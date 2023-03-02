@@ -190,16 +190,20 @@ skills:
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
 
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` will give `16`.
-- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4`.
+- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` is `4` to the power of `2` and will give `16`.
+- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice, leaving you with a remainder of `4`.
 
 The code in the script gives some examples.
 
+Suppose you are gardening and you have found a rose has blossomed, let's call this day `0`. Every day you come back, you notice that the number of roses has doubled!
+
+How many roses to you have after five days?
+
 `@instructions`
-Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code to calculate how much money you end up with after 7 years, and print the result.
+- Calculate and print the number of roses that are now in the garden.
 
 `@hint`
-After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
+- The growth rate is `2` and you need to raise this number to the power of the number of days.
 
 `@pre_exercise_code`
 ```{python}
@@ -219,7 +223,7 @@ print(18 % 7)
 print(4 ** 2)
 
 # How much is your $100 worth after 7 years?
-
+print(____)
 ```
 
 `@solution`
@@ -235,13 +239,13 @@ print(18 % 7)
 print(4 ** 2)
 
 # How much is your $100 worth after 7 years?
-print(100 * 1.1 ** 7)
+print(2 ** 5)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(6, not_printed_msg = "Have you used `print(100 * 1.1 ** 7)` to print out the result of your calculations?")
-success_msg("Time for another video!")
+Ex().has_printout(6, not_printed_msg = "Have you used `print(2 ** 5)` to print out the result of your calculations?")
+success_msg("That's correct! On the first day you have `1` rose, but on day `5` you have `32` roses, or `2 ** 5` because the number doubled every day!")
 ```
 
 ---
