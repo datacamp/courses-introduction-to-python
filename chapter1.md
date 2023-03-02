@@ -190,16 +190,22 @@ skills:
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
 
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` will give `16`.
-- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4`.
+- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` is `4` to the power of `2` and will give `16`.
+- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice, leaving you with a remainder of `4`.
 
 The code in the script gives some examples.
 
+Suppose you are gardening and you have found a rose has blossomed, let's call this day `0`. Every day you come back, you notice that the number of roses has doubled!
+
+How many roses do you have after five days?
+
 `@instructions`
-Suppose you have $100, which you can invest with a 10% return each year. After one year, it's `100 * 1.1 = 110` dollars, and after two years it's `100 * 1.1 * 1.1 = 121`. Add code to calculate how much money you end up with after 7 years, and print the result.
+- Change the values of the numbers shown to see how Python performs addition and subtraction.
+- Change the values of the numbers shown to see how multiplication, division, modulo, and exponentiation works in Python.
+- Print the number of roses that are now in the garden by calculating `2` to the power of `5`.
 
 `@hint`
-After two years you have `100 * 1.1 * 1.1 = 100  * (1.1 ** 2)`. How much do you have after 7 years then?
+- The syntax for "the power of" is `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -218,8 +224,8 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How much is your $100 worth after 7 years?
-
+# How many roses do you have after five days?
+print(____)
 ```
 
 `@solution`
@@ -234,14 +240,14 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How much is your $100 worth after 7 years?
-print(100 * 1.1 ** 7)
+# How many roses do you have after five days?
+print(2 ** 5)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(6, not_printed_msg = "Have you used `print(100 * 1.1 ** 7)` to print out the result of your calculations?")
-success_msg("Time for another video!")
+Ex().has_printout(6, not_printed_msg = "Have you used `print(2 ** 5)` to print out the result of your calculations?")
+success_msg("That's correct! On the first day you have `1` rose, but on day `5` you have `32` roses, or `2 ** 5` because the number doubled every day!")
 ```
 
 ---
@@ -331,11 +337,13 @@ skills:
   - 2
 ```
 
-Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
+The formula to calculate how much money you have after 7 years of investing $100 each year with 10% return would look something like this:
 
 ```
 100 * 1.1 ** 7
 ```
+
+This is known as compound interest.
 
 Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.1` and then redo the calculations!
 
@@ -622,15 +630,9 @@ skills:
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
-Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the integer `savings` and float `result` are defined, you can try something like this:
+Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string.
 
-```
-print("I started with $" + savings + " and now have $" + result + ". Awesome!")
-```
-
-This will not work, though, as you cannot simply sum strings and integers/floats.
-
-To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
+To do this, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
 
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
@@ -640,6 +642,7 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
 `@hint`
+- The error message when you _Run Code_ for the first time is telling you that you have an error in line 6 where at least one of your variables is not a string.
 - You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
 - Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
 
@@ -661,7 +664,7 @@ print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 pi_string = "3.1415926"
 
 # Convert pi_string into float: pi_float
-
+pi_float = ____
 ```
 
 `@solution`
