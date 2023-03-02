@@ -197,13 +197,15 @@ The code in the script gives some examples.
 
 Suppose you are gardening and you have found a rose has blossomed, let's call this day `0`. Every day you come back, you notice that the number of roses has doubled!
 
-How many roses to you have after five days?
+How many roses do you have after five days?
 
 `@instructions`
-- Calculate and print the number of roses that are now in the garden.
+- Change the values of the numbers shown to see how Python performs addition and subtraction.
+- Change the values of the numbers shown to see how multiplication, division, modulo, and exponentiation works in Python.
+- Print the number of roses that are now in the garden by calculating `2` to the power of `5`.
 
 `@hint`
-- The growth rate is `2` and you need to raise this number to the power of the number of days.
+- The syntax for "the power of" is `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -222,7 +224,7 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How much is your $100 worth after 7 years?
+# How many roses do you have after five days?
 print(____)
 ```
 
@@ -238,7 +240,7 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How much is your $100 worth after 7 years?
+# How many roses do you have after five days?
 print(2 ** 5)
 ```
 
