@@ -67,11 +67,16 @@ skills:
   - 2
 ```
 
-In the **Code** tab at the top of the screen, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit_, your Python script is executed and the output is shown in the **Shell** tab. _Submit_ checks whether your submission is correct and gives you feedback.
+In the **Code** tab at the top of the screen, you can type Python code to solve the exercises.
+
+If you hit _Run Code_ or _Submit_, your code is executed and the output is shown in the **Shell** tab. 
+
+_Submit_ checks whether your code is correct and gives you feedback.
+
+Hit **Continue** to check out the instructions and run your first Python code with Datacamp!
 
 `@instructions`
 - Try hitting _Run Code_ to see what happens.
-- Experiment by changing the numbers or operators,, or adding another line of code and hit _Run Code_ again.
 - Hit _Submit_ to execute the Python script and receive feedback.
 
 `@hint`
@@ -84,7 +89,7 @@ In the **Code** tab at the top of the screen, you can type Python code to solve 
 
 `@sample_code`
 ```{python}
-# Experiment with the code below and hit Run Code, then Sumbit
+# See what happens when you hit Run Code
 print(5 / 8)
 
 print(7 + 10)
@@ -92,7 +97,7 @@ print(7 + 10)
 
 `@solution`
 ```{python}
-# Experiment with the code below and hit Run Code, then Submit
+# See what happens when you hit Run Code
 print(5 / 8)
 
 print(7 + 10)
