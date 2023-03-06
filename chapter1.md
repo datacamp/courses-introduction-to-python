@@ -76,7 +76,7 @@ _Submit_ checks whether your code is correct and gives you feedback.
 Hit **Continue** to check out the instructions and run your first Python code with Datacamp!
 
 `@instructions`
-- Try hitting _Run Code_ to see what happens.
+- Try hitting _Run Code_ to see the output of your code.
 - Hit _Submit_ to execute the Python script and receive feedback.
 
 `@hint`
