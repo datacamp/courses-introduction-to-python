@@ -195,14 +195,12 @@ Python is perfectly suited to do basic calculations. Apart from addition, subtra
 
 The code in the script gives some examples.
 
-Suppose you are gardening and you have found a rose has blossomed, let's call this day `0`. Every day you come back, you notice that the number of roses has doubled!
-
-How many roses do you have after five days?
+Now it's your turn to practice!
 
 `@instructions`
 - Change the values of the numbers shown to see how Python performs addition and subtraction.
 - Change the values of the numbers shown to see how multiplication, division, modulo, and exponentiation works in Python.
-- Print the number of roses that are now in the garden by calculating `2` to the power of `5`.
+- Calculate and print `2` to the power of `5`.
 
 `@hint`
 - The syntax for "the power of" is `**`.
@@ -224,7 +222,7 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How many roses do you have after five days?
+# Calculate two to the power of five
 print(____)
 ```
 
@@ -240,14 +238,14 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How many roses do you have after five days?
+# Calculate two to the power of five
 print(2 ** 5)
 ```
 
 `@sct`
 ```{python}
 Ex().has_printout(6, not_printed_msg = "Have you used `print(2 ** 5)` to print out the result of your calculations?")
-success_msg("That's correct! On the first day you have `1` rose, but on day `5` you have `32` roses, or `2 ** 5` because the number doubled every day!")
+success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
 ```
 
 ---
