@@ -28,6 +28,34 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
+## When to use Python?
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 9703b117fb
+kind: PureMultipleChoice
+xp: 50
+```
+
+Python is a pretty versatile language. For which applications can you use Python?
+
+`@hint`
+- Hugo mentioned in the video that Python can be used to build practically any piece of software.
+
+`@possible_answers`
+- You want to do some quick calculations.
+- For your new business, you want to develop a database-driven website.
+- Your boss asks you to clean and analyze the results of the latest satisfaction survey.
+- [All of the above.]
+
+`@feedback`
+- "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
+- "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
+- "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
+- "Correct! Python is an extremely versatile language."
+
+---
+
 ## The Python Interface
 
 ```yaml
@@ -39,19 +67,20 @@ skills:
   - 2
 ```
 
-In the **Code** tab at the top of the screen, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit_, your Python script is executed and the output is shown in the **Shell** tab. _Submit_ checks whether your submission is correct and gives you feedback.
+In the **Code** tab at the top of the screen, you can type Python code to solve the exercises.
 
-You can hit _Run Code_ and _Submit_ as often as you want. If you're stuck, you can tap on the lightbulb icon at the bottom of the screen to get a hint , and ultimately _Show Solution_.
+If you hit _Run Code_ or _Submit_, your code is executed and the output is shown in the **Shell** tab. 
 
-You can also use the **Shell** interactively by simply typing commands and hitting "Run". When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
+_Submit_ checks whether your code is correct and gives you feedback.
+
+Hit **Continue** to check out the instructions and run your first Python code with Datacamp!
 
 `@instructions`
-- Experiment in the Shell; type `5 / 8`, for example.
-- Add another line of code to the Python script in the **Code** tab (not in the Shell): `print(7 + 10)`.
+- Try hitting _Run Code_ to see the output of your code.
 - Hit _Submit_ to execute the Python script and receive feedback.
 
 `@hint`
-Simply add `print(7 + 10)` in the script in the Code tab (not in the Shell) and hit 'Submit'.
+- You can hit _Run Code_ and _Submit_ as often as you want; if you're stuck, you can tap on the lightbulb icon at the bottom of the screen to get a hint , and ultimately _Show Solution_.
 
 `@pre_exercise_code`
 ```{python}
@@ -60,64 +89,25 @@ Simply add `print(7 + 10)` in the script in the Code tab (not in the Shell) and 
 
 `@sample_code`
 ```{python}
-# Example, do not modify!
+# See what happens when you hit Run Code
 print(5 / 8)
 
-# Print the sum of 7 and 10
-
+print(7 + 10)
 ```
 
 `@solution`
 ```{python}
-# Example, do not modify!
+# See what happens when you hit Run Code
 print(5 / 8)
 
-# Put code below here
 print(7 + 10)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the sum of 7 and 10?")
-success_msg("Great! On to the next one!")
-```
-
----
-
-## When to use Python?
-
-```yaml
-type: MultipleChoiceExercise
-key: 9703b117fb
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-Python is a pretty versatile language. For which applications can you use Python?
-
-`@possible_answers`
-- You want to do some quick calculations.
-- For your new business, you want to develop a database-driven website.
-- Your boss asks you to clean and analyze the results of the latest satisfaction survey.
-- All of the above.
-
-`@hint`
-Hugo mentioned in the video that Python can be used to build practically any piece of software.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sct`
-```{python}
-msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
-msg2 = "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
-msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
-msg4 = "Correct! Python is an extremely versatile language."
-Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
+Ex().has_printout(0, not_printed_msg = "Make sure you are still printing something!")
+Ex().has_printout(1, not_printed_msg = "Make sure you are still printing something!")
+success_msg("Great! You can also use the **Shell** interactively by simply typing commands and hitting 'Run'. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.")
 ```
 
 ---
@@ -190,16 +180,20 @@ skills:
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
 
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` will give `16`.
-- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4`.
+- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` is `4` to the power of `2` and will give `16`.
+- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice, leaving you with a remainder of `4`.
 
 The code in the script gives some examples.
 
+Now it's your turn to practice!
+
 `@instructions`
-Suppose you have $100, which you can invest with a 10% return each year. After one year, it's `100 * 1.1 = 110` dollars, and after two years it's `100 * 1.1 * 1.1 = 121`. Add code to calculate how much money you end up with after 7 years, and print the result.
+- Change the values of the numbers shown to see how Python performs addition and subtraction.
+- Change the values of the numbers shown to see how multiplication, division, modulo, and exponentiation works in Python.
+- Calculate and print `2` to the power of `5`.
 
 `@hint`
-After two years you have `100 * 1.1 * 1.1 = 100  * (1.1 ** 2)`. How much do you have after 7 years then?
+- The syntax for "the power of" is `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -218,8 +212,8 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How much is your $100 worth after 7 years?
-
+# Calculate two to the power of five
+print(____)
 ```
 
 `@solution`
@@ -234,14 +228,14 @@ print(10 / 2)
 print(18 % 7)
 print(4 ** 2)
 
-# How much is your $100 worth after 7 years?
-print(100 * 1.1 ** 7)
+# Calculate two to the power of five
+print(2 ** 5)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(6, not_printed_msg = "Have you used `print(100 * 1.1 ** 7)` to print out the result of your calculations?")
-success_msg("Time for another video!")
+Ex().has_printout(6, not_printed_msg = "Have you used `print(2 ** 5)` to print out the result of your calculations?")
+success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
 ```
 
 ---
@@ -331,11 +325,13 @@ skills:
   - 2
 ```
 
-Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
+The formula to calculate how much money you have after 7 years of investing $100 each year with 10% return would look something like this:
 
 ```
 100 * 1.1 ** 7
 ```
+
+This is known as compound interest.
 
 Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.1` and then redo the calculations!
 
@@ -622,15 +618,9 @@ skills:
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
-Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the integer `savings` and float `result` are defined, you can try something like this:
+Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string.
 
-```
-print("I started with $" + savings + " and now have $" + result + ". Awesome!")
-```
-
-This will not work, though, as you cannot simply sum strings and integers/floats.
-
-To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
+To do this, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
 
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
@@ -640,6 +630,7 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
 `@hint`
+- The error message when you _Run Code_ for the first time is telling you that you have an error in line 6 where at least one of your variables is not a string.
 - You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
 - Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
 
@@ -661,7 +652,7 @@ print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 pi_string = "3.1415926"
 
 # Convert pi_string into float: pi_float
-
+pi_float = ____
 ```
 
 `@solution`
