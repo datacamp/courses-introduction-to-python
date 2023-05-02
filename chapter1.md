@@ -28,6 +28,44 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
+## When to use Python?
+
+```yaml
+type: MultipleChoiceExercise
+key: 9703b117fb
+lang: python
+xp: 50
+skills:
+  - 2
+```
+
+Python is a pretty versatile language. For which applications can you use Python?
+
+`@possible_answers`
+- You want to do some quick calculations.
+- For your new business, you want to develop a database-driven website.
+- Your boss asks you to clean and analyze the results of the latest satisfaction survey.
+- All of the above.
+
+`@hint`
+Hugo mentioned in the video that Python can be used to build practically any piece of software.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sct`
+```{python}
+msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
+msg2 = "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
+msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
+msg4 = "Correct! Python is an extremely versatile language."
+Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
+```
+
+---
+
 ## The Python Interface
 
 ```yaml
@@ -80,44 +118,6 @@ print(7 + 10)
 ```{python}
 Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the sum of 7 and 10?")
 success_msg("Great! On to the next one!")
-```
-
----
-
-## When to use Python?
-
-```yaml
-type: MultipleChoiceExercise
-key: 9703b117fb
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-Python is a pretty versatile language. For which applications can you use Python?
-
-`@possible_answers`
-- You want to do some quick calculations.
-- For your new business, you want to develop a database-driven website.
-- Your boss asks you to clean and analyze the results of the latest satisfaction survey.
-- All of the above.
-
-`@hint`
-Hugo mentioned in the video that Python can be used to build practically any piece of software.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sct`
-```{python}
-msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
-msg2 = "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
-msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
-msg4 = "Correct! Python is an extremely versatile language."
-Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
 
 ---
