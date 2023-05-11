@@ -575,11 +575,11 @@ To use the constant `pi`, you'll need the `math` package. A variable `r` is alre
 
 `@sample_code`
 ```{python}
-# Definition of radius
-r = 0.43
-
 # Import the math package
 
+
+# Definition of radius
+r = 0.43
 
 # Calculate C
 C = 0
@@ -594,11 +594,11 @@ print("Area: " + str(A))
 
 `@solution`
 ```{python}
-# Definition of radius
-r = 0.43
-
 # Import the math package
 import math
+
+# Definition of radius
+r = 0.43
 
 # Calculate C
 C = 2 * r * math.pi
