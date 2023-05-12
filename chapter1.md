@@ -77,19 +77,19 @@ skills:
   - 2
 ```
 
-In the Python script on the right, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. _Submit Answer_ checks whether your submission is correct and gives you feedback.
+Hit **Run Code** to run your first Python code with Datacamp and see the output!
 
-You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+Notice the `script.py` tab; this is where you can type Python code to solve exercises. You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
-You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
+You can also use the `IPython Shell` interactively by typing commands and hitting Enter. Here, your code will not be checked for correctness so it is a great way to experiment.
 
 `@instructions`
 - Experiment in the IPython Shell; type `5 / 8`, for example.
-- Add another line of code to the Python script on the top-right (not in the Shell): `print(7 + 10)`.
+- Add another line of code (not in the Shell): `print(7 + 10)`.
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
 `@hint`
-Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and hit 'Submit Answer'.
+- Add `print(7 + 10)` under `# Print the sum of 7 and 10` and hit 'Submit Answer' to check if your code is correct.
 
 `@pre_exercise_code`
 ```{python}
@@ -102,7 +102,7 @@ Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and
 print(5 / 8)
 
 # Print the sum of 7 and 10
-
+____
 ```
 
 `@solution`
