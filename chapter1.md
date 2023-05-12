@@ -101,7 +101,7 @@ print(7 + 10)
 ```{python}
 Ex().has_printout(0, not_printed_msg = "Make sure you are still printing something!")
 Ex().has_printout(1, not_printed_msg = "Make sure you are still printing something!")
-success_msg("Great! You can also use the **Shell** interactively by simply typing commands and hitting 'Run'. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.")
+success_msg("Great! You can also use the **Shell** interactively by simply typing commands and hitting 'Run Code'. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.")
 ```
 
 ---
