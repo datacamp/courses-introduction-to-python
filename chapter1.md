@@ -89,7 +89,7 @@ You can also use the `IPython Shell` interactively by typing commands and hittin
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
 `@hint`
-- Add `print(7 + 10)` under `# Print the sum of 7 and 10` and hit 'Submit Answer' to check if your code is correct.
+- Add `print(7 + 10)` under `# Print the sum of 7 and 10` and hit _Submit Answer_ to check if your code is correct.
 
 `@pre_exercise_code`
 ```{python}
