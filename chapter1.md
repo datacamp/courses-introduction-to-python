@@ -67,16 +67,10 @@ skills:
   - 2
 ```
 
-In the **Code** tab at the top of the screen, you can type Python code to solve the exercises.
-
-If you hit _Run Code_ or _Submit_, your code is executed and the output is shown in the **Shell** tab. 
-
-_Submit_ checks whether your code is correct and gives you feedback.
-
 Hit **Continue** to check out the instructions and run your first Python code with Datacamp!
 
 `@instructions`
-- Try hitting _Run Code_ to see the output of your code.
+- Try hitting _Run Code_ to see the output of your code in the **Shell** tab, then hit _Back to Code_.
 - Hit _Submit_ to execute the Python script and receive feedback.
 
 `@hint`
