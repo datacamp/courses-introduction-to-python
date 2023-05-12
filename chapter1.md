@@ -77,15 +77,15 @@ skills:
   - 2
 ```
 
-Hit **Run Code** to run your first Python code with Datacamp and see the output!
+Hit _Run Code_ to run your first Python code with Datacamp and see the output!
 
-Notice the `script.py` tab; this is where you can type Python code to solve exercises. You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+Notice the `script.py` window; this is where you can type Python code to solve exercises. You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
-You can also use the `IPython Shell` interactively by typing commands and hitting Enter. Here, your code will not be checked for correctness so it is a great way to experiment.
+You can also use the IPython Shell interactively by typing commands and hitting Enter. Here, your code will not be checked for correctness so it is a great way to experiment.
 
 `@instructions`
 - Experiment in the IPython Shell; type `5 / 8`, for example.
-- Add another line of code (not in the Shell): `print(7 + 10)`.
+- Add another line of code to `script.py`, `print(7 + 10)`, to be checked for correctness.
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
 `@hint`
