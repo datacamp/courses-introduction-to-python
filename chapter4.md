@@ -1175,7 +1175,7 @@ heights = [191, 184, 185, 180, ...]
 ```
 Each element in the lists corresponds to a player. The first list, `positions`, contains strings representing each player's position. The possible positions are: `'GK'` (goalkeeper), `'M'` (midfield), `'A'` (attack) and `'D'` (defense). The second list, `heights`, contains integers representing the height of the player in cm. The first player in the lists is a goalkeeper and is pretty tall (191 cm).
 
-You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you, so you are determined to show them using the data you received from FIFA and your newly acquired Python skills.
+You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you, so you are determined to show them using the data you received from FIFA and your newly acquired Python skills. `heights` and `positions` are available as lists
 
 `@instructions`
 - Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
@@ -1201,8 +1201,6 @@ heights = list(fifa.height)
 
 `@sample_code`
 ```{python}
-# heights and positions are available as lists
-
 # Import numpy
 import numpy as np
 
@@ -1225,8 +1223,6 @@ print("Median height of other players: " + str(None))
 
 `@solution`
 ```{python}
-# heights and positions are available as lists
-
 # Import numpy
 import numpy as np
 
