@@ -598,14 +598,14 @@ In this exercise, `baseball` is a list of lists. The main list contains 4 elemen
 
 `@sample_code`
 ```{python}
+# Import numpy
+import numpy as np
+
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
-
-# Import numpy
-import numpy as np
 
 # Create a 2D numpy array from baseball: np_baseball
 
@@ -619,14 +619,14 @@ import numpy as np
 
 `@solution`
 ```{python}
+# Import numpy
+import numpy as np
+
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
-
-# Import numpy
-import numpy as np
 
 # Create a 2D numpy array from baseball: np_baseball
 np_baseball = np.array(baseball)
