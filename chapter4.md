@@ -675,7 +675,7 @@ You have another look at the MLB data and realize that it makes more sense to re
 
 The MLB was, again, very helpful and passed you the data in a different structure, a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
 
-Can you store the data as a 2D array to unlock `numpy`'s extra functionality?
+Can you store the data as a 2D array to unlock `numpy`'s extra functionality? `baseball` is available as a regular list of lists.
 
 `@instructions`
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
@@ -694,8 +694,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
@@ -708,8 +706,6 @@ import numpy as np
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
