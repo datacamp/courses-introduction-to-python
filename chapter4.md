@@ -759,7 +759,7 @@ np_x[:, 0]
 
 For regular Python lists, this is a real pain. For 2D `numpy` arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
 
-The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
+The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0! `baseball` is available as a regular list of lists.
 
 `@instructions`
 - Print out the 50th row of `np_baseball`.
@@ -780,8 +780,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
@@ -800,8 +798,6 @@ np_baseball = np.array(baseball)
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
