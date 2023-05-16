@@ -334,7 +334,7 @@ high = y > 5
 y[high]
 ```
 
-The code that calculates the BMI of all baseball players is already included. Follow the instructions and reveal interesting things from the data!
+The code that calculates the BMI of all baseball players is already included. Follow the instructions and reveal interesting things from the data! `height_in` and `weight_lb` are available as regular lists.
 
 `@instructions`
 - Create a boolean `numpy` array: the element of the array should be `True` if the corresponding baseball player's BMI is below 21. You can use the `<` operator for this. Name the array `light`.
@@ -357,8 +357,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
@@ -379,8 +377,6 @@ bmi = np_weight_kg / np_height_m ** 2
 
 `@solution`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
