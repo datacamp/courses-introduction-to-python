@@ -486,7 +486,7 @@ np_x = np.array(x)
 np_x[1]
 ```
 
-The script in the editor already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
+The script in the editor already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays. `height_in` and `weight_lb` are available as regular lists.
 
 `@instructions`
 - Subset `np_weight_lb` by printing out the element at index 50.
@@ -506,8 +506,6 @@ weight_lb = mlb['Weight'].tolist()
 
 `@sample_code`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
@@ -524,8 +522,6 @@ np_height_in = np.array(height_in)
 
 `@solution`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
