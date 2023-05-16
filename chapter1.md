@@ -188,10 +188,10 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
+Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division, and there is also support for more advanced operations such as:
 
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` is `4` to the power of `2` and will give `16`.
-- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice, leaving you with a remainder of `4`.
+- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `3**4` is `3` to the power of `4` and will give `81`.
+- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice (7 x 2 = 14), leaving you with a remainder of `4` (18 - 14 = 4).
 
 The code in the script gives some examples.
 
