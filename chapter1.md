@@ -427,7 +427,7 @@ In the previous exercise, you worked with two Python data types:
 Next to numerical data types, there are two other very common data types:
 
 - `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. Can only be `True` or `False` (the capitalization is important!).
+- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
 
 `@instructions`
 - Create a new string, `desc`, with the value `"compound interest"`.
@@ -462,8 +462,8 @@ profitable = True
 
 `@sct`
 ```{python}
-Ex().check_object("desc").has_equal_value()
-Ex().check_object("profitable").has_equal_value()
+Ex().check_object("desc").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `desc` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("profitable").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
 success_msg("Nice!")
 ```
 
