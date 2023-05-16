@@ -858,7 +858,7 @@ np_mat + np.array([10, 10])
 np_mat + np_mat
 ```
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years).
+`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
 
 `@instructions`
 - You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
@@ -882,9 +882,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
-# updated is available as 2D numpy array
-
 # Import numpy package
 import numpy as np
 
@@ -903,9 +900,6 @@ np_baseball = np.array(baseball)
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
-# updated is available as 2D numpy array
-
 # Import numpy package
 import numpy as np
 
