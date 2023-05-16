@@ -971,7 +971,7 @@ np.mean(x)
 np.median(x)
 ```
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_.
+The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_. `np_baseball` is available.
 
 `@instructions`
 - Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
@@ -993,8 +993,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# np_baseball is available
-
 # Import numpy
 import numpy as np
 
@@ -1010,8 +1008,6 @@ import numpy as np
 
 `@solution`
 ```{python}
-# np_baseball is available
-
 # Import numpy
 import numpy as np
 
