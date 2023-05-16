@@ -668,11 +668,11 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 `@sample_code`
 ```{python}
-# Definition of radius
-r = 192500
-
 # Import radians function of math package
 
+
+# Definition of radius
+r = 192500
 
 # Travel distance of Moon over 12 degrees. Store in dist.
 
@@ -683,11 +683,11 @@ r = 192500
 
 `@solution`
 ```{python}
-# Definition of radius
-r = 192500
-
 # Import radians function of math package
 from math import radians
+
+# Definition of radius
+r = 192500
 
 # Travel distance of Moon over 12 degrees. Store in dist.
 dist = r * radians(12)
