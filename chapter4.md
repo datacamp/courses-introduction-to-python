@@ -144,8 +144,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height_in is available as a regular list
-
 # Import numpy
 import numpy as np
 
@@ -164,8 +162,6 @@ import numpy as np
 
 `@solution`
 ```{python}
-# height_in is available as a regular list
-
 # Import numpy
 import numpy as np
 
