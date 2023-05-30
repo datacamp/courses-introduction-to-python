@@ -61,11 +61,11 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Create list baseball
-baseball = [180, 215, 210, 210, 188, 176, 209, 200]
-
 # Import the numpy package as np
 
+
+# Create list baseball
+baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 # Create a numpy array from baseball: np_baseball
 
@@ -76,11 +76,11 @@ baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 `@solution`
 ```{python}
-# Create list baseball
-baseball = [180, 215, 210, 210, 188, 176, 209, 200]
-
 # Import the numpy package as np
 import numpy as np
+
+# Create list baseball
+baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 # Create a NumPy array from baseball: np_baseball
 np_baseball = np.array(baseball)
@@ -144,8 +144,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height_in is available as a regular list
-
 # Import numpy
 import numpy as np
 
@@ -164,8 +162,6 @@ import numpy as np
 
 `@solution`
 ```{python}
-# height_in is available as a regular list
-
 # Import numpy
 import numpy as np
 
@@ -217,7 +213,7 @@ skills:
 
 The MLB also offers to let you analyze their weight data. Again, both are available as regular Python lists: `height_in` and `weight_lb`. `height_in` is in inches and `weight_lb` is in pounds.
 
-It's now possible to calculate the BMI of each baseball player. Python code to convert `height_in` to a `numpy` array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game!
+It's now possible to calculate the BMI of each baseball player. Python code to convert `height_in` to a `numpy` array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game! `height_in` and `weight_lb` are available as regular lists.
 
 `@instructions`
 - Create a `numpy` array from the `weight_lb` list with the correct units. Multiply by `0.453592` to go from pounds to kilograms. Store the resulting `numpy` array as `np_weight_kg`.
@@ -240,8 +236,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height_in and weight_lb are available as regular lists
-
 # Import numpy
 import numpy as np
 
@@ -260,8 +254,6 @@ np_height_m = np.array(height_in) * 0.0254
 
 `@solution`
 ```{python}
-# height_in and weight_lb are available as regular lists
-
 # Import numpy
 import numpy as np
 
@@ -342,7 +334,7 @@ high = y > 5
 y[high]
 ```
 
-The code that calculates the BMI of all baseball players is already included. Follow the instructions and reveal interesting things from the data!
+The code that calculates the BMI of all baseball players is already included. Follow the instructions and reveal interesting things from the data! `height_in` and `weight_lb` are available as regular lists.
 
 `@instructions`
 - Create a boolean `numpy` array: the element of the array should be `True` if the corresponding baseball player's BMI is below 21. You can use the `<` operator for this. Name the array `light`.
@@ -365,8 +357,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
@@ -387,8 +377,6 @@ bmi = np_weight_kg / np_height_m ** 2
 
 `@solution`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
@@ -498,7 +486,7 @@ np_x = np.array(x)
 np_x[1]
 ```
 
-The script in the editor already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
+The script in the editor already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays. `height_in` and `weight_lb` are available as regular lists.
 
 `@instructions`
 - Subset `np_weight_lb` by printing out the element at index 50.
@@ -518,8 +506,6 @@ weight_lb = mlb['Weight'].tolist()
 
 `@sample_code`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
@@ -536,8 +522,6 @@ np_height_in = np.array(height_in)
 
 `@solution`
 ```{python}
-# height_in and weight_lb are available as a regular lists
-
 # Import numpy
 import numpy as np
 
@@ -614,14 +598,14 @@ In this exercise, `baseball` is a list of lists. The main list contains 4 elemen
 
 `@sample_code`
 ```{python}
+# Import numpy
+import numpy as np
+
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
-
-# Import numpy
-import numpy as np
 
 # Create a 2D numpy array from baseball: np_baseball
 
@@ -635,14 +619,14 @@ import numpy as np
 
 `@solution`
 ```{python}
+# Import numpy
+import numpy as np
+
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
-
-# Import numpy
-import numpy as np
 
 # Create a 2D numpy array from baseball: np_baseball
 np_baseball = np.array(baseball)
@@ -691,7 +675,7 @@ You have another look at the MLB data and realize that it makes more sense to re
 
 The MLB was, again, very helpful and passed you the data in a different structure, a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
 
-Can you store the data as a 2D array to unlock `numpy`'s extra functionality?
+Can you store the data as a 2D array to unlock `numpy`'s extra functionality? `baseball` is available as a regular list of lists.
 
 `@instructions`
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
@@ -710,8 +694,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
@@ -724,8 +706,6 @@ import numpy as np
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
@@ -779,7 +759,7 @@ np_x[:, 0]
 
 For regular Python lists, this is a real pain. For 2D `numpy` arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
 
-The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
+The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0! `baseball` is available as a regular list of lists.
 
 `@instructions`
 - Print out the 50th row of `np_baseball`.
@@ -800,8 +780,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
@@ -820,8 +798,6 @@ np_baseball = np.array(baseball)
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
-
 # Import numpy package
 import numpy as np
 
@@ -882,7 +858,7 @@ np_mat + np.array([10, 10])
 np_mat + np_mat
 ```
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years).
+`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
 
 `@instructions`
 - You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
@@ -906,9 +882,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
-# updated is available as 2D numpy array
-
 # Import numpy package
 import numpy as np
 
@@ -927,9 +900,6 @@ np_baseball = np.array(baseball)
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
-# updated is available as 2D numpy array
-
 # Import numpy package
 import numpy as np
 
@@ -1001,7 +971,7 @@ np.mean(x)
 np.median(x)
 ```
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_.
+The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_. `np_baseball` is available.
 
 `@instructions`
 - Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
@@ -1023,8 +993,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# np_baseball is available
-
 # Import numpy
 import numpy as np
 
@@ -1040,8 +1008,6 @@ import numpy as np
 
 `@solution`
 ```{python}
-# np_baseball is available
-
 # Import numpy
 import numpy as np
 
@@ -1089,7 +1055,7 @@ skills:
 
 Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D NumPy array `np_baseball`, with three columns.
 
-The Python script in the editor already includes code to print out informative messages with the different summary statistics. Can you finish the job?
+The Python script in the editor already includes code to print out informative messages with the different summary statistics. Can you finish the job? `np_baseball` is available.
 
 `@instructions`
 - The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.
@@ -1110,8 +1076,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# np_baseball is available
-
 # Import numpy
 import numpy as np
 
@@ -1134,8 +1098,6 @@ print("Correlation: " + str(corr))
 
 `@solution`
 ```{python}
-# np_baseball is available
-
 # Import numpy
 import numpy as np
 
@@ -1213,7 +1175,7 @@ heights = [191, 184, 185, 180, ...]
 ```
 Each element in the lists corresponds to a player. The first list, `positions`, contains strings representing each player's position. The possible positions are: `'GK'` (goalkeeper), `'M'` (midfield), `'A'` (attack) and `'D'` (defense). The second list, `heights`, contains integers representing the height of the player in cm. The first player in the lists is a goalkeeper and is pretty tall (191 cm).
 
-You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you, so you are determined to show them using the data you received from FIFA and your newly acquired Python skills.
+You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you, so you are determined to show them using the data you received from FIFA and your newly acquired Python skills. `heights` and `positions` are available as lists
 
 `@instructions`
 - Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
@@ -1239,8 +1201,6 @@ heights = list(fifa.height)
 
 `@sample_code`
 ```{python}
-# heights and positions are available as lists
-
 # Import numpy
 import numpy as np
 
@@ -1263,8 +1223,6 @@ print("Median height of other players: " + str(None))
 
 `@solution`
 ```{python}
-# heights and positions are available as lists
-
 # Import numpy
 import numpy as np
 

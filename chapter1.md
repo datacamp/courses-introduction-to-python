@@ -77,19 +77,19 @@ skills:
   - 2
 ```
 
-In the Python script on the right, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. _Submit Answer_ checks whether your submission is correct and gives you feedback.
+Hit _Run Code_ to run your first Python code with Datacamp and see the output!
 
-You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
+Notice the `script.py` window; this is where you can type Python code to solve exercises. You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
 
-You can also use the IPython Shell interactively by simply typing commands and hitting Enter. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.
+You can also use the IPython Shell interactively by typing commands and hitting Enter. Here, your code will not be checked for correctness so it is a great way to experiment.
 
 `@instructions`
 - Experiment in the IPython Shell; type `5 / 8`, for example.
-- Add another line of code to the Python script on the top-right (not in the Shell): `print(7 + 10)`.
+- Add another line of code to `script.py`, `print(7 + 10)`, to be checked for correctness.
 - Hit _Submit Answer_ to execute the Python script and receive feedback.
 
 `@hint`
-Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and hit 'Submit Answer'.
+- Add `print(7 + 10)` under `# Print the sum of 7 and 10` and hit _Submit Answer_ to check if your code is correct.
 
 `@pre_exercise_code`
 ```{python}
@@ -102,7 +102,7 @@ Simply add `print(7 + 10)` in the script on the top-right (not in the Shell) and
 print(5 / 8)
 
 # Print the sum of 7 and 10
-
+____
 ```
 
 `@solution`
@@ -188,10 +188,10 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
+Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division, and there is also support for more advanced operations such as:
 
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` is `4` to the power of `2` and will give `16`.
-- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice, leaving you with a remainder of `4`.
+- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `3**4` is `3` to the power of `4` and will give `81`.
+- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice (7 x 2 = 14), leaving you with a remainder of `4` (18 - 14 = 4).
 
 The code in the script gives some examples.
 
@@ -274,7 +274,7 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable use `=`, like this example:
+In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
 
 ```
 x = 5
@@ -285,7 +285,7 @@ You can now use the name of this variable, `x`, instead of the actual value, `5`
 Remember, `=` in Python means _assignment_, it doesn't test equality!
 
 `@instructions`
-- Create a variable `savings` with the value 100.
+- Create a variable `savings` with the value of `100`.
 - Check out this variable by typing `print(savings)` in the script.
 
 `@hint`
@@ -427,7 +427,7 @@ In the previous exercise, you worked with two Python data types:
 Next to numerical data types, there are two other very common data types:
 
 - `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. Can only be `True` or `False` (the capitalization is important!).
+- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
 
 `@instructions`
 - Create a new string, `desc`, with the value `"compound interest"`.
@@ -462,8 +462,8 @@ profitable = True
 
 `@sct`
 ```{python}
-Ex().check_object("desc").has_equal_value()
-Ex().check_object("profitable").has_equal_value()
+Ex().check_object("desc").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `desc` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("profitable").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
 success_msg("Nice!")
 ```
 
@@ -636,7 +636,7 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 
 `@instructions`
 - Hit _Run Code_ to run the code. Try to understand the error message.
-- Fix the code such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
+- Fix the code such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables `savings` and `results` to strings.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
 `@hint`
@@ -662,7 +662,7 @@ print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 pi_string = "3.1415926"
 
 # Convert pi_string into float: pi_float
-pi_float = ____
+pi_float = 
 ```
 
 `@solution`
