@@ -2,7 +2,9 @@
 title_meta: Capítulo 1
 title: Conceptos básicos de Python
 description: >-
-  Introducción a los conceptos básicos de Python. Aprende a usar Python de forma interactiva y mediante un script. Crea tus primeras variables y familiarízate con los tipos de datos básicos de Python.
+  Introducción a los conceptos básicos de Python. Aprende a usar Python de forma
+  interactiva y mediante un script. Crea tus primeras variables y familiarízate
+  con los tipos de datos básicos de Python.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true

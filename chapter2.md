@@ -2,7 +2,8 @@
 title_meta: Capítulo 2
 title: Listas en Python
 description: >-
-  Aprende a almacenar, acceder y manipular datos en listas: el primer paso para trabajar de manera eficiente con grandes cantidades de datos.
+  Aprende a almacenar, acceder y manipular datos en listas: el primer paso para
+  trabajar de manera eficiente con grandes cantidades de datos.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
