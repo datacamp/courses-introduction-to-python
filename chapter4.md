@@ -2,7 +2,9 @@
 title_meta: Capítulo 4
 title: NumPy
 description: >-
-  NumPy es un paquete fundamental de Python para trabajar eficientemente en ciencia de datos. Aprende a trabajar con potentes herramientas de matrices en NumPy para a explorar y manipular datos.
+  NumPy es un paquete fundamental de Python para trabajar eficientemente en
+  ciencia de datos. Aprende a trabajar con potentes herramientas de matrices en
+  NumPy para a explorar y manipular datos.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
 lessons:

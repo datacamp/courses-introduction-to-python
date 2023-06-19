@@ -2,7 +2,10 @@
 title_meta: Capítulo 3
 title: Funciones y Paquetes
 description: >-
-  Aprenderás a usar funciones, métodos y paquetes para aprovechar de manera eficiente el código que ya escrito por brillantes desarrolladores de Python. ¡El objetivo es reducir la cantidad de código necesario para resolver problemas desafiantes!
+  Aprenderás a usar funciones, métodos y paquetes para aprovechar de manera
+  eficiente el código que ya escrito por brillantes desarrolladores de Python.
+  ¡El objetivo es reducir la cantidad de código necesario para resolver
+  problemas desafiantes!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
