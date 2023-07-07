@@ -37,21 +37,21 @@ kind: PureMultipleChoice
 xp: 50
 ```
 
-Python is a pretty versatile language. For which applications can you use Python?
+Python is a **versatile** language. For which applications can you use Python?
 
 `@hint`
-- Hugo mentioned in the video that Python can be used to build practically any piece of software.
+- Practically any piece of software can be built using Python.
 
 `@possible_answers`
-- You want to do some quick calculations.
-- For your new business, you want to develop a database-driven website.
-- Your boss asks you to clean and analyze the results of the latest satisfaction survey.
+- For quick calculations.
+- Develop a database-driven website.
+- Clean and analyze data.
 - [All of the above.]
 
 `@feedback`
-- "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
-- "Incorrect. There is a very popular framework to build database-driven websites (Django), but Python can do much more."
-- "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
+- "Python can do more than quick calculations!"
+- "There is a very popular Python framework to build database-driven websites, but it can do much more."
+- "Python is a powerful tool for data analysis, but it has other uses, too."
 - "Correct! Python is an extremely versatile language."
 
 ---
