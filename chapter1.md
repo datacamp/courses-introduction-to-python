@@ -324,17 +324,15 @@ skills:
 
 You've now created a savings variable, so let's start saving!
 
-Instead of calculating with the actual values, you can use variables instead.
+Instead of calculating with the actual values, you can use variables instead. The `savings` variable you created in the previous exercise with a value of `100` is available to you.
 
-The `savings` variable you created in the previous exercise with a value of `100` is available to you.
-
-How much money would you have four months from now, if you saved $10 each month?
+How much money would you have saved four months from now, if you saved $10 each month?
 
 `@instructions`
 - Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` and `num_months` and save it to `four_months_savings`.
-- Add `four_months_savings` to `savings` and save it to `total_savings`.
-- Print out the value of `total_savings`.
+- Multiply `monthly_savings` by `num_months` and save it to `new_savings`.
+- Add `new_savings` to `savings`, saving the sum as `total_savings`.
+- Print the value of `total_savings`.
 
 `@hint`
 - You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
@@ -352,9 +350,9 @@ savings = 100
 
 
 # Multiply monthly_savings and num_months
-four_months_savings = ____
+new_savings = ____
 
-# Add four_months_savings to your savings
+# Add new_savings to your savings
 total_savings = ____
 
 # Print total_savings
@@ -368,10 +366,10 @@ monthly_savings = 10
 num_months = 4
 
 # Multiply monthly_savings and num_months
-four_months_savings = monthly_savings * num_months
+new_savings = monthly_savings * num_months
 
-# Add four_months_savings to your savings
-total_savings = four_months_savings + savings
+# Add new_savings to your savings
+total_savings = savings + new_savings
 
 # Print total_savings
 print(total_savings)
@@ -381,8 +379,8 @@ print(total_savings)
 ```{python}
 Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
 Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("four_months_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `four_months_savings + savings` but got something else.")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
+Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
 
 Ex().has_printout(0, not_printed_msg="Remember to print out `total_savings` at the end of your script.")
 
