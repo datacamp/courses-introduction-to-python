@@ -37,7 +37,7 @@ kind: PureMultipleChoice
 xp: 50
 ```
 
-Python is a **versatile** language. For which applications can you use Python?
+Python is a **flexible** language. For which applications can you use Python?
 
 `@hint`
 - Practically any piece of software can be built using Python.
