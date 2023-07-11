@@ -328,7 +328,7 @@ Instead of calculating with the actual values, you can use variables instead.
 
 The `savings` variable you created in the previous exercise with a value of `100` is available to you.
 
-How much money would you have four months from now, if you saved $10 each month? 
+How much money would you have four months from now, if you saved $10 each month?
 
 `@instructions`
 - Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
