@@ -400,19 +400,20 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with two Python data types:
+In the previous exercise, you worked with the integer Python data type:
 
 - `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `growth_multiplier`, with the value `1.1`, is an example of a float.
 
-Next to numerical data types, there are two other very common data types:
+Next to numerical data types, there are three other very common data types:
 
+- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
 - `str`, or string: a type to represent text. You can use single or double quotes to build a string.
 - `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
 
 `@instructions`
-- Create a new string, `desc`, with the value `"compound interest"`.
-- Create a new boolean, `profitable`, with the value `True`.
+- Create a new float, `half`, with the value `0.5`.
+- Create a new string, `intro`, with the value `"Hello! How are you?"`.
+- Create a new boolean, `is_good`, with the value `True`.
 
 `@hint`
 - To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
@@ -425,26 +426,36 @@ Next to numerical data types, there are two other very common data types:
 
 `@sample_code`
 ```{python}
-# Create a variable desc
+# Create a variable half
 
 
-# Create a variable profitable
+# Create a variable intro
+
+
+# Create a variable is_good
 
 ```
 
 `@solution`
 ```{python}
-# Create a variable desc
-desc = "compound interest"
+# Create a variable half
+half = 0.5
 
-# Create a variable profitable
-profitable = True
+# Create a variable intro
+intro = "Hello! How are you?"
+
+# Create a variable is_good
+is_good = True
 ```
 
 `@sct`
 ```{python}
-Ex().check_object("desc").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `desc` variable. Double check the spelling and make sure you've used quotation marks.")
-Ex().check_object("profitable").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+
 success_msg("Nice!")
 ```
 
