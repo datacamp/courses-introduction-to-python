@@ -507,7 +507,7 @@ Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out abou
 
 `@pre_exercise_code`
 ```{python}
-a = 100*1.1**7
+a = 100*0.5
 b = "True"
 c = False
 ```
