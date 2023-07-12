@@ -143,7 +143,7 @@ key: 78ef256bc0
 
 - Similar to typing in IPython Shell{{3}}
 
-![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/9f41e51af11fff99081aa31fb3dd2a352bb4ac96/python_script.png = 78){{3}}
+![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
 
 `@script`
 python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line.
@@ -193,7 +193,7 @@ key: 693ba1cd14
 ```
 
 `@part1`
-![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/6e9856e39fc8e942896d9c91f78d3739ebdbba30/dc_ui.png)
+![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
 
 `@script`
 Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
