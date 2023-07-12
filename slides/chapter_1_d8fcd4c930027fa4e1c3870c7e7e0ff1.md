@@ -38,7 +38,7 @@ disable_transition: true
 ```
 
 `@part1`
-![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/aeed94c06eb3da9b688eb7ead884366f88539e30/dc_ui.gif)
+![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/82683930db8b818d1821a60f7b94a68c259f6a45/pydesktop.gif)
 
 `@script`
 In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
