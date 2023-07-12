@@ -222,7 +222,7 @@ It's now possible to calculate the BMI of each baseball player. Python code to c
 
 `@hint`
 - Use a similar approach as the code that calculates `np_height_m`. This time, though, the you have to work with `weight` and multiply with `0.453592`.
-- To calculate the `bmi`, you will need the `/` and `**` operators.
+- To calculate the `bmi`, you will need the `/` and `**` operators. Recall `**` is for exponents.
 - To print out a variable `x`, type `print(x)` in the script.
 
 `@pre_exercise_code`
