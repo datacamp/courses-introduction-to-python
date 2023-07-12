@@ -84,7 +84,7 @@ key: 43a91a7217
 `@part1`
 **Execute Python commands**
 
-![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/4eee529b34a70821e3a7b5d4d7ce5a929f81225e/ipython_shell.png)
+![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
 
 `@script`
 Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the
@@ -102,7 +102,7 @@ disable_transition: true
 `@part1`
 **Execute Python commands**
 
-![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/d4d2c4150da85cc755c22967b400027525daa5ac/ipython_shell_highlighted.png)
+![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
 
 `@script`
 Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
