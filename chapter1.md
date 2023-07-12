@@ -338,75 +338,69 @@ skills:
   - 2
 ```
 
-The formula to calculate how much money you have after 7 years of investing $100 each year with 10% return would look something like this:
+You've now created a savings variable, so let's start saving!
 
-```
-100 * 1.1 ** 7
-```
+Instead of calculating with the actual values, you can use variables instead. The `savings` variable you created in the previous exercise with a value of `100` is available to you.
 
-This is known as compound interest.
-
-Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.1` and then redo the calculations!
+How much money would you have saved four months from now, if you saved $10 each month?
 
 `@instructions`
-- Create a variable `growth_multiplier`, equal to `1.1`.
-- Create a variable, `result`, equal to the amount of money you saved after `7` years. 
-- Print out the value of `result`.
+- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
+- Multiply `monthly_savings` by `num_months` and save it to `new_savings`.
+- Add `new_savings` to `savings`, saving the sum as `total_savings`.
+- Print the value of `total_savings`.
 
 `@hint`
-- To create the variable `growth_multiplier`, use `growth_multiplier = 1.1`.
-- In the example code block of the assignment, replace `100` with `savings` and `1.1` with `growth_multiplier`: `savings * growth_multiplier ** 7`.
-- Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
+- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
+- Use `print()` to see the amount in `total_savings`.
 
 `@pre_exercise_code`
 ```{python}
-
+savings = 100
 ```
 
 `@sample_code`
 ```{python}
-# Create a variable savings
-savings = 100
-
-# Create a variable growth_multiplier
+# Create the variables monthly_savings and num_months
 
 
-# Calculate result
 
+# Multiply monthly_savings and num_months
+new_savings = ____
 
-# Print out result
+# Add new_savings to your savings
+total_savings = ____
+
+# Print total_savings
 
 ```
 
 `@solution`
 ```{python}
-# Create a variable savings
-savings = 100
+# Create the variables monthly_savings and num_months
+monthly_savings = 10
+num_months = 4
 
-# Create a variable growth_multiplier
-growth_multiplier = 1.1
+# Multiply monthly_savings and num_months
+new_savings = monthly_savings * num_months
 
-# Calculate result
-result = savings * growth_multiplier ** 7
+# Add new_savings to your savings
+total_savings = savings + new_savings
 
-# Print out result
-print(result)
+# Print total_savings
+print(total_savings)
 ```
 
 `@sct`
 ```{python}
-Ex().check_object("savings", missing_msg="The variable `savings` was defined for you, don't remove it!").has_equal_value(incorrect_msg="The variable `savings` should be `100`, like it was defined for you."),
-Ex().check_object("growth_multiplier").has_equal_value(incorrect_msg="Did you assign the correct value to `growth_multiplier`?")
-Ex().check_correct(
-  check_object("result").has_equal_value(incorrect_msg="Have you used `*` and `**` to calculate `result`?"),
-  multi(
-    has_code("savings\s*\*\s*\(*\s*growth_multiplier", not_typed_msg = "Did you multiply `savings` by `growth_multiplier ** 7`?"),      
-    has_code("growth_multiplier\s*\*\*\s*7", not_typed_msg = "Did you raise `growth_multiplier` to the power of `7` using `**`?")   
-  )
-)
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
+Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `result` at the end of your script.")
-success_msg("Great!")
+Ex().has_printout(0, not_printed_msg="Remember to print out `total_savings` at the end of your script.")
+
+success_msg("You now have $140 in savings!")
 ```
 
 ---
