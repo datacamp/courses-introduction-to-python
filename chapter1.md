@@ -52,7 +52,7 @@ Python is a **flexible** language. For which applications can you use Python?
 - "Python can do more than quick calculations!"
 - "There is a very popular Python framework to build database-driven websites, but it can do much more."
 - "Python is a powerful tool for data analysis, but it has other uses, too."
-- "Correct! Python is an extremely versatile language."
+- "Correct! Python is an extremely flexible language."
 
 ---
 
