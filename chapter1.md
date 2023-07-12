@@ -179,7 +179,7 @@ The code in the script gives some examples.
 Now it's your turn to practice!
 
 `@instructions`
-- Print the sum of `5 + 5`.
+- Print the sum of `4 + 5`.
 - Print the result of subtracting `5` from `5`.
 - Multiply `3` by `5`.
 - Divide `10` by `2`.
@@ -210,7 +210,7 @@ Now it's your turn to practice!
 `@solution`
 ```{python}
 # Addition
-print(5 + 5)
+print(4 + 5)
 
 # Subtraction
 print(5 - 5)
@@ -224,7 +224,7 @@ print(10 / 2)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(5 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
 
 Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
 
