@@ -618,7 +618,7 @@ skills:
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
 
-Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string.
+Suppose, for example, that you've calculated your savings want to summarize the results in a string.
 
 To do this, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
 
@@ -626,7 +626,7 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 
 `@instructions`
 - Hit _Run Code_ to run the code. Try to understand the error message.
-- Fix the code such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables `savings` and `results` to strings.
+- Fix the code such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables `savings` and `total_savings` to strings.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
 `@hint`
@@ -641,12 +641,12 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 
 `@sample_code`
 ```{python}
-# Definition of savings and result
+# Definition of savings and total_savings
 savings = 100
-result = 100 * 1.10 ** 7
+total_savings = 150
 
 # Fix the printout
-print("I started with $" + savings + " and now have $" + result + ". Awesome!")
+print("I started with $" + savings + " and now have $" + total_savings + ". Awesome!")
 
 # Definition of pi_string
 pi_string = "3.1415926"
@@ -657,12 +657,12 @@ pi_float =
 
 `@solution`
 ```{python}
-# Definition of savings and result
+# Definition of savings and total_savings
 savings = 100
-result = 100 * 1.10 ** 7
+total_savings = 150
 
 # Fix the printout
-print("I started with $" + str(savings) + " and now have $" + str(result) + ". Awesome!")
+print("I started with $" + str(savings) + " and now have $" + str(total_savings) + ". Awesome!")
 
 # Definition of pi_string
 pi_string = "3.1415926"
@@ -678,14 +678,14 @@ pi_float = float(pi_string)
 msg = "You don't have to change or remove the predefined variables."
 Ex().multi(
     check_object("savings", missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object("result", missing_msg=msg).has_equal_value(incorrect_msg=msg)
+    check_object("total_savings", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
 Ex().check_correct(
     has_printout(0),
     multi(
         check_function("str", 0).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `savings` into a string with `str(savings)`."),
-        check_function("str", 1).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `result` into a string `str(result)`.")
+        check_function("str", 1).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `total_savings` into a string `str(total_savings)`.")
     )
 )
 
@@ -698,7 +698,7 @@ Ex().check_correct(
     )
 )
 
-success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
+success_msg("Great! You have saved $150; that's pretty awesome indeed!")
 ```
 
 ---
