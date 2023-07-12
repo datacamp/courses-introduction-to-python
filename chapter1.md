@@ -541,15 +541,15 @@ When you sum two strings, for example, you'll get different behavior than when y
 In the script some variables with different types have already been created. It's up to you to use them.
 
 `@instructions`
-- Calculate the product of `savings` and `growth_multiplier`. Store the result in `year1`.
-- What do you think the resulting type will be? Find out by printing out the type of `year1`.
-- Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
-- Print out `doubledesc`. Did you expect this?
+- Calculate the product of `monthly_savings` and `num_months`. Store the result in `year_savings`.
+- What do you think the resulting type will be? Find out by printing out the type of `year_savings`.
+- Calculate the sum of `intro` and `intro` and store the result in a new variable `doubleintro`.
+- Print out `doubleintro`. Did you expect this?
 
 `@hint`
-- Assign `growth_multiplier * savings` to a new variable, `year1`.
+- Assign `monthly_savings * num_months` to a new variable, `year_savings`.
 - To print the type of a variable `x`, use `print(type(x))`.
-- Assign `desc + desc` to a new variable, `doubledesc`.
+- Assign `intro + intro` to a new variable, `doubleintro`.
 - To print a variable `x`, write `print(x)` in the script.
 
 `@pre_exercise_code`
@@ -559,40 +559,40 @@ In the script some variables with different types have already been created. It'
 
 `@sample_code`
 ```{python}
-savings = 100
-growth_multiplier = 1.1
-desc = "compound interest"
+monthly_savings = 10
+num_months = 12
+intro = "Hello! How are you?"
 
-# Assign product of savings and growth_multiplier to year1
+# Calculate year_savings using monthly_savings and num_months
 
 
 # Print the type of year1
 
 
-# Assign sum of desc and desc to doubledesc
+# Assign sum of intro and intro to doubleintro
 
 
-# Print out doubledesc
+# Print out doubleintro
 
 ```
 
 `@solution`
 ```{python}
-savings = 100
-growth_multiplier = 1.1
-desc = "compound interest"
+monthly_savings = 10
+num_months = 12
+intro = "Hello! How are you?"
 
-# Assign product of savings and growth_multiplier to year1
-year1 = savings * growth_multiplier
+# Calculate year_savings using monthly_savings and num_months
+year_savings = monthly_savings * num_months
 
 # Print the type of year1
-print(type(year1))
+print(type(year_savings))
 
-# Assign sum of desc and desc to doubledesc
-doubledesc = desc + desc
+# Assign sum of intro and intro to doubleintro
+doubleintro = intro + intro
 
-# Print out doubledesc
-print(doubledesc)
+# Print out doubleintro
+print(doubleintro)
 ```
 
 `@sct`
@@ -601,24 +601,22 @@ print(doubledesc)
 msg = "You don't have to change or remove the predefined variables."
 
 Ex().multi(
-    check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('growth_multiplier', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('desc', missing_msg=msg).has_equal_value(incorrect_msg=msg)
+    check_object('monthly_savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('num_months', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
-# check year1 and printout
 Ex().multi(
-    check_object("year1").has_equal_value(incorrect_msg="Multiply `savings` and `growth_multiplier` to create the `year1` variable."),
-    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year1`.")
+    check_object("year_savings").has_equal_value(incorrect_msg="Multiply `monthly_savings` and `num_months` to create the `year_savings` variable."),
+    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year_savings`.")
 )
 
-# check doubledesc and printout
 Ex().multi(
-    check_object("doubledesc").has_equal_value(incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?"),
-    has_printout(1, not_printed_msg = "Don't forget to print out `doubledesc`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
+    has_printout(1, not_printed_msg = "Don't forget to print out `doubleintrp`.")
 )
 
-success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
+success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
 ```
 
 ---
