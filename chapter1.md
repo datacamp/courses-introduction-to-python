@@ -442,26 +442,36 @@ Next to numerical data types, there are three other very common data types:
 
 `@sample_code`
 ```{python}
-# Create a variable desc
+# Create a variable half
 
 
-# Create a variable profitable
+# Create a variable intro
+
+
+# Create a variable is_good
 
 ```
 
 `@solution`
 ```{python}
-# Create a variable desc
-desc = "compound interest"
+# Create a variable half
+half = 0.5
 
-# Create a variable profitable
-profitable = True
+# Create a variable intro
+intro = "Hello! How are you?"
+
+# Create a variable is_good
+is_good = True
 ```
 
 `@sct`
 ```{python}
-Ex().check_object("desc").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `desc` variable. Double check the spelling and make sure you've used quotation marks.")
-Ex().check_object("profitable").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+
 success_msg("Nice!")
 ```
 
