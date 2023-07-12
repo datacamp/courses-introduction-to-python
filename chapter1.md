@@ -188,22 +188,20 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division, and there is also support for more advanced operations such as:
-
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `3**4` is `3` to the power of `4` and will give `81`.
-- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4` because `7` fits into `18` twice (7 x 2 = 14), leaving you with a remainder of `4` (18 - 14 = 4).
+Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
 
 The code in the script gives some examples.
 
 Now it's your turn to practice!
 
 `@instructions`
-- Change the values of the numbers shown to see how Python performs addition and subtraction.
-- Change the values of the numbers shown to see how multiplication, division, modulo, and exponentiation works in Python.
-- Calculate and print `2` to the power of `5`.
+- Print the sum of `4 + 5`.
+- Print the result of subtracting `5` from `5`.
+- Multiply `3` by `5`.
+- Divide `10` by `2`.
 
 `@hint`
-- The syntax for "the power of" is `**`.
+- You'll need to use `print()` to generate an output.
 
 `@pre_exercise_code`
 ```{python}
@@ -212,39 +210,44 @@ Now it's your turn to practice!
 
 `@sample_code`
 ```{python}
-# Addition, subtraction
-print(5 + 5)
-print(5 - 5)
+# Addition
 
-# Multiplication, division, modulo, and exponentiation
-print(3 * 5)
-print(10 / 2)
-print(18 % 7)
-print(4 ** 2)
 
-# Calculate two to the power of five
-print(____)
+# Subtraction
+
+
+# Multiplication
+
+
+# Division
+
 ```
 
 `@solution`
 ```{python}
-# Addition, subtraction
-print(5 + 5)
+# Addition
+print(4 + 5)
+
+# Subtraction
 print(5 - 5)
 
-# Multiplication, division, modulo, and exponentiation
+# Multiplication
 print(3 * 5)
-print(10 / 2)
-print(18 % 7)
-print(4 ** 2)
 
-# Calculate two to the power of five
-print(2 ** 5)
+# Division
+print(10 / 2)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(6, not_printed_msg = "Have you used `print(2 ** 5)` to print out the result of your calculations?")
+Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+
+Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+
+Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+
+Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+
 success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
 ```
 
