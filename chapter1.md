@@ -133,9 +133,9 @@ skills:
   - 2
 ```
 
-Something that Hugo didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
+You can also add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about and do not run as Python code.
 
-To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment in the editor, `# Division`; it is completely ignored during execution.
+They start with `#` tag. See the comment in the editor, `# Division`; now it's your turn to add a comment!
 
 `@instructions`
 Above the `print(7 + 10)`, add the comment 
@@ -144,7 +144,7 @@ Above the `print(7 + 10)`, add the comment
 ```
 
 `@hint`
-For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
+- For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -156,7 +156,7 @@ For this exercise you only have to add one line of comments. It won't run as Pyt
 # Division
 print(5 / 8)
 
-
+____
 print(7 + 10)
 ```
 
