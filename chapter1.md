@@ -566,7 +566,7 @@ intro = "Hello! How are you?"
 # Calculate year_savings using monthly_savings and num_months
 
 
-# Print the type of year1
+# Print the type of year_savings
 
 
 # Assign sum of intro and intro to doubleintro
@@ -585,7 +585,7 @@ intro = "Hello! How are you?"
 # Calculate year_savings using monthly_savings and num_months
 year_savings = monthly_savings * num_months
 
-# Print the type of year1
+# Print the type of year_savings
 print(type(year_savings))
 
 # Assign sum of intro and intro to doubleintro
