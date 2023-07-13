@@ -668,7 +668,7 @@ print("I started with $" + savings + " and now have $" + total_savings + ". Awes
 pi_string = "3.1415926"
 
 # Convert pi_string into float: pi_float
-pi_float = 
+
 ```
 
 `@solution`
