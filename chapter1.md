@@ -141,7 +141,7 @@ They start with `#` tag. See the comment in the editor, `# Division`; now it's y
 # Division
 print(5 / 8)
 
-(____)
+____
 print(7 + 10)
 ```
 
