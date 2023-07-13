@@ -122,14 +122,14 @@ You can also add **comments** to your Python scripts. Comments are important to 
 They start with `#` tag. See the comment in the editor, `# Division`; now it's your turn to add a comment!
 
 `@instructions`
-- Above the `print(7 + 10)`, add the comment
+- Above the `print(7 + 10)`, add the comment:
 ```
 # Addition
 ```
-- You can copy the text by tapping it, and then tapping the underscores (____) in the code below.
+You can copy the text by tapping it, and then tapping the underscores (____) in the code below.
 
 `@hint`
-- Try copy and pasting the comment rather than typing it out by tapping and selecting copy.
+- Try copy and pasting the comment rather than typing it out by tapping to automatically copy it!
 
 `@pre_exercise_code`
 ```{python}
@@ -140,6 +140,8 @@ They start with `#` tag. See the comment in the editor, `# Division`; now it's y
 ```{python}
 # Division
 print(5 / 8)
+
+
 
 ____
 (____)
