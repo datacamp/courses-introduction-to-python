@@ -126,10 +126,10 @@ They start with `#` tag. See the comment in the editor, `# Division`; now it's y
 ```
 # Addition
 ```
-You can copy the text by tapping it, and then tapping the underscores ____ in the code below.
+You can copy the text by tapping it and then tapping the underscores ____ in the code below.
 
 `@hint`
-- Try copy and pasting the comment rather than typing it out by tapping the comment automatically copy it then tap the underscores and paste!
+- Try copying and pasting the comment rather than typing it out by tapping the comment to automatically copy it, then tap and hold the underscores and select paste!
 
 `@pre_exercise_code`
 ```{python}
