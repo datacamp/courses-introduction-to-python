@@ -118,7 +118,7 @@ Ex().check_correct(
   check_object("out2").has_equal_value(incorrect_msg="Llamaste a `int()` correctamente; ahora asegúrate de asignar el resultado a `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("¡Genial!" La función `len()` es extremadamente útil; ¡también funciona en cadenas para contar el número de caracteres!")
+success_msg("¡Genial! La función `len()` es extremadamente útil; ¡también funciona en cadenas para contar el número de caracteres!")
 ```
 
 ---
