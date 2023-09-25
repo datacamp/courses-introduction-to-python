@@ -655,7 +655,7 @@ Ex().check_correct(
     )
 )
 
-success_msg = "¡Buen trabajo! ¡Ya estás listo para convertir los datos reales de MLB en una matriz `numpy` 2D!")
+success_msg("¡Buen trabajo! ¡Ya estás listo para convertir los datos reales de MLB en una matriz `numpy` 2D!")
 ```
 
 ---
@@ -933,7 +933,7 @@ Ex().check_correct(
     )    
 )
 
-success_msg = "¡Buen trabajo! Observa cómo con muy poco código, puedes cambiar todos los valores en su estructura de datos `numpy` de una manera muy específica. ¡Esto será muy útil en tu futuro como científico de datos!")
+success_msg("¡Buen trabajo! Observa cómo con muy poco código, puedes cambiar todos los valores en su estructura de datos `numpy` de una manera muy específica. ¡Esto será muy útil en tu futuro como científico de datos!")
 ```
 
 ---
@@ -1150,7 +1150,7 @@ Ex().check_correct(
   )
 )
 
-success_msg = "¡Buen trabajo! ¡Es hora de usar todas tus nuevas habilidades de ciencia de datos en el último ejercicio!")
+success_msg("¡Buen trabajo! ¡Es hora de usar todas tus nuevas habilidades de ciencia de datos en el último ejercicio!")
 ```
 
 ---
@@ -1263,11 +1263,11 @@ Ex().check_correct(
             ),
             multi(
                 check_correct(
-                    check_object("np_positions").has_equal_value(incorrect_msg="Asigna la versión de la matriz numpy de `positions` a `np_positions`.")
+                    check_object("np_positions").has_equal_value(incorrect_msg="Asigna la versión de la matriz numpy de `positions` a `np_positions`."),
                     check_function('numpy.array', index=0).check_args(0).has_equal_ast()
                 ),
                 check_correct(
-                    check_object("np_heights").has_equal_value(incorrect_msg="Asigna la versión de matriz numpy de `heights` a `np_heights`.")
+                    check_object("np_heights").has_equal_value(incorrect_msg="Asigna la versión de matriz numpy de `heights` a `np_heights`."),
                     check_function('numpy.array', index=1).check_args(0).has_equal_ast()
                 )
             )
