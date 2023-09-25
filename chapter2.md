@@ -875,8 +875,8 @@ areas_2 = areas_1 + ["garage", 15.45]
 ```{python}
 msg = "No elimines ni edites la lista `areas` predefinida."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Usa `areas + [\\"poolhouse\\", 24.5]` para crear `areas_1`. ¡Cuidado con los errores tipográficos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Usa `areas_1 + [\\"garage\\", 15.45]` para crear `areas_2`. ¡Cuidado con los errores tipográficos!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Usa `areas + [\"poolhouse\", 24.5]` para crear `areas_1`. ¡Cuidado con los errores tipográficos!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Usa `areas_1 + [\"garage\", 15.45]` para crear `areas_2`. ¡Cuidado con los errores tipográficos!")
 success_msg("¡Genial! ¡La lista va muy bien!")
 ```
 
@@ -1015,15 +1015,15 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "Parece que `areas_copy` no se actualizó correctamente"),
-  check_function("list", missing_msg = "Asegúrate de usar `list(areas)` para crear `areas_copy`").
+  check_object("areas_copy").has_equal_value(incorrect_msg = "Parece que `areas_copy` no se actualizó correctamente."),
+  check_function("list", missing_msg = "Asegúrate de usar `list(areas)` para crear `areas_copy`.")
 )
 
-mmsg = "No elimines la lista `areas` predefinida".
+mmsg = "No elimines la lista `areas` predefinida."
 imsg = "Asegúrate de editar SÓLO la copia (areas_copy), no la lista `areas` original. Echa otro vistazo a la descripción del ejercicio si no estás seguro de cómo crear una copia."
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Asegúrate de usar `list(areas)` para crear `areas_copy`").
+  check_function("list", missing_msg = "Asegúrate de usar `list(areas)` para crear `areas_copy`.")
 )
 
 success_msg("¡Bien! La diferencia entre las copias explícitas y las basadas en referencias es sutil, pero puede resultar ser realmente importante. Trata de tener en cuenta cómo se almacena una lista en la memoria de la computadora.")

@@ -702,7 +702,7 @@ print(dist)
 msg = "No es necesario cambiar ni eliminar las variables predefinidas."
 Ex().check_object("r", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-Ex().has_import("math.radians", not_imported_msg = "Asegúrate de importar [`radians()`](https://docs.python.org/3/library/math.html#math.radians) del paquete `math`. Debes utilizar la notación `from ___ import ___`.", correct_as_msg = "No establezcas ningún alias para [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Simplemente escribe `from math import radians`.")
+Ex().has_import("math.radians", not_imported_msg = "Asegúrate de importar [`radians()`](https://docs.python.org/3/library/math.html#math.radians) del paquete `math`. Debes utilizar la notación `from ___ import ___`.", incorrect_as_msg = "No establezcas ningún alias para [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Simplemente escribe `from math import radians`.")
 
 Ex().check_correct(
   check_object("dist").has_equal_value(),
