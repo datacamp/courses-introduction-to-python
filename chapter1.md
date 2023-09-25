@@ -610,7 +610,7 @@ Ex().multi(
     has_printout(1, not_printed_msg = "No olvides imprimir `doubledesc`.")
 )
 
-success_msg("Muy bien. Observa como `desc + desc` pega `"compound interest"` con `"compound interest"`.")
+success_msg("Muy bien. Observa como `desc + desc` pega `\"compound interest\"` con `\"compound interest\"`.")
 ```
 
 ---
@@ -708,7 +708,7 @@ Ex().check_correct(
     )
 )
 
-success_msg("¡Genial! Tienes una utilidad de alrededor de $95; bastante impresionante!)
+success_msg("¡Genial! Tienes una utilidad de alrededor de $95; bastante impresionante!")
 ```
 
 ---
