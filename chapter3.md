@@ -357,7 +357,7 @@ Ex().check_correct(
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "Has calculado bien el número de veces que aparece la letra o en `place`; ahora asegúrate de envolver la llamada `place.count('o')` en `print()` para imprimir el resultado.")
+  has_printout(2, not_printed_msg = "Has calculado bien el número de veces que aparece la letra o en `place`; ahora asegúrate de envolver la llamada `place.count('o')` en `print()` para imprimir el resultado."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
