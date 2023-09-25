@@ -316,10 +316,10 @@ house = [["hallway", hall],
          ["bathroom", bath]]
 
 # imprime house
-print(casa)
+print(house)
 
 # Imprime el tipo de house
-print(type(casa))
+print(type(house))
 ```
 
 `@sct`
@@ -486,7 +486,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Suma del área de kitchen y bedroom: eat_sleep_area
-area_comer_dormir = areas[3] + areas[-3]
+eat_sleep_area = areas[3] + areas[-3]
 
 # Imprime la variable eat_sleep_area
 print(eat_sleep_area)
@@ -661,7 +661,7 @@ upstairs = areas[6:]
 msg = "No elimines ni edites la lista `areas` predefinida."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "Tu definición de `%s` es incorrecta. Utiliza `areas[...]` y subdivisión para seleccionar los elementos necesarios. Podrías usar `%s` donde están los puntos, por ejemplo".
+patt = "Tu definición de `%s` es incorrecta. Utiliza `areas[...]` y subdivisión para seleccionar los elementos necesarios. Podrías usar `%s` donde están los puntos, por ejemplo."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
@@ -715,7 +715,7 @@ house = [["hallway", 11.25],
 
 `@sct`
 ```{python}
-msg1 = msg2 = "Incorrecto. `house[-1]` selecciona el último elemento de `house`, que es la lista `[\\"bathroom\\", 9.50]`."
+msg1 = msg2 = "Incorrecto. `house[-1]` selecciona el último elemento de `house`, que es la lista `[\"bathroom\", 9.50]`."
 msg3 = "¡Correcto! La última pieza de este rompecabezas es la manipulación de listas."
 msg4 = "Incorrecto. `house[-1]` de hecho selecciona la lista que representa la información de bathroom, pero `[1]` selecciona el segundo elemento de la sublista, no el primero. ¡Python usa indexación basada en cero!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
