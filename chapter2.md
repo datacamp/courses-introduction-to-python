@@ -280,7 +280,7 @@ No te confundas aquí: `"hallway"` es una cadena, mientras que `hall` es una var
 
 `@sample_code`
 ```{python}
-# variables de área (en metros cuadrados)
+# Variables de área (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
@@ -301,21 +301,21 @@ house = [["hallway", hall],
 
 `@solution`
 ```{python}
-# variables de área (en metros cuadrados)
+# Variables de área (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# información de la casa como lista de listas
+# Información de la casa como lista de listas
 house = [["hallway", hall],
          ["kitchen", kit],
          ["living room", liv],
          ["bedroom", bed],
          ["bathroom", bath]]
 
-# imprime house
+# Imprime house
 print(house)
 
 # Imprime el tipo de house
@@ -456,7 +456,7 @@ print(x[1] + x[3])
 ```
 
 `@instructions`
-- Con una combinación de sub sets de lista y asignación de variables, crea una nueva variable, `eat_sleep_area`, que contenga la suma del área de kitchen (cocina) y el área de bedroom (dormitorio).
+- Con una combinación de subsets de lista y asignación de variables, crea una nueva variable, `eat_sleep_area`, que contenga la suma del área de kitchen (cocina) y el área de bedroom (dormitorio).
 - Imprime la nueva variable `eat_sleep_area`.
 
 `@hint`
@@ -538,8 +538,8 @@ Los elementos con índice 1 y 2 serán incluidos, mientras que el elemento con �
 
 `@hint`
 - Usa los corchetes `[0:6]` para construir `downstairs`.
-- Use los corchetes `[6:10]` para construir `upstairs`.
-- Simplemente agregue dos llamadas a [`print()`](https://docs.python.org/3/library/functions.html#print) al script para imprimir `downstairs` y `upstairs`.
+- Usa los corchetes `[6:10]` para construir `upstairs`.
+- Simplemente agrega dos llamadas a [`print()`](https://docs.python.org/3/library/functions.html#print) al script para imprimir `downstairs` y `upstairs`.
 
 `@pre_exercise_code`
 ```{python}
@@ -610,7 +610,7 @@ En el video, Hugo discutió por primera vez la sintaxis en la que especificas d�
 my_list[begin:end]
 ```
 
-Sin embargo, también es posible no especificar estos índices. Si no especificas el índice `begin`, Python entiende de que deseas comenzar el segmento al principio de la lista. Si no especificas el índice `end`, el segmento irá hasta el último elemento de la lista. Para experimentar con esto, prueba los siguientes comandos en IPython Shell:
+Sin embargo, también es posible no especificar estos índices. Si no especificas el índice `begin`, Python entiende que deseas comenzar el segmento al principio de la lista. Si no especificas el índice `end`, el segmento irá hasta el último elemento de la lista. Para experimentar con esto, prueba los siguientes comandos en IPython Shell:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -777,7 +777,7 @@ Para este ejercicio y los siguientes, continuaremos trabajando en la lista `area
 # Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Correge el área de bathroom
+# Corrige el área de bathroom
 
 
 # Cambia "living room" a "chill zone"
@@ -789,7 +789,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 # Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Correge el área de bathroom
+# Corrige el área de bathroom
 areas[-1] = 10.50
 
 # Cambia "living room" a "chill zone"
@@ -834,7 +834,7 @@ Acabas de ganar la lotería, ¡Felicidades! Decides construir una casa junto a l
 
 `@instructions`
 - Use el operador `+` para pegar la lista `["poolhouse", 24.5]` al final de la lista `areas`. Almacena la lista resultante como `areas_1`.
-- Amplía aún más `areas_1` agregando los datos de su garaje. Agrega la cadena `"garage"` y el flotante `15.45`. Nombra la lista resultante `areas_2`.
+- Amplía aún más `areas_1` agregando los datos de tu garaje. Agrega la cadena `"garage"` y el flotante `15.45`. Nombra la lista resultante `areas_2`.
 
 `@hint`
 - Sigue el ejemplo de código del ejercicio de arriba. `x` es `areas`, y `["e", "f"]` es `["poolhouse", 24.5]`.
@@ -933,7 +933,7 @@ comando2
 - `del(areas[-3]); del(areas[-4])`
 
 `@hint`
-Simplemente puedes probar todas las diferentes opciones para ver si funcionan. Solo asegúrese de redefinir la lista `areas` nuevamente antes de probar una nueva opción.
+Simplemente puedes probar todas las diferentes opciones para ver si funcionan. Solo asegúrate de redefinir la lista `areas` nuevamente antes de probar una nueva opción.
 
 `@pre_exercise_code`
 ```{python}

@@ -296,7 +296,7 @@ Ya se ha creado una cadena `place` para que experimentes.
 
 `@instructions`
 - Usa el método [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) en `place` y almacena el resultado en `place_up`. Usa la sintaxis para llamar a los métodos que aprendimos en el video anterior.
-- Imprime `place` y `place_up`. Ambos cambiaron?
+- Imprime `place` y `place_up`. ¿Ambos cambiaron?
 - Imprime el número de veces que aparece la letra o en la variable `place` llamando a [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) con `place` y pasando la letra `'o'` como entrada al método. ¡Estamos hablando de la variable `place`, no de la palabra `"place"`!
 
 `@hint`
@@ -326,7 +326,7 @@ place = "poolhouse"
 
 `@solution`
 ```{python}
-# cadena para experimentar con: place
+# Cadena para experimentar con: place
 place = "poolhouse"
 
 # Usa upper() en place: place_up
@@ -355,7 +355,7 @@ Ex().check_correct(
     )
 )    
 
-# check count of place
+# Chequea el conteo de place
 Ex().check_correct(
   has_printout(2, not_printed_msg = "Has calculado bien el número de veces que aparece la letra o en `place`; ahora asegúrate de envolver la llamada `place.count('o')` en `print()` para imprimir el resultado."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
@@ -386,7 +386,7 @@ Estarás trabajando en la lista con el área de diferentes partes de una casa: `
 
 `@instructions`
 - Usa el método [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index) para obtener el índice del elemento en `areas` que es igual a `20.0`. Imprime este índice.
-- Llama a [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) con `areas` para averiguar cuántas veces aparece `9.50` en la lista. Nuevamente, simplemente imprima este número.
+- Llama a [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) con `areas` para averiguar cuántas veces aparece `9.50` en la lista. Nuevamente, simplemente imprime este número.
 
 `@hint`
 - Para imprimir el índice, envuelve la llamada `areas.index(___)` en una función [`print()`](https://docs.python.org/3/library/functions.html#print) .
@@ -562,7 +562,7 @@ Para usar la constante `pi`, necesitaremos el paquete `math`. La variable `r` ya
 `@instructions`
 - Importa el paquete `math`. Ahora puedes accesar la constante `pi` usando `math.pi.`
 - Calcula la circunferencia del círculo y guárdala en `C.`
-- Calcula el área del círculo y guárdala en `A`.
+- Calcula el área del círculo y guárdalo en `A`.
 
 `@hint`
 - Simplemente puedes usar `import math`y luego referirte a `pi` con `math.pi`.
@@ -628,7 +628,7 @@ Ex().multi(
   has_printout(1, not_printed_msg = "__JINJA__:Mantén `{{sol_call}}` ahí para imprimir el área.")
 )
 
-success_msg("Muy bien! Si sabes cómo manejar las funciones de los paquetes, ¡el poder de _muchos_ programadores de Python está al alcance de tu mano!")
+success_msg("¡Muy bien! Si sabes cómo manejar las funciones de los paquetes, ¡el poder de _muchos_ programadores de Python está al alcance de tu mano!")
 ```
 
 ---
@@ -711,7 +711,7 @@ Ex().check_correct(
 
 Ex().has_printout(0)
 
-success_msg("Muy bien! Vamos al siguiente ejercicio.")
+success_msg("¡Muy bien! Vamos al siguiente ejercicio.")
 ```
 
 ---

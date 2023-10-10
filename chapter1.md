@@ -79,7 +79,7 @@ skills:
 
 Presiona _Ejectuar Codígo_ para ejecutar tu primer código de Python con Datacamp y ver el resultado.
 
-Observa la ventana `script.py`; aquí es donde puedes escribir código Python para resolver ejercicios. Puedes presionar _Ejectuar Codígo_ y _Enviar Respuesta_ tantas veces quieras. Si tienes problemas, puedes hacer clic en _Obtener Sugerencia_ y, en última instancia, en _Obtener Solución_.
+Observa la ventana `script.py`; aquí es donde puedes escribir código Python para resolver ejercicios. Puedes presionar _Ejectuar Codígo_ y _Enviar Respuesta_ tantas veces como quieras. Si tienes problemas, puedes hacer clic en _Obtener Sugerencia_ y, en última instancia, en _Obtener Solución_.
 
 También puedes utilizar el shell de IPython de forma interactiva escribiendo comandos y presionando Enter. Ahí no se comprobará la exactitud de tu código, por lo que es una excelente forma de experimentar.
 
@@ -98,7 +98,7 @@ También puedes utilizar el shell de IPython de forma interactiva escribiendo co
 
 `@sample_code`
 ```{python}
-# Por ejemplo, ¡no modifique!
+# Por ejemplo, ¡no modifiques!
 print(5 / 8)
 
 # Imprime la suma de 7 y 10
@@ -107,7 +107,7 @@ ____
 
 `@solution`
 ```{python}
-# Por ejemplo, ¡no modifique!
+# Por ejemplo, ¡no modifiques!
 print(5 / 8)
 
 # Pon el código aquí abajo
@@ -133,7 +133,7 @@ skills:
   - 2
 ```
 
-Algo que Hugo no mencionó en sus vídeos es que puedes añadir **comentarios** a tus scripts de Python. Los comentarios son importantes para garantizar que tu y los demás puedan entender de qué trata tu código.
+Algo que Hugo no mencionó en sus vídeos es que puedes añadir **comentarios** a tus scripts de Python. Los comentarios son importantes para garantizar que tú y los demás podáis entender de qué trata tu código.
 
 Para añadir comentarios a tu script de Python, puedes utilizar el símbolo `#`. Estos comentarios no se ejecutan como código Python, por lo que no influirán en el resultado. Por ejemplo, el comentario en el editor `# División`; se ignora por completo durante la ejecución.
 
@@ -426,8 +426,8 @@ En el ejercicio anterior, trabajamos con dos tipos de datos de Python:
 
 Además de los tipos de datos numéricos, hay otros dos tipos de datos muy comunes:
 
-- `str` o string: un tipo para representar texto. Puedes utilizar comillas simples o dobles para crear una cadena de caracteres (string en inglés).
-- `bool` o booleano: un tipo para representar valores lógicos. Solo puede ser `True` o `False` (¡las capitalización es importante!).
+- `str` o string: un tipo para representar texto. Puedes utilizar comillas simples o dobles para crear una cadena de carácteres (string en inglés).
+- `bool` o booleano: un tipo para representar valores lógicos. Solo puede ser `True` o `False` (¡La capitalización es importante!).
 
 `@instructions`
 - Crea una nueva cadena (string), `desc`, con el valor `"compound interest"`.
@@ -640,7 +640,7 @@ Funciones similares como [`int()`](https://docs.python.org/3/library/functions.h
 - Convierte la variable `pi_string` en un elemento flotante y almacena este elemento como una nueva variable, `pi_float`.
 
 `@hint`
-- El mensaje de error al ejecutar el código por primera vez te indica que tenemos un error en la línea 6 en el que al menos una de las variables no es una string.
+- El mensaje de error al ejecutar el código por primera vez te indica que tenemos un error en la línea 6 en el que al menos una de las variables no es un string.
 - ¡Deberíamos usar [`str()`](https://docs.python.org/3/library/functions.html#func-str) dos veces!
 - Usa [`float()`](https://docs.python.org/3/library/functions.html#float) con `pi_string` y almacena el resultado en `pi_float`.
 
@@ -684,7 +684,7 @@ pi_float = float(pi_string)
 `@sct`
 ```{python}
 
-# asegúrate de que los valores predefinidos no se modifiquen
+# Asegúrate de que los valores predefinidos no se modifiquen
 msg = "No es necesario cambiar ni eliminar las variables predefinidas."
 Ex().multi(
     check_object("savings", missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -708,7 +708,7 @@ Ex().check_correct(
     )
 )
 
-success_msg("¡Genial! Tienes una utilidad de alrededor de $95; bastante impresionante!")
+success_msg("¡Genial! Tienes una utilidad de alrededor de $95; ¡bastante impresionante!")
 ```
 
 ---
