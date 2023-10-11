@@ -51,7 +51,7 @@ Ya se ha definido una lista `baseball` en el script de Python, que representa la
 
 `@hint`
 - `import numpy as np` es lo que se requiere. Ahora, debes usar `np.fun_name()` siempre que quieras usar una función de `numpy`.
-- [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) debería tomar el argumento `baseball`. Asigna el resultado de la llamada a `np_baseball`.
+- [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) deberías tomar el argumento `baseball`. Asigna el resultado de la llamada a `np_baseball`.
 - Para imprimir el tipo de una variable `x`, simplemente escribe `print(type(x))`.
 
 `@pre_exercise_code`
@@ -126,7 +126,7 @@ Eres un gran fanático del béisbol. Decides llamar a la MLB (Major League Baseb
 - Crea un vector `numpy` con `height_in`. Nombra este nuevo vector `np_height_in`.
 - Imprime `np_height_in`.
 - Multiplica `np_height_in` por `0.0254` para convertir todas las medidas de altura de pulgadas a metros. Almacena los nuevos valores en un nuevo vector, `np_height_m`.
-- Imprime `np_height_m` y verifica si el resultado hace sentido.
+- Imprime `np_height_m` y verifica si el resultado tiene sentido.
 
 `@hint`
 - Usa [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) y pásale `height`. Almacena el resultado en `np_height_in`.
@@ -144,7 +144,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea un vector numpy desde height_in: np_height_in
@@ -162,7 +162,7 @@ import numpy as np
 
 `@solution`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea un vector numpy desde height_in: np_height_in
@@ -211,7 +211,7 @@ skills:
   - 2
 ```
 
-La MLB también te permitirle analizar los datos de peso de los besibolistas. Una vez más, ambos están disponibles como listas de Python: `height_in` y `weight_lb`. `height_in` está en pulgadas y `weight_lb` está en libras.
+La MLB también te permitirá analizar los datos de peso de los jugadores de béisbol. Una vez más, ambos están disponibles como listas de Python: `height_in` y `weight_lb`. `height_in` está en pulgadas y `weight_lb` está en libras.
 
 Ahora es posible calcular el IMC de cada jugador de béisbol. El código de Python para convertir `height_in` en un vector `numpy` con las unidades correctas ya está disponible en el espacio de trabajo. ¡Sigue las instrucciones paso a paso y termina el juego! `height_in` y `weight_lb` están disponibles como listas.
 
@@ -236,7 +236,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea un vector desde height_in con unidades métricas: np_height_m
@@ -254,7 +254,7 @@ np_height_m = np.array(height_in) * 0.0254
 
 `@solution`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea un vector desde height_in con unidades métricas: np_height_m
@@ -263,7 +263,7 @@ np_height_m = np.array(height_in) * 0.0254
 # Crea un vector a partir de weight_lb con unidades métricas: np_weight_kg
 np_weight_kg = np.array(weight_lb) * 0.453592
 
-# Calcular el IMC: bmi
+# Calcula el IMC: bmi
 bmi = np_weight_kg / np_height_m ** 2
 
 # Imprime bmi
@@ -274,11 +274,11 @@ print(bmi)
 ```{python}
 Ex().has_import('numpy')
 
-# check np_height_m
+# Chequea np_height_m
 msg = "La variable `np_height_m` fue definida para ti. ¡No tienes que cambiarla o eliminarla!"
 Ex().check_object("np_height_m", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 
-# check np_weight_kg
+# Chequea np_weight_kg
 Ex().check_correct(
   check_object("np_weight_kg").has_equal_value(),
   multi(
@@ -287,7 +287,7 @@ Ex().check_correct(
   )
 )
 
-# check bmi
+# Chequea bmi
 patt = "Necesitas usar `%s` en tu cálculo de `bmi`."
 Ex().check_correct(
   has_printout(0),
@@ -357,7 +357,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Calcular el IMC: bmi
@@ -377,10 +377,10 @@ bmi = np_weight_kg / np_height_m ** 2
 
 `@solution`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
-# Calcular el IMC: bmi
+# Calcula el IMC: bmi
 np_height_m = np.array(height_in) * 0.0254
 np_weight_kg = np.array(weight_lb) * 0.453592
 bmi = np_weight_kg / np_height_m ** 2
@@ -428,7 +428,7 @@ skills:
   - 2
 ```
 
-Como Hugo explicó previamente, `numpy` es excelente para hacer aritmética vectorial. Sin embargo, si compara su funcionalidad con las listas regulares de Python, algunas cosas han cambiado.
+Como Hugo explicó previamente, `numpy` es excelente para hacer aritmética vectorial. Sin embargo, si comparas su funcionalidad con las listas regulares de Python, algunas cosas han cambiado.
 
 En primer lugar, las matrices `numpy` no pueden contener elementos con diferentes tipos. Si intentas construir una lista de este tipo, algunos de los tipos de elementos se cambian para tener una lista homogénea. Esto se conoce como _coerción de tipo_.
 
@@ -506,7 +506,7 @@ weight_lb = mlb['Weight'].tolist()
 
 `@sample_code`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Almacena las listas weight y height como vectores numpy
@@ -522,7 +522,7 @@ np_height_in = np.array(height_in)
 
 `@solution`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Almacena las listas weight y height como vectores numpy
@@ -598,7 +598,7 @@ En este ejercicio, `baseball` es una lista de listas. La lista principal contien
 
 `@sample_code`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea baseball, una lista de listas
@@ -619,7 +619,7 @@ baseball = [[180, 78.4],
 
 `@solution`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea baseball, una lista de listas
@@ -728,7 +728,7 @@ Ex().check_correct(
     )
 )
 
-success_msg("Eso! ¡Es hora de explorar algunas características increíbles de las matrices `numpy` multidimensionales!")
+success_msg("¡Eso! ¡Es hora de explorar algunas características increíbles de las matrices `numpy` multidimensionales!")
 ```
 
 ---
@@ -993,7 +993,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea np_height_in usando np_baseball
@@ -1008,7 +1008,7 @@ import numpy as np
 
 `@solution`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Crea np_height_in usando np_baseball
@@ -1053,7 +1053,7 @@ skills:
   - 2
 ```
 
-Debido a que la media y la mediana están tan alejadas, decides presentar una queja ante la MLB. Encuentran el error y le envían los datos corregidos. Están nuevamente disponibles como una matriz 2D NumPy `np_baseball`, con tres columnas.
+Debido a que la media y la mediana están tan alejadas, decides presentar una queja ante la MLB. Encuentran el error y te envían los datos corregidos. Están nuevamente disponibles como una matriz 2D NumPy `np_baseball`, con tres columnas.
 
 El script de Python en el editor ya incluye código para imprimir mensajes informativos con las diferentes estadísticas de resumen. ¿Puedes terminar el trabajo? `np_baseball` está disponible.
 
@@ -1076,7 +1076,7 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Imprime la altura media (primera columna)
@@ -1178,7 +1178,7 @@ Cada elemento de las listas corresponde a un jugador. La primera lista, `positio
 Estás bastante seguro de que la altura media de los porteros es más alta que la de otros jugadores en el campo de fútbol. Algunos de tus amigos no te creen, por lo que estás decidido a mostrárselos usando los datos que recibiste de FIFA y tus habilidades de Python recién adquiridas. `heights` y `positions` están disponibles como listas.
 
 `@instructions`
-- Convierte`heights` y `positions`, que son listas regulares, en matrices numpy. Llámalos `np_heights` y `np_positions`.
+- Convierte `heights` y `positions`, que son listas regulares, en matrices numpy. Llámalas `np_heights` y `np_positions`.
 - Extrae todas las alturas de los porteros. Puedes usar un pequeño truco aquí: usa `np_positions == 'GK'` como índice para `np_heights`. Asigna el resultado a `gk_heights`.
 - Extrae todas las alturas de todos los demás jugadores. Esta vez usa `np_positions != 'GK'` como índice para `np_heights`. Asigna el resultado a `other_heights`.
 - Imprime la altura mediana de los porteros usando [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Reemplaza `None` con el código correcto.
@@ -1186,8 +1186,8 @@ Estás bastante seguro de que la altura media de los porteros es más alta que l
 
 `@hint`
 - Usa [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) para convertir las listas en matrices numpy.
-- Usar `np_heights[np_positions == 'GK']` para extraer las alturas de todos los porteros. No olvides asignar el resultado a `gk_heights`.
-- Usar `np_heights[np_positions != 'GK']` para extraer las alturas de todos los demás jugadores. No olvides asignar el resultado a `other_heights`.
+- Usa `np_heights[np_positions == 'GK']` para extraer las alturas de todos los porteros. No olvides asignar el resultado a `gk_heights`.
+- Usa `np_heights[np_positions != 'GK']` para extraer las alturas de todos los demás jugadores. No olvides asignar el resultado a `other_heights`.
 - Imprime la altura mediana de los porteros usando `np.median(gk_heights)`.
 - Imprime la altura mediana de los otros jugadores usando `np.median(other_heights)`.
 
@@ -1223,7 +1223,7 @@ print("Median height of other players: " + str(None))
 
 `@solution`
 ```{python}
-# Import numpy
+# Importa numpy
 import numpy as np
 
 # Convierte positions y heights en matrices numpy: np_positions, np_heights
