@@ -120,7 +120,7 @@ skills:
 
 Eres un gran fanático del béisbol. Decides llamar a la MLB (Major League Baseball) y pedir más estadísticas sobre la altura de los jugadores principales. Te pasan datos sobre más de mil jugadores, que se almacenan como una lista de Python: `height_in`. La altura se expresa en pulgadas. ¿Puedes convertirla en un vector `numpy` y convertir las unidades a metros?
 
-`height_in` ya está disponible y el paquete `numpy` está cargado, por lo que puedes comenzar de inmediato (Fuente: [stat.ucla.edu](https://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
+`height_in` ya está disponible y el paquete `numpy` está cargado, por lo que puedes comenzar de inmediato (Fuente: stat.ucla.edu).
 
 `@instructions`
 - Crea un vector `numpy` con `height_in`. Nombra este nuevo vector `np_height_in`.
