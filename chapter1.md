@@ -31,38 +31,28 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 ## When to use Python?
 
 ```yaml
-type: MultipleChoiceExercise
-key: 9703b117fb
-lang: python
+type: PureMultipleChoiceExercise
+key: f9d70ac4cd
+kind: PureMultipleChoice
 xp: 50
-skills:
-  - 2
 ```
 
 Python is a **flexible** language. For which applications can you use Python?
 
-`@possible_answers`
-- For quick calculations.
-- Develop a database-driven website.
-- Clean and analyze data.
-- All of the above.
-
 `@hint`
 - Practically any piece of software can be built using Python.
 
-`@pre_exercise_code`
-```{python}
+`@possible_answers`
+- For quick calculations
+- Develop a database-driven website
+- Clean and analyze data
+- [All of the above]
 
-```
-
-`@sct`
-```{python}
-msg1 = "Python can do more than quick calculations!"
-msg2 = "There is a very popular Python framework to build database-driven websites, but it can do much more."
-msg3 = "Python is a powerful tool for data analysis, but it has other uses, too."
-msg4 = "Correct! Python is an extremely flexible language."
-Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
-```
+`@feedback`
+- Python can do more than quick calculations!
+- There is a very popular Python framework to build database-driven websites, but it can do much more.
+- Python is a powerful tool for data analysis, but it has other uses, too.
+- Correct! Python is an extremely flexible language.
 
 ---
 
