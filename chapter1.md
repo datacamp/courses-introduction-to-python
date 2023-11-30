@@ -32,7 +32,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ```yaml
 type: PureMultipleChoiceExercise
-key: f9d70ac4cd
+key: 9703b117fb
 kind: PureMultipleChoice
 xp: 50
 ```
