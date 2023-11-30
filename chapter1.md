@@ -182,8 +182,8 @@ Now it's your turn to practice!
 `@instructions`
 - Print the sum of `4 + 5`.
 - Print the result of subtracting `5` from `5`.
-- Multiply `3` by `5`.
-- Divide `10` by `2`.
+- Print the result of multiplying `3` by `5`.
+- Print the result of dividing `10` by `2`.
 
 `@hint`
 - You'll need to use `print()` to generate an output.
