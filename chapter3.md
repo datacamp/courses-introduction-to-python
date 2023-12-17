@@ -108,7 +108,7 @@ msg = "No es necesario cambiar ni eliminar las variables predefinidas."
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__: asegúrate de imprimir el %s de `var1` con `{{sol_call}}`."
+patt = "__JINJA__: Asegúrate de imprimir el %s de `var1` con `{{sol_call}}`."
 Ex().has_printout(0, not_printed_msg = patt % 'type')
 Ex().has_printout(1, not_printed_msg = patt % 'length')
 
@@ -290,7 +290,7 @@ skills:
   - 2
 ```
 
-Las cadenas(strings) cuentan con un montón de métodos. Sigue atentamente las instrucciones para descubrir algunos de ellos. Si deseas descubrirlos con más detalle, siempre puedes escribir `help(str)` en el IPython Shell.
+Las cadenas (strings) cuentan con un montón de métodos. Sigue atentamente las instrucciones para descubrir algunos de ellos. Si deseas descubrirlos con más detalle, siempre puedes escribir `help(str)` en el IPython Shell.
 
 Ya se ha creado una cadena `place` para que experimentes.
 
@@ -433,7 +433,7 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Muy bien! Estos fueron ejemplos de métodos de `listas` que no cambiaron la lista sobre la que fueron llamados.")
+success_msg("¡Muy bien! Estos fueron ejemplos de métodos de `listas` que no cambiaron la lista sobre la que fueron llamados.")
 ```
 
 ---

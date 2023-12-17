@@ -269,7 +269,7 @@ No te confundas aquí: `"hallway"` es una cadena, mientras que `hall` es una var
 - Imprime el tipo de `house`. ¿Seguimos lidiando con una lista?
 
 `@hint`
-- Agrega _sublistas_ a la lista `house` agregando `["bedroom", bed]` y `["bathrrom", bath]` dentro de los corchetes.
+- Agrega _sublistas_ a la lista `house` agregando `["bedroom", bed]` y `["bathroom", bath]` dentro de los corchetes.
 - Para imprimir una variable `x`, escribe `print(x)` en una nueva línea en el script de Python.
 - Para imprimir el tipo de una variable `x`, puedes usar `print(type(x))`.
 
@@ -341,7 +341,7 @@ Ex().check_correct(
 Ex().has_printout(0, not_printed_msg = "__JINJA__: ¿Has utilizado `{{sol_call}}` para imprimir el contenido de `house`?")
 Ex().has_printout(1, not_printed_msg = "__JINJA__: ¿Has utilizado `{{sol_call}}` para imprimir el tipo de variable de `house` ?")
 
-success_msg("¡Genial! ¡Prepárate para aprender sobre sub sets de listas!")
+success_msg("¡Genial! ¡Prepárate para aprender sobre subsets de listas!")
 ```
 
 ---
@@ -663,7 +663,7 @@ Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = ms
 
 patt = "Tu definición de `%s` es incorrecta. Utiliza `areas[...]` y subdivisión para seleccionar los elementos necesarios. Podrías usar `%s` donde están los puntos, por ejemplo."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
-Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
+Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs","6:"))
 
 success_msg("¡Maravilloso!")
 ```
@@ -681,7 +681,7 @@ skills:
   - 2
 ```
 
-Vimos que una lista de Python puede contener prácticamente cualquier cosa; incluso otras listas! Para crear subconjuntos de listas de listas, se puede usar la misma técnica que antes: corchetes. Prueba los comandos del siguiente ejemplo de código en IPython Shell:
+Vimos que una lista de Python puede contener prácticamente cualquier cosa; ¡incluso otras listas! Para crear subconjuntos de listas de listas, se puede usar la misma técnica que antes: corchetes. Prueba los comandos del siguiente ejemplo de código en IPython Shell:
 
 ```
 x = [["a", "b", "c"],
@@ -969,7 +969,7 @@ Al final del video, Hugo explicó el funcionamiento interno de las listas de Pyt
 
 El código de Python en el script crea una lista llamada `areas` y una copia llamada `areas_copy`. A continuación, se cambia el primer elemento de la lista `areas_copy` y se imprime la lista `areas` . Si presiona _Ejecutar Código_, verás que, aunque hayamos cambiado `areas_copy`, el cambio también tiene efecto en la lista `areas`. Esto es porque `areas` y `areas_copy` apuntan a la misma lista.
 
-Si deseas evitar que los cambios en `areas_copy` también tengan efecto en `areas`, tendrás que hacer una copia explícita de la lista `areas. Puedes hacer esto con [`list()`](https://docs.python.org/3/library/functions.html#func-list) o usando `[:]`.
+Si deseas evitar que los cambios en `areas_copy` también tengan efecto en `areas`, tendrás que hacer una copia explícita de la lista `areas`. Puedes hacer esto con [`list()`](https://docs.python.org/3/library/functions.html#func-list) o usando `[:]`.
 
 `@instructions`
 Cambia el segundo comando, que crea la variable `areas_copy`, de modo que `areas_copy` sea una copia explícita de `areas`. Después de la edición, los cambios realizados en `areas_copy` no deberían afectar a `areas`. Envía la respuesta para verificar esto.

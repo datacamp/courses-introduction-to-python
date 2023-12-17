@@ -77,9 +77,9 @@ skills:
   - 2
 ```
 
-Presiona _Ejectuar Codígo_ para ejecutar tu primer código de Python con Datacamp y ver el resultado.
+Presiona _Ejecutar Codígo_ para ejecutar tu primer código de Python con Datacamp y ver el resultado.
 
-Observa la ventana `script.py`; aquí es donde puedes escribir código Python para resolver ejercicios. Puedes presionar _Ejectuar Codígo_ y _Enviar Respuesta_ tantas veces como quieras. Si tienes problemas, puedes hacer clic en _Obtener Sugerencia_ y, en última instancia, en _Obtener Solución_.
+Observa la ventana `script.py`; aquí es donde puedes escribir código Python para resolver ejercicios. Puedes presionar _Ejecutar Codígo_ y _Enviar Respuesta_ tantas veces como quieras. Si tienes problemas, puedes hacer clic en _Obtener Sugerencia_ y, en última instancia, en _Obtener Solución_.
 
 También puedes utilizar el shell de IPython de forma interactiva escribiendo comandos y presionando Enter. Ahí no se comprobará la exactitud de tu código, por lo que es una excelente forma de experimentar.
 
@@ -203,7 +203,7 @@ El código del script ofrece algunos ejemplos.
 - Calcula e imprime 2 elevado a la 5.
 
 `@hint`
-- La sintaxis de "el poder de" es `**`.
+- La sintaxis de "elevado a" es `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -245,7 +245,7 @@ print(2 ** 5)
 `@sct`
 ```{python}
 Ex().has_printout(6, not_printed_msg = "¿Has utilizado `print (2 ** 5) ` para imprimir el resultado de tus cálculos?")
-success_msg("Eso es correcto! Python te puede ayudar con operaciones matemáticas, algo que será de utilidad para tus análisis de datos")
+success_msg("¡Eso es correcto! Python te puede ayudar con operaciones matemáticas, algo que será de utilidad para tus análisis de datos")
 ```
 
 ---
@@ -319,7 +319,7 @@ print(savings)
 ```{python}
 Ex().check_object("savings").has_equal_value(incorrect_msg="Asigna 100 a la variable `savings`.")
 Ex().has_printout(0, not_printed_msg = "Imprime `savings`, la variable que creaste, con `print(savings) `.")
-success_msg("Excelente! Intentemos ahora hacer cálculos con esta variable!")
+success_msg("¡Excelente! Intentemos ahora hacer cálculos con esta variable!")
 ```
 
 ---
@@ -463,8 +463,8 @@ profitable = True
 `@sct`
 ```{python}
 Ex().check_object("desc").has_equal_value(incorrect_msg = "Hmm, hay algo incorrecto en tu variable `desc`. Revisa la ortografía y asegúrate de que has usado comillas.")
-Ex().check_object("profitable").has_equal_value(incorrect_msg = "Usaste la capitalización correcta para el booleano? Recuerda que no lleva comillas.")
-success_msg("Muy bien!")
+Ex().check_object("profitable").has_equal_value(incorrect_msg = "¿Usaste la capitalización correcta para el booleano? Recuerda que no lleva comillas.")
+success_msg("¡Muy bien!")
 ```
 
 ---
@@ -745,7 +745,7 @@ Copia y pega las diferentes expresiones en el shell de IPython e intenta averigu
 ```{python}
 msg1 = "Incorrecto, este comando funciona perfectamente."
 msg2 = "Es completamente posible 'multiplicar cadenas' en Python..."
-msg3 = "Correcto!  Como no estamos convirtiendo `2` a cadena usando [str()](https://docs.python.org/3/library/functions.html#func-str),  esta opción generará un error."
+msg3 = "¡Correcto!  Como no estamos convirtiendo `2` a cadena usando [str()](https://docs.python.org/3/library/functions.html#func-str),  esta opción generará un error."
 msg4 = "`True + False` no genera un error. Usa la consola para comprobarlo"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
