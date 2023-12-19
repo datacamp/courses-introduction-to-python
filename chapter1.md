@@ -43,10 +43,10 @@ Python es un lenguaje bastante versátil. ¿Para qué aplicaciones puedes usar P
 - Hugo mencionó en el vídeo que Python puede usarse para construir prácticamente cualquier software.
 
 `@possible_answers`
-- Quieres hacer algunos cálculos rápidos.
-- Para tu nuevo negocio, deseas desarrollar un sitio web basado en bases de datos.
-- Tu jefe te pide que limpies y analices los resultados de la última encuesta de satisfacción.
-- Todo lo anterior.
+- Quieres hacer algunos cálculos rápidos
+- Para tu nuevo negocio, deseas desarrollar un sitio web basado en bases de datos
+- Tu jefe te pide que limpies y analices los resultados de la última encuesta de satisfacción
+- [Todo lo anterior]
 
 `@feedback`
 - Python puede hacer cálculos simples y rápidos, ¡pero es mucho más que eso!
