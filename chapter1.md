@@ -31,15 +31,16 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 ## ¿Cuándo usar Python?
 
 ```yaml
-type: MultipleChoiceExercise
+type: PureMultipleChoiceExercise
 key: 9703b117fb
-lang: python
+kind: PureMultipleChoice
 xp: 50
-skills:
-  - 2
 ```
 
 Python es un lenguaje bastante versátil. ¿Para qué aplicaciones puedes usar Python?
+
+`@hint`
+- Hugo mencionó en el vídeo que Python puede usarse para construir prácticamente cualquier software.
 
 `@possible_answers`
 - Quieres hacer algunos cálculos rápidos.
@@ -47,22 +48,11 @@ Python es un lenguaje bastante versátil. ¿Para qué aplicaciones puedes usar P
 - Tu jefe te pide que limpies y analices los resultados de la última encuesta de satisfacción.
 - Todo lo anterior.
 
-`@hint`
-Hugo mencionó en el vídeo que Python puede usarse para construir prácticamente cualquier software.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sct`
-```{python}
-msg1 = "Incorrecto. Python puede hacer cálculos simples y rápidos, ¡pero es mucho más que eso!"
-msg2 = "Incorrecto. Existe un framework muy popular para crear sitios web basados en bases de datos (Django), pero Python puede hacer mucho más."
-msg3 = "Incorrecto. Python es una herramienta poderosa para analizar datos, pero también se puede utilizar para otros fines."
-msg4 = "¡Correcto! Python es un lenguaje extremadamente versátil."
-Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
-```
+`@feedback`
+- Python puede hacer cálculos simples y rápidos, ¡pero es mucho más que eso!
+- Existe un framework muy popular para crear sitios web basados en bases de datos (Django), pero Python puede hacer mucho más.
+- Python es una herramienta poderosa para analizar datos, pero también se puede utilizar para otros fines.
+- Python es un lenguaje extremadamente versátil.
 
 ---
 
