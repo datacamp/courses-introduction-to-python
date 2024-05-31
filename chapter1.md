@@ -11,7 +11,7 @@ free_preview: true
 lessons:
   - nb_of_exercises: 4
     title: Hello Python!
-  - nb_of_exercises: 8
+  - nb_of_exercises: 7
     title: Variables and Types
 ---
 
@@ -668,43 +668,4 @@ Ex().check_correct(
 )
 
 success_msg("Great! You have saved $150; that's pretty awesome indeed!")
-```
-
----
-
-## Can Python handle everything?
-
-```yaml
-type: MultipleChoiceExercise
-key: 3e5f0bdf3a
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
-Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
-
-`@possible_answers`
-- `"I can add integers, like "  + str(5) + " to strings."`
-- `"I said " + ("Hey " * 2) + "Hey!"`
-- `"The correct answer to this multiple choice exercise is answer number " + 2`
-- `True + False`
-
-`@hint`
-Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sct`
-```{python}
-msg1 = "Incorrect, this command runs perfectly fine."
-msg2 = "It's perfectly possible to 'multiply strings' in Python..."
-msg3 = "Correct! Because you're not converting `2` to a string with [str()](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
-msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
-Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
