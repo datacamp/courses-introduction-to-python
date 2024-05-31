@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## When to use Python?
+## DELETE: When to use Python?
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -56,7 +56,7 @@ Python is a **flexible** language. For which applications can you use Python?
 
 ---
 
-## The Python Interface
+## Your first Python code
 
 ```yaml
 type: NormalExercise
@@ -67,19 +67,15 @@ skills:
   - 2
 ```
 
-Hit _Run Code_ to run your first Python code with Datacamp and see the output!
+It's time to run your first Python code!
 
-Notice the `script.py` window; this is where you can type Python code to solve exercises. You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
-
-You can also use the IPython Shell interactively by typing commands and hitting Enter. Here, your code will not be checked for correctness so it is a great way to experiment.
+Hit the run code button to see the output.
 
 `@instructions`
-- Experiment in the IPython Shell; type `5 / 8`, for example.
-- Add another line of code to `script.py`, `print(7 + 10)`, to be checked for correctness.
-- Hit _Submit Answer_ to execute the Python script and receive feedback.
+- Hit _Run Code_ to see the output of `print(5 / 8)`.
 
 `@hint`
-- Add `print(7 + 10)` under `# Print the sum of 7 and 10` and hit _Submit Answer_ to check if your code is correct.
+- Run the code first before submitting your answer so you have time to explore the output.
 
 `@pre_exercise_code`
 ```{python}
@@ -88,25 +84,20 @@ You can also use the IPython Shell interactively by typing commands and hitting 
 
 `@sample_code`
 ```{python}
-# Example, do not modify!
+# Hit run code to see the output!
 print(5 / 8)
 
-# Print the sum of 7 and 10
-____
 ```
 
 `@solution`
 ```{python}
-# Example, do not modify!
+# Hit run code to see the output!
 print(5 / 8)
-
-# Put code below here
-print(7 + 10)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the sum of 7 and 10?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
 success_msg("Great! On to the next one!")
 ```
 
