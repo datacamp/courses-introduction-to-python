@@ -9,7 +9,7 @@ attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
-  - nb_of_exercises: 5
+  - nb_of_exercises: 4
     title: Hello Python!
   - nb_of_exercises: 8
     title: Variables and Types
@@ -25,34 +25,6 @@ xp: 50
 
 `@projector_key`
 d8fcd4c930027fa4e1c3870c7e7e0ff1
-
----
-
-## DELETE: When to use Python?
-
-```yaml
-type: PureMultipleChoiceExercise
-key: 9703b117fb
-kind: PureMultipleChoice
-xp: 50
-```
-
-Python is a **flexible** language. For which applications can you use Python?
-
-`@hint`
-- Practically any piece of software can be built using Python.
-
-`@possible_answers`
-- For quick calculations
-- Develop a database-driven website
-- Clean and analyze data
-- [All of the above]
-
-`@feedback`
-- Python can do more than quick calculations!
-- There is a very popular Python framework to build database-driven websites, but it can do much more.
-- Python is a powerful tool for data analysis, but it has other uses, too.
-- Correct! Python is an extremely flexible language.
 
 ---
 
@@ -172,7 +144,7 @@ Python is perfectly suited to do basic calculations. It can do addition, subtrac
 
 The code in the script gives some examples.
 
-Now it's your turn to practice!
+Now it's your turn to practice! Remember to replace `____` with your code.
 
 `@instructions`
 - Print the sum of `4 + 5`.
@@ -182,6 +154,7 @@ Now it's your turn to practice!
 
 `@hint`
 - You'll need to use `print()` to generate an output.
+- Your final code should not include any `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -191,16 +164,16 @@ Now it's your turn to practice!
 `@sample_code`
 ```{python}
 # Addition
-
+____
 
 # Subtraction
-
+____
 
 # Multiplication
-
+____
 
 # Division
-
+____
 ```
 
 `@solution`
