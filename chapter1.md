@@ -86,7 +86,6 @@ Hit the run code button to see the output.
 ```{python}
 # Hit run code to see the output!
 print(5 / 8)
-
 ```
 
 `@solution`
@@ -119,13 +118,13 @@ You can also add **comments** to your Python scripts. Comments are important to 
 They start with `#` tag. See the comment in the editor, `# Division`; now it's your turn to add a comment!
 
 `@instructions`
-Above the `print(7 + 10)`, add the comment 
+- Replace `____` with the comment 
 ```
 # Addition
 ```
 
 `@hint`
-- For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
+- Leaving `____` will cause an error so make sure to delete it include `# Addition` right above `print(7 + 10)`.
 
 `@pre_exercise_code`
 ```{python}
