@@ -256,10 +256,10 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 `@sample_code`
 ```{python}
 # Create a variable savings
-
+____
 
 # Print out savings
-
+____
 ```
 
 `@solution`
@@ -309,11 +309,13 @@ How much money would you have saved four months from now, if you saved $10 each 
 
 `@pre_exercise_code`
 ```{python}
-savings = 100
+
 ```
 
 `@sample_code`
 ```{python}
+savings = 100
+
 # Create the variables monthly_savings and num_months
 
 
@@ -330,6 +332,8 @@ total_savings = ____
 
 `@solution`
 ```{python}
+savings = 100
+
 # Create the variables monthly_savings and num_months
 monthly_savings = 10
 num_months = 4
