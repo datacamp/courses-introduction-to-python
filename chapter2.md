@@ -539,7 +539,7 @@ success_msg("Great!")
 
 ```yaml
 type: NormalExercise
-key: 75f9d11390
+key: dbbbd306cf
 xp: 100
 ```
 
