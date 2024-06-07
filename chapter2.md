@@ -287,7 +287,6 @@ Ex().check_correct(
 )
 
 Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
-Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the type of the `house` variable?")
 
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
