@@ -11,7 +11,7 @@ free_preview: true
 lessons:
   - nb_of_exercises: 4
     title: Hello Python!
-  - nb_of_exercises: 6
+  - nb_of_exercises: 5
     title: Variables and Types
 ---
 
@@ -420,104 +420,6 @@ Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is in
 Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
 
 success_msg("Nice!")
-```
-
----
-
-## Operations with other types
-
-```yaml
-type: NormalExercise
-key: 4d0d83cc02
-lang: python
-xp: 100
-skills:
-  - 2
-```
-
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
-
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
-
-Some variables with different types have already been created for you. It's up to you to use them.
-
-`@instructions`
-- Multiply `monthly_savings` and `num_months` and store the result in `year_savings`.
-- What do you think the resulting type will be? Find out by printing out the type of `year_savings`.
-- Calculate the sum of `intro` and `intro` and store the result in a new variable `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
-
-`@hint`
-- Assign `monthly_savings * num_months` to a new variable, `year_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-monthly_savings = 10
-num_months = 12
-intro = "Hello! How are you?"
-
-# Calculate year_savings using monthly_savings and num_months
-____
-
-# Print the type of year_savings
-____
-
-# Assign sum of intro and intro to doubleintro
-____
-
-# Print out doubleintro
-____
-```
-
-`@solution`
-```{python}
-monthly_savings = 10
-num_months = 12
-intro = "Hello! How are you?"
-
-# Calculate year_savings using monthly_savings and num_months
-year_savings = monthly_savings * num_months
-
-# Print the type of year_savings
-print(type(year_savings))
-
-# Assign sum of intro and intro to doubleintro
-doubleintro = intro + intro
-
-# Print out doubleintro
-print(doubleintro)
-```
-
-`@sct`
-```{python}
-# predefined
-msg = "You don't have to change or remove the predefined variables."
-
-Ex().multi(
-    check_object('monthly_savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('num_months', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
-)
-
-Ex().multi(
-    check_object("year_savings").has_equal_value(incorrect_msg="Multiply `monthly_savings` and `num_months` to create the `year_savings` variable."),
-    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year_savings`.")
-)
-
-Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(1, not_printed_msg = "Don't forget to print out `doubleintrp`.")
-)
-
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
 ```
 
 ---
