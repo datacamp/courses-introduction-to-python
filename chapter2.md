@@ -819,7 +819,7 @@ print(areas)
 ```{python}
 Ex().multi(
   has_code("del areas[10]", pattern=False),
-  has_code("del areas[10]", patten=False)
+  has_code("del areas[10]", pattern=False)
 )
 
 Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
