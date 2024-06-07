@@ -141,10 +141,10 @@ Use the IPython Shell to open up the documentation on [`pow()`](https://docs.pyt
 Which of the following statements is true?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. If you don't specify `mod`, the function will return an error.
-- `pow()` takes three arguments: `base`, `exp`, and `None`. All of these arguments are required.
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. `base` and `exp` are required arguments, `mod` is an optional argument.
-- `pow()` takes two arguments: `exp` and `mod`. If you don't specify `exp`, the function will return an error.
+- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
+- `pow()` takes three required arguments: `base`, `exp`, and `None`.
+- `pow()` requires `base` and `exp` arguments; `mod` is optional.
+- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
 
 `@hint`
 - Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
