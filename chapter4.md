@@ -839,8 +839,6 @@ print("Correlation: " + str(corr))
 
 `@sct`
 ```{python}
-Ex().has_import("numpy")
-
 msg = "You shouldn't change or remove the predefined `avg` variable."
 Ex().check_object("avg", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
