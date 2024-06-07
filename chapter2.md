@@ -11,7 +11,7 @@ lessons:
     title: Python Lists
   - nb_of_exercises: 4
     title: Subsetting Lists
-  - nb_of_exercises: 5
+  - nb_of_exercises: 6
     title: Manipulating Lists
 ---
 
@@ -750,6 +750,77 @@ msg2 = "`areas[10:11])` will only select the element at index `10`."
 msg3 = "Correct! You'll learn about easier ways to remove specific elements from Python lists later on."
 msg4 = "This code chunk will not correctly remove the poolhouse-related information. Try again."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
+```
+
+---
+
+## Delete list elements
+
+```yaml
+type: NormalExercise
+key: 53eadb641e
+xp: 100
+```
+
+Finally, you can also remove elements from your list. You can do this with the `del` statement:
+
+```
+x = ["a", "b", "c", "d"]
+del(x[1])
+```
+
+Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+
+Unfortunately, he amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. decide to remove the corresponding string and float from the `areas` list.
+
+`@instructions`
+- Delete the string and float for the `"poolhouse"` from your `areas` list.
+- Print the updated `areas` list.
+
+`@hint`
+- You'll need to use `del()` twice to delete two elements. Be careful about changing indexes though!
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+areas = ["hallway", 11.25, "kitchen", 18.0,
+        "chill zone", 20.0, "bedroom", 10.75,
+         "bathroom", 10.50, "poolhouse", 24.5,
+         "garage", 15.45]
+
+# Delete the poolhouse from the list
+____
+____
+
+# Print the updated list
+____
+```
+
+`@solution`
+```{python}
+areas = ["hallway", 11.25, "kitchen", 18.0,
+        "chill zone", 20.0, "bedroom", 10.75,
+         "bathroom", 10.50, "poolhouse", 24.5,
+         "garage", 15.45]
+
+# Delete the poolhouse from the list
+del areas[10]
+del areas[10]
+
+# Print the updated list
+print(areas)
+```
+
+`@sct`
+```{python}
+# Ex().check_function("del").check_args(0).has_equal_value()
+
+# Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
+# success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
 ```
 
 ---
