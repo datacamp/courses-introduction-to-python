@@ -146,16 +146,16 @@ import numpy as np
 import numpy as np
 
 # Create a numpy array from height_in: np_height_in
-
+____
 
 # Print out np_height_in
-
+____
 
 # Convert np_height_in to m: np_height_m
-
+____
 
 # Print np_height_m
-
+____
 ```
 
 `@solution`
