@@ -596,19 +596,7 @@ skills:
   - 2
 ```
 
-Remember how you calculated the Body Mass Index for all baseball players? `numpy` was able to perform all calculations element-wise (i.e. element by element). For 2D `numpy` arrays this isn't any different! You can combine matrices with single numbers, with vectors, and with other matrices.
-
-Execute the code below in the IPython shell and see if you understand:
-
-```
-import numpy as np
-np_mat = np.array([[1, 2],
-                   [3, 4],
-                   [5, 6]])
-np_mat * 2
-np_mat + np.array([10, 10])
-np_mat + np_mat
-```
+2D `numpy` arrays can perform calculations element by element, like `numpy` arrays.
 
 `np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
 
@@ -619,8 +607,8 @@ np_mat + np_mat
 
 `@hint`
 - `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
+- Create a `numpy` array with `np.array()`; the input is a regular Python list with three elements.
+- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
 
 `@pre_exercise_code`
 ```{python}
@@ -634,28 +622,24 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy package
 import numpy as np
 
-# Create np_baseball (3 cols)
 np_baseball = np.array(baseball)
 
 # Print out addition of np_baseball and updated
-
+____
 
 # Create numpy array: conversion
-
+____ = ____
 
 # Print out product of np_baseball and conversion
-
+____
 ```
 
 `@solution`
 ```{python}
-# Import numpy package
 import numpy as np
 
-# Create np_baseball (3 cols)
 np_baseball = np.array(baseball)
 
 # Print out addition of np_baseball and updated
