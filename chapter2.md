@@ -66,7 +66,6 @@ After measuring the height of your family, you decide to collect some informatio
 
 `@sample_code`
 ```{python}
-# Area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
@@ -82,7 +81,6 @@ ____
 
 `@solution`
 ```{python}
-# Area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
@@ -152,7 +150,6 @@ Some of the code has been provided for you to get you started. Pay attention her
 
 `@sample_code`
 ```{python}
-# Area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
@@ -168,7 +165,6 @@ ____
 
 `@solution`
 ```{python}
-# Area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
@@ -232,7 +228,6 @@ Remember: `"hallway"` is a string, while `hall` is a variable that represents th
 
 `@sample_code`
 ```{python}
-# Area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
@@ -252,7 +247,6 @@ ____
 
 `@solution`
 ```{python}
-# Area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
