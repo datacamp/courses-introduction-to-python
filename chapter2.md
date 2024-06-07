@@ -334,9 +334,10 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 - Select the number representing the area of the living room (`20.0`) and print it out.
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
-- Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
+- Use `x[1]` to select the second element of a list `x`.
+- Use `x[-1]` to select the last element of a list `x`.
+- Make sure to wrap your subsetting operations in a `print()` call.
+- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
 
 `@pre_exercise_code`
 ```{python}
@@ -349,13 +350,13 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Print out second element from areas
-print(areas[_])
+print(areas[____])
 
 # Print out last element from areas
-print(areas[__])
+print(areas[____])
 
 # Print out the area of the living room
-print(areas[_])
+print(areas[____])
 ```
 
 `@solution`
