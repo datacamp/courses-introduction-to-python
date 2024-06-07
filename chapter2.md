@@ -469,16 +469,16 @@ Selecting single values from a list is just one part of the story. It's also pos
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_.
+The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
 
 `@instructions`
 - Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Do a similar thing to create a new variable, `upstairs`, that contains the last 4 elements of `areas`.
+- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
 - Print both `downstairs` and `upstairs` using `print()`.
 
 `@hint`
-- Use the brackets `[0:6]` to build `downstairs`.
-- Use the brackets `[6:10]` to build `upstairs`.
+- Use the brackets `[0:6]` to get the first six elements of a list.
+- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
 - Add two `print()` calls to print out `downstairs` and `upstairs`.
 
 `@pre_exercise_code`
@@ -511,7 +511,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 downstairs = areas[0:6]
 
 # Use slicing to create upstairs
-upstairs = areas[6:10]
+upstairs = areas[6:]
 
 # Print out downstairs and upstairs
 print(downstairs)
@@ -525,89 +525,12 @@ Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = ms
 
 patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
-Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ('upstairs', '6:10'))
+Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
 Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
 Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
 
 success_msg("Great!")
-```
-
----
-
-## Slicing and dicing (2)
-
-```yaml
-type: NormalExercise
-key: dfc9a168a3
-lang: python
-xp: 100
-skills:
-  - 2
-```
-
-In the video, Hugo first discussed the syntax where you specify both where to begin and end the slice of your list:
-
-```
-my_list[begin:end]
-```
-
-However, it's also possible not to specify these indexes. If you don't specify the `begin` index, Python figures out that you want to start your slice at the beginning of your list. If you don't specify the `end` index, the slice will go all the way to the last element of your list. To experiment with this, try the following commands in the IPython Shell:
-
-```
-x = ["a", "b", "c", "d"]
-x[:2]
-x[2:]
-x[:]
-```
-
-`@instructions`
-- Create `downstairs` again, as the first `6` elements of `areas`. This time, simplify the slicing by omitting the `begin` index.
-- Create `upstairs` again, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-
-`@hint`
-- To get the first 5 elements of a list, `l`, you would use `l[:5]`.
-- To get everything except the first 5 elements, you would use `l[5:]`.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
-
-# Alternative slicing to create downstairs
-
-
-# Alternative slicing to create upstairs
-
-```
-
-`@solution`
-```{python}
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
-
-# Alternative slicing to create downstairs
-downstairs = areas[:6]
-
-# Alternative slicing to create upstairs
-upstairs = areas[6:]
-```
-
-`@sct`
-```{python}
-msg = "Don't remove or edit the predefined `areas` list."
-Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-
-patt = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
-Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
-Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
-
-success_msg("Wonderful!")
 ```
 
 ---
@@ -661,6 +584,67 @@ msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is 
 msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
+```
+
+---
+
+## Subsetting lists of lists
+
+```yaml
+type: NormalExercise
+key: 558b1b38d7
+xp: 100
+```
+
+A Python list can also contain other lists.
+
+To subset lists of lists, you can use the same technique as before: square brackets. This would like something like this for a list, `x`:
+
+```
+x[2][0]
+```
+
+`@instructions`
+- Subset the `house` list to get the float `9.5`.
+
+`@hint`
+- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
+- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
+         ["bathroom", 9.50]]
+
+# Subset the house list
+house___
+```
+
+`@solution`
+```{python}
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
+         ["bathroom", 9.50]]
+
+# Subset the house list
+house[-1][1]
+```
+
+`@sct`
+```{python}
+Ex().has_code("house[-1][1]", pattern=False)
+
+success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
 ```
 
 ---
