@@ -9,7 +9,7 @@ attachments:
 lessons:
   - nb_of_exercises: 4
     title: Python Lists
-  - nb_of_exercises: 5
+  - nb_of_exercises: 4
     title: Subsetting Lists
   - nb_of_exercises: 5
     title: Manipulating Lists
@@ -382,72 +382,6 @@ Ex().has_printout(0, not_printed_msg = "Have another look at your code to print 
 Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
 Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
 success_msg("Good job!")
-```
-
----
-
-## Del: Subset and calculate
-
-```yaml
-type: NormalExercise
-key: 58c969f11f
-lang: python
-xp: 100
-skills:
-  - 2
-```
-
-After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted. The strings that result are pasted together using the `+` operator:
-
-```
-x = ["a", "b", "c", "d"]
-print(x[1] + x[3])
-```
-
-`@instructions`
-- Using a combination of list subsetting and variable assignment, create a new variable, `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
-- Print the new variable `eat_sleep_area`.
-
-`@hint`
-- Add `areas[3]` to `areas[-3]` to calculate `eat_sleep_area`.
-- Print out `eat_sleep_area`: `print(eat_sleep_area)`.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
-
-# Sum of kitchen and bedroom area: eat_sleep_area
-
-
-# Print the variable eat_sleep_area
-
-```
-
-`@solution`
-```{python}
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
-
-# Sum of kitchen and bedroom area: eat_sleep_area
-eat_sleep_area = areas[3] + areas[-3]
-
-# Print the variable eat_sleep_area
-print(eat_sleep_area)
-```
-
-`@sct`
-```{python}
-msg = "Don't remove or edit the predefined `areas` list."
-Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("eat_sleep_area").has_equal_value(incorrect_msg = "Be sure to assign the correct value to `eat_sleep_area`. You'll need to sum `areas[3]` and `areas[-3]`.")
-Ex().has_printout(0, not_printed_msg = "Don't forget to print out `eat_sleap_area` after calculating it!")
-success_msg("Bellissimo!")
 ```
 
 ---
