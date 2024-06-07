@@ -592,7 +592,7 @@ Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 
 ```yaml
 type: NormalExercise
-key: 558b1b38d7
+key: dbbbd306cf
 xp: 100
 ```
 
