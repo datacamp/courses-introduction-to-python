@@ -554,25 +554,18 @@ skills:
   - 2
 ```
 
-Replacing list elements is pretty easy. Simply subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
-
-Use the IPython Shell to experiment with the commands below. Can you tell what's happening and why?
-
-```
-x = ["a", "b", "c", "d"]
-x[1] = "r"
-x[2:] = ["s", "t"]
-```
+To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
 
 For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
 
 `@instructions`
-- Update the area of the bathroom area to be 10.50 square meters instead of 9.50.
+- Update the area of the bathroom to be `10.50` square meters instead of `9.50`.
 - Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`.
 
 `@hint`
-- Use `areas[-1] = ___` to update the bathroom area. Can you fill in the blanks?
-- Similarly, you can use `areas[4] = ___` to update the element `"living room"`.
+- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
+- Then, replace the value with the new bathroom area by assigning it to this subset.
+- Do the same to update the `"living room"` name, which is at index 4.
 
 `@pre_exercise_code`
 ```{python}
@@ -585,10 +578,10 @@ For this and the following exercises, you'll continue working on the `areas` lis
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Correct the bathroom area
-
+____ = ____
 
 # Change "living room" to "chill zone"
-
+____ = ____
 ```
 
 `@solution`
