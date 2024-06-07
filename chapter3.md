@@ -573,7 +573,6 @@ C = 2 * 0.43 * ____
 # Calculate A
 A = ____ * 0.43 ** 2
 
-# Build printout
 print("Circumference: " + str(C))
 print("Area: " + str(A))
 ```
@@ -589,17 +588,14 @@ C = 2 * 0.43 * math.pi
 # Calculate A
 A = math.pi * 0.43 ** 2
 
-# Build printout
 print("Circumference: " + str(C))
 print("Area: " + str(A))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
 patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
 Ex().multi(
-  check_object('r', missing_msg=msg).has_equal_value(incorrect_msg=msg),
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
   check_object('A').has_equal_value(incorrect_msg=patt%'A')
@@ -632,16 +628,17 @@ General imports, like `import math`, make **all** functionality from the `math` 
 from math import pi
 ```
 
-Let's say the Moon's orbit around planet Earth is a perfect circle, with a radius `r` (in km) that is defined in the script.
+Try the same thing again, but this time only use `pi`.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `radians` function.
-- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as `r * phi`, where `r` is the radius and `phi` is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function, which you just imported.
+- Perform a selective import from the `math` package where you only import the `pi` function.
+- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
+- Use `math.pi` to calculate the area of the circle and store it in `A`.
 - Print out `dist`.
 
 `@hint`
-- Use `from math import radians` to do the selective import.
-- You can simply use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function now. Pass the function the number 12 to get the angle in radians.
+- Use `from math import pi` to do the selective import.
+- Now, you can use `pi` on it's own!
 - To print out a variable `x`, simply type `print(x)`.
 
 `@pre_exercise_code`
@@ -651,47 +648,49 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 `@sample_code`
 ```{python}
-# Import radians function of math package
+# Import pi function of math package
+from math import ____
 
+# Calculate C
+C = 2 * 0.43 * ____
 
-# Definition of radius
-r = 192500
+# Calculate A
+A = ____ * 0.43 ** 2
 
-# Travel distance of Moon over 12 degrees. Store in dist.
-
-
-# Print out dist
-
+print("Circumference: " + str(C))
+print("Area: " + str(A))
 ```
 
 `@solution`
 ```{python}
-# Import radians function of math package
-from math import radians
+# Import pi function of math package
+from math import pi
 
-# Definition of radius
-r = 192500
+# Calculate C
+C = 2 * 0.43 * pi
 
-# Travel distance of Moon over 12 degrees. Store in dist.
-dist = r * radians(12)
+# Calculate A
+A = pi * 0.43 ** 2
 
-# Print out dist
-print(dist)
+print("Circumference: " + str(C))
+print("Area: " + str(A))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
-Ex().check_object("r", missing_msg=msg).has_equal_value(incorrect_msg=msg)
+patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
 
-Ex().has_import("math.radians", not_imported_msg = "Be sure to import [`radians()`](https://docs.python.org/3/library/math.html#math.radians) from the `math` package. You should use the `from ___ import ___` notation.", incorrect_as_msg = "Don't set any alias for [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Just type `from math import radians`.")
+Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
 
-Ex().check_correct(
-  check_object("dist").has_equal_value(),
-  check_function("math.radians", signature=False).check_args(0).has_equal_value()
+Ex().multi(
+  check_object('C').has_equal_value(incorrect_msg=patt%'C'),
+  check_object('A').has_equal_value(incorrect_msg=patt%'A')
 )
 
-Ex().has_printout(0)
+Ex().multi(
+  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
+  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+)
 
 success_msg("Nice! Head over to the next exercise.")
 ```
