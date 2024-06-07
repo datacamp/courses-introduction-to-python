@@ -40,18 +40,12 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). You've also used the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types. These are built-in functions as well.
+Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). There are also functions like [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types. These are built-in functions as well.
 
 Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
 
 ```
 result = type(3.0)
-```
-
-The general recipe for calling functions and saving the result to a variable is thus:
-
-```
-output = function_name(input)
 ```
 
 `@instructions`
@@ -76,13 +70,13 @@ var1 = [1, 2, 3, 4]
 var2 = True
 
 # Print out type of var1
-
+____
 
 # Print out length of var1
-
+____
 
 # Convert var2 to an integer: out2
-
+____ = ____
 ```
 
 `@solution`
@@ -133,16 +127,16 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: [`help()`](https://docs.python.org/3/library/functions.html#help). In IPython specifically, you can also use `?` before the function name.
+Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
 
-To get help on the [`max()`](https://docs.python.org/3/library/functions.html#max) function, for example, you can use one of these calls:
+To get help on the `max()` function, for example, you can use one of these calls:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the documentation on [`pow()`](https://docs.python.org/3/library/functions.html#pow). Which of the following statements is true?
+Use the IPython Shell to open up the documentation on [`pow()`](https://docs.python.org/3/library/functions.html#pow). Do this by typing `pow()` and hitting **Enter**. Which of the following statements is true?
 
 `@possible_answers`
 - `pow()` takes three arguments: `base`, `exp`, and `mod`. If you don't specify `mod`, the function will return an error.
