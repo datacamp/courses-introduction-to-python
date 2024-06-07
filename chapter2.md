@@ -766,7 +766,7 @@ Finally, you can also remove elements from your list. You can do this with the `
 
 ```
 x = ["a", "b", "c", "d"]
-del(x[1])
+del x[1]
 ```
 
 Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
@@ -778,7 +778,7 @@ Unfortunately, he amount you won with the lottery is not that big after all and 
 - Print the updated `areas` list.
 
 `@hint`
-- You'll need to use `del()` twice to delete two elements. Be careful about changing indexes though!
+- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
 
 `@pre_exercise_code`
 ```{python}
@@ -817,10 +817,13 @@ print(areas)
 
 `@sct`
 ```{python}
-# Ex().check_function("del").check_args(0).has_equal_value()
+Ex().multi(
+  has_code("del areas[10]", pattern=False),
+  has_code("del areas[10]", patten=False)
+)
 
-# Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-# success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
+success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
 ```
 
 ---
