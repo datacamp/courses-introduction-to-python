@@ -9,7 +9,7 @@ attachments:
 lessons:
   - nb_of_exercises: 4
     title: Python Lists
-  - nb_of_exercises: 6
+  - nb_of_exercises: 5
     title: Subsetting Lists
   - nb_of_exercises: 5
     title: Manipulating Lists
@@ -531,59 +531,6 @@ Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after ca
 Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
 
 success_msg("Great!")
-```
-
----
-
-## Subsetting lists of lists
-
-```yaml
-type: MultipleChoiceExercise
-key: dbbbd306cf
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
-
-```
-x = [["a", "b", "c"],
-     ["d", "e", "f"],
-     ["g", "h", "i"]]
-x[2][0]
-x[2][:2]
-```
-
-`x[2]` results in a list, that you can subset again by adding additional square brackets.
-
-What will `house[-1][1]` return? `house`, the list of lists that you created before, is already defined for you in the workspace. You can experiment with it in the IPython Shell.
-
-`@possible_answers`
-- A float: the kitchen area
-- A string: `"kitchen"`
-- A float: the bathroom area
-- A string: `"bathroom"`
-
-`@hint`
-`house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`. What's the result if you then subset this sublist with `[1]`? You can always try out the command in the IPython Shell!
-
-`@pre_exercise_code`
-```{python}
-house = [["hallway", 11.25],
-         ["kitchen", 18.0],
-         ["living room", 20.0],
-         ["bedroom", 10.75],
-         ["bathroom", 9.50]]
-```
-
-`@sct`
-```{python}
-msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `[\"bathroom\", 9.50]`."
-msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
-msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
-Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
