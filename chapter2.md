@@ -686,7 +686,7 @@ success_msg("Cool! The list is shaping up nicely!")
 
 ```yaml
 type: NormalExercise
-key: 53eadb641e
+key: 85f792356e
 xp: 100
 ```
 
