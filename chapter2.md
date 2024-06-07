@@ -11,7 +11,7 @@ lessons:
     title: Python Lists
   - nb_of_exercises: 4
     title: Subsetting Lists
-  - nb_of_exercises: 6
+  - nb_of_exercises: 5
     title: Manipulating Lists
 ---
 
@@ -678,78 +678,6 @@ Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = ms
 Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
 Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
 success_msg("Cool! The list is shaping up nicely!")
-```
-
----
-
-## Delete list elements
-
-```yaml
-type: MultipleChoiceExercise
-key: 85f792356e
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
-
-```
-x = ["a", "b", "c", "d"]
-del(x[1])
-```
-
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
-
-The updated and extended version of `areas` that you've built in the previous exercises is coded below. You can copy and paste this into the IPython Shell to play around with the result.
-
-```
-areas = ["hallway", 11.25, "kitchen", 18.0,
-        "chill zone", 20.0, "bedroom", 10.75,
-         "bathroom", 10.50, "poolhouse", 24.5,
-         "garage", 15.45]
-```
-
-There was a mistake! The amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You decide to remove the corresponding string and float from the `areas` list.
-
-The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
-
-```
-# Same line
-command1; command2
-
-# Separate lines
-command1
-command2
-```
-
-Which of the code chunks will do the job for us?
-
-`@possible_answers`
-- `del(areas[10]); del(areas[11])`
-- `del(areas[10:11])`
-- `del(areas[-4:-2])`
-- `del(areas[-3]); del(areas[-4])`
-
-`@hint`
-You can simply try all the different options to see if they work. Just make sure to re-initialize the `areas` list again before you try a new option.
-
-`@pre_exercise_code`
-```{python}
-areas = ["hallway", 11.25, "kitchen", 18.0,
-        "chill zone", 20.0, "bedroom", 10.75,
-         "bathroom", 10.50, "poolhouse", 24.5,
-         "garage", 15.45]
-```
-
-`@sct`
-```{python}
-msg1 = "If you first remove `areas[10]`, all elements after index 10 move up a spot. If you then do `del(areas[11])`, you are deleting the element that was originally at index `12`."
-msg2 = "`areas[10:11])` will only select the element at index `10`."
-msg3 = "Correct! You'll learn about easier ways to remove specific elements from Python lists later on."
-msg4 = "This code chunk will not correctly remove the poolhouse-related information. Try again."
-Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
