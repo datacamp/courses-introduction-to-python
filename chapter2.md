@@ -118,7 +118,7 @@ success_msg("Nice! A list is way better here, isn't it?")
 
 ---
 
-## Create list with different types
+## Create lists with different types
 
 ```yaml
 type: NormalExercise
