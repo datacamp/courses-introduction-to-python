@@ -41,7 +41,7 @@ skills:
 
 It's time to run your first Python code!
 
-Hit the run code button to see the output.
+Head to the code and hit the run code button to see the output.
 
 `@instructions`
 - Hit _Run Code_ to see the output of `print(5 / 8)`.
