@@ -436,7 +436,7 @@ Variables come in different types in Python. You can see the type of a variable 
 
 Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
 
-Some variables with different types have already been created for you. It's up to you to use them.
+Time for you to test this out.
 
 `@pre_exercise_code`
 ```{python}
