@@ -725,13 +725,13 @@ import numpy as np
 import numpy as np
 
 # Create np_height_in from np_baseball
-____
+
 
 # Print out the mean of np_height_in
-____
+
 
 # Print out the median of np_height_in
-____
+
 ```
 
 `@solution`
