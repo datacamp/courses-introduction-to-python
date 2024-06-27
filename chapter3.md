@@ -538,21 +538,19 @@ skills:
   - 2
 ```
 
-As a data scientist, some notions of geometry never hurt. Let's refresh some of the basics.
+Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
 
-For a fancy clustering algorithm, you want to find the circumference, `C`, and area, `A`, of a circle. When the radius of the circle is `r`, you can calculate `C` and `A` as:
+$$C = 2 \pi r$$
+$$A = \pi r^2 $$
 
-`C = 2πr`
-`A = πr^2`
+Rather than typing the number for `pi`, you can use the `math` package that contains the number
 
-In Python, the symbol for exponentiation is `**`. This operator raises the number to its left to the power of the number to its right. For example `3**4` is `3` to the power of `4` and will give `81`.
-
-To use the constant `pi`, you'll need the `math` package. A variable `r` is already coded in the script. Fill in the code to calculate `C` and `A` and see how the [`print()`](https://docs.python.org/3/library/functions.html#print) functions create some nice printouts.
+For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
 
 `@instructions`
-- Import the `math` package. Now you can access the constant `pi` with `math.pi`.
-- Calculate the circumference of the circle and store it in `C`.
-- Calculate the area of the circle and store it in `A`.
+- Import the `math` package.
+- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
+- Use `math.pi` to calculate the area of the circle and store it in `A`.
 
 `@hint`
 - You can simply use `import math`, and then refer to `pi` with `math.pi`.
@@ -567,18 +565,14 @@ To use the constant `pi`, you'll need the `math` package. A variable `r` is alre
 `@sample_code`
 ```{python}
 # Import the math package
-
-
-# Definition of radius
-r = 0.43
+import ____
 
 # Calculate C
-C = 0
+C = 2 * 0.43 * ____
 
 # Calculate A
-A = 0
+A = ____ * 0.43 ** 2
 
-# Build printout
 print("Circumference: " + str(C))
 print("Area: " + str(A))
 ```
@@ -588,26 +582,20 @@ print("Area: " + str(A))
 # Import the math package
 import math
 
-# Definition of radius
-r = 0.43
-
 # Calculate C
-C = 2 * r * math.pi
+C = 2 * 0.43 * math.pi
 
 # Calculate A
-A = math.pi * r ** 2
+A = math.pi * 0.43 ** 2
 
-# Build printout
 print("Circumference: " + str(C))
 print("Area: " + str(A))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
 patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
 Ex().multi(
-  check_object('r', missing_msg=msg).has_equal_value(incorrect_msg=msg),
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
   check_object('A').has_equal_value(incorrect_msg=patt%'A')
