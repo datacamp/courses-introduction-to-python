@@ -466,7 +466,7 @@ success_msg("Great!")
 
 ```yaml
 type: NormalExercise
-key: 7b247d505d
+key: dbbbd306cf
 xp: 100
 ```
 
@@ -679,7 +679,7 @@ success_msg("Cool! The list is shaping up nicely!")
 
 ```yaml
 type: NormalExercise
-key: a0b4578554
+key: 85f792356e
 xp: 100
 ```
 
