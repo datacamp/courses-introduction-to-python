@@ -390,13 +390,13 @@ Next to numerical data types, there are three other very common data types:
 `@sample_code`
 ```{python}
 # Create a variable half
-____
+
 
 # Create a variable intro
-____
+
 
 # Create a variable is_good
-____
+
 ```
 
 `@solution`
