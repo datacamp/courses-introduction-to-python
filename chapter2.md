@@ -675,7 +675,7 @@ success_msg("Cool! The list is shaping up nicely!")
 
 ---
 
-## Delete list elements
+## (old) Delete list elements
 
 ```yaml
 type: MultipleChoiceExercise
