@@ -9,7 +9,7 @@ attachments:
 lessons:
   - nb_of_exercises: 4
     title: Python Lists
-  - nb_of_exercises: 5
+  - nb_of_exercises: 4
     title: Subsetting Lists
   - nb_of_exercises: 5
     title: Manipulating Lists
@@ -458,83 +458,6 @@ Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after ca
 Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
 
 success_msg("Great!")
-```
-
----
-
-## Slicing and dicing (2)
-
-```yaml
-type: NormalExercise
-key: dfc9a168a3
-lang: python
-xp: 100
-skills:
-  - 2
-```
-
-In the video, Hugo first discussed the syntax where you specify both where to begin and end the slice of your list:
-
-```
-my_list[begin:end]
-```
-
-However, it's also possible not to specify these indexes. If you don't specify the `begin` index, Python figures out that you want to start your slice at the beginning of your list. If you don't specify the `end` index, the slice will go all the way to the last element of your list. To experiment with this, try the following commands in the IPython Shell:
-
-```
-x = ["a", "b", "c", "d"]
-x[:2]
-x[2:]
-x[:]
-```
-
-`@instructions`
-- Create `downstairs` again, as the first `6` elements of `areas`. This time, simplify the slicing by omitting the `begin` index.
-- Create `upstairs` again, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-
-`@hint`
-- To get the first 5 elements of a list, `l`, you would use `l[:5]`.
-- To get everything except the first 5 elements, you would use `l[5:]`.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
-
-# Alternative slicing to create downstairs
-
-
-# Alternative slicing to create upstairs
-
-```
-
-`@solution`
-```{python}
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
-
-# Alternative slicing to create downstairs
-downstairs = areas[:6]
-
-# Alternative slicing to create upstairs
-upstairs = areas[6:]
-```
-
-`@sct`
-```{python}
-msg = "Don't remove or edit the predefined `areas` list."
-Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-
-patt = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
-Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ("downstairs",":6"))
-Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
-
-success_msg("Wonderful!")
 ```
 
 ---
