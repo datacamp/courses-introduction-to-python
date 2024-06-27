@@ -7,7 +7,7 @@ description: >-
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
-  - nb_of_exercises: 5
+  - nb_of_exercises: 4
     title: Python Lists
   - nb_of_exercises: 6
     title: Subsetting Lists
@@ -196,54 +196,6 @@ success_msg("Nice! This list contains both strings and floats, but that's not a 
 
 ---
 
-## Select the valid list
-
-```yaml
-type: MultipleChoiceExercise
-key: 416b80a405
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
-
-```
-my_list = [el1, el2, el3]
-```
-
-Can you tell which ones of the following lines of Python code are valid ways to build a list?
-
-A. `[1, 3, 4, 2]`
-B. `[[1, 2, 3], [4, 5, 7]]`
-C. `[1 + 2, "a" * 5, 3]`
-
-`@possible_answers`
-- A, B and C
-- B
-- B and C
-- C
-
-`@hint`
-Try out all the different lines in the Python shell and see which ones generate an error. Maybe none of them go wrong?
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sct`
-```{python}
-msg1 = "Correct! As funny as they may look, all these commands are valid ways to build a Python list."
-msg2 = "Command B is valid, but it's not the only one!"
-msg3 = "Both command B and C are valid; what about command A? Try it out in the console."
-msg4 = "Command C is valid, but it's not the only one!"
-Ex().has_chosen(1,[msg1,msg2,msg3,msg4])
-```
-
----
-
 ## List of lists
 
 ```yaml
@@ -257,19 +209,17 @@ skills:
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
 
-Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script in the editor can already give you an idea.
+Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
 
-Don't get confused here: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
 
 `@instructions`
 - Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
 - Print out `house`; does this way of structuring your data make more sense?
-- Print out the type of `house`. Are you still dealing with a list?
 
 `@hint`
 - Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- To print a variable `x`, write `print(x)` on a new line in the Python script.
-- To print out the type of a variable `x`, you can use `print(type(x))`.
+- To print a variable `x`, write `print(x)` on a new line.
 
 `@pre_exercise_code`
 ```{python}
@@ -278,35 +228,32 @@ Don't get confused here: `"hallway"` is a string, while `hall` is a variable tha
 
 `@sample_code`
 ```{python}
-# area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# house information as list of lists
+# House information as list of lists
 house = [["hallway", hall],
          ["kitchen", kit],
-         ["living room", liv]]
+         ["living room", liv],
+        ____,
+        ____]
 
 # Print out house
-
-
-# Print out the type of house
-
+____
 ```
 
 `@solution`
 ```{python}
-# area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# house information as list of lists
+# House information as list of lists
 house = [["hallway", hall],
          ["kitchen", kit],
          ["living room", liv],
@@ -315,9 +262,6 @@ house = [["hallway", hall],
 
 # Print out house
 print(house)
-
-# Print out the type of house
-print(type(house))
 ```
 
 `@sct`
@@ -337,7 +281,6 @@ Ex().check_correct(
 )
 
 Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
-Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the type of the `house` variable?")
 
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
