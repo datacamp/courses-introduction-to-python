@@ -725,7 +725,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors.
+- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
 
 `@pre_exercise_code`
 ```{python}
