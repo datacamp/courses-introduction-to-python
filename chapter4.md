@@ -366,10 +366,8 @@ In this exercise, `baseball` is a list of lists. The main list contains 4 elemen
 
 `@sample_code`
 ```{python}
-# Import numpy
 import numpy as np
 
-# Create baseball, a list of lists
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
@@ -387,10 +385,8 @@ baseball = [[180, 78.4],
 
 `@solution`
 ```{python}
-# Import numpy
 import numpy as np
 
-# Create baseball, a list of lists
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
