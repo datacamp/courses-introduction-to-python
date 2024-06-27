@@ -76,7 +76,7 @@ ____
 ____
 
 # Convert var2 to an integer: out2
-____ = ____
+out2 = ____
 ```
 
 `@solution`
@@ -211,7 +211,7 @@ second = [10.75, 9.50]
 full = ____ + ____
 
 # Sort full in descending order: full_sorted
-full_sorted = ____(____, ____=____)
+full_sorted = ____
 
 # Print out full_sorted
 ____
