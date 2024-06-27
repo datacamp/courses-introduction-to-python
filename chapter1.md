@@ -144,7 +144,7 @@ Python is perfectly suited to do basic calculations. It can do addition, subtrac
 
 The code in the script gives some examples.
 
-Now it's your turn to practice! Remember to replace `____` with your code.
+Now it's your turn to practice!
 
 `@instructions`
 - Print the sum of `4 + 5`.
@@ -154,7 +154,6 @@ Now it's your turn to practice! Remember to replace `____` with your code.
 
 `@hint`
 - You'll need to use `print()` to generate an output.
-- Your final code should not include any `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -164,16 +163,16 @@ Now it's your turn to practice! Remember to replace `____` with your code.
 `@sample_code`
 ```{python}
 # Addition
-____
+
 
 # Subtraction
-____
+
 
 # Multiplication
-____
+
 
 # Division
-____
+
 ```
 
 `@solution`
