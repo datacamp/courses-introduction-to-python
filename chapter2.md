@@ -73,10 +73,10 @@ bed = 10.75
 bath = 9.50
 
 # Create list areas
-____
+
 
 # Print areas
-____
+
 ```
 
 `@solution`
