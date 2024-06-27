@@ -62,15 +62,15 @@ import numpy as np
 `@sample_code`
 ```{python}
 # Import the numpy package as np
-____
+
 
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 # Create a numpy array from baseball: np_baseball
-____
+
 
 # Print out type of np_baseball
-____
+
 ```
 
 `@solution`
@@ -146,16 +146,16 @@ import numpy as np
 import numpy as np
 
 # Create a numpy array from height_in: np_height_in
-____
+
 
 # Print out np_height_in
-____
+
 
 # Convert np_height_in to m: np_height_m
-____
+
 
 # Print np_height_m
-____
+
 ```
 
 `@solution`
@@ -284,10 +284,10 @@ np_weight_lb = np.array(weight_lb)
 np_height_in = np.array(height_in)
 
 # Print out the weight at index 50
-____
+
 
 # Print out sub-array of np_height_in: index 100 up to and including index 110
-____
+
 ```
 
 `@solution`
