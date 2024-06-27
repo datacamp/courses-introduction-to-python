@@ -9,7 +9,7 @@ attachments:
 lessons:
   - nb_of_exercises: 4
     title: Python Lists
-  - nb_of_exercises: 4
+  - nb_of_exercises: 5
     title: Subsetting Lists
   - nb_of_exercises: 5
     title: Manipulating Lists
@@ -511,6 +511,67 @@ msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is 
 msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
+```
+
+---
+
+## Subsetting lists of lists
+
+```yaml
+type: NormalExercise
+key: 7b247d505d
+xp: 100
+```
+
+A Python list can also contain other lists.
+
+To subset lists of lists, you can use the same technique as before: square brackets. This would like something like this for a list, `x`:
+
+```
+x[2][0]
+```
+
+`@instructions`
+- Subset the `house` list to get the float `9.5`.
+
+`@hint`
+- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
+- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
+         ["bathroom", 9.50]]
+
+# Subset the house list
+house___
+```
+
+`@solution`
+```{python}
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
+         ["bathroom", 9.50]]
+
+# Subset the house list
+house[-1][1]
+```
+
+`@sct`
+```{python}
+Ex().has_code("house[-1][1]", pattern=False)
+
+success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
 ```
 
 ---
