@@ -39,7 +39,7 @@ skills:
   - 2
 ```
 
-As opposed to `int`, `bool` etc., a list is a **compound data type**; you can group values together:
+A list is a **compound data type**; you can group values together, like this:
 
 ```
 a = "is"
@@ -47,15 +47,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
+After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
 
 `@instructions`
 - Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the [`print()`](https://docs.python.org/3/library/functions.html#print) function.
+- Print `areas` with the `print()` function.
 
 `@hint`
 - You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Put `print(areas)` in your script to print out the list when submitting.
+- Make sure to use square brackets `[]` rather than parentheses `()`.
+- You don't need to use quotation marks when storing variables within a list.
+- Type `print(areas)` to print out the list when submitting.
 
 `@pre_exercise_code`
 ```{python}
@@ -64,7 +66,6 @@ After measuring the height of your family, you decide to collect some informatio
 
 `@sample_code`
 ```{python}
-# area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
@@ -76,12 +77,10 @@ bath = 9.50
 
 # Print areas
 
-
 ```
 
 `@solution`
 ```{python}
-# Area variables (in square meters)
 hall = 11.25
 kit = 18.0
 liv = 20.0
