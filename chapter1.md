@@ -9,7 +9,7 @@ attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
-  - nb_of_exercises: 5
+  - nb_of_exercises: 4
     title: Hello Python!
   - nb_of_exercises: 8
     title: Variables and Types
@@ -28,35 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## When to use Python?
-
-```yaml
-type: PureMultipleChoiceExercise
-key: 9703b117fb
-kind: PureMultipleChoice
-xp: 50
-```
-
-Python is a **flexible** language. For which applications can you use Python?
-
-`@hint`
-- Practically any piece of software can be built using Python.
-
-`@possible_answers`
-- For quick calculations.
-- Develop a database-driven website.
-- Clean and analyze data.
-- [All of the above.]
-
-`@feedback`
-- "Python can do more than quick calculations!"
-- "There is a very popular Python framework to build database-driven websites, but it can do much more."
-- "Python is a powerful tool for data analysis, but it has other uses, too."
-- "Correct! Python is an extremely flexible language."
-
----
-
-## The Python Interface
+## Your first Python code
 
 ```yaml
 type: NormalExercise
@@ -67,14 +39,15 @@ skills:
   - 2
 ```
 
-Hit **Continue** to check out the instructions and run your first Python code with Datacamp!
+It's time to run your first Python code!
+
+Head to the code and hit the run code button to see the output.
 
 `@instructions`
-- Try hitting _Run Code_ to see the output of your code in the **Shell** tab, then hit _Back to Code_.
-- Hit _Submit_ to execute the Python script and receive feedback.
+- Hit _Run Code_ to see the output of `print(5 / 8)`.
 
 `@hint`
-- You can hit _Run Code_ and _Submit_ as often as you want; if you're stuck, you can tap on the lightbulb icon at the bottom of the screen to get a hint , and ultimately _Show Solution_.
+- Run the code first before submitting your answer so you have time to explore the output.
 
 `@pre_exercise_code`
 ```{python}
@@ -83,25 +56,20 @@ Hit **Continue** to check out the instructions and run your first Python code wi
 
 `@sample_code`
 ```{python}
-# See what happens when you hit Run Code
+# Hit run code to see the output!
 print(5 / 8)
-
-print(7 + 10)
 ```
 
 `@solution`
 ```{python}
-# See what happens when you hit Run Code
+# Hit run code to see the output!
 print(5 / 8)
-
-print(7 + 10)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Make sure you are still printing something!")
-Ex().has_printout(1, not_printed_msg = "Make sure you are still printing something!")
-success_msg("Great! You can also use the **Shell** interactively by simply typing commands and hitting 'Run Code'. When you work in the shell directly, your code will not be checked for correctness so it is a great way to experiment.")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
+success_msg("Great! On to the next one!")
 ```
 
 ---
@@ -122,14 +90,13 @@ You can also add **comments** to your Python scripts. Comments are important to 
 They start with `#` tag. See the comment in the editor, `# Division`; now it's your turn to add a comment!
 
 `@instructions`
-- Above the `print(7 + 10)`, add the comment:
+- Replace `____` with the comment 
 ```
 # Addition
 ```
-You can copy the text by tapping it and then tapping the underscores ____ in the code below.
 
 `@hint`
-- Try copying and pasting the comment rather than typing it out by tapping the comment to automatically copy it, then tap and hold the underscores and select paste!
+- Leaving `____` will cause an error so make sure to delete it include `# Addition` right above `print(7 + 10)`.
 
 `@pre_exercise_code`
 ```{python}
