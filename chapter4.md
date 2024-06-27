@@ -374,13 +374,13 @@ baseball = [[180, 78.4],
             [188, 75.2]]
 
 # Create a 2D numpy array from baseball: np_baseball
-____
+
 
 # Print out the type of np_baseball
-____
+
 
 # Print out the shape of np_baseball
-____
+
 ```
 
 `@solution`
@@ -461,10 +461,10 @@ import numpy as np
 import numpy as np
 
 # Create a 2D numpy array from baseball: np_baseball
-np_baseball = ____
+np_baseball = 
 
 # Print out the shape of np_baseball
-____
+
 ```
 
 `@solution`
@@ -541,13 +541,13 @@ import numpy as np
 np_baseball = np.array(baseball)
 
 # Print out the 50th row of np_baseball
-___
+
 
 # Select the entire second column of np_baseball: np_weight_lb
-____ = ____
+
 
 # Print out height of 124th player
-____
+
 ```
 
 `@solution`
@@ -627,13 +627,13 @@ import numpy as np
 np_baseball = np.array(baseball)
 
 # Print out addition of np_baseball and updated
-____
+
 
 # Create numpy array: conversion
-____ = ____
+
 
 # Print out product of np_baseball and conversion
-____
+
 ```
 
 `@solution`
