@@ -396,26 +396,17 @@ Selecting single values from a list is just one part of the story. It's also pos
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_.
-
-The code sample below shows an example. A list with `"b"` and `"c"`, corresponding to indexes 1 and 2, are selected from a list `x`:
-
-```
-x = ["a", "b", "c", "d"]
-x[1:3]
-```
-
-The elements with index 1 and 2 are included, while the element with index 3 is not.
+The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
 
 `@instructions`
 - Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Do a similar thing to create a new variable, `upstairs`, that contains the last 4 elements of `areas`.
-- Print both `downstairs` and `upstairs` using [`print()`](https://docs.python.org/3/library/functions.html#print).
+- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
+- Print both `downstairs` and `upstairs` using `print()`.
 
 `@hint`
-- Use the brackets `[0:6]` to build `downstairs`.
-- Use the brackets `[6:10]` to build `upstairs`.
-- Simply add two [`print()`](https://docs.python.org/3/library/functions.html#print) calls to the script to print out `downstairs` and `upstairs`.
+- Use the brackets `[0:6]` to get the first six elements of a list.
+- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
+- Add two `print()` calls to print out `downstairs` and `upstairs`.
 
 `@pre_exercise_code`
 ```{python}
@@ -428,12 +419,14 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Use slicing to create downstairs
-
+downstairs = areas[____]
 
 # Use slicing to create upstairs
-
+upstairs = areas[____]
 
 # Print out downstairs and upstairs
+____
+____
 ```
 
 `@solution`
@@ -445,7 +438,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 downstairs = areas[0:6]
 
 # Use slicing to create upstairs
-upstairs = areas[6:10]
+upstairs = areas[6:]
 
 # Print out downstairs and upstairs
 print(downstairs)
@@ -459,7 +452,7 @@ Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = ms
 
 patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
-Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ('upstairs', '6:10'))
+Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
 Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
 Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
