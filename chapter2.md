@@ -645,10 +645,10 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
          "bedroom", 10.75, "bathroom", 10.50]
 
 # Add poolhouse data to areas, new list is areas_1
-____ = ____
+areas_1 = ____
 
 # Add garage data to areas_1, new list is areas_2
-____ = ____
+areas_2 = ____
 ```
 
 `@solution`
@@ -714,11 +714,10 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
          "garage", 15.45]
 
 # Delete the poolhouse from the list
-____
-____
+
 
 # Print the updated list
-____
+
 ```
 
 `@solution`
