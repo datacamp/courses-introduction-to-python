@@ -424,7 +424,7 @@ success_msg("Nice!")
 
 ---
 
-## Operations with other types
+## (old) Operations with other types
 
 ```yaml
 type: NormalExercise
