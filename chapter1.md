@@ -11,7 +11,7 @@ free_preview: true
 lessons:
   - nb_of_exercises: 4
     title: Hello Python!
-  - nb_of_exercises: 8
+  - nb_of_exercises: 7
     title: Variables and Types
 ---
 
@@ -420,52 +420,6 @@ Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is in
 Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
 
 success_msg("Nice!")
-```
-
----
-
-## Guess the type
-
-```yaml
-type: MultipleChoiceExercise
-key: b35f67514c
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
-
-```
-type(a)
-```
-
-We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell to discover their type. Which of the following options is correct?
-
-`@possible_answers`
-- `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
-- `a` is of type `float`, `b` is of type `bool`, `c` is of type `str`
-- `a` is of type `float`, `b` is of type `str`, `c` is of type `bool`
-- `a` is of type `int`, `b` is of type `bool`, `c` is of type `str`
-
-`@hint`
-Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out about the variables' types.
-
-`@pre_exercise_code`
-```{python}
-a = 100*0.5
-b = "True"
-c = False
-```
-
-`@sct`
-```{python}
-msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
-msg2 = "`b` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
-msg3 = "Correcto perfecto!"
-msg4 = "None of the variable's types is correct here. Try `type(a)` and see what type this variable is."
-Ex().has_chosen(3,[msg1, msg2, msg3, msg4])
 ```
 
 ---
