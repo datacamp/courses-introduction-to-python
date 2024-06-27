@@ -315,14 +315,14 @@ How much money would you have saved four months from now, if you saved $10 each 
 `@sample_code`
 ```{python}
 # Create the variables monthly_savings and num_months
-____ = ____
-____ = ____
+
+
 
 # Multiply monthly_savings and num_months
 new_savings = ____
 
 # Print new_savings
-____
+
 ```
 
 `@solution`
