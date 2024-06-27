@@ -435,11 +435,11 @@ skills:
   - 2
 ```
 
-You have another look at the MLB data and realize that it makes more sense to restructure all this information in a 2D `numpy` array. This array should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns (for height and weight).
+You realize that it makes more sense to restructure all this information in a 2D `numpy` array.
 
-The MLB was, again, very helpful and passed you the data in a different structure, a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
+You have a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this list is `baseball` and it has been loaded for you already (although you can't see it).
 
-Can you store the data as a 2D array to unlock `numpy`'s extra functionality? `baseball` is available as a regular list of lists.
+Store the data as a 2D array to unlock `numpy`'s extra functionality.
 
 `@instructions`
 - Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
@@ -447,7 +447,7 @@ Can you store the data as a 2D array to unlock `numpy`'s extra functionality? `b
 
 `@hint`
 - `baseball` is already available in the Python environment. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D `numpy` array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
+- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()`call around it.
 
 `@pre_exercise_code`
 ```{python}
@@ -458,11 +458,10 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy package
 import numpy as np
 
 # Create a 2D numpy array from baseball: np_baseball
-
+np_baseball = 
 
 # Print out the shape of np_baseball
 
@@ -470,7 +469,6 @@ import numpy as np
 
 `@solution`
 ```{python}
-# Import numpy package
 import numpy as np
 
 # Create a 2D numpy array from baseball: np_baseball
