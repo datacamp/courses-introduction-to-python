@@ -462,7 +462,7 @@ success_msg("Great!")
 
 ---
 
-## Subsetting lists of lists
+## (old) Subsetting lists of lists
 
 ```yaml
 type: MultipleChoiceExercise
