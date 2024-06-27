@@ -428,7 +428,7 @@ success_msg("Nice!")
 
 ```yaml
 type: BulletExercise
-key: 057052d5ba
+key: 4d0d83cc02
 xp: 100
 ```
 
