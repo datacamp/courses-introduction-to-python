@@ -571,10 +571,10 @@ For this and the following exercises, you'll continue working on the `areas` lis
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
 # Correct the bathroom area
-____ = ____
+
 
 # Change "living room" to "chill zone"
-____ = ____
+
 ```
 
 `@solution`
