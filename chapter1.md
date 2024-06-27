@@ -237,7 +237,7 @@ x = 5
 
 You can now use the name of this variable, `x`, instead of the actual value, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality!
+Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
 
 `@instructions`
 - Create a variable `savings` with the value of `100`.
@@ -246,6 +246,7 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 `@hint`
 - Type `savings = 100` to create the variable `savings`.
 - After creating the variable `savings`, you can type `print(savings)`.
+- Your final code should not include any `____`.
 
 `@pre_exercise_code`
 ```{python}
