@@ -302,14 +302,14 @@ A string `place` has already been created for you to experiment with.
 place = "poolhouse"
 
 # Use upper() on place
-place_up = ____
+place_up = 
 
 # Print out place and place_up
-____
-____
+
+
 
 # Print out the number of o's in place
-____
+
 ```
 
 `@solution`
@@ -391,10 +391,10 @@ You'll be working on the list with the area of different parts of a house: `area
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
 # Print out the index of the element 20.0
-____
+
 
 # Print out how often 9.50 appears in areas
-____
+
 ```
 
 `@solution`
@@ -467,17 +467,17 @@ You'll be working on the list with the area of different parts of the house: `ar
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
 # Use append twice to add poolhouse and garage size
-____
-____
+
+
 
 # Print out areas
-____
+
 
 # Reverse the orders of the elements in areas
-____
+
 
 # Print out areas
-____
+
 ```
 
 `@solution`
