@@ -509,19 +509,13 @@ skills:
 If your 2D `numpy` array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
 
 ```
-# regular list of lists
-x = [["a", "b"], ["c", "d"]]
-[x[0][0], x[1][0]]
-
 # numpy
 import numpy as np
 np_x = np.array(x)
 np_x[:, 0]
 ```
 
-For regular Python lists, this is a real pain. For 2D `numpy` arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
-
-The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0! `baseball` is available as a regular list of lists.
+The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
 
 `@instructions`
 - Print out the 50th row of `np_baseball`.
@@ -560,20 +554,18 @@ np_baseball = np.array(baseball)
 
 `@solution`
 ```{python}
-# Import numpy package
 import numpy as np
 
-# Create np_baseball (2 cols)
 np_baseball = np.array(baseball)
 
 # Print out the 50th row of np_baseball
-print(np_baseball[49,:])
+
 
 # Select the entire second column of np_baseball: np_weight_lb
-np_weight_lb = np_baseball[:,1]
+
 
 # Print out height of 124th player
-print(np_baseball[123, 0])
+
 ```
 
 `@sct`
@@ -606,19 +598,7 @@ skills:
   - 2
 ```
 
-Remember how you calculated the Body Mass Index for all baseball players? `numpy` was able to perform all calculations element-wise (i.e. element by element). For 2D `numpy` arrays this isn't any different! You can combine matrices with single numbers, with vectors, and with other matrices.
-
-Execute the code below in the IPython shell and see if you understand:
-
-```
-import numpy as np
-np_mat = np.array([[1, 2],
-                   [3, 4],
-                   [5, 6]])
-np_mat * 2
-np_mat + np.array([10, 10])
-np_mat + np_mat
-```
+2D `numpy` arrays can perform calculations element by element, like `numpy` arrays.
 
 `np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
 
@@ -629,8 +609,8 @@ np_mat + np_mat
 
 `@hint`
 - `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
+- Create a `numpy` array with `np.array()`; the input is a regular Python list with three elements.
+- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
 
 `@pre_exercise_code`
 ```{python}
@@ -644,10 +624,8 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Import numpy package
 import numpy as np
 
-# Create np_baseball (3 cols)
 np_baseball = np.array(baseball)
 
 # Print out addition of np_baseball and updated
@@ -662,10 +640,8 @@ np_baseball = np.array(baseball)
 
 `@solution`
 ```{python}
-# Import numpy package
 import numpy as np
 
-# Create np_baseball (3 cols)
 np_baseball = np.array(baseball)
 
 # Print out addition of np_baseball and updated
