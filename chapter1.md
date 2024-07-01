@@ -44,7 +44,7 @@ It's time to run your first Python code!
 Head to the code and hit the run code button to see the output.
 
 `@instructions`
-- Hit _Run Code_ to see the output of `print(5 / 8)`.
+- Hit the run code button to see the output of `print(5 / 8)`.
 
 `@hint`
 - Run the code first before submitting your answer so you have time to explore the output.
