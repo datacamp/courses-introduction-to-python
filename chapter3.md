@@ -634,12 +634,10 @@ Try the same thing again, but this time only use `pi`.
 - Perform a selective import from the `math` package where you only import the `pi` function.
 - Use `math.pi` to calculate the circumference of the circle and store it in `C`.
 - Use `math.pi` to calculate the area of the circle and store it in `A`.
-- Print out `dist`.
 
 `@hint`
 - Use `from math import pi` to do the selective import.
 - Now, you can use `pi` on it's own!
-- To print out a variable `x`, simply type `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
