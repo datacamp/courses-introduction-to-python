@@ -692,7 +692,7 @@ del x[1]
 
 Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
 
-Unfortunately, he amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. decide to remove the corresponding string and float from the `areas` list.
+Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
 
 `@instructions`
 - Delete the string and float for the `"poolhouse"` from your `areas` list.
