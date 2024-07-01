@@ -638,7 +638,6 @@ Try the same thing again, but this time only use `pi`.
 `@hint`
 - Use `from math import pi` to do the selective import.
 - Now, you can use `pi` on it's own!
-- To print out a variable `x`, simply type `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
