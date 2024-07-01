@@ -452,35 +452,37 @@ xp: 50
 ```
 
 `@instructions`
-- Multiply `monthly_savings` and `num_months` and assign it to `year_savings`.
-- Print the resulting type of `year_savings`.
+- Add `savings` and `new_savings` and assign it to `total_savings`.
+- Print the resulting type of `total_savings`.
 
 `@hint`
-- Assign `monthly_savings * num_months` to a new variable, `year_savings`.
+- Assign `savings + new_savings` to a new variable, `total_savings`.
 - To print the type of a variable `x`, use `print(type(x))`.
 
 `@sample_code`
 ```{python}
-monthly_savings = 10
-num_months = 12
+savings = 100
+new_savings = 40
 
-# Calculate year_savings using monthly_savings and num_months
+# Calculate total_savings using savings and new_savings
 ____
+print(total_savings)
 
-# Print the type of year_savings
+# Print the type of total_savings
 print(____)
 ```
 
 `@solution`
 ```{python}
-monthly_savings = 10
-num_months = 12
+savings = 100
+new_savings = 40
 
-# Calculate year_savings using monthly_savings and num_months
-year_savings = monthly_savings * num_months
+# Calculate total_savings using savings and new_savings
+total_savings = savings + new_savings
+print(total_savings)
 
-# Print the type of year_savings
-print(type(year_savings))
+# Print the type of total_savings
+print(type(total_savings))
 ```
 
 `@sct`
@@ -489,13 +491,13 @@ print(type(year_savings))
 msg = "You don't have to change or remove the predefined variables."
 
 Ex().multi(
-    check_object('monthly_savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('num_months', missing_msg=msg).has_equal_value(incorrect_msg=msg)
+    check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('new_savings', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
 Ex().multi(
-    check_object("year_savings").has_equal_value(incorrect_msg="Multiply `monthly_savings` and `num_months` to create the `year_savings` variable."),
-    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
+    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
 )
 ```
 
