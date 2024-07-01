@@ -2,9 +2,9 @@
 title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v7/735_ch1_1.mp4'
+  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v8/735_ch1_1.mp4'
   hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v7/hls-735_ch1_1.master.m3u8
+    https://videos.datacamp.com/transcoded/735_intro_to_python/v8/hls-735_ch1_1.master.m3u8
 transformations:
   translateX: 50
   translateY: 0
@@ -25,7 +25,7 @@ title: Data Scientist at DataCamp
 `@script`
 Hi, my name is Hugo and I'll be your host for Introduction to Python for Data Science.
 
-I'm a data scientist and educator at DataCamp and host of the DataFramed podcast, which you must check out.
+I'm a data scientist and educator at DataCamp.
 
 ---
 
@@ -63,14 +63,10 @@ key: 3f23b93572
 
 	- Many applications and fields{{5}}
 
-- Version 3.x - https://www.python.org/downloads/{{6}}
-
 `@script`
 Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
 People often refer to Python as the swiss army knife of programming languages as you can do almost anything with it.
 In this course, we'll start to build up your data science coding skills bit by bit, so make sure to stick around to see how powerful the language can be.
-
-Our courses focus on Python 3. To install Python 3 on your own system, follow the steps at this URL.
 
 ---
 
