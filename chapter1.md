@@ -9,9 +9,9 @@ attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
-  - nb_of_exercises: 5
+  - nb_of_exercises: 4
     title: Hello Python!
-  - nb_of_exercises: 8
+  - nb_of_exercises: 5
     title: Variables and Types
 ---
 
@@ -28,35 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## When to use Python?
-
-```yaml
-type: PureMultipleChoiceExercise
-key: 9703b117fb
-kind: PureMultipleChoice
-xp: 50
-```
-
-Python is a **flexible** language. For which applications can you use Python?
-
-`@hint`
-- Practically any piece of software can be built using Python.
-
-`@possible_answers`
-- For quick calculations
-- Develop a database-driven website
-- Clean and analyze data
-- [All of the above]
-
-`@feedback`
-- Python can do more than quick calculations!
-- There is a very popular Python framework to build database-driven websites, but it can do much more.
-- Python is a powerful tool for data analysis, but it has other uses, too.
-- Correct! Python is an extremely flexible language.
-
----
-
-## The Python Interface
+## Your first Python code
 
 ```yaml
 type: NormalExercise
@@ -67,19 +39,15 @@ skills:
   - 2
 ```
 
-Hit _Run Code_ to run your first Python code with Datacamp and see the output!
+It's time to run your first Python code!
 
-Notice the `script.py` window; this is where you can type Python code to solve exercises. You can hit _Run Code_ and _Submit Answer_ as often as you want. If you're stuck, you can click _Get Hint_, and ultimately _Get Solution_.
-
-You can also use the IPython Shell interactively by typing commands and hitting Enter. Here, your code will not be checked for correctness so it is a great way to experiment.
+Head to the code and hit the run code button to see the output.
 
 `@instructions`
-- Experiment in the IPython Shell; type `5 / 8`, for example.
-- Add another line of code to `script.py`, `print(7 + 10)`, to be checked for correctness.
-- Hit _Submit Answer_ to execute the Python script and receive feedback.
+- Hit the run code button to see the output of `print(5 / 8)`.
 
 `@hint`
-- Add `print(7 + 10)` under `# Print the sum of 7 and 10` and hit _Submit Answer_ to check if your code is correct.
+- Run the code first before submitting your answer so you have time to explore the output.
 
 `@pre_exercise_code`
 ```{python}
@@ -88,25 +56,19 @@ You can also use the IPython Shell interactively by typing commands and hitting 
 
 `@sample_code`
 ```{python}
-# Example, do not modify!
+# Hit run code to see the output!
 print(5 / 8)
-
-# Print the sum of 7 and 10
-____
 ```
 
 `@solution`
 ```{python}
-# Example, do not modify!
+# Hit run code to see the output!
 print(5 / 8)
-
-# Put code below here
-print(7 + 10)
 ```
 
 `@sct`
 ```{python}
-Ex().has_printout(1, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the sum of 7 and 10?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
 success_msg("Great! On to the next one!")
 ```
 
@@ -128,13 +90,13 @@ You can also add **comments** to your Python scripts. Comments are important to 
 They start with `#` tag. See the comment in the editor, `# Division`; now it's your turn to add a comment!
 
 `@instructions`
-Above the `print(7 + 10)`, add the comment 
+- Replace `____` with the comment 
 ```
 # Addition
 ```
 
 `@hint`
-- For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition` right above `print(7 + 10)`.
+- Leaving `____` will cause an error so make sure to delete it include `# Addition` right above `print(7 + 10)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -275,7 +237,7 @@ x = 5
 
 You can now use the name of this variable, `x`, instead of the actual value, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality!
+Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
 
 `@instructions`
 - Create a variable `savings` with the value of `100`.
@@ -284,6 +246,7 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 `@hint`
 - Type `savings = 100` to create the variable `savings`.
 - After creating the variable `savings`, you can type `print(savings)`.
+- Your final code should not include any `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -293,10 +256,10 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 `@sample_code`
 ```{python}
 # Create a variable savings
-
+____
 
 # Print out savings
-
+____
 ```
 
 `@solution`
@@ -330,23 +293,23 @@ skills:
 
 You've now created a savings variable, so let's start saving!
 
-Instead of calculating with the actual values, you can use variables instead. The `savings` variable you created in the previous exercise with a value of `100` is available to you.
+Instead of calculating with the actual values, you can use variables instead.
 
 How much money would you have saved four months from now, if you saved $10 each month?
 
 `@instructions`
 - Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and save it to `new_savings`.
-- Add `new_savings` to `savings`, saving the sum as `total_savings`.
-- Print the value of `total_savings`.
+- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
+- Print the value of `new_savings`.
 
 `@hint`
 - You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `total_savings`.
+- Use `print()` to see the amount in `new_savings`.
+- Take care to spell the variables correctly!
 
 `@pre_exercise_code`
 ```{python}
-savings = 100
+
 ```
 
 `@sample_code`
@@ -358,10 +321,7 @@ savings = 100
 # Multiply monthly_savings and num_months
 new_savings = ____
 
-# Add new_savings to your savings
-total_savings = ____
-
-# Print total_savings
+# Print new_savings
 
 ```
 
@@ -374,11 +334,8 @@ num_months = 4
 # Multiply monthly_savings and num_months
 new_savings = monthly_savings * num_months
 
-# Add new_savings to your savings
-total_savings = savings + new_savings
-
-# Print total_savings
-print(total_savings)
+# Print new_savings
+print(new_savings)
 ```
 
 `@sct`
@@ -386,11 +343,11 @@ print(total_savings)
 Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
 Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
 Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `total_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
 
-success_msg("You now have $140 in savings!")
+success_msg("You have $40 in new savings!")
 ```
 
 ---
@@ -467,116 +424,113 @@ success_msg("Nice!")
 
 ---
 
-## Guess the type
-
-```yaml
-type: MultipleChoiceExercise
-key: b35f67514c
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
-
-```
-type(a)
-```
-
-We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell to discover their type. Which of the following options is correct?
-
-`@possible_answers`
-- `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
-- `a` is of type `float`, `b` is of type `bool`, `c` is of type `str`
-- `a` is of type `float`, `b` is of type `str`, `c` is of type `bool`
-- `a` is of type `int`, `b` is of type `bool`, `c` is of type `str`
-
-`@hint`
-Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out about the variables' types.
-
-`@pre_exercise_code`
-```{python}
-a = 100*0.5
-b = "True"
-c = False
-```
-
-`@sct`
-```{python}
-msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
-msg2 = "`b` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
-msg3 = "Correcto perfecto!"
-msg4 = "None of the variable's types is correct here. Try `type(a)` and see what type this variable is."
-Ex().has_chosen(3,[msg1, msg2, msg3, msg4])
-```
-
----
-
 ## Operations with other types
 
 ```yaml
-type: NormalExercise
+type: BulletExercise
 key: 4d0d83cc02
-lang: python
 xp: 100
-skills:
-  - 2
 ```
 
-Hugo mentioned that different types behave differently in Python.
+Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
 
-When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
 
-In the script some variables with different types have already been created. It's up to you to use them.
-
-`@instructions`
-- Calculate the product of `monthly_savings` and `num_months`. Store the result in `year_savings`.
-- What do you think the resulting type will be? Find out by printing out the type of `year_savings`.
-- Calculate the sum of `intro` and `intro` and store the result in a new variable `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
-
-`@hint`
-- Assign `monthly_savings * num_months` to a new variable, `year_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+Time for you to test this out.
 
 `@pre_exercise_code`
 ```{python}
 
 ```
 
+***
+
+```yaml
+type: NormalExercise
+key: f4e91c4ae9
+xp: 50
+```
+
+`@instructions`
+- Add `savings` and `new_savings` and assign it to `total_savings`.
+- Print the resulting type of `total_savings`.
+
+`@hint`
+- Assign `savings + new_savings` to a new variable, `total_savings`.
+- To print the type of a variable `x`, use `print(type(x))`.
+
 `@sample_code`
 ```{python}
-monthly_savings = 10
-num_months = 12
-intro = "Hello! How are you?"
+savings = 100
+new_savings = 40
 
-# Calculate year_savings using monthly_savings and num_months
+# Calculate total_savings using savings and new_savings
+____
+print(total_savings)
 
-
-# Print the type of year_savings
-
-
-# Assign sum of intro and intro to doubleintro
-
-
-# Print out doubleintro
-
+# Print the type of total_savings
+print(____)
 ```
 
 `@solution`
 ```{python}
-monthly_savings = 10
-num_months = 12
+savings = 100
+new_savings = 40
+
+# Calculate total_savings using savings and new_savings
+total_savings = savings + new_savings
+print(total_savings)
+
+# Print the type of total_savings
+print(type(total_savings))
+```
+
+`@sct`
+```{python}
+# predefined
+msg = "You don't have to change or remove the predefined variables."
+
+Ex().multi(
+    check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object('new_savings', missing_msg=msg).has_equal_value(incorrect_msg=msg)
+)
+
+Ex().multi(
+    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
+    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+)
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: f54fbf9bd9
+xp: 50
+```
+
+`@instructions`
+- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
+- Print out `doubleintro`. Did you expect this?
+
+`@hint`
+- Assign `intro + intro` to a new variable, `doubleintro`.
+- To print a variable `x`, write `print(x)` in the script.
+
+`@sample_code`
+```{python}
 intro = "Hello! How are you?"
 
-# Calculate year_savings using monthly_savings and num_months
-year_savings = monthly_savings * num_months
+# Assign sum of intro and intro to doubleintro
+____
 
-# Print the type of year_savings
-print(type(year_savings))
+# Print out doubleintro
+print(____)
+```
+
+`@solution`
+```{python}
+intro = "Hello! How are you?"
 
 # Assign sum of intro and intro to doubleintro
 doubleintro = intro + intro
@@ -590,158 +544,12 @@ print(doubleintro)
 # predefined
 msg = "You don't have to change or remove the predefined variables."
 
-Ex().multi(
-    check_object('monthly_savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('num_months', missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
-)
-
-Ex().multi(
-    check_object("year_savings").has_equal_value(incorrect_msg="Multiply `monthly_savings` and `num_months` to create the `year_savings` variable."),
-    has_printout(0, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `year_savings`.")
-)
+Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
     check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(1, not_printed_msg = "Don't forget to print out `doubleintrp`.")
+    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
 )
 
 success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
-```
-
----
-
-## Type conversion
-
-```yaml
-type: NormalExercise
-key: 085bb602b9
-lang: python
-xp: 100
-skills:
-  - 2
-```
-
-Using the `+` operator to paste together two strings can be very useful in building custom messages.
-
-Suppose, for example, that you've calculated your savings want to summarize the results in a string.
-
-To do this, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the integer `savings` to a string.
-
-Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
-
-`@instructions`
-- Hit _Run Code_ to run the code. Try to understand the error message.
-- Fix the code such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables `savings` and `total_savings` to strings.
-- Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
-
-`@hint`
-- The error message when you _Run Code_ for the first time is telling you that you have an error in line 6 where at least one of your variables is not a string.
-- You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
-- Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-# Definition of savings and total_savings
-savings = 100
-total_savings = 150
-
-# Fix the printout
-print("I started with $" + savings + " and now have $" + total_savings + ". Awesome!")
-
-# Definition of pi_string
-pi_string = "3.1415926"
-
-# Convert pi_string into float: pi_float
-
-```
-
-`@solution`
-```{python}
-# Definition of savings and total_savings
-savings = 100
-total_savings = 150
-
-# Fix the printout
-print("I started with $" + str(savings) + " and now have $" + str(total_savings) + ". Awesome!")
-
-# Definition of pi_string
-pi_string = "3.1415926"
-
-# Convert pi_string into float: pi_float
-pi_float = float(pi_string)
-```
-
-`@sct`
-```{python}
-
-# ensure predefined values are unmodified
-msg = "You don't have to change or remove the predefined variables."
-Ex().multi(
-    check_object("savings", missing_msg=msg).has_equal_value(incorrect_msg=msg),
-    check_object("total_savings", missing_msg=msg).has_equal_value(incorrect_msg=msg)
-)
-
-Ex().check_correct(
-    has_printout(0),
-    multi(
-        check_function("str", 0).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `savings` into a string with `str(savings)`."),
-        check_function("str", 1).check_args(0).has_equal_value(incorrect_msg="Inside the `print()` command, make sure to convert `total_savings` into a string `str(total_savings)`.")
-    )
-)
-
-# check pi_float
-Ex().check_correct(
-    check_object("pi_float").has_equal_value(),
-    multi(
-        check_object("pi_string").has_equal_value(),
-        check_function("float", missing_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.").has_equal_value(incorrect_msg="Use `float(pi_string) to create the variable `pi_float`.")
-    )
-)
-
-success_msg("Great! You have saved $150; that's pretty awesome indeed!")
-```
-
----
-
-## Can Python handle everything?
-
-```yaml
-type: MultipleChoiceExercise
-key: 3e5f0bdf3a
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
-Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
-Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
-
-`@possible_answers`
-- `"I can add integers, like "  + str(5) + " to strings."`
-- `"I said " + ("Hey " * 2) + "Hey!"`
-- `"The correct answer to this multiple choice exercise is answer number " + 2`
-- `True + False`
-
-`@hint`
-Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sct`
-```{python}
-msg1 = "Incorrect, this command runs perfectly fine."
-msg2 = "It's perfectly possible to 'multiply strings' in Python..."
-msg3 = "Correct! Because you're not converting `2` to a string with [str()](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
-msg4 = "`True + False` doesn't error out. Feel free to try it in the console to confirm!"
-Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
