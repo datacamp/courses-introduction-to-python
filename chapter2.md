@@ -219,6 +219,7 @@ Remember: `"hallway"` is a string, while `hall` is a variable that represents th
 
 `@hint`
 - Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
+- Remember to include a comma `,` after each sublist.
 - To print a variable `x`, write `print(x)` on a new line.
 
 `@pre_exercise_code`
@@ -472,10 +473,10 @@ xp: 100
 
 A Python list can also contain other lists.
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would like something like this for a list, `x`:
+To subset lists of lists, you can use the same technique as before: square brackets. This would like something like this for a list, `house`:
 
 ```
-x[2][0]
+house[2][0]
 ```
 
 `@instructions`
@@ -552,8 +553,8 @@ To replace list elements, you subset the list and assign new values to the subse
 For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50`.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`.
+- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
+- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
 
 `@hint`
 - To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
@@ -713,7 +714,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
          "bathroom", 10.50, "poolhouse", 24.5,
          "garage", 15.45]
 
-# Delete the poolhouse from the list
+# Delete the poolhouse items from the list
 
 
 # Print the updated list
@@ -727,7 +728,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
          "bathroom", 10.50, "poolhouse", 24.5,
          "garage", 15.45]
 
-# Delete the poolhouse from the list
+# Delete the poolhouse items from the list
 del areas[10]
 del areas[10]
 
@@ -737,9 +738,27 @@ print(areas)
 
 `@sct`
 ```{python}
-Ex().multi(
-  has_code("del areas[10]", pattern=False),
-  has_code("del areas[10]", pattern=False)
+Ex().check_or(
+  multi(
+    has_code("del areas[10]", pattern=False),
+    has_code("del areas[10]", pattern=False)
+  ),
+  has_code("del areas[-4:-2]", pattern=False),
+  has_code("del(areas[-4:-2])", pattern=False),
+  multi(
+    has_code("del(areas[10])", pattern=False),
+    has_code("del(areas[10])", pattern=False)
+  ),
+  has_code("del areas[10:12]", pattern=False),
+  has_code("del(areas[10:12])", pattern=False),
+  multi(
+    has_code("del areas[-4]", pattern=False),
+    has_code("del areas[-3]", pattern=False)
+  ),
+  multi(
+    has_code("del(areas[-4])", pattern=False),
+    has_code("del(areas[-3])", pattern=False)
+  )
 )
 
 Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
