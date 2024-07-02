@@ -453,7 +453,7 @@ xp: 50
 
 `@instructions`
 - Add `savings` and `new_savings` and assign it to `total_savings`.
-- Print the resulting type of `total_savings`.
+- Use `type()` to print the resulting type of `total_savings`.
 
 `@hint`
 - Assign `savings + new_savings` to a new variable, `total_savings`.
