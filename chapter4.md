@@ -135,7 +135,7 @@ You are a huge baseball fan. You decide to call the MLB (Major League Baseball) 
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-mlb = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")
+mlb = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")
 height_in = mlb['Height'].tolist()
 import numpy as np
 ```
@@ -271,7 +271,7 @@ This exercise already has two lists, `height_in` and `weight_lb`, loaded in the 
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-mlb = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")
+mlb = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")
 height_in = mlb['Height'].tolist()
 weight_lb = mlb['Weight'].tolist()
 ```
@@ -452,7 +452,7 @@ Store the data as a 2D array to unlock `numpy`'s extra functionality.
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
+baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
 import numpy as np
 ```
 
@@ -530,7 +530,7 @@ The indexes before the comma refer to the rows, while those after the comma refe
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
+baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
 import numpy as np
 ```
 
@@ -614,9 +614,9 @@ skills:
 ```{python}
 import pandas as pd
 import numpy as np
-baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy().tolist()
+baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy().tolist()
 n = len(baseball)
-updated = np.array(pd.read_csv("http://assets.datacamp.com/course/intro_to_python/update.csv", header = None))
+updated = np.array(pd.read_csv("https://assets.datacamp.com/course/intro_to_python/update.csv", header = None))
 import numpy as np
 ```
 
@@ -715,7 +715,7 @@ The baseball data is available as a 2D `numpy` array with 3 columns (height, wei
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-np_baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy()
+np_baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy()
 np_baseball[slice(0, 1015, 50), 0] = np_baseball[slice(0, 1015, 50), 0]*1000
 import numpy as np
 ```
@@ -797,7 +797,7 @@ The Python script in the editor already includes code to print out informative m
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-np_baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy()
+np_baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy()
 import numpy as np
 ```
 
