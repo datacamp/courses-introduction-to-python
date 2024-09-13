@@ -136,7 +136,7 @@ help(max)
 ?max
 ```
 
-Use the Shell to open up the documentation on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Use the shell to open up the documentation on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
 
 Which of the following statements is true?
 
@@ -178,7 +178,7 @@ skills:
 
 In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
 
-Have a look at the documentation of `sorted()` by typing `help(sorted)` in the Shell.
+Have a look at the documentation of `sorted()` by typing `help(sorted)` in the shell.
 
 You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
 
@@ -277,7 +277,7 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the Shell.
+Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the shell.
 
 A string `place` has already been created for you to experiment with.
 
