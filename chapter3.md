@@ -136,7 +136,7 @@ help(max)
 ?max
 ```
 
-Use the shell to open up the documentation on `pow()`. Do this by typing `?pow` or `help(pow)` and run the code (hit **Enter** for web users).
+Use the shell to open up the documentation on `pow()`. Do this by typing `?pow` or `help(pow)` and running the code (hit **Enter** for web users).
 
 Which of the following statements is true?
 
