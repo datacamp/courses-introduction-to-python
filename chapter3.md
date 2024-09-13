@@ -136,7 +136,7 @@ help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the documentation on [`pow()`](https://docs.python.org/3/library/functions.html#pow). Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Use the Shell to open up the documentation on [`pow()`](https://docs.python.org/3/library/functions.html#pow). Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
 
 Which of the following statements is true?
 
@@ -178,7 +178,7 @@ skills:
 
 In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
 
-Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the IPython Shell.
+Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the Shell.
 
 You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
 
@@ -277,7 +277,7 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the Shell.
 
 A string `place` has already been created for you to experiment with.
 
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Try the different import statements in the shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
+msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
