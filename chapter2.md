@@ -517,7 +517,7 @@ house[-1][1]
 
 `@sct`
 ```{python}
-Ex().checkor(
+Ex().check_or(
   has_code("house[-1][1]", pattern=False),
   has_code("house[4][1]", pattern=False)
 )
