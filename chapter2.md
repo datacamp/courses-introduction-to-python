@@ -473,7 +473,7 @@ xp: 100
 
 A Python list can also contain other lists.
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would like something like this for a list, `house`:
+To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
 
 ```
 house[2][0]
@@ -517,7 +517,10 @@ house[-1][1]
 
 `@sct`
 ```{python}
-Ex().has_code("house[-1][1]", pattern=False)
+Ex().check_or(
+  has_code("house[-1][1]", pattern=False),
+  has_code("house[4][1]", pattern=False)
+)
 
 success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
 ```
