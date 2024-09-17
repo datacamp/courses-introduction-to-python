@@ -127,7 +127,7 @@ You are a huge baseball fan. You decide to call the MLB (Major League Baseball) 
 - Print out `np_height_m` and check if the output makes sense.
 
 `@hint`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) and pass it `height`. Store the result in `np_height_in`.
+- Use `np.array()` and pass it `height`. Store the result in `np_height_in`.
 - To print out a variable `x`, type `print(x)` in the Python script.
 - Perform calculations as if `np_height_in` is a single number: `np_height_in * conversion_factor` is part of the answer.
 - To print out a variable `x`, type `print(x)` in the Python script.
