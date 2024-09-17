@@ -517,7 +517,10 @@ house[-1][1]
 
 `@sct`
 ```{python}
-Ex().has_code("house[-1][1]", pattern=False)
+Ex().check_or(
+  has_code("house[-1][1]", pattern=False),
+  has_code("house[4][1]", pattern=False)
+)
 
 success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
 ```
