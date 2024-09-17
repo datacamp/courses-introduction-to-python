@@ -50,7 +50,7 @@ result = type(3.0)
 
 `@instructions`
 - Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the length of the list `var1`. Wrap it in a `print()` call to directly print it out.
+- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
 - Use `int()` to convert `var2` to an integer. Store the output as `out2`.
 
 `@hint`
