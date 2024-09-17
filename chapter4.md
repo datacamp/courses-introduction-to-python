@@ -46,12 +46,12 @@ A list `baseball` has already been defined in the Python script, representing th
 
 `@instructions`
 - Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a `numpy` array from `baseball`. Name this array `np_baseball`.
+- Use `np.array()` to create a `numpy` array from `baseball`. Name this array `np_baseball`.
 - Print out the type of `np_baseball` to check that you got it right.
 
 `@hint`
 - `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
-- [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) should take on input `baseball`. Assign the result of the function call to `np_baseball`.
+- `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
 - To print out the type of a variable `x`, simply type `print(type(x))`.
 
 `@pre_exercise_code`
