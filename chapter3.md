@@ -438,22 +438,22 @@ skills:
 
 Most list methods will change the list they're called on. Examples are:
 
-- [`.append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that adds an element to the list it is called on,
-- [`.remove()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that removes the first element of a list that matches the input, and
-- [`.reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that reverses the order of the elements in the list it is called on.
+- `.append()`, that adds an element to the list it is called on,
+- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
+- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
 
 You'll be working on the list with the area of different parts of the house: `areas`.
 
 `@instructions`
-- Use [`.append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
+- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
 - Print out `areas`
-- Use the [`.reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method to reverse the order of the elements in `areas`.
+- Use the `.reverse()` method to reverse the order of the elements in `areas`.
 - Print out `areas` once more.
 
 `@hint`
 - For the first instruction, use the `areas.append(___)` call twice.
 - To print out a variable `x`, simply write `print(x)`.
-- The [`.reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
+- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
 - To print out a variable `x`, simply write `print(x)`.
 
 `@pre_exercise_code`
