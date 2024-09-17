@@ -54,9 +54,8 @@ result = type(3.0)
 - Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
 
 `@hint`
-- Call the [`type()`](https://docs.python.org/3/library/functions.html#type) function like this: `type(var1)`.
-- Call [`print()`](https://docs.python.org/3/library/functions.html#print) like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- Call the `type()` function like this: `type(var1)`.
+- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
 
 `@pre_exercise_code`
 ```{python}
@@ -105,8 +104,8 @@ patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
 Ex().has_printout(0, not_printed_msg = patt % 'type')
 Ex().has_printout(1, not_printed_msg = patt % 'length')
 
-int_miss_msg = "Have you used [`int()`](https://docs.python.org/3/library/functions.html#int) to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to [`int()`](https://docs.python.org/3/library/functions.html#int)?"
+int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
+int_incorr_msg = "Have you passed `var2` to `int()`?"
 Ex().check_correct(
   check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
