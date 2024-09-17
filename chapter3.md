@@ -366,18 +366,18 @@ skills:
 
 Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
 
-- [`.index()`](https://docs.python.org/3/library/stdtypes.html#str.index), to get the index of the first element of a list that matches its input and
-- [`.count()`](https://docs.python.org/3/library/stdtypes.html#str.count), to get the number of times an element appears in a list.
+- `.index()`, to get the index of the first element of a list that matches its input and
+- `.count()`, to get the number of times an element appears in a list.
 
 You'll be working on the list with the area of different parts of a house: `areas`.
 
 `@instructions`
-- Use the [`.index()`](https://docs.python.org/3/library/stdtypes.html#str.index) method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call [`.count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
+- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
+- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
+- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
 
 `@pre_exercise_code`
 ```{python}
