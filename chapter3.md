@@ -708,7 +708,7 @@ skills:
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
 
-Suppose you want to use the function `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Suppose you want to use the [function](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 
 ```
 my_inv([[1,2], [3,4]])
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
+msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
