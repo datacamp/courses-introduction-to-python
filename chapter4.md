@@ -525,12 +525,12 @@ The indexes before the comma refer to the rows, while those after the comma refe
 `@hint`
 - You need row index 49 in the first instruction! More specifically, you'll want to use `[49, :]`.
 - To select the entire second column, you'll need `[:, 1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a [`print()`](https://docs.python.org/3/library/functions.html#print) statement.
+- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a `print()` statement.
 
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
+baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
 import numpy as np
 ```
 
