@@ -614,9 +614,9 @@ skills:
 ```{python}
 import pandas as pd
 import numpy as np
-baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy().tolist()
+baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight', 'Age']].to_numpy().tolist()
 n = len(baseball)
-updated = np.array(pd.read_csv("http://assets.datacamp.com/course/intro_to_python/update.csv", header = None))
+updated = np.array(pd.read_csv("https://assets.datacamp.com/course/intro_to_python/update.csv", header = None))
 import numpy as np
 ```
 
