@@ -135,7 +135,7 @@ You are a huge baseball fan. You decide to call the MLB (Major League Baseball) 
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-mlb = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")
+mlb = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")
 height_in = mlb['Height'].tolist()
 import numpy as np
 ```
