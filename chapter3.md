@@ -40,7 +40,7 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. These are built-in functions as well.
+Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
 
 Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
 
@@ -50,8 +50,8 @@ result = type(3.0)
 
 `@instructions`
 - Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the length of the list `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an integer. Store the output as `out2`.
+- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
+- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
 
 `@hint`
 - Call the `type()` function like this: `type(var1)`.
@@ -136,7 +136,7 @@ help(max)
 ?max
 ```
 
-Type `help(pow)` in the shell to open up the documentation on `pow()`.
+Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
 
 Which of the following statements is true?
 
@@ -178,7 +178,7 @@ skills:
 
 In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
 
-Have a look at the documentation of `sorted()` by typing `help(sorted)` in the shell.
+Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
 
 You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
 
@@ -277,12 +277,12 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the shell.
+Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
 
 A string `place` has already been created for you to experiment with.
 
 `@instructions`
-- Use the `.upper()` method on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
+- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
 - Print out `place` and `place_up`. Did both change?
 - Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
 
@@ -439,8 +439,8 @@ skills:
 Most list methods will change the list they're called on. Examples are:
 
 - `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that removes the first element of a list that matches the input, and
-- `.reverse()`, that reverses the order of the elements in the list it is called on.
+- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
+- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
 
 You'll be working on the list with the area of different parts of the house: `areas`.
 
@@ -606,7 +606,7 @@ Ex().multi(
   has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of _a lot_ of Python programmers is at your fingertips!")
+success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
 ```
 
 ---
@@ -708,7 +708,7 @@ skills:
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
 
-Suppose you want to use the function `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 
 ```
 my_inv([[1,2], [3,4]])
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
+msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
 msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
