@@ -442,17 +442,17 @@ You have a Python list of lists. In this list of lists, each sublist represents 
 Store the data as a 2D array to unlock `numpy`'s extra functionality.
 
 `@instructions`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
+- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
 - Print out the `shape` attribute of `np_baseball`.
 
 `@hint`
-- `baseball` is already available in the Python environment. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D `numpy` array in `np_baseball`.
+- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
 - `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()`call around it.
 
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-baseball = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
+baseball = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")[['Height', 'Weight']].to_numpy().tolist()
 import numpy as np
 ```
 
