@@ -40,7 +40,7 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). There are also functions like [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types. These are built-in functions as well.
+Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
 
 Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
 
@@ -49,14 +49,13 @@ result = type(3.0)
 ```
 
 `@instructions`
-- Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) to print out the type of `var1`.
-- Use [`len()`](https://docs.python.org/3/library/functions.html#len) to get the length of the list `var1`. Wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call to directly print it out.
-- Use [`int()`](https://docs.python.org/3/library/functions.html#int) to convert `var2` to an integer. Store the output as `out2`.
+- Use `print()` in combination with `type()` to print out the type of `var1`.
+- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
+- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
 
 `@hint`
-- Call the [`type()`](https://docs.python.org/3/library/functions.html#type) function like this: `type(var1)`.
-- Call [`print()`](https://docs.python.org/3/library/functions.html#print) like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- Call the `type()` function like this: `type(var1)`.
+- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
 
 `@pre_exercise_code`
 ```{python}
@@ -105,8 +104,8 @@ patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
 Ex().has_printout(0, not_printed_msg = patt % 'type')
 Ex().has_printout(1, not_printed_msg = patt % 'length')
 
-int_miss_msg = "Have you used [`int()`](https://docs.python.org/3/library/functions.html#int) to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to [`int()`](https://docs.python.org/3/library/functions.html#int)?"
+int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
+int_incorr_msg = "Have you passed `var2` to `int()`?"
 Ex().check_correct(
   check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
@@ -136,7 +135,7 @@ help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the documentation on [`pow()`](https://docs.python.org/3/library/functions.html#pow). Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and running the code (hit **Enter** for web users).
 
 Which of the following statements is true?
 
@@ -178,7 +177,7 @@ skills:
 
 In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
 
-Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the IPython Shell.
+Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
 
 You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
 
@@ -282,14 +281,14 @@ Strings come with a bunch of methods. Follow the instructions closely to discove
 A string `place` has already been created for you to experiment with.
 
 `@instructions`
-- Use the [`.upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
+- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
 - Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling [`.count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
 
 `@hint`
-- You can call the [`.upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `place` without any additional inputs.
+- You can call the `.upper()` method on `place` without any additional inputs.
 - To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
+- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
 
 `@pre_exercise_code`
 ```{python}
@@ -349,7 +348,7 @@ Ex().check_correct(
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the [upper()](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
 ```
 
 ---
@@ -367,18 +366,18 @@ skills:
 
 Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
 
-- [`.index()`](https://docs.python.org/3/library/stdtypes.html#str.index), to get the index of the first element of a list that matches its input and
-- [`.count()`](https://docs.python.org/3/library/stdtypes.html#str.count), to get the number of times an element appears in a list.
+- `.index()`, to get the index of the first element of a list that matches its input and
+- `.count()`, to get the number of times an element appears in a list.
 
 You'll be working on the list with the area of different parts of a house: `areas`.
 
 `@instructions`
-- Use the [`.index()`](https://docs.python.org/3/library/stdtypes.html#str.index) method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call [`.count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
+- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
+- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
+- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
 
 `@pre_exercise_code`
 ```{python}
@@ -438,22 +437,22 @@ skills:
 
 Most list methods will change the list they're called on. Examples are:
 
-- [`.append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that adds an element to the list it is called on,
-- [`.remove()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that removes the first element of a list that matches the input, and
-- [`.reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that reverses the order of the elements in the list it is called on.
+- `.append()`, that adds an element to the list it is called on,
+- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
+- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
 
 You'll be working on the list with the area of different parts of the house: `areas`.
 
 `@instructions`
-- Use [`.append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
+- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
 - Print out `areas`
-- Use the [`.reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method to reverse the order of the elements in `areas`.
+- Use the `.reverse()` method to reverse the order of the elements in `areas`.
 - Print out `areas` once more.
 
 `@hint`
 - For the first instruction, use the `areas.append(___)` call twice.
 - To print out a variable `x`, simply write `print(x)`.
-- The [`.reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
+- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
 - To print out a variable `x`, simply write `print(x)`.
 
 `@pre_exercise_code`
@@ -708,7 +707,7 @@ skills:
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
 
-Suppose you want to use the function [`inv()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linalg.inv.html), which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 
 ```
 my_inv([[1,2], [3,4]])
@@ -723,7 +722,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Web users can hit **enter** to run the code you have typed.
 
 `@pre_exercise_code`
 ```{python}
