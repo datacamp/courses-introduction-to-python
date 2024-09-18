@@ -271,7 +271,7 @@ This exercise already has two lists, `height_in` and `weight_lb`, loaded in the 
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-mlb = pd.read_csv("http://assets.datacamp.com/course/intro_to_python/baseball.csv")
+mlb = pd.read_csv("https://assets.datacamp.com/course/intro_to_python/baseball.csv")
 height_in = mlb['Height'].tolist()
 weight_lb = mlb['Weight'].tolist()
 ```
