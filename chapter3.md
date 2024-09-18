@@ -708,7 +708,7 @@ skills:
 
 There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
 
-Suppose you want to use the [function](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
 
 ```
 my_inv([[1,2], [3,4]])
