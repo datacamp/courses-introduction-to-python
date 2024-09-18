@@ -135,7 +135,7 @@ help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and running the code (hit **Enter** for web users).
 
 Which of the following statements is true?
 
