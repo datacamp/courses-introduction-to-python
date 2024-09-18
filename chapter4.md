@@ -350,14 +350,14 @@ Before working on the actual MLB data, let's try to create a 2D `numpy` array fr
 In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
 
 `@instructions`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
+- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
 - Print out the type of `np_baseball`.
 - Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
 
 `@hint`
-- `baseball` is already coded for you in the script. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D `numpy` array in `np_baseball`.
-- Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) for the second instruction.
-- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
+- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
+- Use `print()` in combination with `type()` for the second instruction.
+- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
 
 `@pre_exercise_code`
 ```{python}
