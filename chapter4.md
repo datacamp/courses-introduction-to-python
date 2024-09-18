@@ -792,7 +792,7 @@ The Python script in the editor already includes code to print out informative m
 `@hint`
 - Use `np.median()` to calculate the median. Make sure to select to correct column first!
 - Subset the same column when calculating the standard deviation with `np.std()`.
-- Use `np_baseball[:, 0]` and `np_baseball[:, 1]` to select the first and second columns; these are the inputs to `np.corrcoef`.
+- Use `np_baseball[:, 0]` and `np_baseball[:, 1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
 
 `@pre_exercise_code`
 ```{python}
