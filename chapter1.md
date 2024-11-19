@@ -353,15 +353,12 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+In the previous exercise, you worked with the integer Python data type, `int`. 
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
-
-Next to numerical data types, there are three other very common data types:
-
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+Next to numerical data types, there are other common data types: 
+- `float`, or floating: supports fractional numbers e.g. 1.1
+- `str`, or string: represents text e.g. ‘hello’
+- `bool`, or boolean: a type to represent `True` or `False` (the capitalization is important!)
 
 `@instructions`
 - Create a new float, `half`, with the value `0.5`.
