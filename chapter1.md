@@ -225,15 +225,11 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
-
-```
-x = 5
-```
+Python variables allow you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this: `x = 5`.
 
 You can now use the name of this variable, `x`, instead of the actual value, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Try it in the exercise by replacing `____` with your code.
 
 `@instructions`
 - Create a variable `savings` with the value of `100`.
