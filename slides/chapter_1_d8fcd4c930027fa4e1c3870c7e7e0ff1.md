@@ -2,9 +2,9 @@
 title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v8/735_ch1_1.mp4'
+  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v9/735_ch1_1.mp4'
   hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v8/hls-735_ch1_1.master.m3u8
+    https://videos.datacamp.com/transcoded/735_intro_to_python/v9/hls-735_ch1_1.master.m3u8
 transformations:
   translateX: 50
   translateY: 0
