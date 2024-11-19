@@ -34,7 +34,7 @@ I'm a data scientist and educator at DataCamp.
 ```yaml
 type: FullSlide
 key: 30ee08a725
-disable_transition: true
+disable_transition: false
 ```
 
 `@part1`
@@ -49,19 +49,16 @@ In this course, you will learn Python for Data Science through video lessons, li
 
 ```yaml
 type: FullSlide
-key: 3f23b93572
+key: 55111cb64f
+hide_title: true
 ```
 
 `@part1`
-![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
+![Python](https://assets.datacamp.com/production/repositories/288/datasets/ba82e92092483c9304739172285b0955dfd75741/python-logo-master-v3-TM-flattened.png){{1}}
 
-- General purpose: build anything{{2}}
+- General purpose: build anything {{2}}
 
-- Open source! Free!{{3}}
-
-- Python packages, also for data science{{4}}
-
-	- Many applications and fields{{5}}
+- Build your skills bit by bit {{3}}
 
 `@script`
 People often refer to Python as the swiss army knife of programming languages as you can do almost anything with it.
