@@ -419,9 +419,9 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+You’ve seen different variable types in action, but different types also behave differently. 
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
 
 Time for you to test this out.
 
