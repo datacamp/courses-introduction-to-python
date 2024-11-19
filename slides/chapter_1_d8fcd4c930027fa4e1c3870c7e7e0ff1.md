@@ -41,7 +41,7 @@ disable_transition: true
 ![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/82683930db8b818d1821a60f7b94a68c259f6a45/pydesktop.gif)
 
 `@script`
-In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
+In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You're learning by doing, while receiving customized and instant feedback on your work.
 
 ---
 
@@ -64,7 +64,6 @@ key: 3f23b93572
 	- Many applications and fields{{5}}
 
 `@script`
-Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
 People often refer to Python as the swiss army knife of programming languages as you can do almost anything with it.
 In this course, we'll start to build up your data science coding skills bit by bit, so make sure to stick around to see how powerful the language can be.
 
@@ -119,9 +118,9 @@ disable_transition: true
 ![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
 
 `@script`
-Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. 
 
-IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called
+Apart from interactively working with Python, you can also have Python run so called
 
 ---
 
@@ -158,7 +157,7 @@ disable_transition: true
 ![GIF: typing 4 + 5 in the script and hitting submit answer. No output is shown.](https://assets.datacamp.com/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
 
 `@script`
-Let's put the command from before in a script now, which can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
+Let's put the command from before in a script now. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
 
 ---
 
@@ -192,7 +191,7 @@ key: 693ba1cd14
 ![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
+Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises.
 
 ---
 
