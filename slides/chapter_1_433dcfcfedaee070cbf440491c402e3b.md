@@ -2,9 +2,9 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
+  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v9/735_ch1_2.mp4'
   hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
+    https://videos.datacamp.com/transcoded/735_intro_to_python/v9/hls-735_ch1_2.master.m3u8
 transformations:
   translateX: 50
   translateY: 0
@@ -46,7 +46,7 @@ height = 1.79
 weight = 68.7
 ```{{3}}
 ```py
-height
+print(height)
 ```{{4}}
 
 ```out
@@ -78,7 +78,7 @@ height = 1.79
 weight = 68.7
 ```
 ```py
-height
+print(height)
 ```
 
 ```out
@@ -89,7 +89,7 @@ $$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
 
 `@part2`
 ```py
-68.7 / 1.79 ** 2
+print(68.7 / 1.79 ** 2)
 ```{{2}}
 
 ```out
@@ -97,7 +97,7 @@ $$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
 ```{{2}}
 
 ```py
-weight / height ** 2
+print(weight / height ** 2)
 ```{{3}}
 
 ```out
@@ -106,7 +106,7 @@ weight / height ** 2
 
 ```py
 bmi = weight / height ** 2
-bmi
+print(bmi)
 ```{{4}}
 
 ```out
@@ -254,7 +254,7 @@ key: 24601e2af0
 
 `@part1`
 ```py
-2 + 3
+print(2 + 3)
 ```{{1}}
 
 ```out
@@ -262,7 +262,7 @@ key: 24601e2af0
 ```{{1}}
 
 ```py
-'ab' + 'cd'
+print('ab' + 'cd')
 ```{{2}}
 
 ```out
@@ -276,7 +276,7 @@ Have a look at this line of code, that sums two integers, and then this line of 
 
 For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+In the exercises that follow, you'll create your first variables and experiment with some of Python's data types.
 
 ---
 
@@ -288,4 +288,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+I'll see you in the next video to explain all about lists.
