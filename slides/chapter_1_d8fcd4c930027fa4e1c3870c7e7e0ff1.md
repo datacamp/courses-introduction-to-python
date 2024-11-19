@@ -38,7 +38,7 @@ disable_transition: false
 ```
 
 `@part1`
-![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/82683930db8b818d1821a60f7b94a68c259f6a45/pydesktop.gif)
+![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
 
 `@script`
 In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You're learning by doing, while receiving customized and instant feedback on your work.
@@ -54,7 +54,7 @@ hide_title: true
 ```
 
 `@part1`
-![Python](https://assets.datacamp.com/production/repositories/288/datasets/ba82e92092483c9304739172285b0955dfd75741/python-logo-master-v3-TM-flattened.png){{1}}
+![Python](https://assets.datacamp.com/production/repositories/288/datasets/ba82e92092483c9304739172285b0955dfd75741/python-logo-master-v3-TM-flattened.png = 90){{1}}
 
 - General purpose: build anything {{2}}
 
@@ -76,7 +76,7 @@ key: 43a91a7217
 `@part1`
 **Execute Python commands**
 
-![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
+![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/584018e700b7e8e2f51ce095add35dbf2ec25be3/plain%20exercise.png = 85)
 
 `@script`
 Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the
@@ -94,7 +94,7 @@ disable_transition: true
 `@part1`
 **Execute Python commands**
 
-![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
+![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/b296f671f3c5513117414f4e9a9707200b3a7b3a/shellbox.png = 85)
 
 `@script`
 Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
@@ -135,7 +135,7 @@ key: 78ef256bc0
 
 - Similar to typing in IPython Shell{{3}}
 
-![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
+![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/f5d3ffc1201b4fbdabab28af942e46d00a959b95/scriptbox.png = 70){{3}}
 
 `@script`
 python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line.
@@ -185,7 +185,7 @@ key: 693ba1cd14
 ```
 
 `@part1`
-![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
+![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/584018e700b7e8e2f51ce095add35dbf2ec25be3/plain%20exercise.png)
 
 `@script`
 Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises.
