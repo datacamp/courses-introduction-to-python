@@ -9,7 +9,7 @@ attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
-  - nb_of_exercises: 4
+  - nb_of_exercises: 3
     title: Hello Python!
   - nb_of_exercises: 5
     title: Variables and Types
@@ -44,7 +44,8 @@ It's time to run your first Python code!
 Head to the code and hit the run code button to see the output.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Hit the run button to see the output of `print(5 / 8)`.
+- Hit the submit button to complete the exercise.
 
 `@hint`
 - Run the code first before submitting your answer so you have time to explore the output.
@@ -74,61 +75,6 @@ success_msg("Great! On to the next one!")
 
 ---
 
-## Any comments?
-
-```yaml
-type: NormalExercise
-key: 7c4a738a13
-lang: python
-xp: 100
-skills:
-  - 2
-```
-
-You can also add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about and do not run as Python code.
-
-They start with `#` tag. See the comment in the editor, `# Division`; now it's your turn to add a comment!
-
-`@instructions`
-- Replace `____` with the comment 
-```
-# Addition
-```
-
-`@hint`
-- Leaving `____` will cause an error so make sure to delete it include `# Addition` right above `print(7 + 10)`.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-# Division
-print(5 / 8)
-
-____
-print(7 + 10)
-```
-
-`@solution`
-```{python}
-# Division
-print(5 / 8)
-
-# Addition
-print(7 + 10)
-```
-
-`@sct`
-```{python}
-Ex().has_code("#\s*(\w+)[\s.!?]*print\s*\(\s*7", not_typed_msg = "Make sure to add the comment right before `print(7 + 10)`.")
-success_msg("Great!")
-```
-
----
-
 ## Python as a calculator
 
 ```yaml
@@ -144,16 +90,15 @@ Python is perfectly suited to do basic calculations. It can do addition, subtrac
 
 The code in the script gives some examples.
 
-Now it's your turn to practice!
+Now it's your turn to practice by writing some code yourself.
 
 `@instructions`
-- Print the sum of `4 + 5`.
-- Print the result of subtracting `5` from `5`.
-- Print the result of multiplying `3` by `5`.
-- Print the result of dividing `10` by `2`.
+- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
+- Print the result of multiplying `3` by `5` under `# Multiplication`.
 
 `@hint`
 - You'll need to use `print()` to generate an output.
+- You can subtract with `-` and multiply with `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -162,32 +107,28 @@ Now it's your turn to practice!
 
 `@sample_code`
 ```{python}
-# Addition
-
+# Addition and division
+print(4 + 5)
+print(10 / 2)
 
 # Subtraction
 
 
 # Multiplication
 
-
-# Division
-
 ```
 
 `@solution`
 ```{python}
-# Addition
+# Addition and division
 print(4 + 5)
+print(10 / 2)
 
 # Subtraction
 print(5 - 5)
 
 # Multiplication
 print(3 * 5)
-
-# Division
-print(10 / 2)
 ```
 
 `@sct`
@@ -229,15 +170,11 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
-
-```
-x = 5
-```
+Python variables allow you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this: `x = 5`.
 
 You can now use the name of this variable, `x`, instead of the actual value, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Try it in the exercise by replacing `____` with your code.
 
 `@instructions`
 - Create a variable `savings` with the value of `100`.
@@ -293,13 +230,11 @@ skills:
 
 You've now created a savings variable, so let's start saving!
 
-Instead of calculating with the actual values, you can use variables instead.
-
 How much money would you have saved four months from now, if you saved $10 each month?
 
 `@instructions`
 - Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
+- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`, replacing `____`.
 - Print the value of `new_savings`.
 
 `@hint`
@@ -363,15 +298,12 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+In the previous exercise, you worked with the integer Python data type, `int`. 
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
-
-Next to numerical data types, there are three other very common data types:
-
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+Next to numerical data types, there are other common data types: 
+- `float`, or floating: supports fractional numbers like 1.1
+- `str`, or string: represents text like "Hello"
+- `bool`, or boolean: a type to represent `True` or `False` (the capitalization is important!)
 
 `@instructions`
 - Create a new float, `half`, with the value `0.5`.
@@ -432,9 +364,9 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+You’ve seen different variable types in action, but different types also behave differently. 
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
 
 Time for you to test this out.
 
