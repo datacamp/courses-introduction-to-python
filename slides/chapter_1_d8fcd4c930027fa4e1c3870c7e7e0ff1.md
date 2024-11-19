@@ -112,7 +112,7 @@ disable_transition: true
 `@part1`
 &nbsp;
 
-![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/371356fee996ba5f555e1312b8848957740f0f96/shellgif.gif)
+![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/e7e727de1c59d5e1e7ec383452eca5d82ee83316/shellgif2.gif)
 
 `@script`
 Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. 
@@ -151,7 +151,7 @@ disable_transition: true
 ```
 
 `@part1`
-![GIF: typing 4 + 5 in the script and hitting submit answer. No output is shown.](https://assets.datacamp.com/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
+![GIF: typing 4 + 5 in the script and hitting submit answer. No output is shown.](https://assets.datacamp.com/production/repositories/288/datasets/fb54c4616108652f3e5ebc14c05f97bc6e10f11c/scriptnoprint.gif = 61)
 
 `@script`
 Let's put the command from before in a script now. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
@@ -168,7 +168,7 @@ code_zoom: 90
 ```
 
 `@part1`
-![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
+![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/b15f09c05d2376679f7002122d4cdb74b1e805ef/scriptprint.gif = 61)
 
 - Use `print()` to generate output from script
 
