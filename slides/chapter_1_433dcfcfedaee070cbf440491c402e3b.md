@@ -266,7 +266,7 @@ print('ab' + 'cd')
 ```{{2}}
 
 ```out
-'abcd'
+abcd
 ```{{2}}
 
 - Different type = different behavior!{{3}}
