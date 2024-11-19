@@ -1,15 +1,16 @@
 id: 735
-title: Introduction to Python
+title: Introducción a Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
-from: 'python-base-prod:v2.0.0'
+  Python es un lenguaje de programación de uso general cada vez más popular para
+  la ciencia de datos. Empresas de todo el mundo utilizan Python para extraer
+  información de sus datos y obtener una ventaja competitiva. A diferencia de
+  otros tutoriales de Python, este curso se centra en Python específicamente
+  para la ciencia de datos. En nuestro curso Introducción a Python aprenderás
+  potentes formas de almacenar y manipular datos y conocerás útiles herramientas
+  de ciencia de datos para empezar a realizar tus propios análisis. Empieza ya
+  tu plan de estudios en línea sobre Python en DataCamp.
+from: python-base-prod:v2.0.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
