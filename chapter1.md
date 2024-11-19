@@ -90,7 +90,7 @@ Python is perfectly suited to do basic calculations. It can do addition, subtrac
 
 The code in the script gives some examples.
 
-Now it's your turn to practice!
+Now it's your turn to practice by writing some code yourself.
 
 `@instructions`
 - Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
@@ -234,7 +234,7 @@ How much money would you have saved four months from now, if you saved $10 each 
 
 `@instructions`
 - Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
+- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`, replacing `____`.
 - Print the value of `new_savings`.
 
 `@hint`
@@ -301,8 +301,8 @@ skills:
 In the previous exercise, you worked with the integer Python data type, `int`. 
 
 Next to numerical data types, there are other common data types: 
-- `float`, or floating: supports fractional numbers e.g. 1.1
-- `str`, or string: represents text e.g. ‘hello’
+- `float`, or floating: supports fractional numbers like 1.1
+- `str`, or string: represents text like "Hello"
 - `bool`, or boolean: a type to represent `True` or `False` (the capitalization is important!)
 
 `@instructions`
