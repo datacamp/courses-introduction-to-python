@@ -9,7 +9,7 @@ attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
-  - nb_of_exercises: 4
+  - nb_of_exercises: 3
     title: Hello Python!
   - nb_of_exercises: 5
     title: Variables and Types
@@ -70,61 +70,6 @@ print(5 / 8)
 ```{python}
 Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
 success_msg("Great! On to the next one!")
-```
-
----
-
-## Any comments?
-
-```yaml
-type: NormalExercise
-key: 7c4a738a13
-lang: python
-xp: 100
-skills:
-  - 2
-```
-
-You can also add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about and do not run as Python code.
-
-They start with `#` tag. See the comment in the editor, `# Division`; now it's your turn to add a comment!
-
-`@instructions`
-- Replace `____` with the comment 
-```
-# Addition
-```
-
-`@hint`
-- Leaving `____` will cause an error so make sure to delete it include `# Addition` right above `print(7 + 10)`.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-# Division
-print(5 / 8)
-
-____
-print(7 + 10)
-```
-
-`@solution`
-```{python}
-# Division
-print(5 / 8)
-
-# Addition
-print(7 + 10)
-```
-
-`@sct`
-```{python}
-Ex().has_code("#\s*(\w+)[\s.!?]*print\s*\(\s*7", not_typed_msg = "Make sure to add the comment right before `print(7 + 10)`.")
-success_msg("Great!")
 ```
 
 ---
