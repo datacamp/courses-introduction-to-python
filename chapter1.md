@@ -285,8 +285,6 @@ skills:
 
 You've now created a savings variable, so let's start saving!
 
-Instead of calculating with the actual values, you can use variables instead.
-
 How much money would you have saved four months from now, if you saved $10 each month?
 
 `@instructions`
