@@ -112,7 +112,7 @@ disable_transition: true
 `@part1`
 &nbsp;
 
-![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/e7e727de1c59d5e1e7ec383452eca5d82ee83316/shellgif.gif)
+![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/371356fee996ba5f555e1312b8848957740f0f96/shellgif.gif)
 
 `@script`
 Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. 
