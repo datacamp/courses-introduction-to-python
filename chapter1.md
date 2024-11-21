@@ -69,7 +69,7 @@ print(5 / 8)
 `@sct`
 ```{python}
 Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+success_msg("Great! <span translate=\"no\">On to the next one!</span>")
 ```
 
 ---
@@ -141,11 +141,11 @@ Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print ou
 
 Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your <span translate=\"no\">multiplication</span>?")
 
 Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("That's correct! Python can help you <span translate=\"no\">do the math</span>, a characteristic that will be helpful for analysis as we grow our data skills.")
 ```
 
 ---

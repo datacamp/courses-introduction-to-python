@@ -141,7 +141,7 @@ Use the IPython Shell to open up the [documentation](https://docs.python.org/3/l
 Which of the following statements is true?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
+- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will <span translate="no">return an error</span>.
 - `pow()` takes three required arguments: `base`, `exp`, and `None`.
 - `pow()` requires `base` and `exp` arguments; `mod` is optional.
 - `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
@@ -156,9 +156,9 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
+msg1 = "Not quite. `mod` has a default value that will be used if you <span translate=\"no\">don't specify a value</span>."
 msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
+msg3 = "Perfect! Using `help()` can help you understand how functions work, <span translate=\"no\">unleashing</span> their full potential!"
 msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
@@ -714,7 +714,7 @@ Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/referenc
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+Which `import` statement will you need in order to run the above code <span translate="no">without an error</span>?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Try the different <span translate="no">import statements</span> in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
 
 `@pre_exercise_code`
 ```{python}

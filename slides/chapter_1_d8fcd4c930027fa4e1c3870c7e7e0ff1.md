@@ -23,7 +23,7 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Hi, my name is Hugo and I'll be your host for Introduction to Python for Data Science.
+Hi, my name is Hugo and I'll be your host for Introduction to Python for <span translate="no">Data Science</span>.
 
 I'm a data scientist and educator at DataCamp.
 
