@@ -6,7 +6,7 @@ description: >-
   interactively and by using a script. Create your first variables and acquaint
   yourself with Python's basic data types.
 attachments:
-  slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
+  slides_link: 'https://projector-video-pdf-converter.datacamp.com/25616/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3

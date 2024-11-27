@@ -6,7 +6,7 @@ description: >-
   leverage the code that brilliant Python developers have written. The goal is
   to reduce the amount of code you need to solve challenging problems!
 attachments:
-  slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
+  slides_link: 'https://projector-video-pdf-converter.datacamp.com/25616/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
     title: Functions

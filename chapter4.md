@@ -6,7 +6,7 @@ description: >-
   Learn to work with powerful tools in the NumPy array, and get started with
   data exploration.
 attachments:
-  slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
+  slides_link: 'https://projector-video-pdf-converter.datacamp.com/25616/chapter4.pdf'
 lessons:
   - nb_of_exercises: 5
     title: Numpy
