@@ -92,11 +92,11 @@ The code in the script gives some examples.
 Now it's your turn to practice by writing some code yourself.
 
 `@instructions`
-- Fill in `print()` to subtract `5` from `5`.
-- Now, write `print()` to fill it in to print the result of multiplying `3` by `5`.
+- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
+- Print the result of multiplying `3` by `5` under `# Multiplication`.
 
 `@hint`
-- Write the calculation within the parentheses, `()`; e.g. `print(2-2)`.
+- You'll need to use `print()` to generate an output.
 - You can subtract with `-` and multiply with `*`.
 
 `@pre_exercise_code`
@@ -106,27 +106,27 @@ Now it's your turn to practice by writing some code yourself.
 
 `@sample_code`
 ```{python}
-# Examples of addition and division
+# Addition and division
 print(4 + 5)
 print(10 / 2)
 
-# Fill in print() to subtract 5 - 5
+# Subtraction
 print()
 
-# Write print() and fill it in to multiply 3 * 5
+# Multiplication
 
 ```
 
 `@solution`
 ```{python}
-# Examples of addition and division
+# Addition and division
 print(4 + 5)
 print(10 / 2)
 
-# Fill in print() to subtract 5 - 5
+# Subtraction
 print(5 - 5)
 
-# Write print() and fill it in to multiply 3 * 5
+# Multiplication
 print(3 * 5)
 ```
 
