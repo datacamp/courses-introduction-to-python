@@ -89,16 +89,15 @@ Python is perfectly suited to do basic calculations. It can do addition, subtrac
 
 The code in the script gives some examples.
 
-Now it's your turn to practice!
+Now it's your turn to practice by writing some code yourself.
 
 `@instructions`
-- Print the sum of `4 + 5`.
-- Print the result of subtracting `5` from `5`.
-- Print the result of multiplying `3` by `5`.
-- Print the result of dividing `10` by `2`.
+- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
+- Print the result of multiplying `3` by `5` under `# Multiplication`.
 
 `@hint`
 - You'll need to use `print()` to generate an output.
+- You can subtract with `-` and multiply with `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -107,32 +106,28 @@ Now it's your turn to practice!
 
 `@sample_code`
 ```{python}
-# Addition
-
+# Addition and division
+print(4 + 5)
+print(10 / 2)
 
 # Subtraction
-
+print()
 
 # Multiplication
-
-
-# Division
 
 ```
 
 `@solution`
 ```{python}
-# Addition
+# Addition and division
 print(4 + 5)
+print(10 / 2)
 
 # Subtraction
 print(5 - 5)
 
 # Multiplication
 print(3 * 5)
-
-# Division
-print(10 / 2)
 ```
 
 `@sct`

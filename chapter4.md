@@ -785,9 +785,9 @@ Because the mean and median are so far apart, you decide to complain to the MLB.
 The Python script in the editor already includes code to print out informative messages with the different summary statistics and `numpy` is already loaded as `np`. Can you finish the job? `np_baseball` is available.
 
 `@instructions`
-- The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.
-- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`. Replace `None` with the correct code.
-- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`. Replace `None` with the correct code.
+- The code to print out the mean height is already included. Complete the code for the median height.
+- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`. 
+- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
 
 `@hint`
 - Use `np.median()` to calculate the median. Make sure to select to correct column first!
