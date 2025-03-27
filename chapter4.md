@@ -867,5 +867,5 @@ Ex().check_correct(
   )
 )
 
-success_msg("Great! Time to use all of your new data science skills in the last exercise!")
+success_msg("Great work! You've built a solid foundation - now it's time to use all of your new data science skills to solve more challenges and make an impact.")
 ```
