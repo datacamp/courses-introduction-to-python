@@ -1,4 +1,5 @@
 ---
+
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
@@ -11,7 +12,7 @@ transformations:
   scale: 1
 ---
 
-## 2D NumPy Arrays
+## Tableaux NumPy 2D
 
 ```yaml
 type: TitleSlide
@@ -27,7 +28,7 @@ Well done you legend! Let's now recreate the numpy arrays from the previous vide
 
 ---
 
-## Type of NumPy Arrays
+## Type de tableaux NumPy
 
 ```yaml
 type: FullSlide
@@ -63,7 +64,7 @@ If you ask for the type of these arrays, Python tells you that they are numpy.nd
 
 ---
 
-## 2D NumPy Arrays
+## Tableaux NumPy 2D
 
 ```yaml
 type: FullSlide
@@ -114,7 +115,7 @@ Also for 2D arrays, the NumPy rule applies: an array can only contain a single t
 
 ---
 
-## Subsetting
+## Sous-ensemble
 
 ```yaml
 type: FullSlide
@@ -147,7 +148,7 @@ To then select the third element, you can extend the same call with another pair
 
 ---
 
-## Subsetting
+## Sous-ensemble
 
 ```yaml
 type: FullSlide
@@ -187,7 +188,7 @@ There's also an alternative way of subsetting, using single square brackets and 
 
 ---
 
-## Subsetting
+## Sous-ensemble
 
 ```yaml
 type: FullSlide
@@ -230,7 +231,7 @@ Finally, 2D numpy arrays enable you to do element-wise calculations, the same wa
 
 ---
 
-## Let's practice!
+## Entraînez-vous !
 
 ```yaml
 type: FinalSlide

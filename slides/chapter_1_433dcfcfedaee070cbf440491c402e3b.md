@@ -1,4 +1,5 @@
 ---
+
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
@@ -11,7 +12,7 @@ transformations:
   scale: 1
 ---
 
-## Variables and Types
+## Variables et types
 
 ```yaml
 type: TitleSlide
@@ -35,11 +36,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Nom spécifique, sensible à la casse
 
-- Call up value through variable name{{1}}
+- Appeler une valeur par le nom d'une variable{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 m - 68,7 kg{{2}}
 
 ```py
 height = 1.79
@@ -64,7 +65,7 @@ Python looks for the variable name, retrieves its value, and prints it out.
 
 ---
 
-## Calculate BMI
+## Calculer BMI
 
 ```yaml
 type: TwoColumns
@@ -85,7 +86,7 @@ height
 1.79
 ```
 
-$$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
+$$ \text{BMI} = \frac{\text{poids}}{\text{hauteur}^2} $${{1}}
 
 `@part2`
 ```py
@@ -122,7 +123,7 @@ In Python, variables are used all the time. They help to make your code reproduc
 
 ---
 
-## Reproducibility
+## Reproductibilité
 
 ```yaml
 type: FullSlide
@@ -146,7 +147,7 @@ Suppose the code to create the height, weight and bmi variable are in a script, 
 
 ---
 
-## Reproducibility
+## Reproductibilité
 
 ```yaml
 type: FullSlide
@@ -173,7 +174,7 @@ So far, we've only worked with numerical values, such as height and weight.
 
 ---
 
-## Python Types
+## Types de Python
 
 ```yaml
 type: FullSlide
@@ -205,7 +206,7 @@ To do data science, you'll need more than ints and floats, though.
 
 ---
 
-## Python Types (2)
+## Types de Python (2)
 
 ```yaml
 type: FullSlide
@@ -245,7 +246,7 @@ There's something special about Python data types.
 
 ---
 
-## Python Types (3)
+## Types de Python (3)
 
 ```yaml
 type: FullSlide
@@ -280,7 +281,7 @@ In the exercises that follow, you'll create your first variables and experiment 
 
 ---
 
-## Let's practice!
+## Entraînez-vous !
 
 ```yaml
 type: FinalSlide
