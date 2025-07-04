@@ -631,8 +631,8 @@ Try the same thing again, but this time only use `pi`.
 
 `@instructions`
 - Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- Use `pi` to calculate the circumference of the circle and store it in `C`.
+- Use `pi` to calculate the area of the circle and store it in `A`.
 
 `@hint`
 - Use `from math import pi` to do the selective import.
