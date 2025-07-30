@@ -3,10 +3,6 @@ title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
   mp3: https://assets.datacamp.com/production/repositories/4333/datasets/6c9d263cd1d9f6eb01c656e8756664c8004764aa/735_ch1_1.mp3
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
 ---
 
 ## Hello Python!
