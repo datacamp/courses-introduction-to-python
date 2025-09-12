@@ -9,6 +9,18 @@ description: >-
   Introduction to Python course, you’ll learn about powerful ways to store and
   manipulate data, and helpful data science tools to begin conducting your own
   analyses. Start DataCamp’s online Python curriculum now.
+
+
+  The videos contain live transcripts, which can be accessed by clicking "Show
+  transcript" at the bottom left of the videos.
+
+
+  The course glossary can be found on the right in the resources section.
+
+
+  To obtain CPE credits you need to complete the course and reach a score of 70%
+  on the qualified assessment. You can navigate to the assessment by clicking on
+  the CPE credits callout on the right.
 from: 'python-base-prod:v3.1.0'
 practice_pool_id: 107
 datasets:
