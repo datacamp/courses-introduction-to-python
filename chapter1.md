@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Bölüm 1
+title: Python’ın Temelleri
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  Python’ın temel kavramlarına giriş. Python’ı interaktif olarak ve komut
+  kullanarak nasıl kullanacağınızı öğrenin. İlk değişkenlerinizi oluşturun ve
+  Python’ın temel veri türlerini öğrenin.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: Merhaba Python!
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Değişkenler ve Türler
 ---
 
-## Hello Python!
+## Merhaba Python!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## İlk Python kodunuz
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+İlk Python kodunuzu çalıştırmanın zamanı geldi!
 
-Head to the code and hit the run code button to see the output.
+Koda gidin ve kodu çalıştır düğmesine basarak çıktıyı görün.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- `print(5 / 8)` komutunun çıktısını görmek için çalıştır düğmesine basın.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Cevabınızı göndermeden önce çıktıyı incelemek için kodu çalıştırın.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}` ifadesini `5 / 8`'i yazdırmak için kullandınız mı?")
+success_msg("Harika! Bir sonrakine geçelim!")
 ```
 
 ---
 
-## Python as a calculator
+## Hesap makinesi olarak Python
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python basit hesaplamalar için mükemmel bir seçimdir. Toplama, çıkarma, çarpma ve bölme işlemlerini yapabilir.
 
-The code in the script gives some examples.
+Komuttaki kodda birkaç örnek veriliyor.
 
-Now it's your turn to practice by writing some code yourself.
+Şimdi sıra sizde, kendiniz kod yazarak alıştırma yapın.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- `print()` fonksiyonunu kullanarak `# Subtraction` altında `5` değerinden `5` çıkarma işleminin sonucunu yazdırın.
+- `# Multiplication` altında `3` ile `5` çarpımının sonucunu yazdırın.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Çıktı oluşturmak için `print()` fonksiyonunu kullanmanız gerekir.
+- `-` ile çıkarma, `*` ile çarpma yapabilirsiniz.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "`print(4 + 5)` ifadesini kullanarak toplamanızın sonucunu yazdırdınız mı?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "`print(5 - 5)` ifadesini kullanarak çıkarma işleminizin sonucunu yazdırdınız mı?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "`print(3 * 5)` ifadesini kullanarak çarpma işleminizin sonucunu yazdırdınız mı?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "`print(10 / 2)` ifadesini kullanarak bölme işleminizin sonucunu yazdırdınız mı?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Bu doğru! Python, matematik yapmanıza yardımcı olabilir, bu da veri becerilerimizi geliştirirken analiz için faydalı olacaktır.")
 ```
 
 ---
 
-## Variables and Types
+## Değişkenler ve Türler
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Değişken Atama
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+Python’da değişken, bir değere ad ile başvurmanıza olanak tanır. `5` değerine sahip bir `x` değişkeni oluşturmak için aşağıdaki örnekte olduğu gibi `=` işlecini kullanırsınız:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Artık bu değişkenin gerçek değeri olan `5` yerine adı olan `x` değerini kullanabilirsiniz.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Unutmayın, Python’da `=`, _atama_ anlamına gelir, eşitliği test etmez! `____` ifadesini kendi kodunuzla değiştirerek egzersizde deneyin.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- `100` değerine sahip bir `savings` değişkeni oluşturun.
+- Komuta `print(savings)` yazarak bu değişkeni kontrol edin.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- `savings` değişkenini oluşturmak için `savings = 100` yazın.
+- `savings` değişkenini oluşturduktan sonra `print(savings)` yazabilirsiniz.
+- Son kodunuzda `____` bulunmamalıdır.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="`savings` değişkenine `100` atayın.")
+Ex().has_printout(0, not_printed_msg = "`savings` değişkenini `print(savings)` ile yazdırın.")
+success_msg("Harika! Şimdi bu değişkenle bazı hesaplamalar yapmayı deneyelim!")
 ```
 
 ---
 
-## Calculations with variables
+## Değişkenlerle hesaplamalar
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Bir savings değişkeni oluşturduğunuza göre para biriktirmeye başlayalım!
 
-Instead of calculating with the actual values, you can use variables instead.
+Gerçek değerlerle hesaplama yapmak yerine değişkenleri kullanabilirsiniz.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Her ay $10 biriktirseydiniz dört ay sonunda ne kadar para biriktirmiş olurdunuz?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- `10` değerine eşit bir `monthly_savings` değişkeni ve `4` değerine eşit bir `num_months` değişkeni oluşturun.
+- `monthly_savings` değerini `num_months` ile çarpın ve `new_savings` sütununa atayın.
+- `new_savings` değerini yazdırın.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- Değişkenlerle de tıpkı sayılarla olduğu gibi hesaplamalar yapabilirsiniz. Bu yüzden `10 * 4` yerine sayıları değişkenlerle değiştirin!
+- `new_savings` içinde tutarı görmek için `print()` komutunu kullanın.
+- Değişkenleri doğru yazmaya dikkat edin!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "`monthly_savings` değişkenine `monthly_savings = 10` ifadesini kullanarak `10` değerini kaydettiniz mi?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "`num_months` değişkenine `num_months = 4` ifadesini kullanarak `4` değerini kaydettiniz mi?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Çarpmak için doğru değişkenleri ve sembolleri kullandınız mı? Beklenen `monthly_savings * num_months` ifadesiydi ancak başka bir şey elde edildi.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Toplamak için doğru değişkenleri ve sembolleri kullandınız mı? Beklenen `savings + new_savings` ifadesiydi ancak başka bir şey elde edildi.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Scriptinizin sonunda `new_savings` değerini yazdırmayı unutmayın.")
 
-success_msg("You have $40 in new savings!")
+success_msg("Yeni birikimlerinizde $40 var!")
 ```
 
 ---
 
-## Other variable types
+## Diğer değişken türleri
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+Önceki egzersizde tamsayı Python veri türüyle çalıştınız:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int` veya tamsayı: kesirli kısmı olmayan sayı. Değeri `100` olan `savings`, bir tamsayı örneğidir.
 
-Next to numerical data types, there are three other very common data types:
+Sayısal veri türlerinin yanında üç tane daha çok yaygın veri türü vardır:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float` veya kayan sayı: bir nokta ile ayrılmış tamsayı ve kesirli kısımdan oluşan sayı. `1.1` bir kayan sayı örneğidir.
+- `str` veya dize: metni temsil eden bir tür. Bir dize oluşturmak için tek veya çift tırnak işareti kullanabilirsiniz.
+- `bool` veya boole: mantıksal değerleri temsil eden bir tür. Sadece `True` veya `False` olabilir (büyük harf kullanımı önemlidir!).
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Değeri `0.5` olan `half` adlı yeni bir kayan sayı oluşturun.
+- Değeri `"Hello! How are you?"` olan `intro` adlı yeni bir dize oluşturun.
+- Değeri `True` olan `is_good` adlı yeni bir boole oluşturun.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Python’da bir değişken oluşturmak için `=` kullanın. Dizeyi tek veya çift tırnak içine aldığınızdan emin olun.
+- Python’da sadece iki boole değeri vardır: `True` ve `False`. `TRUE`, `true`, `FALSE`, `false` ve diğer versiyonlar kabul edilmez.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Float, `0.5` değerini `half` olarak kaydettiniz mi?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, `intro` değişkeninizde bir şey yanlış. Yazımı tekrar kontrol edin ve tırnak işaretlerini kullandığınızdan emin olun.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Boolean değerini büyük harfle mi yazdınız? Burada tırnak işaretlerine ihtiyacınız olmadığını unutmayın.")
 
-success_msg("Nice!")
+success_msg("Güzel!")
 ```
 
 ---
 
-## Operations with other types
+## Diğer türlerle işlemler
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Python’da değişkenler farklı türlerde olabilir. `type()` fonksiyonunu kullanarak bir değişkenin türünü görebilirsiniz. Örneğin `a` türünü görmek için `type(a)` komutunu yürütün.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Python’da farklı türler farklı şekilde davranır. Örneğin iki dizeyi topladığınızda, iki tamsayı veya iki boole değerini topladığınızda elde edeceğinizden farklı bir sonuç elde edersiniz.
 
-Time for you to test this out.
+Şimdi bunu deneme zamanı.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- `savings` ile `new_savings` değerlerini toplayıp `total_savings` değişkenine atayın.
+- Elde edilen `total_savings` türünü yazdırmak için `type()` komutunu kullanın.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- `savings + new_savings` değerini `total_savings` adlı yeni bir değişkene atayın.
+- `x` değişkeninin türünü yazdırmak için `print(type(x))` komutunu kullanın.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Önceden tanımlanmış değişkenleri değiştirmek veya kaldırmak zorunda değilsiniz."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="`total_savings` değişkenini oluşturmak için `savings` ve `new_savings`'i ekleyin."),
+    has_printout(1, not_printed_msg = "__JINJA__:`total_savings`'in türünü yazdırmak için `{{sol_call}}` kullanın.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- `intro` ile `intro` değerlerinin toplamını hesaplayın ve sonucu `doubleintro` değişkenine atayın.
+- `doubleintro` değerini yazdırın. Bu sonucu bekliyor muydunuz?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- `intro + intro` değerini `doubleintro` adlı yeni bir değişkene atayın.
+- Bir `x` değişkeni yazdırmak için komut dosyasına `print(x)` yazın.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Önceden tanımlanmış değişkenleri değiştirmenize veya kaldırmanıza gerek yok."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "`intro + intro` sonucunu `doubleintro` içinde sakladınız mı?"),
+    has_printout(0, not_printed_msg = "`doubleintro`'u yazdırmayı unutmayın.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Güzel. `intro + intro`'nun `\"Hello! How are you?\"` ve `\"Hello! How are you?\"` ifadelerinin birleştirilmesine neden olduğunu fark edin.")
 ```

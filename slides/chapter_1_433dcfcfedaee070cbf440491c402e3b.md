@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/tr-TR/2d9c60d5-c3dc-4aa2-8a55-5cfa4c55bfdf.mp3
 ---
 
-## Variables and Types
+## Değişkenler ve Türler
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+Aferin ve tekrar hoş geldin! Python’un harika bir hesap makinesi olduğu açık. Ama daha karmaşık hesaplamalar yapmak istersen, birlikte kod yazarken değerleri "kaydetmek" isteyeceksin.
 
 ---
 
-## Variable
+## Değişken
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Özel, büyük/küçük harfe duyarlı ad
 
-- Call up value through variable name{{1}}
+- Değişken adıyla değeri çağırın{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 m - 68,7 kg{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Bunu, büyük-küçük harfe duyarlı belirli bir adla bir değişken tanımlayarak yapabilirsin. Böyle bir değişkeni oluşturduğunda, daha sonra değişken adını yazarak değerine ulaşabilirsin.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Diyelim ki boyunu ve kilonu metrik birimlerle ölçtün: bir nokta yetmiş dokuz metre boyundasın ve altmış sekiz nokta yedi kilogramsın. Bu değerleri eşittir işaretiyle height ve weight adlı iki değişkene atayabilirsin:
 
-If you now type the name of the variable, height,
+Şimdi değişkenin adını, height, yazarsan,
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python bu değişken adını arar, değerini bulur ve ekrana yazdırır.
 
 ---
 
-## Calculate BMI
+## BMI Hesapla
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Şimdi Vücut Kitle İndeksi’ni, yani BMI’yi hesaplayalım. Formül şöyle, ağırlık kilogram, boy metre cinsinden. Bunu doğrudan sayılarla yapabilirsin, ama burada olduğu gibi height ve weight değişkenlerini de kullanabilirsin. Her değişken adını yazdığında, Python’dan onu değişkenin gerçek değeriyle değiştirmesini istiyorsun. weight altmış sekiz nokta yediye, height bir nokta yetmiş dokuza karşılık gelir.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+Son olarak, bu sürümde sonucu yeni bir değişkende, bmi’de saklamasını sağladık. bmi şimdi az önce hesapladığın değeri içeriyor.
 
-In Python, variables are used all the time. They help to make your code reproducible.
+Python’da değişkenler sürekli kullanılır. Kodunun tekrarlanabilir olmasına yardımcı olur.
 
 ---
 
-## Reproducibility
+## Yeniden Üretilebilirlik
 
 ```yaml
 type: FullSlide
@@ -142,11 +137,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+Diyelim ki height, weight ve bmi değişkenlerini oluşturan kod böyle bir betikte duruyor. Şimdi farklı bir kilo için bmi’yi yeniden hesaplamak istersen,
 
 ---
 
-## Reproducibility
+## Yeniden Üretilebilirlik
 
 ```yaml
 type: FullSlide
@@ -167,13 +162,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+sadece weight değişkeninin tanımını değiştir ve betiği yeniden çalıştır. weight değişkeninin değeri de değiştiği için bmi buna göre güncellenir.
 
-So far, we've only worked with numerical values, such as height and weight.
+Şimdiye kadar sadece height ve weight gibi sayısal değerlerle çalıştık.
 
 ---
 
-## Python Types
+## Python Türleri
 
 ```yaml
 type: FullSlide
@@ -199,13 +194,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+Python’da bu sayıların hepsinin belirli bir türü vardır. Bir değerin türünü type fonksiyonuyla görebilirsin. bmi değerimizin türünü görmek için, parantez içinde type ve ardından bmi yazman yeterli. Bunun float olduğunu görürsün; bu, Python’un gerçek sayıları yani tam ve kesirli kısmı olabilen sayıları temsil etme biçimidir. Python’da tamsayılar için de bir tür vardır: int, şu örnekteki gibi.
 
-To do data science, you'll need more than ints and floats, though.
+Veri bilimi yapmak için ise int ve float’tan daha fazlasına ihtiyaç duyacaksın.
 
 ---
 
-## Python Types (2)
+## Python Türleri (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +230,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python’da daha bir sürü veri türü vardır. En yaygın olanları string ve boolean’dır.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+String, Python’un metni temsil etme biçimidir. Bu örneklerde gördüğün gibi string oluşturmak için hem çift hem tek tırnak kullanabilirsin. Buradaki son değişkenin türünü yazdırırsan, string’in kısaltması olan str görürsün.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Boolean ise True ya da False olabilen bir türdür. Gündelik dilde “Evet” ve “Hayır” gibi düşünebilirsin. Örneğin verilerini filtrelerken boolean’lar çok işine yarar.
 
-There's something special about Python data types.
+Python veri türleriyle ilgili özel bir durum var.
 
 ---
 
-## Python Types (3)
+## Python Türleri (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Farklı tür = farklı davranış!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Şu iki satıra bak: biri iki tamsayıyı topluyor, diğeri iki string’i.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+Tamsayılarda değerler toplandı, string’lerde ise metinler yan yana eklendi. Artı operatörü, veri türüne göre farklı davrandı. Bu genel bir ilkedir: kodun davranışı, çalıştığın türlere bağlıdır.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+Sıradaki alıştırmalarda ilk değişkenlerini oluşturacak ve Python’un bazı veri türleriyle denemeler yapacaksın. Listelerle ilgili her şeyi anlatmak için bir sonraki videoda görüşürüz.
 
 ---
 
-## Let's practice!
+## Lass uns üben!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Hadi kod yazmaya başla ve bir sonraki bölümde daha da harika Python grafikleri oluştururken seni görmek için sabırsızlanıyorum.
