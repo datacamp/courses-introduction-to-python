@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/id-ID/43f617e9-3188-41f2-854e-44fd52246f32.mp3
 ---
 
-## Variables and Types
+## Variabel dan Tipe
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,10 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
-
+Kerja bagus, dan selamat datang kembali! Jelas bahwa Python adalah kalkulator yang hebat. Namun, jika Anda ingin melakukan perhitungan yang lebih kompleks, Anda pasti ingin "menyimpan" nilai selama Anda sedang menulis kode.
 ---
 
-## Variable
+## Variabel
 
 ```yaml
 type: FullSlide
@@ -35,11 +29,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Nama yang spesifik dan peka huruf besar-kecil
 
-- Call up value through variable name{{1}}
+- Memanggil nilai melalui nama variabel{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 m - 68,7 kg{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +48,16 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Anda bisa melakukan ini dengan mendefinisikan sebuah variabel, dengan nama tertentu yang peka terhadap huruf besar-kecil. Setelah Anda membuat (atau mendeklarasikan) variabel tersebut, Anda bisa memanggil nilainya kapan pun dengan mengetikkan nama variabel tersebut.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Misalkan Anda mengukur tinggi dan berat badan dalam satuan metrik: tinggi Anda 1.79 meter, dan berat 68.7 kilogram. Anda dapat menugaskan nilai-nilai ini ke dua variabel, bernama tinggi badan dan berat badan, dengan tanda sama-dengan:
 
-If you now type the name of the variable, height,
+Jika sekarang Anda mengetik nama variabel, tinggi badan,
 
-Python looks for the variable name, retrieves its value, and prints it out.
-
+Python mencari nama variabel itu, mengambil nilainya, dan mencetaknya.
 ---
 
-## Calculate BMI
+## Hitung Indeks Massa Tubuh (BMI)
 
 ```yaml
 type: TwoColumns
@@ -85,7 +78,7 @@ height
 1.79
 ```
 
-$$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
+$$ \text{BMI} = \frac{\text{berat badan}}{\text{tinggi badan}^2} $${{1}}
 
 `@part2`
 ```py
@@ -114,15 +107,14 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Sekarang, mari hitung Body Mass Index, atau BMI, yang dihitung seperti berikut, dengan berat dalam kilogram dan tinggi dalam meter. Anda bisa melakukannya dengan nilai sebenarnya, tetapi Anda juga bisa memakai variabel tinggi badan dan berat badan, seperti di sini. Setiap kali Anda mengetik nama variabel, Anda meminta Python menggantinya dengan nilai sebenarnya dari variabel itu, berat badan sama dengan 68.7, dan tinggi badan sama dengan 1.79.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+Terakhir, versi ini membuat Python menyimpan hasilnya dalam variabel baru, bmi. Sekarang bmi berisi nilai yang sama seperti yang Anda hitung sebelumnya.
 
-In Python, variables are used all the time. They help to make your code reproducible.
-
+Di Python, variabel digunakan sepanjang waktu. Variabel membantu membuat kode Anda dapat direproduksi.
 ---
 
-## Reproducibility
+## Kemampuan untuk direproduksi
 
 ```yaml
 type: FullSlide
@@ -142,11 +134,10 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
-
+Misalkan kode untuk membuat variabel tinggi badan, berat badan, dan bmi ada di dalam sebuah skrip, seperti ini. Jika sekarang Anda ingin menghitung ulang bmi untuk berat yang berbeda,
 ---
 
-## Reproducibility
+## Kemampuan untuk direproduksi
 
 ```yaml
 type: FullSlide
@@ -167,13 +158,12 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+Anda cukup mengubah deklarasi variabel berat badan, lalu menjalankan ulang skripnya. Nilai bmi akan ikut berubah, karena nilai variabel berat badan juga berubah.
 
-So far, we've only worked with numerical values, such as height and weight.
-
+Sejauh ini, kita hanya bekerja dengan nilai numerik, seperti tinggi dan berat.
 ---
 
-## Python Types
+## Tipe-tipe Python
 
 ```yaml
 type: FullSlide
@@ -199,13 +189,12 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+Di Python, angka-angka ini punya tipe tertentu. Anda bisa memeriksa tipe suatu nilai dengan fungsi type. Untuk melihat tipe dari nilai bmi kita, cukup tulis type lalu bmi di dalam tanda kurung. Anda bisa melihat bahwa tipenya float, cara Python merepresentasikan bilangan riil, yaitu bilangan yang dapat memiliki bagian bulat dan bagian pecahan. Python juga memiliki tipe untuk bilangan bulat: int, seperti contoh ini.
 
-To do data science, you'll need more than ints and floats, though.
-
+Namun, untuk melakukan data sains, Anda akan butuh lebih dari sekadar int dan float.
 ---
 
-## Python Types (2)
+## Tipe-tipe Python (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +224,16 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python memiliki banyak sekali tipe data lainnya. Tipe data yang paling umum adalah string dan boolean.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+String adalah cara Python merepresentasikan teks. Anda bisa menggunakan tanda kutip ganda maupun tunggal untuk membuat string, seperti yang terlihat pada contoh ini. Jika Anda mencetak tipe variabel terakhir di sini, Anda akan melihat tipenya adalah str, singkatan dari string.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Boolean adalah tipe yang hanya bisa bernilai True atau False. Anda bisa menganggapnya seperti "Ya" dan "Tidak" dalam bahasa sehari-hari. Boolean akan sangat berguna nanti, misalnya untuk melakukan operasi penyaringan pada data Anda.
 
-There's something special about Python data types.
-
+Ada hal khusus tentang tipe data Python.
 ---
 
-## Python Types (3)
+## Tipe-tipe Python (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +257,17 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Jenis yang berbeda = perilaku yang berbeda!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Perhatikan baris kode ini yang menjumlahkan dua integer, lalu baris kode ini yang menjumlahkan dua string.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+Dua integer tersebut nilainya dijumlahkan, sedangkan untuk dua string teksnya digabungkan menjadi satu. Operator plus berperilaku berbeda untuk tipe data yang berbeda. Ini adalah prinsip umum: bagaimana kode berperilaku tergantung pada tipe yang Anda gunakan.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
-
+Dalam latihan setelah ini, Anda akan membuat variabel pertama Anda dan bereksperimen dengan beberapa tipe data Python. Sampai jumpa di video berikutnya untuk membahas semuanya tentang daftar.
 ---
 
-## Let's practice!
+## Ayo berlatih!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +275,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Ayo mulai melakukan koding, dan saya tidak sabar bertemu Anda di bab berikutnya saat Anda membangun grafik Python yang lebih menakjubkan lagi.

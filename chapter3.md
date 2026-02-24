@@ -1,22 +1,23 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
+title_meta: Bab 3
+title: Fungsi dan Paket
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  Anda akan belajar menggunakan fungsi, metode, dan paket untuk memanfaatkan
+  kode yang telah ditulis oleh pengembang Python hebat secara efisien. Tujuannya
+  adalah mengurangi jumlah kode yang Anda butuhkan untuk menyelesaikan masalah
+  yang menantang!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: Fungsi
   - nb_of_exercises: 4
-    title: Methods
+    title: Metode
   - nb_of_exercises: 4
-    title: Packages
+    title: Paket
 ---
 
-## Functions
+## Fungsi
 
 ```yaml
 type: VideoExercise
@@ -29,7 +30,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## Fungsi yang familier
 
 ```yaml
 type: NormalExercise
@@ -40,23 +41,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Secara bawaan, Python menyediakan sejumlah fungsi bawaan untuk memudahkan pekerjaan Anda sebagai ilmuwan data. Anda sudah mengenal dua di antaranya: `print()` dan `type()`. Ada juga fungsi seperti `str()`, `int()`, `bool()` dan `float()` untuk beralih antar tipe data. Anda dapat mempelajarinya [di sini.](https://docs.python.org/3/library/functions.html) Ini juga termasuk fungsi bawaan.
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+Memanggil sebuah fungsi itu mudah. Untuk mendapatkan tipe dari `3.0` dan menyimpan outputnya sebagai variabel baru, `result`, Anda bisa menggunakan berikut ini:
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- Gunakan `print()` bersama `type()` untuk mencetak tipe dari `var1`.
+- Gunakan `len()` untuk mendapatkan [panjang daftar](https://docs.python.org/3/library/functions.html#len) `var1`. Bungkus dengan pemanggilan `print()` agar langsung tercetak.
+- Gunakan `int()` untuk mengonversi `var2` menjadi [integer](https://docs.python.org/3/library/functions.html#int). Simpan keluarannya sebagai `out2`.
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- Panggil fungsi `type()` seperti ini: `type(var1)`.
+- Panggil `print()` seperti yang sudah sering Anda lakukan. Cukup letakkan variabel yang ingin Anda cetak di dalam tanda kurung.
+- `int(x)` akan mengonversi `x` menjadi bilangan bulat (integer).
 
 `@pre_exercise_code`
 ```{python}
@@ -97,26 +98,26 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Kamu tidak perlu mengubah atau menghapus variabel yang sudah ditentukan."
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__:Pastikan untuk mencetak %s dari `var1` dengan `{{sol_call}}`."
+Ex().has_printout(0, not_printed_msg = patt % 'tipe')
+Ex().has_printout(1, not_printed_msg = patt % 'panjang')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "Apakah kamu sudah menggunakan `int()` untuk membuat integer dari `var2`?"
+int_incorr_msg = "Apakah kamu sudah memasukkan `var2` ke dalam `int()`?"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="Kamu sudah memanggil `int()` dengan benar; sekarang pastikan untuk menetapkan hasil dari pemanggilan ini ke `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("Kerja bagus! Fungsi `len()` sangat berguna; fungsi ini juga bekerja pada string untuk menghitung jumlah karakter!")
 ```
 
 ---
 
-## Help!
+## Tolong!
 
 ```yaml
 type: MultipleChoiceExercise
@@ -127,27 +128,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+Mungkin Anda sudah tahu nama suatu fungsi Python, tetapi Anda masih harus mencari tahu cara menggunakannya. Ironisnya, Anda harus meminta informasi tentang suatu fungsi dengan fungsi lain: `help()`. Khusus di IPython, Anda juga dapat menggunakan `?` sebelum nama fungsi.
 
-To get help on the `max()` function, for example, you can use one of these calls:
+Misalnya, untuk mendapatkan bantuan pada fungsi `max()`, Anda dapat menggunakan salah satu pemanggilan berikut:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Gunakan IPython Shell untuk membuka [dokumentasi](https://docs.python.org/3/library/functions.html#pow) tentang `pow()`. Lakukan ini dengan mengetik `?pow` atau `help(pow)` lalu tekan **Enter**.
 
-Which of the following statements is true?
+Mana dari pernyataan berikut yang benar?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` menerima tiga argumen: `base`, `exp`, dan `mod`. Tanpa `mod`, fungsi akan mengembalikan error.
+- `pow()` menerima tiga argumen wajib: `base`, `exp`, dan `None`.
+- `pow()` membutuhkan argumen `base` dan `exp`; `mod` bersifat opsional.
+- `pow()` menerima dua argumen: `exp` dan `mod`. Jika `exp` hilang akan terjadi error.
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- Argumen opsional diatur dengan `=` ke nilai bawaan yang akan digunakan oleh fungsi jika argumen tersebut tidak ditentukan.
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +157,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "Tidak tepat. `mod` memiliki nilai default yang akan digunakan jika kamu tidak menentukan nilai."
+msg2 = "Salah. `None` adalah nilai default untuk argumen `mod`."
+msg3 = "Sempurna! Menggunakan `help()` dapat membantumu memahami cara kerja fungsi, memaksimalkan potensinya!"
+msg4 = "Salah. `pow()` membutuhkan tiga argumen, salah satunya memiliki nilai default."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## Berbagai argumen
 
 ```yaml
 type: NormalExercise
@@ -176,25 +177,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+Pada latihan sebelumnya, Anda mengidentifikasi argumen opsional dengan melihat dokumentasi menggunakan `help()`. Sekarang Anda akan menerapkannya untuk mengubah perilaku fungsi `sorted()`.
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+Lihat [dokumentasi](https://docs.python.org/3/library/functions.html#sorted) `sorted()` dengan mengetik `help(sorted)` di IPython Shell.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+Anda akan melihat bahwa `sorted()` menerima tiga argumen: `iterable`, `key`, dan `reverse`. Pada latihan ini, Anda hanya perlu menentukan `iterable` dan `reverse`, bukan `key`.
 
-Two lists have been created for you.
+Dua daftar telah dibuat untuk Anda.
 
-Can you paste them together and sort them in descending order?
+Apakah Anda dapat menggabungkan dan mengurutkannya secara menurun?
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- Gunakan `+` untuk menggabungkan isi `first` dan `second` ke dalam daftar baru: `full`.
+- Panggil `sorted()` pada `full` dan tentukan argumen `reverse` bernilai `True`. Simpan daftar yang sudah diurutkan sebagai `full_sorted`.
+- Akhiri dengan mencetak `full_sorted`.
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- Jumlahkan `first` dan `second` seolah-olah keduanya adalah angka dan simpan hasilnya ke `full`.
+- Gunakan `sorted()` dengan dua input: `full` dan `reverse=True`.
+- Untuk mencetak sebuah variabel, gunakan `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +236,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "Kamu tidak perlu mengubah atau menghapus variabel `first` dan `second` yang sudah ada."
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="Pastikan kamu menetapkan hasil pemanggilan `sorted()` ke `full_sorted`."),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("Keren! Lanjut ke video tentang metode Python.")
 ```
 
 ---
 
-## Methods
+## Metode
 
 ```yaml
 type: VideoExercise
@@ -266,7 +267,7 @@ xp: 50
 
 ---
 
-## String Methods
+## Metode String
 
 ```yaml
 type: NormalExercise
@@ -277,19 +278,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+String memiliki banyak metode. Ikuti instruksi dengan saksama untuk menemukan beberapa di antaranya. Jika Anda ingin mempelajarinya lebih rinci, Anda selalu bisa mengetik `help(str)` di IPython Shell.
 
-A string `place` has already been created for you to experiment with.
+Sebuah string `place` telah dibuat untuk Anda coba.
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- Gunakan [metode](https://docs.python.org/3/library/stdtypes.html#str.upper) `.upper()` pada `place` dan simpan hasilnya ke `place_up`. Gunakan sintaks pemanggilan metode yang Anda pelajari di video sebelumnya.
+- Cetak `place` dan `place_up`. Apakah keduanya berubah?
+- Cetak jumlah huruf o pada variabel `place` dengan memanggil `.count()` pada `place` dan meneruskan huruf `'o'` sebagai masukan ke metode tersebut. Kita membahas tentang variabel `place`, bukan kata "place"!
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- Anda dapat memanggil metode `.upper()` pada `place` tanpa input tambahan.
+- Untuk mencetak variabel `x`, Anda dapat menulis `print(x)`.
+- Pastikan Anda membungkus pemanggilan `place.count(____)` dalam fungsi `print()` agar hasilnya tercetak.
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +331,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Kamu tidak perlu mengubah atau menghapus variabel yang sudah ditentukan."
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "Jangan lupa untuk mencetak `%s`."
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="Tetapkan hasil dari pemanggilan `place.upper()` kamu ke `place_up`."),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "Kamu sudah menghitung jumlah o di `place` dengan benar; sekarang pastikan untuk membungkus pemanggilan `place.count('o')` dalam fungsi `print()` untuk mencetak hasilnya."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Bagus! Perhatikan dari hasil cetakan bahwa metode `upper()` tidak mengubah objek yang dipanggil. Ini akan berbeda untuk daftar di latihan berikutnya!")
 ```
 
 ---
 
-## List Methods
+## Metode Daftar
 
 ```yaml
 type: NormalExercise
@@ -365,20 +366,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+String bukan satu-satunya tipe Python yang memiliki metode. Daftar, float, integer, dan boolean juga merupakan tipe yang dilengkapi dengan banyak metode berguna. Dalam latihan ini, Anda akan bereksperimen dengan:
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()`, untuk mendapatkan indeks elemen pertama dari sebuah daftar yang cocok dengan masukan, dan
+- `.count()`, untuk mendapatkan berapa kali sebuah elemen muncul dalam daftar.
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+Anda akan bekerja dengan daftar yang berisi luas berbagai bagian rumah: `areas`.
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- Gunakan metode `.index()` untuk mendapatkan indeks elemen di `areas` yang bernilai `20.0`. Cetak indeks ini.
+- Panggil `.count()` pada `areas` untuk mengetahui berapa kali `9.50` muncul dalam daftar. Sekali lagi, cetak saja angkanya.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- Untuk mencetak indeks, bungkus pemanggilan `areas.index(___)` dalam fungsi `print()`.
+- Untuk mencetak berapa kali sebuah elemen `x` muncul dalam daftar, bungkus pemanggilan `areas.count(___)` dalam fungsi `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -411,7 +412,7 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "Kamu tidak perlu mengubah atau menghapus daftar `areas` yang sudah ditentukan."
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
@@ -420,12 +421,12 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("Bagus! Ini adalah contoh metode `list` yang tidak mengubah daftar yang mereka panggil.")
 ```
 
 ---
 
-## List Methods (2)
+## Metode Daftar (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +437,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+Sebagian besar metode daftar akan mengubah daftar tempat metode tersebut dipanggil. Contohnya:
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()`, yang menambahkan sebuah elemen ke daftar tempat metode ini dipanggil,
+- `.remove()`, yang [menghapus](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) elemen pertama dari daftar yang cocok dengan input, dan
+- `.reverse()`, yang [membalik](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) urutan elemen pada daftar tempat metode ini dipanggil.
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+Anda akan bekerja dengan daftar yang berisi area bagian-bagian rumah: `areas`.
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- Gunakan `.append()` dua kali untuk menambahkan ukuran paviliun dekat kolam renang dan garasi lagi: masing-masing `24.5` dan `15.45`. Pastikan menambahkannya dalam urutan ini.
+- Cetak `areas`
+- Gunakan metode `.reverse()` untuk membalik urutan elemen dalam `areas`.
+- Cetak `areas` sekali lagi.
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- Untuk instruksi pertama, gunakan pemanggilan `areas.append(___)` sebanyak dua kali.
+- Untuk mencetak variabel `x`, cukup tulis `print(x)`.
+- Metode `.reverse()` tidak memerlukan input tambahan; cukup gunakan notasi titik dan tanda kurung kosong: `.reverse()`.
+- Untuk mencetak variabel `x`, cukup tulis `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +510,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("Mantap!")
 ```
 
 ---
 
-## Packages
+## Paket
 
 ```yaml
 type: VideoExercise
@@ -527,7 +528,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## Impor paket
 
 ```yaml
 type: NormalExercise
@@ -538,24 +539,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+Misalkan Anda ingin menghitung keliling dan luas sebuah lingkaran. Berikut rumusnya:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+Alih-alih mengetikkan angka untuk `pi`, Anda dapat menggunakan paket `math` yang berisi nilai tersebut.
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+Sebagai referensi, `**` adalah simbol pemangkatan. Sebagai contoh, `3**4` berarti `3` pangkat `4` dan menghasilkan `81`.
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- Impor paket `math`.
+- Gunakan `math.pi` untuk menghitung keliling lingkaran dan simpan dalam `C`.
+- Gunakan `math.pi` untuk menghitung luas lingkaran dan simpan dalam `A`.
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- Anda bisa langsung menggunakan `import math`, lalu merujuk `pi` dengan `math.pi`.
+- Gunakan persamaan pada teks soal untuk mencari `C`. Gunakan `*`.
+- Gunakan persamaan pada teks soal untuk mencari `A`. Gunakan `*` dan `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +595,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "Perhitungan `%s` kamu tidak terlalu benar. Pastikan untuk menggunakan `math.pi`."
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +603,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Tetap gunakan `{{sol_call}}` di sana untuk mencetak keliling."),
+  has_printout(1, not_printed_msg = "__JINJA__:Tetap gunakan `{{sol_call}}` di sana untuk mencetak area.")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("Bagus! Jika kamu tahu cara menangani fungsi dari paket, kekuatan banyak programmer Python ada di ujung jari kamu!")
 ```
 
 ---
 
-## Selective import
+## Impor selektif
 
 ```yaml
 type: NormalExercise
@@ -622,22 +623,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+Impor umum, seperti `import math`, membuat **semua** fungsi dari paket `math` tersedia untuk Anda. Namun, jika Anda hanya akan menggunakan bagian tertentu dari sebuah paket, Anda dapat membuat impor yang lebih selektif:
 
 ```
-from math import pi
+dari math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+Coba lakukan hal yang sama lagi, tetapi kali ini hanya gunakan `pi`.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- Lakukan impor selektif dari paket `math` di mana Anda hanya mengimpor fungsi `pi`.
+- Gunakan `pi` untuk menghitung keliling lingkaran dan simpan dalam `C`.
+- Gunakan `pi` untuk menghitung luas lingkaran dan simpan dalam `A`.
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- Gunakan `from math import pi` untuk melakukan impor selektif.
+- Sekarang, Anda dapat menggunakan `pi` secara langsung!
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +677,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "Perhitungan `%s` kamu belum benar. Pastikan untuk hanya menggunakan `pi`."
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "Pastikan untuk mengimpor `pi` dari paket `math`. Kamu harus menggunakan notasi `from ___ import ___`.",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +687,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Pertahankan `{{sol_call}}` di sana untuk mencetak keliling."),
+  has_printout(1, not_printed_msg = "__JINJA__:Pertahankan `{{sol_call}}` di sana untuk mencetak luas.")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("Bagus! Lanjut ke latihan berikutnya.")
 ```
 
 ---
 
-## Different ways of importing
+## Berbagai cara melakukan import
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +707,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Ada beberapa cara untuk mengimpor paket dan modul ke dalam Python. Bergantung pada pemanggilan import, Anda harus menggunakan kode Python yang berbeda.
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Misalkan Anda ingin menggunakan [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, yang berada di subpaket `linalg` dari paket `scipy`. Anda ingin dapat menggunakan fungsi ini sebagai berikut:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+Pernyataan `import` mana yang Anda perlukan agar kode di atas dapat dijalankan tanpa error?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +724,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Coba berbagai pernyataan import di shell IPython dan lihat mana yang membuat baris `my_inv([[1, 2], [3, 4]])` berjalan tanpa error. Tekan **enter** untuk menjalankan kode yang Anda ketik.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +733,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "Salah, coba lagi. Coba pernyataan impor yang berbeda di shell IPython dan lihat mana yang menyebabkan baris `my_inv([[1, 2], [3, 4]])` berjalan tanpa kesalahan."
+msg4 = "Benar! Kata `as` memungkinkan kamu membuat nama lokal untuk fungsi yang kamu impor: `inv()` sekarang tersedia sebagai `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```

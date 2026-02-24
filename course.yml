@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Pengantar Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python adalah bahasa pemrograman tujuan umum yang semakin populer untuk data
+  sains. Perusahaan di seluruh dunia menggunakan Python untuk menggali wawasan
+  dari data mereka dan meraih keunggulan kompetitif. Berbeda dari tutorial
+  Python lainnya, kursus ini berfokus pada Python khusus untuk data sains. Dalam
+  kursus Pengantar Python ini, Anda akan mempelajari cara-cara yang efektif
+  untuk menyimpan dan memanipulasi data, serta alat data sains yang membantu
+  untuk mulai melakukan analisis Anda sendiri. Mulailah kurikulum Python daring
+  DataCamp sekarang.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  Video dilengkapi transkrip langsung, yang dapat diakses dengan mengklik "Show
+  transcript" di kiri bawah video.
 
 
-  The course glossary can be found on the right in the resources section.
+  Glosarium kursus dapat ditemukan di sebelah kanan pada bagian sumber daya.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Untuk memperoleh kredit CPE, Anda perlu menyelesaikan kursus dan mencapai skor
+  70% pada penilaian yang memenuhi syarat. Anda dapat menavigasi ke penilaian
+  dengan mengklik pengumuman kredit CPE di sebelah kanan.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

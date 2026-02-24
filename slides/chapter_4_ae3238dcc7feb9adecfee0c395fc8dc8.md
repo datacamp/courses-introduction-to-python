@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/id-ID/2154dd4d-3e19-4c09-b823-b09c2eb8b9bc.mp3
 ---
 
-## 2D NumPy Arrays
+## Array NumPy 2D
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,10 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
-
+Kerja bagus, Anda menakjubkan! Sekarang mari kita buat ulang array numpy dari video sebelumnya.
 ---
 
-## Type of NumPy Arrays
+## Tipe Array NumPy
 
 ```yaml
 type: FullSlide
@@ -59,11 +53,10 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
-
+Kalau Anda menanyakan tipe dari banyak array ini, Python memberi tahu bahwa itu numpy.ndarray. Titik numpy menunjukkan bahwa ini adalah tipe yang didefinisikan di paket numpy. ndarray adalah singkatan dari array berdimensi-n. Array np_tinggi badan dan np_berat badan adalah array satu dimensi, tetapi sangat mungkin membuat array 2 dimensi, 3 dimensi, bahkan tujuh dimensi! Namun, di video ini kita tetap fokus pada 2 dimensi.
 ---
 
-## 2D NumPy Arrays
+## Array NumPy 2D
 
 ```yaml
 type: FullSlide
@@ -104,14 +97,13 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Anda dapat membuat array numpy 2 dimensi dari daftar Python biasa dari banyak daftar. Mari coba membuat satu array numpy untuk semua data tinggi dan berat keluarga Anda, seperti ini.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Jika Anda mencetak np_2d sekarang, Anda akan melihat bahwa ini adalah struktur data berbentuk persegi panjang: Setiap subdaftar pada daftar tersebut sesuai dengan satu baris di array numpy dua dimensi. Dari np_2d.shape, Anda bisa melihat bahwa kita memang memiliki 2 baris dan 5 kolom. shape adalah atribut dari array np2d, yang dapat memberi Anda lebih banyak informasi tentang seperti apa struktur datanya.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Perhatikan bahwa sintaks untuk mengakses atribut mirip seperti memanggil metode, tetapi keduanya tidak sama! Ingat bahwa metode memiliki tanda kurung setelahnya, dan seperti yang Anda lihat di sini, atribut tidak.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
-
+Untuk array dua dimensi, aturan NumPy juga berlaku: sebuah array hanya boleh berisi satu jenis tipe. Jika Anda mengubah satu float menjadi string, semua elemen array akan dikonversi menjadi string agar array tetap homogen.
 ---
 
 ## Subsetting
@@ -139,12 +131,11 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Anda bisa membayangkan array numpy 2 dimensi sebagai versi daftar yang lebih baik dari banyak daftar: Anda dapat melakukan perhitungan pada array, seperti yang saya tunjukkan sebelumnya, dan Anda bisa melakukan cara-cara subset yang lebih canggih.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Misalkan Anda menginginkan baris pertama, lalu elemen ketiga pada baris tersebut. Untuk memilih barisnya, Anda perlu indeks 0 di dalam tanda kurung siku. Jangan lupa bahwa pengindeksan dimulai dari nol.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
-
+Untuk kemudian memilih elemen ketiga, Anda bisa meneruskan pemanggilan yang sama dengan sepasang kurung siku lagi, kali ini dengan indeks 2,
 ---
 
 ## Subsetting
@@ -181,10 +172,9 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+seperti ini. Pada dasarnya Anda memilih barisnya, lalu dari baris tersebut melakukan seleksi lain lagi.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
-
+Ada juga cara alternatif untuk melakukan subset, menggunakan satu pasang kurung siku dan sebuah koma. Pemanggilan ini mengembalikan nilai yang persis sama seperti sebelumnya. Nilai sebelum koma menentukan baris, nilai setelah koma menentukan kolom. Perpotongan baris dan kolom yang Anda tentukan akan dikembalikan. Setelah Anda terbiasa, sintaks ini terasa lebih intuitif dan membuka lebih banyak kemungkinan.
 ---
 
 ## Subsetting
@@ -222,15 +212,14 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Misalkan Anda ingin memilih tinggi dan berat anggota keluarga kedua dan ketiga. Anda menginginkan kedua baris, jadi gunakan tanda titik-dua sebelum koma. Anda hanya ingin kolom kedua dan ketiga, jadi masukkan indeks 1 sampai 3 setelah koma. Ingat bahwa indeks ketiga tidak termasuk di sini. Perpotongannya memberi kita array 2 dimensi dengan dua baris dan dua kolom:
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Demikian pula, Anda dapat memilih berat badan semua anggota keluarga seperti ini: Anda hanya ingin baris kedua, jadi letakkan 1 sebelum koma. Anda menginginkan semua kolom, jadi gunakan titik-dua setelah koma. Perpotongannya memberi kita seluruh baris kedua.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
-
+Terakhir, array numpy dua dimensi memungkinkan Anda melakukan perhitungan elemen-demi-elemen, sama seperti yang Anda lakukan dengan array numpy 1 dimensi. Itu hal yang
 ---
 
-## Let's practice!
+## Ayo berlatih!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +227,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+bisa Anda coba di latihan, bersama dengan membuat dan melakukan subset pada array numpy 2 dimensi! Seru, kan?
