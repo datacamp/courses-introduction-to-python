@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 2
-title: Python Lists
+title_meta: Chương 2
+title: List trong Python
 description: >-
-  Learn to store, access, and manipulate data in lists: the first step toward
-  efficiently working with huge amounts of data.
+  Học cách lưu trữ, truy cập và thao tác dữ liệu trong list: bước đầu để làm
+  việc hiệu quả với lượng dữ liệu lớn.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Python Lists
+    title: List trong Python
   - nb_of_exercises: 4
-    title: Subsetting Lists
+    title: Trích xuất phần tử trong List
   - nb_of_exercises: 5
-    title: Manipulating Lists
+    title: Thao tác với List
 ---
 
-## Python Lists
+## List trong Python
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ a0530c4542f10988847b2dbb91f717c3
 
 ---
 
-## Create a list
+## Tạo một list
 
 ```yaml
 type: NormalExercise
@@ -39,7 +39,7 @@ skills:
   - 2
 ```
 
-A list is a **compound data type**; you can group values together, like this:
+List là một **kiểu dữ liệu phức hợp**; bạn có thể gom nhiều giá trị lại với nhau, như sau:
 
 ```
 a = "is"
@@ -47,17 +47,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
+Sau khi đo chiều cao các thành viên trong gia đình, bạn quyết định thu thập thêm một số thông tin về ngôi nhà bạn đang ở. Diện tích của các phòng khác nhau được lưu ở các biến riêng trong bài tập này.
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the `print()` function.
+- Tạo một list, `areas`, chứa diện tích của hành lang (`hall`), bếp (`kit`), phòng khách (`liv`), phòng ngủ (`bed`) và phòng tắm (`bath`), theo đúng thứ tự này. Hãy dùng các biến đã được định nghĩa sẵn.
+- Hiển thị `areas` bằng hàm `print()`.
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Make sure to use square brackets `[]` rather than parentheses `()`.
-- You don't need to use quotation marks when storing variables within a list.
-- Type `print(areas)` to print out the list when submitting.
+- Bạn có thể dùng các biến có sẵn để tạo list: `areas = [hall, kit, ...]`.
+- Dùng dấu ngoặc vuông `[]` thay vì dấu ngoặc tròn `()`.
+- Không cần dùng dấu ngoặc kép khi lưu biến bên trong một list.
+- Gõ `print(areas)` để hiển thị list khi nộp bài.
 
 `@pre_exercise_code`
 ```{python}
@@ -96,11 +96,11 @@ print(areas)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
+predef_msg = "Đừng xóa hoặc chỉnh sửa các biến được định nghĩa trước!"
+areas_msg = "Hãy định nghĩa `areas` là danh sách chứa tất cả các biến diện tích, theo thứ tự đúng: `[hall, kit, liv, bed, bath]`. Hãy cẩn thận với lỗi chính tả. Danh sách không nên chứa bất kỳ thứ gì khác!"
 
 Ex().check_correct(
-    has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?"),
+    has_printout(0, not_printed_msg = "__JINJA__:Bạn đã sử dụng `{{sol_call}}` để in ra danh sách `areas` ở cuối tập lệnh của bạn chưa?"),
     check_correct(
         check_object("areas").has_equal_value(incorrect_msg = areas_msg),
         multi(
@@ -113,12 +113,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("Tuyệt! Một danh sách tốt hơn nhiều ở đây, phải không?")
 ```
 
 ---
 
-## Create lists with different types
+## Tạo list với nhiều kiểu dữ liệu khác nhau
 
 ```yaml
 type: NormalExercise
@@ -129,19 +129,19 @@ skills:
   - 2
 ```
 
-Although it's not really common, a list can also contain a mix of Python types including strings, floats, and booleans.
+Tuy không quá phổ biến, một list vẫn có thể chứa nhiều kiểu dữ liệu trong Python như string, float và boolean.
 
-You're now going to add the room names to your list, so you can easily see both the room name and size together.
+Giờ bạn thêm tên các phòng vào list để có thể thấy cả tên phòng và diện tích cùng nhau.
 
-Some of the code has been provided for you to get you started. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+Đã có sẵn một phần code cho bạn bắt đầu viết. Lưu ý! `"bathroom"` là một chuỗi, còn `bath` là một biến đại diện cho số thực `9.50` mà bạn đã khai báo trước đó.
 
 `@instructions`
-- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- Hoàn thiện đoạn code tạo list `areas`. Tạo list sao cho mỗi phòng xuất hiện theo thứ tự: trước là tên phòng dạng string, sau đó là diện tích phòng. Nói cách khác, hãy thêm các string `"hallway"`, `"kitchen"` và `"bedroom"` vào đúng vị trí.
+- Hiển thị kết quả `areas` lần nữa; lần này có nhiều thông tin hơn không?
 
 `@hint`
-- The first four elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
-- A string will need to be in quotation marks `""`.
+- Bốn phần tử đầu tiên của danh sách `areas` được viết là `["hallway", hall, "kitchen", kit, ...`.
+- String phải đặt trong dấu ngoặc kép `""`.
 
 `@pre_exercise_code`
 ```{python}
@@ -181,22 +181,22 @@ print(areas)
 `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
+predef_msg = "Đừng xóa hoặc chỉnh sửa các biến được định nghĩa trước!"
+areas_msg = "Bạn đã không gán giá trị đúng cho `areas`. Hãy xem lại hướng dẫn. Đảm bảo đặt tên phòng trước biến chứa diện tích mỗi lần. Thứ tự rất quan trọng ở đây! Hãy cẩn thận với lỗi chính tả."
 
 Ex().check_correct(
   check_object("areas").has_equal_value(incorrect_msg = areas_msg),
   multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Bạn đã sử dụng `{{sol_call}}` để in ra danh sách `areas` ở cuối tập lệnh của bạn chưa?")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("Tuyệt vời! Danh sách này chứa cả chuỗi và số thực, nhưng điều đó không phải là vấn đề đối với Python!")
 ```
 
 ---
 
-## List of lists
+## List chứa list
 
 ```yaml
 type: NormalExercise
@@ -207,20 +207,20 @@ skills:
   - 2
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+Khi làm khoa học dữ liệu, bạn sẽ phải thường xuyên làm việc với rất nhiều dữ liệu, và việc nhóm các dữ liệu liên quan với nhau lại là hợp lý.
 
-Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
+Thay vì tạo một danh sách chứa cả string và float để biểu thị tên và diện tích các phòng trong nhà, bạn có thể tạo một list gồm nhiều list con. 
 
-Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+Nhớ rằng: `"hallway"` là một string, còn `hall` là một biến đại diện cho float `11.25` mà bạn đã gán trước đó.
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
+- Hoàn thiện list chứa list để có cả dữ liệu về phòng ngủ và phòng tắm. Chú ý nhập theo đúng thứ tự!
+- Hiển thị `house`; bạn thấy cấu trúc dữ liệu theo cách này có hợp lý hơn không?
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- Remember to include a comma `,` after each sublist.
-- To print a variable `x`, write `print(x)` on a new line.
+- Thêm các _sublist_ vào danh sách `house` bằng cách thêm `["bedroom", bed]` và `["bathroom", bath]` bên trong dấu ngoặc vuông.
+- Nhớ đặt dấu phẩy `,` sau mỗi sublist.
+- Để in một biến `x`, viết `print(x)` trên một dòng mới.
 
 `@pre_exercise_code`
 ```{python}
@@ -267,8 +267,8 @@ print(house)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
+predef_msg = "Không được xóa hoặc chỉnh sửa các biến được định nghĩa trước!"
+house_msg = "Bạn đã không gán giá trị đúng cho `house`. Hãy xem lại hướng dẫn. Mở rộng danh sách các danh sách để nó bao gồm một danh sách cho mỗi cặp tên phòng và diện tích phòng. Chú ý thứ tự và lỗi chính tả!"
 
 Ex().check_correct(
     check_object("house").has_equal_value(incorrect_msg = house_msg),
@@ -281,14 +281,14 @@ Ex().check_correct(
     )
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Bạn đã sử dụng `{{sol_call}}` để in ra nội dung của `house` chưa?")
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("Tuyệt vời! Hãy sẵn sàng để học về việc chia nhỏ danh sách!")
 ```
 
 ---
 
-## Subsetting Lists
+## Trích xuất phần tử từ list
 
 ```yaml
 type: VideoExercise
@@ -301,7 +301,7 @@ fc15ba5cb9485456df8589130b519ea3
 
 ---
 
-## Subset and conquer
+## Trích xuất và xử lý dữ liệu
 
 ```yaml
 type: NormalExercise
@@ -312,26 +312,27 @@ skills:
   - 2
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+Trích xuất phần tử từ list Python thì quá dễ. Xem ví dụ bên dưới: tạo list `x` rồi chọn "b" từ list đó. Hãy nhớ đây là phần tử thứ hai, nên có index 1. Bạn cũng có thể dùng index âm.
 
 ```
 x = ["a", "b", "c", "d"]
 x[1]
-x[-3] # same result!
+x[-3] # kết quả tương tự!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+
+Bạn còn nhớ list `areas` khi nãy, gồm cả string và float không? Định nghĩa của nó đã có sẵn trong script. Bạn hãy thêm đoạn code đúng để thực hành trích xuất phần tử trong Python.
 
 `@instructions`
-- Print out the second element from the `areas` list (it has the value `11.25`).
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room (`20.0`) and print it out.
+- Hiển thị phần tử thứ hai của danh sách `areas` (giá trị là `11.25`).
+- Trích xuất và hiển thị phần tử cuối cùng của `areas`, là `9.50`. Ở đây dùng index âm sẽ hợp lý. 
+- Chọn số biểu thị diện tích phòng khách (`20.0`) và hiển thị kết quả ra.
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`.
-- Use `x[-1]` to select the last element of a list `x`.
-- Make sure to wrap your subsetting operations in a `print()` call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
+- Dùng `x[1]` để chọn phần tử thứ hai của list `x`.
+- Dùng `x[-1]` để chọn phần tử cuối cùng của list `x`.
+- Nhớ đặt phép lấy phần tử bên trong lệnh `print()`.
+- Số biểu thị diện tích phòng khách là phần tử thứ 6 trong list, nên bạn cần `[5]` ở đây. Nếu là `area[4]` kết quả trả về sẽ là một string đấy!
 
 `@pre_exercise_code`
 ```{python}
@@ -370,17 +371,17 @@ print(areas[5])
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Đừng xóa hoặc chỉnh sửa danh sách `areas` được định nghĩa trước."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
-Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
-Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
-success_msg("Good job!")
+Ex().has_printout(0, not_printed_msg = "Hãy xem lại mã của bạn để in ra phần tử thứ hai trong `areas`, nằm ở chỉ số `1`.")
+Ex().has_printout(1, not_printed_msg = "Hãy xem lại mã của bạn để in ra phần tử cuối cùng trong `areas`, nằm ở chỉ số `-1`.")
+Ex().has_printout(2, not_printed_msg = "Hãy xem lại mã của bạn để in ra diện tích của phòng khách. Nó nằm ở chỉ số `5`.")
+success_msg("Làm tốt lắm!")
 ```
 
 ---
 
-## Slicing and dicing
+## Cắt và chọn dữ liệu (Slicing and dicing)
 
 ```yaml
 type: NormalExercise
@@ -391,23 +392,23 @@ skills:
   - 2
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+Không chỉ chọn từng giá trị đơn lẻ từ một list, bạn còn có thể _slice_ list của mình, tức là chọn nhiều phần tử cùng lúc. Cú pháp như sau:
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
+Index `start` sẽ được tính, còn index `end` thì _không_. Tuy nhiên, bạn cũng có thể bỏ qua các index này. Nếu không chỉ định index `start`, Python sẽ hiểu bạn muốn slice từ đầu list.
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-- Print both `downstairs` and `upstairs` using `print()`.
+- Dùng kĩ thuật slice để tạo list `downstairs` chứa 6 phần tử đầu tiên của `areas`.
+- Tạo `upstairs` là 4 phần tử cuối của `areas`. Lần này, hãy bỏ qua index `end`để đơn giản hoá dòng code. 
+- Dùng `print()` để hiển thị cả `downstairs` và `upstairs`.
 
 `@hint`
-- Use the brackets `[0:6]` to get the first six elements of a list.
-- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
-- Add two `print()` calls to print out `downstairs` and `upstairs`.
+- Dùng dấu ngoặc `[0:6]` để lấy 6 phần tử đầu tiên của một list.
+- Để lấy tất cả trừ 5 phần tử đầu tiên của một list `l`, bạn dùng `l[5:]`.
+- Thêm hai lệnh `print()` để in `downstairs` và `upstairs`.
 
 `@pre_exercise_code`
 ```{python}
@@ -448,22 +449,22 @@ print(upstairs)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Không được xóa hoặc chỉnh sửa danh sách `areas` đã được định nghĩa trước."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
+patt = "`%s` không chính xác. Sử dụng `areas[%s]` và cắt chuỗi để chọn các phần tử bạn muốn, hoặc một cách tương đương."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
-Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
+Ex().has_printout(0, not_printed_msg="Bạn đã in ra `downstairs` sau khi tính toán nó chưa?")
+Ex().has_printout(1, not_printed_msg="Bạn đã in ra `upstairs` sau khi tính toán nó chưa?")
 
-success_msg("Great!")
+success_msg("Tuyệt vời!")
 ```
 
 ---
 
-## Subsetting lists of lists
+## Trích xuất phần tử từ list chứa list
 
 ```yaml
 type: NormalExercise
@@ -471,20 +472,20 @@ key: dbbbd306cf
 xp: 100
 ```
 
-A Python list can also contain other lists.
+Một list Python cũng có thể chứa các list khác.
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
+Để trích xuất phần tử từ list chứa list, bạn có thể dùng lại kỹ thuật giống như trước: dấu ngoặc vuông. Với list `house`, code sẽ như sau:
 
 ```
 house[2][0]
 ```
 
 `@instructions`
-- Subset the `house` list to get the float `9.5`.
+- Trích xuất từ list `house` để lấy số float `9.5`.
 
 `@hint`
-- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
-- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+- Hãy chia nhỏ từng bước. Trước hết, bạn cần lấy phần tử cuối cùng của list, `["bathroom", 9.50]`. Nhớ rằng index của phần tử cuối cùng là `-1`.
+- Tiếp theo, bạn lấy phần tử thứ hai của `["bathroom", 9.50]`, nằm ở chỉ số `1`.
 
 `@pre_exercise_code`
 ```{python}
@@ -522,12 +523,12 @@ Ex().check_or(
   has_code("house[4][1]", pattern=False)
 )
 
-success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
+success_msg("Chính xác! Mảnh ghép cuối cùng của câu đố danh sách là thao tác.")
 ```
 
 ---
 
-## Manipulating Lists
+## Thao tác với List
 
 ```yaml
 type: VideoExercise
@@ -540,7 +541,7 @@ xp: 50
 
 ---
 
-## Replace list elements
+## Thay thế phần tử trong list
 
 ```yaml
 type: NormalExercise
@@ -551,18 +552,18 @@ skills:
   - 2
 ```
 
-To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+Để thay thế các phần tử trong list, bạn lấy phần con (subset) của list và gán giá trị mới cho phần con đó. Bạn có thể chọn từng phần tử hoặc thay đổi cả một lát cắt (slice) của list cùng lúc.
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+Trong bài này và các bài tiếp theo, bạn sẽ tiếp tục làm việc với list `areas` chứa tên và diện tích của các phòng trong một ngôi nhà.
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
+- Cập nhật diện tích phòng tắm thành `10.50` mét vuông thay vì `9.50` bằng cách dùng chỉ số âm.
+- Hãy làm cho list `areas` xịn xò hơn! Đổi `"living room"` thành `"chill zone"`. Lần này bạn đừng dùng chỉ số âm.
 
 `@hint`
-- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
-- Then, replace the value with the new bathroom area by assigning it to this subset.
-- Do the same to update the `"living room"` name, which is at index 4.
+- Để cập nhật diện tích phòng tắm, hãy xác định phần tử tương ứng với phòng tắm (nó là phần tử cuối cùng trong list!).
+- Sau đó, thay giá trị cũ bằng diện tích phòng tắm mới bằng cách gán giá trị mới cho phần tử này
+- Làm tương tự để cập nhật tên `"living room"`, nằm ở index 4.
 
 `@pre_exercise_code`
 ```{python}
@@ -595,21 +596,21 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
+bathroom_msg = 'Bạn có thể sử dụng `areas[-1] = 10.50` để cập nhật diện tích phòng tắm.'
+chillzone_msg = 'Bạn có thể sử dụng `areas[4] = "chill zone"` để cập nhật tên phòng khách.'
 Ex().check_correct(
-  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  check_object('areas').has_equal_value(incorrect_msg = 'Các thay đổi của bạn đối với `areas` không dẫn đến danh sách chính xác. Bạn có chắc chắn rằng bạn đã sử dụng các thao tác tập hợp con đúng không? Khi nghi ngờ, bạn có thể sử dụng gợi ý!'),
   multi(
     has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
     has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
-success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
+success_msg('Tuyệt! Như ví dụ mã đã chỉ ra, bạn cũng có thể cắt một danh sách và thay thế nó bằng một danh sách khác để cập nhật nhiều phần tử trong một lệnh duy nhất.')
 ```
 
 ---
 
-## Extend a list
+## Mở rộng một list
 
 ```yaml
 type: NormalExercise
@@ -620,22 +621,21 @@ skills:
   - 2
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+Nếu bạn có thể thay đổi phần tử trong một list, vậy bạn cũng muốn thêm phần tử vào list, đúng không? Bạn có thể dùng toán tử `+`:
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
-
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+Giả sử bạn vừa trúng số. Bạn quyết định xây thêm một bể bơi và một ga-ra. Bạn có thể thêm hai thông tin này vào list `areas` không?
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- Dùng toán tử `+` để nối list `["poolhouse", 24.5]` vào cuối list `areas`. Lưu list kết quả là `areas_1`.
+- Mở rộng `areas_1` bằng cách thêm dữ liệu về garage của bạn. Thêm string `"garage"` và float `15.45`. Đặt tên list kết quả là `areas_2`.
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- Làm theo dòng code mẫu trong bài. Ở đây `x` chính là `areas`, và `["e", "f"]` tương ứng với `["poolhouse", 24.5]`.
+- Để thêm nhiều phần tử vào `areas_1`, dùng `areas_1 + ["element", 123]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -670,16 +670,16 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Đừng xóa hoặc chỉnh sửa danh sách `areas` được định nghĩa trước."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
-success_msg("Cool! The list is shaping up nicely!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Sử dụng `areas + [\"poolhouse\", 24.5]` để tạo `areas_1`. Hãy cẩn thận với lỗi chính tả!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Sử dụng `areas_1 + [\"garage\", 15.45]` để tạo `areas_2`. Hãy cẩn thận với lỗi chính tả!")
+success_msg("Tuyệt! Danh sách đang được định hình rất tốt!")
 ```
 
 ---
 
-## Delete list elements
+## Xóa phần tử trong list
 
 ```yaml
 type: NormalExercise
@@ -687,23 +687,25 @@ key: 85f792356e
 xp: 100
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+Cuối cùng, bạn có thể xóa phần tử khỏi list với câu lệnh `del`:
 
 ```
 x = ["a", "b", "c", "d"]
 del x[1]
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
 
-Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
+Lưu ý: ngay khi bạn xóa một phần tử khỏi list, index của tất cả các phần tử đứng sau nó sẽ thay đổi!
+
+
+Thật không may, số tiền bạn trúng xổ số không lớn như bạn đã nghĩ và có lẽ sẽ không có hồ bơi. Vì vậy bạn cần phải xóa nó khỏi list. Hãy xóa string và float tương ứng với hồ bơi khỏi list `areas `
 
 `@instructions`
-- Delete the string and float for the `"poolhouse"` from your `areas` list.
-- Print the updated `areas` list.
+- Xóa string và float của `"poolhouse"` khỏi list `areas` của bạn.
+- Hiển thị ra list `areas` đã được cập nhật.
 
 `@hint`
-- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
+- Bạn phải dùng `del` hai lần để xóa hai phần tử. Nhưng lưu ý khi xóa sẽ thì index sẽ thay đổi.
 
 `@pre_exercise_code`
 ```{python}
@@ -764,13 +766,13 @@ Ex().check_or(
   )
 )
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="Bạn đã in ra `areas` sau khi xóa chuỗi và số thực poolhouse chưa?")
+success_msg("Chính xác! Bạn sẽ học về những cách dễ dàng hơn để xóa các phần tử cụ thể khỏi danh sách Python sau này.")
 ```
 
 ---
 
-## Inner workings of lists
+## Cách hoạt động bên trong list
 
 ```yaml
 type: NormalExercise
@@ -781,17 +783,17 @@ skills:
   - 2
 ```
 
-Some code has been provided for you in this exercise: a list with the name `areas` and a copy named `areas_copy`.
+Trong bài tập này, đã có sẵn một số đoạn code: một list tên là `areas` và một bản sao tên `areas_copy`.
 
-Currently, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit the run code button you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+Hiện tại, phần tử đầu tiên trong list `areas_copy` được thay đổi và kết quả của list `areas` được hiển thị. Nếu bạn bấm nút chạy code, bạn sẽ thấy khi bạn thay đổi `areas_copy`, thay đổi đó cũng xuất hiện trong list `areas`. Lý do là `areas` và `areas_copy` cùng chỉ đến một list.
 
-If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list with `list()` or by using `[:]`.
+Nếu bạn muốn ngăn việc thay đổi ở `areas_copy` ảnh hưởng đến `areas`, bạn phải tạo một bản sao riêng biệt của list `areas` bằng `list()` hoặc dùng `[:]`.
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
+- Hãy sửa lệnh thứ hai, lệnh tạo biến `areas_copy`, sao cho `areas_copy` là một bản sao riêng biệt của `areas`. Sau khi chỉnh sửa, các thay đổi với `areas_copy` sẽ không ảnh hưởng đến `areas`. Gửi đáp án để kiểm tra.
 
 `@hint`
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+- Hãy thay đổi lệnh `areas_copy = areas`. Thay vì gán `areas`, bạn có thể gán `list(areas)` hoặc `areas[:]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -831,16 +833,16 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_object("areas_copy").has_equal_value(incorrect_msg = "Có vẻ như `areas_copy` chưa được cập nhật đúng cách."),
+  check_function("list", missing_msg = "Hãy chắc chắn sử dụng `list(areas)` để tạo một `areas_copy`.")
 )
 
-mmsg = "Don't remove the predefined `areas` list."
-imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+mmsg = "Đừng xóa danh sách `areas` được định nghĩa trước."
+imsg = "Hãy chắc chắn chỉ chỉnh sửa bản sao, không phải danh sách `areas` gốc. Hãy xem lại mô tả bài tập nếu bạn không chắc chắn cách tạo một bản sao."
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_function("list", missing_msg = "Hãy chắc chắn sử dụng `list(areas)` để tạo một `areas_copy`.")
 )
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("Tuyệt vời! Sự khác biệt giữa bản sao rõ ràng và bản sao tham chiếu là tinh tế, nhưng có thể thực sự quan trọng. Hãy cố gắng ghi nhớ cách một danh sách được lưu trữ trong bộ nhớ của máy tính.")
 ```

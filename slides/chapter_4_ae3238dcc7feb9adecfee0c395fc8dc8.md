@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/vi-VN/eb544618-d5e7-437d-a30e-e59fca1fc897.mp3
 ---
 
-## 2D NumPy Arrays
+## Numpy Array 2 chiều
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,10 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
-
+Làm tốt lắm, bạn đúng là chuyên gia rồi đó! Giờ hãy cùng tạo lại các Numpy array từ video trước.
 ---
 
-## Type of NumPy Arrays
+## Các loại NumPy Array
 
 ```yaml
 type: FullSlide
@@ -59,11 +53,10 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
-
+Nếu ta hỏi kiểu dữ liệu của các array này, Python sẽ cho ta biết rằng chúng là numpy.ndarray. Phần numpy chấm cho biết kiểu này được định nghĩa trong package numpy. Còn ndarray là viết tắt của n dimensional array tức là array đa chiều. Các array np_height và np_weight là array một chiều, nhưng bạn hoàn toàn có thể tạo array 2 chiều, 3 chiều, thậm chí 7 chiều! Tuy nhiên, trong video này, ta chỉ tập trung vào 2 chiều mà thôi.
 ---
 
-## 2D NumPy Arrays
+## Numpy Array 2 chiều
 
 ```yaml
 type: FullSlide
@@ -104,17 +97,16 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Ta có thể tạo một numpy array 2 chiều từ một list Python chứa các list con. Hãy thử tạo một numpy array chứa toàn bộ dữ liệu chiều cao và cân nặng của gia đình bạn, như sau.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Nếu hiển thị np_2d ra, ta sẽ thấy đây là một cấu trúc hình chữ nhật: Mỗi list con trong list ban đầu tương ứng với một hàng trong numpy array hai chiều. Từ np_2d.shape, ta sẽ thấy có hai hàng và năm cột. shape là một thuộc tính của array np_2d, cung cấp cho ta thêm thông tin về hình dáng của cấu trúc dữ liệu.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Lưu ý cú pháp truy cập thuộc tính trông hơi giống cú pháp gọi phương thức, nhưng chúng không giống nhau! Bạn hãy nhớ rằng phương thức có dấu ngoặc tròn phía sau, còn thuộc tính thì không, như bạn thấy ở đây. 
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
-
+Quy tắc của NumPy vẫn áp dụng với array 2 chiều: một array chỉ có thể chứa một kiểu dữ liệu duy nhất. Nếu bạn đổi một float thành string, toàn bộ phần tử trong array sẽ bị đổi thành string để đảm bảo tính đồng nhất.
 ---
 
-## Subsetting
+## Trích xuất
 
 ```yaml
 type: FullSlide
@@ -139,15 +131,13 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Ta có thể coi array numpy 2 chiều như một phiên bản nâng cấp của list chứa list: có thể thực hiện phép tính trên toàn bộ array, như mình đã lấy ví dụ minh họa trước đó, và cũng có thể trích, cắt dữ liệu linh hoạt hơn.
+Giả sử bạn muốn lấy hàng đầu tiên, rồi sau đó lấy phần tử thứ ba trong hàng đó. Để chọn hàng, bạn dùng index 0 trong ngoặc vuông. Đừng quên Python bắt đầu đếm từ số 0.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
-
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
-
+Sau đó để chọn phần tử thứ ba, bạn dùng thêm một cặp ngoặc vuông nữa với index 2
 ---
 
-## Subsetting
+## Trích xuất
 
 ```yaml
 type: FullSlide
@@ -181,13 +171,12 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+như thế này. Về cơ bản, bạn chọn hàng trước, rồi từ hàng đó chọn tiếp phần tử.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
-
+Cũng có một cách trích xuất dữ liệu khác, chỉ dùng một cặp ngoặc vuông và dấu phẩy. Lệnh này trả về đúng giá trị như lúc trước. Giá trị trước dấu phẩy chỉ hàng, giá trị sau dấu phẩy chỉ cột. Kết quả trả về là giao điểm của hàng và cột. Khi đã quen, cú pháp này trực quan hơn và giúp ta làm việc với dữ liệu linh hơn.
 ---
 
-## Subsetting
+## Trích xuất
 
 ```yaml
 type: FullSlide
@@ -222,15 +211,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Giả sử ta muốn chọn chiều cao và cân nặng của thành viên thứ hai và thứ ba trong gia đình. Ta cần cả hai hàng, nên ta đặt dấu hai chấm trước dấu phẩy. Ta chỉ cần cột thứ hai và thứ ba, nên ta dùng index từ 1 đến 3 sau dấu phẩy. Lưu ý là index 3 không được tính vào. Kết quả là một array hai chiều với hai hàng và hai cột:
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+Tương tự, ta có thể chọn cân nặng của tất cả thành viên như sau: ta chỉ cần hàng thứ hai, nên ta đặt 1 trước dấu phẩy. Ta cần tất cả các cột, nên ta dùng dấu hai chấm sau dấu phẩy. Kết quả là toàn bộ hàng thứ hai.
 
+Cuối cùng, numpy array hai chiều cho phép ta thực hiện các phép tính theo từng phần tử, giống như ta đã làm với array một chiều. Bạn có thể
 ---
 
-## Let's practice!
+## Cùng thực hành nào!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +227,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+luyện tập điều đó trong phần bài tập, cùng với việc tạo và trích xuất dữ liệu từ Numpy array hai chiều! Thật thú vị phải không?

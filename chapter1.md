@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Chương 1
+title: Các khái niệm cơ bản về Python
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  Giới thiệu các khái niệm cơ bản của Python. Học cách dùng Python qua bài tập
+  tương tác và qua script. Tạo biến đầu tiên và làm quen với các kiểu dữ liệu cơ
+  bản của Python.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: Xin chào Python!
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Biến và Kiểu dữ liệu
 ---
 
-## Hello Python!
+## Xin chào Python!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## Đoạn code Python đầu tiên của bạn
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+Đã đến lúc chạy đoạn code Python đầu tiên của bạn!
 
-Head to the code and hit the run code button to see the output.
+Chuyển sang khung code và nhấn nút **Run Code** để xem kết quả.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Nhấn nút **Run Code** để xem kết quả của `print(5 / 8)`.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Chạy code trước khi gửi câu trả lời để có thời gian xem kết quả.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Bạn đã sử dụng `{{sol_call}}` để in ra `5 / 8` chưa?")
+success_msg("Tuyệt vời! Chuyển sang câu tiếp theo!")
 ```
 
 ---
 
-## Python as a calculator
+## Python như một máy tính
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python rất phù hợp để thực hiện các phép tính cơ bản. Nó có thể cộng, trừ, nhân và chia.
 
-The code in the script gives some examples.
+Đoạn code trong script đưa ra một vài ví dụ.
 
-Now it's your turn to practice by writing some code yourself.
+Giờ đến lượt bạn luyện tập bằng cách tự viết code một chút.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- Hiển thị kết quả của phép trừ `5` cho `5` bên dưới `# Subtraction` bằng hàm `print()`.
+- Hiển thị kết quả của phép nhân `3` với `5` bên dưới `# Multiplication`.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Bạn sẽ cần dùng hàm `print()` để tạo đầu ra.
+- Bạn có thể trừ với dấu `-` và nhân với dấu `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Bạn đã sử dụng `print(4 + 5)` để in ra kết quả của phép cộng chưa?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Bạn đã sử dụng `print(5 - 5)` để in ra kết quả của phép trừ chưa?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Bạn đã sử dụng `print(3 * 5)` để in ra kết quả của phép nhân chưa?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Bạn đã sử dụng `print(10 / 2)` để in ra kết quả của phép chia chưa?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Đúng rồi! Python có thể giúp bạn thực hiện các phép toán, một đặc điểm sẽ hữu ích cho việc phân tích khi chúng ta phát triển kỹ năng dữ liệu của mình.")
 ```
 
 ---
 
-## Variables and Types
+## Biến và Kiểu dữ liệu
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Gán giá trị cho biến
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+Trong Python, một biến cho phép bạn tham chiếu đến một giá trị bằng một tên. Để tạo biến `x` với giá trị `5`, bạn dùng dấu `=`, như ví dụ sau:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Giờ bạn có thể dùng tên biến này, `x`, thay cho giá trị thực tế là `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Hãy nhớ, `=` trong Python có nghĩa là gán giá trị (_assignment_), không phải để kiểm tra bằng nhau! Hãy thử trong bài tập bằng cách thay `____` bằng mã lệnh của bạn.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- Tạo một biến `savings` với giá trị `100`.
+- Kiểm tra biến này bằng cách gõ `print(savings)` trong script.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- Gõ `savings = 100` để tạo biến `savings`.
+- Sau khi tạo biến `savings`, gõ `print(savings)`.
+- Mã lệnh cuối cùng của bạn không được chứa bất kỳ `____` nào.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Gán `100` cho biến `savings`.")
+Ex().has_printout(0, not_printed_msg = "In ra `savings`, biến bạn đã tạo, với `print(savings)`.")
+success_msg("Tuyệt vời! Bây giờ hãy thử thực hiện một số phép tính với biến này!")
 ```
 
 ---
 
-## Calculations with variables
+## Tính toán với các biến
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Bạn đã tạo một biến số tiền tiết kiệm, hãy bắt đầu tiết kiệm thôi!
 
-Instead of calculating with the actual values, you can use variables instead.
+Thay vì tính trực tiếp với các giá trị cụ thể, bạn có thể dùng các biến.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Bốn tháng nữa bạn sẽ tiết kiệm được bao nhiêu tiền nếu mỗi tháng bạn tiết kiệm $10?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- Tạo biến `monthly_savings` bằng `10` và `num_months` bằng `4`.
+- Nhân `monthly_savings` với `num_months` và gán cho `new_savings`.
+- Hiển thị kết quả của `new_savings`.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- Bạn có thể tính toán với các biến giống như với số, thay vì `10 * 4`, hãy thay số bằng các biến!
+- Dùng `print()` để xem giá trị trong `new_savings`.
+- Lưu ý ý viết đúng tên biến!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Bạn đã lưu `10` vào `monthly_savings` bằng cách sử dụng `monthly_savings = 10` chưa?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Bạn đã lưu `4` vào `num_months` bằng cách sử dụng `num_months = 4` chưa?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Bạn đã sử dụng đúng biến và ký hiệu để nhân chưa? Dự kiến `monthly_savings * num_months` nhưng đã nhận được cái gì đó khác.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Bạn đã sử dụng đúng biến và ký hiệu để cộng chưa? Dự kiến `savings + new_savings` nhưng đã nhận được cái gì đó khác.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Hãy nhớ in ra `new_savings` ở cuối kịch bản của bạn.")
 
-success_msg("You have $40 in new savings!")
+success_msg("Bạn có $40 trong khoản tiết kiệm mới!")
 ```
 
 ---
 
-## Other variable types
+## Các kiểu biến khác
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+Trong bài trước, bạn đã thực hành với kiểu dữ liệu số nguyên của Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int`, hay integer: một số không có phần thập phân. Ví dụ như `savings` với giá trị `100` là số nguyên.
 
-Next to numerical data types, there are three other very common data types:
+Ngoài các kiểu dữ liệu số, còn có ba kiểu dữ liệu rất phổ biến khác:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float` hay floating point: một số có cả phần nguyên và phần thập phân, ngăn cách bằng dấu chấm. Ví dụ `1.1` là float.
+- `str`, hay string: kiểu dùng để biểu diễn văn bản. Bạn có thể dùng dấu nháy đơn hoặc nháy kép để tạo string.
+- `bool`, hay boolean: kiểu dùng để biểu diễn giá trị logic. Nó chỉ có thể là `True` hoặc `False` (chú ý viết hoa chữ cái đầu và viết thường các chữ cái sau rất quan trọng!)
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Tạo một float mới, `half`, với giá trị `0.5`.
+- Tạo một string mới, `intro`, với giá trị `"Hello! How are you?"`.
+- Tạo một boolean mới, `is_good`, với giá trị `True`.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Để tạo một biến trong Python, dùng `=`. Nhớ đặt string trong cặp dấu nháy đơn hoặc nháy kép.
+- Chỉ có hai giá trị boolean trong Python: `True` và `False`. Các biến thể như `TRUE`, `true`, `FALSE`, `false` và những kiểu viết khác sẽ không được chấp nhận.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Bạn đã lưu giá trị float, `0.5` vào `half` chưa?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, có gì đó không đúng trong biến `intro` của bạn. Kiểm tra lại chính tả và đảm bảo rằng bạn đã sử dụng dấu ngoặc kép.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Bạn đã viết hoa giá trị boolean chưa? Hãy nhớ rằng bạn không cần sử dụng dấu ngoặc kép ở đây.")
 
-success_msg("Nice!")
+success_msg("Tuyệt vời!")
 ```
 
 ---
 
-## Operations with other types
+## Phép toán với các kiểu dữ liệu khác
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Biến trong Python có nhiều kiểu khác nhau. Bạn có thể xem kiểu của một biến bằng cách dùng hàm `type()`. Ví dụ, để xem kiểu của `a`, chạy hàm: `type(a)`.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Các kiểu dữ liệu khác nhau sẽ hoạt động khác nhau trong Python. Chẳng hạn khi bạn cộng hai string, Python sẽ xử lý khác so với khi cộng hai float hoặc cộng hai boolean.
 
-Time for you to test this out.
+Giờ bạn hãy tự kiểm chứng điều này.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- Cộng `savings` và `new_savings` rồi gán cho `total_savings`.
+- Dùng `type()` để hiển thị ra kiểu dữ liệu của `total_savings`.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- Gán `savings + new_savings` cho một biến mới, `total_savings`.
+- Để hiển thị kiểu dữ liệu của biến `x`, dùng `print(type(x))`.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Bạn không cần phải thay đổi hoặc xóa các biến được định nghĩa trước."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Cộng `savings` và `new_savings` để tạo biến `total_savings`."),
+    has_printout(1, not_printed_msg = "__JINJA__:Sử dụng `{{sol_call}}` để in ra kiểu của `total_savings`.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- Tính tổng của `intro` và `intro` rồi gán kết quả cho `doubleintro`.
+- Hiển thị ra kết quả của `doubleintro`. Bạn có đoán trước điều này không?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- Gán `intro + intro` cho một biến mới, `doubleintro`.
+- Để hiển thị ra biến `x`, viết `print(x)` trong script.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Bạn không cần phải thay đổi hoặc xóa các biến được định nghĩa trước."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Bạn đã lưu kết quả của `intro + intro` vào `doubleintro` chưa?"),
+    has_printout(0, not_printed_msg = "Đừng quên in ra `doubleintro`.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Tốt lắm. Lưu ý cách `intro + intro` khiến `\"Hello! How are you?\"` và `\"Hello! How are you?\"` được ghép lại với nhau.")
 ```
