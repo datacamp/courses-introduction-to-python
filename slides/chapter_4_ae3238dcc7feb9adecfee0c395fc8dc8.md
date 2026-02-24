@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/pt-BR/804e770f-43b1-4fe7-994b-afbd781ff2ba.mp3
 ---
 
-## 2D NumPy Arrays
+## Matrizes 2D do NumPy
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,12 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Muito bem, você é demais! Agora vamos recriar as matrizes NumPy do vídeo anterior.
+
 
 ---
 
-## Type of NumPy Arrays
+## Tipos de matrizes do NumPy
 
 ```yaml
 type: FullSlide
@@ -59,11 +55,12 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Se você perguntar qual é o tipo dessas matrizes, o Python vai dizer que são numpy ponto ndarray. O numpy ponto mostra que é um tipo que foi definido no pacote numpy. ndarray significa matriz n-dimensional. As matrizes np underline height e np underline weight são unidimensionais, mas dá para criar matrizes bidimensionais, tridimensionais e até mesmo de sete dimensões! Mas vamos ficar com duas neste vídeo.
+
 
 ---
 
-## 2D NumPy Arrays
+## Matrizes 2D do NumPy
 
 ```yaml
 type: FullSlide
@@ -104,17 +101,18 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Você pode criar uma matriz 2D do NumPy a partir de uma lista de listas comum do Python. Vamos tentar criar uma matriz do NumPy com todos os dados de altura e peso da sua família, como esta.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Agora, se você imprimir np underline 2d, vai ver que é uma estrutura de dados retangular. Cada sublista da lista corresponde a uma linha da matriz bidimensional do NumPy. Com np underline 2d ponto shape, dá para ver que realmente temos duas linhas e cinco colunas. Dizemos que shape é um atributo da matriz np2d que apresenta mais informações sobre a estrutura dos dados.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Observe que a sintaxe para acessar um atributo é parecida com a chamada de um método, mas não é a mesma! Lembre-se de que os métodos têm parênteses depois e, como dá para ver aqui, os atributos não têm.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+A regra do NumPy também vale para matrizes 2D: uma matriz pode armazenar somente um tipo. Se você mudar um float para string, todos os elementos da matriz serão convertidos em strings, para que a matriz fique homogênea.
+
 
 ---
 
-## Subsetting
+## Divisão em subconjuntos
 
 ```yaml
 type: FullSlide
@@ -139,15 +137,16 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Pense na matriz 2D do NumPy como uma lista de listas melhorada: dá para fazer cálculos com as matrizes, como mostrei antes, e usar formas mais avançadas de divisão em subconjuntos.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Suponha que você queira a primeira linha e o terceiro elemento dessa linha. Para selecionar a linha, você precisa do índice zero entre colchetes. Não se esqueça de que a indexação começa no zero.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+Para selecionar o terceiro elemento, você pode estender a mesma chamada com outro par de colchetes, desta vez com o índice dois,
+
 
 ---
 
-## Subsetting
+## Divisão em subconjuntos
 
 ```yaml
 type: FullSlide
@@ -181,13 +180,14 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+assim. Basicamente, você seleciona a linha e, em seguida, faz outra seleção nessa linha.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Também tem outra forma de fazer a divisão em subconjuntos, usando colchetes simples e vírgula. Esta chamada retorna exatamente o mesmo valor de antes. O valor antes da vírgula é a linha, e o valor depois da vírgula é a coluna. É retornada a interseção das linhas e colunas que foram especificadas. Depois que você se acostumar, essa sintaxe vai parecer mais intuitiva e abrir mais possibilidades.
+
 
 ---
 
-## Subsetting
+## Divisão em subconjuntos
 
 ```yaml
 type: FullSlide
@@ -222,15 +222,16 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Suponha que você queira escolher a altura e o peso da segunda e terceira pessoas da família. Você quer as duas linhas, então coloca dois pontos antes da vírgula. Você quer só a segunda e a terceira colunas, então coloca os índices um a três depois da vírgula. Lembre-se de que o terceiro índice não é incluído aqui. A interseção nos dá uma matriz 2D com duas linhas e duas colunas.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Da mesma forma, você pode escolher o peso de todos os familiares assim: se você quiser só a segunda linha, coloque um antes da vírgula. Se quiser todas as colunas, use dois pontos depois da vírgula. A interseção nos dá a segunda linha inteira.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+Por fim, as matrizes 2D do NumPy permitem fazer cálculos elemento a elemento, da mesma forma que fizemos com matrizes 1D do NumPy. Isso é algo
+
 
 ---
 
-## Let's practice!
+## Vamos praticar!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +239,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+que você pode testar nos exercícios, além de criar e subdividir matrizes 2D do NumPy! Empolgante.

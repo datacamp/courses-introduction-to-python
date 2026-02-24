@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/pt-BR/b1fc94b5-1952-4b79-89f1-b64e3d1e4b46.mp3
 ---
 
-## Variables and Types
+## Variáveis e tipos
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,12 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+Bom trabalho, e que bom ter você de volta! Está claro que o Python é uma ótima calculadora. Mas, se você quiser fazer cálculos mais complexos, é melhor “salvar” os valores enquanto estiver programando.
+
 
 ---
 
-## Variable
+## Variável
 
 ```yaml
 type: FullSlide
@@ -35,11 +31,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Nome específico, com distinção entre maiúsculas e minúsculas
 
-- Call up value through variable name{{1}}
+- Chamar um valor usando o nome da variável{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 m – 68,7 kg{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +50,18 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Você pode fazer isso definindo uma variável com um nome específico, que diferencia maiúsculas de minúsculas. Depois de criar ou declarar essa variável, você pode chamar o valor dela digitando o nome da variável.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Imagine que você mediu sua altura e peso: você tem um metro e setenta e nove e pesa sessenta e oito vírgula sete quilos. Você pode atribuir esses valores a duas variáveis, chamadas “height” e “weight”, usando o sinal de igual.
 
-If you now type the name of the variable, height,
+Agora, se você digitar o nome da variável, “height”,
 
-Python looks for the variable name, retrieves its value, and prints it out.
+o Python procura o nome da variável, recupera o valor dela e o imprime na tela.
+
 
 ---
 
-## Calculate BMI
+## Cálculo do IMC
 
 ```yaml
 type: TwoColumns
@@ -85,7 +82,7 @@ height
 1.79
 ```
 
-$$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
+$$ \text{IMC} = \frac{\text{peso}}{\text{altura}^2} $${{1}}
 
 `@part2`
 ```py
@@ -114,15 +111,16 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Agora vamos calcular o Índice de Massa Corporal, ou IMC, da seguinte forma, usando o peso em quilos e a altura em metros. Você pode fazer isso com os valores reais, mas também pode usar as variáveis “height” e “weight”, como feito aqui. Toda vez que você digita o nome da variável, está pedindo ao Python que o substitua pelo valor real da variável. “weight” corresponde a sessenta e oito ponto sete, e “height” a um ponto setenta e nove.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+Por fim, esta versão faz o Python armazenar o resultado em uma nova variável, bmi, que significa IMC em inglês. Agora, bmi tem o mesmo valor que você calculou antes.
 
-In Python, variables are used all the time. They help to make your code reproducible.
+Em Python, são usadas variáveis o tempo todo. Elas ajudam a tornar o código reproduzível.
+
 
 ---
 
-## Reproducibility
+## Reprodutibilidade
 
 ```yaml
 type: FullSlide
@@ -142,11 +140,12 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+Suponha que o código para criar as variáveis height, weight e bmi esteja em um script, como este. Se você quiser recalcular o IMC de outro peso,
+
 
 ---
 
-## Reproducibility
+## Reprodutibilidade
 
 ```yaml
 type: FullSlide
@@ -167,13 +166,14 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+basta mudar a declaração da variável weight e rodar o script de novo. bmi reflete essa alteração, porque o valor da variável weight também mudou.
 
-So far, we've only worked with numerical values, such as height and weight.
+Até agora, trabalhamos somente com valores numéricos, como altura e peso.
+
 
 ---
 
-## Python Types
+## Tipos de objeto Python
 
 ```yaml
 type: FullSlide
@@ -199,13 +199,14 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+Em Python, todos esses números têm um tipo específico. Você pode ver o tipo de um valor com a função type. Para ver o tipo do valor de bmi, basta escrever type e, em seguida, bmi entre parênteses. Observe que é um float, que é como o Python representa um número real, ou seja, um número que pode ter uma parte inteira e uma parte fracionária. O Python também tem um tipo para inteiros, int, como neste exemplo.
 
-To do data science, you'll need more than ints and floats, though.
+Mas, para fazer ciência de dados, você vai precisar de mais do que inteiros e floats.
+
 
 ---
 
-## Python Types (2)
+## Tipos de objeto Python (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +236,18 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+O Python tem vários outros tipos de dados. Os mais comuns são strings e booleanos.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+Uma string é a maneira que o Python usa para representar textos. Você pode usar tanto aspas simples quanto aspas duplas para criar uma string, como dá para ver nestes exemplos. Ao imprimir o tipo da última variável, vemos que é str, abreviação de string.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Um booleano é um tipo que pode ser verdadeiro ou falso. É como “sim” e “não” na linguagem do dia a dia. Os booleanos vão ser bem úteis mais adiante, para fazer operações de filtragem nos dados, por exemplo.
 
-There's something special about Python data types.
+Tem algo especial nos tipos de dados do Python.
+
 
 ---
 
-## Python Types (3)
+## Tipos de objeto Python (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +271,19 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Tipo diferente = comportamento diferente!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Dê uma olhada nesta linha de código, que soma dois números inteiros, e depois nesta linha de código, que soma duas strings.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+No caso dos inteiros, os valores foram somados, enquanto as strings foram concatenadas. O operador “mais” se comportou de forma diferente conforme o tipo de dados. Esse é um princípio geral: o funcionamento do código depende dos tipos com os quais estamos trabalhando.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+Nos exercícios a seguir, você vai criar as primeiras variáveis e testar alguns tipos de dados do Python. A gente se vê no próximo vídeo para explicar tudo sobre listas.
+
 
 ---
 
-## Let's practice!
+## Vamos praticar!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +291,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Vamos começar a programar! Mal posso esperar para ver você no próximo capítulo, em que você vai criar gráficos ainda mais incríveis em Python.
