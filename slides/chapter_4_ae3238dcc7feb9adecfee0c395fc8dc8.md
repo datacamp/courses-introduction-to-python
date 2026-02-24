@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/nl-NL/30044d1f-2732-487f-be3e-2a4e8bc68982.mp3
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy-arrays
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,10 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
-
+Goed gedaan! Laten we nu de numpy-arrays uit de vorige video opnieuw maken.
 ---
 
-## Type of NumPy Arrays
+## Type van NumPy-arrays
 
 ```yaml
 type: FullSlide
@@ -59,11 +53,10 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
-
+Als je naar het type van deze arrays vraagt, vertelt Python je dat het numpy punt nd-array is. numpy punt geeft aan dat het een type is dat gedefinieerd is in het numpy-pakket. nd-array staat voor n-dimensionale array. De arrays np_height en np_weight zijn eendimensionale arrays, maar je kunt prima tweedimensionale, driedimensionale, zelfs zevendimensionale arrays maken! In deze video houden we het echter bij twee.
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy-arrays
 
 ```yaml
 type: FullSlide
@@ -104,17 +97,16 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Je kunt een tweedimensionale numpy-array maken van een gewone Python-lijst van lijsten. Laten we proberen één numpy-array te maken voor alle lengte- en gewichtgegevens van je gezin.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Als je np-2d nu afdrukt, zie je dat het een rechthoekige datastructuur is: elke sublijst in de lijst komt overeen met een rij in de tweedimensionale numpy-array. Aan np-2d punt shape zie je dat we inderdaad twee rijen en vijf kolommen hebben. shape is een attribuut van de np-2d-array, dat je meer informatie kan geven over hoe de datastructuur eruitziet.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Let op dat de syntaxis voor het benaderen van een attribuut een beetje lijkt op het aanroepen van een methode, maar ze zijn niet hetzelfde! Onthoud dat methoden ronde haakjes erachter hebben, en, zoals je hier ziet, attributen niet.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
-
+Ook voor tweedimensionale arrays geldt de NumPy-regel: een array kan slechts één type bevatten. Als je één float verandert in een string, worden alle array-elementen naar strings omgezet, zodat je een homogene array overhoudt.
 ---
 
-## Subsetting
+## Subsets maken
 
 ```yaml
 type: FullSlide
@@ -139,15 +131,14 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Je kunt de tweedimensionale numpy-array zien als een verbeterde lijst-van-lijsten: je kunt berekeningen op de arrays uitvoeren, zoals ik eerder liet zien, en je kunt geavanceerdere manieren van subsetting gebruiken.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Stel dat je de eerste rij wilt, en vervolgens het derde element in die rij. Om de rij te selecteren, heb je de index nul tussen vierkante haken nodig. Vergeet de nul-indexering niet.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
-
+Om daarna het derde element te kiezen, kun je dezelfde aanroep uitbreiden met nog een paar haken, dit keer met index twee,
 ---
 
-## Subsetting
+## Subsets maken
 
 ```yaml
 type: FullSlide
@@ -181,13 +172,12 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+zo. In feite selecteer je eerst de rij, en doe je vervolgens vanuit die rij nog een selectie.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
-
+Er is ook een alternatieve manier van subsetting, met één paar vierkante haken en een komma. Deze aanroep geeft exact dezelfde waarde als daarnet. De waarde vóór de komma specificeert de rij, de waarde na de komma specificeert de kolom. De doorsnede van de opgegeven rijen en kolommen wordt teruggegeven. Als je eraan gewend bent, is deze syntaxis intuïtiever en biedt hij meer mogelijkheden.
 ---
 
-## Subsetting
+## Subsets maken
 
 ```yaml
 type: FullSlide
@@ -222,15 +212,14 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Stel dat je de lengte en het gewicht van het tweede en derde gezinslid wilt selecteren. Je wilt beide rijen, dus zet je een dubbele punt vóór de komma. Je wilt alleen de tweede en derde kolom, dus zet je de indices één tot drie na de komma. Denk eraan dat de derde index hier niet wordt meegenomen. De doorsnede levert een tweedimensionale array op met twee rijen en twee kolommen:
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Op dezelfde manier kun je het gewicht van alle gezinsleden selecteren: je wilt alleen de tweede rij, dus zet je één vóór de komma. Je wilt alle kolommen, dus gebruik je een dubbele punt na de komma. De doorsnede geeft ons de volledige tweede rij.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
-
+Tot slot kun je met tweedimensionale numpy-arrays elementgewijze berekeningen doen, net zoals je dat deed met eendimensionale numpy-arrays. Dat is iets
 ---
 
-## Let's practice!
+## Laten we oefenen!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +227,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+waarmee je in de oefeningen kunt experimenteren, samen met het maken en subsetten van tweedimensionale numpy-arrays!

@@ -1,27 +1,27 @@
 id: 735
-title: Introduction to Python
+title: Introductie tot Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python is een general-purpose programmeertaal die steeds populairder wordt
+  voor data science. Bedrijven wereldwijd gebruiken Python om inzichten uit hun
+  data te halen en een concurrentievoordeel te behalen. In tegenstelling tot
+  andere Python-tutorials richt deze cursus zich specifiek op Python voor data
+  science. In onze cursus Introductie tot Python leer je krachtige manieren om
+  data op te slaan en te bewerken, en handige data-sciencetools om met je eigen
+  analyses te beginnen. Start nu met DataCamp’s online Python-curriculum.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  De video’s bevatten live transcripties, die je kunt openen door linksonder in
+  de video’s op "Show transcript" te klikken.
 
 
-  The course glossary can be found on the right in the resources section.
+  De cursushandleiding met termen vind je rechts bij de bronnen.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Om CPE-credits te behalen, moet je de cursus afronden en minimaal 70% scoren
+  op de gekwalificeerde toets. Je gaat naar de toets door rechts op de
+  CPE-credits-callout te klikken.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

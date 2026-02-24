@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/nl-NL/280f6c04-c6cf-4ce8-a789-7b7f9a9b5877.mp3
 ---
 
-## Variables and Types
+## Variabelen en typen
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,10 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
-
+Goed gedaan en welkom terug! Het is duidelijk dat Python een geweldige rekenmachine is. Als je echter complexere berekeningen wilt doen, wil je waarden kunnen "opslaan" terwijl je aan het coderen bent.
 ---
 
-## Variable
+## Variabele
 
 ```yaml
 type: FullSlide
@@ -35,11 +29,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Specifieke, hoofdlettergevoelige naam
 
-- Call up value through variable name{{1}}
+- Roep de waarde op via de naam van de variabele.{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 m - 68,7 kg{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +48,16 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Dat doe je door een variabele te definiëren, met een specifieke, hoofdlettergevoelige naam. Zodra je zo’n variabele hebt aangemaakt (of gedeclareerd), kun je later de waarde ervan oproepen door de variabelenaam te typen.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Stel dat je je lengte en gewicht meet, in metrische eenheden: je bent één-komma-negen-en-zeventig meter lang en weegt achtenzestig-komma-zeven kilogram. Je kunt deze waarden toekennen aan twee variabelen, height en weight, met een gelijkteken:
 
-If you now type the name of the variable, height,
+Als je nu de naam van de variabele, height, typt,
 
-Python looks for the variable name, retrieves its value, and prints it out.
-
+zoekt Python naar de variabelenaam, haalt de waarde op en print die.
 ---
 
-## Calculate BMI
+## Bereken BMI
 
 ```yaml
 type: TwoColumns
@@ -85,7 +78,7 @@ height
 1.79
 ```
 
-$$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
+$$ \text{BMI} = \frac{\text{gewicht}}{\text{lengte}^2} $${{1}}
 
 `@part2`
 ```py
@@ -114,15 +107,14 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Laten we nu de Body Mass Index, of BMI, berekenen, die als volgt wordt berekend, met gewicht in kilogram en lengte in meter. Je kunt dit doen met de daadwerkelijke waarden, maar je kunt net zo goed de variabelen height en weight gebruiken, zoals hier. Steeds als je de naam van de variabele typt, vraag je Python om die te vervangen door de daadwerkelijke waarde van de variabele. weight komt overeen met achtenzestig-komma-zeven, en height met één-komma-negen-en-zeventig.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+Tot slot laat deze versie Python het resultaat opslaan in een nieuwe variabele, bmi. Bmi bevat nu dezelfde waarde als die je eerder hebt berekend.
 
-In Python, variables are used all the time. They help to make your code reproducible.
-
+In Python worden variabelen voortdurend gebruikt. Ze helpen om je code reproduceerbaar te maken.
 ---
 
-## Reproducibility
+## Reproduceerbaarheid
 
 ```yaml
 type: FullSlide
@@ -142,11 +134,10 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
-
+Stel dat de code om de variabelen height, weight en bmi te maken in een script staat, zoals dit. Als je nu de bmi voor een ander gewicht wilt herberekenen,
 ---
 
-## Reproducibility
+## Reproduceerbaarheid
 
 ```yaml
 type: FullSlide
@@ -167,13 +158,12 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+kun je simpelweg de declaratie van de variabele weight aanpassen en het script opnieuw uitvoeren. De bmi verandert mee, omdat de waarde van de variabele weight ook is gewijzigd.
 
-So far, we've only worked with numerical values, such as height and weight.
-
+Tot nu toe hebben we alleen met numerieke waarden gewerkt, zoals lengte en gewicht.
 ---
 
-## Python Types
+## Python-typen
 
 ```yaml
 type: FullSlide
@@ -199,13 +189,12 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+In Python hebben deze getallen allemaal een specifiek type. Je kunt het type van een waarde bekijken met de functie type. Om het type van onze bmi-waarde te zien, schrijf je gewoon type en dan bmi tussen haakjes. Je ziet dat het een float is, Pythons manier om een reëel getal weer te geven, dus een getal met zowel een geheel als een kommagedeelte. Python heeft ook een type voor gehele getallen: int, zoals in dit voorbeeld.
 
-To do data science, you'll need more than ints and floats, though.
-
+Voor data science heb je echter meer nodig dan ints en floats.
 ---
 
-## Python Types (2)
+## Python-typen (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +224,16 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python heeft nog tal van andere datatypen. De meest voorkomende zijn strings en booleans.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+Een string is Pythons manier om tekst weer te geven. Je kunt zowel dubbele als enkele aanhalingstekens gebruiken om een string te maken, zoals je in deze voorbeelden ziet. Als je het type van de laatste variabele hier print, zie je dat het str is, kort voor string.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+De boolean is een type dat ofwel True of False kan zijn. Je kunt het zien als ‘Ja’ en ‘Nee’ in alledaagse taal. Booleans zijn later erg handig, bijvoorbeeld om filterbewerkingen op je data uit te voeren.
 
-There's something special about Python data types.
-
+Er is iets bijzonders aan Python-datatypen.
 ---
 
-## Python Types (3)
+## Python-typen (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +257,17 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Ander type = ander gedrag!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Kijk eens naar deze coderegel, die twee integers optelt, en dan naar deze regel, die twee strings optelt.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+Bij de integers werden de waarden opgeteld, terwijl bij de strings de tekst aan elkaar werd geplakt. De plus-operator gedroeg zich anders voor verschillende datatypen. Dit is een algemeen principe: hoe de code zich gedraagt, hangt af van de typen waarmee je werkt.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
-
+In de oefeningen hierna maak je je eerste variabelen en experimenteer je met een paar van Pythons datatypen. Ik zie je in de volgende video, waarin ik alles uitleg over lijsten.
 ---
 
-## Let's practice!
+## Laten we oefenen!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +275,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Ik kan niet wachten je te zien in het volgende hoofdstuk, waar je nog gavere Python-grafieken gaat bouwen.
