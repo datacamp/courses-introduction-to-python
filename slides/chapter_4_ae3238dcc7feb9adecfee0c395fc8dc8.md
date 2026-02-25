@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/it-IT/f75c68c1-df45-4820-9d54-79456fdceeb1.mp3
 ---
 
-## 2D NumPy Arrays
+## Array NumPy 2D
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Grande, sei un mito! Adesso ricreiamo gli array di numpy dal video precedente.
 
 ---
 
-## Type of NumPy Arrays
+## Tipi di array NumPy
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Se chiedi il tipo di questi array, Python ti dice che sono numpy.ndarray. Il punto tra numpy e ndarray ti indica che è un tipo definito nel pacchetto numpy. ndarray sta per array a n dimensioni. Gli array np_height e np_weight sono monodimensionali, ma puoi tranquillamente creare array bidimensionali, tridimensionali, persino a sette dimensioni! In questo video però restiamo su due.
 
 ---
 
-## 2D NumPy Arrays
+## Array NumPy 2D
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Puoi creare un array numpy bidimensionale a partire da una normale lista di liste in Python. Proviamo a crearne uno che contenga tutte le altezze e i pesi della tua famiglia, così.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Se ora stampi np_2d, vedrai che è una struttura rettangolare: ogni sotto-lista della lista corrisponde a una riga nell’array numpy bidimensionale. Da np_2d.shape puoi vedere che abbiamo effettivamente due righe e cinque colonne. shape è un cosiddetto attributo dell’array np_2d che ti dà più informazioni su com’è fatta la struttura dati.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Nota che la sintassi per accedere a un attributo assomiglia a una chiamata di metodo, ma non è la stessa cosa! Ricorda che i metodi hanno le parentesi tonde dopo il nome, mentre, come vedi qui, gli attributi no.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Anche per gli array bidimensionali vale la regola di NumPy: un array può contenere un solo tipo. Se cambi un valore float in una stringa, tutti gli elementi dell’array verranno convertiti in stringhe, per ottenere un array omogeneo.
 
 ---
 
-## Subsetting
+## Sottogruppi
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Puoi pensare all’array numpy bidimensionale come a una lista di liste migliorata: puoi fare calcoli sugli array, come ti ho mostrato prima, e puoi usare modalità più avanzate di selezione.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Supponi di volere la prima riga e poi il terzo elemento di quella riga. Per selezionare la riga, ti serve l’indice zero tra parentesi quadre. Non dimenticare che l’indicizzazione parte da zero.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+Per selezionare poi il terzo elemento, puoi estendere la stessa chiamata con un’altra coppia di parentesi, questa volta con l’indice due,
 
 ---
 
-## Subsetting
+## Sottogruppi
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+in questo modo. In pratica selezioni la riga e poi, da quella riga, fai un’altra selezione.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+C’è anche un modo alternativo di selezionare, usando una sola coppia di parentesi quadre e una virgola. Questa chiamata restituisce esattamente lo stesso valore di prima. Il valore prima della virgola specifica la riga, quello dopo la virgola specifica la colonna. Viene restituita l’intersezione tra le righe e le colonne che hai indicato. Una volta che ci fai l’abitudine, questa sintassi risulta più intuitiva e apre più possibilità.
 
 ---
 
-## Subsetting
+## Sottogruppi
 
 ```yaml
 type: FullSlide
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Supponi di voler selezionare altezza e peso del secondo e del terzo membro della famiglia. Ti servono entrambe le righe, quindi metti i due punti prima della virgola. Vuoi solo la seconda e la terza colonna, quindi metti gli indici da uno a tre dopo la virgola. Ricorda che il terzo indice non è incluso qui. L’intersezione ci dà un array bidimensionale con due righe e due colonne:
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Allo stesso modo, puoi selezionare il peso di tutti i membri della famiglia così: ti serve solo la seconda riga, quindi metti uno prima della virgola. Vuoi tutte le colonne, quindi usi i due punti dopo la virgola. L’intersezione restituisce l’intera seconda riga.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+Infine, gli array numpy bidimensionali ti permettono di fare calcoli elemento per elemento, proprio come hai fatto con gli array monodimensionali. Questo è qualcosa
 
 ---
 
-## Let's practice!
+## Passiamo alla pratica!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+che puoi sperimentare negli esercizi, insieme alla creazione e alla selezione di array numpy bidimensionali! Fantastico

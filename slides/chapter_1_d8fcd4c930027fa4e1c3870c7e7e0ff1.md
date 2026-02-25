@@ -2,16 +2,11 @@
 title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v8/735_ch1_1.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v8/hls-735_ch1_1.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/it-IT/db242450-b9ea-4f09-b7a8-327258487fb9.mp3
 ---
 
-## Hello Python!
+## Ciao Python!
 
 ```yaml
 type: TitleSlide
@@ -23,13 +18,13 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Hi, my name is Hugo and I'll be your host for Introduction to Python for Data Science.
+Ciao, mi chiamo Hugo e sarò la tua guida per Introduzione a Python per la Data Science.
 
-I'm a data scientist and educator at DataCamp.
+Sono un data scientist e formatore in DataCamp.
 
 ---
 
-## How you will learn
+## Come imparerai
 
 ```yaml
 type: FullSlide
@@ -38,10 +33,10 @@ disable_transition: true
 ```
 
 `@part1`
-![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
+![Interfaccia DataCamp](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
 
 `@script`
-In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
+In questo corso imparerai Python per la Data Science attraverso videolezioni, come questa, ed esercizi interattivi. Avrai una tua sessione di Python in cui potrai sperimentare e provare a scrivere il codice giusto per risolvere le consegne. Impari facendo, mentre ricevi un feedback personalizzato e immediato sul tuo lavoro.
 
 ---
 
@@ -53,24 +48,24 @@ key: 3f23b93572
 ```
 
 `@part1`
-![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
+![guido-hba.png](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
 
-- General purpose: build anything{{2}}
+- Scopo generale: costruire qualsiasi cosa{{2}}
 
-- Open source! Free!{{3}}
+- Open source! Gratis!{{3}}
 
-- Python packages, also for data science{{4}}
+- Pacchetti Python, anche per la scienza dei dati{{4}}
 
-	- Many applications and fields{{5}}
+	- Tante applicazioni e campi{{5}}
 
 `@script`
-Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
-People often refer to Python as the swiss army knife of programming languages as you can do almost anything with it.
-In this course, we'll start to build up your data science coding skills bit by bit, so make sure to stick around to see how powerful the language can be.
+Python è stato ideato da Guido Van Rossum. Qui puoi vedere una mia foto con Guido. Quello che è nato come un progetto hobbistico è presto diventato un linguaggio di programmazione generalista: oggi puoi usare Python per costruire praticamente qualsiasi software. Ma come è successo? Prima di tutto, Python è open source. È gratuito da usare. In secondo luogo, è molto semplice creare pacchetti in Python, cioè codice che puoi condividere con altre persone per risolvere problemi specifici. Col tempo, sono stati sviluppati sempre più pacchetti pensati proprio per la data science. Supponi di voler creare visualizzazioni accattivanti delle vendite della tua azienda. C’è un pacchetto anche per questo. O che ne dici di collegarti a un database per analizzare misurazioni di sensori? Anche per questo c’è un pacchetto.
+Spesso ci si riferisce a Python come al coltellino svizzero dei linguaggi di programmazione, perché ci puoi fare quasi tutto.
+In questo corso, costruiremo le tue competenze di coding per la data science poco alla volta, quindi resta con noi per scoprire quanto può essere potente questo linguaggio.
 
 ---
 
-## IPython Shell
+## Shell IPython
 
 ```yaml
 type: FullSlide
@@ -78,16 +73,16 @@ key: 43a91a7217
 ```
 
 `@part1`
-**Execute Python commands**
+**Esegui i comandi Python**
 
-![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
+![ipython_shell.png](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
 
 `@script`
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the
+Ora che sei tutto occhi e orecchie per Python, iniziamo a sperimentare. Partirò con la
 
 ---
 
-## IPython Shell
+## Shell IPython
 
 ```yaml
 type: FullSlide
@@ -96,16 +91,16 @@ disable_transition: true
 ```
 
 `@part1`
-**Execute Python commands**
+**Esegui i comandi Python**
 
-![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
+![ipython_shell_highlighted.png](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
 
 `@script`
-Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
+shell di Python, un posto dove puoi digitare codice Python e vedere subito i risultati. Nell’interfaccia degli esercizi di DataCamp, questa shell è integrata qui. Partiamo con qualcosa di semplice e usiamo Python come calcolatrice.
 
 ---
 
-## IPython Shell
+## Shell IPython
 
 ```yaml
 type: FullSlide
@@ -116,16 +111,16 @@ disable_transition: true
 `@part1`
 &nbsp;
 
-![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
+![Calcoli nella shell IPython di DataCamp](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
 
 `@script`
-Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+Scrivo quattro più cinque e premo Invio. Python interpreta quello che hai digitato e stampa il risultato del calcolo, nove. La shell di Python che usiamo qui in realtà non è quella originale; stiamo usando IPython, abbreviazione di Interactive Python, una versione potenziata del Python “classico” che più avanti tornerà molto utile.
 
-IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called
+IPython è stato creato da Fernando Pérez e fa parte dell’ecosistema più ampio di Jupyter. Oltre a lavorare in modo interattivo con Python, puoi anche far eseguire a Python i cosiddetti
 
 ---
 
-## Python Script
+## Script Python
 
 ```yaml
 type: FullSlide
@@ -133,20 +128,20 @@ key: 78ef256bc0
 ```
 
 `@part1`
-- Text files - `.py`{{1}}
+- File di testo - `.py`{{1}}
 
-- List of Python commands{{2}}
+- Elenco dei comandi Python{{2}}
 
-- Similar to typing in IPython Shell{{3}}
+- Simile alla digitazione nella shell IPython{{3}}
 
-![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
+![Script Python in DataCamp](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
 
 `@script`
-python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line.
+script Python. Questi script Python sono semplici file di testo con estensione punto py. In pratica, è un elenco di comandi Python che vengono eseguiti quasi come se stessi digitando tu stesso i comandi nella shell, riga per riga.
 
 ---
 
-## Python Script
+## Script Python
 
 ```yaml
 type: FullSlide
@@ -155,14 +150,14 @@ disable_transition: true
 ```
 
 `@part1`
-![GIF: typing 4 + 5 in the script and hitting submit answer. No output is shown.](https://assets.datacamp.com/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
+![GIF: scrivi 4 + 5 nello script e clicca su "Invia risposta". Non viene mostrato niente.](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
 
 `@script`
-Let's put the command from before in a script now, which can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
+Mettiamo ora il comando di prima in uno script, che trovi qui nell’interfaccia di DataCamp. Il passo successivo è eseguire lo script cliccando "Submit Answer". Se esegui questo script nell’interfaccia di DataCamp, non appare nulla nel riquadro di output. Questo perché negli script devi usare esplicitamente print se vuoi generare output durante l’esecuzione.
 
 ---
 
-## Python Script
+## Script Python
 
 ```yaml
 type: FullSlide
@@ -172,16 +167,16 @@ code_zoom: 90
 ```
 
 `@part1`
-![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
+![python_script_print.gif](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
 
-- Use `print()` to generate output from script
+- Usa`print()`  per creare un output dallo script
 
 `@script`
-Let's wrap our previous calculation in a print call, and rerun the script. This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
+Incartiamo il nostro calcolo precedente in una chiamata a print e rieseguiamo lo script. Questa volta viene generato lo stesso output di prima, ottimo! Mettere il codice in script Python, invece di riscrivere tutto manualmente in modo interattivo, ti aiuta a mantenere struttura ed evitare di ridigitare tutto ogni volta che vuoi fare una modifica; ti basta cambiare lo script e rieseguire l’intero blocco.
 
 ---
 
-## DataCamp Interface
+## Interfaccia DataCamp
 
 ```yaml
 type: FullSlide
@@ -189,14 +184,14 @@ key: 693ba1cd14
 ```
 
 `@part1`
-![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
+![Screenshot dell'interfaccia di DataCamp](https://assets.datacamp.com/img/translations/it-IT/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
+Ora che hai un’idea dei diversi modi di lavorare con Python, ti suggerisco di passare agli esercizi. Usa la IPython Shell per sperimentare e usa l’editor degli script Python per scrivere la risposta vera e propria. Se fai clic su Submit Answer, il tuo script verrà eseguito e controllato per verificarne la correttezza.
 
 ---
 
-## Let's practice!
+## Passiamo alla pratica!
 
 ```yaml
 type: FinalSlide
@@ -204,4 +199,4 @@ key: 7445cd202e
 ```
 
 `@script`
-Get coding and don't forget to have fun!
+Mettiti a programmare e non dimenticare di divertirti!
