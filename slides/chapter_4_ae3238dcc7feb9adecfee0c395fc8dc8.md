@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/fr-FR/f96b4b20-c676-4227-972b-94e80ef95e52.mp3
 ---
 
-## 2D NumPy Arrays
+## Tableaux 2D NumPy
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,12 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Bravo, vous êtes une légende ! Recréons maintenant les tableaux numpy de la vidéo précédente.
+
 
 ---
 
-## Type of NumPy Arrays
+## Types de tableaux NumPy
 
 ```yaml
 type: FullSlide
@@ -59,11 +55,12 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Si vous demandez le type de ces tableaux, Python vous répond qu'il s'agit de numpy.ndarray. numpy dot vous indique qu'il s'agit d'un type défini dans le paquet numpy. ndarray signifie tableau n-dimensionnel. Les tableaux np tiret height et np tiret weight sont des tableaux unidimensionnels, mais il est tout à fait possible de créer des tableaux bidimensionnels, tridimensionnels, voire septidimensionnels. Toutefois, restons-en à deux dans cette vidéo.
+
 
 ---
 
-## 2D NumPy Arrays
+## Tableaux 2D NumPy
 
 ```yaml
 type: FullSlide
@@ -104,17 +101,18 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Vous pouvez créer un tableau numpy 2D à partir d'une liste Python classique de listes. Essayons de créer un tableau numpy pour toutes les données de taille et de poids de votre famille, comme ceci.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Si vous affichez np tiret 2d maintenant, vous constaterez qu'il s'agit d'une structure de données rectangulaire : Chaque sous-liste de la liste correspond à une ligne dans le tableau numpy bidimensionnel. À partir de np tiret 2D point shape, vous pouvez constater que nous avons bien 2 lignes et 5 colonnes. shape est un attribut du tableau N P 2 D qui fournit des informations supplémentaires sur la structure des données.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Veuillez noter que la syntaxe permettant d'accéder à un attribut ressemble quelque peu à celle utilisée pour appeler une méthode, mais il ne s'agit pas de la même chose. N'oubliez pas que les méthodes sont suivies de parenthèses, contrairement aux attributs, comme vous pouvez le constater ici.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Pour les tableaux 2D également, la règle NumPy s'applique : un tableau ne peut contenir qu'un seul type. Si vous convertissez un nombre flottant en chaîne, tous les éléments du tableau seront convertis en chaînes, afin d'obtenir un tableau homogène.
+
 
 ---
 
-## Subsetting
+## Sous-ensembles
 
 ```yaml
 type: FullSlide
@@ -139,15 +137,16 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Vous pouvez considérer le tableau numpy 2D comme une liste de listes améliorée : vous pouvez effectuer des calculs sur les tableaux, comme je l'ai montré précédemment, et vous pouvez utiliser des méthodes plus avancées pour créer des sous-ensembles.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Supposons que vous souhaitiez obtenir la première ligne, puis le troisième élément de cette ligne. Pour sélectionner la ligne, vous devez utiliser l'index 0 entre crochets. N'oubliez pas l'indexation zéro.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+Pour sélectionner ensuite le troisième élément, vous pouvez étendre le même appel avec une autre paire de crochets, cette fois avec l'index 2,
+
 
 ---
 
-## Subsetting
+## Sous-ensembles
 
 ```yaml
 type: FullSlide
@@ -181,13 +180,14 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+comme ceci. En substance, vous sélectionnez la ligne, puis vous effectuez une autre sélection à partir de cette ligne.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Il existe également une autre méthode pour créer des sous-ensembles, en utilisant des crochets simples et une virgule. Cet appel renvoie exactement la même valeur qu'auparavant. La valeur avant la virgule spécifie la ligne, la valeur après la virgule spécifie la colonne. L'intersection des lignes et des colonnes que vous avez spécifiées est renvoyée. Une fois que vous vous y serez habitué, cette syntaxe vous semblera plus intuitive et vous offrira davantage de possibilités.
+
 
 ---
 
-## Subsetting
+## Sous-ensembles
 
 ```yaml
 type: FullSlide
@@ -222,15 +222,16 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Supposons que vous souhaitiez sélectionner la taille et le poids du deuxième et du troisième membre de la famille. Vous souhaitez conserver les deux lignes, vous devez donc insérer un deux-points avant la virgule. Vous ne souhaitez conserver que les deuxième et troisième colonnes, vous devez donc saisir les index 1 à 3 après la virgule. Veuillez noter que le troisième index n'est pas inclus ici. L'intersection nous donne un tableau 2D avec 2 lignes et 2 colonnes :
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+De la même manière, vous pouvez sélectionner le poids de tous les membres de la famille comme suit : vous ne souhaitez que la deuxième ligne, donc placez 1 avant la virgule. Vous souhaitez avoir toutes les colonnes, vous devez donc utiliser deux points après la virgule. L'intersection nous donne toute la deuxième ligne.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+Enfin, les tableaux numpy 2D vous permettent d'effectuer des calculs élément par élément, de la même manière que vous le faisiez avec les tableaux numpy 1D. C'est quelque chose
+
 
 ---
 
-## Let's practice!
+## Passons à la pratique !
 
 ```yaml
 type: FinalSlide
@@ -238,4 +239,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+que vous pouvez tester dans les exercices, tout en créant et en sous-divisant des tableaux numpy 2D. Génial, non ?

@@ -1,27 +1,8 @@
 id: 735
-title: Introduction to Python
+title: Introduction à Python
 programming_language: python
-description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
-
-
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
-
-
-  The course glossary can be found on the right in the resources section.
-
-
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+description: "Python est un langage de programmation polyvalent qui devient de plus en plus populaire dans le domaine de la science des données. Les entreprises du monde entier utilisent Python pour exploiter leurs données et acquérir un avantage concurrentiel. Contrairement à d'autres tutoriels Python, ce cours se concentre sur Python spécifiquement pour la science des données. Dans notre cours d'introduction à Python, vous découvrirez des méthodes puissantes pour stocker et manipuler des données, ainsi que des outils de science des données utiles pour commencer à effectuer vos propres analyses. Commencez dès maintenant le programme d'études en ligne de DataCamp sur Python.\n\nLes vidéos contiennent des transcriptions en direct, accessibles en cliquant sur «\_Afficher la transcription\_» en bas à gauche des vidéos.\n\nLe glossaire du cours se trouve à droite dans la section «\_Ressources\_».\n\nPour obtenir des crédits CPE, vous devez suivre le cours dans son intégralité et obtenir une note d’au moins 70\_% à l'évaluation qualifiante. Vous pouvez accéder à l'évaluation en cliquant sur la mention «\_Crédits CPE\_» à droite."
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
