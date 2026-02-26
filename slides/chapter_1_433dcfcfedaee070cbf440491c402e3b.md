@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4
 ---
 
-## Variables and Types
+## 변수와 타입
 
 ```yaml
 type: TitleSlide
@@ -27,7 +22,7 @@ Well done and welcome back! It's clear that Python is a great calculator. If you
 
 ---
 
-## Variable
+## 변수
 
 ```yaml
 type: FullSlide
@@ -35,9 +30,9 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- 구체적이며 대소문자 구분
 
-- Call up value through variable name{{1}}
+- 변수 이름으로 값 호출{{1}}
 
 - 1.79 m - 68.7 kg{{2}}
 
@@ -64,7 +59,7 @@ Python looks for the variable name, retrieves its value, and prints it out.
 
 ---
 
-## Calculate BMI
+## BMI 계산하기
 
 ```yaml
 type: TwoColumns
@@ -122,7 +117,7 @@ In Python, variables are used all the time. They help to make your code reproduc
 
 ---
 
-## Reproducibility
+## 재현성
 
 ```yaml
 type: FullSlide
@@ -146,7 +141,7 @@ Suppose the code to create the height, weight and bmi variable are in a script, 
 
 ---
 
-## Reproducibility
+## 재현성
 
 ```yaml
 type: FullSlide
@@ -173,7 +168,7 @@ So far, we've only worked with numerical values, such as height and weight.
 
 ---
 
-## Python Types
+## Python 타입
 
 ```yaml
 type: FullSlide
@@ -205,7 +200,7 @@ To do data science, you'll need more than ints and floats, though.
 
 ---
 
-## Python Types (2)
+## Python 타입 (2)
 
 ```yaml
 type: FullSlide
@@ -245,7 +240,7 @@ There's something special about Python data types.
 
 ---
 
-## Python Types (3)
+## Python 타입 (3)
 
 ```yaml
 type: FullSlide
@@ -269,7 +264,7 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- 타입이 다르면 동작도 다릅니다!{{3}}
 
 `@script`
 Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
@@ -280,7 +275,7 @@ In the exercises that follow, you'll create your first variables and experiment 
 
 ---
 
-## Let's practice!
+## Passons à la pratique !
 
 ```yaml
 type: FinalSlide

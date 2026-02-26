@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy 배열
 
 ```yaml
 type: TitleSlide
@@ -27,7 +22,7 @@ Well done you legend! Let's now recreate the numpy arrays from the previous vide
 
 ---
 
-## Type of NumPy Arrays
+## NumPy 배열의 타입
 
 ```yaml
 type: FullSlide
@@ -63,7 +58,7 @@ If you ask for the type of these arrays, Python tells you that they are numpy.nd
 
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy 배열
 
 ```yaml
 type: FullSlide
@@ -90,7 +85,7 @@ np_2d.shape
 ```{{3}}
 
 ```out
-(2, 5) # 2 rows, 5 columns
+(2, 5) # 2행, 5열
 ```{{3}}
 
 ```py
@@ -114,7 +109,7 @@ Also for 2D arrays, the NumPy rule applies: an array can only contain a single t
 
 ---
 
-## Subsetting
+## 부분 선택
 
 ```yaml
 type: FullSlide
@@ -147,7 +142,7 @@ To then select the third element, you can extend the same call with another pair
 
 ---
 
-## Subsetting
+## 부분 선택
 
 ```yaml
 type: FullSlide
@@ -187,7 +182,7 @@ There's also an alternative way of subsetting, using single square brackets and 
 
 ---
 
-## Subsetting
+## 부분 선택
 
 ```yaml
 type: FullSlide
@@ -230,7 +225,7 @@ Finally, 2D numpy arrays enable you to do element-wise calculations, the same wa
 
 ---
 
-## Let's practice!
+## 연습해 봅시다!
 
 ```yaml
 type: FinalSlide

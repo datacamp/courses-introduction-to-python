@@ -1,22 +1,21 @@
 ---
 title_meta: Chapter 3
-title: Functions and Packages
+title: 함수와 패키지
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  뛰어난 Python 개발자들이 작성한 코드를 효율적으로 활용할 수 있도록 함수, 메서드, 패키지 사용법을 배웁니다. 목표는 어려운 문제를
+  해결하는 데 필요한 코드의 양을 줄이는 것입니다!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: 함수
   - nb_of_exercises: 4
-    title: Methods
+    title: 메서드
   - nb_of_exercises: 4
-    title: Packages
+    title: 패키지
 ---
 
-## Functions
+## 함수
 
 ```yaml
 type: VideoExercise
@@ -29,7 +28,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## 익숙한 함수들
 
 ```yaml
 type: NormalExercise
@@ -40,23 +39,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python에는 데이터 사이언티스트의 작업을 더 쉽게 해 주는 다양한 내장 함수가 기본으로 제공돼요. 이미 `print()`와 `type()` 두 가지 함수는 알고 계시죠. 이 밖에도 데이터 형식을 바꿀 때 쓰는 `str()`, `int()`, `bool()`, `float()` 같은 함수들이 있어요. 자세한 내용은 [여기](https://docs.python.org/3/library/functions.html)에서 확인할 수 있어요. 이들도 모두 내장 함수입니다.
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+함수를 호출하는 방법은 간단해요. `3.0`의 타입을 구해 결과를 새 변수 `result`에 저장하려면 다음과 같이 하면 됩니다:
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- `print()`과 `type()`을 함께 사용해 `var1`의 타입을 출력하세요.
+- `len()`을 사용해 리스트 `var1`의 [길이](https://docs.python.org/3/library/functions.html#len)를 구하세요. `print()`로 감싸 바로 출력하세요.
+- `int()`를 사용해 `var2`를 [정수](https://docs.python.org/3/library/functions.html#int)로 변환하고, 결과를 `out2`에 저장하세요.
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- `type()` 함수는 이렇게 호출해 보세요: `type(var1)`.
+- `print()`는 이전에 여러 번 하신 것처럼 호출하면 돼요. 출력할 변수를 괄호 안에 넣으세요.
+- `int(x)`는 `x`를 정수로 변환합니다.
 
 `@pre_exercise_code`
 ```{python}
@@ -97,26 +96,26 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "미리 정의된 변수를 변경하거나 제거할 필요가 없습니다."
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__: `{{sol_call}}`을(를) 사용하여 `var1`의 %s을(를) 출력했는지 확인하세요."
+Ex().has_printout(0, not_printed_msg = patt % '유형')
+Ex().has_printout(1, not_printed_msg = patt % '길이')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "`int()`을(를) 사용하여 `var2`를 정수로 변환했는지 확인하세요."
+int_incorr_msg = "`var2`를 `int()`에 전달했는지 확인하세요."
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="`int()`을(를) 올바르게 호출했습니다; 이제 이 호출의 결과를 `out2`에 할당했는지 확인하세요."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("잘하셨습니다! `len()` 함수는 매우 유용합니다; 문자열에서도 작동하여 문자 수를 셀 수 있습니다!")
 ```
 
 ---
 
-## Help!
+## 도와줘요!
 
 ```yaml
 type: MultipleChoiceExercise
@@ -127,27 +126,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+어떤 Python 함수의 이름은 알고 있지만, 어떻게 써야 할지 알아봐야 할 때가 있어요. 아이러니하게도, 함수에 대한 정보를 얻으려면 또 다른 함수인 `help()`를 사용해야 해요. 특히 IPython에서는 함수 이름 앞에 `?`를 붙이는 방법도 쓸 수 있어요.
 
-To get help on the `max()` function, for example, you can use one of these calls:
+예를 들어 `max()` 함수에 대한 도움말을 보려면 다음 호출 중 하나를 사용할 수 있어요:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+IPython 셸에서 `pow()`의 [문서](https://docs.python.org/3/library/functions.html#pow)를 열어 보세요. `?pow` 또는 `help(pow)`를 입력하고 **Enter**를 누르면 됩니다.
 
-Which of the following statements is true?
+다음 중 올바른 설명은 무엇인가요?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()`는 `base`, `exp`, `mod`의 세 인자를 받습니다. `mod`를 생략하면 함수는 오류를 반환합니다.
+- `pow()`는 `base`, `exp`, `None`의 세 필수 인자를 받습니다.
+- `pow()`는 `base`와 `exp` 인자가 필요하며 `mod`는 선택 사항입니다.
+- `pow()`는 `exp`와 `mod`의 두 인자를 받습니다. `exp`가 없으면 오류가 발생합니다.
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- 선택적 인자는 `=` 로 기본값을 설정해 두며, 해당 인자가 지정되지 않으면 함수가 그 기본값을 사용해요.
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +155,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "아닙니다. `mod`는 값을 지정하지 않으면 사용되는 기본값이 있습니다."
+msg2 = "틀렸습니다. `None`은 `mod` 인수의 기본값입니다."
+msg3 = "완벽합니다! `help()`를 사용하면 함수가 어떻게 작동하는지 이해할 수 있어, 그들의 잠재력을 최대한 발휘할 수 있습니다!"
+msg4 = "틀렸습니다. `pow()`는 세 개의 인수를 받으며, 그 중 하나는 기본값을 가집니다."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## 여러 개의 인수
 
 ```yaml
 type: NormalExercise
@@ -176,25 +175,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+이전 연습 문제에서는 `help()`로 문서를 확인해 선택적 인수를 알아봤어요. 이제 이를 활용해 `sorted()` 함수의 동작을 바꿔 보겠습니다.
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+IPython 셸에서 `help(sorted)`를 입력해 `sorted()`의 [문서](https://docs.python.org/3/library/functions.html#sorted)를 확인해 보세요.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+`sorted()`는 `iterable`, `key`, `reverse` 세 가지 인수를 받습니다. 이번 연습에서는 `key`는 지정하지 않고, `iterable`과 `reverse`만 지정하면 됩니다.
 
-Two lists have been created for you.
+두 개의 리스트가 미리 준비되어 있습니다.
 
-Can you paste them together and sort them in descending order?
+이 둘을 이어 붙인 뒤 내림차순으로 정렬해 볼까요?
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- `+`를 사용해 `first`와 `second`의 내용을 새 리스트 `full`로 합치세요.
+- `full`에 대해 `sorted()`를 호출하고 `reverse` 인수를 `True`로 지정하세요. 정렬된 리스트를 `full_sorted`로 저장하세요.
+- 마지막으로 `full_sorted`를 출력하세요.
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- `first`와 `second`를 두 숫자를 더하듯이 합해서 결과를 `full`에 할당하세요.
+- `sorted()`를 사용할 때 입력을 두 개 넘기세요: `full`과 `reverse=True`.
+- 변수를 출력하려면 `print()`를 사용하세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +234,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "이미 있는 변수 `first`와 `second`를 변경하거나 제거할 필요가 없습니다."
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="`sorted()`를 호출한 결과를 `full_sorted`에 할당했는지 확인하세요."),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("좋습니다! Python 메서드에 대한 비디오로 이동하세요.")
 ```
 
 ---
 
-## Methods
+## 메서드
 
 ```yaml
 type: VideoExercise
@@ -266,7 +265,7 @@ xp: 50
 
 ---
 
-## String Methods
+## 문자열 메서드
 
 ```yaml
 type: NormalExercise
@@ -277,19 +276,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+문자열에는 다양한 메서드가 있어요. 아래 지침을 따라가며 몇 가지를 직접 살펴보세요. 더 자세히 확인하고 싶다면 IPython 셸에서 언제든지 `help(str)`를 입력해 보세요.
 
-A string `place` has already been created for you to experiment with.
+실험해 볼 수 있도록 문자열 `place`가 이미 만들어져 있어요.
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- `place`에 `.upper()` [메서드](https://docs.python.org/3/library/stdtypes.html#str.upper)를 사용해 결과를 `place_up`에 저장하세요. 이전 영상에서 배운 메서드 호출 문법을 사용하세요.
+- `place`와 `place_up`을 출력해 보세요. 둘 다 바뀌었나요?
+- 변수 `place`에서 문자 `'o'`의 개수를 세기 위해 `.count()`를 `place`에 호출하고, 메서드의 입력으로 문자 `'o'`를 전달한 뒤 그 결과를 출력하세요. 여기서 말하는 것은 단어 "place"가 아니라 변수 `place`예요!
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- `place`에 추가 입력 없이 `.upper()` 메서드를 호출할 수 있어요.
+- 변수 `x`를 출력하려면 `print(x)`라고 쓰면 돼요.
+- `place.count(____)` 호출 결과를 출력하려면 `print()`로 감싸는 것을 잊지 마세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +329,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "미리 정의된 변수를 변경하거나 제거할 필요가 없습니다."
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "`%s`을(를) 출력하는 것을 잊지 마세요."
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="`place.upper()` 호출의 결과를 `place_up`에 할당하세요."),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "`place`에서 'o'의 개수를 잘 계산하셨습니다; 이제 `place.count('o')` 호출을 `print()` 함수로 감싸서 결과를 출력하세요."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("좋습니다! 출력물에서 `upper()` 메서드가 호출된 객체를 변경하지 않는다는 것을 확인하세요. 다음 연습에서는 리스트에 대해 다르게 작동할 것입니다!")
 ```
 
 ---
 
-## List Methods
+## 리스트 메서드
 
 ```yaml
 type: NormalExercise
@@ -365,20 +364,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+메서드가 있는 Python 타입은 문자열만이 아닙니다. 리스트, 부동소수점(float), 정수(integer), 불리언(boolean)도 유용한 메서드를 여럿 제공합니다. 이 연습 문제에서는 다음을 실험해 볼 거예요:
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()`: 입력값과 일치하는 리스트의 첫 번째 원소의 인덱스를 가져오고,
+- `.count()`: 특정 원소가 리스트에 몇 번 나타나는지 확인합니다.
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+여러분은 집의 각 공간 면적을 담은 리스트 `areas`로 작업하게 됩니다.
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- `.index()` 메서드를 사용해 `areas`에서 `20.0`과 같은 원소의 인덱스를 가져오세요. 이 인덱스를 출력하세요.
+- `areas`에 대해 `.count()`를 호출해 리스트에 `9.50`이 몇 번 나타나는지 확인하세요. 이 숫자도 출력하세요.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- 인덱스를 출력하려면 `areas.index(___)` 호출을 `print()` 함수로 감싸세요.
+- 리스트에서 원소 `x`가 몇 번 나타나는지 출력하려면 `areas.count(___)` 호출을 `print()` 함수로 감싸세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -411,21 +410,20 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "미리 정의된 목록 `areas`를 변경하거나 제거할 필요가 없습니다."
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
 Ex().check_function("print", index=0).check_args(0).check_function('areas.index', signature=False).check_args(0).has_equal_value()
 
-
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("좋습니다! 이것들은 호출된 목록을 변경하지 않는 `list` 메서드의 예시입니다.")
 ```
 
 ---
 
-## List Methods (2)
+## 리스트 메서드 (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +434,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+대부분의 리스트 메서드는 호출된 리스트 자체를 변경합니다. 예를 들면 다음과 같아요:
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()`: 호출된 리스트에 원소를 하나 추가합니다.
+- `.remove()`: 입력과 일치하는 리스트의 첫 번째 원소를 [삭제](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable)합니다.
+- `.reverse()`: 호출된 리스트의 원소 순서를 [역순으로](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) 바꿉니다.
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+여러분은 집의 각 공간 면적을 담은 리스트 `areas`를 가지고 작업할 거예요.
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- `.append()`를 두 번 사용해 풀하우스와 차고의 면적인 `24.5`와 `15.45`를 다시 추가하세요. 이 순서를 지켜서 추가하세요.
+- `areas`를 출력하세요.
+- `.reverse()` 메서드를 사용해 `areas`의 원소 순서를 뒤집으세요.
+- `areas`를 한 번 더 출력하세요.
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- 첫 번째 지침에서는 `areas.append(___)` 호출을 두 번 사용하세요.
+- 변수 `x`를 출력하려면 `print(x)`라고만 쓰면 돼요.
+- `.reverse()` 메서드는 추가 입력이 필요하지 않아요. 점 표기법과 빈 괄호만 사용하세요: `.reverse()`.
+- 변수 `x`를 출력하려면 `print(x)`라고만 쓰면 돼요.
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +507,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("훌륭합니다!")
 ```
 
 ---
 
-## Packages
+## 패키지
 
 ```yaml
 type: VideoExercise
@@ -527,7 +525,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## 패키지 임포트
 
 ```yaml
 type: NormalExercise
@@ -538,24 +536,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+원의 둘레와 넓이를 계산해 보려고 한다고 가정해 볼게요. 공식은 다음과 같습니다:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+`pi` 값을 직접 입력하는 대신, 해당 값을 포함한 `math` 패키지를 사용할 수 있어요.
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+참고로, `**`는 거듭제곱 연산자예요. 예를 들어 `3**4`는 `3`의 `4`제곱을 의미하며 결과는 `81`입니다.
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- `math` 패키지를 임포트하세요.
+- `math.pi`를 사용해 원의 둘레를 계산하고 `C`에 저장하세요.
+- `math.pi`를 사용해 원의 넓이를 계산하고 `A`에 저장하세요.
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- `import math`만 사용하고, `pi`는 `math.pi`로 참조하시면 돼요.
+- 지문에 나온 공식을 사용해 `C`를 구하세요. 곱셈에는 `*`를 사용해요.
+- 지문에 나온 공식을 사용해 `A`를 구하세요. 곱셈에는 `*`, 거듭제곱에는 `**`를 사용해요.
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +592,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "당신의 `%s` 계산이 정확하지 않습니다. `math.pi`를 사용했는지 확인하세요."
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +600,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:둘레를 출력하기 위해 `{{sol_call}}`을(를) 그대로 두세요."),
+  has_printout(1, not_printed_msg = "__JINJA__:면적을 출력하기 위해 `{{sol_call}}`을(를) 그대로 두세요.")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("좋습니다! 패키지의 함수를 다루는 방법을 알고 있다면, 많은 파이썬 프로그래머의 힘이 당신의 손끝에 있습니다!")
 ```
 
 ---
 
-## Selective import
+## 선택적 임포트
 
 ```yaml
 type: NormalExercise
@@ -622,22 +620,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+`import math`처럼 일반적으로 임포트하면 `math` 패키지의 기능 **전체**를 사용할 수 있어요. 하지만 패키지의 특정 부분만 쓰려는 경우에는 임포트를 더 선택적으로 할 수 있습니다:
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+방금 한 것과 같은 방식으로, 이번에는 `pi`만 사용해 보세요.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- `math` 패키지에서 `pi`만 임포트하는 선택적 임포트를 수행하세요.
+- 원의 둘레를 `pi`로 계산해서 `C`에 저장하세요.
+- 원의 넓이를 `pi`로 계산해서 `A`에 저장하세요.
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- 선택적 임포트를 하려면 `from math import pi`를 사용하세요.
+- 이제 `pi`를 바로 사용할 수 있어요!
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +674,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "계산한 `%s` 값이 정확하지 않습니다. `pi`만 사용했는지 확인하세요."
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "`math` 패키지에서 `pi`를 가져오는 것을 잊지 마세요. `from ___ import ___` 표기법을 사용해야 합니다.",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +684,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}`을(를) 그대로 두어 둘레를 출력하도록 하세요."),
+  has_printout(1, not_printed_msg = "__JINJA__:`{{sol_call}}`을(를) 그대로 두어 면적을 출력하도록 하세요.")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("좋습니다! 다음 연습 문제로 넘어가세요.")
 ```
 
 ---
 
-## Different ways of importing
+## 여러 가지 가져오기 방법
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +704,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Python에서 패키지와 모듈을 가져오는 방법은 여러 가지가 있어요. 어떤 방식으로 가져오느냐에 따라 사용해야 하는 코드가 달라집니다.
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+예를 들어 `scipy` 패키지의 `linalg` 하위 패키지에 있는 [함수](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`를 사용하려고 한다고 가정해 볼게요. 이 함수를 다음과 같이 사용하고 싶습니다:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+위 코드를 오류 없이 실행하려면 어떤 `import` 문이 필요할까요?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +721,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- IPython 셸에서 각기 다른 import 문을 시도해 보고, 어느 것이 `my_inv([[1, 2], [3, 4]])` 줄이 오류 없이 실행되게 하는지 확인해 보세요. 입력한 코드를 실행하려면 **enter** 키를 누르세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +730,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "틀렸습니다. 다시 시도해 보세요. IPython 셸에서 다른 import 문을 시도해 보고, 어떤 것이 `my_inv([[1, 2], [3, 4]])` 줄이 오류 없이 실행되게 하는지 확인하세요."
+msg4 = "정답입니다! `as` 단어를 사용하면 가져오는 함수에 대한 로컬 이름을 만들 수 있습니다: `inv()`는 이제 `my_inv()`로 사용할 수 있습니다."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
