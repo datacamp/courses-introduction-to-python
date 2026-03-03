@@ -1,27 +1,23 @@
 id: 735
-title: Introduction to Python
+title: Python 소개
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python은 데이터 사이언스를 위해 점점 더 널리 사용되는 범용 프로그래밍 언어입니다. 전 세계의 기업들이 데이터를 통해 인사이트를 얻고
+  경쟁 우위를 확보하기 위해 Python을 활용하고 있어요. 이 강의는 다른 Python 튜토리얼과 달리, 데이터 사이언스에 특화된
+  Python 사용에 초점을 맞춥니다. Introduction to Python 강의에서 데이터 저장과 조작의 강력한 방법을 배우고, 직접
+  분석을 시작할 수 있도록 도와주는 유용한 데이터 사이언스 도구들을 익히게 됩니다. 지금 바로 DataCamp의 온라인 Python 커리큘럼을
+  시작해 보세요.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  동영상에는 실시간 자막이 제공되며, 동영상 왼쪽 하단의 "Show transcript"를 클릭해 확인할 수 있습니다.
 
 
-  The course glossary can be found on the right in the resources section.
+  강의 용어집은 오른쪽 리소스 섹션에서 찾아보실 수 있습니다.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  CPE 크레딧을 받으려면 강의를 완료하고 인증 평가에서 70% 이상의 점수를 획득해야 합니다. 오른쪽의 CPE 크레딧 안내를 클릭하면 평가로
+  이동할 수 있어요.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

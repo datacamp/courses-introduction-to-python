@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ko-KR/7d66a7f0-f1e3-4950-af42-df98d4cebf7b.mp3
 ---
 
-## Variables and Types
+## 변수와 타입
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+잘하셨습니다, 다시 오신 걸 환영해요! 파이썬이 훌륭한 계산기라는 게 분명하죠. 하지만 더 복잡한 계산을 하려면, 코드를 작성하는 동안 값을 "저장"하는 것이 필요합니다.
 
 ---
 
-## Variable
+## 변수
 
 ```yaml
 type: FullSlide
@@ -35,9 +30,9 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- 구체적이며 대소문자 구분
 
-- Call up value through variable name{{1}}
+- 변수 이름으로 값 호출{{1}}
 
 - 1.79 m - 68.7 kg{{2}}
 
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+이는 대소문자를 구분하는 특정 이름으로 변수를 정의하면 됩니다. 이렇게 변수를 만들고(선언하고) 나면, 나중에 변수 이름을 입력해서 그 값을 불러올 수 있어요.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+예를 들어, 키와 몸무게를 미터법으로 쟀다고 해볼게요. 키는 1.79미터, 몸무게는 68.7킬로그램입니다. 이 값을 height와 weight라는 두 변수에 등호를 사용해 할당할 수 있어요:
 
-If you now type the name of the variable, height,
+이제 변수 이름인 height를 입력하면,
 
-Python looks for the variable name, retrieves its value, and prints it out.
+파이썬은 해당 변수 이름을 찾아 그 값을 가져와 출력합니다.
 
 ---
 
-## Calculate BMI
+## BMI 계산하기
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+이제 체질량지수, 즉 BMI를 계산해 볼게요. BMI는 이렇게 계산합니다. 몸무게는 킬로그램, 키는 미터 단위예요. 실제 값을 넣어 계산할 수도 있지만, 이렇게 height와 weight 변수를 그대로 사용할 수도 있어요. 변수 이름을 입력할 때마다, 파이썬은 그 자리를 변수의 실제 값으로 바꿔서 계산합니다. weight는 68.7, height는 1.79에 해당하죠.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+마지막으로, 이 버전에서는 결과를 새로운 변수 bmi에 저장하도록 했습니다. 이제 bmi에는 앞에서 계산한 것과 같은 값이 들어 있어요.
 
-In Python, variables are used all the time. They help to make your code reproducible.
+파이썬에서는 변수를 아주 자주 사용합니다. 덕분에 코드의 재현성이 좋아져요.
 
 ---
 
-## Reproducibility
+## 재현성
 
 ```yaml
 type: FullSlide
@@ -142,11 +137,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+height, weight, bmi 변수를 만드는 코드가 이렇게 스크립트에 들어 있다고 가정해 볼게요. 이제 다른 몸무게로 bmi를 다시 계산하고 싶다면,
 
 ---
 
-## Reproducibility
+## 재현성
 
 ```yaml
 type: FullSlide
@@ -167,13 +162,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+weight 변수의 선언만 간단히 바꾼 뒤 스크립트를 다시 실행하면 됩니다. 변수 weight의 값이 바뀌었기 때문에, bmi도 그에 맞춰 변경됩니다.
 
-So far, we've only worked with numerical values, such as height and weight.
+지금까지는 키와 몸무게처럼 숫자 값만 다뤘죠.
 
 ---
 
-## Python Types
+## Python 타입
 
 ```yaml
 type: FullSlide
@@ -199,13 +194,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+파이썬에서는 이런 숫자들이 각각 특정한 타입을 가집니다. type 함수로 값의 타입을 확인할 수 있어요. bmi의 타입을 보려면, type에 bmi를 괄호 안에 넣어 호출하면 됩니다. 결과는 float인데, 이는 실수를 나타내는 파이썬의 타입이에요. 정수 부분과 소수 부분을 모두 가질 수 있는 숫자죠. 파이썬에는 정수를 위한 타입 int도 있습니다. 이 예시처럼요.
 
-To do data science, you'll need more than ints and floats, though.
+하지만 데이터 사이언스를 하려면 int와 float만으로는 충분하지 않습니다.
 
 ---
 
-## Python Types (2)
+## Python 타입 (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +230,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+파이썬에는 다른 데이터 타입도 정말 많습니다. 그중 가장 흔한 것이 문자열과 불리언이에요.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+문자열은 텍스트를 표현하는 방식입니다. 큰따옴표와 작은따옴표를 모두 사용할 수 있다는 점을 이 예시에서 볼 수 있어요. 마지막 변수의 타입을 출력해 보면 str, 즉 문자열의 약자임을 볼 수 있습니다.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+불리언은 True 또는 False 두 값만 가질 수 있는 타입입니다. 일상 언어의 '예'와 '아니오'로 생각하시면 돼요. 불리언은 나중에 데이터를 필터링하는 작업 등에서 매우 유용하게 쓰입니다.
 
-There's something special about Python data types.
+파이썬의 데이터 타입에는 특별한 점이 하나 있어요.
 
 ---
 
-## Python Types (3)
+## Python 타입 (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- 타입이 다르면 동작도 다릅니다!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+정수 두 개를 더하는 이 코드와, 문자열 두 개를 더하는 이 코드를 살펴보세요.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+정수의 경우에는 값이 합산되지만, 문자열의 경우에는 서로 붙여집니다. 플러스 연산자가 데이터 타입에 따라 다르게 동작한 거죠. 이것이 일반적인 원칙입니다. 코드가 어떻게 동작하는지는 사용 중인 타입에 따라 달라집니다.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+이어지는 실습에서 첫 변수를 만들어 보고, 파이썬의 여러 데이터 타입을 직접 실험해 보세요. 다음 영상에서는 리스트에 대해 자세히 설명하겠습니다.
 
 ---
 
-## Let's practice!
+## Passons à la pratique !
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+이제 코딩을 시작해 볼까요? 다음 챕터에서는 더 멋진 파이썬 차트를 만들어 볼 거예요. 곧 다시 만나겠습니다.
