@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Einführung in Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python ist eine universell einsetzbare Programmiersprache, die für Data
+  Science immer beliebter wird. Unternehmen auf der ganzen Welt nutzen Python,
+  um Erkenntnisse aus ihren Daten zu gewinnen und sich einen Wettbewerbsvorteil
+  zu verschaffen. Im Gegensatz zu anderen Python-Tutorials konzentriert sich
+  dieser Kurs speziell auf Python für Data Science. In unserem Einführungskurs
+  zu Python lernst du, wie du Daten speichern und bearbeiten kannst und welche
+  nützlichen Data-Science-Tools dir bei deinen eigenen Datenanalysen helfen.
+  Starte jetzt den Python-Onlinekurs von DataCamp!
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  Die Videos enthalten Live-Transkripte, die du durch Klicken auf „Transkript
+  anzeigen“ unten links in den Videos aufrufen kannst.
 
 
-  The course glossary can be found on the right in the resources section.
+  Das Kursglossar findest du rechts im Bereich Ressourcen.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Um CPE-Credits zu erhalten, musst du den Kurs abschließen und in dem Test 70 %
+  erreichen.  Du Assessment gelangst du, indem du rechts auf die Angabe zu den
+  CPE-Credits klickst.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
