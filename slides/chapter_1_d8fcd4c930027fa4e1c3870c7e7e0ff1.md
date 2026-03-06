@@ -2,16 +2,11 @@
 title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v8/735_ch1_1.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v8/hls-735_ch1_1.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ja-JP/b304ad18-1073-4c50-b93b-a015c968a8e1.mp3
 ---
 
-## Hello Python!
+## Python へようこそ！
 
 ```yaml
 type: TitleSlide
@@ -23,13 +18,13 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Hi, my name is Hugo and I'll be your host for Introduction to Python for Data Science.
+こんにちは。ヒューゴと申します。「Python入門（データサイエンス向け）」のホストを務めます。
 
-I'm a data scientist and educator at DataCamp.
+私はDataCampでデータサイエンティスト兼教育担当をしています。
 
 ---
 
-## How you will learn
+## 学び方
 
 ```yaml
 type: FullSlide
@@ -38,10 +33,10 @@ disable_transition: true
 ```
 
 `@part1`
-![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
+![DataCamp のインターフェース](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
 
 `@script`
-In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
+このコースでは、今ご覧いただいているような動画レッスンと、インタラクティブな演習を通して、データサイエンスのためのPythonを学びます。ご自身専用のPythonセッションが用意され、試行錯誤しながら指示を解くための正しいコードを書いていきます。実際に手を動かしながら学び、作業内容に合わせた即時のフィードバックが得られます。
 
 ---
 
@@ -53,20 +48,20 @@ key: 3f23b93572
 ```
 
 `@part1`
-![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
+![guido-hba.png](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
 
-- General purpose: build anything{{2}}
+- 汎用: 何でも作れる{{2}}
 
-- Open source! Free!{{3}}
+- オープンソース。無料{{3}}
 
-- Python packages, also for data science{{4}}
+- データサイエンス向けを含む Python パッケージ{{4}}
 
-	- Many applications and fields{{5}}
+	- 多様な用途と分野{{5}}
 
 `@script`
-Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
-People often refer to Python as the swiss army knife of programming languages as you can do almost anything with it.
-In this course, we'll start to build up your data science coding skills bit by bit, so make sure to stick around to see how powerful the language can be.
+Pythonはグイド・ヴァンロッサムによって考案されました。ここに、私とグイドの写真があります。趣味のプロジェクトとして始まったものが、すぐに汎用のプログラミング言語へと発展し、今ではほとんどあらゆるソフトウェアをPythonで作れるようになりました。なぜそうなったのでしょうか。まず、Pythonはオープンソースで、自由に使えます。次に、特定の問題を解くためのコードを他の人と共有できる「パッケージ」をPythonでは作りやすい点があります。時間の経過とともに、データサイエンスに特化したパッケージがどんどん開発されてきました。たとえば、会社の売上を見栄えよく可視化したいなら、そのためのパッケージがあります。センサーの計測値を分析するためにデータベースへ接続したい場合も、やはりそのためのパッケージがあります。
+Pythonは、ほとんど何でもできることから「プログラミング言語のスイスアーミーナイフ」と呼ばれることも多いです。
+このコースでは、少しずつ着実にコーディングスキルを積み上げていきます。言語の強力さを実感できるので、ぜひ最後まで続けてみてください。
 
 ---
 
@@ -78,12 +73,12 @@ key: 43a91a7217
 ```
 
 `@part1`
-**Execute Python commands**
+**Python コマンドを実行**
 
-![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
+![ipython_shell.png](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
 
 `@script`
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the
+Pythonに向けて気持ちの準備ができたところで、さっそく試してみましょう。まずは
 
 ---
 
@@ -96,12 +91,12 @@ disable_transition: true
 ```
 
 `@part1`
-**Execute Python commands**
+**Python コマンドを実行**
 
-![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
+![ipython_shell_highlighted.png](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
 
 `@script`
-Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
+Pythonシェルです。ここではPythonコードを入力すると、すぐに結果が表示されます。DataCampの演習画面では、このシェルがここに組み込まれています。まずは手始めに、Pythonを電卓として使ってみましょう。
 
 ---
 
@@ -116,16 +111,16 @@ disable_transition: true
 `@part1`
 &nbsp;
 
-![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
+![DataCamp の IPython Shell での計算](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
 
 `@script`
-Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+4 + 5 と入力して、Enterを押してみます。Pythonが入力を解釈し、計算結果の 9 を表示します。ここで使っているPythonシェルは元々のものではなく、IPythonと呼ばれるものです。Interactive Pythonの略で、標準のPythonを強化したもので、後ほど役に立ちます。
 
-IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called
+IPythonはフェルナンド・ペレスによって作られ、より広いJupyterエコシステムの一部です。対話的にPythonを扱うだけでなく、いわゆる
 
 ---
 
-## Python Script
+## Python スクリプト
 
 ```yaml
 type: FullSlide
@@ -133,20 +128,20 @@ key: 78ef256bc0
 ```
 
 `@part1`
-- Text files - `.py`{{1}}
+- テキストファイル - `.py`{{1}}
 
-- List of Python commands{{2}}
+- Python コマンドの一覧{{2}}
 
-- Similar to typing in IPython Shell{{3}}
+- IPython Shell での入力に近い{{3}}
 
-![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
+![DataCamp の Python スクリプト](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
 
 `@script`
-python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line.
+Pythonスクリプトを実行することもできます。Pythonスクリプトは拡張子が .py の単なるテキストファイルです。シェルで自分が1行ずつ入力していくのとほぼ同じように、Pythonのコマンドが順に実行されます。
 
 ---
 
-## Python Script
+## Python スクリプト
 
 ```yaml
 type: FullSlide
@@ -155,14 +150,14 @@ disable_transition: true
 ```
 
 `@part1`
-![GIF: typing 4 + 5 in the script and hitting submit answer. No output is shown.](https://assets.datacamp.com/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
+![GIF: スクリプトで 4 + 5 を入力して Submit Answer を押すが、出力は表示されない。](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
 
 `@script`
-Let's put the command from before in a script now, which can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
+それでは先ほどのコマンドを、今度はスクリプトに入れてみましょう。DataCampの画面のこちらにあります。次のステップは、"Submit Answer" をクリックしてスクリプトを実行することです。DataCampの画面でこのスクリプトを実行しても、出力ペインには何も表示されません。スクリプトで実行時に出力を表示したい場合は、printを明示的に使う必要があるためです。
 
 ---
 
-## Python Script
+## Python スクリプト
 
 ```yaml
 type: FullSlide
@@ -172,16 +167,16 @@ code_zoom: 90
 ```
 
 `@part1`
-![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
+![python_script_print.gif](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
 
-- Use `print()` to generate output from script
+- `print()` を使うとスクリプトから出力できます
 
 `@script`
-Let's wrap our previous calculation in a print call, and rerun the script. This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
+先ほどの計算をprintで包んで、スクリプトを再実行してみましょう。今度は先ほどと同じ出力が表示されました。良いですね。コードを毎回対話的に打ち直すのではなく、Pythonスクリプトにまとめておくと、構造を保てますし、変更したいときも同じ部分を繰り返し入力せずに済みます。スクリプト内を修正して、全体をもう一度実行するだけです。
 
 ---
 
-## DataCamp Interface
+## DataCamp のインターフェース
 
 ```yaml
 type: FullSlide
@@ -189,14 +184,14 @@ key: 693ba1cd14
 ```
 
 `@part1`
-![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
+![DataCamp インターフェースのスクリーンショット](https://assets.datacamp.com/img/translations/ja-JP/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
+Pythonの使い方を大まかにつかめたところで、演習に進みましょう。試行にはIPythonシェルを使い、実際の解答コードはPythonスクリプトエディタに書いてください。"Submit Answer" をクリックすると、スクリプトが実行され、正しさがチェックされます。
 
 ---
 
-## Let's practice!
+## ¡Vamos a practicar!
 
 ```yaml
 type: FinalSlide
@@ -204,4 +199,4 @@ key: 7445cd202e
 ```
 
 `@script`
-Get coding and don't forget to have fun!
+それでは、コーディングを始めましょう。楽しむこともお忘れなく！

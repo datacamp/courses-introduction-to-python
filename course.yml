@@ -1,27 +1,20 @@
 id: 735
-title: Introduction to Python
+title: Python入門
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Pythonは汎用のプログラミング言語で、データサイエンス分野でますます人気が高まっています。世界中の企業が、データから洞察を得て競争優位性を高めるためにPythonを活用しています。本コースは他のPythonチュートリアルと異なり、データサイエンスに特化したPythonに焦点を当てています。Introduction
+  to
+  Pythonコースでは、データの強力な保存・操作方法や、分析を自分で始めるための便利なデータサイエンスツールを学びます。今すぐDataCampのオンラインPythonカリキュラムを始めましょう。
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  動画にはライブトランスクリプトがあり、動画左下の"Show transcript"をクリックすると表示できます。
 
 
-  The course glossary can be found on the right in the resources section.
+  コース用語集は、右側のリソースセクションにあります。
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  CPEクレジットを取得するには、コースを完了し、認定評価で70%のスコアに到達する必要があります。右側のCPEクレジットの案内をクリックすると評価に移動できます。
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

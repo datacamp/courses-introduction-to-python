@@ -1,22 +1,20 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
+title_meta: 第3章
+title: 関数とパッケージ
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  優れたPython開発者が書いたコードを、関数・メソッド・パッケージで効率よく活用する方法を学びます。目的は、難しい問題を解くために必要なコード量を減らすことです。
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: 関数
   - nb_of_exercises: 4
-    title: Methods
+    title: メソッド
   - nb_of_exercises: 4
-    title: Packages
+    title: パッケージ
 ---
 
-## Functions
+## 関数
 
 ```yaml
 type: VideoExercise
@@ -29,7 +27,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## おなじみの関数
 
 ```yaml
 type: NormalExercise
@@ -40,23 +38,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python には、データサイエンティストの作業を楽にする組み込み関数が最初からたくさん用意されています。すでにご存じの関数としては `print()` と `type()` があります。ほかにも、データ型を切り替える `str()`、`int()`、`bool()`、`float()` といった関数があります。詳しくは[こちら](https://docs.python.org/3/library/functions.html)をご覧ください。これらも組み込み関数です。
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+関数の呼び出しは簡単です。`3.0` の型を取得し、その出力を新しい変数 `result` に保存するには、次のように書きます。
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- `print()` と `type()` を組み合わせて、`var1` の型を表示してください。
+- `len()` を使って、リスト `var1` の[長さ](https://docs.python.org/3/library/functions.html#len)を取得します。`print()` で包んで、そのまま表示してください。
+- `int()` を使って、`var2` を[整数](https://docs.python.org/3/library/functions.html#int)に変換します。出力を `out2` として保存してください。
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- `type()` 関数は次のように呼び出します: `type(var1)`。
+- これまで通りに `print()` を呼び出します。表示したい変数を丸括弧の中に入れるだけです。
+- `int(x)` は `x` を整数に変換します。
 
 `@pre_exercise_code`
 ```{python}
@@ -97,21 +95,21 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "定義済みの変数を変更または削除する必要はありません。"
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__:`{{sol_call}}`を使用して`var1`の%sを出力することを確認してください。"
+Ex().has_printout(0, not_printed_msg = patt % '型')
+Ex().has_printout(1, not_printed_msg = patt % '長さ')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "`int()`を使用して`var2`を整数にしましたか？"
+int_incorr_msg = "`var2`を`int()`に渡しましたか？"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="`int()`を正しく呼び出しました。次に、この呼び出しの結果を`out2`に割り当ててください。"),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("素晴らしい仕事です！`len()`関数は非常に便利です。文字列にも使用して文字数を数えることができます！")
 ```
 
 ---
@@ -127,27 +125,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+Pythonの関数名は分かっていても、使い方を確認したいときがありますよね。そんなときは、別の関数で関数の情報を参照します。それが `help()` です。IPython では、関数名の前に `?` を付ける方法も使えます。
 
-To get help on the `max()` function, for example, you can use one of these calls:
+たとえば `max()` のヘルプを表示するには、次のどちらかを実行します。
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+IPython シェルで `pow()` の[ドキュメント](https://docs.python.org/3/library/functions.html#pow)を開いてみましょう。`?pow` または `help(pow)` と入力し、**Enter** を押してください。
 
-Which of the following statements is true?
+次の記述のうち、正しいものはどれですか？
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` は `base`、`exp`、`mod` の3つの引数を取ります。`mod` を省略するとエラーになります。
+- `pow()` は必須の3引数 `base`、`exp`、`None` を取ります。
+- `pow()` は `base` と `exp` が必須で、`mod` は省略可能です。
+- `pow()` は `exp` と `mod` の2引数を取ります。`exp` がないとエラーになります。
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- 省略可能な引数は、`=` でデフォルト値が設定されています。指定しない場合は、そのデフォルト値が使われます。
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +154,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "違います。`mod` にはデフォルト値があり、値を指定しない場合はその値が使用されます。"
+msg2 = "不正解です。`mod` 引数のデフォルト値は `None` です。"
+msg3 = "完璧です！`help()` を使用することで、関数の動作を理解し、その可能性を最大限に引き出すことができます！"
+msg4 = "不正解です。`pow()` は3つの引数を取り、そのうちの1つにはデフォルト値があります。"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## 複数の引数
 
 ```yaml
 type: NormalExercise
@@ -176,25 +174,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+前の演習では、`help()` でドキュメントを表示してオプション引数を確認しました。ここではそれを応用して、`sorted()` 関数の動作を変えてみます。
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+IPython シェルで `help(sorted)` と入力し、`sorted()` の[ドキュメント](https://docs.python.org/3/library/functions.html#sorted)を確認してください。
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+`sorted()` は `iterable`、`key`、`reverse` の3つの引数を受け取ります。この演習では、`key` ではなく、`iterable` と `reverse` だけを指定します。
 
-Two lists have been created for you.
+2 つのリストはすでに用意されています。
 
-Can you paste them together and sort them in descending order?
+それらを結合して、降順に並べ替えられますか？
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- `+` を使って、`first` と `second` の中身を結合し、新しいリスト `full` を作成します。
+- `full` に対して `sorted()` を呼び出し、`reverse` 引数を `True` に指定します。並べ替えたリストを `full_sorted` として保存します。
+- 最後に、`full_sorted` を出力します。
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- `first` と `second` を数値のように足し合わせ、結果を `full` に代入します。
+- `sorted()` を、2 つの入力 `full` と `reverse=True` で使います。
+- 変数を出力するには、`print()` を使います。
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +233,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "既存の変数 `first` と `second` を変更または削除する必要はありません。"
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="`sorted()` を呼び出した結果を `full_sorted` に代入していることを確認してください。"),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("素晴らしいです！Pythonメソッドに関するビデオに進みましょう。")
 ```
 
 ---
 
-## Methods
+## メソッド
 
 ```yaml
 type: VideoExercise
@@ -266,7 +264,7 @@ xp: 50
 
 ---
 
-## String Methods
+## 文字列メソッド
 
 ```yaml
 type: NormalExercise
@@ -277,19 +275,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+文字列にはたくさんのメソッドがあります。いくつかを試せるよう、指示に沿って進めてください。もっと詳しく知りたい場合は、IPython シェルで `help(str)` と入力すれば確認できます。
 
-A string `place` has already been created for you to experiment with.
+練習用に、文字列 `place` はすでに用意されています。
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- `place` に対して `.upper()` [メソッド](https://docs.python.org/3/library/stdtypes.html#str.upper) を使い、結果を `place_up` に代入します。直前の動画で学んだメソッド呼び出しの構文を使ってください。
+- `place` と `place_up` を出力します。両方とも変化しましたか？
+- 変数 `place` に含まれる o の数を、`place` に対して `.count()` を呼び出し、メソッドの入力として文字 `'o'` を渡して数え、出力してください。ここで対象なのは変数 `place` であり、単語の `"place"` ではありません！
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- `.upper()` メソッドは、追加の入力なしで `place` に対して呼び出せます。
+- 変数 `x` を出力するには、`print(x)` と書きます。
+- `place.count(____)` の呼び出しは、結果を表示できるように必ず `print()` で包んでください。
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +328,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "定義済みの変数を変更または削除する必要はありません。"
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "`%s`を出力するのを忘れないでください。"
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="`place.upper()`の結果を`place_up`に代入してください。"),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "`place`の中の'o'の数を正しく計算しました。次に、`place.count('o')`の呼び出しを`print()`関数でラップして結果を出力してください。"),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("素晴らしいです！出力から、`upper()`メソッドが呼び出されたオブジェクトを変更しないことに注意してください。次の演習では、リストに対して異なる動作をします！")
 ```
 
 ---
 
-## List Methods
+## リストのメソッド
 
 ```yaml
 type: NormalExercise
@@ -365,20 +363,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+メソッドを持っているのは文字列だけではありません。リスト、float、int、bool などの型にも便利なメソッドがたくさん用意されています。この演習では次のメソッドを試します。
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()`：引数に一致する最初の要素のインデックスを取得します
+- `.count()`：ある要素がリスト内に何回出現するかを取得します
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+家の各部分の面積を表すリスト `areas` を使って進めます。
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- `areas` の中で `20.0` に等しい要素のインデックスを、`.index()` メソッドで取得し、表示してください。
+- `.count()` を `areas` に対して呼び出し、`9.50` がリスト内に何回現れるかを調べてください。こちらも数値をそのまま表示します。
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- インデックスを表示するには、`areas.index(___)` の呼び出しを `print()` に渡して出力します。
+- リスト内で要素 `x` が出現する回数を表示するには、`areas.count(___)` の呼び出しを `print()` に渡して出力します。
 
 `@pre_exercise_code`
 ```{python}
@@ -411,21 +409,20 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "定義済みのリスト `areas` を変更または削除する必要はありません。"
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
 Ex().check_function("print", index=0).check_args(0).check_function('areas.index', signature=False).check_args(0).has_equal_value()
 
-
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("素晴らしいです！これらは、呼び出されたリストを変更しなかった `list` メソッドの例です。")
 ```
 
 ---
 
-## List Methods (2)
+## リストのメソッド (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +433,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+ほとんどのリストメソッドは、呼び出されたリスト自体を変更します。例としては次のものがあります。
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()` は、呼び出し元のリストに要素を追加します。
+- `.remove()` は、入力に一致する最初の要素をリストから[削除](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable)します。
+- `.reverse()` は、呼び出し元のリスト内の要素の順序を[反転](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable)します。
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+ここでは、家の各部分の面積を表すリスト `areas` を使って作業します。
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- `.append()` を2回使って、プールハウスとガレージの面積 `24.5` と `15.45` をこの順番で再度追加します。
+- `areas` を出力します。
+- `.reverse()` メソッドを使って、`areas` の要素の順序を逆にします。
+- もう一度 `areas` を出力します。
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- 最初の指示では、`areas.append(___)` を2回使います。
+- 変数 `x` を出力するには、単に `print(x)` と書きます。
+- `.reverse()` メソッドに追加の入力は不要です。ドット記法と空のかっこだけを使います: `.reverse()`。
+- 変数 `x` を出力するには、単に `print(x)` と書きます。
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +506,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("素晴らしいです！")
 ```
 
 ---
 
-## Packages
+## パッケージ
 
 ```yaml
 type: VideoExercise
@@ -527,7 +524,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## パッケージをインポートする
 
 ```yaml
 type: NormalExercise
@@ -538,24 +535,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+円の円周と面積を計算したいとします。式は次のとおりです。
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+`pi` の数値を直接入力するのではなく、数値が入っている `math` パッケージを使えます。
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+参考までに、`**` は累乗を表す演算子です。たとえば `3**4` は `3` の `4` 乗で、結果は `81` になります。
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- `math` パッケージをインポートしてください。
+- `math.pi` を使って円の円周を計算し、`C` に代入してください。
+- `math.pi` を使って円の面積を計算し、`A` に代入してください。
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- `import math` と書き、`pi` は `math.pi` として参照できます。
+- 課題文の式を使って円周 `C` を求めます。`*` を使いましょう。
+- 課題文の式を使って面積 `A` を求めます。`*` と `**` を使いましょう。
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +591,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "あなたの`%s`の計算は少し正しくありません。`math.pi`を使用することを確認してください。"
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +599,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:円周を出力するために`{{sol_call}}`をそのままにしておいてください。"),
+  has_printout(1, not_printed_msg = "__JINJA__:面積を出力するために`{{sol_call}}`をそのままにしておいてください。")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("素晴らしいです！パッケージからの関数を扱う方法を知っていれば、多くのPythonプログラマーの力があなたの手の届くところにあります！")
 ```
 
 ---
 
-## Selective import
+## 選択的インポート
 
 ```yaml
 type: NormalExercise
@@ -622,22 +619,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+`import math` のような一般的なインポートでは、`math` パッケージの機能が**すべて**使えるようになります。ただし、パッケージの一部だけを使うと決めた場合は、次のようにより選択的にインポートできます。
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+同じことを、今度は `pi` だけを使って試してみましょう。
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- `math` パッケージから選択的インポートを行い、`pi` だけをインポートしてください。
+- `pi` を使って円周を計算し、`C` に保存します。
+- `pi` を使って面積を計算し、`A` に保存します。
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- 選択的インポートには `from math import pi` を使います。
+- これで、`pi` をそのまま使えるようになります！
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +673,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "あなたの`%s`の計算は完全には正しくありません。`pi`のみを使用するようにしてください。"
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "`math`パッケージから`pi`をインポートすることを確認してください。`from ___ import ___`の表記を使用する必要があります。",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +683,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}`をそのままにして、円周を出力してください。"),
+  has_printout(1, not_printed_msg = "__JINJA__:`{{sol_call}}`をそのままにして、面積を出力してください。")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("素晴らしいです！次の演習に進みましょう。")
 ```
 
 ---
 
-## Different ways of importing
+## インポートのいろいろな方法
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +703,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Python では、パッケージやモジュールをインポートする方法がいくつかあります。どのようにインポートするかによって、使う Python コードも変わります。
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+たとえば、`scipy` パッケージの `linalg` サブパッケージにある [関数](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()` を使いたいとします。この関数を次のように使えるようにしたいとします。
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+上のコードをエラーなく実行するには、どの `import` 文が必要でしょうか。
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +720,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- IPython シェルでそれぞれの import 文を試して、`my_inv([[1, 2], [3, 4]])` の行がエラーなく実行できるものを確認してみてください。入力したコードは **enter** を押すと実行されます。
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +729,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "不正解です。もう一度試してください。IPythonシェルで異なるインポート文を試し、どのインポート文が`my_inv([[1, 2], [3, 4]])`をエラーなく実行できるか確認してください。"
+msg4 = "正解です！`as`という単語を使うことで、インポートする関数にローカル名を付けることができます。`inv()`は`my_inv()`として利用可能になりました。"
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```

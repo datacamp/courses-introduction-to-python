@@ -1,19 +1,16 @@
 ---
-title_meta: Chapter 4
+title_meta: 第4章
 title: NumPy
-description: >-
-  NumPy is a fundamental Python package to efficiently practice data science.
-  Learn to work with powerful tools in the NumPy array, and get started with
-  data exploration.
+description: NumPyはデータサイエンスを効率的に実践するための基礎的なPythonパッケージです。NumPy配列の強力なツールを使いこなし、データ探索を始めましょう。
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
 lessons:
   - nb_of_exercises: 5
-    title: Numpy
+    title: NumPy
   - nb_of_exercises: 5
-    title: 2D Numpy Arrays
+    title: 2次元NumPy配列
   - nb_of_exercises: 3
-    title: 'Numpy: Basic Statistics'
+    title: NumPy：基本統計
 ---
 
 ## NumPy
@@ -29,7 +26,7 @@ a0487c26210f6b71ea98f917734cea3a
 
 ---
 
-## Your First NumPy Array
+## はじめての NumPy 配列
 
 ```yaml
 type: NormalExercise
@@ -40,19 +37,19 @@ skills:
   - 2
 ```
 
-You're now going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of `numpy`, a powerful package to do data science.
+ここから野球のデータに取り組んでいきます。その中で、データサイエンスで強力なパッケージである `numpy` の基本に慣れていきましょう。
 
-A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code to create a `numpy` array from it?
+Python スクリプトには、いくつかの野球選手の身長（センチメートル）が入ったリスト `baseball` がすでに定義されています。これを元に `numpy` 配列を作成するコードを追加できますか？
 
 `@instructions`
-- Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use `np.array()` to create a `numpy` array from `baseball`. Name this array `np_baseball`.
-- Print out the type of `np_baseball` to check that you got it right.
+- `numpy` パッケージを `np` という別名でインポートし、`numpy` を `np` として参照できるようにします。
+- `np.array()` を使って、`baseball` から `numpy` 配列を作成します。配列名は `np_baseball` としてください。
+- `np_baseball` の型を表示して、正しく作成できたか確認します。
 
 `@hint`
-- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
-- `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
-- To print out the type of a variable `x`, simply type `print(type(x))`.
+- `import numpy as np` と書けばOKです。これで、`numpy` の関数を使うときは常に `np.fun_name()` と呼び出します。
+- `np.array()` の入力には `baseball` を渡します。関数呼び出しの結果を `np_baseball` に代入してください。
+- 変数 `x` の型を表示するには、`print(type(x))` と入力します。
 
 `@pre_exercise_code`
 ```{python}
@@ -89,7 +86,7 @@ print(type(np_baseball))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined variables."
+predef_msg = "定義済みの変数を変更または削除する必要はありません。"
 Ex().has_import("numpy")
 Ex().check_correct(
   check_object("np_baseball"),
@@ -100,12 +97,12 @@ Ex().check_correct(
 )
 
 Ex().has_printout(0)
-success_msg("Great job!")
+success_msg("素晴らしい仕事です！")
 ```
 
 ---
 
-## Baseball players' height
+## 野球選手の身長
 
 ```yaml
 type: NormalExercise
@@ -116,21 +113,21 @@ skills:
   - 2
 ```
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height_in`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
+あなたは大の野球ファンです。MLB（Major League Baseball）に電話して、主力選手の身長に関する統計をもう少し教えてもらうことにしました。千人以上の選手データが渡され、通常の Python リスト `height_in` に保存されています。身長の単位はインチです。これを `numpy` 配列にし、単位をメートルに変換できますか？
 
-`height_in` is already available and the `numpy` package is loaded, so you can start straight away (Source: stat.ucla.edu).
+`height_in` はすでに利用可能で、`numpy` パッケージも読み込まれているので、すぐに始められます（出典: stat.ucla.edu）。
 
 `@instructions`
-- Create a `numpy` array from `height_in`. Name this new array `np_height_in`.
-- Print `np_height_in`.
-- Multiply `np_height_in` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
-- Print out `np_height_m` and check if the output makes sense.
+- `height_in` から `numpy` 配列を作成し、新しい配列を `np_height_in` と名付けます。
+- `np_height_in` を表示します。
+- すべての身長をインチからメートルに変換するため、`np_height_in` に `0.0254` を掛けます。新しい値は新しい配列 `np_height_m` に保存します。
+- `np_height_m` を表示し、出力が妥当か確認します。
 
 `@hint`
-- Use `np.array()` and pass it `height`. Store the result in `np_height_in`.
-- To print out a variable `x`, type `print(x)` in the Python script.
-- Perform calculations as if `np_height_in` is a single number: `np_height_in * conversion_factor` is part of the answer.
-- To print out a variable `x`, type `print(x)` in the Python script.
+- `np.array()` に `height` を渡して使います。結果は `np_height_in` に保存してください。
+- 変数 `x` を表示するには、Python スクリプトで `print(x)` と入力します。
+- `np_height_in` は単一の数のように計算できます。回答の一部は `np_height_in * conversion_factor` です。
+- 変数 `x` を表示するには、Python スクリプトで `print(x)` と入力します。
 
 `@pre_exercise_code`
 ```{python}
@@ -190,15 +187,15 @@ Ex().check_correct(
 
 Ex().check_correct(
   has_printout(1),
-  check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height_in * 0.0254` to calculate `np_height_m`.")
+  check_object("np_height_m").has_equal_value(incorrect_msg = "`np_height_m` を計算するには、`np_height_in * 0.0254` を使用してください。")
 )
 
-success_msg("Nice! In the blink of an eye, `numpy` performs multiplications on more than 1000 height measurements.")
+success_msg("素晴らしいです！一瞬で、`numpy` は 1000 を超える身長測定値に対して乗算を行います。")
 ```
 
 ---
 
-## NumPy Side Effects
+## NumPy の副作用
 
 ```yaml
 type: MultipleChoiceExercise
@@ -209,19 +206,19 @@ skills:
   - 2
 ```
 
-`numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things are different.
+`numpy` はベクトル演算に最適です。ただし、通常の Python のリストと比べると、いくつか異なる点があります。
 
-First, `numpy` arrays cannot contain elements with different types. If you mix types, like booleans and integers, `numpy` automatically converts them to a common type. Booleans like `True` and `False` are treated as `1` and `0` when combined with numbers, so the array ends up as integers.
+まず、`numpy` の配列は異なる型の要素を含めることができません。ブール値と整数のように型を混在させると、`numpy` は自動的に共通の型に変換します。`True` や `False` は数値と組み合わせるとそれぞれ `1` と `0` として扱われるため、結果の配列は整数になります。
 
-Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and `numpy` arrays.
+次に、`+`、`-`、`*`、`/` といった典型的な算術演算子は、通常の Python リストと `numpy` 配列とで意味が異なります。
 
-Select the code that results in the following output:
+次の出力になるコードを選んでください。
 
 ```
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-The `numpy` package is already imported as `np`. You can run each option in the IPython Shell to see the output. 
+`numpy` パッケージはすでに `np` としてインポートされています。各選択肢を IPython シェルで実行し、出力を確認してもかまいません。
 
 `@possible_answers`
 - `np.array([True, 1, 2, 3, 4, False])`
@@ -230,7 +227,7 @@ The `numpy` package is already imported as `np`. You can run each option in the 
 - `np.array([0, 1, 2, 3, 4, 5])`
 
 `@hint`
-- Copy the different code chunks and paste them in the IPython Shell. Hit **enter** to run the code and see which output matches the one generated by `np.array([True, 1, 2]) + np.array([3, 4, False])`.
+- それぞれのコード片をIPythonシェルにコピー＆ペーストし、**enter** を押してコードを実行してください。`np.array([True, 1, 2]) + np.array([3, 4, False])` が生成する出力と一致するものを確認しましょう。
 
 `@pre_exercise_code`
 ```{python}
@@ -239,14 +236,14 @@ import numpy as np
 
 `@sct`
 ```{python}
-msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
+msg1 = msg3 = msg4 = "不正解です。異なるコードチャンクを試して、どれがターゲットコードチャンクに一致するか確認してください。"
+msg2 = "素晴らしいです！`True` は 1 に変換され、`False` は 0 に変換されます。"
 Ex().has_chosen(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Subsetting NumPy Arrays
+## NumPy配列の部分抽出
 
 ```yaml
 type: NormalExercise
@@ -257,17 +254,17 @@ skills:
   - 2
 ```
 
-Subsetting (using the square bracket notation on lists or arrays) works exactly the same with both lists and arrays.
+部分抽出（リストや配列に対して角かっこ表記を使う操作）は、リストでも配列でもまったく同じように動作します。
 
-This exercise already has two lists, `height_in` and `weight_lb`, loaded in the background for you. These contain the height and weight of the MLB players as regular lists. It also has two `numpy` array lists, `np_weight_lb` and `np_height_in` prepared for you.
+この演習では、すでに2つのリスト `height_in` と `weight_lb` がバックグラウンドで読み込まれています。これらはMLB選手の身長と体重を通常のリストとして保持しています。さらに、2つの `numpy` 配列である `np_weight_lb` と `np_height_in` も用意されています。
 
 `@instructions`
-- Subset `np_weight_lb` by printing out the element at index 50.
-- Print out a sub-array of `np_height_in` that contains the elements at index 100 up to **and including** index 110.
+- インデックス50の要素を表示するように、`np_weight_lb` を部分抽出して `print()` で出力してください。
+- `np_height_in` から、インデックス100からインデックス110を**含めて**持つサブ配列を `print()` で出力してください。
 
 `@hint`
-- Make sure to wrap a `print()` call around your subsetting operations.
-- Use `[100:111]` to get the elements from index 100 up to and including index 110.
+- 部分抽出の操作には、必ず `print()` を付けて表示するようにしてください。
+- インデックス100から、インデックス110を**含めて**取り出すには、`[100:111]` を使います。
 
 `@pre_exercise_code`
 ```{python}
@@ -308,21 +305,21 @@ print(np_height_in[100:111])
 `@sct`
 ```{python}
 Ex().has_import("numpy", same_as=False)
-msg = "You don't have to change or remove the predefined variables."
+msg = "定義済みの変数を変更したり削除したりする必要はありません。"
 Ex().multi(
-    check_object("np_height_in", missing_msg=msg).has_equal_value(incorrect_msg = msg),
-    check_object("np_weight_lb", missing_msg=msg).has_equal_value(incorrect_msg = msg)
+    check_object("np_height_in", missing_msg=msg).has_equal_value(incorrect_msg=msg),
+    check_object("np_weight_lb", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 
 Ex().has_printout(0)
 Ex().has_printout(1)
 
-success_msg("Nice! Time to learn something new: 2D NumPy arrays!")
+success_msg("素晴らしいです！新しいことを学ぶ時が来ました: 2D NumPy 配列！")
 ```
 
 ---
 
-## 2D NumPy Arrays
+## 2次元NumPy配列
 
 ```yaml
 type: VideoExercise
@@ -335,7 +332,7 @@ ae3238dcc7feb9adecfee0c395fc8dc8
 
 ---
 
-## Your First 2D NumPy Array
+## はじめての2次元NumPy配列
 
 ```yaml
 type: NormalExercise
@@ -346,19 +343,19 @@ skills:
   - 2
 ```
 
-Before working on the actual MLB data, let's try to create a 2D `numpy` array from a small list of lists.
+実際のMLBデータに取り組む前に、小さな入れ子リストから2次元の `numpy` 配列を作ってみましょう。
 
-In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
+この演習では、`baseball` はリストのリストです。外側のリストには4つの要素があり、それぞれの要素は4人の野球選手について、身長と体重をこの順番で格納したリストになっています。`baseball` はスクリプト内にすでに用意されています。
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
+- `np.array()` を使って、`baseball` から2次元の `numpy` 配列を作成し、`np_baseball` という名前を付けてください。
+- `np_baseball` の型を出力してください。
+- `np_baseball` の `shape` 属性を出力してください。`np_baseball.shape` を使います。
 
 `@hint`
-- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- Use `print()` in combination with `type()` for the second instruction.
-- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+- スクリプトにはすでに `baseball` が用意されています。これに対して `np.array()` を呼び出し、得られた2次元の `numpy` 配列を `np_baseball` に代入してください。
+- 2つ目の指示では、`type()` と組み合わせて `print()` を使いましょう。
+- `np_baseball.shape` で `np_baseball` の次元が得られます。これを `print()` で出力するのを忘れないでください。
 
 `@pre_exercise_code`
 ```{python}
@@ -405,9 +402,9 @@ print(np_baseball.shape)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
-Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
-Ex().has_import("numpy", same_as = False)
+msg = "定義済みの変数を変更または削除する必要はありません。"
+Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg=msg)
+Ex().has_import("numpy", same_as=False)
 
 Ex().check_correct(
     multi(
@@ -420,12 +417,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Great! You're ready to convert the actual MLB data to a 2D `numpy` array now!")
+success_msg("素晴らしいです！これで実際のMLBデータを2D `numpy` 配列に変換する準備が整いました！")
 ```
 
 ---
 
-## Baseball data in 2D form
+## 2 次元形式の野球データ
 
 ```yaml
 type: NormalExercise
@@ -436,19 +433,19 @@ skills:
   - 2
 ```
 
-You realize that it makes more sense to restructure all this information in a 2D `numpy` array.
+この情報はすべて、2 次元の `numpy` 配列に再構成したほうが理にかなっていると気づきます。
 
-You have a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this list is `baseball` and it has been loaded for you already (although you can't see it).
+Python の「リストのリスト」が用意されています。各サブリストは、1 人の野球選手の身長と体重を表しています。このリストの名前は `baseball` で、すでに読み込まれています（表示はされません）。
 
-Store the data as a 2D array to unlock `numpy`'s extra functionality.
+`numpy` の追加機能を活用できるよう、データを 2 次元配列として保存してください。
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`.
+- `np.array()` を使って、`baseball` から 2 次元の `numpy` 配列を作成し、`np_baseball` という名前で保存してください。
+- `np_baseball` の `shape` 属性を出力してください。
 
 `@hint`
-- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()`call around it.
+- `baseball` はすでに Python 環境に読み込まれています。これに対して `np.array()` を呼び出し、その結果得られる 2 次元の `numpy` 配列を `np_baseball` に保存してください。
+- `np_baseball.shape` で `np_baseball` の次元を取得できます。必ず `print()` で包んで表示してください。
 
 `@pre_exercise_code`
 ```{python}
@@ -491,12 +488,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Slick! Time to show off some killer features of multi-dimensional `numpy` arrays!")
+success_msg("素晴らしいです！多次元 `numpy` 配列の素晴らしい機能を披露する時が来ました！")
 ```
 
 ---
 
-## Subsetting 2D NumPy Arrays
+## 2 次元 NumPy 配列の部分抽出
 
 ```yaml
 type: NormalExercise
@@ -507,7 +504,7 @@ skills:
   - 2
 ```
 
-If your 2D `numpy` array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
+2 次元の `numpy` 配列が規則的な構造（各行・各列の要素数が固定）を持っていれば、複雑に見える部分抽出もとても簡単になります。以下のコードでは、リストのリストから要素 `"a"` と `"c"` を取り出す例を見てみましょう。
 
 ```
 # numpy
@@ -516,17 +513,17 @@ np_x = np.array(x)
 np_x[:, 0]
 ```
 
-The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
+カンマの前のインデックスは行、カンマの後のインデックスは列を指します。`:` はスライスを表し、この例では「すべての行を含める」という意味になります。
 
 `@instructions`
-- Print out the 50th row of `np_baseball`.
-- Make a new variable, `np_weight_lb`, containing the entire second column of `np_baseball`.
-- Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
+- `np_baseball` の 50 行目を出力します。
+- `np_baseball` の 2 列目全体を含む新しい変数 `np_weight_lb` を作成します。
+- `np_baseball` の 124 人目の野球選手の身長（1 列目）を選択し、出力します。
 
 `@hint`
-- You need row index 49 in the first instruction! More specifically, you'll want to use `[49, :]`.
-- To select the entire second column, you'll need `[:, 1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a `print()` statement.
+- 最初の指示では、行インデックス 49 が必要です！具体的には `[49, :]` を使います。
+- 2 列目全体を選ぶには、`[:, 1]` を使います。
+- 最後の指示では `[123, 0]` を使います。全体を `print()` で囲むのを忘れないでください。
 
 `@pre_exercise_code`
 ```{python}
@@ -569,7 +566,7 @@ print(np_baseball[123, 0])
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "定義済みの変数を変更または削除する必要はありません。"
 Ex().multi(
     has_import("numpy", same_as = False),
     check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -577,16 +574,16 @@ Ex().multi(
 
 Ex().has_printout(0)
 
-Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight_lb`. This will select the entire first column.")
+Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "np_weight_lb を定義するには `np_baseball[:,1]` を使用できます。これにより、最初の列全体が選択されます。")
 
 Ex().has_printout(1)
 
-success_msg("This is going well!")
+success_msg("順調に進んでいます！")
 ```
 
 ---
 
-## 2D Arithmetic
+## 2D の演算
 
 ```yaml
 type: NormalExercise
@@ -597,19 +594,19 @@ skills:
   - 2
 ```
 
-2D `numpy` arrays can perform calculations element by element, like `numpy` arrays.
+2D の `numpy` 配列は、`numpy` 配列と同様に要素ごとの計算を実行できます。
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
+`np_baseball` はすでに用意されています。再び 2D の `numpy` 配列で、3 列はそれぞれ身長（インチ）、体重（ポンド）、年齢（年）を表します。`baseball` は通常のリストのリストとして、`updated` は 2D の numpy 配列として利用できます。
 
 `@instructions`
-- You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
-- You want to convert the units of height and weight to metric (meters and kilograms, respectively). As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
-- Multiply `np_baseball` with `conversion` and print out the result.
+- 野球選手全員の身長・体重・年齢の変化を入手できました。これは 2D の `numpy` 配列 `updated` として利用できます。`np_baseball` と `updated` を加算し、結果を出力してください。
+- 身長と体重の単位をメートル法（それぞれメートルとキログラム）に変換したいとします。最初のステップとして、3 つの値 `0.0254`、`0.453592`、`1` をもつ `numpy` 配列を作成し、`conversion` という名前を付けてください。
+- `np_baseball` に `conversion` を掛け算し、結果を出力してください。
 
 `@hint`
-- `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with `np.array()`; the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
+- `np_baseball + updated` は、2 つの `numpy` 配列の要素ごとの加算を行います。
+- `np.array()` で `numpy` 配列を作成します。入力は 3 要素の通常の Python リストです。
+- 追加の作業は不要で、`np_baseball * conversion` はそのまま動作します。ぜひ試してみてください！`print()` で結果を表示しましょう。
 
 `@pre_exercise_code`
 ```{python}
@@ -657,8 +654,8 @@ print(np_baseball * conversion)
 ```{python}
 Ex().has_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
-Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
+msg = "事前定義された変数を変更または削除する必要はありません。"
+Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().has_printout(0)
 
@@ -666,16 +663,16 @@ Ex().check_correct(
     has_printout(1),
     check_correct(
         check_object('conversion').has_equal_value(),
-        check_function('numpy.array', index = 1).check_args(0).has_equal_value()
+        check_function('numpy.array', index=1).check_args(0).has_equal_value()
     )    
 )
 
-success_msg("Great job! Notice how with very little code, you can change all values in your `numpy` data structure in a very specific way. This will be very useful in your future as a data scientist!")
+success_msg("素晴らしい仕事です！ごく少ないコードで、`numpy` データ構造内のすべての値を非常に特定の方法で変更できることに注目してください。これは、データサイエンティストとしての将来に非常に役立ちます！")
 ```
 
 ---
 
-## NumPy: Basic Statistics
+## NumPy：基本統計
 
 ```yaml
 type: VideoExercise
@@ -688,7 +685,7 @@ xp: 50
 
 ---
 
-## Average versus median
+## 平均と中央値
 
 ```yaml
 type: NormalExercise
@@ -699,19 +696,19 @@ skills:
   - 2
 ```
 
-You now know how to use `numpy` functions to get a better feeling for your data. 
+`numpy` の関数を使って、データの傾向をつかむ方法を学びました。
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_. `np_baseball` is available.
+ベースボールのデータは、3列（身長、体重、年齢）・1015行の2次元 `numpy` 配列として用意されています。配列名は `np_baseball` です。データを再構成したところ、一部の身長の値が異常に高いことに気づきました。次の指示に従って作業し、いわゆる外れ値（_outliers_）があるときにどの要約統計量が適しているかを確かめてみましょう。`np_baseball` は利用可能です。
 
 `@instructions`
-- Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
-- Print out the mean of `np_height_in`.
-- Print out the median of `np_height_in`.
+- `np_baseball` の最初の列と等しい `numpy` 配列 `np_height_in` を作成します。
+- `np_height_in` の平均を出力します。
+- `np_height_in` の中央値を出力します。
 
 `@hint`
-- Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a NumPy array. Don't forget to throw in a `print()` call.
-- For the last instruction, use `np.median()`.
+- 2次元の `numpy` の抽出を使います。`[:,0]` が解法の一部です。
+- `numpy` を `np` としてインポートしている場合、`np.mean()` でNumPy配列の平均を求められます。`print()` を呼ぶのを忘れないでください。
+- 最後の指示には `np.median()` を使います。
 
 `@pre_exercise_code`
 ```{python}
@@ -753,7 +750,7 @@ print(np.median(np_height_in))
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
+Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "最初の列を選択するには、`np_baseball[:,0]` を使用できます。"),
 
 Ex().check_correct(
     has_printout(0),
@@ -765,12 +762,12 @@ Ex().check_correct(
     check_function('numpy.median').has_equal_value()
 )
 
-success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get an idea about the overall distribution of the entire dataset.")
+success_msg("平均身長が1586インチとは、ちょっとおかしいと思いませんか？しかし、中央値は外れ値の影響を受けていないようです：74インチは理にかなっています。データセット全体の分布を把握するために、中央値と平均値の両方を確認することは常に良い考えです。")
 ```
 
 ---
 
-## Explore the baseball data
+## 野球データを探究する
 
 ```yaml
 type: NormalExercise
@@ -781,19 +778,19 @@ skills:
   - 2
 ```
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D NumPy array `np_baseball`, with three columns.
+平均と中央値の差が大きすぎるので、MLB に問い合わせることにしました。MLB はエラーを見つけ、修正済みデータを送り返してくれました。今回も 3 列の 2D NumPy 配列 `np_baseball` として利用できます。
 
-The Python script in the editor already includes code to print out informative messages with the different summary statistics and `numpy` is already loaded as `np`. Can you finish the job? `np_baseball` is available.
+エディタ内の Python スクリプトには、各種の要約統計量とともに説明的なメッセージを印字するコードがすでに含まれており、`numpy` も `np` として読み込まれています。仕上げてもらえますか？`np_baseball` は利用可能です。
 
 `@instructions`
-- The code to print out the mean height is already included. Complete the code for the median height.
-- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`. 
-- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
+- 平均身長を表示するコードはすでに含まれています。中央値のコードを完成させてください。
+- `np_baseball` の最初の列に対して `np.std()` を使い、`stddev` を計算します。
+- 体が大きい選手は重い傾向があるでしょうか？`np.corrcoef()` を使い、`np_baseball` の最初と2番目の列の相関を `corr` に保存してください。
 
 `@hint`
-- Use `np.median()` to calculate the median. Make sure to select to correct column first!
-- Subset the same column when calculating the standard deviation with `np.std()`.
-- Use `np_baseball[:, 0]` and `np_baseball[:, 1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
+- 中央値の計算には `np.median()` を使います。まずは正しい列を選択してください。
+- `np.std()` で標準偏差を計算するときも、同じ列を抽出します。
+- 最初と2番目の列を選ぶには `np_baseball[:, 0]` と `np_baseball[:, 1]` を使います。これらを `np.corrcoef()` に渡します。
 
 `@pre_exercise_code`
 ```{python}
@@ -840,26 +837,26 @@ print("Correlation: " + str(corr))
 
 `@sct`
 ```{python}
-msg = "You shouldn't change or remove the predefined `avg` variable."
+msg = "定義済みの `avg` 変数を変更または削除しないでください。"
 Ex().check_object("avg", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-missing = "Have you used `np.median()` to calculate the median?"
-incorrect = "To calculate `med`, pass the first column of `np_baseball` to `numpy.median()`. The example of `np.mean()` shows how it's done."
+missing = "`np.median()` を使用して中央値を計算しましたか？"
+incorrect = "`med` を計算するには、`np_baseball` の最初の列を `numpy.median()` に渡します。`np.mean()` の例がその方法を示しています。"
 Ex().check_correct(
   check_object("med").has_equal_value(),
   check_function("numpy.median", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.std()` to calculate the standard deviation?"
-incorrect = "To calculate `stddev`, pass the first column of `np_baseball` to `numpy.std()`. The example of `np.mean()` shows how it's done."
+missing = "`np.std()` を使用して標準偏差を計算しましたか？"
+incorrect = "`stddev` を計算するには、`np_baseball` の最初の列を `numpy.std()` に渡します。`np.mean()` の例がその方法を示しています。"
 Ex().check_correct(
   check_object("stddev").has_equal_value(),
   check_function("numpy.std", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.corrcoef()` to calculate the correlation?"
-incorrect1 = "To calculate `corr`, the first argument to `np.corrcoef()` should be the first column of `np_baseball`, similar to how did it before."
-incorrect2 = "To calculate `corr`, the second argument to `np.corrcoef()` should be the second column of `np_baseball`. Instead of `[:,0]`, use `[:,1]` this time."
+missing = "`np.corrcoef()` を使用して相関を計算しましたか？"
+incorrect1 = "`corr` を計算するには、`np.corrcoef()` の最初の引数は `np_baseball` の最初の列であるべきです。以前と同様に行います。"
+incorrect2 = "`corr` を計算するには、`np.corrcoef()` の2番目の引数は `np_baseball` の2番目の列であるべきです。今回は `[:,0]` の代わりに `[:,1]` を使用します。"
 Ex().check_correct(
   check_object("corr").has_equal_value(),
   check_function("numpy.corrcoef", index=0, missing_msg=missing).multi(
@@ -868,5 +865,5 @@ Ex().check_correct(
   )
 )
 
-success_msg("Great work! You've built a solid foundation - now it's time to use all of your new data science skills to solve more challenges and make an impact.")
+success_msg("素晴らしい仕事です！しっかりとした基礎を築きました - これからは新しいデータサイエンスのスキルを使って、さらに多くの課題を解決し、影響を与える時です。")
 ```

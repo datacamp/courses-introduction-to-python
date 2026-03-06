@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ja-JP/16bc89b7-1696-4e70-8fbd-03a9381f9c6b.mp3
 ---
 
-## Variables and Types
+## 変数と型
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+お疲れさまです。おかえりなさい！Python がとても優秀な電卓だということは、もうおわかりですね。さらに複雑な計算をしたいときは、コードを書きながら値を「保存」しておくと便利です。
 
 ---
 
-## Variable
+## 変数
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- 固有で大文字小文字を区別する名前
 
-- Call up value through variable name{{1}}
+- 変数名で値を参照{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1.79 m・68.7 kg{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+そのためには、大小文字を区別する特定の名前で変数を定義します。こうして変数を作成（宣言）すると、あとでその変数名を入力するだけで、保存した値を呼び出せます。
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+たとえば、メートル法で身長と体重を測ったとします。身長は 1.79 メートル、体重は 68.7 キログラムです。これらの値を、height と weight という 2 つの変数に、イコール記号を使って代入できます。
 
-If you now type the name of the variable, height,
+ここで変数名の height を入力すると、
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python はその変数名を探し、値を取り出して表示します。
 
 ---
 
-## Calculate BMI
+## BMI を計算
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+では、体格指数、つまり BMI を計算してみましょう。BMI は、体重をキログラム、身長をメートルとして次のように計算します。実際の数値で計算してもいいですし、このように height と weight の変数を使ってもかまいません。変数名を入力するたびに、Python はその部分を変数の実際の値に置き換えます。weight は 68.7、height は 1.79 に対応します。
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+最後に、この例では結果を新しい変数 bmi に保存しています。bmi には、先ほど計算したのと同じ値が入っています。
 
-In Python, variables are used all the time. They help to make your code reproducible.
+Python では、変数は常に使われます。コードを再現可能にするうえでとても役立ちます。
 
 ---
 
-## Reproducibility
+## 再現性
 
 ```yaml
 type: FullSlide
@@ -142,11 +137,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+height、weight、bmi の変数を作るコードが、このようにスクリプトに入っているとします。別の体重で bmi を再計算したくなったら、
 
 ---
 
-## Reproducibility
+## 再現性
 
 ```yaml
 type: FullSlide
@@ -167,13 +162,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+weight 変数の宣言だけを変更して、スクリプトを再実行すれば大丈夫です。変数 weight の値が変わるので、bmi もそれに応じて更新されます。
 
-So far, we've only worked with numerical values, such as height and weight.
+ここまでは、身長や体重のような数値だけを扱ってきました。
 
 ---
 
-## Python Types
+## Python の型
 
 ```yaml
 type: FullSlide
@@ -199,13 +194,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+Python では、これらの数にはそれぞれ特定の型があります。値の型は type 関数で確認できます。bmi の型を知りたいときは、type の括弧の中に bmi と書くだけです。表示されるのは float で、これは実数、つまり整数部分と小数部分の両方を持てる数を表す Python の型です。整数用の型は int で、この例のように使います。
 
-To do data science, you'll need more than ints and floats, though.
+ただ、データサイエンスを行うには、int や float だけでは足りません。
 
 ---
 
-## Python Types (2)
+## Python の型 (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +230,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python には、ほかにもたくさんのデータ型があります。よく使うのは、文字列とブール値です。
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+文字列は、テキストを表すための Python の型です。ダブルクォートでもシングルクォートでも文字列を作れます。最後の変数の型を表示すると、str、つまり string の略であることがわかります。
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+ブール値は、True か False のどちらかになる型です。日常の「はい／いいえ」に相当すると考えるとよいでしょう。ブール値は、たとえばデータのフィルタリングなどで非常に役立ちます。
 
-There's something special about Python data types.
+Python のデータ型には、もうひとつ特徴があります。
 
 ---
 
-## Python Types (3)
+## Python の型 (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- 型が違うと挙動も違う！{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+このコード行では 2 つの整数を足し、こちらのコード行では 2 つの文字列を結合しています。
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+整数の場合は値が加算され、文字列の場合は文字列同士がつながりました。プラス演算子は、データ型によって振る舞いが異なります。これは一般的な原則で、コードの動作は扱っている型に依存します。
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+続く演習では、最初の変数を作成し、Python のいくつかのデータ型を試していきます。次の動画ではリストについて詳しくご説明しますので、そこでお会いしましょう。
 
 ---
 
-## Let's practice!
+## Passons à la pratique !
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+それでは、実際にコードを書いていきましょう。次の章では、さらに見栄えのよい Python のチャートを作っていきます。お楽しみに。
