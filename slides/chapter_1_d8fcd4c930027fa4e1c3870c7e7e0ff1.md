@@ -22,7 +22,6 @@ Hey, ich bin Hugo und werde dich durch den Kurs Einführung in Python begleiten.
 
 Ich bin Datenwissenschaftler – oder Data Scientist – und Dozent bei DataCamp.
 
-
 ---
 
 ## Wie du lernen wirst
@@ -38,7 +37,6 @@ disable_transition: true
 
 `@script`
 In diesem Kurs lernst du die Grundlagen von Python mit Video-Lektionen wie dieser und interaktiven Übungen. Du bekommst deine eigene Python Session, in der du experimentieren kannst und versuchst, den richtigen Code zur Lösung der Aufgaben zu ermitteln. Du lernst durch praktische Übungen und bekommst sofort individuelles Feedback zu deiner Arbeit.
-
 
 ---
 
@@ -65,7 +63,6 @@ Python wurde von Guido Van Rossum erdacht. Guido ist der nette Mann hier auf der
 Oft wird Python als das Schweizer Taschenmesser unter den Programmiersprachen bezeichnet, weil man damit fast alles machen kann.
 In diesem Kurs werden wir deine Programmierkenntnisse im Bereich Datenwissenschaft Schritt für Schritt aufbauen. Bleib also dabei, um zu sehen, wie leistungsstark diese Sprache sein kann.
 
-
 ---
 
 ## IPython-Shell
@@ -82,7 +79,6 @@ key: 43a91a7217
 
 `@script`
 Jetzt, wo du Python kennengelernt hast, lass uns loslegen und experimentieren. Wir starten mit der
-
 
 ---
 
@@ -101,7 +97,6 @@ disable_transition: true
 
 `@script`
 Python „Shell“. Hier kannst du Code eingeben und sofort die Ergebnisse sehen. In der Übungsumgebung von DataCamp ist diese Shell eingebettet. Fangen wir ganz einfach an und nutzen Python als Taschenrechner.
-
 
 ---
 
@@ -122,7 +117,6 @@ disable_transition: true
 Ich tippe vier plus fünf ein und drücke die Eingabetaste. Python versteht die Eingabe und zeigt das Ergebnis der Berechnung an: Neun. Die Shell, die wir hier benutzen, ist eigentlich nicht die Originalversion; wir benutzen iPython, kurz für „Interactive Python“, eine Art aufgepeppte Version von Python, die später noch nützlich sein wird.
 
 Sie wurde von Fernando Pérez entwickelt und ist Teil des größeren Jupyter-Ökosystems. Neben der interaktiven Arbeit mit Python kannst du mit Python auch sogenannte
-
 
 ---
 
@@ -145,7 +139,6 @@ key: 78ef256bc0
 `@script`
 Python-Skripte ausführen. Diese Python-Skripte sind einfach Textdateien mit der Endung „Punkt P-Ypsilon“. Es handelt sich im Grunde um eine Liste von Python Befehlen, die ausgeführt werden. Fast so, als würdest du die Befehle selbst Zeile für Zeile in die Shell eingeben.
 
-
 ---
 
 ## Python-Skript
@@ -161,7 +154,6 @@ disable_transition: true
 
 `@script`
 Lass uns den Befehl von vorhin jetzt in ein Skript packen, welches sich in der DataCamp-Oberfläche befindet. Jetzt musst du das Skript ausführen, indem du auf „Antworten“ klickst. Wenn du dieses Skript in der DataCamp-Oberfläche ausführst, wird im Ausgabefenster nichts angezeigt. Das liegt daran, dass du explizit die Funktion „print“ in Skripten verwenden musst, wenn du während der Ausführung eine Ausgabe generieren möchtest.
-
 
 ---
 
@@ -182,7 +174,6 @@ code_zoom: 90
 `@script`
 Packen wir unsere vorherige Berechnung in einen „print“-Befehl und führen das Skript erneut aus. Diesmal wird die gleiche Ausgabe wie zuvor generiert! Wenn du den Code ins Python-Skript eingibst, anstatt jeden Schritt manuell in der Shell zu tippen, behältst du leichter eine Struktur bei und musst nicht alles immer wieder neu tippen, wenn du etwas ändern möchtest. Du nimmst einfach die Änderung im Skript vor und führst das Ganze erneut aus.
 
-
 ---
 
 ## DataCamp-Schnittstelle
@@ -197,7 +188,6 @@ key: 693ba1cd14
 
 `@script`
 Du hast nun einen ersten Eindruck von den verschiedenen Möglichkeiten der Arbeit mit Python bekommen und kannst dich jetzt deinen ersten Übungen widmen. Experimentiere mit der iPython Shell und schreibe die richtige Antwort mit dem Python Skript-Editor. Wenn du auf „Antworten“ klickst, wird dein Skript ausgeführt und auf Fehler überprüft.
-
 
 ---
 

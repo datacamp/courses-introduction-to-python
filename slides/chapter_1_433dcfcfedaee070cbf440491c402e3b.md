@@ -20,7 +20,6 @@ title: Data Scientist at DataCamp
 `@script`
 Gut gemacht und willkommen zurück! Es ist offensichtlich, dass Python ein toller Taschenrechner ist. Wenn du aber komplexere Berechnungen durchführen möchtest, solltest du Werte während des Programmierens „speichern“ können.
 
-
 ---
 
 ## Variable
@@ -57,7 +56,6 @@ Angenommen, du misst deine Größe und dein Gewicht: Du bist einen-Meter-neunund
 Wenn du jetzt den Namen der Variablen, „height“, eingibst,
 
 sucht Python nach dem Variablennamen, ruft seinen Wert ab und gibt ihn aus.
-
 
 ---
 
@@ -117,7 +115,6 @@ Zum Schluss speichert Python das Ergebnis in einer neuen Variablen namens B-M-I.
 
 In Python werden Variablen ständig verwendet. Sie helfen dabei, deinen Code reproduzierbar zu machen.
 
-
 ---
 
 ## Reproduzierbarkeit
@@ -141,7 +138,6 @@ print(bmi)
 
 `@script`
 Angenommen, der Code zum Erstellen der Variablen „height“, „weight“ und BMI ist in einem Skript wie diesem enthalten. Wenn du jetzt den BMI für ein anderes Gewicht neu berechnen willst,
-
 
 ---
 
@@ -169,7 +165,6 @@ print(bmi)
 kannst du einfach die Deklaration der Variablen „weight“ ändern und das Skript erneut ausführen. Der BMI ändert sich entsprechend, weil sich auch der Wert der Variablen „weight“ geändert hat.
 
 Bisher haben wir nur mit Zahlenwerten wie Größe und Gewicht gearbeitet.
-
 
 ---
 
@@ -202,7 +197,6 @@ int
 In Python haben alle diese Zahlen einen bestimmten Typ. Du kannst den Typ eines Wertes mit der Funktion „type“ überprüfen. Um den Typ deines BMI-Wertes zu sehen, schreibst du einfach „type“ und dann „BMI“ in runden Klammern. Du siehst, dass es sich um den Datentyp „float“ handelt. Der Name kommt vom englischen „floating point“, also „Gleitkommazahl“ – Python verwendet diesen Datentyp für reelle Zahlen mit Ganzzahl- und Nachkommateil. Auch für ganze Zahlen gibt es in Python einen Datentyp: und zwar „int“, für „integer“, wie in diesem Beispiel.
 
 Im Bereich Data Science brauchst du allerdings mehr als nur „ints“ und „floats“.
-
 
 ---
 
@@ -244,7 +238,6 @@ Der boolesche Wert ist ein Typ, der entweder „true“ oder „false“ sein ka
 
 Python Datentypen haben etwas Besonderes an sich.
 
-
 ---
 
 ## Python-Typen (3)
@@ -279,7 +272,6 @@ Schauen wir uns diese Codezeile an: Hier werden zwei ganze Zahlen addiert. In de
 Die Werte der ganzen Zahlen wurden addiert, die Zeichenfolgen wurden aneinandergehängt. Der Plus-Operator hat sich bei verschiedenen Datentypen unterschiedlich verhalten. Das ist ein allgemeiner Grundsatz: „Wie“ sich der Code verhält, hängt von den Datentypen ab, mit denen du arbeitest.
 
 In den folgenden Übungen wirst du deine ersten Variablen erstellen und mit einigen Datentypen von Python experimentieren. Wir sehen uns im nächsten Video, wo wir uns näher mit Listen beschäftigen werden.
-
 
 ---
 

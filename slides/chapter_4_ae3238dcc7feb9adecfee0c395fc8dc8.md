@@ -20,7 +20,6 @@ title: Data Scientist at DataCamp
 `@script`
 Gut gemacht! Lass uns jetzt die NumPy-Arrays aus dem letzten Video nachbauen.
 
-
 ---
 
 ## Arten von NumPy-Arrays
@@ -56,7 +55,6 @@ numpy.ndarray
 
 `@script`
 Wenn du nach dem Typ dieser Arrays fragst, sagt dir Python, dass es sich um „NumPy Punkt n-d array“ handelt. „NumPy Punkt“ sagt dir, dass es sich um einen Typ handelt, der im NumPy-Paket definiert wurde. „n-d-array“ steht für ein n-dimensionales Array. Die Arrays „n-p Unterstrich height“ und „n-p Unterstrich weight“ sind eindimensionale Arrays. Es ist aber auch absolut möglich, zweidimensionale, dreidimensionale oder sogar siebendimensionale Arrays zu erstellen! Bleiben wir in diesem Video aber bei zweidimensionalen.
-
 
 ---
 
@@ -109,7 +107,6 @@ Beachte, dass die Syntax für den Zugriff auf ein Attribut ein bisschen wie der 
 
 Auch für „zweidimensionale-Arrays“ gilt die NumPy-Regel: Ein Array kann nur Daten eines einzigen Typs enthalten. Wenn du eine Gleitkommazahl in eine Zeichenfolge umwandelst, werden alle Array-Elemente in Zeichenfolgen umgewandelt, sodass am Ende ein homogenes Array entsteht.
 
-
 ---
 
 ## Teilmengenbildung
@@ -142,7 +139,6 @@ Du kannst dir das „zweidimensionale-NumPy-Array“ wie eine verbesserte „Lis
 Angenommen, du möchtest die erste Zeile und dann das dritte Element in dieser Zeile extrahieren. Um die Zeile auszuwählen, brauchst du den Index Null in eckigen Klammern. Denke immer an die Null-Indizierung.
 
 Um dann das dritte Element zu wählen, kannst du denselben Aufruf mit einem weiteren Klammerpaar erweitern, diesmal mit dem Index „Zwei“.
-
 
 ---
 
@@ -183,7 +179,6 @@ np_2d[0, 2]
 So wie hier. Im Grunde wählst du die Zeile aus und wählst dann in dieser Zeile erneut aus.
 
 Es gibt noch eine andere Möglichkeit, Teilmengen zu bilden, indem man eckige Klammern und ein Komma benutzt. Dieser Aufruf gibt genau den selben Wert wie vorher zurück. Der Wert vor dem Komma gibt die Zeile an, der Wert nach dem Komma die Spalte. Die Schnittpunkte der angegebenen Zeilen und Spalten werden zurückgegeben. Wenn du dich erst mal daran gewöhnt hast, ist diese Syntax intuitiver und bietet dir mehr Möglichkeiten.
-
 
 ---
 
@@ -227,7 +222,6 @@ Angenommen, du willst die Größe und das Gewicht des zweiten und dritten Famili
 Genauso kannst du das Gewicht aller Familienmitglieder auswählen: Du willst nur die zweite Zeile, also schreibst du eine eins vor das Komma. Du willst alle Spalten, also setzt du nach dem Komma einen Doppelpunkt. Die Schnittmenge gibt uns die ganze zweite Reihe.
 
 Letztlich kannst du mit „Zweidimensionalen NumPy-Arrays“ genauso elementweise Berechnungen durchführen, wie du es mit eindimensionalen NumPy-Arrays gemacht hast. Das ist sehr nützlich.
-
 
 ---
 
