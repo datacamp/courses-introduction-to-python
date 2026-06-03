@@ -22,7 +22,6 @@ Bonjour, je m'appelle Hugo et je serai votre animateur pour le cours de présent
 
 Je suis data scientist et formateur chez DataCamp.
 
-
 ---
 
 ## Ce que vous allez apprendre et comment
@@ -38,7 +37,6 @@ disable_transition: true
 
 `@script`
 Dans ce cours, vous apprendrez Python pour la science des données grâce à des leçons vidéo, comme celle-ci, et à des exercices interactifs. Vous disposez de votre propre session Python où vous pouvez expérimenter et essayer de trouver le code correct pour résoudre les instructions. Vous apprenez en pratiquant, tout en recevant des commentaires personnalisés et instantanés sur votre travail.
-
 
 ---
 
@@ -65,7 +63,6 @@ Python a été conçu par Guido Van Rossum. Ici, vous pouvez voir une photo de m
 Les gens qualifient souvent Python de « couteau suisse » des langages de programmation, car il permet de réaliser presque toutes les tâches.
 Dans ce cours, nous commencerons à développer progressivement vos compétences en codage dans le domaine de la science des données. Nous vous invitons donc à rester avec nous pour découvrir toute la puissance de ce langage.
 
-
 ---
 
 ## Shell IPython
@@ -82,7 +79,6 @@ key: 43a91a7217
 
 `@script`
 Maintenant que vous êtes prêt à découvrir Python, commençons à expérimenter. Je commencerai par le
-
 
 ---
 
@@ -101,7 +97,6 @@ disable_transition: true
 
 `@script`
 shell Python, un endroit où vous pouvez saisir du code Python et voir immédiatement les résultats. Dans l'interface d'exercices de DataCamp, ce shell est intégré ici. Commençons par quelque chose de simple et utilisons Python comme calculatrice.
-
 
 ---
 
@@ -122,7 +117,6 @@ disable_transition: true
 Permettez-moi de saisir 4 + 5, puis d'appuyer sur Entrée. Python interprète ce que vous avez saisi et affiche le résultat de votre calcul, 9. Le shell Python utilisé ici n'est en réalité pas l'original. Nous utilisons IPython, abréviation d’Interactive Python, qui est une version améliorée de Python standard qui nous sera utile plus tard.
 
 IPython a été créé par Fernando Pérez et fait partie de l'écosystème Jupyter plus large. Outre le travail interactif avec Python, vous pouvez également exécuter Python dans ce que l'on appelle des
-
 
 ---
 
@@ -145,7 +139,6 @@ key: 78ef256bc0
 `@script`
 scripts Python. Ces scripts Python sont de simples fichiers texte avec l'extension (point) py. Il s'agit essentiellement d'une liste de commandes Python qui sont exécutées, presque comme si vous tapiez vous-même les commandes dans le shell, ligne par ligne.
 
-
 ---
 
 ## Script Python
@@ -161,7 +154,6 @@ disable_transition: true
 
 `@script`
 Intégrons maintenant la commande précédente dans un script, disponible ici dans l'interface DataCamp. L'étape suivante consiste à exécuter le script en cliquant sur « Soumettre la réponse ». Si vous exécutez ce script dans l'interface DataCamp, rien ne s'affiche dans le volet de sortie. C'est parce que vous devez explicitement utiliser print dans les scripts si vous souhaitez générer une sortie pendant l'exécution.
-
 
 ---
 
@@ -182,7 +174,6 @@ code_zoom: 90
 `@script`
 Enveloppons notre calcul précédent dans un appel print, puis relançons le script. Cette fois-ci, le résultat obtenu est identique au précédent, c’est super ! En plaçant votre code dans des scripts Python plutôt que de retaper manuellement chaque étape de manière interactive, vous conserverez une structure claire et éviterez de tout retaper à chaque fois que vous souhaitez apporter une modification. Il vous suffira alors de modifier le script et de relancer l'ensemble du processus.
 
-
 ---
 
 ## Interface DataCamp
@@ -197,7 +188,6 @@ key: 693ba1cd14
 
 `@script`
 Maintenant que vous avez une idée des différentes façons de travailler avec Python, je vous suggère de passer aux exercices. Utilisez le shell IPython pour vos essais et l'éditeur de script Python pour coder la réponse définitive. Si vous cliquez sur Soumettre la réponse, votre script sera exécuté et vérifié pour s'assurer que tout est correct.
-
 
 ---
 

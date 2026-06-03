@@ -20,7 +20,6 @@ title: Data Scientist at DataCamp
 `@script`
 Bravo, vous êtes une légende ! Recréons maintenant les tableaux numpy de la vidéo précédente.
 
-
 ---
 
 ## Types de tableaux NumPy
@@ -56,7 +55,6 @@ numpy.ndarray
 
 `@script`
 Si vous demandez le type de ces tableaux, Python vous répond qu'il s'agit de numpy.ndarray. numpy dot vous indique qu'il s'agit d'un type défini dans le paquet numpy. ndarray signifie tableau n-dimensionnel. Les tableaux np tiret height et np tiret weight sont des tableaux unidimensionnels, mais il est tout à fait possible de créer des tableaux bidimensionnels, tridimensionnels, voire septidimensionnels. Toutefois, restons-en à deux dans cette vidéo.
-
 
 ---
 
@@ -109,7 +107,6 @@ Veuillez noter que la syntaxe permettant d'accéder à un attribut ressemble que
 
 Pour les tableaux 2D également, la règle NumPy s'applique : un tableau ne peut contenir qu'un seul type. Si vous convertissez un nombre flottant en chaîne, tous les éléments du tableau seront convertis en chaînes, afin d'obtenir un tableau homogène.
 
-
 ---
 
 ## Sous-ensembles
@@ -142,7 +139,6 @@ Vous pouvez considérer le tableau numpy 2D comme une liste de listes amélioré
 Supposons que vous souhaitiez obtenir la première ligne, puis le troisième élément de cette ligne. Pour sélectionner la ligne, vous devez utiliser l'index 0 entre crochets. N'oubliez pas l'indexation zéro.
 
 Pour sélectionner ensuite le troisième élément, vous pouvez étendre le même appel avec une autre paire de crochets, cette fois avec l'index 2,
-
 
 ---
 
@@ -183,7 +179,6 @@ np_2d[0, 2]
 comme ceci. En substance, vous sélectionnez la ligne, puis vous effectuez une autre sélection à partir de cette ligne.
 
 Il existe également une autre méthode pour créer des sous-ensembles, en utilisant des crochets simples et une virgule. Cet appel renvoie exactement la même valeur qu'auparavant. La valeur avant la virgule spécifie la ligne, la valeur après la virgule spécifie la colonne. L'intersection des lignes et des colonnes que vous avez spécifiées est renvoyée. Une fois que vous vous y serez habitué, cette syntaxe vous semblera plus intuitive et vous offrira davantage de possibilités.
-
 
 ---
 
@@ -227,7 +222,6 @@ Supposons que vous souhaitiez sélectionner la taille et le poids du deuxième e
 De la même manière, vous pouvez sélectionner le poids de tous les membres de la famille comme suit : vous ne souhaitez que la deuxième ligne, donc placez 1 avant la virgule. Vous souhaitez avoir toutes les colonnes, vous devez donc utiliser deux points après la virgule. L'intersection nous donne toute la deuxième ligne.
 
 Enfin, les tableaux numpy 2D vous permettent d'effectuer des calculs élément par élément, de la même manière que vous le faisiez avec les tableaux numpy 1D. C'est quelque chose
-
 
 ---
 

@@ -20,7 +20,6 @@ title: Data Scientist at DataCamp
 `@script`
 On poursuit les efforts ! Il est évident que Python est une excellente calculatrice. Si vous souhaitez effectuer des calculs plus complexes, il est recommandé d'enregistrer les valeurs au fur et à mesure que vous codez.
 
-
 ---
 
 ## Variable
@@ -57,7 +56,6 @@ Supposons que vous mesuriez votre taille et votre poids en unités métriques :
 Si vous tapez maintenant le nom de la variable, height,
 
 Python recherche le nom de la variable, récupère sa valeur et l'affiche.
-
 
 ---
 
@@ -117,7 +115,6 @@ Enfin, cette version utilise Python pour stocker le résultat dans une nouvelle 
 
 En Python, les variables sont utilisées tout le temps. Elles contribuent à rendre votre code reproductible.
 
-
 ---
 
 ## Reproductibilité
@@ -141,7 +138,6 @@ print(bmi)
 
 `@script`
 Supposons que le code permettant de créer les variables hauteur, poids et IMC se trouve dans un script, comme ceci. Si vous souhaitez maintenant recalculer l'IMC pour un autre poids,
-
 
 ---
 
@@ -169,7 +165,6 @@ print(bmi)
 vous pouvez simplement modifier la déclaration de la variable « weight » et relancer le script. L'IMC change en conséquence, car la valeur de la variable weight a également changé.
 
 Jusqu'à présent, nous avons uniquement travaillé avec des valeurs numériques, telles que la taille et le poids.
-
 
 ---
 
@@ -202,7 +197,6 @@ int
 En Python, ces nombres ont tous un type spécifique. Vous pouvez vérifier le type d'une valeur à l'aide de la fonction type. Pour connaître le type de notre valeur IMC, il suffit d'écrire « type » puis « IMC » entre parenthèses. Vous pouvez constater qu'il s'agit d'un nombre flottant, qui est la manière dont Python représente un nombre réel, c'est-à-dire un nombre qui peut avoir une partie entière et une partie fractionnaire. Python dispose également d'un type pour les entiers : int, comme dans cet exemple.
 
 Pour faire de la science des données, vous aurez toutefois besoin de plus que des entiers et des flottants.
-
 
 ---
 
@@ -244,7 +238,6 @@ Le booléen est un type qui peut prendre la valeur True ou False. Ils équivalen
 
 Les types de données Python ont quelque chose de particulier.
 
-
 ---
 
 ## Types Python (3)
@@ -279,7 +272,6 @@ Veuillez examiner cette ligne de code, qui additionne deux nombres entiers, puis
 Pour les nombres entiers, les valeurs ont été additionnées, tandis que pour les chaînes, elles ont été collées les unes à la suite des autres. L'opérateur plus se comportait différemment selon les types de données. Il s'agit d'un principe général : le comportement du code dépend des types avec lesquels vous travaillez.
 
 Dans les exercices qui suivent, vous allez créer vos premières variables et expérimenter certains types de données Python. Je vous invite à visionner la prochaine vidéo pour une explication détaillée sur les listes.
-
 
 ---
 
