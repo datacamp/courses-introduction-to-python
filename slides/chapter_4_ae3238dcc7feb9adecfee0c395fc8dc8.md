@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ja-JP/841e2d99-a024-4393-9e56-838efbe45dbf-b2701422b99b85ea44c0c025a67eac3f.mp3
 ---
 
-## 2D NumPy Arrays
+## 2次元 NumPy 配列
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+よくできました！前回の動画で使ったNumPy配列をもう一度作ってみましょう。
 
 ---
 
-## Type of NumPy Arrays
+## NumPy配列の型
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+これらの配列の型を確認すると、Pythonは型が numpy.ndarray であると教えてくれます。numpy の後にドットが付いていることで、ndarray が numpy パッケージで定義された型であることがわかります。ndarray はn次元配列を意味します。配列 np_height と np_weight は1次元配列ですが、2次元、3次元、さらには7次元の配列だって作ることができます！ただし、この動画では2次元に絞って進めましょう。
 
 ---
 
-## 2D NumPy Arrays
+## 2次元 NumPy 配列
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+このように、家族全員の身長と体重のデータを1つのNumPy配列にまとめてみましょう。
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+ここで np_2d を出力すると、行と列を持つ表のような構造になっていることがわかります。リスト内の各サブリストは、2次元NumPy配列の行に対応しています。np_2d.shape から、実際に2行5列であることがわかります。shape は np_2d 配列のいわゆる属性で、配列の形状についてさらに詳しい情報を教えてくれます。
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+属性にアクセスするための構文は、メソッドを呼び出すときの書き方に少し似ていますが、同じではないので注意しましょう！メソッドにはこのように後ろに括弧が付きますが、ご覧のとおり、属性には付きません。
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+2次元配列にもNumPyのルールが適用されます。配列に含められる型は1つだけです。1つの float型の値 を s-t-r型の値 に変更すると、すべての配列要素が s-t-r型 に変換され、最終的に同じ型の要素だけを持つ配列になります。。
 
 ---
 
-## Subsetting
+## サブセット化
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+2次元NumPy配列は、リストのリストを改良したものと考えることができます。先ほどお見せしたように、配列に対して計算を行うことができ、さらに高度なサブセット化もできます。
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+最初の行を取り出し、その行の3番目の要素を取り出したいとしましょう。行を選択するには、角括弧内にインデックス 0 を指定する必要があります。インデックスは 0 から始まることを忘れないでください。
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+次に3番目の要素を選択するには、同じ呼び出しにもう一組の角括弧を追加し、今回はインデックス 2 を指定します。
 
 ---
 
-## Subsetting
+## サブセット化
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+このようになります。基本的には、まず行を選択し、その行の中からさらに選択しているということです。
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+また、1組の角括弧とカンマを使った、別のサブセット化の方法もあります。この呼び出しは、前とまったく同じ値を返します。カンマの前の値が行を指定し、カンマの後の値が列を指定します。指定した行と列の交差部分が返されます。慣れてくると、この構文の方がより直感的で、さらに多くのことができるようになります。
 
 ---
 
-## Subsetting
+## サブセット化
 
 ```yaml
 type: FullSlide
@@ -222,20 +217,19 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+家族のうち2人目と3人目について、身長と体重を選択したいとしましょう。両方の行を選択したいので、カンマの前にコロンを入れます。2列目と3列目だけを選択したいので、カンマの後にスライス 1:3 を指定します。ここでは、インデックス 3 の列は含まれないことを覚えておいてください。指定した行と列が交わる部分として、2行2列の2次元配列が返されます。
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+同様に、家族全員の体重を選択するには、次のようにします。2行目だけを選択したいので、カンマの前に 1 を入れます。すべての列を選択したいので、カンマの後にコロンを使います。指定した行と列が交わる部分として、2行目全体が返されます。
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+最後に、2次元NumPy配列でも、1次元NumPy配列と同じように要素ごとの計算を行うことができます。
 
 ---
 
-## Let's practice!
-
+## 練習しましょう！
 ```yaml
 type: FinalSlide
 key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+これは、2次元NumPy配列の作成やサブセット化とあわせて、演習で試すことができます！楽しみですね！

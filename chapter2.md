@@ -1,21 +1,19 @@
 ---
-title_meta: Chapter 2
-title: Python Lists
-description: >-
-  Learn to store, access, and manipulate data in lists: the first step toward
-  efficiently working with huge amounts of data.
+title_meta: 第 2 章
+title: Python リスト
+description: リストにデータを格納し、取り出し、操作する方法を学びましょう。大量のデータを効率よく扱うための第一歩です。
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Python Lists
+    title: Python リスト
   - nb_of_exercises: 4
-    title: Subsetting Lists
+    title: リストのサブセット化
   - nb_of_exercises: 5
-    title: Manipulating Lists
+    title: リストの操作
 ---
 
-## Python Lists
+## Python リスト
 
 ```yaml
 type: VideoExercise
@@ -28,7 +26,7 @@ a0530c4542f10988847b2dbb91f717c3
 
 ---
 
-## Create a list
+## リストを作成する
 
 ```yaml
 type: NormalExercise
@@ -39,7 +37,7 @@ skills:
   - 2
 ```
 
-A list is a **compound data type**; you can group values together, like this:
+リストは複合データ型です。次のように、複数の値をまとめることができます。
 
 ```
 a = "is"
@@ -47,17 +45,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
+家族の身長を測定したあと、住んでいる家についての情報も集めることにしました。この演習では、家の各部分の面積が別々の変数に保存されています。
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the `print()` function.
+- 廊下（`hall`）、キッチン（`kit`）、リビングルーム（`liv`）、寝室（`bed`）、バスルーム（`bath`）の面積をこの順番で含むリスト `areas` を作成してください。定義済みの変数を使ってください。
+- `print()` 関数で `areas` を出力してください。
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Make sure to use square brackets `[]` rather than parentheses `()`.
-- You don't need to use quotation marks when storing variables within a list.
-- Type `print(areas)` to print out the list when submitting.
+- 作成済みの変数を使って、リストを作成できます：`areas = [hall, kit, ...]`。
+- 丸カッコ `()` ではなく、角カッコ `[]` を使いましょう。
+- リストに変数を入れる場合、クォート（文字列を囲む ' や "）は必要ありません。
+- 解答を送信する際は、`print(areas)` と入力してリストを出力してください。
 
 `@pre_exercise_code`
 ```{python}
@@ -96,11 +94,11 @@ print(areas)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
+predef_msg = "定義済みの変数を削除したり編集したりしないでください！"
+areas_msg = "`areas` を、すべてのエリア変数を正しい順序で含むリストとして定義してください: `[hall, kit, liv, bed, bath]`。タイプミスに注意してください。リストには他のものを含めないでください！"
 
 Ex().check_correct(
-    has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?"),
+    has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}` を使用してスクリプトの最後に `areas` リストを出力しましたか？"),
     check_correct(
         check_object("areas").has_equal_value(incorrect_msg = areas_msg),
         multi(
@@ -113,12 +111,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("素晴らしい！ここではリストの方がずっと良いですね。")
 ```
 
 ---
 
-## Create lists with different types
+## 異なる型のリストを作成
 
 ```yaml
 type: NormalExercise
@@ -129,19 +127,19 @@ skills:
   - 2
 ```
 
-Although it's not really common, a list can also contain a mix of Python types including strings, floats, and booleans.
+あまり一般的ではありませんが、リストには文字列、float型の値、ブール値など、複数のPythonの型を混在させることもできます。
 
-You're now going to add the room names to your list, so you can easily see both the room name and size together.
+これからリストに部屋の名前を追加して、部屋の名前と広さを一緒に簡単に確認できるようにします。
 
-Some of the code has been provided for you to get you started. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+作業を始めやすいように、コードの一部はすでに用意されています。ここで注意してください。 `"bathroom"` は文字列である一方、`bath` は先ほど指定したfloat型の値 `9.50` を表す変数です。
 
 `@instructions`
-- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- `areas` リストを作成するコードを完成させてください。リストでは、各部屋の名前を文字列として先に入れ、その後に面積を入れるようにします。つまり、適切な位置に文字列 `"hallway"`、`"kitchen"`、`"bedroom"` という文字列を追加します。
+- `areas` をもう一度出力してみましょう。今回は出力内容がよりわかりやすくなりましたか？
 
 `@hint`
-- The first four elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
-- A string will need to be in quotation marks `""`.
+- リスト `areas` の最初の4つの要素は `["hallway", hall, "kitchen", kit, ...` としてコードされています。
+- 文字列はここではダブルクォート `""` で囲みます。
 
 `@pre_exercise_code`
 ```{python}
@@ -181,22 +179,22 @@ print(areas)
 `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
+predef_msg = "定義済みの変数を削除または編集しないでください！"
+areas_msg = "`areas` に正しい値を割り当てていません。指示をもう一度確認してください。各エリアを含む変数の前に部屋の名前を必ず置いてください。順序が重要です！タイプミスに注意してください。"
 
 Ex().check_correct(
   check_object("areas").has_equal_value(incorrect_msg = areas_msg),
   multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}` を使用してスクリプトの最後に `areas` リストを出力しましたか？")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("素晴らしいです！このリストには文字列と浮動小数点数の両方が含まれていますが、Pythonにとっては問題ありません！")
 ```
 
 ---
 
-## List of lists
+##  リストのリスト
 
 ```yaml
 type: NormalExercise
@@ -207,20 +205,20 @@ skills:
   - 2
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+データサイエンティストは、大量のデータを扱う場面がよくあります。そのため、関連するデータをまとめてグループ化すると便利です。
 
-Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
+家の部屋の名前と面積を表す文字列やfloatを1つのリストに入れる代わりに、複数のリストを要素として持つリストを作成できます。
 
-Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+覚えておきましょう：`"hallway"` は文字列ですが、`hall` は先ほど指定した float 型の値`11.25`を表す変数です。
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
+- リストのリストを完成させ、bedroom と bathroom のデータも含めてください。必ずこの順番で入力してください。
+- `house` を出力してください。このほうが、データの構造としてわかりやすくなりますか？
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- Remember to include a comma `,` after each sublist.
-- To print a variable `x`, write `print(x)` on a new line.
+- 角カッコの中に `["bathroom", bath]` と `["bedroom", bed]` を追加して、`house` _サにブリスト_として加えます。
+- 各サブリストの後にカンマ `,` を忘れずに入れてください。
+- 変数 `x` を出力するには、新しい行に `print(x)` と入力します。
 
 `@pre_exercise_code`
 ```{python}
@@ -267,8 +265,8 @@ print(house)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
+predef_msg = "定義済みの変数を削除したり編集したりしないでください！"
+house_msg = "正しい値を`house`に割り当てていません。指示をもう一度見直してください。リストのリストを拡張して、各部屋名と部屋面積のペアのリストを組み込むようにしてください。順序とタイプミスに注意してください！"
 
 Ex().check_correct(
     check_object("house").has_equal_value(incorrect_msg = house_msg),
@@ -281,14 +279,14 @@ Ex().check_correct(
     )
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}`を使用して`house`の内容を印刷しましたか？")
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("素晴らしいです！リストのサブセットについて学ぶ準備をしてください！")
 ```
 
 ---
 
-## Subsetting Lists
+## リストの要素を抽出する
 
 ```yaml
 type: VideoExercise
@@ -301,7 +299,7 @@ fc15ba5cb9485456df8589130b519ea3
 
 ---
 
-## Subset and conquer
+## 取り出して攻略
 
 ```yaml
 type: NormalExercise
@@ -312,7 +310,7 @@ skills:
   - 2
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+Pythonのリストから要素を取り出すのはとても簡単です。以下のサンプルコードを見てみましょう。リスト `x` を作成し、そこから "b" を取り出しています。これは2番目の要素なので、インデックスは 1 になることを覚えておきましょう。負のインデックスも使えます。
 
 ```
 x = ["a", "b", "c", "d"]
@@ -320,18 +318,18 @@ x[1]
 x[-3] # same result!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+先ほどの `areas` リストを覚えていますか？文字列と float型の値の両方が含まれているリストです。その定義はすでにスクリプトにあります。正しいコードを追加して、Pythonでリストの要素を取り出す操作を試してみましょう。
 
 `@instructions`
-- Print out the second element from the `areas` list (it has the value `11.25`).
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room (`20.0`) and print it out.
+- `areas` リストから2番目の要素を出力してください。この要素の値は `11.25` です。
+- `areas` の最後の要素である `9.50` を取り出して出力してください。ここでは負のインデックスを使うとよいでしょう。
+- リビングルームの面積を表す数値 `20.0` 取り出して、出力してください。
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`.
-- Use `x[-1]` to select the last element of a list `x`.
-- Make sure to wrap your subsetting operations in a `print()` call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
+- リスト `x[1]` の2番目の要素を取り出すには、`x` を使います。
+- リスト `x` の最後の要素を取り出すには、`x[-1]`  を使います。
+- リストから要素を取り出す処理は、必ず`print()` 呼び出しの中に入れてください。
+- リビングルームの面積を表す数値はリスト内の6番目の要素なので、ここでは、`[5]` が必要です。 `area[4]` を使うと、文字列が表示されてしまいます。。
 
 `@pre_exercise_code`
 ```{python}
@@ -370,17 +368,17 @@ print(areas[5])
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "定義済みの `areas` リストを削除または編集しないでください。"
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
-Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
-Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
-success_msg("Good job!")
+Ex().has_printout(0, not_printed_msg = "コードをもう一度見直して、`areas` の2番目の要素を出力してください。それはインデックス `1` にあります。")
+Ex().has_printout(1, not_printed_msg = "コードをもう一度見直して、`areas` の最後の要素を出力してください。それはインデックス `-1` にあります。")
+Ex().has_printout(2, not_printed_msg = "コードをもう一度見直して、リビングルームの面積を出力してください。それはインデックス `5` にあります。")
+success_msg("よくできました！")
 ```
 
 ---
 
-## Slicing and dicing
+## スライスを使いこなす
 
 ```yaml
 type: NormalExercise
@@ -391,23 +389,23 @@ skills:
   - 2
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+リストから1つの値を取り出すのは、方法の一部にすぎません。リストを_スライス_することもできます。することもできます。これは、リストから複数の要素を取り出すという意味です。次の構文を使います。
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
+`start` インデックスは含まれますが、`end` インデックスは _含まれません_。ただし、これらのインデックスを指定しないこともできます。 `start` インデックスを指定しない場合、Pythonはリストの先頭からスライスを開始すると判断します。
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-- Print both `downstairs` and `upstairs` using `print()`.
+- スライスを使って、`areas` の最初の6個の要素を含むリスト `downstairs` を作成してください。
+- `areas` の最後の `4` 個の要素として、`upstairs` を作成してください。今回は、`end` インデックスを省略してスライスを簡略化します。
+- `print()` を使って、`downstairs` と `upstairs` の両方を出力してください。
 
 `@hint`
-- Use the brackets `[0:6]` to get the first six elements of a list.
-- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
-- Add two `print()` calls to print out `downstairs` and `upstairs`.
+-  リストの最初の6個の要素を取り出すには、角括弧 `[0:6]` を使います。
+- リスト `l` の最初の5個の要素以外をすべて取り出すには、`l[5:]` を使います。
+- `print()` を2回使って、`downstairs`  と `upstairs` を出力してください。
 
 `@pre_exercise_code`
 ```{python}
@@ -448,22 +446,22 @@ print(upstairs)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "定義済みの `areas` リストを削除または編集しないでください。"
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
+patt = "`%s` が正しくありません。`areas[%s]` とスライスを使用して、必要な要素を選択するか、同等のものを使用してください。"
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
-Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
+Ex().has_printout(0, not_printed_msg="計算後に `downstairs` を出力しましたか？")
+Ex().has_printout(1, not_printed_msg="計算後に `upstairs` を出力しましたか？")
 
-success_msg("Great!")
+success_msg("素晴らしいです！")
 ```
 
 ---
 
-## Subsetting lists of lists
+## リストのリストの要素を取り出す
 
 ```yaml
 type: NormalExercise
@@ -471,20 +469,20 @@ key: dbbbd306cf
 xp: 100
 ```
 
-A Python list can also contain other lists.
+Python のリストは、他のリストを要素として含むことができます。
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
-
-```
+リストのリストから一部を取り出すには、これまでと同じ方法で角括弧を使います。`house`の場合、次のようになります。```
 house[2][0]
-```
+``` 
+
+
 
 `@instructions`
-- Subset the `house` list to get the float `9.5`.
+- `house` リストからfloat型の値 `9.5` を取り出します。
 
 `@hint`
-- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
-- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+- 順を追って考えてみましょう。まず、リストの最後の要素 `["bathroom", 9.50]` を取り出します。最後の要素のインデックスは `-1` でしたね。
+- 次に、`["bathroom", 9.50]` の2番目の要素を取り出します。インデックスは `1` です。
 
 `@pre_exercise_code`
 ```{python}
@@ -522,12 +520,12 @@ Ex().check_or(
   has_code("house[4][1]", pattern=False)
 )
 
-success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
+success_msg("正解です！リストパズルの最後のピースは操作です。")
 ```
 
 ---
 
-## Manipulating Lists
+## リストの操作
 
 ```yaml
 type: VideoExercise
@@ -540,7 +538,7 @@ xp: 50
 
 ---
 
-## Replace list elements
+## リストの要素を置き換える
 
 ```yaml
 type: NormalExercise
@@ -551,18 +549,18 @@ skills:
   - 2
 ```
 
-To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+リストの要素を置き換えるには、リストから対象の要素やスライスを指定し、そこに新しい値を代入します。1つの要素を指定することも、リストのスライス全体を一度に変更することもできます。
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+この演習と以降の演習では、家のさまざまな部屋の名前と面積が含まれている `areas`リストを引き続き扱います。
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
+- 負のインデックスを使って、バスルームの面積を `9.50` 平方メートルから `10.50` 平方メートルに更新します。
+- `areas` リストをもっと今風にしましょう。`"living room"` を `"chill zone"`（チル部屋） に変更します。今回は負のインデックスを使わないでください。
 
 `@hint`
-- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
-- Then, replace the value with the new bathroom area by assigning it to this subset.
-- Do the same to update the `"living room"` name, which is at index 4.
+- バスルームの面積を更新するには、バスルームの面積に対応する要素を特定しましょう（リストの最後の要素です）。
+- 次に、その要素に新しいバスルームの面積を代入して、値を置き換えます。
+- インデックス 4 にある `"living room"` という名前も、同じように更新してください。
 
 `@pre_exercise_code`
 ```{python}
@@ -595,21 +593,21 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
+bathroom_msg = 'バスルームの面積を更新するには、`areas[-1] = 10.50` を使用できます。'
+chillzone_msg = 'リビングルームの名前を更新するには、`areas[4] = "chill zone"` を使用できます。'
 Ex().check_correct(
-  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  check_object('areas').has_equal_value(incorrect_msg = 'あなたの `areas` への変更は正しいリストになりませんでした。正しいサブセット操作を使用したか確認しましたか？迷ったときは、ヒントを使用できます！'),
   multi(
     has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
     has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
-success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
+success_msg('素晴らしいです！コードサンプルが示したように、リストをスライスして別のリストで置き換えることで、単一のコマンドで複数の要素を更新することもできます。')
 ```
 
 ---
 
-## Extend a list
+## リストを拡張する
 
 ```yaml
 type: NormalExercise
@@ -620,22 +618,22 @@ skills:
   - 2
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+リスト内の要素を変更できるなら、要素を追加できるようにもなりたいですよね。`+` プラス演算子を使うことができます。
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+宝くじに当たりました。すごいですね！プールハウスとガレージを建てることにしました。この情報を `areas` リストに追加してみましょう。
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- `+` 演算子を使って、リスト `["poolhouse", 24.5]` を `areas` リストの末尾に追加しましょう。結果のリストを `areas_1` として保存してください。
+- ガレージのデータを追加して `areas_1` をさらに拡張してください。文字列 `"garage"` とfloat型の値 `15.45` を追加します。結果のリストに `areas_2` という名前を付けてください。
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- 問題文のコード例を参考にしましょう。ここでは `x` が `areas`、`["e", "f"]` が `["poolhouse", 24.5]` にあたります。
+- `areas_1` にさらに要素を追加するには、`areas_1 + ["element", 123]` を使います。
 
 `@pre_exercise_code`
 ```{python}
@@ -670,16 +668,16 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "定義済みの `areas` リストを削除または編集しないでください。"
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
-success_msg("Cool! The list is shaping up nicely!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "`areas + [\"poolhouse\", 24.5]` を使用して `areas_1` を作成してください。タイプミスに注意してください！")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "`areas_1 + [\"garage\", 15.45]` を使用して `areas_2` を作成してください。タイプミスに注意してください！")
+success_msg("素晴らしいです！リストがうまく形になっています！")
 ```
 
 ---
 
-## Delete list elements
+## リスト要素の削除
 
 ```yaml
 type: NormalExercise
@@ -687,23 +685,23 @@ key: 85f792356e
 xp: 100
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+最後に、リストから要素を削除することもできます。削除には `del` 文を使います。
 
 ```
 x = ["a", "b", "c", "d"]
 del x[1]
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+ここで注意してください。リストから要素を削除すると、それ以降の要素のインデックスはすべて変わります。
 
-Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
+残念ながら、宝くじで当たった金額はそれほど大きくなく、プールハウスの建設は難しそうです。リストからプールハウスの要素を削除する必要があります。`areas` リストから、対応する文字列とfloat型の値を削除することにします。
 
 `@instructions`
-- Delete the string and float for the `"poolhouse"` from your `areas` list.
-- Print the updated `areas` list.
+- `areas`リストから、`"poolhouse"`に対応する文字列と float型の値を削除してください。
+- 更新後の `areas` リストを出力してください。
 
 `@hint`
-- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
+- 2つの要素を削除するには、`del` を2回使います。ただし、1つ目の要素を削除すると、残りの要素のインデックスが変わる点に注意してください。
 
 `@pre_exercise_code`
 ```{python}
@@ -764,13 +762,13 @@ Ex().check_or(
   )
 )
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="`areas`をプールハウスの文字列と浮動小数点数を削除した後に出力しましたか？")
+success_msg("正解です！Pythonのリストから特定の要素を削除するより簡単な方法については、後ほど学びます。")
 ```
 
 ---
 
-## Inner workings of lists
+## リストの内部の仕組み
 
 ```yaml
 type: NormalExercise
@@ -781,17 +779,17 @@ skills:
   - 2
 ```
 
-Some code has been provided for you in this exercise: a list with the name `areas` and a copy named `areas_copy`.
+この演習では、`areas` という名前のリストと、それをコピーしたリストである `areas_copy` があらかじめ用意されています。
 
-Currently, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit the run code button you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+現在、`areas_copy` リストの最初の要素が変更され、`areas` リストが出力されるようになっています。「コードを実行する」 ボタンを押すと、`areas_copy` を変更したにもかかわらず、その変更が `areas` リストにも反映されていることがわかります。これは、`areas` と `areas_copy` が同じリストを参照しているためです。
 
-If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list with `list()` or by using `[:]`.
+`areas_copy` での変更が `areas` に反映されないようにするには、`list()` または `[:]` を使って、`areas` リストを明示的にコピーする必要があります。
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
+- 変数 `areas_copy` を作成している2行目を変更して、`areas_copy` が `areas` の明示的なコピーになるようにしてください。編集後、`areas_copy` に加えた変更が `areas` に影響しないはずです。**解答を送信**して確認しましょう。
 
 `@hint`
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+- `areas_copy = areas` の呼び出しを変更してください。`areas` を代入する代わりに、`list(areas)` または `areas[:]` を代入できます。
 
 `@pre_exercise_code`
 ```{python}
@@ -831,16 +829,16 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_object("areas_copy").has_equal_value(incorrect_msg = "「areas_copy」が正しく更新されていないようです。"),
+  check_function("list", missing_msg = "「list(areas)」を使用して「areas_copy」を作成することを確認してください。")
 )
 
-mmsg = "Don't remove the predefined `areas` list."
-imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+mmsg = "事前定義された「areas」リストを削除しないでください。"
+imsg = "コピーのみを編集し、元の「areas」リストを編集しないようにしてください。コピーの作成方法が不明な場合は、演習の説明をもう一度確認してください。"
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_function("list", missing_msg = "「list(areas)」を使用して「areas_copy」を作成することを確認してください。")
 )
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("素晴らしいです！明示的なコピーと参照ベースのコピーの違いは微妙ですが、非常に重要な場合があります。リストがコンピュータのメモリにどのように保存されるかを心に留めておいてください。")
 ```

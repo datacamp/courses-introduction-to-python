@@ -1,21 +1,20 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: 第 1 章
+title: Python の基礎
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  Python の基本概念を紹介します。コードを1行ずつ実行しながら Python
+  を使う方法と、スクリプトを使う方法を学びます。初めての変数を作成し、Python の基本的なデータ型に慣れましょう。
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: こんにちは、Python！
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: 変数と型
 ---
 
-## Hello Python!
+## こんにちは、Python！
 
 ```yaml
 type: VideoExercise
@@ -28,7 +27,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## はじめてのPythonコード
 
 ```yaml
 type: NormalExercise
@@ -39,15 +38,13 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
-
-Head to the code and hit the run code button to see the output.
+はじめてのPythonコードを実行してみましょう！コードエディタに移動し、「コードを実行する」を押して出力を確認してください。
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- 「コードを実行する」を押して、`print(5 / 8)` の出力を確認しましょう。
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- 解答を送信する前に、まずコードを実行して、出力を確認する時間を取りましょう。
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +65,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}`を使用して`5 / 8`を出力しましたか？")
+success_msg("素晴らしいです！次に進みましょう！")
 ```
 
 ---
 
-## Python as a calculator
+## 電卓としての Python
 
 ```yaml
 type: NormalExercise
@@ -85,19 +82,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Pythonは基本的な計算を行うのに適しています。足し算、引き算、掛け算、割り算ができます。
 
-The code in the script gives some examples.
+スクリプト内のコードには、いくつかの例が示されています。
 
-Now it's your turn to practice by writing some code yourself.
+では、実際にコードを書いて練習してみましょう。
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- `5` から `5` を引いた結果を、`# Subtraction` の下に `print()` を使って表示してください。
+- `3` に `5` を掛けた結果を、`# Multiplication` の下に表示してください。
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- 出力を表示するには `print()` を使います。
+- 引き算には `-`、掛け算には `*` を使います。
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +129,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "和の結果を出力するために `print(4 + 5)` を使用しましたか？")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "減算の結果を出力するために `print(5 - 5)` を使用しましたか？")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "乗算の結果を出力するために `print(3 * 5)` を使用しましたか？")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "除算の結果を出力するために `print(10 / 2)` を使用しましたか？")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("その通りです！Pythonは計算を手助けしてくれます。これは、データスキルを向上させるにつれて分析に役立つ特性です。")
 ```
 
 ---
 
-## Variables and Types
+## 変数と型
 
 ```yaml
 type: VideoExercise
@@ -158,7 +155,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## 変数への代入
 
 ```yaml
 type: NormalExercise
@@ -169,24 +166,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+Pythonでは、変数を使うと値に名前を付けて、あとから使うことができます。たとえば、値が `5` の変数 `x` を作成するには、次の例のように `=` を使います。
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+これで、`5` の代わりに、`x` を使えるようになります。
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Pythonの `=` は代入を意味し、等しいかどうかを調べるものではありません。演習では、`____` を自分のコードに置き換えて試してみてください。
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- 値が `100` の変数 `savings` を作成してください。
+- スクリプトに `print(savings)` と入力して、この変数を確認してください。
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+`savings` という変数を作成するには、`savings = 100` と入力します。
+変数 `savings` を作成したら、`print(savings)`  と入力できます。
+最終的なコードに `____` が含まれていないようにしてください。
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +210,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="変数 `savings` に `100` を代入してください。")
+Ex().has_printout(0, not_printed_msg = "作成した変数 `savings` を `print(savings)` で出力してください。")
+success_msg("素晴らしいです！次に、この変数を使っていくつかの計算をしてみましょう！")
 ```
 
 ---
 
-## Calculations with variables
+## 変数を使った計算
 
 ```yaml
 type: NormalExercise
@@ -231,21 +228,19 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+貯金額を表す変数を作成したので、さっそく貯金を始めましょう！数値を直接使う代わりに、変数を使って計算できます。
 
-Instead of calculating with the actual values, you can use variables instead.
-
-How much money would you have saved four months from now, if you saved $10 each month?
+毎月 $10 貯金した場合、4か月後にはいくら貯まっているでしょうか？
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- `monthly_savings` という変数を作成し、`10` を代入します。また、`num_months` という変数を作成し、`4` を代入します。
+- `monthly_savings` に `num_months` を掛け、その結果を `new_savings` に代入します。
+- `new_savings` の値を出力します。
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- 変数を使った計算は、数値を使った計算と同じように行えます。`10 * 4` の計算式の数値を変数に置き換えればよいということです。
+- `print()` を使って `new_savings` の値を確認できます。
+- 変数名の綴りを間違えないように注意してください。
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +275,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "「monthly_savings」に`10`を`monthly_savings = 10`を使って保存しましたか？")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "「num_months」に`4`を`num_months = 4`を使って保存しましたか？")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "正しい変数と記号を使って掛け算をしましたか？`monthly_savings * num_months`が期待されますが、他のものが得られました。")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "正しい変数と記号を使って足し算をしましたか？`savings + new_savings`が期待されますが、他のものが得られました。")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="スクリプトの最後に「new_savings」を出力することを忘れないでください。")
 
-success_msg("You have $40 in new savings!")
+success_msg("新しい貯金が$40あります！")
 ```
 
 ---
 
-## Other variable types
+## その他の変数の型
 
 ```yaml
 type: NormalExercise
@@ -303,24 +298,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+前の演習では、整数を表すPythonのデータ型を扱いました。
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int`（整数型）：小数部分を持たない数値です。値が `100` の `savings` は integer の例です。
 
-Next to numerical data types, there are three other very common data types:
+数値データ型の次に、非常によく使われるデータ型がほかに3つあります。
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float`（浮動小数点型）：整数部分と小数部分を持ち、それらが小数点で区切られた数値です。`1.1` は float の例です。
+- `str`（文字列型）：テキストを表す型です。文字列を作るには、シングルクォートまたはダブルクォートを使います。これを string と言います。
+- `bool`（真偽値型）：論理値を表す型です。値は `True` または `False` のみです。大文字と小文字の違いが重要です。これを boolean といいます。
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- 新しいfloat型の変数 `half` を作成し、値 `0.5` を代入します。
+- 新しいstr型の変数 `intro` を作成し、値 `"Hello! How are you?"` を代入します。
+- 新しいbool型の変数 `is_good` を作成し、値 `True` を代入します。
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Python で変数を作成するには、`=` を使います。文字列は必ずシングルクォートまたはダブルクォートで囲んでください。
+- Python に存在する boolean 値（真偽値型）は `True` と `False` の2つだけです。`TRUE`、`true`、`FALSE`、`false` など、他の形式は使用できません。
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +348,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "浮動小数点 `0.5` を `half` に保存しましたか？")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "うーん、`intro` 変数に何か間違いがあります。スペルを再確認し、引用符を使用したことを確認してください。")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "ブール値を大文字にしましたか？ここでは引用符を使用する必要はありません。")
 
-success_msg("Nice!")
+success_msg("素晴らしいです！")
 ```
 
 ---
 
-## Operations with other types
+## 他の型との演算
 
 ```yaml
 type: BulletExercise
@@ -372,11 +367,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Python では、変数にはさまざまな型があります。変数の型は `type()` を使って確認できます。たとえば、`a` の型を確認するには `type(a)` を実行します。
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Pythonでは、型が異なると動作も異なります。たとえば、2つの文字列を足すと、2つの整数や2つのbool値をす場合とは異なる動作になります。
 
-Time for you to test this out.
+実際に試してみましょう。
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +387,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- `savings` と `new_savings` を足し合わせ、`total_savings` に代入します。
+- `type()` を使って、`total_savings` の結果の型を出力します。
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- `savings + new_savings` を新しい変数 `total_savings` に代入します。
+- 変数 `x` の型を出力するには、`print(type(x))` を使います。
 
 `@sample_code`
 ```{python}
@@ -428,7 +423,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "既定の変数を変更または削除する必要はありません。"
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +431,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="`savings` と `new_savings` を加算して `total_savings` 変数を作成してください。"),
+    has_printout(1, not_printed_msg = "__JINJA__:`{{sol_call}}` を使用して `total_savings` の型を出力してください。")
 )
 ```
 
@@ -450,12 +445,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- `intro` と `intro` の合計を計算し、その結果を `doubleintro` に代入します。
+- `doubleintro` を出力します。これは予想していましたか？
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- `intro + intro` を新しい変数 `doubleintro` に代入します。
+- 変数 `x` を出力するには、スクリプトに `print(x)` と入力します。
 
 `@sample_code`
 ```{python}
@@ -482,14 +477,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "定義済みの変数を変更または削除する必要はありません。"
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "`intro + intro` の結果を `doubleintro` に格納しましたか？"),
+    has_printout(0, not_printed_msg = "`doubleintro` を出力するのを忘れないでください。")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("素晴らしいです。`intro + intro` が `\"Hello! How are you?\"` と `\"Hello! How are you?\"` を結合することに注意してください。")
 ```
