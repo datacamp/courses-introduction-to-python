@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/pl-PL/01fe1c51-e7a7-48ae-9c28-3301e47fb40f-5f0c92679548e02822af3749ab71882a.mp3
 ---
 
-## 2D NumPy Arrays
+## Tablice 2D NumPy
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Świetna robota! Odtwórzmy teraz tablice numpy z poprzedniego filmu.
 
 ---
 
-## Type of NumPy Arrays
+## Typ tablic NumPy
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Jeśli sprawdzisz typ tych tablic, Python powie ci, że to numpy.ndarray. Człon numpy z kropką oznacza, że typ ten został zdefiniowany w pakiecie numpy. Skrót ndarray pochodzi od angielskiego „n-dimensional array", czyli tablica n-wymiarowa. Tablice np_height i np_weight są jednowymiarowe, ale równie dobrze możesz tworzyć tablice dwu-, trzy-, a nawet siedmiowymiarowe! W tym filmie zostaniemy jednak przy dwóch wymiarach.
 
 ---
 
-## 2D NumPy Arrays
+## Tablice 2D NumPy
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Tablicę numpy 2D możesz utworzyć ze zwykłej listy list w Pythonie. Spróbujmy stworzyć jedną tablicę numpy zawierającą dane o wzroście i wadze całej twojej rodziny, w taki sposób.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Jeśli teraz wyświetlisz np_2d, zobaczysz, że to prostokątna struktura danych. Każda podlista odpowiada jednemu wierszowi w dwuwymiarowej tablicy numpy. Z wartości np_2d.shape wynika, że mamy dokładnie 2 wiersze i 5 kolumn. shape to tak zwany atrybut tablicy np_2d, który pozwala dowiedzieć się więcej o strukturze danych.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Zwróć uwagę, że składnia dostępu do atrybutu wygląda trochę jak wywołanie metody, ale to nie to samo! Pamiętaj, że metody mają po sobie okrągłe nawiasy, a atrybuty, jak widzisz, nie mają.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Dla tablic 2D obowiązuje ta sama reguła numpy: tablica może zawierać tylko jeden typ danych. Jeśli zmienisz jeden element zmiennoprzecinkowy na łańcuch znaków, wszystkie elementy tablicy zostaną przekształcone na łańcuchy, żeby zachować jednorodność tablicy.
 
 ---
 
-## Subsetting
+## Indeksowanie
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Tablicę numpy 2D możesz traktować jak ulepszoną listę list. Możesz wykonywać na niej obliczenia, tak jak pokazywałem wcześniej, a poza tym masz do dyspozycji bardziej zaawansowane sposoby indeksowania.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Powiedzmy, że chcesz pobrać pierwszy wiersz, a z niego trzeci element. Żeby wybrać wiersz, podaj indeks 0 w nawiasach kwadratowych. Pamiętaj o indeksowaniu od zera.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+Następnie, żeby wybrać trzeci element, rozszerz to samo wywołanie o kolejną parę nawiasów kwadratowych, tym razem z indeksem 2.
 
 ---
 
-## Subsetting
+## Indeksowanie
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+W ten sposób. W praktyce wybierasz najpierw wiersz, a potem wykonujesz kolejne indeksowanie wewnątrz niego.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Istnieje też alternatywny sposób indeksowania z użyciem pojedynczych nawiasów kwadratowych i przecinka. To wywołanie zwraca dokładnie tę samą wartość co poprzednie. Wartość przed przecinkiem wskazuje wiersz, a wartość po przecinku wskazuje kolumnę. W wyniku otrzymujesz element leżący na ich przecięciu. Gdy się do tego przyzwyczaisz, ta składnia okaże się bardziej intuicyjna i da ci więcej możliwości.
 
 ---
 
-## Subsetting
+## Indeksowanie
 
 ```yaml
 type: FullSlide
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Powiedzmy, że chcesz wybrać wzrost i wagę drugiego oraz trzeciego członka rodziny. Potrzebujesz obu wierszy, więc przed przecinkiem wstawiasz dwukropek. Chcesz tylko drugą i trzecią kolumnę, więc po przecinku podajesz indeksy od 1 do 3. Pamiętaj, że element o indeksie 3 nie jest uwzględniany. W wyniku otrzymujesz tablicę 2D z 2 wierszami i 2 kolumnami.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Podobnie możesz wybrać wagę wszystkich członków rodziny w taki sposób. Potrzebujesz tylko drugiego wiersza, więc przed przecinkiem wstawiasz 1. Chcesz wszystkie kolumny, więc po przecinku dajesz dwukropek. W wyniku otrzymujesz cały drugi wiersz.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+Na koniec warto dodać, że tablice numpy 2D umożliwiają obliczenia wykonywane element po elemencie, dokładnie tak samo jak tablice jednowymiarowe. To coś,
 
 ---
 
-## Let's practice!
+## Czas na ćwiczenia!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+z czym możesz poeksperymentować w ćwiczeniach, razem z tworzeniem i indeksowaniem tablic numpy 2D. Do dzieła!

@@ -1,22 +1,22 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
+title_meta: Rozdział 3
+title: Funkcje i pakiety
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  Dowiesz się, jak korzystać z funkcji, metod i pakietów, aby efektywnie używać
+  kodu napisanego przez doświadczonych programistów Pythona. Celem jest
+  ograniczenie ilości kodu potrzebnego do rozwiązywania złożonych problemów!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: Funkcje
   - nb_of_exercises: 4
-    title: Methods
+    title: Metody
   - nb_of_exercises: 4
-    title: Packages
+    title: Pakiety
 ---
 
-## Functions
+## Funkcje
 
 ```yaml
 type: VideoExercise
@@ -29,7 +29,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## Znajome funkcje
 
 ```yaml
 type: NormalExercise
@@ -40,23 +40,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python oferuje gotowy zestaw wbudowanych funkcji, które ułatwiają pracę analityka danych. Znasz już dwie z nich: `print()` i `type()`. Istnieją też funkcje takie jak `str()`, `int()`, `bool()` czy `float()`, które służą do konwersji między typami danych. Możesz dowiedzieć się o nich więcej [tutaj.](https://docs.python.org/3/library/functions.html) To również funkcje wbudowane.
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+Wywoływanie funkcji jest proste. Aby sprawdzić typ wartości `3.0` i zapisać wynik w nowej zmiennej `result`, możesz użyć następującego kodu:
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- Użyj `print()` w połączeniu z `type()`, aby wyświetlić typ zmiennej `var1`.
+- Użyj `len()`, aby pobrać [długość listy](https://docs.python.org/3/library/functions.html#len) `var1`. Owiń wywołanie w `print()`, żeby od razu wyświetlić wynik.
+- Użyj `int()`, aby przekonwertować `var2` na [liczbę całkowitą](https://docs.python.org/3/library/functions.html#int). Zapisz wynik w zmiennej `out2`.
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- Wywołaj funkcję `type()` w ten sposób: `type(var1)`.
+- Wywołaj `print()` tak jak robiłeś to już wiele razy. Wystarczy podać w nawiasach zmienną, którą chcesz wyświetlić.
+- `int(x)` przekonwertuje `x` na liczbę całkowitą.
 
 `@pre_exercise_code`
 ```{python}
@@ -97,26 +97,26 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Nie musisz zmieniać ani usuwać predefiniowanych zmiennych."
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__:Upewnij się, że wypisujesz %s `var1` za pomocą `{{sol_call}}`."
+Ex().has_printout(0, not_printed_msg = patt % 'typ')
+Ex().has_printout(1, not_printed_msg = patt % 'długość')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "Czy użyto `int()`, aby przekonwertować `var2` na liczbę całkowitą?"
+int_incorr_msg = "Czy przekazano `var2` do `int()`?"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="Wywołano `int()` poprawnie; teraz upewnij się, że wynik tego wywołania jest przypisany do `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("Świetna robota! Funkcja `len()` jest niezwykle przydatna; działa również na ciągach znaków, zliczając liczbę znaków!")
 ```
 
 ---
 
-## Help!
+## Pomoc!
 
 ```yaml
 type: MultipleChoiceExercise
@@ -127,27 +127,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+Może znasz już nazwę jakiejś funkcji Pythona, ale wciąż musisz się dowiedzieć, jak jej używać. Paradoksalnie – aby uzyskać informacje o funkcji, trzeba skorzystać z innej funkcji: `help()`. W IPythonie możesz też wpisać `?` przed nazwą funkcji.
 
-To get help on the `max()` function, for example, you can use one of these calls:
+Aby na przykład sprawdzić dokumentację funkcji `max()`, użyj jednego z poniższych wywołań:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Skorzystaj z powłoki IPython, aby otworzyć [dokumentację](https://docs.python.org/3/library/functions.html#pow) funkcji `pow()`. Wpisz `?pow` lub `help(pow)` i naciśnij **Enter**.
 
-Which of the following statements is true?
+Które z poniższych stwierdzeń jest prawdziwe?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` przyjmuje trzy argumenty: `base`, `exp` i `mod`. Bez argumentu `mod` funkcja zwróci błąd.
+- `pow()` przyjmuje trzy wymagane argumenty: `base`, `exp` i `None`.
+- `pow()` wymaga argumentów `base` i `exp`; argument `mod` jest opcjonalny.
+- `pow()` przyjmuje dwa argumenty: `exp` i `mod`. Brak argumentu `exp` powoduje błąd.
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- Argumenty opcjonalne mają przypisaną domyślną wartość przez `=` – funkcja użyje jej, jeśli nie podasz tego argumentu.
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +156,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "Nie do końca. `mod` ma wartość domyślną, która zostanie użyta, jeśli nie określi się żadnej wartości."
+msg2 = "Nieprawidłowo. `None` jest wartością domyślną dla argumentu `mod`."
+msg3 = "Doskonale! Używanie `help()` może pomóc w zrozumieniu działania funkcji, wykorzystując ich pełny potencjał!"
+msg4 = "Nieprawidłowo. `pow()` przyjmuje trzy argumenty, z których jeden ma wartość domyślną."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## Wiele argumentów
 
 ```yaml
 type: NormalExercise
@@ -176,25 +176,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+W poprzednim ćwiczeniu identyfikowałeś(-aś) opcjonalne argumenty, przeglądając dokumentację za pomocą `help()`. Teraz wykorzystasz tę wiedzę, aby zmienić zachowanie funkcji `sorted()`.
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+Zapoznaj się z [dokumentacją](https://docs.python.org/3/library/functions.html#sorted) funkcji `sorted()`, wpisując `help(sorted)` w konsoli IPython.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+Zobaczysz, że `sorted()` przyjmuje trzy argumenty: `iterable`, `key` i `reverse`. W tym ćwiczeniu musisz podać tylko `iterable` i `reverse` – pomiń `key`.
 
-Two lists have been created for you.
+Dwie listy zostały już dla ciebie przygotowane.
 
-Can you paste them together and sort them in descending order?
+Czy potrafisz je połączyć i posortować w kolejności malejącej?
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- Użyj `+`, aby połączyć zawartość `first` i `second` w nową listę: `full`.
+- Wywołaj `sorted()` na `full` i ustaw argument `reverse` na `True`. Zapisz posortowaną listę jako `full_sorted`.
+- Na koniec wyświetl `full_sorted`.
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- Połącz `first` i `second` jak dwie liczby i przypisz wynik do `full`.
+- Użyj `sorted()` z dwoma argumentami: `full` i `reverse=True`.
+- Aby wyświetlić zmienną, użyj `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +235,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "Nie musisz zmieniać ani usuwać już istniejących zmiennych `first` i `second`."
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="Upewnij się, że przypisujesz wynik wywołania `sorted()` do `full_sorted`."),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("Świetnie! Przejdź do filmu o metodach w Pythonie.")
 ```
 
 ---
 
-## Methods
+## Metody
 
 ```yaml
 type: VideoExercise
@@ -266,7 +266,7 @@ xp: 50
 
 ---
 
-## String Methods
+## Metody łańcuchów znaków
 
 ```yaml
 type: NormalExercise
@@ -277,19 +277,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+Łańcuchy znaków mają wiele wbudowanych metod. Postępuj zgodnie z instrukcjami, aby poznać kilka z nich. Jeśli chcesz zgłębić ten temat, możesz w każdej chwili wpisać `help(str)` w powłoce IPython.
 
-A string `place` has already been created for you to experiment with.
+Zmienna `place` została już dla ciebie utworzona – możesz na niej eksperymentować.
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- Wywołaj [metodę](https://docs.python.org/3/library/stdtypes.html#str.upper) `.upper()` na zmiennej `place` i zapisz wynik w zmiennej `place_up`. Użyj składni wywoływania metod, której nauczyłeś się w poprzednim filmie.
+- Wyświetl zmienne `place` i `place_up`. Czy obie uległy zmianie?
+- Wyświetl liczbę liter „o" w zmiennej `place`, wywołując metodę `.count()` na `place` i przekazując literę `'o'` jako argument. Chodzi o zmienną `place`, a nie o słowo `"place"`!
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- Możesz wywołać metodę `.upper()` na zmiennej `place` bez żadnych dodatkowych argumentów.
+- Aby wyświetlić zmienną `x`, napisz `print(x)`.
+- Pamiętaj, aby otoczyć wywołanie `place.count(____)` funkcją `print()`, żeby wyświetlić wynik.
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +330,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Nie musisz zmieniać ani usuwać predefiniowanych zmiennych."
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "Nie zapomnij wydrukować `%s`."
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="Przypisz wynik wywołania `place.upper()` do zmiennej `place_up`."),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "Poprawnie obliczono liczbę liter 'o' w zmiennej `place`; teraz upewnij się, że wywołanie `place.count('o')` jest opakowane w funkcję `print()`, aby wydrukować wynik."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Świetnie! Zwróć uwagę na podstawie wydruków, że metoda `upper()` nie zmienia obiektu, na którym jest wywoływana. W przypadku list w następnym ćwiczeniu będzie inaczej!")
 ```
 
 ---
 
-## List Methods
+## Metody list
 
 ```yaml
 type: NormalExercise
@@ -365,20 +365,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+Metody w Pythonie nie są zarezerwowane wyłącznie dla ciągów znaków. Listy, liczby zmiennoprzecinkowe, liczby całkowite i wartości logiczne również mają swoje zestawy przydatnych metod. W tym ćwiczeniu poeksperymentujesz z:
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()` – zwraca indeks pierwszego elementu listy pasującego do podanej wartości,
+- `.count()` – zwraca liczbę wystąpień danego elementu na liście.
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+Będziesz pracować na liście `areas`, która zawiera powierzchnie różnych pomieszczeń w domu.
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- Użyj metody `.index()`, aby znaleźć indeks elementu listy `areas` równego `20.0`. Wyświetl ten indeks.
+- Wywołaj metodę `.count()` na liście `areas`, aby sprawdzić, ile razy wartość `9.50` pojawia się na liście. Wyświetl tę liczbę.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- Aby wyświetlić indeks, owiń wywołanie `areas.index(___)` w funkcję `print()`.
+- Aby wyświetlić liczbę wystąpień elementu `x` na liście, owiń wywołanie `areas.count(___)` w funkcję `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -411,7 +411,7 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "Nie musisz zmieniać ani usuwać predefiniowanej listy `areas`."
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
@@ -420,12 +420,12 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("Świetnie! To były przykłady metod `list`, które nie zmieniają listy, na której zostały wywołane.")
 ```
 
 ---
 
-## List Methods (2)
+## Metody listy (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +436,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+Większość metod listy modyfikuje listę, na której są wywoływane. Przykłady:
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()` – dodaje element do listy,
+- `.remove()` – [usuwa](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) pierwsze wystąpienie podanej wartości z listy,
+- `.reverse()` – [odwraca](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) kolejność elementów na liście.
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+Będziesz pracować na liście `areas`, która zawiera powierzchnie różnych pomieszczeń w domu.
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- Użyj `.append()` dwa razy, aby ponownie dodać powierzchnię basenu i garażu: odpowiednio `24.5` i `15.45`. Pamiętaj, aby dodać je w tej kolejności.
+- Wyświetl listę `areas`.
+- Użyj metody `.reverse()`, aby odwrócić kolejność elementów na liście `areas`.
+- Wyświetl listę `areas` jeszcze raz.
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- W pierwszej instrukcji użyj wywołania `areas.append(___)` dwa razy.
+- Aby wyświetlić zmienną `x`, po prostu napisz `print(x)`.
+- Metoda `.reverse()` nie wymaga żadnych argumentów – użyj jej z notacją kropkową i pustymi nawiasami: `.reverse()`.
+- Aby wyświetlić zmienną `x`, po prostu napisz `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +509,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("Świetnie!")
 ```
 
 ---
 
-## Packages
+## Pakiety
 
 ```yaml
 type: VideoExercise
@@ -527,7 +527,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## Importowanie pakietu
 
 ```yaml
 type: NormalExercise
@@ -538,24 +538,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+Wyobraź sobie, że chcesz obliczyć obwód i pole koła. Oto odpowiednie wzory:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+Zamiast wpisywać wartość liczbową `pi`, możesz skorzystać z pakietu `math`, który zawiera tę stałą.
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+Dla przypomnienia: `**` to operator potęgowania. Na przykład `3**4` oznacza `3` do potęgi `4` i daje wynik `81`.
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- Zaimportuj pakiet `math`.
+- Użyj `math.pi`, aby obliczyć obwód koła, i zapisz wynik w zmiennej `C`.
+- Użyj `math.pi`, aby obliczyć pole koła, i zapisz wynik w zmiennej `A`.
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- Możesz po prostu użyć `import math`, a następnie odwołać się do `pi` za pomocą `math.pi`.
+- Użyj wzoru z treści zadania, aby obliczyć `C`. Skorzystaj z operatora `*`.
+- Użyj wzoru z treści zadania, aby obliczyć `A`. Skorzystaj z operatorów `*` i `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +594,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "Twoje obliczenie `%s` nie jest do końca poprawne. Upewnij się, że używasz `math.pi`."
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +602,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Zachowaj `{{sol_call}}` w kodzie, aby wyświetlić obwód."),
+  has_printout(1, not_printed_msg = "__JINJA__:Zachowaj `{{sol_call}}` w kodzie, aby wyświetlić pole.")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("Świetnie! Jeśli wiesz, jak korzystać z funkcji z pakietów, możliwości wielu programistów Pythona są na wyciągnięcie ręki!")
 ```
 
 ---
 
-## Selective import
+## Selektywny import
 
 ```yaml
 type: NormalExercise
@@ -622,22 +622,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+Ogólny import, taki jak `import math`, udostępnia **wszystkie** funkcje pakietu `math`. Jeśli jednak chcesz skorzystać tylko z wybranego elementu pakietu, możesz zawęzić import:
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+Wypróbuj to samo podejście, ale tym razem zaimportuj wyłącznie `pi`.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- Wykonaj selektywny import z pakietu `math`, importując tylko funkcję `pi`.
+- Użyj `pi`, aby obliczyć obwód koła i zapisz wynik w zmiennej `C`.
+- Użyj `pi`, aby obliczyć pole koła i zapisz wynik w zmiennej `A`.
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- Użyj `from math import pi`, aby wykonać selektywny import.
+- Teraz możesz używać `pi` samodzielnie!
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +676,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "Twoje obliczenie `%s` nie jest do końca poprawne. Upewnij się, że używasz tylko `pi`."
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "Pamiętaj, aby zaimportować `pi` z pakietu `math`. Należy użyć notacji `from ___ import ___`.",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +686,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Proszę zachować `{{sol_call}}`, aby wyświetlić obwód."),
+  has_printout(1, not_printed_msg = "__JINJA__:Proszę zachować `{{sol_call}}`, aby wyświetlić pole.")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("Świetnie! Przejdź do następnego ćwiczenia.")
 ```
 
 ---
 
-## Different ways of importing
+## Różne sposoby importowania
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +706,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Istnieje kilka sposobów importowania pakietów i modułów w Pythonie. W zależności od użytej instrukcji importu, trzeba będzie zastosować inny kod.
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Przypuśćmy, że chcesz użyć [funkcji](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, która znajduje się w subpakiecie `linalg` pakietu `scipy`. Chcesz móc wywołać tę funkcję w następujący sposób:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+Która instrukcja `import` pozwoli uruchomić powyższy kod bez błędu?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Wypróbuj różne instrukcje importu w powłoce IPython i sprawdź, która z nich pozwala uruchomić linię `my_inv([[1, 2], [3, 4]])` bez błędów. Naciśnij **Enter**, aby uruchomić wpisany kod.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "Niepoprawnie, spróbuj ponownie. Wypróbuj różne instrukcje importu w powłoce IPython i sprawdź, która z nich powoduje, że linia `my_inv([[1, 2], [3, 4]])` działa bez błędów."
+msg4 = "Poprawnie! Słowo `as` pozwala utworzyć lokalną nazwę dla importowanej funkcji: `inv()` jest teraz dostępna jako `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
