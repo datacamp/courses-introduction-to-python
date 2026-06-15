@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Capitolul 1
+title: Noțiuni de bază în Python
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  O introducere în conceptele de bază ale Python. Învață să folosești Python în
+  mod interactiv și prin scripturi. Creează primele tale variabile și
+  familiarizează-te cu tipurile de date fundamentale din Python.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: 'Salut, Python!'
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Variabile și tipuri
 ---
 
-## Hello Python!
+## Salut, Python!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## Primul tău cod Python
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+E momentul să rulezi primul tău cod Python!
 
-Head to the code and hit the run code button to see the output.
+Mergi la cod și apasă butonul de rulare pentru a vedea rezultatul.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Apasă butonul de rulare pentru a vedea rezultatul lui `print(5 / 8)`.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Rulează codul înainte de a trimite răspunsul, ca să ai timp să explorezi rezultatele.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Ați folosit `{{sol_call}}` pentru a afișa `5 / 8`?")
+success_msg("Excelent! Să trecem la următorul!")
 ```
 
 ---
 
-## Python as a calculator
+## Python ca un calculator
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python este perfect pentru calcule de bază. Poate efectua adunări, scăderi, înmulțiri și împărțiri.
 
-The code in the script gives some examples.
+Codul din script oferă câteva exemple.
 
-Now it's your turn to practice by writing some code yourself.
+Acum e rândul tău să exersezi scriind propriul cod.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- Afișează rezultatul scăderii lui `5` din `5` sub `# Subtraction` folosind `print()`.
+- Afișează rezultatul înmulțirii lui `3` cu `5` sub `# Multiplication`.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Va trebui să folosești `print()` pentru a genera un rezultat.
+- Poți scădea cu `-` și înmulți cu `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Ați folosit `print(4 + 5)` pentru a afișa rezultatul sumei?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Ați folosit `print(5 - 5)` pentru a afișa rezultatul scăderii?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Ați folosit `print(3 * 5)` pentru a afișa rezultatul înmulțirii?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Ați folosit `print(10 / 2)` pentru a afișa rezultatul împărțirii?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Corect! Python vă poate ajuta să efectuați calcule matematice, o caracteristică ce va fi utilă pentru analiză pe măsură ce ne dezvoltăm competențele în lucrul cu datele.")
 ```
 
 ---
 
-## Variables and Types
+## Variabile și tipuri de date
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Atribuirea variabilelor
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+În Python, o variabilă îți permite să faci referire la o valoare printr-un nume. Pentru a crea o variabilă `x` cu valoarea `5`, folosești `=`, ca în exemplul de mai jos:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Acum poți folosi numele variabilei, `x`, în loc de valoarea propriu-zisă, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Reține că `=` în Python înseamnă _atribuire_, nu testarea egalității! Încearcă în exercițiu, înlocuind `____` cu propriul tău cod.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- Creează o variabilă `savings` cu valoarea `100`.
+- Verifică această variabilă scriind `print(savings)` în script.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- Scrie `savings = 100` pentru a crea variabila `savings`.
+- După ce ai creat variabila `savings`, poți scrie `print(savings)`.
+- Codul final nu trebuie să conțină niciun `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Atribuiți `100` variabilei `savings`.")
+Ex().has_printout(0, not_printed_msg = "Afișați `savings`, variabila pe care ați creat-o, folosind `print(savings)`.")
+success_msg("Excelent! Acum să încercăm să facem câteva calcule cu această variabilă!")
 ```
 
 ---
 
-## Calculations with variables
+## Calcule cu variabile
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Ai creat deja o variabilă pentru economii, așa că hai să începem să economisim!
 
-Instead of calculating with the actual values, you can use variables instead.
+În loc să lucrezi cu valorile efective, poți folosi variabile.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Cât ai economisi în patru luni, dacă pui deoparte 10 dolari în fiecare lună?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- Creează o variabilă `monthly_savings` cu valoarea `10` și o variabilă `num_months` cu valoarea `4`.
+- Înmulțește `monthly_savings` cu `num_months` și atribuie rezultatul variabilei `new_savings`.
+- Afișează valoarea variabilei `new_savings`.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- Poți face calcule cu variabile exact ca și cu numere, deci în loc de `10 * 4`, înlocuiește numerele cu variabilele!
+- Folosește `print()` pentru a vedea valoarea din `new_savings`.
+- Ai grijă să scrii corect numele variabilelor!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Ați salvat `10` în `monthly_savings` folosind `monthly_savings = 10`?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Ați salvat `4` în `num_months` folosind `num_months = 4`?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Ați folosit variabilele și simbolurile corecte pentru înmulțire? Era așteptat `monthly_savings * num_months`, dar s-a obținut altceva.")
 # Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Nu uitați să afișați `new_savings` la sfârșitul scriptului dumneavoastră.")
 
-success_msg("You have $40 in new savings!")
+success_msg("Aveți 40 de dolari în economii noi!")
 ```
 
 ---
 
-## Other variable types
+## Alte tipuri de variabile
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+În exercițiul anterior, ai lucrat cu tipul de date întreg din Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int`, sau integer: un număr fără parte fracționară. `savings`, cu valoarea `100`, este un exemplu de integer.
 
-Next to numerical data types, there are three other very common data types:
+Pe lângă tipurile de date numerice, mai există trei tipuri de date foarte frecvent întâlnite:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float`, sau număr cu virgulă mobilă: un număr care are atât o parte întreagă, cât și una fracționară, separate printr-un punct. `1.1` este un exemplu de float.
+- `str`, sau string: un tip folosit pentru a reprezenta text. Poți folosi ghilimele simple sau duble pentru a construi un string.
+- `bool`, sau boolean: un tip folosit pentru a reprezenta valori logice. Poate fi doar `True` sau `False` (majusculele contează!).
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Creează un nou float, `half`, cu valoarea `0.5`.
+- Creează un nou string, `intro`, cu valoarea `"Hello! How are you?"`.
+- Creează un nou boolean, `is_good`, cu valoarea `True`.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Pentru a crea o variabilă în Python, folosește `=`. Asigură-te că șirul de caractere este între ghilimele simple sau duble.
+- În Python există doar două valori booleene: `True` și `False`. `TRUE`, `true`, `FALSE`, `false` și alte variante nu sunt acceptate.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Ați salvat numărul zecimal `0.5` în variabila `half`?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, ceva este incorect în variabila dvs. `intro`. Verificați din nou ortografia și asigurați-vă că ați folosit ghilimele.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Ați scris cu majusculă valoarea booleană? Rețineți că nu este nevoie să folosiți ghilimele aici.")
 
-success_msg("Nice!")
+success_msg("Bravo!")
 ```
 
 ---
 
-## Operations with other types
+## Operații cu alte tipuri
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Variabilele pot fi de tipuri diferite în Python. Poți vedea tipul unei variabile folosind `type()`. De exemplu, pentru a vedea tipul variabilei `a`, execută: `type(a)`.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Tipuri diferite se comportă diferit în Python. Când aduni două șiruri de caractere, de exemplu, vei obține un rezultat diferit față de adunarea a două numere întregi sau a două valori booleene.
 
-Time for you to test this out.
+Acum e rândul tău să testezi asta.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- Adună `savings` și `new_savings` și atribuie rezultatul variabilei `total_savings`.
+- Folosește `type()` pentru a afișa tipul rezultat al variabilei `total_savings`.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- Atribuie `savings + new_savings` unei noi variabile, `total_savings`.
+- Pentru a afișa tipul unei variabile `x`, folosește `print(type(x))`.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Nu trebuie să modificați sau să eliminați variabilele predefinite."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Adăugați `savings` și `new_savings` pentru a crea variabila `total_savings`."),
+    has_printout(1, not_printed_msg = "__JINJA__:Utilizați `{{sol_call}}` pentru a afișa tipul variabilei `total_savings`.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- Calculează suma dintre `intro` și `intro` și atribuie rezultatul variabilei `doubleintro`.
+- Afișează `doubleintro`. Te-ai așteptat la acest rezultat?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- Atribuie `intro + intro` unei noi variabile, `doubleintro`.
+- Pentru a afișa o variabilă `x`, scrie `print(x)` în script.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Nu trebuie să modificați sau să eliminați variabilele predefinite."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Ați stocat rezultatul `intro + intro` în `doubleintro`?"),
+    has_printout(0, not_printed_msg = "Nu uitați să afișați `doubleintro`.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Bine. Observați cum `intro + intro` determină lipirea `\"Hello! How are you?\"` și `\"Hello! How are you?\"`.")
 ```

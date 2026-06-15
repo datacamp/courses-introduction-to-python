@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ro-RO/b5145237-faed-4d3a-aaa0-12c66af67ad8-40deac584fe5f3581f7eb2aa1b2c3b1e.mp3
 ---
 
-## 2D NumPy Arrays
+## Array-uri NumPy 2D
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Felicitări! Hai să recreăm acum array-urile numpy din videoclipul anterior.
 
 ---
 
-## Type of NumPy Arrays
+## Tipul array-urilor NumPy
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Dacă verifici tipul acestor array-uri, Python îți spune că sunt numpy.ndarray. Partea cu numpy punct îți arată că este un tip definit în pachetul numpy. ndarray vine de la „array n-dimensional". Array-urile np_height și np_weight sunt unidimensionale, dar poți crea fără probleme array-uri cu 2, 3 sau chiar 7 dimensiuni. În videoclipul acesta ne oprim la 2 dimensiuni.
 
 ---
 
-## 2D NumPy Arrays
+## Array-uri NumPy 2D
 
 ```yaml
 type: FullSlide
@@ -104,13 +99,13 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Poți crea un array numpy 2D dintr-o listă de liste obișnuită în Python. Hai să creăm un singur array numpy pentru toate datele de înălțime și greutate ale familiei tale, ca în exemplul de față.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Dacă afișezi np_2d, vei vedea că are o structură dreptunghiulară. Fiecare sublista din lista inițială corespunde unui rând în array-ul numpy 2D. Din np_2d.shape poți vedea că avem 2 rânduri și 5 coloane. shape este un atribut al array-ului np_2d și îți oferă informații despre structura datelor.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Reținem că sintaxa pentru accesarea unui atribut seamănă cu apelarea unei metode, dar nu sunt același lucru. Metodele au paranteze rotunde după ele, pe când atributele nu au.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Și pentru array-urile 2D se aplică regula numpy: un array poate conține un singur tip de date. Dacă schimbi un număr zecimal într-un șir de caractere, toate elementele array-ului vor fi convertite la șiruri de caractere, pentru a păstra un array omogen.
 
 ---
 
@@ -139,11 +134,11 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Poți vedea array-ul numpy 2D ca pe o versiune îmbunătățită a listei de liste. Poți face calcule pe array-uri, cum am arătat anterior, și poți folosi metode mai avansate de selecție.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Să spunem că vrei primul rând și apoi al treilea element din acel rând. Pentru a selecta rândul, folosești indexul 0 între paranteze pătrate. Nu uita de indexarea care începe de la zero.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+Pentru a selecta al treilea element, poți extinde același apel cu o altă pereche de paranteze pătrate, de data aceasta cu indexul 2.
 
 ---
 
@@ -181,9 +176,9 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+Practic, selectezi mai întâi rândul, apoi faci o altă selecție din acel rând.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Există și o metodă alternativă de selecție, folosind o singură pereche de paranteze pătrate și o virgulă. Acest apel returnează exact aceeași valoare ca înainte. Valoarea dinaintea virgulei specifică rândul, iar valoarea de după virgulă specifică coloana. Se returnează intersecția dintre rândurile și coloanele specificate. Odată ce te obișnuiești cu ea, această sintaxă este mai intuitivă și oferă mai multe posibilități.
 
 ---
 
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Să spunem că vrei să selectezi înălțimea și greutatea celui de-al doilea și celui de-al treilea membru al familiei. Vrei ambele rânduri, așa că pui două puncte înaintea virgulei. Vrei doar coloanele 2 și 3, deci pui indicii de la 1 la 3 după virgulă. Ține minte că al treilea index nu este inclus. Intersecția ne dă un array 2D cu 2 rânduri și 2 coloane.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Similar, poți selecta greutatea tuturor membrilor familiei astfel: vrei doar al doilea rând, deci pui 1 înaintea virgulei. Vrei toate coloanele, deci folosești două puncte după virgulă. Intersecția ne dă întregul al doilea rând.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+În plus, array-urile numpy 2D îți permit să faci calcule element cu element, la fel cum ai făcut cu array-urile numpy 1D. Asta este ceva
 
 ---
 
-## Let's practice!
+## Să exersăm!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+cu care poți experimenta în exerciții, alături de crearea și selecția în array-uri numpy 2D. Mult succes!
