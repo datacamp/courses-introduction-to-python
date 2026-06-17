@@ -1,19 +1,19 @@
 ---
-title_meta: Chapter 4
+title_meta: Chapitre 4
 title: NumPy
 description: >-
-  NumPy is a fundamental Python package to efficiently practice data science.
-  Learn to work with powerful tools in the NumPy array, and get started with
-  data exploration.
+  NumPy est un progiciel Python fondamental pour pratiquer efficacement la
+  science des données. Apprenez à travailler avec des outils puissants dans le
+  tableau NumPy et amorcez l'exploration de données.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
 lessons:
   - nb_of_exercises: 5
-    title: Numpy
+    title: NumPy
   - nb_of_exercises: 5
-    title: 2D Numpy Arrays
+    title: Tableaux NumPy 2D
   - nb_of_exercises: 3
-    title: 'Numpy: Basic Statistics'
+    title: "NumPy\_: statistiques de base"
 ---
 
 ## NumPy
@@ -29,7 +29,7 @@ a0487c26210f6b71ea98f917734cea3a
 
 ---
 
-## Your First NumPy Array
+## Votre premier tableau NumPy
 
 ```yaml
 type: NormalExercise
@@ -40,19 +40,19 @@ skills:
   - 2
 ```
 
-You're now going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of `numpy`, a powerful package to do data science.
+Vous allez maintenant plonger dans le monde du baseball. Au passage, vous vous familiariserez avec les bases de `numpy`, un puissant module pour faire de la science des données.
 
-A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code to create a `numpy` array from it?
+Une liste `baseball` a déjà été définie dans le script Python; elle représente la taille de certains joueurs de baseball en centimètres. Pouvez-vous ajouter du code pour créer un tableau `numpy` à partir de celle‑ci?
 
 `@instructions`
-- Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use `np.array()` to create a `numpy` array from `baseball`. Name this array `np_baseball`.
-- Print out the type of `np_baseball` to check that you got it right.
+- Importez le module `numpy` sous le nom `np`, afin de pouvoir référer à `numpy` avec `np`.
+- Utilisez `np.array()` pour créer un tableau `numpy` à partir de `baseball`. Nommez ce tableau `np_baseball`.
+- Affichez le type de `np_baseball` pour vérifier que tout est correct.
 
 `@hint`
-- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
-- `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
-- To print out the type of a variable `x`, simply type `print(type(x))`.
+- `import numpy as np` fera l'affaire. Vous devrez ensuite utiliser `np.fun_name()` chaque fois que vous voulez appeler une fonction de `numpy`.
+- `np.array()` doit recevoir `baseball` en entrée. Assignez le résultat de cet appel de fonction à `np_baseball`.
+- Pour afficher le type d'une variable `x`, tapez simplement `print(type(x))`.
 
 `@pre_exercise_code`
 ```{python}
@@ -89,7 +89,7 @@ print(type(np_baseball))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined variables."
+predef_msg = "Vous n'avez pas à modifier ou supprimer les variables prédéfinies."
 Ex().has_import("numpy")
 Ex().check_correct(
   check_object("np_baseball"),
@@ -100,12 +100,12 @@ Ex().check_correct(
 )
 
 Ex().has_printout(0)
-success_msg("Great job!")
+success_msg("Bon travail!")
 ```
 
 ---
 
-## Baseball players' height
+## Taille des joueurs de baseball
 
 ```yaml
 type: NormalExercise
@@ -116,21 +116,21 @@ skills:
   - 2
 ```
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height_in`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
+Vous êtes un grand amateur de baseball. Vous décidez d'appeler la MLB (Major League Baseball) pour obtenir plus de statistiques sur la taille des joueurs principaux. On vous transmet des données sur plus d'un millier de joueurs, stockées dans une liste Python ordinaire : `height_in`. Les tailles sont en pouces. Pouvez-vous créer un tableau `numpy` à partir de ces données et convertir les unités en mètres?
 
-`height_in` is already available and the `numpy` package is loaded, so you can start straight away (Source: stat.ucla.edu).
+`height_in` est déjà disponible et le paquet `numpy` est chargé, donc vous pouvez commencer tout de suite (Source : stat.ucla.edu).
 
 `@instructions`
-- Create a `numpy` array from `height_in`. Name this new array `np_height_in`.
-- Print `np_height_in`.
-- Multiply `np_height_in` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
-- Print out `np_height_m` and check if the output makes sense.
+- Créez un tableau `numpy` à partir de `height_in`. Nommez ce nouveau tableau `np_height_in`.
+- Affichez `np_height_in`.
+- Multipliez `np_height_in` par `0.0254` pour convertir toutes les mesures de taille de pouces en mètres. Stockez les nouvelles valeurs dans un nouveau tableau, `np_height_m`.
+- Affichez `np_height_m` et vérifiez si le résultat est logique.
 
 `@hint`
-- Use `np.array()` and pass it `height`. Store the result in `np_height_in`.
-- To print out a variable `x`, type `print(x)` in the Python script.
-- Perform calculations as if `np_height_in` is a single number: `np_height_in * conversion_factor` is part of the answer.
-- To print out a variable `x`, type `print(x)` in the Python script.
+- Utilisez `np.array()` et passez-lui `height`. Stockez le résultat dans `np_height_in`.
+- Pour afficher une variable `x`, tapez `print(x)` dans le script Python.
+- Effectuez les calculs comme si `np_height_in` était un seul nombre : `np_height_in * conversion_factor` fait partie de la réponse.
+- Pour afficher une variable `x`, tapez `print(x)` dans le script Python.
 
 `@pre_exercise_code`
 ```{python}
@@ -190,15 +190,15 @@ Ex().check_correct(
 
 Ex().check_correct(
   has_printout(1),
-  check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height_in * 0.0254` to calculate `np_height_m`.")
+  check_object("np_height_m").has_equal_value(incorrect_msg = "Utilisez `np_height_in * 0.0254` pour calculer `np_height_m`.")
 )
 
-success_msg("Nice! In the blink of an eye, `numpy` performs multiplications on more than 1000 height measurements.")
+success_msg("Bien! En un clin d'œil, `numpy` effectue des multiplications sur plus de 1000 mesures de hauteur.")
 ```
 
 ---
 
-## NumPy Side Effects
+## Effets secondaires de NumPy
 
 ```yaml
 type: MultipleChoiceExercise
@@ -209,19 +209,19 @@ skills:
   - 2
 ```
 
-`numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things are different.
+`numpy` est excellent pour effectuer de l'arithmétique vectorielle. Toutefois, si vous comparez ses fonctionnalités à celles des listes Python ordinaires, certains comportements diffèrent.
 
-First, `numpy` arrays cannot contain elements with different types. If you mix types, like booleans and integers, `numpy` automatically converts them to a common type. Booleans like `True` and `False` are treated as `1` and `0` when combined with numbers, so the array ends up as integers.
+D'abord, les tableaux `numpy` ne peuvent pas contenir des éléments de types différents. Si vous mélangez des types, comme des booléens et des entiers, `numpy` les convertit automatiquement vers un type commun. Les booléens comme `True` et `False` sont traités comme `1` et `0` lorsqu'ils sont combinés à des nombres, donc le tableau devient une suite d'entiers.
 
-Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and `numpy` arrays.
+Ensuite, les opérateurs arithmétiques habituels, comme `+`, `-`, `*` et `/`, n'ont pas la même signification pour les listes Python et pour les tableaux `numpy`.
 
-Select the code that results in the following output:
+Sélectionnez le code qui produit la sortie suivante :
 
 ```
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-The `numpy` package is already imported as `np`. You can run each option in the IPython Shell to see the output. 
+Le module `numpy` est déjà importé sous le nom `np`. Vous pouvez exécuter chaque option dans l'IPython Shell pour voir le résultat.
 
 `@possible_answers`
 - `np.array([True, 1, 2, 3, 4, False])`
@@ -230,7 +230,7 @@ The `numpy` package is already imported as `np`. You can run each option in the 
 - `np.array([0, 1, 2, 3, 4, 5])`
 
 `@hint`
-- Copy the different code chunks and paste them in the IPython Shell. Hit **enter** to run the code and see which output matches the one generated by `np.array([True, 1, 2]) + np.array([3, 4, False])`.
+- Copiez les différents extraits de code et collez-les dans l'IPython Shell. Appuyez sur **enter** pour exécuter le code et voir quelle sortie correspond à celle produite par `np.array([True, 1, 2]) + np.array([3, 4, False])`.
 
 `@pre_exercise_code`
 ```{python}
@@ -239,14 +239,14 @@ import numpy as np
 
 `@sct`
 ```{python}
-msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
+msg1 = msg3 = msg4 = "Incorrect. Essayez les différents morceaux de code et voyez lequel correspond au morceau de code cible."
+msg2 = "Bon travail! `True` est converti en 1, `False` est converti en 0."
 Ex().has_chosen(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Subsetting NumPy Arrays
+## Sous-ensembles de tableaux NumPy
 
 ```yaml
 type: NormalExercise
@@ -257,17 +257,17 @@ skills:
   - 2
 ```
 
-Subsetting (using the square bracket notation on lists or arrays) works exactly the same with both lists and arrays.
+Le sous-ensemblage (l'utilisation des crochets sur des listes ou des tableaux) fonctionne exactement de la même façon avec les listes et les tableaux.
 
-This exercise already has two lists, `height_in` and `weight_lb`, loaded in the background for you. These contain the height and weight of the MLB players as regular lists. It also has two `numpy` array lists, `np_weight_lb` and `np_height_in` prepared for you.
+Dans cet exercice, deux listes, `height_in` et `weight_lb`, sont déjà chargées en arrière-plan pour vous. Elles contiennent la taille et le poids des joueurs de la MLB sous forme de listes ordinaires. Deux tableaux `numpy`, `np_weight_lb` et `np_height_in`, sont aussi prêts pour vous.
 
 `@instructions`
-- Subset `np_weight_lb` by printing out the element at index 50.
-- Print out a sub-array of `np_height_in` that contains the elements at index 100 up to **and including** index 110.
+- Créez un sous-ensemble de `np_weight_lb` en affichant l'élément à l'indice 50.
+- Affichez un sous-tableau de `np_height_in` qui contient les éléments de l'indice 100 jusqu'à **et y compris** l'indice 110.
 
 `@hint`
-- Make sure to wrap a `print()` call around your subsetting operations.
-- Use `[100:111]` to get the elements from index 100 up to and including index 110.
+- Assurez-vous d'entourer vos opérations de sous-ensemble avec un appel à `print()`.
+- Utilisez `[100:111]` pour obtenir les éléments de l'indice 100 jusqu'à l'indice 110 inclusivement.
 
 `@pre_exercise_code`
 ```{python}
@@ -308,7 +308,7 @@ print(np_height_in[100:111])
 `@sct`
 ```{python}
 Ex().has_import("numpy", same_as=False)
-msg = "You don't have to change or remove the predefined variables."
+msg = "Vous n'avez pas besoin de changer ou de supprimer les variables prédéfinies."
 Ex().multi(
     check_object("np_height_in", missing_msg=msg).has_equal_value(incorrect_msg = msg),
     check_object("np_weight_lb", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -317,12 +317,12 @@ Ex().multi(
 Ex().has_printout(0)
 Ex().has_printout(1)
 
-success_msg("Nice! Time to learn something new: 2D NumPy arrays!")
+success_msg("Bien joué ! Il est temps d'apprendre quelque chose de nouveau : les tableaux NumPy 2D !")
 ```
 
 ---
 
-## 2D NumPy Arrays
+## Tableaux NumPy 2D
 
 ```yaml
 type: VideoExercise
@@ -335,7 +335,7 @@ ae3238dcc7feb9adecfee0c395fc8dc8
 
 ---
 
-## Your First 2D NumPy Array
+## Votre premier tableau NumPy 2D
 
 ```yaml
 type: NormalExercise
@@ -346,19 +346,19 @@ skills:
   - 2
 ```
 
-Before working on the actual MLB data, let's try to create a 2D `numpy` array from a small list of lists.
+Avant de travailler avec les véritables données de la MLB, créons un tableau `numpy` 2D à partir d'une petite liste de listes.
 
-In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
+Dans cet exercice, `baseball` est une liste de listes. La liste principale contient 4 éléments. Chacun de ces éléments est une liste contenant, dans cet ordre, la taille et le poids de 4 joueurs de baseball. `baseball` est déjà défini pour vous dans le script.
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
+- Utilisez `np.array()` pour créer un tableau `numpy` 2D à partir de `baseball`. Nommez-le `np_baseball`.
+- Affichez le type de `np_baseball`.
+- Affichez l'attribut `shape` de `np_baseball`. Utilisez `np_baseball.shape`.
 
 `@hint`
-- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- Use `print()` in combination with `type()` for the second instruction.
-- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+- `baseball` est déjà défini pour vous dans le script. Appelez `np.array()` dessus et stockez le tableau `numpy` 2D obtenu dans `np_baseball`.
+- Utilisez `print()` avec `type()` pour la deuxième instruction.
+- `np_baseball.shape` vous donnera les dimensions de `np_baseball`. Assurez-vous d'entourer cela d'un appel à `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -405,7 +405,7 @@ print(np_baseball.shape)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Vous n'avez pas besoin de changer ou de supprimer les variables prédéfinies."
 Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 Ex().has_import("numpy", same_as = False)
 
@@ -420,12 +420,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Great! You're ready to convert the actual MLB data to a 2D `numpy` array now!")
+success_msg("Super ! Vous êtes prêt à convertir les données réelles de la MLB en un tableau 2D `numpy` maintenant !")
 ```
 
 ---
 
-## Baseball data in 2D form
+## Données de baseball en 2D
 
 ```yaml
 type: NormalExercise
@@ -436,19 +436,19 @@ skills:
   - 2
 ```
 
-You realize that it makes more sense to restructure all this information in a 2D `numpy` array.
+Vous réalisez qu'il est plus logique de restructurer toute cette information dans un tableau `numpy` 2D.
 
-You have a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this list is `baseball` and it has been loaded for you already (although you can't see it).
+Vous avez une liste de listes en Python. Dans cette liste de listes, chaque sous-liste représente la taille et le poids d'un joueur de baseball. Le nom de cette liste est `baseball` et elle a déjà été chargée pour vous (même si vous ne la voyez pas).
 
-Store the data as a 2D array to unlock `numpy`'s extra functionality.
+Enregistrez les données sous forme de tableau 2D pour profiter des fonctionnalités supplémentaires de `numpy`.
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`.
+- Utilisez `np.array()` pour créer un tableau `numpy` 2D à partir de `baseball`. Nommez-le `np_baseball`.
+- Affichez l'attribut `shape` de `np_baseball`.
 
 `@hint`
-- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()`call around it.
+- `baseball` est déjà disponible dans l'environnement Python. Appelez `np.array()` dessus et stockez le tableau `numpy` 2D obtenu dans `np_baseball`.
+- `np_baseball.shape` vous donnera les dimensions de `np_baseball`. Assurez-vous d'entourer cet appel d'un `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -491,12 +491,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Slick! Time to show off some killer features of multi-dimensional `numpy` arrays!")
+success_msg("Impressionnant ! Il est temps de montrer quelques fonctionnalités impressionnantes des tableaux multi-dimensionnels de `numpy` !")
 ```
 
 ---
 
-## Subsetting 2D NumPy Arrays
+## Sous-ensembles dans des tableaux NumPy 2D
 
 ```yaml
 type: NormalExercise
@@ -507,7 +507,7 @@ skills:
   - 2
 ```
 
-If your 2D `numpy` array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
+Si votre tableau `numpy` 2D a une structure régulière, c'est-à-dire que chaque rangée et chaque colonne contient un nombre fixe de valeurs, créer des sous-ensembles complexes devient très simple. Regardez le code ci-dessous où les éléments `"a"` et `"c"` sont extraits d'une liste de listes.
 
 ```
 # numpy
@@ -516,17 +516,17 @@ np_x = np.array(x)
 np_x[:, 0]
 ```
 
-The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
+Les index avant la virgule renvoient aux rangées, tandis que ceux après la virgule renvoient aux colonnes. Le `:` sert au découpage (slicing); dans cet exemple, il indique à Python d'inclure toutes les rangées.
 
 `@instructions`
-- Print out the 50th row of `np_baseball`.
-- Make a new variable, `np_weight_lb`, containing the entire second column of `np_baseball`.
-- Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
+- Affichez la 50e rangée de `np_baseball`.
+- Créez une nouvelle variable, `np_weight_lb`, qui contient toute la deuxième colonne de `np_baseball`.
+- Sélectionnez la taille (première colonne) du 124e joueur de baseball dans `np_baseball` et affichez-la.
 
 `@hint`
-- You need row index 49 in the first instruction! More specifically, you'll want to use `[49, :]`.
-- To select the entire second column, you'll need `[:, 1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a `print()` statement.
+- Vous avez besoin de la rangée d'index 49 dans la première consigne ! Plus précisément, vous voudrez utiliser `[49, :]`.
+- Pour sélectionner toute la deuxième colonne, utilisez `[:, 1]`.
+- Pour la dernière consigne, utilisez `[123, 0]`; n'oubliez pas d'englober le tout dans un appel à `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -569,7 +569,7 @@ print(np_baseball[123, 0])
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Vous n'avez pas besoin de changer ou de supprimer les variables prédéfinies."
 Ex().multi(
     has_import("numpy", same_as = False),
     check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -577,16 +577,16 @@ Ex().multi(
 
 Ex().has_printout(0)
 
-Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight_lb`. This will select the entire first column.")
+Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "Vous pouvez utiliser `np_baseball[:,1]` pour définir `np_weight_lb`. Cela sélectionnera la première colonne entière.")
 
 Ex().has_printout(1)
 
-success_msg("This is going well!")
+success_msg("Tout se passe bien !")
 ```
 
 ---
 
-## 2D Arithmetic
+## Arithmétique 2D
 
 ```yaml
 type: NormalExercise
@@ -597,19 +597,19 @@ skills:
   - 2
 ```
 
-2D `numpy` arrays can perform calculations element by element, like `numpy` arrays.
+Les tableaux `numpy` 2D peuvent effectuer des calculs élément par élément, tout comme les tableaux `numpy`.
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
+`np_baseball` est déjà défini pour vous; c'est encore un tableau `numpy` 2D avec 3 colonnes représentant la taille (en pouces), le poids (en livres) et l'âge (en années). `baseball` est disponible comme liste de listes ordinaire et `updated` est disponible comme tableau `numpy` 2D.
 
 `@instructions`
-- You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
-- You want to convert the units of height and weight to metric (meters and kilograms, respectively). As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
-- Multiply `np_baseball` with `conversion` and print out the result.
+- Vous avez réussi à obtenir les changements de taille, de poids et d'âge de tous les joueurs de baseball. Ils sont disponibles dans un tableau `numpy` 2D, `updated`. Additionnez `np_baseball` et `updated`, puis affichez le résultat.
+- Vous souhaitez convertir les unités de taille et de poids au système métrique (mètres et kilogrammes, respectivement). Comme première étape, créez un tableau `numpy` avec trois valeurs : `0.0254`, `0.453592` et `1`. Nommez ce tableau `conversion`.
+- Multipliez `np_baseball` par `conversion` et affichez le résultat.
 
 `@hint`
-- `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with `np.array()`; the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
+- `np_baseball + updated` fera une addition élément par élément des deux tableaux `numpy`.
+- Créez un tableau `numpy` avec `np.array()`; l'entrée est une liste Python ordinaire de trois éléments.
+- `np_baseball * conversion` fonctionnera tel quel. Essayez-le! N'oubliez pas de l'entourer d'un appel à `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -657,7 +657,7 @@ print(np_baseball * conversion)
 ```{python}
 Ex().has_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
+msg = "Vous n'avez pas besoin de changer ou de supprimer les variables prédéfinies."
 Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 
 Ex().has_printout(0)
@@ -670,12 +670,12 @@ Ex().check_correct(
     )    
 )
 
-success_msg("Great job! Notice how with very little code, you can change all values in your `numpy` data structure in a very specific way. This will be very useful in your future as a data scientist!")
+success_msg("Bon travail! Remarquez comment avec très peu de code, vous pouvez changer toutes les valeurs dans votre structure de données `numpy` de manière très spécifique. Cela vous sera très utile dans votre avenir en tant que data scientist!")
 ```
 
 ---
 
-## NumPy: Basic Statistics
+## NumPy : statistiques de base
 
 ```yaml
 type: VideoExercise
@@ -688,7 +688,7 @@ xp: 50
 
 ---
 
-## Average versus median
+## Moyenne ou médiane
 
 ```yaml
 type: NormalExercise
@@ -699,19 +699,19 @@ skills:
   - 2
 ```
 
-You now know how to use `numpy` functions to get a better feeling for your data. 
+Vous savez maintenant utiliser les fonctions de `numpy` pour mieux comprendre vos données.
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_. `np_baseball` is available.
+Les données de baseball sont offertes sous forme d'un tableau `numpy` 2D avec 3 colonnes (taille, poids, âge) et 1015 lignes. Le nom de ce tableau `numpy` est `np_baseball`. Après avoir restructuré les données, vous remarquez toutefois que certaines valeurs de taille sont anormalement élevées. Suivez les instructions pour découvrir quelle statistique sommaire convient le mieux lorsque vous traitez des valeurs aberrantes (outliers). `np_baseball` est disponible.
 
 `@instructions`
-- Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
-- Print out the mean of `np_height_in`.
-- Print out the median of `np_height_in`.
+- Créez le tableau `numpy` `np_height_in` qui correspond à la première colonne de `np_baseball`.
+- Affichez la moyenne de `np_height_in`.
+- Affichez la médiane de `np_height_in`.
 
 `@hint`
-- Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a NumPy array. Don't forget to throw in a `print()` call.
-- For the last instruction, use `np.median()`.
+- Utilisez le sous-ensemble 2D de `numpy` : `[:,0]` fait partie de la solution.
+- Si `numpy` est importé sous le nom `np`, vous pouvez utiliser `np.mean()` pour obtenir la moyenne d'un tableau NumPy. N'oubliez pas d'ajouter un appel à `print()`.
+- Pour la dernière instruction, utilisez `np.median()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -753,7 +753,7 @@ print(np.median(np_height_in))
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
+Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "Vous pouvez utiliser `np_baseball[:,0]` pour sélectionner la première colonne de `np_baseball`"),
 
 Ex().check_correct(
     has_printout(0),
@@ -765,12 +765,12 @@ Ex().check_correct(
     check_function('numpy.median').has_equal_value()
 )
 
-success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get an idea about the overall distribution of the entire dataset.")
+success_msg("Une hauteur moyenne de 1586 pouces, cela ne semble pas correct, n'est-ce pas ? Cependant, la médiane ne semble pas affectée par les valeurs aberrantes : 74 pouces ont parfaitement du sens. Il est toujours judicieux de vérifier à la fois la médiane et la moyenne, pour avoir une idée de la distribution globale de l'ensemble des données.")
 ```
 
 ---
 
-## Explore the baseball data
+## Explorer les données de baseball
 
 ```yaml
 type: NormalExercise
@@ -781,19 +781,19 @@ skills:
   - 2
 ```
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D NumPy array `np_baseball`, with three columns.
+Comme la moyenne et la médiane sont très éloignées, vous décidez de porter plainte à la MLB. Ils trouvent l'erreur et vous envoient les données corrigées. Elles sont de nouveau offertes comme un tableau NumPy 2D `np_baseball`, avec trois colonnes.
 
-The Python script in the editor already includes code to print out informative messages with the different summary statistics and `numpy` is already loaded as `np`. Can you finish the job? `np_baseball` is available.
+Le script Python dans l'éditeur inclut déjà du code pour afficher des messages informatifs avec différentes statistiques sommaires, et `numpy` est déjà importé sous le nom `np`. Pouvez-vous terminer le travail? `np_baseball` est disponible.
 
 `@instructions`
-- The code to print out the mean height is already included. Complete the code for the median height.
-- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`. 
-- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
+- Le code pour afficher la taille moyenne est déjà inclus. Complétez le code pour la taille médiane.
+- Utilisez `np.std()` sur la première colonne de `np_baseball` pour calculer `stddev`.
+- Les grands joueurs ont-ils tendance à être plus lourds? Utilisez `np.corrcoef()` pour stocker la corrélation entre les première et deuxième colonnes de `np_baseball` dans `corr`.
 
 `@hint`
-- Use `np.median()` to calculate the median. Make sure to select to correct column first!
-- Subset the same column when calculating the standard deviation with `np.std()`.
-- Use `np_baseball[:, 0]` and `np_baseball[:, 1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
+- Utilisez `np.median()` pour calculer la médiane. Assurez-vous de sélectionner d'abord la bonne colonne!
+- Sélectionnez la même colonne lorsque vous calculez l'écart type avec `np.std()`.
+- Utilisez `np_baseball[:, 0]` et `np_baseball[:, 1]` pour sélectionner les première et deuxième colonnes; ce sont les paramètres d'entrée de `np.corrcoef()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -840,26 +840,26 @@ print("Correlation: " + str(corr))
 
 `@sct`
 ```{python}
-msg = "You shouldn't change or remove the predefined `avg` variable."
+msg = "Vous ne devriez pas changer ou supprimer la variable prédéfinie `avg`."
 Ex().check_object("avg", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-missing = "Have you used `np.median()` to calculate the median?"
-incorrect = "To calculate `med`, pass the first column of `np_baseball` to `numpy.median()`. The example of `np.mean()` shows how it's done."
+missing = "Avez-vous utilisé `np.median()` pour calculer la médiane ?"
+incorrect = "Pour calculer `med`, passez la première colonne de `np_baseball` à `numpy.median()`. L'exemple de `np.mean()` montre comment cela se fait."
 Ex().check_correct(
   check_object("med").has_equal_value(),
   check_function("numpy.median", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.std()` to calculate the standard deviation?"
-incorrect = "To calculate `stddev`, pass the first column of `np_baseball` to `numpy.std()`. The example of `np.mean()` shows how it's done."
+missing = "Avez-vous utilisé `np.std()` pour calculer l'écart type ?"
+incorrect = "Pour calculer `stddev`, passez la première colonne de `np_baseball` à `numpy.std()`. L'exemple de `np.mean()` montre comment cela se fait."
 Ex().check_correct(
   check_object("stddev").has_equal_value(),
   check_function("numpy.std", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.corrcoef()` to calculate the correlation?"
-incorrect1 = "To calculate `corr`, the first argument to `np.corrcoef()` should be the first column of `np_baseball`, similar to how did it before."
-incorrect2 = "To calculate `corr`, the second argument to `np.corrcoef()` should be the second column of `np_baseball`. Instead of `[:,0]`, use `[:,1]` this time."
+missing = "Avez-vous utilisé `np.corrcoef()` pour calculer la corrélation ?"
+incorrect1 = "Pour calculer `corr`, le premier argument de `np.corrcoef()` devrait être la première colonne de `np_baseball`, comme vous l'avez fait auparavant."
+incorrect2 = "Pour calculer `corr`, le deuxième argument de `np.corrcoef()` devrait être la deuxième colonne de `np_baseball`. Au lieu de `[:,0]`, utilisez `[:,1]` cette fois."
 Ex().check_correct(
   check_object("corr").has_equal_value(),
   check_function("numpy.corrcoef", index=0, missing_msg=missing).multi(
@@ -868,5 +868,5 @@ Ex().check_correct(
   )
 )
 
-success_msg("Great work! You've built a solid foundation - now it's time to use all of your new data science skills to solve more challenges and make an impact.")
+success_msg("Excellent travail ! Vous avez construit une base solide - il est maintenant temps d'utiliser toutes vos nouvelles compétences en science des données pour relever plus de défis et avoir un impact.")
 ```
