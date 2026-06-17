@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Python परिचय
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python एक जनरल-पर्पज़ प्रोग्रामिंग भाषा है जो डेटा साइंस के लिए तेजी से
+  लोकप्रिय हो रही है. दुनिया भर की कंपनियाँ अपने डेटा से इनसाइट्स पाने और
+  प्रतिस्पर्धात्मक बढ़त हासिल करने के लिए Python का इस्तेमाल कर रही हैं. अन्य
+  Python ट्यूटोरियल्स के विपरीत, यह कोर्स खास तौर पर डेटा साइंस के लिए Python पर
+  केंद्रित है. हमारे Introduction to Python कोर्स में, आप डेटा को स्टोर और
+  मैनीप्युलेट करने के प्रभावशाली तरीकों के बारे में सीखेंगे, और अपनी खुद की
+  एनालिसिस शुरू करने के लिए उपयोगी डेटा साइंस टूल्स का उपयोग करेंगे. अभी
+  DataCamp का ऑनलाइन Python करिकुलम शुरू करें.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  वीडियो में लाइव ट्रांसक्रिप्ट्स शामिल हैं, जिन्हें आप वीडियो के नीचे बाईं तरफ
+  "Show transcript" पर क्लिक करके देख सकते हैं.
 
 
-  The course glossary can be found on the right in the resources section.
+  कोर्स ग्लॉसरी दाएँ तरफ संसाधनों (resources) सेक्शन में मिल जाएगी.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  CPE क्रेडिट्स प्राप्त करने के लिए, आपको कोर्स पूरा करना होगा और क्वालिफ़ाइड
+  असेसमेंट में 70% स्कोर हासिल करना होगा. आप दाएँ तरफ दिए गए CPE credits कॉलआउट
+  पर क्लिक करके असेसमेंट तक नेविगेट कर सकते हैं.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

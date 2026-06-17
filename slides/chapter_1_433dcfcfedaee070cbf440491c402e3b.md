@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/hi-IN/92afd539-d2bf-4841-9910-90ae6b2f1bd5-438a94c8c14d937218802e6209a8dd8f.mp3
 ---
 
-## Variables and Types
+## Variables और Types
 
 ```yaml
 type: TitleSlide
@@ -23,7 +18,7 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+बहुत बढ़िया, और वापसी पर स्वागत है। यह साफ दिखता है कि Python एक बेहतरीन कैलकुलेटर है। लेकिन अगर आप थोड़ी जटिल गणनाएँ करना चाहेंगे, तो कोड लिखते समय आपको मानों को "सेव" करना पड़ेगा।
 
 ---
 
@@ -35,9 +30,9 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- विशिष्ट, case-sensitive नाम
 
-- Call up value through variable name{{1}}
+- वैरिएबल नाम से value बुलाएँ{{1}}
 
 - 1.79 m - 68.7 kg{{2}}
 
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+यह आप एक वैरिएबल परिभाषित करके कर सकते हैं, जिसका नाम तय हो और केस-सेंसिटिव हो। जैसे ही आप ऐसा वैरिएबल बनाते हैं, आप बाद में उसका नाम टाइप करके उसका मान फिर से ले सकते हैं।
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+मान लीजिए आपने अपनी लंबाई और वज़न, मीट्रिक इकाइयों में नापे। आपकी लंबाई 1.79 मीटर है, और वज़न 68.7 किलोग्राम है। आप बराबर के निशान से ये मान height और weight नाम के दो वैरिएबल में असाइन कर सकते हैं।
 
-If you now type the name of the variable, height,
+अब अगर आप वैरिएबल का नाम, height, टाइप करते हैं,
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python उस वैरिएबल का नाम ढूँढता है, उसका मान लाता है, और उसे प्रिंट कर देता है।
 
 ---
 
-## Calculate BMI
+## BMI निकालें
 
 ```yaml
 type: TwoColumns
@@ -114,11 +109,11 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+अब आइए बॉडी मास इंडेक्स, यानी BMI, निकालते हैं, जो इस तरह से गिना जाता है, जहाँ वज़न किलोग्राम में और लंबाई मीटर में होती है। आप यह सीधे वास्तविक मानों से कर सकते हैं, पर आप height और weight वैरिएबल भी इस्तेमाल कर सकते हैं, जैसे यहाँ। जब भी आप वैरिएबल का नाम टाइप करते हैं, आप Python से कह रहे होते हैं कि उसे उस वैरिएबल के असली मान से बदल दे। weight का अर्थ 68.7 है, और height का 1.79।
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+आखिर में, इस संस्करण में Python नतीजा एक नए वैरिएबल bmi में स्टोर कर देता है। bmi में अब वही मान है जो आपने पहले निकाला था।
 
-In Python, variables are used all the time. They help to make your code reproducible.
+Python में वैरिएबल हर समय काम आते हैं। ये आपके कोड को दोहराने योग्य बनाते हैं।
 
 ---
 
@@ -142,7 +137,7 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+मान लीजिए height, weight और bmi वैरिएबल बनाने वाला कोड ऐसे किसी स्क्रिप्ट में है। अब अगर आप किसी और वज़न के लिए bmi फिर से निकालना चाहेंगे,
 
 ---
 
@@ -167,9 +162,9 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+तो बस weight वैरिएबल की डिक्लेरेशन बदल दीजिए, और स्क्रिप्ट दोबारा चला दीजिए। bmi उसी अनुसार बदल जाएगा, क्योंकि weight वैरिएबल का मान भी बदल गया है।
 
-So far, we've only worked with numerical values, such as height and weight.
+अभी तक हमने केवल संख्यात्मक मानों, जैसे height और weight, के साथ काम किया है।
 
 ---
 
@@ -199,9 +194,9 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+Python में इन संख्याओं का एक खास type होता है। आप type फंक्शन से किसी मान का type देख सकते हैं। हमारे bmi का type देखने के लिए बस type लिखिए और कोष्ठक में bmi दीजिए। आप देखेंगे कि यह float है, जो Python में वास्तविक संख्या को दर्शाता है, यानी ऐसी संख्या जिसमें पूर्णांक भाग और दशमलव भाग दोनों हो सकते हैं। Python में पूर्णांकों के लिए एक अलग type भी है, int, जैसे इस उदाहरण में।
 
-To do data science, you'll need more than ints and floats, though.
+डेटा साइंस करने के लिए, आपको केवल int और float से ज़्यादा की ज़रूरत पड़ेगी।
 
 ---
 
@@ -235,13 +230,13 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python में और भी कई डेटा टाइप होते हैं। सबसे आम हैं strings और booleans।
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+String, Python में टेक्स्ट को दर्शाने का तरीका है। आप string बनाने के लिए डबल कोट्स और सिंगल कोट्स, दोनों का इस्तेमाल कर सकते हैं, जैसा कि इन उदाहरणों में दिख रहा है। अगर आप यहाँ आख़िरी वैरिएबल का type प्रिंट करते हैं, तो यह str दिखेगा, जो string का छोटा रूप है।
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Boolean ऐसा type है जो या तो True होता है या False। आप इसे रोज़मर्रा की भाषा में 'हाँ' और 'नहीं' जैसा समझ सकते हैं। Booleans आगे बहुत काम आएँगे, उदाहरण के लिए अपने डेटा पर फ़िल्टरिंग करने में।
 
-There's something special about Python data types.
+Python डेटा टाइप्स के बारे में एक खास बात है।
 
 ---
 
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- अलग type = अलग behavior!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+इस कोड की इस लाइन को देखिए, जो दो integers को जोड़ती है, और फिर इस लाइन को, जो दो strings को जोड़ती है।
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+Integers के लिए, मान जोड़े गए। जबकि strings के लिए, दोनों स्ट्रिंग आपस में चिपक गईं। प्लस ऑपरेटर अलग-अलग डेटा टाइप पर अलग तरह से बर्ताव करता है। यह एक सामान्य सिद्धांत है। आपके कोड का व्यवहार इस पर निर्भर करता है कि आप किन types के साथ काम कर रहे हैं।
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+अगले अभ्यासों में, आप अपने पहले वैरिएबल बनाएँगे और Python के कुछ डेटा टाइप्स के साथ प्रयोग करेंगे। लिस्ट्स के बारे में सब कुछ समझाने के लिए मैं आपसे अगली वीडियो में मिलूँगा।
 
 ---
 
-## Let's practice!
+## अभ्यास करते हैं!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+चलिए, अब आप कोडिंग शुरू कीजिए और मैं आपसे अगले चैप्टर में मिलने का इंतज़ार कर रहा हूँ, जहाँ आप और भी शानदार Python चार्ट बनाएँगे।

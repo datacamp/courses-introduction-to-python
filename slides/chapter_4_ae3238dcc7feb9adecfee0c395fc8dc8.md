@@ -2,13 +2,8 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/hi-IN/97b8ecd4-b9e6-4c9b-9056-671abe4995e7-e40b517fc7759428dc2bfae518ea2f50.mp3
 ---
 
 ## 2D NumPy Arrays
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+शाबाश, आप तो कमाल कर रहे हैं! अब पिछले वीडियो वाले numpy arrays को दोबारा बनाएँ.
 
 ---
 
-## Type of NumPy Arrays
+## NumPy Arrays का प्रकार
 
 ```yaml
 type: FullSlide
@@ -59,7 +54,7 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+अगर आप इन arrays का type पूछते हैं, तो Python बताएगा कि ये numpy.ndarray हैं. numpy का डॉट बताता है कि यह एक type है जो numpy पैकेज में परिभाषित है. ndarray का मतलब है n-dimensional array. np_height और np_weight एक-आयामी arrays हैं, लेकिन 2-आयामी, 3-आयामी, यहाँ तक कि 7-आयामी arrays बनाना भी पूरी तरह संभव है! इस वीडियो में फिलहाल 2 पर ही टिके रहते हैं.
 
 ---
 
@@ -104,13 +99,13 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+आप एक साधारण Python list of lists से 2D numpy array बना सकते हैं. आइए अपनी फैमिली के सारे height और weight डेटा के लिए एक numpy array बनाने की कोशिश करें, कुछ इस तरह.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+अगर आप अब np_2d को प्रिंट करते हैं, तो दिखेगा कि यह एक आयताकार डेटा स्ट्रक्चर है. लिस्ट के भीतर हर sublist, दो-आयामी numpy array में एक row के बराबर होती है. np_2d.shape से आप देख सकते हैं कि वाकई 2 rows और 5 columns हैं. shape, np_2d array का एक attribute है, जो आपको डेटा स्ट्रक्चर के बारे में और जानकारी दे सकता है.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+ध्यान रखें, किसी attribute को एक्सेस करने की सिंटैक्स देखने में method कॉल जैसी लगती है, लेकिन वे अलग होती हैं. याद रखिए, methods के बाद गोल ब्रैकेट होते हैं. और, जैसा यहाँ दिख रहा है, attributes के बाद नहीं होते.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+साथ ही 2D arrays के लिए भी वही NumPy नियम लागू होता है. एक array में केवल एक ही type के मान हो सकते हैं. अगर आप किसी एक float को string में बदलते हैं, तो पूरा array strings में बदल जाएगा, ताकि array समान type का बना रहे.
 
 ---
 
@@ -139,11 +134,11 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+2D numpy array को आप lists of lists का बेहतर रूप मान सकते हैं. आप arrays पर वैसी ही गणनाएँ कर सकते हैं जैसी पहले दिखाई गईं, और अधिक उन्नत subsetting भी कर सकते हैं.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+मान लीजिए आपको पहली row चाहिए, और फिर उसी row का तीसरा element. Row चुनने के लिए आपको square brackets में index 0 लगाना होगा. zero indexing मत भूलिए.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+फिर तीसरा element चुनने के लिए, उसी कॉल में एक और bracket जोड़िए. इस बार index 2 के साथ.
 
 ---
 
@@ -181,9 +176,9 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+कुछ इस तरह. मूलतः, आप पहले row चुन रहे हैं, और फिर उसी row में से अगला चयन कर रहे हैं.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Subsetting का एक वैकल्पिक तरीका भी है, single square brackets के साथ comma का उपयोग. यह कॉल पहले वाली की तरह ही वही मान लौटाती है. comma से पहले का मान row बताता है, और comma के बाद का मान column. जिन rows और columns का आप चयन करते हैं, उनका intersection लौटता है. जैसे-जैसे अभ्यास होगा, यह सिंटैक्स अधिक सहज लगेगा और और भी संभावनाएँ खोलेगा.
 
 ---
 
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+मान लीजिए आप दूसरे और तीसरे फैमिली मेंबर की height और weight चुनना चाहते हैं. आपको दोनों rows चाहिए, तो comma से पहले colon लगाइए. आपको केवल दूसरा और तीसरा column चाहिए, तो comma के बाद indices 1 से 3 तक दीजिए. याद रखिए, तीसरा index शामिल नहीं होता. उनका intersection हमें 2 rows और 2 columns वाला एक 2D array देता है.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+इसी तरह, सभी फैमिली मेंबर्स का weight इस तरह चुन सकते हैं. आपको केवल दूसरी row चाहिए, तो comma से पहले 1 दीजिए. आपको सभी columns चाहिए, तो comma के बाद colon लगाइए. Intersection पूरी दूसरी row देता है.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+अंत में, 2D numpy arrays आपको element-wise गणनाएँ करने देते हैं, ठीक वैसे ही जैसे आपने 1D numpy arrays के साथ किया था. यह वही चीज़ है
 
 ---
 
-## Let's practice!
+## अभ्यास करते हैं!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+जिस पर आप exercises में प्रयोग कर सकते हैं, 2D numpy arrays बनाने और subsetting के साथ. मज़ेदार रहेगा!
