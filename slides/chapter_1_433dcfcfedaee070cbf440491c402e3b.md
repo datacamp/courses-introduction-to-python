@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/uk-UA/e8f9f55f-6153-4a48-8551-34747ed1e955-2432ec476fc8085e7c44cd944fec1783.mp3
 ---
 
-## Variables and Types
+## Змінні та типи
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+Відмінна робота і з поверненням. Уже видно, що Python чудово підходить як калькулятор. Але якщо вам потрібні складніші обчислення, під час написання коду варто «зберігати» значення.
 
 ---
 
-## Variable
+## Змінна
 
 ```yaml
 type: FullSlide
@@ -35,9 +30,9 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Специфічна, чутлива до регістру назва
 
-- Call up value through variable name{{1}}
+- Отримуйте значення за назвою змінної{{1}}
 
 - 1.79 m - 68.7 kg{{2}}
 
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Зробити це можна, визначивши змінну з конкретною, чутливою до регістру назвою. Щойно ви створите, або оголосите, таку змінну, зможете згодом отримати її значення, ввівши ім'я змінної.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Припустімо, ви виміряли свій зріст і вагу в метричній системі. Ваш зріст 1,79 метра, вага 68,7 кілограма. Можна присвоїти ці значення двом змінним з іменами height і weight, використавши знак дорівнює.
 
-If you now type the name of the variable, height,
+Тепер, якщо ви введете назву змінної height,
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python знайде змінну, отримає її значення і виведе його.
 
 ---
 
-## Calculate BMI
+## Обчисліть BMI
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Тепер обчислимо індекс маси тіла, або BMI. Формула така, вага у кілограмах, зріст у метрах. Це можна зробити з фактичними числами, але так само добре використати змінні height і weight, як тут. Щоразу, коли ви вводите ім'я змінної, ви просите Python підставити фактичне значення цієї змінної. weight відповідає 68,7, а height 1,79.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+Нарешті, у цій версії Python зберігає результат у новій змінній bmi. Тепер bmi містить те саме значення, яке ви щойно обчислили.
 
-In Python, variables are used all the time. They help to make your code reproducible.
+У Python змінні використовують постійно. Вони допомагають робити код відтворюваним.
 
 ---
 
-## Reproducibility
+## Відтворюваність
 
 ```yaml
 type: FullSlide
@@ -142,11 +137,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+Припустімо, код для створення змінних height, weight і bmi записано в скрипті, як тут. Якщо ви хочете перерахувати bmi для іншої ваги,
 
 ---
 
-## Reproducibility
+## Відтворюваність
 
 ```yaml
 type: FullSlide
@@ -167,13 +162,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+просто змініть оголошення змінної weight і перезапустіть скрипт. Значення bmi зміниться відповідно, адже змінилося значення змінної weight.
 
-So far, we've only worked with numerical values, such as height and weight.
+Поки що ми працювали лише з числовими значеннями, як-от зріст і вага.
 
 ---
 
-## Python Types
+## Типи в Python
 
 ```yaml
 type: FullSlide
@@ -199,13 +194,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+У Python усі ці числа мають певний тип. Перевірити тип значення можна за допомогою функції type. Щоб дізнатися тип нашого значення bmi, просто напишіть type і потім bmi у дужках. Бачимо, що це float, тобто спосіб Python представляти дійсні числа. Такі, що мають цілу і дробову частини. У Python є також тип для цілих чисел int, як у цьому прикладі.
 
-To do data science, you'll need more than ints and floats, though.
+Проте для дата-сайєнсу вам знадобиться більше, ніж лише int і float.
 
 ---
 
-## Python Types (2)
+## Типи в Python (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +230,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+У Python є чимало інших типів даних. Найуживаніші це рядки та булеві значення.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+Рядок це спосіб представити текст у Python. Можна використовувати як подвійні, так і одинарні лапки, як видно з прикладів. Якщо вивести тип останньої змінної тут, побачите str, скорочено від string.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Булевий тип може мати лише True або False. Це ніби «Так» і «Ні» у повсякденній мові. Булеві значення стануть дуже корисними надалі. Наприклад, для фільтрування даних.
 
-There's something special about Python data types.
+Є дещо особливе в типах даних Python.
 
 ---
 
-## Python Types (3)
+## Типи в Python (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Інший тип = інша поведінка!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Погляньте на цей рядок коду, що додає два цілі числа, а потім на цей, що додає два рядки.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+Для цілих чисел значення підсумувалися. А для рядків вони склеїлися разом. Оператор плюс поводиться по-різному для різних типів даних. Це загальний принцип, поведінка коду залежить від типів, з якими ви працюєте.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+У наступних вправах ви створите свої перші змінні та поекспериментуєте з кількома типами даних Python. Побачимось у наступному відео, де ми повністю розберемося зі списками.
 
 ---
 
-## Let's practice!
+## Давайте потренуємось!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Тепер настав час для коду. І я з нетерпінням чекаю на зустріч у наступному розділі, де ви створите ще більш ефектні діаграми в Python.

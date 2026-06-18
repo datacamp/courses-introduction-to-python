@@ -1,19 +1,19 @@
 ---
-title_meta: Chapter 4
+title_meta: Розділ 4
 title: NumPy
 description: >-
-  NumPy is a fundamental Python package to efficiently practice data science.
-  Learn to work with powerful tools in the NumPy array, and get started with
-  data exploration.
+  NumPy — базовий пакет Python для ефективної роботи в науці про дані. Навчіться
+  працювати з потужними інструментами масиву NumPy та розпочніть дослідження
+  даних.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
 lessons:
   - nb_of_exercises: 5
-    title: Numpy
+    title: NumPy
   - nb_of_exercises: 5
-    title: 2D Numpy Arrays
+    title: Двовимірні масиви NumPy
   - nb_of_exercises: 3
-    title: 'Numpy: Basic Statistics'
+    title: 'NumPy: базова статистика'
 ---
 
 ## NumPy
@@ -29,7 +29,7 @@ a0487c26210f6b71ea98f917734cea3a
 
 ---
 
-## Your First NumPy Array
+## Ваш перший масив NumPy
 
 ```yaml
 type: NormalExercise
@@ -40,19 +40,19 @@ skills:
   - 2
 ```
 
-You're now going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of `numpy`, a powerful package to do data science.
+Зараз ви поринете у світ бейсболу. Паралельно ви опanuєте основи `numpy` — потужної бібліотеки для роботи з даними.
 
-A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code to create a `numpy` array from it?
+У Python-скрипті вже визначено список `baseball`, що містить зріст деяких бейсболістів у сантиметрах. Додайте код, щоб створити з нього масив `numpy`.
 
 `@instructions`
-- Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use `np.array()` to create a `numpy` array from `baseball`. Name this array `np_baseball`.
-- Print out the type of `np_baseball` to check that you got it right.
+- Імпортуйте бібліотеку `numpy` як `np`, щоб звертатися до `numpy` через `np`.
+- Використайте `np.array()`, щоб створити масив `numpy` з `baseball`. Назвіть цей масив `np_baseball`.
+- Виведіть тип `np_baseball`, щоб переконатися, що все зроблено правильно.
 
 `@hint`
-- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
-- `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
-- To print out the type of a variable `x`, simply type `print(type(x))`.
+- Скористайтеся `import numpy as np`. Тепер щоразу, коли потрібна функція з `numpy`, використовуйте `np.fun_name()`.
+- `np.array()` має отримати на вхід `baseball`. Присвойте результат виклику функції до `np_baseball`.
+- Щоб вивести тип змінної `x`, просто наберіть `print(type(x))`.
 
 `@pre_exercise_code`
 ```{python}
@@ -89,7 +89,7 @@ print(type(np_baseball))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined variables."
+predef_msg = "Вам не потрібно змінювати або видаляти попередньо визначені змінні."
 Ex().has_import("numpy")
 Ex().check_correct(
   check_object("np_baseball"),
@@ -100,12 +100,12 @@ Ex().check_correct(
 )
 
 Ex().has_printout(0)
-success_msg("Great job!")
+success_msg("Чудова робота!")
 ```
 
 ---
 
-## Baseball players' height
+## Зріст гравців у бейсбол
 
 ```yaml
 type: NormalExercise
@@ -116,21 +116,21 @@ skills:
   - 2
 ```
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height_in`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
+Ви — затятий фанат бейсболу. Ви вирішуєте зателефонувати до MLB (Major League Baseball) і дізнатися додаткову статистику щодо зросту основних гравців. Вам передають дані більш ніж про тисячу гравців, збережені у звичайному списку Python: `height_in`. Зріст указано в дюймах. Чи зможете ви створити з нього масив `numpy` і перевести одиниці виміру в метри?
 
-`height_in` is already available and the `numpy` package is loaded, so you can start straight away (Source: stat.ucla.edu).
+`height_in` уже доступний, а пакет `numpy` завантажено, тож можете одразу починати (джерело: stat.ucla.edu).
 
 `@instructions`
-- Create a `numpy` array from `height_in`. Name this new array `np_height_in`.
-- Print `np_height_in`.
-- Multiply `np_height_in` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
-- Print out `np_height_m` and check if the output makes sense.
+- Створіть масив `numpy` з `height_in`. Назвіть цей новий масив `np_height_in`.
+- Виведіть `np_height_in`.
+- Помножте `np_height_in` на `0.0254`, щоб перевести всі вимірювання зросту з дюймів у метри. Збережіть нові значення в новому масиві `np_height_m`.
+- Виведіть `np_height_m` і перевірте, чи результати мають сенс.
 
 `@hint`
-- Use `np.array()` and pass it `height`. Store the result in `np_height_in`.
-- To print out a variable `x`, type `print(x)` in the Python script.
-- Perform calculations as if `np_height_in` is a single number: `np_height_in * conversion_factor` is part of the answer.
-- To print out a variable `x`, type `print(x)` in the Python script.
+- Використайте `np.array()` і передайте туди `height`. Збережіть результат у `np_height_in`.
+- Щоб вивести змінну `x`, введіть у скрипті Python `print(x)`.
+- Виконуйте обчислення так, ніби `np_height_in` — це одне число: `np_height_in * conversion_factor` є частиною відповіді.
+- Щоб вивести змінну `x`, введіть у скрипті Python `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -190,15 +190,15 @@ Ex().check_correct(
 
 Ex().check_correct(
   has_printout(1),
-  check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height_in * 0.0254` to calculate `np_height_m`.")
+  check_object("np_height_m").has_equal_value(incorrect_msg = "Використовуйте `np_height_in * 0.0254` для обчислення `np_height_m`.")
 )
 
-success_msg("Nice! In the blink of an eye, `numpy` performs multiplications on more than 1000 height measurements.")
+success_msg("Чудово! Миттєво `numpy` виконує множення на більш ніж 1000 вимірювань висоти.")
 ```
 
 ---
 
-## NumPy Side Effects
+## Побічні ефекти NumPy
 
 ```yaml
 type: MultipleChoiceExercise
@@ -209,19 +209,19 @@ skills:
   - 2
 ```
 
-`numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things are different.
+`numpy` чудово підходить для векторної арифметики. Але якщо порівняти його можливості зі звичайними списками Python, деякі речі відрізняються.
 
-First, `numpy` arrays cannot contain elements with different types. If you mix types, like booleans and integers, `numpy` automatically converts them to a common type. Booleans like `True` and `False` are treated as `1` and `0` when combined with numbers, so the array ends up as integers.
+По-перше, масиви `numpy` не можуть містити елементи різних типів. Якщо ви змішуєте типи, як-от булеві значення та цілі числа, `numpy` автоматично перетворює їх до спільного типу. Булеві значення `True` і `False` під час поєднання з числами розглядаються як `1` і `0`, тож у підсумку масив стає цілими числами.
 
-Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and `numpy` arrays.
+По-друге, звичні арифметичні оператори, як-от `+`, `-`, `*` і `/`, мають інше значення для звичайних списків Python і масивів `numpy`.
 
-Select the code that results in the following output:
+Виберіть код, який дає такий результат:
 
 ```
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-The `numpy` package is already imported as `np`. You can run each option in the IPython Shell to see the output. 
+Пакет `numpy` уже імпортовано як `np`. Ви можете запустити кожен варіант в IPython Shell, щоб побачити результат.
 
 `@possible_answers`
 - `np.array([True, 1, 2, 3, 4, False])`
@@ -230,7 +230,7 @@ The `numpy` package is already imported as `np`. You can run each option in the 
 - `np.array([0, 1, 2, 3, 4, 5])`
 
 `@hint`
-- Copy the different code chunks and paste them in the IPython Shell. Hit **enter** to run the code and see which output matches the one generated by `np.array([True, 1, 2]) + np.array([3, 4, False])`.
+- Скопіюйте різні фрагменти коду та вставте їх в IPython Shell. Натисніть **enter**, щоб запустити код і побачити, який результат збігається з тим, що отримано виразом `np.array([True, 1, 2]) + np.array([3, 4, False])`.
 
 `@pre_exercise_code`
 ```{python}
@@ -239,14 +239,14 @@ import numpy as np
 
 `@sct`
 ```{python}
-msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
+msg1 = msg3 = msg4 = "Неправильно. Спробуйте різні фрагменти коду та подивіться, який з них відповідає цільовому фрагменту коду."
+msg2 = "Чудова робота! `True` перетворюється на 1, `False` перетворюється на 0."
 Ex().has_chosen(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Subsetting NumPy Arrays
+## Вибірка з масивів NumPy
 
 ```yaml
 type: NormalExercise
@@ -257,17 +257,17 @@ skills:
   - 2
 ```
 
-Subsetting (using the square bracket notation on lists or arrays) works exactly the same with both lists and arrays.
+Вибірка (використання квадратних дужок для списків або масивів) працює однаково і для списків, і для масивів.
 
-This exercise already has two lists, `height_in` and `weight_lb`, loaded in the background for you. These contain the height and weight of the MLB players as regular lists. It also has two `numpy` array lists, `np_weight_lb` and `np_height_in` prepared for you.
+У цій вправі у тлі вже завантажено два списки `height_in` і `weight_lb`. Вони містять зріст і вагу гравців MLB як звичайні списки. Також для вас підготовлено два масиви `numpy`: `np_weight_lb` і `np_height_in`.
 
 `@instructions`
-- Subset `np_weight_lb` by printing out the element at index 50.
-- Print out a sub-array of `np_height_in` that contains the elements at index 100 up to **and including** index 110.
+- Зробіть вибірку з `np_weight_lb`, надрукувавши елемент з індексом 50.
+- Надрукуйте підмасив `np_height_in`, який містить елементи з індексу 100 до індексу 110 включно.
 
 `@hint`
-- Make sure to wrap a `print()` call around your subsetting operations.
-- Use `[100:111]` to get the elements from index 100 up to and including index 110.
+- Обов'язково обгорніть операції вибірки у виклик `print()`.
+- Використайте `[100:111]`, щоб отримати елементи з індексу 100 до індексу 110 включно.
 
 `@pre_exercise_code`
 ```{python}
@@ -308,7 +308,7 @@ print(np_height_in[100:111])
 `@sct`
 ```{python}
 Ex().has_import("numpy", same_as=False)
-msg = "You don't have to change or remove the predefined variables."
+msg = "Вам не потрібно змінювати або видаляти попередньо визначені змінні."
 Ex().multi(
     check_object("np_height_in", missing_msg=msg).has_equal_value(incorrect_msg = msg),
     check_object("np_weight_lb", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -317,12 +317,12 @@ Ex().multi(
 Ex().has_printout(0)
 Ex().has_printout(1)
 
-success_msg("Nice! Time to learn something new: 2D NumPy arrays!")
+success_msg("Чудово! Час дізнатися щось нове: двовимірні масиви NumPy!")
 ```
 
 ---
 
-## 2D NumPy Arrays
+## Двовимірні масиви NumPy
 
 ```yaml
 type: VideoExercise
@@ -335,7 +335,7 @@ ae3238dcc7feb9adecfee0c395fc8dc8
 
 ---
 
-## Your First 2D NumPy Array
+## Ваш перший 2D-масив NumPy
 
 ```yaml
 type: NormalExercise
@@ -346,19 +346,19 @@ skills:
   - 2
 ```
 
-Before working on the actual MLB data, let's try to create a 2D `numpy` array from a small list of lists.
+Перш ніж працювати з реальними даними MLB, спробуймо створити 2D масив `numpy` з невеликого списку списків.
 
-In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
+У цій вправі `baseball` — це список списків. Головний список містить 4 елементи. Кожен із цих елементів — список, що містить зріст і вагу 4 гравців у бейсбол, саме в такому порядку. Змінна `baseball` уже додана для вас у скрипт.
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
+- Використайте `np.array()`, щоб створити 2D масив `numpy` з `baseball`. Назвіть його `np_baseball`.
+- Виведіть тип `np_baseball`.
+- Виведіть атрибут `shape` об'єкта `np_baseball`. Використайте `np_baseball.shape`.
 
 `@hint`
-- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- Use `print()` in combination with `type()` for the second instruction.
-- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+- `baseball` уже заготовлено для вас у скрипті. Викличте `np.array()` для нього та збережіть отриманий 2D масив `numpy` у змінній `np_baseball`.
+- Для другої інструкції скористайтеся `print()` разом із `type()`.
+- `np_baseball.shape` повертає розміри `np_baseball`. Не забудьте обгорнути це викликом `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -405,7 +405,7 @@ print(np_baseball.shape)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Вам не потрібно змінювати або видаляти попередньо визначені змінні."
 Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 Ex().has_import("numpy", same_as = False)
 
@@ -420,12 +420,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Great! You're ready to convert the actual MLB data to a 2D `numpy` array now!")
+success_msg("Чудово! Тепер Ви готові перетворити фактичні дані MLB у 2D масив `numpy`!")
 ```
 
 ---
 
-## Baseball data in 2D form
+## Дані з бейсболу у 2D-формі
 
 ```yaml
 type: NormalExercise
@@ -436,19 +436,19 @@ skills:
   - 2
 ```
 
-You realize that it makes more sense to restructure all this information in a 2D `numpy` array.
+Ви розумієте, що логічніше перетворити всю цю інформацію на двовимірний масив `numpy`.
 
-You have a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this list is `baseball` and it has been loaded for you already (although you can't see it).
+У вас є список списків Python. У цьому списку кожен підсписок містить зріст і вагу одного гравця в бейсбол. Назва цього списку — `baseball`, і його вже завантажено для вас (хоча ви його не бачите).
 
-Store the data as a 2D array to unlock `numpy`'s extra functionality.
+Збережіть дані як двовимірний масив, щоб отримати додаткові можливості `numpy`.
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`.
+- Використайте `np.array()`, щоб створити двовимірний масив `numpy` з `baseball`. Назвіть його `np_baseball`.
+- Виведіть атрибут `shape` змінної `np_baseball`.
 
 `@hint`
-- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()`call around it.
+- `baseball` уже доступний у середовищі Python. Викличте `np.array()` для нього та збережіть отриманий двовимірний масив `numpy` у змінній `np_baseball`.
+- `np_baseball.shape` поверне розмірності `np_baseball`. Обовʼязково обгорніть це викликом `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -491,12 +491,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Slick! Time to show off some killer features of multi-dimensional `numpy` arrays!")
+success_msg("Чудово! Час продемонструвати деякі вражаючі можливості багатовимірних масивів `numpy`!")
 ```
 
 ---
 
-## Subsetting 2D NumPy Arrays
+## Вибір підмножин у 2D-масивах NumPy
 
 ```yaml
 type: NormalExercise
@@ -507,7 +507,7 @@ skills:
   - 2
 ```
 
-If your 2D `numpy` array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
+Якщо ваш 2D-масив `numpy` має регулярну структуру, тобто в кожному рядку та стовпці фіксована кількість значень, складні варіанти вибірки підмножин стають дуже простими. Подивіться на код нижче, де елементи `"a"` і `"c"` видобуваються зі списку списків.
 
 ```
 # numpy
@@ -516,17 +516,17 @@ np_x = np.array(x)
 np_x[:, 0]
 ```
 
-The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
+Індекси перед комою стосуються рядків, а після коми — стовпців. Символ `:` означає зріз; у цьому прикладі він вказує Python включити всі рядки.
 
 `@instructions`
-- Print out the 50th row of `np_baseball`.
-- Make a new variable, `np_weight_lb`, containing the entire second column of `np_baseball`.
-- Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
+- Виведіть 50-й рядок масиву `np_baseball`.
+- Створіть нову змінну `np_weight_lb`, що містить увесь другий стовпець `np_baseball`.
+- Виберіть зріст (перший стовпець) 124-го бейсболіста в `np_baseball` і виведіть його.
 
 `@hint`
-- You need row index 49 in the first instruction! More specifically, you'll want to use `[49, :]`.
-- To select the entire second column, you'll need `[:, 1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a `print()` statement.
+- Вам потрібен рядок з індексом 49 у першій інструкції! Точніше, використайте `[49, :]`.
+- Щоб вибрати весь другий стовпець, скористайтеся `[:, 1]`.
+- Для останньої інструкції використайте `[123, 0]`; не забудьте обгорнути це у виклик `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -569,7 +569,7 @@ print(np_baseball[123, 0])
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Вам не потрібно змінювати або видаляти попередньо визначені змінні."
 Ex().multi(
     has_import("numpy", same_as = False),
     check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -577,16 +577,16 @@ Ex().multi(
 
 Ex().has_printout(0)
 
-Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight_lb`. This will select the entire first column.")
+Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "Ви можете використовувати `np_baseball[:,1]` для визначення `np_weight_lb`. Це вибере весь перший стовпець.")
 
 Ex().has_printout(1)
 
-success_msg("This is going well!")
+success_msg("Це йде добре!")
 ```
 
 ---
 
-## 2D Arithmetic
+## 2D-арифметика
 
 ```yaml
 type: NormalExercise
@@ -597,19 +597,19 @@ skills:
   - 2
 ```
 
-2D `numpy` arrays can perform calculations element by element, like `numpy` arrays.
+Двовимірні масиви `numpy` можуть виконувати обчислення покомпонентно, як і звичайні масиви `numpy`.
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
+`np_baseball` уже підготовлено; це знову 2D-масив `numpy` із 3 стовпцями, що відповідають зросту (у дюймах), вазі (у фунтах) та віку (у роках). `baseball` доступний як звичайний список зі списків, а `updated` — як двовимірний масив numpy.
 
 `@instructions`
-- You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
-- You want to convert the units of height and weight to metric (meters and kilograms, respectively). As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
-- Multiply `np_baseball` with `conversion` and print out the result.
+- Ви отримали зміни зросту, ваги та віку всіх гравців у бейсбол. Вони доступні як 2D-масив `numpy` — `updated`. Додайте `np_baseball` і `updated` та виведіть результат.
+- Ви хочете перевести одиниці зросту й ваги в метричні (метри та кілограми відповідно). Спочатку створіть масив `numpy` із трьома значеннями: `0.0254`, `0.453592` і `1`. Назвіть цей масив `conversion`.
+- Помножте `np_baseball` на `conversion` та виведіть результат.
 
 `@hint`
-- `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with `np.array()`; the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
+- `np_baseball + updated` виконає покомпонентне додавання двох масивів `numpy`.
+- Створіть масив `numpy` за допомогою `np.array()`; вхідні дані — звичайний список Python із трьох елементів.
+- `np_baseball * conversion` спрацює без додаткових дій. Спробуйте! Обов'язково обгорніть це у виклик `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -657,7 +657,7 @@ print(np_baseball * conversion)
 ```{python}
 Ex().has_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
+msg = "Вам не потрібно змінювати або видаляти попередньо визначені змінні."
 Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 
 Ex().has_printout(0)
@@ -670,12 +670,12 @@ Ex().check_correct(
     )    
 )
 
-success_msg("Great job! Notice how with very little code, you can change all values in your `numpy` data structure in a very specific way. This will be very useful in your future as a data scientist!")
+success_msg("Чудова робота! Зверніть увагу, як за допомогою дуже невеликої кількості коду ви можете змінити всі значення у вашій структурі даних `numpy` дуже специфічним чином. Це буде дуже корисно у вашому майбутньому як дата-сайентиста!")
 ```
 
 ---
 
-## NumPy: Basic Statistics
+## NumPy: базова статистика
 
 ```yaml
 type: VideoExercise
@@ -688,7 +688,7 @@ xp: 50
 
 ---
 
-## Average versus median
+## Середнє проти медіани
 
 ```yaml
 type: NormalExercise
@@ -699,19 +699,19 @@ skills:
   - 2
 ```
 
-You now know how to use `numpy` functions to get a better feeling for your data. 
+Тепер ви знаєте, як використовувати функції `numpy`, щоб краще відчути свої дані.
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_. `np_baseball` is available.
+Дані з бейсболу доступні як 2D-масив `numpy` із 3 стовпцями (зріст, вага, вік) і 1015 рядками. Назва цього масиву `numpy` — `np_baseball`. Однак після переформатування даних ви помічаєте, що деякі значення зросту аномально великі. Виконайте інструкції та з'ясуйте, яка підсумкова статистика найкраще підходить, якщо ви маєте справу з так званими „викидами". `np_baseball` доступний.
 
 `@instructions`
-- Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
-- Print out the mean of `np_height_in`.
-- Print out the median of `np_height_in`.
+- Створіть масив `numpy` `np_height_in`, який дорівнює першому стовпцю `np_baseball`.
+- Виведіть середнє значення `np_height_in`.
+- Виведіть медіану `np_height_in`.
 
 `@hint`
-- Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a NumPy array. Don't forget to throw in a `print()` call.
-- For the last instruction, use `np.median()`.
+- Використайте індексування 2D-масиву `numpy`: `[:,0]` є частиною розв'язку.
+- Якщо `numpy` імпортовано як `np`, ви можете скористатися `np.mean()`, щоб обчислити середнє значення масиву NumPy. Не забудьте додати виклик `print()`.
+- Для останньої інструкції скористайтеся `np.median()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -753,7 +753,7 @@ print(np.median(np_height_in))
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
+Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "Ви можете використовувати `np_baseball[:,0]`, щоб вибрати перший стовпець з `np_baseball`"),
 
 Ex().check_correct(
     has_printout(0),
@@ -765,12 +765,12 @@ Ex().check_correct(
     check_function('numpy.median').has_equal_value()
 )
 
-success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get an idea about the overall distribution of the entire dataset.")
+success_msg("Середня висота 1586 дюймів, це не звучить правильно, чи не так? Однак, медіана, здається, не піддається впливу викидів: 74 дюйми виглядають цілком логічно. Завжди корисно перевіряти як медіану, так і середнє значення, щоб отримати уявлення про загальний розподіл всього набору даних.")
 ```
 
 ---
 
-## Explore the baseball data
+## Дослідження даних із бейсболу
 
 ```yaml
 type: NormalExercise
@@ -781,19 +781,19 @@ skills:
   - 2
 ```
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D NumPy array `np_baseball`, with three columns.
+Оскільки середнє і медіана так сильно відрізняються, ви вирішуєте поскаржитися до MLB. Вони знаходять помилку та надсилають вам виправлені дані. Вони знову доступні як 2D-масив NumPy `np_baseball` із трьома стовпцями.
 
-The Python script in the editor already includes code to print out informative messages with the different summary statistics and `numpy` is already loaded as `np`. Can you finish the job? `np_baseball` is available.
+Скрипт Python в редакторі вже містить код, який виводить інформативні повідомлення з різними описовими статистиками, а `numpy` уже імпортовано як `np`. Чи зможете ви завершити завдання? `np_baseball` доступний.
 
 `@instructions`
-- The code to print out the mean height is already included. Complete the code for the median height.
-- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`. 
-- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
+- Код для виведення середнього зросту вже додано. Доповніть код для медіанного зросту.
+- Використайте `np.std()` для першого стовпця `np_baseball`, щоб обчислити `stddev`.
+- Чи мають великі гравці тенденцію бути важчими? Використайте `np.corrcoef()`, щоб зберегти кореляцію між першим і другим стовпцями `np_baseball` у змінній `corr`.
 
 `@hint`
-- Use `np.median()` to calculate the median. Make sure to select to correct column first!
-- Subset the same column when calculating the standard deviation with `np.std()`.
-- Use `np_baseball[:, 0]` and `np_baseball[:, 1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
+- Використайте `np.median()`, щоб обчислити медіану. Спершу оберіть правильний стовпець!
+- Виділіть той самий стовпець, коли рахуєте стандартне відхилення за допомогою `np.std()`.
+- Скористайтеся `np_baseball[:, 0]` і `np_baseball[:, 1]`, щоб вибрати перший і другий стовпці; ці значення є вхідними для `np.corrcoef()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -840,26 +840,26 @@ print("Correlation: " + str(corr))
 
 `@sct`
 ```{python}
-msg = "You shouldn't change or remove the predefined `avg` variable."
+msg = "Ви не повинні змінювати або видаляти заздалегідь визначену змінну `avg`."
 Ex().check_object("avg", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-missing = "Have you used `np.median()` to calculate the median?"
-incorrect = "To calculate `med`, pass the first column of `np_baseball` to `numpy.median()`. The example of `np.mean()` shows how it's done."
+missing = "Ви використали `np.median()` для обчислення медіани?"
+incorrect = "Щоб обчислити `med`, передайте перший стовпець `np_baseball` до `numpy.median()`. Приклад `np.mean()` показує, як це зробити."
 Ex().check_correct(
   check_object("med").has_equal_value(),
   check_function("numpy.median", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.std()` to calculate the standard deviation?"
-incorrect = "To calculate `stddev`, pass the first column of `np_baseball` to `numpy.std()`. The example of `np.mean()` shows how it's done."
+missing = "Ви використали `np.std()` для обчислення стандартного відхилення?"
+incorrect = "Щоб обчислити `stddev`, передайте перший стовпець `np_baseball` до `numpy.std()`. Приклад `np.mean()` показує, як це зробити."
 Ex().check_correct(
   check_object("stddev").has_equal_value(),
   check_function("numpy.std", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.corrcoef()` to calculate the correlation?"
-incorrect1 = "To calculate `corr`, the first argument to `np.corrcoef()` should be the first column of `np_baseball`, similar to how did it before."
-incorrect2 = "To calculate `corr`, the second argument to `np.corrcoef()` should be the second column of `np_baseball`. Instead of `[:,0]`, use `[:,1]` this time."
+missing = "Ви використали `np.corrcoef()` для обчислення кореляції?"
+incorrect1 = "Щоб обчислити `corr`, першим аргументом до `np.corrcoef()` повинен бути перший стовпець `np_baseball`, так само, як це було зроблено раніше."
+incorrect2 = "Щоб обчислити `corr`, другим аргументом до `np.corrcoef()` повинен бути другий стовпець `np_baseball`. Замість `[:,0]`, цього разу використовуйте `[:,1]`."
 Ex().check_correct(
   check_object("corr").has_equal_value(),
   check_function("numpy.corrcoef", index=0, missing_msg=missing).multi(
@@ -868,5 +868,5 @@ Ex().check_correct(
   )
 )
 
-success_msg("Great work! You've built a solid foundation - now it's time to use all of your new data science skills to solve more challenges and make an impact.")
+success_msg("Чудова робота! Ви заклали міцний фундамент - тепер настав час використовувати всі ваші нові навички в галузі науки про дані, щоб вирішувати більше завдань і робити вплив.")
 ```

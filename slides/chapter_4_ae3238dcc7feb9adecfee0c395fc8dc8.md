@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/uk-UA/4cd1dd90-6a06-4794-b58f-b296bc749ac8-746d829206e9b80a6408e4b1c4f4da23.mp3
 ---
 
-## 2D NumPy Arrays
+## 2D масиви NumPy
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Чудова робота, ви молодці! Тепер відтворімо масиви numpy з попереднього відео.
 
 ---
 
-## Type of NumPy Arrays
+## Тип масивів NumPy
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Якщо запитати тип цих масивів, Python скаже, що це numpy.ndarray. Крапка після numpy підказує, що це тип, визначений у пакеті numpy. ndarray означає n-вимірний масив. Масиви np_height і np_weight є одновимірними, але цілком можливо створити 2 вимірні, 3 вимірні, навіть 7 вимірні масиви. Утім у цьому відео зупинимося на 2 вимірах.
 
 ---
 
-## 2D NumPy Arrays
+## 2D масиви NumPy
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Ви можете створити двовимірний масив numpy зі звичайного Python-списку списків. Спробуймо створити один масив numpy для всіх даних про зріст і вагу вашої родини, ось так.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Якщо зараз вивести np_2d, ви побачите прямокутну структуру даних. Кожен підсписок у списку відповідає рядку в двовимірному масиві numpy. Із np_2d.shape видно, що справді маємо 2 рядки і 5 стовпців. shape це так званий атрибут масиву np_2d, який надає додаткову інформацію про структуру даних.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Зверніть увагу, що синтаксис доступу до атрибута схожий на виклик методу, але це не те саме. Пам'ятайте, що методи мають круглі дужки після себе, а атрибути, як бачимо, ні.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Також для двовимірних масивів діє правило NumPy. Масив може містити лише один тип. Якщо ви зміните одне значення типу float на рядок, усі елементи масиву буде перетворено на рядки, щоб зберегти однорідність.
 
 ---
 
-## Subsetting
+## Вибірка підмасивів
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Двовимірний масив numpy можна сприймати як покращений список списків. Ви можете виконувати обчислення над масивами, як я показував раніше, і робити більш просунуте вибіркове отримання елементів.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Припустімо, вам потрібен перший рядок, а потім третій елемент у цьому рядку. Щоб вибрати рядок, використайте індекс 0 у квадратних дужках. Не забувайте про нульове індексування.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+Щоб далі вибрати третій елемент, розширте той самий виклик ще однією парою дужок з індексом 2.
 
 ---
 
-## Subsetting
+## Вибірка підмасивів
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+ось так. По суті, ви спершу обираєте рядок, а потім у цьому рядку робите ще один вибір.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Є також альтернативний спосіб вибірки, з однією парою квадратних дужок і комою. Такий виклик повертає те саме значення, що й раніше. Значення до коми задає рядок, значення після коми задає стовпець. Повертається перетин указаних рядків і стовпців. Коли звикнете, цей синтаксис здаватиметься інтуїтивнішим і відкриває більше можливостей.
 
 ---
 
-## Subsetting
+## Вибірка підмасивів
 
 ```yaml
 type: FullSlide
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Припустімо, ви хочете вибрати зріст і вагу другого та третього члена родини. Потрібні обидва рядки, тож поставте двокрапку перед комою. Потрібні лише другий і третій стовпці, тож після коми вкажіть індекси від 1 до 3. Пам'ятайте, що третя межа тут не включається. На перетині отримаємо двовимірний масив із 2 рядками і 2 стовпцями.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Аналогічно, можна вибрати вагу всіх членів родини ось так. Потрібен лише другий рядок, тож перед комою поставте 1. Потрібні всі стовпці, тож після коми використайте двокрапку. На перетині маємо весь другий рядок.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+Нарешті, двовимірні масиви numpy дають змогу виконувати покомпонентні обчислення так само, як ви робили це з одновимірними масивами. Це те,
 
 ---
 
-## Let's practice!
+## Давайте потренуємось!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+що ви зможете випробувати в вправах. Разом зі створенням і вибіркою елементів у двовимірних масивах numpy. Це захопливо

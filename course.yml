@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Вступ до Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python — це мова програмування загального призначення, яка стає дедалі
+  популярнішою в аналізі даних. Компанії по всьому світу використовують Python,
+  щоб отримувати інсайти зі своїх даних і здобувати конкурентну перевагу. На
+  відміну від інших підручників з Python, цей курс зосереджений саме на
+  використанні Python для науки про дані. На курсі «Вступ до Python» ви
+  дізнаєтеся про ефективні способи зберігання та обробки даних, а також про
+  корисні інструменти для науки про дані, щоб почати виконувати власні аналізи.
+  Розпочніть навчальну програму з Python на DataCamp вже зараз.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  У відео доступні живі транскрипти, які можна відкрити, натиснувши "Show
+  transcript" у нижньому лівому куті відео.
 
 
-  The course glossary can be found on the right in the resources section.
+  Глосарій курсу розміщено праворуч у розділі з ресурсами.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Щоб отримати кредити CPE, потрібно завершити курс і набрати 70% на
+  кваліфікаційній перевірці. Перейти до перевірки можна, натиснувши на панель
+  CPE credits праворуч.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
