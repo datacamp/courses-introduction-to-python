@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Kapitel 1
+title: Grunderna i Python
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  En introduktion till Pythons grundläggande koncept. Lär dig använda Python
+  interaktivt och via skript. Skapa dina första variabler och bekanta dig med
+  Pythons grundläggande datatyper.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: Hej Python!
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Variabler och typer
 ---
 
-## Hello Python!
+## Hej Python!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## Din första Python-kod
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+Nu är det dags att köra din första Python-kod!
 
-Head to the code and hit the run code button to see the output.
+Gå till koden och klicka på knappen Kör koden för att se utdatan.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Klicka på knappen Kör koden för att se utdatan av `print(5 / 8)`.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Kör koden innan du skickar in ditt svar, så att du hinner utforska utdatan.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Har du använt `{{sol_call}}` för att skriva ut `5 / 8`?")
+success_msg("Bra! Vidare till nästa!")
 ```
 
 ---
 
-## Python as a calculator
+## Python som miniräknare
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python lämpar sig utmärkt för grundläggande beräkningar – addition, subtraktion, multiplikation och division.
 
-The code in the script gives some examples.
+Koden i skriptet visar några exempel.
 
-Now it's your turn to practice by writing some code yourself.
+Nu är det din tur att öva genom att skriva lite kod själv.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- Skriv ut resultatet av att subtrahera `5` från `5` under `# Subtraction` med hjälp av `print()`.
+- Skriv ut resultatet av att multiplicera `3` med `5` under `# Multiplication`.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Du behöver använda `print()` för att generera utdata.
+- Du kan subtrahera med `-` och multiplicera med `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Har du använt `print(4 + 5)` för att skriva ut resultatet av din addition?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Har du använt `print(5 - 5)` för att skriva ut resultatet av din subtraktion?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Har du använt `print(3 * 5)` för att skriva ut resultatet av din multiplikation?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Har du använt `print(10 / 2)` för att skriva ut resultatet av din division?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Det är rätt! Python kan hjälpa dig med matematiken, en egenskap som kommer att vara användbar för analys när vi utvecklar våra datakunskaper.")
 ```
 
 ---
 
-## Variables and Types
+## Variabler och typer
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Tilldela variabler
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+I Python kan du använda en variabel för att referera till ett värde med ett namn. För att skapa en variabel `x` med värdet `5` använder du `=`, som i det här exemplet:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Nu kan du använda variabelnamnet `x` i stället för det faktiska värdet `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Kom ihåg att `=` i Python betyder _tilldelning_ – det testar inte likhet! Prova det i övningen genom att ersätta `____` med din kod.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- Skapa en variabel `savings` med värdet `100`.
+- Kontrollera variabeln genom att skriva `print(savings)` i skriptet.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- Skriv `savings = 100` för att skapa variabeln `savings`.
+- När du har skapat variabeln `savings` kan du skriva `print(savings)`.
+- Din färdiga kod ska inte innehålla några `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Tilldela `100` till variabeln `savings`.")
+Ex().has_printout(0, not_printed_msg = "Skriv ut `savings`, variabeln du skapade, med `print(savings)`.")
+success_msg("Bra! Låt oss nu försöka göra några beräkningar med den här variabeln!")
 ```
 
 ---
 
-## Calculations with variables
+## Beräkningar med variabler
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Nu har du skapat en variabel för ditt sparande – då är det dags att börja räkna!
 
-Instead of calculating with the actual values, you can use variables instead.
+Istället för att använda faktiska värden direkt i beräkningarna kan du använda variabler.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Hur mycket pengar skulle du ha sparat om fyra månader, om du sparar 10 dollar i månaden?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- Skapa en variabel `monthly_savings` med värdet `10` och en variabel `num_months` med värdet `4`.
+- Multiplicera `monthly_savings` med `num_months` och tilldela resultatet till `new_savings`.
+- Skriv ut värdet av `new_savings`.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- Du kan räkna med variabler på samma sätt som med tal – ersätt alltså `10 * 4` med variablerna!
+- Använd `print()` för att se värdet i `new_savings`.
+- Kontrollera att du stavat variabelnamnen rätt!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Sparade du `10` till `monthly_savings` med hjälp av `monthly_savings = 10`?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Sparade du `4` till `num_months` med hjälp av `num_months = 4`?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Använde du rätt variabler och symboler för att multiplicera? Förväntade `monthly_savings * num_months` men fick något annat.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Använde du rätt variabler och symboler för att addera? Förväntade `savings + new_savings` men fick något annat.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Kom ihåg att skriva ut `new_savings` i slutet av ditt skript.")
 
-success_msg("You have $40 in new savings!")
+success_msg("Du har 40 dollar i nya besparingar!")
 ```
 
 ---
 
-## Other variable types
+## Andra variabeltyper
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+I den föregående övningen arbetade du med datatypen heltal i Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int`, eller heltal: ett tal utan decimaldel. `savings`, med värdet `100`, är ett exempel på ett heltal.
 
-Next to numerical data types, there are three other very common data types:
+Förutom numeriska datatyper finns det tre andra vanliga datatyper:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float`, eller flyttal: ett tal som har både en heltalsdel och en decimaldel, åtskilda av en punkt. `1.1` är ett exempel på ett flyttal.
+- `str`, eller sträng: en typ för att representera text. Du kan använda enkla eller dubbla citattecken för att skapa en sträng.
+- `bool`, eller boolean: en typ för att representera logiska värden. Det kan bara vara `True` eller `False` (versalerna är viktiga!).
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Skapa ett nytt flyttal, `half`, med värdet `0.5`.
+- Skapa en ny sträng, `intro`, med värdet `"Hello! How are you?"`.
+- Skapa ett nytt booleskt värde, `is_good`, med värdet `True`.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- För att skapa en variabel i Python använder du `=`. Kom ihåg att omge strängen med enkla eller dubbla citattecken.
+- Det finns bara två booleska värden i Python: `True` och `False`. `TRUE`, `true`, `FALSE`, `false` och andra varianter godkänns inte.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Sparade du flyttalet `0.5` till `half`?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, något är felaktigt i din `intro`-variabel. Kontrollera stavningen och se till att du har använt citattecken.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Skrev du det booleska värdet med stor bokstav? Kom ihåg att du inte behöver använda citattecken här.")
 
-success_msg("Nice!")
+success_msg("Bra gjort!")
 ```
 
 ---
 
-## Operations with other types
+## Operationer med olika typer
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Variabler kan ha olika typer i Python. Du kan se typen för en variabel med hjälp av `type()`. För att till exempel se typen för `a` kör du: `type(a)`.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Olika typer beter sig olika i Python. När du summerar två strängar får du ett annat resultat än när du summerar två heltal eller två booleska värden.
 
-Time for you to test this out.
+Dags att testa detta själv.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- Addera `savings` och `new_savings` och tilldela resultatet till `total_savings`.
+- Använd `type()` för att skriva ut typen för `total_savings`.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- Tilldela `savings + new_savings` till en ny variabel, `total_savings`.
+- För att skriva ut typen för en variabel `x` använder du `print(type(x))`.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Du behöver inte ändra eller ta bort de fördefinierade variablerna."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Lägg till `savings` och `new_savings` för att skapa variabeln `total_savings`."),
+    has_printout(1, not_printed_msg = "__JINJA__:Använd `{{sol_call}}` för att skriva ut typen av `total_savings`.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- Beräkna summan av `intro` och `intro` och tilldela resultatet till `doubleintro`.
+- Skriv ut `doubleintro`. Fick du det resultat du förväntade dig?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- Tilldela `intro + intro` till en ny variabel, `doubleintro`.
+- För att skriva ut en variabel `x` skriver du `print(x)` i skriptet.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Du behöver inte ändra eller ta bort de fördefinierade variablerna."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Har du lagrat resultatet av `intro + intro` i `doubleintro`?"),
+    has_printout(0, not_printed_msg = "Glöm inte att skriva ut `doubleintro`.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Bra. Lägg märke till hur `intro + intro` gör att `\"Hello! How are you?\"` och `\"Hello! How are you?\"` klistras ihop.")
 ```

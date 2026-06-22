@@ -1,22 +1,22 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
+title_meta: Kapitel 3
+title: Funktioner och paket
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  Du lär dig använda funktioner, metoder och paket för att på ett effektivt sätt
+  dra nytta av kod som skickliga Python-utvecklare redan har skrivit. Målet är
+  att minska mängden kod du behöver skriva för att lösa komplexa problem!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: Funktioner
   - nb_of_exercises: 4
-    title: Methods
+    title: Metoder
   - nb_of_exercises: 4
-    title: Packages
+    title: Paket
 ---
 
-## Functions
+## Funktioner
 
 ```yaml
 type: VideoExercise
@@ -29,7 +29,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## Bekanta funktioner
 
 ```yaml
 type: NormalExercise
@@ -40,23 +40,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python levereras med ett antal inbyggda funktioner som gör livet enklare för dig som datavetare. Du känner redan till två sådana funktioner: `print()` och `type()`. Det finns också funktioner som `str()`, `int()`, `bool()` och `float()` för att växla mellan datatyper. Du kan läsa mer om dem [här.](https://docs.python.org/3/library/functions.html) Även dessa är inbyggda funktioner.
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+Att anropa en funktion är enkelt. För att ta reda på typen av `3.0` och spara resultatet i en ny variabel, `result`, kan du skriva följande:
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- Använd `print()` i kombination med `type()` för att skriva ut typen av `var1`.
+- Använd `len()` för att hämta [längden på listan](https://docs.python.org/3/library/functions.html#len) `var1`. Omslut anropet med `print()` för att skriva ut resultatet direkt.
+- Använd `int()` för att konvertera `var2` till ett [heltal](https://docs.python.org/3/library/functions.html#int). Spara resultatet i variabeln `out2`.
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- Anropa funktionen `type()` så här: `type(var1)`.
+- Anropa `print()` på samma sätt som du gjort många gånger tidigare. Ange helt enkelt den variabel du vill skriva ut inom parenteserna.
+- `int(x)` konverterar `x` till ett heltal.
 
 `@pre_exercise_code`
 ```{python}
@@ -97,26 +97,26 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Du behöver inte ändra eller ta bort de fördefinierade variablerna."
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__:Se till att skriva ut %s av `var1` med `{{sol_call}}`."
+Ex().has_printout(0, not_printed_msg = patt % 'typen')
+Ex().has_printout(1, not_printed_msg = patt % 'längden')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "Har du använt `int()` för att skapa ett heltal av `var2`?"
+int_incorr_msg = "Har du skickat `var2` till `int()`?"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="Du anropade `int()` korrekt; se nu till att tilldela resultatet av detta anrop till `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("Bra jobbat! Funktionen `len()` är extremt användbar; den fungerar även på strängar för att räkna antalet tecken!")
 ```
 
 ---
 
-## Help!
+## Hjälp!
 
 ```yaml
 type: MultipleChoiceExercise
@@ -127,27 +127,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+Kanske vet du redan namnet på en Python-funktion, men behöver ta reda på hur du använder den. Något ironiskt nog behöver du då använda en annan funktion för att få information: `help()`. I IPython kan du även skriva `?` före funktionsnamnet.
 
-To get help on the `max()` function, for example, you can use one of these calls:
+För att till exempel få hjälp med funktionen `max()` kan du använda något av dessa anrop:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Använd IPython Shell för att öppna [dokumentationen](https://docs.python.org/3/library/functions.html#pow) för `pow()`. Skriv `?pow` eller `help(pow)` och tryck på **Enter**.
 
-Which of the following statements is true?
+Vilket av följande påståenden stämmer?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` tar tre argument: `base`, `exp` och `mod`. Utan `mod` returnerar funktionen ett fel.
+- `pow()` tar tre obligatoriska argument: `base`, `exp` och `None`.
+- `pow()` kräver argumenten `base` och `exp`; `mod` är valfritt.
+- `pow()` tar två argument: `exp` och `mod`. Om `exp` saknas uppstår ett fel.
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- Valfria argument tilldelas ett standardvärde med `=`, som funktionen använder om argumentet inte anges.
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +156,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "Inte riktigt. `mod` har ett standardvärde som används om du inte anger ett värde."
+msg2 = "Felaktigt. `None` är standardvärdet för argumentet `mod`."
+msg3 = "Perfekt! Att använda `help()` kan hjälpa dig att förstå hur funktioner fungerar och frigöra deras fulla potential!"
+msg4 = "Felaktigt. `pow()` tar tre argument, varav ett har ett standardvärde."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## Flera argument
 
 ```yaml
 type: NormalExercise
@@ -176,25 +176,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+I föregående övning identifierade du valfria argument genom att läsa dokumentationen med `help()`. Nu ska du använda samma metod för att ändra beteendet hos funktionen `sorted()`.
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+Ta en titt på [dokumentationen](https://docs.python.org/3/library/functions.html#sorted) för `sorted()` genom att skriva `help(sorted)` i IPython Shell.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+Du ser att `sorted()` tar tre argument: `iterable`, `key` och `reverse`. I den här övningen behöver du bara ange `iterable` och `reverse`, inte `key`.
 
-Two lists have been created for you.
+Det finns redan två listor skapade åt dig.
 
-Can you paste them together and sort them in descending order?
+Kan du slå ihop dem och sortera dem i fallande ordning?
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- Använd `+` för att slå ihop innehållet i `first` och `second` till en ny lista: `full`.
+- Anropa `sorted()` på `full` och ange argumentet `reverse` till `True`. Spara den sorterade listan som `full_sorted`.
+- Avsluta med att skriva ut `full_sorted`.
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- Summera `first` och `second` som om de vore två tal och tilldela resultatet till `full`.
+- Använd `sorted()` med två argument: `full` och `reverse=True`.
+- Använd `print()` för att skriva ut en variabel.
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +235,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "Du behöver inte ändra eller ta bort de redan befintliga variablerna `first` och `second`."
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="Se till att du tilldelar resultatet av anropet till `sorted()` till `full_sorted`."),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("Bra gjort! Gå vidare till videon om Python-metoder.")
 ```
 
 ---
 
-## Methods
+## Metoder
 
 ```yaml
 type: VideoExercise
@@ -266,7 +266,7 @@ xp: 50
 
 ---
 
-## String Methods
+## Strängmetoder
 
 ```yaml
 type: NormalExercise
@@ -277,19 +277,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+Strängar har många användbara metoder. Följ instruktionerna noggrant för att bekanta dig med några av dem. Om du vill utforska dem mer i detalj kan du alltid skriva `help(str)` i IPython Shell.
 
-A string `place` has already been created for you to experiment with.
+En sträng `place` har redan skapats åt dig att experimentera med.
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- Använd metoden `.upper()` på `place` och lagra resultatet i `place_up`. Använd den syntax för metodanrop som du lärde dig i föregående video.
+- Skriv ut `place` och `place_up`. Förändrades båda?
+- Skriv ut antalet o:n i variabeln `place` genom att anropa `.count()` på `place` och skicka in bokstaven `'o'` som argument. Det gäller variabeln `place`, inte ordet `"place"`!
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- Du kan anropa metoden `.upper()` på `place` utan några extra argument.
+- För att skriva ut en variabel `x` kan du använda `print(x)`.
+- Se till att omsluta anropet `place.count(____)` i en `print()`-funktion så att resultatet skrivs ut.
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +330,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Du behöver inte ändra eller ta bort de fördefinierade variablerna."
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "Glöm inte att skriva ut `%s`."
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="Tilldela resultatet av ditt `place.upper()`-anrop till `place_up`."),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "Du har beräknat antalet o:n i `place` korrekt; se nu till att omsluta `place.count('o')`-anropet i en `print()`-funktion för att skriva ut resultatet."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Bra gjort! Lägg märke till i utskrifterna att metoden `upper()` inte förändrar det objekt den anropas på. Detta kommer att vara annorlunda för listor i nästa övning!")
 ```
 
 ---
 
-## List Methods
+## Listmetoder
 
 ```yaml
 type: NormalExercise
@@ -365,20 +365,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+Strängar är inte den enda Python-typen som har tillhörande metoder. Listor, flyttal, heltal och booleaner är också typer som kommer med en uppsättning användbara metoder. I den här övningen får du prova på:
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()`, för att hämta indexet för det första elementet i en lista som matchar det angivna värdet, och
+- `.count()`, för att räkna hur många gånger ett element förekommer i en lista.
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+Du kommer att arbeta med listan `areas`, som innehåller arean för olika delar av ett hus.
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- Använd metoden `.index()` för att hämta indexet för det element i `areas` som är lika med `20.0`. Skriv ut detta index.
+- Anropa `.count()` på `areas` för att ta reda på hur många gånger `9.50` förekommer i listan. Skriv ut även detta antal.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- För att skriva ut indexet, omslut anropet `areas.index(___)` med funktionen `print()`.
+- För att skriva ut antalet gånger elementet `x` förekommer i listan, omslut anropet `areas.count(___)` med funktionen `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -411,7 +411,7 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "Du behöver inte ändra eller ta bort den fördefinierade listan `areas`."
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
@@ -420,12 +420,12 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("Bra gjort! Det här var exempel på `list`-metoder som inte ändrade listan de anropades på.")
 ```
 
 ---
 
-## List Methods (2)
+## Listmetoder (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +436,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+De flesta listmetoder förändrar listan de anropas på. Exempel på sådana metoder:
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()`, som lägger till ett element i listan,
+- `.remove()`, som [tar bort](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) det första elementet i en lista som matchar det angivna värdet, och
+- `.reverse()`, som [vänder](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) på ordningen av elementen i listan.
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+Du kommer att arbeta med listan `areas`, som innehåller ytan för olika delar av ett hus.
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- Använd `.append()` två gånger för att lägga till ytan för poolhuset och garaget igen: `24.5` respektive `15.45`. Se till att lägga till dem i den ordningen.
+- Skriv ut `areas`.
+- Använd metoden `.reverse()` för att vända på ordningen av elementen i `areas`.
+- Skriv ut `areas` en gång till.
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- För den första instruktionen, använd `areas.append(___)` två gånger.
+- För att skriva ut en variabel `x`, skriv helt enkelt `print(x)`.
+- Metoden `.reverse()` kräver inga extra argument – använd bara punktnotation och tomma parenteser: `.reverse()`.
+- För att skriva ut en variabel `x`, skriv helt enkelt `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +509,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("Bra gjort!")
 ```
 
 ---
 
-## Packages
+## Paket
 
 ```yaml
 type: VideoExercise
@@ -527,7 +527,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## Importera paket
 
 ```yaml
 type: NormalExercise
@@ -538,24 +538,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+Säg att du vill beräkna omkretsen och arean av en cirkel. Formlerna ser ut så här:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+Istället för att skriva in talet för `pi` manuellt kan du använda paketet `math`, som redan innehåller det värdet.
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+För referens: `**` är symbolen för upphöjning till. Till exempel är `3**4` lika med `3` upphöjt till `4`, vilket ger `81`.
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- Importera paketet `math`.
+- Använd `math.pi` för att beräkna cirkelns omkrets och lagra resultatet i `C`.
+- Använd `math.pi` för att beräkna cirkelns area och lagra resultatet i `A`.
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- Du kan enkelt använda `import math` och sedan referera till `pi` med `math.pi`.
+- Använd formeln i uppgiftstexten för att beräkna `C`. Använd `*`.
+- Använd formeln i uppgiftstexten för att beräkna `A`. Använd `*` och `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +594,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "Din beräkning av `%s` är inte helt korrekt. Se till att använda `math.pi`."
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +602,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Behåll `{{sol_call}}` där för att skriva ut omkretsen."),
+  has_printout(1, not_printed_msg = "__JINJA__:Behåll `{{sol_call}}` där för att skriva ut arean.")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("Bra gjort! Om du vet hur man hanterar funktioner från paket, har du tillgång till kraften hos många Python-programmerare!")
 ```
 
 ---
 
-## Selective import
+## Selektivt import
 
 ```yaml
 type: NormalExercise
@@ -622,22 +622,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+Generella importer, som `import math`, ger dig tillgång till **all** funktionalitet i paketet `math`. Men om du bara behöver en specifik del av ett paket kan du göra importen mer selektiv:
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+Pröva samma sak igen, men den här gången importerar du bara `pi`.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- Gör ett selektivt import från paketet `math` där du bara importerar funktionen `pi`.
+- Använd `pi` för att beräkna cirkelns omkrets och lagra resultatet i `C`.
+- Använd `pi` för att beräkna cirkelns area och lagra resultatet i `A`.
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- Använd `from math import pi` för att göra ett selektivt import.
+- Nu kan du använda `pi` direkt!
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +676,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "Din beräkning av `%s` är inte riktigt korrekt. Se till att endast använda `pi`."
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "Se till att importera `pi` från paketet `math`. Du bör använda notationen `from ___ import ___`.",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +686,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Behåll `{{sol_call}}` där för att skriva ut omkretsen."),
+  has_printout(1, not_printed_msg = "__JINJA__:Behåll `{{sol_call}}` där för att skriva ut arean.")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("Bra! Gå vidare till nästa övning.")
 ```
 
 ---
 
-## Different ways of importing
+## Olika sätt att importera
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +706,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Det finns flera sätt att importera paket och moduler i Python. Beroende på hur du skriver importanropet behöver du använda olika Python-kod.
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Anta att du vill använda [funktionen](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, som finns i underpaketet `linalg` i paketet `scipy`. Du vill kunna använda funktionen på följande sätt:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+Vilken `import`-sats behöver du för att köra koden ovan utan fel?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Prova de olika importsatserna i IPython-skalet och se vilken som gör att raden `my_inv([[1, 2], [3, 4]])` körs utan fel. Tryck på **enter** för att köra koden du har skrivit.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "Felaktigt, försök igen. Prova de olika importsatserna i IPython-skalet och se vilken som gör att raden `my_inv([[1, 2], [3, 4]])` körs utan fel."
+msg4 = "Rätt! Ordet `as` låter dig skapa ett lokalt namn för funktionen du importerar: `inv()` är nu tillgänglig som `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```

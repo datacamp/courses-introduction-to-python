@@ -1,27 +1,27 @@
 id: 735
-title: Introduction to Python
+title: Introduktion till Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python är ett allmänt programmeringsspråk som blir allt mer populärt inom
+  datavetenskap. Företag världen över använder Python för att utvinna insikter
+  från sina data och skaffa sig konkurrensfördelar. Till skillnad från andra
+  Python-kurser fokuserar den här kursen specifikt på Python för datavetenskap.
+  I kursen Introduktion till Python lär du dig kraftfulla metoder för att lagra
+  och bearbeta data, samt användbara verktyg för datavetenskap som hjälper dig
+  att börja genomföra egna analyser. Starta DataCamps onlinekurs i Python nu.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  Videorna innehåller direkttextning som du når genom att klicka på "Show
+  transcript" längst ned till vänster i videon.
 
 
-  The course glossary can be found on the right in the resources section.
+  Kursens ordlista finns till höger i resursavsnittet.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  För att få CPE-poäng behöver du slutföra kursen och nå minst 70 % på den
+  kvalificerade bedömningen. Du navigerar till bedömningen genom att klicka på
+  CPE-poänglänken till höger.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

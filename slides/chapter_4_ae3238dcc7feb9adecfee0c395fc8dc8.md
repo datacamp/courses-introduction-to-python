@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/sv-SE/1438ff3c-a630-4b79-a0ac-b1b5a08be091-d77cffcc592b25aff4bf12a35f7b5add.mp3
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy-arrayer
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Bra jobbat! Nu ska vi återskapa numpy-arrayerna från föregående video.
 
 ---
 
-## Type of NumPy Arrays
+## Typ av NumPy-arrayer
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Om du frågar efter typen för dessa arrayer, svarar Python att de är numpy.ndarray. numpy punkt berättar att det är en typ som definierats i paketet numpy. ndarray står för n-dimensionell array. Arrayerna np_height och np_weight är endimensionella, men det går utmärkt att skapa 2-dimensionella, tredimensionella, ja till och med sjudimensionella arrayer! I den här videon håller vi oss till 2 dimensioner.
 
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy-arrayer
 
 ```yaml
 type: FullSlide
@@ -104,13 +99,13 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Du kan skapa en tvådimensionell numpy-array från en vanlig Python-lista av listor. Vi skapar en numpy-array med all längd- och viktdata för din familj, så här.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Om du skriver ut np_2d ser du att det är en rektangulär datastruktur. Varje underlista i listan motsvarar en rad i den tvådimensionella numpy-arrayen. Via np_2d.shape kan du se att vi har 2 rader och 5 kolumner. shape är ett så kallat attribut på np_2d-arrayen, som ger dig mer information om hur datastrukturen ser ut.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Notera att syntaxen för att komma åt ett attribut liknar ett metodanrop, men de är inte samma sak. Kom ihåg att metoder har runda parenteser efter sig, och som du ser här har attribut det inte.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+NumPy-regeln gäller även för tvådimensionella arrayer: en array kan bara innehålla en enda typ. Om du ändrar ett flyttal till en sträng, omvandlas alla element i arrayen till strängar, så att arrayen förblir homogen.
 
 ---
 
@@ -139,11 +134,11 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Du kan se den tvådimensionella numpy-arrayen som en förbättrad lista av listor. Du kan utföra beräkningar på arrayerna, som jag visade tidigare, och du kan använda mer avancerade sätt att välja ut data.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Säg att du vill ha den första raden och sedan det tredje elementet i den raden. För att välja raden anger du index 0 inom hakparenteser. Glöm inte nollindexeringen.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+För att sedan välja det tredje elementet utökar du anropet med ytterligare ett par hakparenteser, den här gången med index 2.
 
 ---
 
@@ -181,9 +176,9 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+Så här. Du väljer alltså först raden och gör sedan ett nytt urval inom den raden.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Det finns också ett alternativt sätt att välja ut data, med enkla hakparenteser och ett kommatecken. Det här anropet returnerar exakt samma värde som tidigare. Värdet före kommat anger raden, och värdet efter kommat anger kolumnen. Det som returneras är skärningspunkten mellan de rader och kolumner du angett. När du väl vant dig är den här syntaxen mer intuitiv och öppnar upp fler möjligheter.
 
 ---
 
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Säg att du vill välja längd och vikt för den andra och tredje familjemedlemmen. Du vill ha båda raderna, så du anger ett kolon före kommat. Du vill bara ha den andra och tredje kolumnen, så du anger index 1 till 3 efter kommat. Kom ihåg att det tredje indexet inte inkluderas. Skärningspunkten ger oss en tvådimensionell array med 2 rader och 2 kolumner.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+På samma sätt kan du välja vikten för alla familjemedlemmar så här. Du vill bara ha den andra raden, så du anger 1 före kommat. Du vill ha alla kolumner, så du använder ett kolon efter kommat. Skärningspunkten ger oss hela den andra raden.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+Tvådimensionella numpy-arrayer gör det också möjligt att utföra elementvisa beräkningar, precis som med endimensionella numpy-arrayer. Det är något
 
 ---
 
-## Let's practice!
+## Nu kör vi en övning!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+du kan prova i övningarna, tillsammans med att skapa och välja ut data ur tvådimensionella numpy-arrayer!
