@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Введение в Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python — язык программирования общего назначения, который становится всё более
+  популярным в области науки о данных. Компании по всему миру используют Python
+  для извлечения ценных сведений из данных и получения конкурентных преимуществ.
+  В отличие от других курсов по Python, этот курс ориентирован именно на
+  применение Python в науке о данных. В курсе «Введение в Python» вы узнаете об
+  эффективных способах хранения и обработки данных, а также познакомитесь с
+  полезными инструментами для проведения собственного анализа. Начните изучение
+  Python на DataCamp прямо сейчас.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  Видеоуроки содержат субтитры, которые можно открыть, нажав «Show transcript» в
+  левом нижнем углу.
 
 
-  The course glossary can be found on the right in the resources section.
+  Глоссарий курса доступен в разделе ресурсов справа.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Для получения кредитов CPE необходимо пройти курс и набрать не менее 70% в
+  квалификационном тесте. Перейти к тесту можно, нажав на баннер CPE credits
+  справа.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

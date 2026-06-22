@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ru-RU/0537e151-14ce-4c21-b0e3-f1c583ef8cc0-1881d5836e1c87a4c0c4fc23b9bcc24e.mp3
 ---
 
-## Variables and Types
+## Переменные и типы данных
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+Отлично, продолжаем! Мы убедились, что Python отлично справляется с вычислениями. Но если вы хотите решать более сложные задачи, вам понадобится способность «сохранять» значения прямо в процессе написания кода.
 
 ---
 
-## Variable
+## Переменная
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Уникальное имя с учётом регистра
 
-- Call up value through variable name{{1}}
+- Обращение к значению через имя переменной{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 м — 68,7 кг{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +49,15 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Для этого используются переменные. У каждой переменной есть имя, и важно помнить, что Python различает строчные и заглавные буквы. Как только вы объявили переменную, вы можете обратиться к её значению, просто написав её имя.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Предположим, вы измерили свой рост и вес в метрических единицах: рост составляет 1,79 метра, а вес — 68,7 килограмма. Вы можете присвоить эти значения двум переменным, height и weight, с помощью знака равенства.
 
-If you now type the name of the variable, height,
-
-Python looks for the variable name, retrieves its value, and prints it out.
+Если теперь ввести имя переменной height, Python найдёт её, получит значение и выведет результат на экран.
 
 ---
 
-## Calculate BMI
+## Вычисление BMI
 
 ```yaml
 type: TwoColumns
@@ -114,15 +107,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Теперь давайте вычислим индекс массы тела, или ИМТ. Формула использует вес в килограммах и рост в метрах. Это можно сделать с конкретными числами, но гораздо удобнее использовать переменные height и weight, как показано здесь. Каждый раз, когда вы пишете имя переменной, Python подставляет её текущее значение. Переменная weight соответствует 68,7, а height — 1,79.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+Наконец, в этом варианте Python сохраняет результат в новую переменную bmi. Теперь bmi содержит то же значение, которое вы вычислили ранее.
 
-In Python, variables are used all the time. They help to make your code reproducible.
+В Python переменные используются постоянно. Они делают ваш код воспроизводимым.
 
 ---
 
-## Reproducibility
+## Воспроизводимость
 
 ```yaml
 type: FullSlide
@@ -142,11 +135,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+Представьте, что код для создания переменных height, weight и bmi записан в скрипте, вот так. Если теперь нужно пересчитать ИМТ для другого значения веса,
 
 ---
 
-## Reproducibility
+## Воспроизводимость
 
 ```yaml
 type: FullSlide
@@ -167,13 +160,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+достаточно просто изменить объявление переменной weight и запустить скрипт заново. Значение bmi обновится автоматически, поскольку изменилось значение переменной weight.
 
-So far, we've only worked with numerical values, such as height and weight.
+До сих пор мы работали только с числовыми значениями, такими как рост и вес.
 
 ---
 
-## Python Types
+## Типы данных в Python
 
 ```yaml
 type: FullSlide
@@ -199,13 +192,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+В Python каждое число имеет определённый тип. Узнать тип значения можно с помощью функции type. Чтобы проверить тип переменной bmi, напишите type и укажите bmi в скобках. Вы увидите, что это float — так в Python обозначаются вещественные числа, то есть числа с целой и дробной частью. Для целых чисел в Python есть отдельный тип int, как в этом примере.
 
-To do data science, you'll need more than ints and floats, though.
+Однако для анализа данных одних только целых и вещественных чисел недостаточно.
 
 ---
 
-## Python Types (2)
+## Типы данных в Python (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +228,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+В Python есть множество других типов данных. Наиболее распространённые из них — строки и логические значения.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+Строка — это способ представления текста в Python. Строку можно заключать как в двойные, так и в одинарные кавычки, как видно из примеров. Если вывести тип последней переменной, вы увидите str — сокращение от слова string.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Логический тип, Boolean, может принимать только одно из двух значений: True или False, то есть «истина» или «ложь». Логические значения окажутся очень полезны в дальнейшем, например при фильтрации данных.
 
-There's something special about Python data types.
+У типов данных в Python есть одна важная особенность.
 
 ---
 
-## Python Types (3)
+## Типы данных в Python (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +262,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Разные типы — разное поведение!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Посмотрите на эту строку кода, где складываются два целых числа, а затем на эту, где складываются две строки.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+Для целых чисел значения суммируются, а для строк они соединяются в одну. Оператор плюс ведёт себя по-разному в зависимости от типа данных. Это общий принцип: поведение кода зависит от того, с какими типами вы работаете.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+В упражнениях, которые вас ждут, вы создадите свои первые переменные и поработаете с различными типами данных Python. В следующем видео мы поговорим о списках.
 
 ---
 
-## Let's practice!
+## Давайте потренируемся!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +281,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Давайте приступим к практике, и увидимся в следующей главе, где вы будете строить ещё более интересные графики на Python.
