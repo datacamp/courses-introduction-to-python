@@ -1,27 +1,8 @@
 id: 735
-title: Introduction to Python
+title: Introducción a Python
 programming_language: python
-description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
-
-
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
-
-
-  The course glossary can be found on the right in the resources section.
-
-
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+description: "Python es un lenguaje de programación de uso general cada vez más popular para la ciencia de datos. Empresas de todo el mundo utilizan Python para extraer información de sus datos y obtener una ventaja competitiva. A diferencia de otros tutoriales de Python, este curso se centra en Python específicamente para la ciencia de datos. En nuestro curso Introducción a Python aprenderás potentes formas de almacenar y manipular datos y conocerás útiles herramientas de ciencia de datos para empezar a realizar tus propios análisis. Empieza ya tu plan de estudios en línea sobre Python en DataCamp.\n\nLos vídeos contienen transcripciones en directo, a las que puedes acceder haciendo clic en «Mostrar transcripción» en la parte inferior izquierda de los vídeos.\n\nEl glosario del curso se encuentra a la derecha, en la sección de recursos.\n\nPara obtener créditos CPE, debes completar el curso y alcanzar una puntuación del 70\_% en la evaluación cualificada. Puedes acceder a la evaluación haciendo clic en la llamada de créditos CPE situada a la derecha."
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
