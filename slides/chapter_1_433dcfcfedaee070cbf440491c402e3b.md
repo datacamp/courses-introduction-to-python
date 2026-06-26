@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4
 ---
 
-## Variables and Types
+## ตัวแปรและประเภทข้อมูล
 
 ```yaml
 type: TitleSlide
@@ -27,7 +22,7 @@ Well done and welcome back! It's clear that Python is a great calculator. If you
 
 ---
 
-## Variable
+## ตัวแปร
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- ชื่อเฉพาะ แยกตัวพิมพ์ใหญ่-เล็ก
 
-- Call up value through variable name{{1}}
+- เรียกใช้ค่าผ่านชื่อตัวแปร{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1.79 ม. - 68.7 กก.{{2}}
 
 ```py
 height = 1.79
@@ -64,7 +59,7 @@ Python looks for the variable name, retrieves its value, and prints it out.
 
 ---
 
-## Calculate BMI
+## คำนวณ BMI
 
 ```yaml
 type: TwoColumns
@@ -122,7 +117,7 @@ In Python, variables are used all the time. They help to make your code reproduc
 
 ---
 
-## Reproducibility
+## การทำซ้ำได้
 
 ```yaml
 type: FullSlide
@@ -146,7 +141,7 @@ Suppose the code to create the height, weight and bmi variable are in a script, 
 
 ---
 
-## Reproducibility
+## การทำซ้ำได้
 
 ```yaml
 type: FullSlide
@@ -173,7 +168,7 @@ So far, we've only worked with numerical values, such as height and weight.
 
 ---
 
-## Python Types
+## ประเภทข้อมูลใน Python
 
 ```yaml
 type: FullSlide
@@ -205,7 +200,7 @@ To do data science, you'll need more than ints and floats, though.
 
 ---
 
-## Python Types (2)
+## ประเภทข้อมูลใน Python (2)
 
 ```yaml
 type: FullSlide
@@ -245,7 +240,7 @@ There's something special about Python data types.
 
 ---
 
-## Python Types (3)
+## ประเภทข้อมูลใน Python (3)
 
 ```yaml
 type: FullSlide
@@ -269,7 +264,7 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- ประเภทต่างกัน = พฤติกรรมต่างกัน!{{3}}
 
 `@script`
 Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
@@ -280,7 +275,7 @@ In the exercises that follow, you'll create your first variables and experiment 
 
 ---
 
-## Let's practice!
+## มาฝึกกันเถอะ!
 
 ```yaml
 type: FinalSlide
