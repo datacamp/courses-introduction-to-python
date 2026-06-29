@@ -2,16 +2,11 @@
 title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v8/735_ch1_1.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v8/hls-735_ch1_1.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/cs-CZ/8bb76fa4-db1c-4c09-a9e8-268ade96e4da-17580333180c2830db51bd4dcd72a710.mp3
 ---
 
-## Hello Python!
+## Ahoj, Pythone!
 
 ```yaml
 type: TitleSlide
@@ -23,13 +18,13 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Hi, my name is Hugo and I'll be your host for Introduction to Python for Data Science.
+Ahoj, jmenuji se Hugo a provedu tě kurzem Úvod do Pythonu pro datovou vědu.
 
-I'm a data scientist and educator at DataCamp.
+Jsem datový vědec a lektor ve DataCampu.
 
 ---
 
-## How you will learn
+## Jak se budete učit
 
 ```yaml
 type: FullSlide
@@ -38,10 +33,10 @@ disable_transition: true
 ```
 
 `@part1`
-![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
+![Rozhraní DataCampu](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
 
 `@script`
-In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
+V tomto kurzu se naučíš Python pro datovou vědu prostřednictvím videolekcí, jako je tato, a interaktivních cvičení. Budeš mít vlastní Python session, kde můžeš experimentovat a hledat správný kód pro splnění zadání. Učíš se praxí a zároveň dostáváš okamžitou a přizpůsobenou zpětnou vazbu na svou práci.
 
 ---
 
@@ -53,20 +48,20 @@ key: 3f23b93572
 ```
 
 `@part1`
-![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
+![guido-hba.png](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
 
-- General purpose: build anything{{2}}
+- Obecný jazyk: vhodný pro libovolné projekty{{2}}
 
-- Open source! Free!{{3}}
+- Open source! Zdarma!{{3}}
 
-- Python packages, also for data science{{4}}
+- Balíčky Pythonu, i pro datovou vědu{{4}}
 
-	- Many applications and fields{{5}}
+	- Mnoho aplikací a oblastí{{5}}
 
 `@script`
-Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
-People often refer to Python as the swiss army knife of programming languages as you can do almost anything with it.
-In this course, we'll start to build up your data science coding skills bit by bit, so make sure to stick around to see how powerful the language can be.
+Python vznikl z iniciativy Guida Van Rossuma. Tady vidíš mou fotografii s Guidem. Co začalo jako hobby projekt, se brzy proměnilo v univerzální programovací jazyk: dnes v Pythonu napíšeš prakticky jakýkoli software. Jak k tomu došlo? Python je open source — je zdarma. A navíc je v něm velmi snadné vytvářet balíčky, tedy kód, který můžeš sdílet s ostatními a řešit konkrétní problémy. Postupem času vzniklo stále více balíčků přímo určených pro datovou vědu. Chceš vytvořit působivé vizualizace prodejů své firmy? Na to existuje balíček. Nebo se potřebuješ připojit k databázi a analyzovat data ze senzorů? Na to taky balíček najdeš.
+Lidé často přirovnávají Python k švýcarskému armádnímu nožíku programovacích jazyků, protože s ním dokážeš skoro cokoliv.
+V tomto kurzu budeme postupně rozvíjet tvé dovednosti v oblasti datové vědy, takže rozhodně zůstaň — uvidíš, jak mocný tento jazyk je.
 
 ---
 
@@ -78,12 +73,12 @@ key: 43a91a7217
 ```
 
 `@part1`
-**Execute Python commands**
+**Spouštění příkazů Pythonu**
 
-![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
+![ipython_shell.png](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
 
 `@script`
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the
+Teď, když máš chuť se do Pythonu pustit, začneme experimentovat. Začnu s
 
 ---
 
@@ -96,12 +91,12 @@ disable_transition: true
 ```
 
 `@part1`
-**Execute Python commands**
+**Spouštění příkazů Pythonu**
 
-![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
+![ipython_shell_highlighted.png](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
 
 `@script`
-Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
+Python shellem — místem, kde zadáváš kód v Pythonu a okamžitě vidíš výsledky. V prostředí cvičení na DataCampu je tento shell umístěn zde. Začneme jednoduše a použijeme Python jako kalkulačku.
 
 ---
 
@@ -116,16 +111,16 @@ disable_transition: true
 `@part1`
 &nbsp;
 
-![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
+![Výpočty v IPython Shellu DataCampu](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
 
 `@script`
-Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+Napíšu 4 + 5 a stisknu Enter. Python zadání vyhodnotí a zobrazí výsledek výpočtu: 9. Shell, který zde používáme, ale není ten původní — pracujeme s IPythonem, zkráceně z Interactive Python, což je vylepšená verze klasického Pythonu, která se nám bude hodit později.
 
-IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called
+IPython vytvořil Fernando Pérez a je součástí širšího ekosystému Jupyter. Kromě interaktivní práce v Pythonu můžeš také spouštět takzvané
 
 ---
 
-## Python Script
+## Skript v Pythonu
 
 ```yaml
 type: FullSlide
@@ -133,20 +128,20 @@ key: 78ef256bc0
 ```
 
 `@part1`
-- Text files - `.py`{{1}}
+- Textové soubory - `.py`{{1}}
 
-- List of Python commands{{2}}
+- Seznam příkazů Pythonu{{2}}
 
-- Similar to typing in IPython Shell{{3}}
+- Podobné jako psaní v IPython Shellu{{3}}
 
-![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
+![Skript v Pythonu v DataCampu](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
 
 `@script`
-python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line.
+Python skripty. Python skripty jsou jednoduše textové soubory s příponou .py. Jde v podstatě o seznam příkazů v Pythonu, které se spustí postupně — skoro jako bys je zadával v shellu řádek po řádku.
 
 ---
 
-## Python Script
+## Skript v Pythonu
 
 ```yaml
 type: FullSlide
@@ -155,14 +150,14 @@ disable_transition: true
 ```
 
 `@part1`
-![GIF: typing 4 + 5 in the script and hitting submit answer. No output is shown.](https://assets.datacamp.com/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
+![GIF: zadání 4 + 5 ve skriptu a odeslání odpovědi. Žádný výstup se nezobrazí.](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
 
 `@script`
-Let's put the command from before in a script now, which can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
+Předchozí příkaz teď vložíme do skriptu, který najdeš zde v rozhraní DataCampu. Dalším krokem je spuštění skriptu kliknutím na „Submit Answer". Pokud skript spustíš, v panelu výstupu se nic nezobrazí. Je to proto, že ve skriptech musíš výstup explicitně vypsat pomocí funkce print.
 
 ---
 
-## Python Script
+## Skript v Pythonu
 
 ```yaml
 type: FullSlide
@@ -172,16 +167,16 @@ code_zoom: 90
 ```
 
 `@part1`
-![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
+![python_script_print.gif](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
 
-- Use `print()` to generate output from script
+- Pomocí `print()` zobrazíte výstup skriptu
 
 `@script`
-Let's wrap our previous calculation in a print call, and rerun the script. This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
+Předchozí výpočet zabalíme do volání print a skript spustíme znovu. Tentokrát se zobrazí stejný výstup jako předtím — výborně! Ukládání kódu do skriptů místo ručního zadávání každého kroku ti pomůže udržet přehled a ušetří opakované přepisování, kdykoli chceš něco změnit — stačí upravit skript a znovu ho spustit.
 
 ---
 
-## DataCamp Interface
+## Rozhraní DataCampu
 
 ```yaml
 type: FullSlide
@@ -189,14 +184,14 @@ key: 693ba1cd14
 ```
 
 `@part1`
-![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
+![Snímek rozhraní DataCampu](https://assets.datacamp.com/img/translations/cs-CZ/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
+Teď, když víš, jak různými způsoby pracovat s Pythonem, doporučuji přejít ke cvičením. Používej IPython Shell pro experimentování a editor Python skriptů pro psaní samotného řešení. Po kliknutí na „Submit Answer" se tvůj skript spustí a zkontroluje jeho správnost.
 
 ---
 
-## Let's practice!
+## Pojďme procvičovat!
 
 ```yaml
 type: FinalSlide
@@ -204,4 +199,4 @@ key: 7445cd202e
 ```
 
 `@script`
-Get coding and don't forget to have fun!
+Pusť se do kódování a hlavně si to užij!

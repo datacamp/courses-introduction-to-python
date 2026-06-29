@@ -1,27 +1,27 @@
 id: 735
-title: Introduction to Python
+title: Úvod do Pythonu
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python je univerzální programovací jazyk, který si získává čím dál větší
+  oblibu v oblasti datové vědy. Firmy po celém světě ho využívají k získávání
+  poznatků z dat a budování konkurenční výhody. Na rozdíl od jiných Python
+  tutoriálů se tento kurz zaměřuje přímo na Python pro datovou vědu. V kurzu
+  Úvod do Pythonu se naučíš, jak efektivně ukládat a zpracovávat data, a
+  seznámíš se s užitečnými nástroji datové vědy, se kterými budeš moct provádět
+  vlastní analýzy. Začni s online Python kurikulem DataCampu ještě dnes.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  Videa obsahují živé přepisy, které zobrazíš kliknutím na „Show transcript" v
+  levém dolním rohu videa.
 
 
-  The course glossary can be found on the right in the resources section.
+  Glosář kurzu najdeš vpravo v sekci zdrojů.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Pro získání kreditů CPE musíš kurz dokončit a dosáhnout skóre alespoň 70 % v
+  příslušném hodnocení. K hodnocení se dostaneš kliknutím na upozornění na
+  kredity CPE vpravo.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)

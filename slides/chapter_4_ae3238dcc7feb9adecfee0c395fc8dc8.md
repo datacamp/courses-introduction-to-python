@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/cs-CZ/f7731d9e-2d4e-4207-820c-e5c748258dfa-e7f60d1f836541b17cd7f2af335dfef0.mp3
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy pole
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+Skvělá práce! Pojďme teď znovu vytvořit numpy pole z předchozího videa.
 
 ---
 
-## Type of NumPy Arrays
+## Typ NumPy polí
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+Když se zeptáš na typ těchto polí, Python ti odpoví, že se jedná o numpy.ndarray. Numpy dot ti říká, že jde o typ definovaný v balíčku numpy. ndarray znamená n-rozměrné pole. Pole np_height a np_weight jsou jednorozměrná, ale klidně můžeš vytvořit dvourozměrná, trojrozměrná, nebo dokonce sedmirozměrná pole! V tomto videu se ale zaměříme na dvourozměrná.
 
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy pole
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+Dvourozměrné numpy pole můžeš vytvořit z běžného Python seznamu seznamů. Zkusme vytvořit jedno numpy pole pro všechna data o výšce a váze členů tvé rodiny, takhle.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+Pokud teď vypíšeš np_2d, uvidíš, že má obdélníkovou strukturu: každý podseznam odpovídá jednomu řádku dvourozměrného numpy pole. Z np_2d.shape zjistíš, že máme skutečně 2 řádky a 5 sloupců. shape je takzvaný atribut pole np_2d, který ti poskytne více informací o tom, jak datová struktura vypadá.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+Všimni si, že syntaxe pro přístup k atributu vypadá trochu jako volání metody, ale není to totéž! Metody mají za sebou kulaté závorky, a jak vidíš, atributy je nemají.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+Pro dvourozměrná pole platí stejné pravidlo NumPy: pole může obsahovat pouze jeden datový typ. Pokud změníš jedno desetinné číslo na řetězec, všechny prvky pole se převedou na řetězce, aby pole zůstalo homogenní.
 
 ---
 
-## Subsetting
+## Podsekce
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+Dvourozměrné numpy pole si můžeš představit jako vylepšený seznam seznamů: můžeš provádět výpočty s poli, jak jsem ukázal dříve, a máš k dispozici pokročilejší způsoby výběru prvků.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+Řekněme, že chceš první řádek a z něj třetí prvek. K výběru řádku použiješ index 0 v hranatých závorkách. Nezapomeň na indexování od nuly.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+Pro výběr třetího prvku pak rozšíříš stejný zápis o další pár hranatých závorek, tentokrát s indexem 2.
 
 ---
 
-## Subsetting
+## Podsekce
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+takhle. V podstatě vyberéš řádek a z něj pak provedéš další výběr.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+Existuje také alternativní způsob výběru pomocí jednoduchých hranatých závorek s čárkou. Tento zápis vrátí úplně stejnou hodnotu jako předchozí. Hodnota před čárkou určuje řádek, hodnota za čárkou určuje sloupec. Výsledkem je průsečík zadaných řádků a sloupců. Jakmile si na tento způsob zvykneš, připadne ti přirozenější a otevírá více možností.
 
 ---
 
-## Subsetting
+## Podsekce
 
 ```yaml
 type: FullSlide
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+Řekněme, že chceš vybrat výšku a váhu druhého a třetího člena rodiny. Chceš oba řádky, takže před čárku napíšeš dvojtečku. Chceš pouze druhý a třetí sloupec, takže za čárku napíšeš indexy 1 až 3. Pamatuj, že třetí index už není zahrnutý. Průsečík nám vrátí dvourozměrné pole se 2 řádky a 2 sloupci.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+Podobně můžeš vybrat váhu všech členů rodiny takto: chceš pouze druhý řádek, takže před čárku napíšeš 1. Chceš všechny sloupce, takže za čárku napíšeš dvojtečku. Průsečík nám vrátí celý druhý řádek.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+A konečně, dvourozměrná numpy pole ti umožňují provádět výpočty po prvcích, stejně jako jednorozměrná numpy pole. To je něco,
 
 ---
 
-## Let's practice!
+## Pojďme procvičovat!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+co si můžeš vyzkoušet v cvičeních, spolu s vytvářením a výběrem prvků z dvourozměrných numpy polí. Těš se!

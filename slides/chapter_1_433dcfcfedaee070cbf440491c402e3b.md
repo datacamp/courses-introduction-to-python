@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/cs-CZ/08a54120-151a-435e-891c-dc3cb4953a3e-c886d53f2d9f733d02ebdb264ade8c9e.mp3
 ---
 
-## Variables and Types
+## Proměnné a typy
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+Výborně a vítej zpět! Je jasné, že Python je skvělá kalkulačka. Pokud ale chceš provádět složitější výpočty, budeš chtít hodnoty během psaní kódu „ukládat".
 
 ---
 
-## Variable
+## Proměnná
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Konkrétní název rozlišující velikost písmen
 
-- Call up value through variable name{{1}}
+- Hodnotu získáme přes název proměnné{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 m - 68,7 kg{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Lze to udělat tak, že definuješ proměnnou s konkrétním názvem, přičemž záleží na velikosti písmen. Jakmile takovou proměnnou vytvoříš, můžeš její hodnotu kdykoli vyvolat zadáním jejího názvu.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Představ si, že měříš svou výšku a váhu v metrické soustavě: měříš 1,79 metru a vážíš 68,7 kilogramu. Tyto hodnoty přiřadíš dvěma proměnným — height a weight — pomocí znaku rovná se.
 
-If you now type the name of the variable, height,
+Pokud teď zadáš název proměnné height,
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python ji vyhledá, získá její hodnotu a vypíše ji.
 
 ---
 
-## Calculate BMI
+## Výpočet BMI
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Teď si vypočítáme index tělesné hmotnosti, nebo také B-M-I, který se počítá podle tohoto vzorce — váha je v kilogramech a výška v metrech. Výpočet lze provést přímo s číselnými hodnotami, ale stejně dobře poslouží proměnné height a weight, jak vidíš tady. Pokaždé, když zadáš název proměnné, říkáš Pythonu, aby ji nahradil její skutečnou hodnotou. weight odpovídá 68,7 a height 1,79.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+V poslední verzi Python výsledek uloží do nové proměnné bmi. bmi teď obsahuje stejnou hodnotu, jakou jsi vypočítal dříve.
 
-In Python, variables are used all the time. They help to make your code reproducible.
+V Pythonu se proměnné používají neustále — pomáhají psát znovu použitelný kód.
 
 ---
 
-## Reproducibility
+## Reprodukovatelnost
 
 ```yaml
 type: FullSlide
@@ -142,11 +137,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+Představ si, že kód pro vytvoření proměnných height, weight a bmi je uložený ve skriptu, jako je tento. Pokud teď chceš přepočítat bmi pro jinou váhu,
 
 ---
 
-## Reproducibility
+## Reprodukovatelnost
 
 ```yaml
 type: FullSlide
@@ -167,13 +162,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+stačí jednoduše změnit deklaraci proměnné weight a skript znovu spustit. bmi se odpovídajícím způsobem změní, protože se změnila i hodnota proměnné weight.
 
-So far, we've only worked with numerical values, such as height and weight.
+Doposud jsme pracovali pouze s číselnými hodnotami, jako jsou výška a váha.
 
 ---
 
-## Python Types
+## Typy v Pythonu
 
 ```yaml
 type: FullSlide
@@ -199,13 +194,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+V Pythonu mají všechna čísla konkrétní typ. Typ hodnoty zjistíš pomocí funkce type. Chceš-li zjistit typ naší hodnoty bmi, jednoduše napíšeš type a do závorek vložíš bmi. Uvidíš, že je to float — tak Python označuje reálné číslo, tedy číslo, které může mít celou i desetinnou část. Python má také typ pro celá čísla: int, jak ukazuje tento příklad.
 
-To do data science, you'll need more than ints and floats, though.
+Pro datovou vědu ale ints a floaty nestačí.
 
 ---
 
-## Python Types (2)
+## Typy v Pythonu (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +230,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python nabízí celou řadu dalších datových typů. Nejběžnější jsou string a boolean.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+String je způsob, jakým Python pracuje s textem. K jeho vytvoření lze použít dvojité i jednoduché uvozovky, jak vidíš na těchto příkladech. Pokud vypíšeš typ poslední proměnné, uvidíš str — zkratka pro string.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Boolean je typ, který může nabývat hodnoty True nebo False — v běžném jazyce si ho představ jako „Ano" a „Ne". Booleany se ti budou velmi hodit, například při filtrování dat.
 
-There's something special about Python data types.
+Datové typy v Pythonu mají ještě jednu zajímavou vlastnost.
 
 ---
 
-## Python Types (3)
+## Typy v Pythonu (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Různý typ = různé chování!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Podívej se na tento řádek kódu, který sečte dvě celá čísla, a pak na tento, který spojí dva stringy.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+U celých čísel se hodnoty sečetly, zatímco u stringů se řetězce spojily za sebou. Operátor plus se choval jinak podle toho, s jakým datovým typem pracoval. To je obecný princip: chování kódu závisí na typech, se kterými pracuješ.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+V následujících cvičeních si vytvoříš první proměnné a vyzkoušíš různé datové typy Pythonu. Ve videu tě pak provedu světem seznamů.
 
 ---
 
-## Let's practice!
+## Pojďme cvičit!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Pusť se do kódování a těším se na tebe v další kapitole, kde vytvoříš ještě působivější grafy v Pythonu.
