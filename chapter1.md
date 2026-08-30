@@ -1,21 +1,18 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
-description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+title_meta: 第 1 章
+title: Python 基础知识
+description: Python 基础概念简介。学习如何以交互方式或通过脚本来使用 Python。你将创建自己的第一个变量，并熟悉 Python 的基本数据类型。
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: 你好，Python！
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: 变量和数据类型
 ---
 
-## Hello Python!
+## 你好，Python！
 
 ```yaml
 type: VideoExercise
@@ -28,7 +25,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## 你的第一段 Python 代码
 
 ```yaml
 type: NormalExercise
@@ -39,15 +36,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+是时候运行你的第一段 Python 代码了！
 
-Head to the code and hit the run code button to see the output.
+前往代码编辑区域，点击"运行代码"按钮以查看输出结果。
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- 点击"运行代码"按钮，查看 `print(5 / 8)` 的输出结果。
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- 在提交答案前先运行代码，以便有时间研究输出结果。
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +65,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:您是否使用了 `{{sol_call}}` 来打印 `5 / 8`？")
+success_msg("太好了！继续下一个！")
 ```
 
 ---
 
-## Python as a calculator
+## 把 Python 当计算器使用
 
 ```yaml
 type: NormalExercise
@@ -85,19 +82,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python 非常适合进行基本计算。它可以实现加、减、乘、除运算。
 
-The code in the script gives some examples.
+脚本代码中提供了几个示例。
 
-Now it's your turn to practice by writing some code yourself.
+现在轮到你编写一些代码来练习一下了。
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- 在 `# Subtraction` 下使用 `print()` 打印 `5` 减去 `5` 的结果。
+- 在 `# Multiplication` 下打印 `3` 乘以 `5` 的结果。
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- 你需要使用 `print()` 来生成输出。
+- 你可以分别使用 `-` 进行减法运算，使用 `*` 进行乘法运算。
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +129,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "您是否使用了 `print(4 + 5)` 来打印出您的加法结果？")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "您是否使用了 `print(5 - 5)` 来打印出您的减法结果？")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "您是否使用了 `print(3 * 5)` 来打印出您的乘法结果？")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "您是否使用了 `print(10 / 2)` 来打印出您的除法结果？")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("正确！Python 可以帮助您进行数学运算，这一特性将在我们提高数据技能时对分析非常有帮助。")
 ```
 
 ---
 
-## Variables and Types
+## 变量与数据类型
 
 ```yaml
 type: VideoExercise
@@ -158,7 +155,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## 变量赋值
 
 ```yaml
 type: NormalExercise
@@ -169,24 +166,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+在 Python 中，你可以使用名称来引用一个值，这就是变量。要创建值为 `5` 的变量 `x`，你可以使用 `=`，示例如下：
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+现在你就可以使用变量名 `x` 来代替具体的数值 `5` 了。
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+请记住，Python 中的 `=` 表示赋值，而不是用来判断“相等关系”的！请试试在练习中将 `____` 替换成你编写的代码。
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- 创建一个变量 `savings`，并为其赋值 `100`。
+- 在脚本中输入 `print(savings)` 来查看该变量。
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- 输入 `savings = 100` 来创建变量 `savings`。
+- 创建变量 `savings` 之后，你可以输入 `print(savings)`。
+- 最终代码不应包含任何 `____`。
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +210,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="将 `100` 赋值给变量 `savings`。")
+Ex().has_printout(0, not_printed_msg = "使用 `print(savings)` 打印出您创建的变量 `savings`。")
+success_msg("很好！现在让我们尝试用这个变量进行一些计算！")
 ```
 
 ---
 
-## Calculations with variables
+## 对变量进行计算
 
 ```yaml
 type: NormalExercise
@@ -231,21 +228,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+现在，你已经创建了一个 savings 变量，准备开始存钱吧！
 
-Instead of calculating with the actual values, you can use variables instead.
+你可以使用变量进行计算，而不是使用具体的数值。
 
-How much money would you have saved four months from now, if you saved $10 each month?
+如果你每月存 $10，4 个月后你会存下多少钱？
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- 创建一个变量 `monthly_savings`，使其等于 `10`，并创建一个 `num_months`，使其等于 `4`。
+- 将 `monthly_savings` 乘以 `num_months`，并将结果复制给 `new_savings`。
+- 打印 `new_savings` 的值。
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- 你可以像对待数字一样对变量进行计算。因此，你可以把 `10 * 4` 中的数字替换成相应的变量！
+- 使用 `print()` 查看 `new_savings` 的金额。
+- 注意变量名拼写要正确！
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +277,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "您是否使用 `monthly_savings = 10` 将 `10` 保存到 `monthly_savings`？")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "您是否使用 `num_months = 4` 将 `4` 保存到 `num_months`？")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "您是否使用了正确的变量和符号进行乘法？预期为 `monthly_savings * num_months`，但得到了其他结果。")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "您是否使用了正确的变量和符号进行加法？预期为 `savings + new_savings`，但得到了其他结果。")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="请记得在脚本末尾打印出 `new_savings`。")
 
-success_msg("You have $40 in new savings!")
+success_msg("您有 $40 的新储蓄！")
 ```
 
 ---
 
-## Other variable types
+## 其他变量类型
 
 ```yaml
 type: NormalExercise
@@ -303,24 +300,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+在上一个练习中，你使用了 Python 的整数数据类型：
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int`（即整数）：没有小数部分的数值。值为 `100` 的 `savings` 就是整数的一个示例。
 
-Next to numerical data types, there are three other very common data types:
+除了数值数据类型外，还有另外三种很常见的数据类型：
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float`（即浮点数）：同时包含整数部分和小数部分（由点分隔）的数字。`1.1` 就是浮点数的一个示例。
+- `str`（即字符串）：用于表示文本的数据类型。你可以使用单引号或双引号来构建字符串。
+- `bool`（即布尔值）：用于表示逻辑值的数据类型。只能是 `True` 或 `False`（务必正确区分大小写！）。
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- 创建一个新的浮点数 `half`，值为 `0.5`。
+- 创建一个新的字符串 `intro`，值为 `"Hello! How are you?"`。
+- 创建一个新的布尔值 `is_good`，值为 `True`。
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- 在 Python 中可使用 `=` 创建变量。务必记得给字符串加上单引号或双引号。
+- Python 只有两个布尔值：`True` 和 `False`。`TRUE`、`true`、`FALSE`、`false` 等其他写法都无效。
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +350,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "您是否将浮点数 `0.5` 保存到 `half`？")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "嗯，您的 `intro` 变量中有些不正确的地方。请仔细检查拼写，并确保您使用了引号。")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "您是否将布尔值大写？请记住，这里不需要使用引号。")
 
-success_msg("Nice!")
+success_msg("做得好！")
 ```
 
 ---
 
-## Operations with other types
+## 与其他数据类型的运算
 
 ```yaml
 type: BulletExercise
@@ -372,11 +369,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Python 中的变量有不同的数据类型。你可以使用 `type()` 查看变量的类型。比如，要查看 `a` 的类型，可运行：`type(a)`。
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+不同数据类型在 Python 中的行为也不同。比如，将两个字符串相加，与将两个整数或两个布尔值相加，它们的表现是不一样的。
 
-Time for you to test this out.
+现在，你可以动手试一试。
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +389,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- 将 `savings` 与 `new_savings` 相加，并将结果赋值给 `total_savings`。
+- 使用 `type()` 打印 `total_savings` 的类型。
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- 将 `savings + new_savings` 赋值给一个新变量 `total_savings`。
+- 要打印变量 `x` 的类型，请使用 `print(type(x))`。
 
 `@sample_code`
 ```{python}
@@ -428,7 +425,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不必更改或删除预定义变量。"
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +433,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="将 `savings` 和 `new_savings` 相加以创建 `total_savings` 变量。"),
+    has_printout(1, not_printed_msg = "__JINJA__:使用 `{{sol_call}}` 打印出 `total_savings` 的类型。")
 )
 ```
 
@@ -450,12 +447,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- 计算 `intro` 与 `intro` 的和，并将结果赋值给 `doubleintro`。
+- 打印 `doubleintro`。结果是否符合你的预想？
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- 将 `intro + intro` 赋值给一个新变量 `doubleintro`。
+- 要打印变量 `x`，请在脚本中加入 `print(x)`。
 
 `@sample_code`
 ```{python}
@@ -482,14 +479,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不必更改或删除预定义变量。"
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "您是否已将 `intro + intro` 的结果存储在 `doubleintro` 中？"),
+    has_printout(0, not_printed_msg = "别忘了打印出 `doubleintro`。")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("很好。注意 `intro + intro` 如何使 `\"Hello! How are you?\"` 和 `\"Hello! How are you?\"` 拼接在一起。")
 ```

@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/zh-CN/80aa20e3-c6e7-439b-babc-433c3fc68701-50e787444af1ee13ef933d5907517dff.mp3
 ---
 
-## 2D NumPy Arrays
+## 二维 NumPy 数组
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+做得好，真棒！接下来，我们重新创建上一个视频中的 NumPy 数组。
 
 ---
 
-## Type of NumPy Arrays
+## NumPy 数组类型
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+如果你查询这些数组的类型，Python 会告诉你，它们是 numpy.ndarray。numpy. 表示这是在 numpy 包中定义的一种类型。ndarray 代表 N 维数组。数组 np_height 和 np_weight 是一维数组，但你完全可以创建二维、三维，甚至七维数组！不过在本视频中，我们先讨论二维数组。
 
 ---
 
-## 2D NumPy Arrays
+## 二维 NumPy 数组
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+你可以使用普通的 Python 嵌套列表来创建二维 NumPy 数组。我们来试试将全家人的身高和体重数据整合到一个 NumPy 数组中，就像这样。
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+如果此时打印 np_2d，你会发现它是一个矩形数据结构：列表中的每个子列表都对应二维 NumPy 数组中的一行。通过查看 np_2d.shape，你就会发现，这个数组确实包含 2 行 5 列。shape 是 np_2d 数组的一个属性，能帮你更直观地了解数据结构的具体形式。
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+需要注意的是，访问属性的语法与调用方法有点像，但两者并不相同！请记住，方法末尾带有圆括号，而你在此处可以看到，属性是没有圆括号的。
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+对于二维数组，NumPy 的基本规则同样适用：同一个数组只能包含一种数据类型。如果你把其中一个浮点数改成字符串，那么数组中的所有元素都会被强制转换为字符串，从而保持元素的同质性。
 
 ---
 
-## Subsetting
+## 提取子集
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+你可以把二维 NumPy 数组看作是嵌套列表的升级版：不仅能像之前演示的那样对数组进行数值计算，还可以使用更高级的方式来获取子集。
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+假设你想提取第一行，以及这一行中的第三个元素。要选择第一行，你需要在方括号中输入索引 0。请记住，索引是从 0 开始计算的。
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+接下来，若要提取第三个元素，只需在后面再加上一对方括号并填入索引 2。
 
 ---
 
-## Subsetting
+## 提取子集
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+简单来说，你就是先选定一行，然后从这一行中提取具体元素。
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+还有一种更简便的取值方式：直接在单个方括号内用逗号分隔。这种方式返回的结果与之前完全一致。其中，逗号前的数值代表行，逗号后的数值代表列，最终会返回行列交汇处的元素。一旦你习惯了这种写法，就会发现它不仅更加直观，还能解锁更多高级操作。
 
 ---
 
-## Subsetting
+## 提取子集
 
 ```yaml
 type: FullSlide
@@ -222,20 +217,19 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+假设你想提取第二和第三位家庭成员的身高与体重。因为需要这两行数据，你可以在逗号前填入冒号。同时，由于只需要第二和第三列，你可以在逗号后填入索引 1 到 3。请注意，这里的索引 3 是不包含在内的。取其交集，你就能得到一个 2 行 2 列的二维数组：
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+同理，你也可以这样提取所有家庭成员的体重：我们只需要第二行，所以在逗号前填入 1 就可以了；而由于需要所有列，所以在逗号后填入冒号。行列交汇处就是完整的第二行数据。
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+最后，二维 NumPy 数组同样支持逐元素计算，操作方式与一维 NumPy 数组完全相同。你可以
 
 ---
 
-## Let's practice!
-
+##   动手练一练！
 ```yaml
 type: FinalSlide
 key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+在接下来的练习中动手试试，还可以练习创建和提取二维 NumPy 数组的子集，很有意思！
