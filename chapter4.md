@@ -221,7 +221,7 @@ Select the code that results in the following output:
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-The `numpy` package is already imported as `np`. You can run each option in the IPython Shell to see the output. 
+The `numpy` package is already imported as `np`. You can run each option in the IPython Shell to see the output.
 
 `@possible_answers`
 - `np.array([True, 1, 2, 3, 4, False])`
