@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ko-KR/bded7e0b-81c4-4f66-a382-a754bb8771dc-9ea6593b98566181746062ba7448e284.mp3
 ---
 
-## Variables and Types
+## 변수와 타입
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+잘하셨어요. 다시 만났군요! 확실히 Python은 훌륭한 계산기입니다. 하지만 더 복잡한 계산을 할 때는 코딩을 하면서 값을 '저장'하고 싶어질 겁니다.
 
 ---
 
-## Variable
+## 변수
 
 ```yaml
 type: FullSlide
@@ -35,9 +30,9 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- 구체적이고 대소문자를 구분하는 이름
 
-- Call up value through variable name{{1}}
+- 변수 이름을 통해 값을 호출{{1}}
 
 - 1.79 m - 68.7 kg{{2}}
 
@@ -54,17 +49,15 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+대소문자를 구분해서 특정 이름을 지정하면 저장이 가능합니다. 이러한 변수를 정의하거나 선언하면, 나중에 변수 이름을 입력해 값을 불러올 수 있습니다.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+본인의 키와 몸무게를 미터법으로 측정한다고 가정해 봅시다. 키가 179센티미터이고 몸무게가 68.7킬로그램이라고 해보죠. 이 값을 height와 weight라는 두 변수에 등호를 사용하여 할당할 수 있습니다.
 
-If you now type the name of the variable, height,
-
-Python looks for the variable name, retrieves its value, and prints it out.
+이제 변수 이름인 height를 입력하면, Python이 변수 이름을 찾아 해당 값을 가져와서 출력합니다.
 
 ---
 
-## Calculate BMI
+## BMI 계산하기
 
 ```yaml
 type: TwoColumns
@@ -85,7 +78,7 @@ height
 1.79
 ```
 
-$$ \text{BMI} = \frac{\text{weight}}{\text{height}^2} $${{1}}
+$$ {{1}}extBMI = racextweightextheight^2 $$
 
 `@part2`
 ```py
@@ -114,15 +107,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+이제 체질량지수인 BMI를 계산해 봅시다. BMI는 킬로그램으로 표시한 체중과 미터로 표시한 키를 이용해 화면의 식처럼 계산합니다. 실제 값을 사용해도 되지만, 보시는 것처럼 height와 weight 변수를 사용할 수도 있죠. 변수의 이름을 입력할 때마다 Python에 해당 변수를 실제 값으로 바꾸라고 요청하는 겁니다. 이 경우, weight는 68.7이고, height는 1.79입니다.
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+마지막으로, 이 버전에서는 Python이 결과를 새로운 변수인 bmi로 저장합니다. 이제 bmi에 방금 계산한 값이 들어갑니다.
 
-In Python, variables are used all the time. They help to make your code reproducible.
+Python에서는 항상 다양한 변수를 사용합니다. 변수를 통해 코드의 재현성을 높일 수 있습니다.
 
 ---
 
-## Reproducibility
+## 재현성
 
 ```yaml
 type: FullSlide
@@ -142,11 +135,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+예를 들어, 이렇게 height, weight, bmi 변수를 생성하는 코드가 스크립트에 있다고 가정해 봅시다. 다른 체중을 사용해 bmi를 다시 계산하고 싶다면,
 
 ---
 
-## Reproducibility
+## 재현성
 
 ```yaml
 type: FullSlide
@@ -167,13 +160,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+weight 변수의 선언만 변경하고 스크립트를 다시 실행하면 됩니다. 그러면 이에 맞춰 bmi도 변경됩니다. 변수 weight의 값이 변경되었기 때문이죠.
 
-So far, we've only worked with numerical values, such as height and weight.
+지금까지는 키나 몸무게처럼 숫자로 된 값만 다뤘는데요.
 
 ---
 
-## Python Types
+## Python 타입
 
 ```yaml
 type: FullSlide
@@ -199,13 +192,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+Python에서는 각 숫자에 특정한 타입이 있습니다. 각 값의 타입은 type 함수를 이용해 확인할 수 있습니다. bmi 값의 타입을 확인하려면, type을 입력하고 괄호 안에 bmi라고 입력하면 됩니다. 그럼 이 값이 float 값임을 알 수 있습니다. 이건 Python에서 실수를 나타내는 방식으로, 정수 부분과 소수 부분을 모두 가질 수 있습니다. Python에는 예시와 같이 int라는 정수 타입도 있습니다.
 
-To do data science, you'll need more than ints and floats, though.
+데이터 과학은 정수와 실수만으로는 충분하지 않죠.
 
 ---
 
-## Python Types (2)
+## Python 타입(2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +228,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python에는 이외에도 수많은 타입이 있습니다. 가장 일반적인 것은 문자열과 불리언입니다.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+문자열은 Python에서 텍스트를 나타내는 방법인데요. 예시에서 보이는 것처럼 문자열을 만들 때 큰따옴표와 작은따옴표를 모두 사용할 수 있습니다. 마지막 변수의 타입을 출력해 보면, str임을 알 수 있습니다. str은 문자열의 영문 약어입니다.
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+불리언은 True나 False 중 하나의 값만 가지는 타입입니다. 일상적인 대답인 '네', '아니오'와 비슷한 개념입니다. 불리언은 앞으로 데이터에서 필터링 작업을 수행할 때와 같은 경우에 매우 유용하게 사용될 것입니다.
 
-There's something special about Python data types.
+Python 데이터 타입에는 특별한 점이 있습니다.
 
 ---
 
-## Python Types (3)
+## Python 타입(3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +262,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- 다른 타입 = 다른 동작!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+두 정수를 더할 때 사용하는 코드와 두 문자열을 더할 때 사용하는 코드를 살펴보면,
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+정수는 값이 더해졌고, 문자열은 서로 이어 붙여졌습니다. 덧셈 연산자가 데이터 타입에 따라 다르게 동작한 거죠. 이건 일반적인 원칙인데요. 코드의 동작 방식이 다루는 타입에 따라 달라지게 됩니다.
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+다음 연습 문제에서는 첫 변수를 만들어보고, Python의 데이터 타입 몇 가지를 가지고 실험해볼 것입니다. 다음 영상에서 리스트에 대해 자세히 설명해 드리겠습니다.
 
 ---
 
-## Let's practice!
+## 연습해봅시다!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +281,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+이제 코딩을 시작해볼까요? 다음 챕터에서 여러분이 더욱 멋진 Python 차트를 만드는 모습을 기대하고 있겠습니다.
