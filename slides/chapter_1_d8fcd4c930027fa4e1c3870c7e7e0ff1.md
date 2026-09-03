@@ -2,17 +2,11 @@
 title: Insert title here
 key: d8fcd4c930027fa4e1c3870c7e7e0ff1
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v8/735_ch1_1.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v8/hls-735_ch1_1.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/zh-TW/1a64a914-099f-46a0-959a-cfb0b9e15d58-c984f10a2e5238f0d9d224b11b3184ce.mp3
 ---
 
-## Hello Python!
-
+## 你好，Python！
 ```yaml
 type: TitleSlide
 key: f743ca8c41
@@ -23,13 +17,13 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Hi, my name is Hugo and I'll be your host for Introduction to Python for Data Science.
+大家好！我是 Hugo，也是「資料科學 Python 入門」這門課程的主講人。
 
-I'm a data scientist and educator at DataCamp.
+我是 DataCamp 的一名資料科學家和講師。
 
 ---
 
-## How you will learn
+## 學習方式
 
 ```yaml
 type: FullSlide
@@ -38,10 +32,10 @@ disable_transition: true
 ```
 
 `@part1`
-![DataCamp Interface](https://assets.datacamp.com/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.gif)
+![DataCamp 介面](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/729574d2168960686381caefe79baf5978e27d0d/liveexercise.jpg)
 
 `@script`
-In this course, you will learn Python for Data Science through video lessons, like this one, and interactive exercises. You get your own Python session where you can experiment and try to come up with the correct code to solve the instructions. You're learning by doing, while receiving customized and instant feedback on your work.
+在這門課程中，你將透過類似這樣的影片講解和互動練習來學習有關資料科學的 Python 知識。課程中提供了獨立的 Python 程式設計環境，你可以自由嘗試並撰寫出符合指令要求的正確程式碼。透過這種邊做邊學的方式，你還能即時獲得個性化反饋指導。
 
 ---
 
@@ -53,20 +47,20 @@ key: 3f23b93572
 ```
 
 `@part1`
-![guido-hba.png](https://assets.datacamp.com/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.png = 38){{1}}
+![guido-hba.png](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/fb3e4b8dc114529dafffb37d33f2b2244210d40f/guido-hba.jpg = 38){{1}}
 
-- General purpose: build anything{{2}}
+- 通用程式設計：構建任何內容{{2}}
 
-- Open source! Free!{{3}}
+- 開源！免費！{{3}}
 
-- Python packages, also for data science{{4}}
+- Python 套件，也適用於資料科學{{4}}
 
-	- Many applications and fields{{5}}
+	- 許多應用和領域{{5}}
 
 `@script`
-Python was conceived by Guido Van Rossum. Here, you can see a photo of me with Guido. What started as a hobby project, soon became a general purpose programming language: nowadays, you can use Python to build practically any piece of software. But how did this happen? Well, first of all, Python is open source. It's free to use. Second, it's very easy to build packages in Python, which is code that you can share with other people to solve specific problems. Throughout time, more and more of these packages specifically built for data science have been developed. Suppose you want to make some fancy visualizations of your company's sales. There's a package for that. Or what about connecting to a database to analyze sensor measurements? There's also a package for that.
-People often refer to Python as the swiss army knife of programming languages as you can do almost anything with it.
-In this course, we'll start to build up your data science coding skills bit by bit, so make sure to stick around to see how powerful the language can be.
+Python 最初由 Guido van Rossum 構想並創立。這張照片就是我和 Guido 的合影。它起初只是一個業餘專案，但很快便發展成為了一種通用程式設計語言：如今，你幾乎可以用 Python 來開發任何軟體。這是怎麼做到的呢？首先，Python 是開源且完全免費的。其次，在 Python 中開發「套件」非常簡單。你可以把這些程式碼分享給他人，用來解決特定的問題。久而久之，越來越多專門針對資料科學的擴充套件應運而生。假設你想為公司的銷售資料製作炫酷的可視化圖表，一般都有現成的套件可用；如果你想連接資料庫來分析感測器測量資料？同樣有對應的套件。
+人們經常把 Python 比作程式設計界的「瑞士軍刀」，因為你幾乎能用它做任何事。
+在這門課程中，我們將帶你一步步掌握資料科學程式設計技能，務必堅持學習，感受這門語言的強大魅力。
 
 ---
 
@@ -78,12 +72,12 @@ key: 43a91a7217
 ```
 
 `@part1`
-**Execute Python commands**
+**執行 Python 命令**
 
-![ipython_shell.png](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png = 95)
+![ipython_shell.png](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.jpg = 95)
 
 `@script`
-Now that you're all eyes and ears for Python, let's start experimenting. I'll start with the
+現在，既然你對 Python 充滿興趣，那就讓我們開始動手嘗試吧！我先從 Python Shell 講起，
 
 ---
 
@@ -96,12 +90,12 @@ disable_transition: true
 ```
 
 `@part1`
-**Execute Python commands**
+**執行 Python 命令**
 
-![ipython_shell_highlighted.png](https://assets.datacamp.com/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
+![ipython_shell_highlighted.png](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/dd43cc0183b15b43a072eb0fbab4caa72dee9250/pyexercise_shell.jpg = 95)
 
 `@script`
-Python shell, a place where you can type Python code and immediately see the results. In DataCamp's exercise interface, this shell is embedded here. Let's start off simple and use Python as a calculator.
+在這裡輸入 Python 程式碼能即時看到執行結果。在 DataCamp 的練習介面中，Shell 就嵌入在這裡。我們先從簡單的開始，把 Python 當作計算器來使用。
 
 ---
 
@@ -114,18 +108,18 @@ disable_transition: true
 ```
 
 `@part1`
-&nbsp;
+ 
 
-![Calculations in DataCamp's IPython shell](https://assets.datacamp.com/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.gif = 95)
+![在 DataCamp 的 IPython Shell 中執行計算](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/cee32b788a62e4b9a1234ccde56ac9ebb49cfa72/shelladdition.jpg = 95)
 
 `@script`
-Let me type 4 + 5, and hit Enter. Python interprets what you typed and prints the result of your calculation, 9. The Python shell that's used here is actually not the original one; we're using IPython, short for Interactive Python, which is some kind of juiced up version of regular Python that'll be useful later on.
+輸入 4 加 5，然後按下 Enter 鍵，Python 就會解析你輸入的內容，並印出計算結果 9。這裡用到的 Python Shell 其實不是原生版本，而是 IPython，也就是 Interactive Python 的縮寫。它是常規 Python 的「加強版」，在後面會大有用處。
 
-IPython was created by Fernando Pérez and is part of the broader Jupyter ecosystem. Apart from interactively working with Python, you can also have Python run so called
+IPython 由 Fernando Pérez 開發，隸屬於更龐大的 Jupyter 生態系統。除了進行互動式操作外，你還可以用 Python 來執行所謂的
 
 ---
 
-## Python Script
+## Python 腳本
 
 ```yaml
 type: FullSlide
@@ -133,20 +127,20 @@ key: 78ef256bc0
 ```
 
 `@part1`
-- Text files - `.py`{{1}}
+- 文字檔 - `.py`{{1}}
 
-- List of Python commands{{2}}
+- Python 指令清單{{2}}
 
-- Similar to typing in IPython Shell{{3}}
+- 類似於在 IPython Shell 中輸入{{3}}
 
-![Python script in DataCamp](https://assets.datacamp.com/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
+![DataCamp 平台上的 Python 腳本](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/59f196e96536543a4fb8801228019fc4106f3791/pyexercise_script.jpg = 78){{3}}
 
 `@script`
-python scripts. These python scripts are simply text files with the extension (dot) py. It's basically a list of Python commands that are executed, almost as if you where typing the commands in the shell yourself, line by line.
+這些 Python 腳本在本質上就是副檔名為 .py 的文字檔。它記錄了一連串按順序執行的 Python 指令，就像你自己手動在 Shell 視窗裡逐行輸入並執行一樣。
 
 ---
 
-## Python Script
+## Python 腳本
 
 ```yaml
 type: FullSlide
@@ -155,14 +149,14 @@ disable_transition: true
 ```
 
 `@part1`
-![GIF: typing 4 + 5 in the script and hitting submit answer. No output is shown.](https://assets.datacamp.com/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.gif = 95)
+![GIF：在腳本中輸入 4 + 5 並按下送出答案。 未顯示輸出。](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/2f96e979012e15329cc158d1e0f496aac3539f45/scriptnoprint.jpg = 95)
 
 `@script`
-Let's put the command from before in a script now, which can be found here in DataCamp's interface. The next step is executing the script, by clicking 'Submit Answer'. If you execute this script in the DataCamp interface, there's nothing in the output pane. That's because you have to explicitly use print inside scripts if you want to generate output during execution.
+現在，我們把剛才的指令新增到腳本裡，腳本就在 DataCamp 介面上的這個位置。下一步是按下「送出答案」來執行腳本。不過，如果在 DataCamp 介面裡執行這個腳本，輸出視窗中不會有任何內容。這是因為要想在腳本執行時顯示輸出結果，還必須在程式碼中明確使用 print() 函式。
 
 ---
 
-## Python Script
+## Python 腳本
 
 ```yaml
 type: FullSlide
@@ -172,16 +166,16 @@ code_zoom: 90
 ```
 
 `@part1`
-![python_script_print.gif](https://assets.datacamp.com/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.gif = 95)
+![python_script_print.gif](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/8b13d046bb54dcb11aa49f0da7363781129d1561/scriptwithprint.jpg = 95)
 
-- Use `print()` to generate output from script
+- 使用 `print()` 從腳本生成輸出
 
 `@script`
-Let's wrap our previous calculation in a print call, and rerun the script. This time, the same output as before is generated, great! Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.
+我們把剛才的計算放入 print() 函式中，再重新執行一次腳本。這次，輸出的結果和之前一模一樣，太棒了！我們可以把程式碼儲存到 Python 腳本中，而不是每次都在命令列裡手動重複輸入，這不僅能讓程式碼結構更清晰，還能省去修改程式碼時重複輸入的麻煩。你只需在腳本裡完成修改，重新整體執行一遍就行。
 
 ---
 
-## DataCamp Interface
+## DataCamp 介面
 
 ```yaml
 type: FullSlide
@@ -189,19 +183,18 @@ key: 693ba1cd14
 ```
 
 `@part1`
-![Screenshot of DataCamp interface](https://assets.datacamp.com/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.png)
+![DataCamp 介面截圖](https://assets.datacamp.com/img/translations/zh-TW/production/repositories/288/datasets/a9e8440bb8fbd49e4a73e4c36ef1cd677c0dd55f/pyexercise.jpg)
 
 `@script`
-Now that you've got an idea about different ways of working with Python, I suggest you head over to the exercises. Use the IPython Shell for experimentation, and use the Python script editor to code the actual answer. If you click Submit Answer, your script will be executed and checked for correctness.
+現在你已經熟悉了 Python 的不同使用方式，不妨去練習一下。你可以用 IPython Shell 來進行測試和摸索，並在 Python 腳本編輯器中撰寫最終的解答程式碼。按下「送出答案」後，系統就會執行你的腳本並自動校驗結果。
 
 ---
 
-## Let's practice!
-
+## 一起來練習吧！
 ```yaml
 type: FinalSlide
 key: 7445cd202e
 ```
 
 `@script`
-Get coding and don't forget to have fun!
+開始編寫程式碼吧，好好享受學習的樂趣！

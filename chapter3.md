@@ -1,22 +1,19 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
-description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+title_meta: 第 3 章
+title: 函式和套件
+description: 你將學習如何使用函式、方法和套件，高效複用優秀 Python 開發者撰寫的程式碼。目標是減少為解決複雜問題而需撰寫的程式碼量。
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: 函式
   - nb_of_exercises: 4
-    title: Methods
+    title: 方法
   - nb_of_exercises: 4
-    title: Packages
+    title: 套件
 ---
 
-## Functions
+## 函式
 
 ```yaml
 type: VideoExercise
@@ -29,7 +26,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## 常用函式
 
 ```yaml
 type: NormalExercise
@@ -40,23 +37,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python 提供了許多開箱即用的內建函式。作為一名資料科學家，這些函式可以讓你的工作更輕鬆。你已經了解了兩個這樣的函式：`print()` 和 `type()`。還有像 `str()`、`int()`、`bool()` 和 `float()` 這樣用於轉換資料類型的函式。你可以在[此處](https://docs.python.org/3/library/functions.html)了解它們。這些都是內建函式。
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+函式呼叫很簡單。要取得 `3.0` 的類型並將輸出儲存到新變數 `result` 中，可以使用以下程式碼：
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- 將 `type()` 嵌套在 `print()` 內，印出 `var1` 的資料類型。
+- 對於串列 `var1`，使用 `len()` 取得[串列長度](https://docs.python.org/3/library/functions.html#len)。將其包含在 `print()` 呼叫中即可直接印出。
+- 使用 `int()` 將 `var2` 轉換為[整數](https://docs.python.org/3/library/functions.html#int)。將輸出結果儲存為 `out2`。
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- 像這樣呼叫 `type()` 函式：`type(var1)`。
+- 像你之前多次做過的那樣呼叫 `print()`。只需把你想印出的變數放入括號裡。
+- `int(x)` 會將 `x` 轉換為整數。
 
 `@pre_exercise_code`
 ```{python}
@@ -97,26 +94,26 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不需要更改或刪除預定義的變數。"
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__:請確保使用 `{{sol_call}}` 輸出 `var1` 的 %s。"
+Ex().has_printout(0, not_printed_msg = patt % '類型')
+Ex().has_printout(1, not_printed_msg = patt % '長度')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "您是否使用了 `int()` 將 `var2` 轉換為整數？"
+int_incorr_msg = "您是否將 `var2` 傳遞給 `int()`？"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="您正確地調用了 `int()`；現在請確保將此調用的結果賦值給 `out2`。"),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("做得好！`len()` 函數非常有用；它也可以用於字符串以計算字符數！")
 ```
 
 ---
 
-## Help!
+## help() 函式
 
 ```yaml
 type: MultipleChoiceExercise
@@ -127,27 +124,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+也許你剛好知道某個 Python 函式的名稱，但不知道具體如何使用。有趣的是，你需要使用另一個函式來查詢這個函式的資訊：`help()`。在 IPython 中，你也可以在函式名前加上 `?`。
 
-To get help on the `max()` function, for example, you can use one of these calls:
+例如，要查看函式 `max()` 的說明，你可以使用以下任一呼叫：
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+在 IPython Shell 中開啟有關 `pow()` 的[文件](https://docs.python.org/3/library/functions.html#pow)。輸入 `?pow` 或 `help(pow)`，然後按 **Enter** 即可將其開啟。
 
-Which of the following statements is true?
+以下哪一項說法是正確的？
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` 需要 3 個參數：`base`、`exp` 和 `mod`。如果不提供 `mod`，該函式將回傳錯誤。
+- `pow()` 需要 3 個必填參數：`base`、`exp` 和 `None`。
+- `pow()` 需要 `base` 和 `exp` 參數；`mod` 是可選的。
+- `pow()` 需要 2 個參數：`exp` 和 `mod`。缺少 `exp` 會導致錯誤。
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- 可選參數會使用 `=` 設定預設值；如果沒有為該參數賦值，函式會使用其預設值。
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +153,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "不完全正確。`mod` 有一個預設值，如果您不指定值，將使用該預設值。"
+msg2 = "不正確。`None` 是 `mod` 參數的預設值。"
+msg3 = "完美！使用 `help()` 可以幫助您了解函數的運作方式，釋放其全部潛力！"
+msg4 = "不正確。`pow()` 接受三個參數，其中一個有預設值。"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## 多個參數
 
 ```yaml
 type: NormalExercise
@@ -176,25 +173,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+在上一個練習中，你透過使用 `help()` 查看文件，掌握了什麼是可選參數。現在，你將動手試試，使用參數來修改 `sorted()` 函式的行為。
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+在 IPython Shell 中輸入 `help(sorted)`，查看 `sorted()` 的[文件](https://docs.python.org/3/library/functions.html#sorted)。
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+你會發現 `sorted()` 需要 3 個參數：`iterable`、`key` 和 `reverse`。在本練習中，你只需指定 `iterable` 和 `reverse`，無需指定 `key`。
 
-Two lists have been created for you.
+我們已為你建立了兩個串列。
 
-Can you paste them together and sort them in descending order?
+你能把它們合併在一起並按降序排序嗎？
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- 使用 `+` 將 `first` 和 `second` 的內容合併為一個新串列：`full`。
+- 對 `full` 呼叫 `sorted()`，並將 `reverse` 參數設為 `True`。將排序後的串列儲存為 `full_sorted`。
+- 最後印出 `full_sorted` 的輸出結果。
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- 將 `first` 和 `second` 相加（就像對兩個數字求和一樣），並把結果賦值給 `full`。
+- 呼叫 `sorted()` 並傳入兩個參數：`full` 和 `reverse=True`。
+- 使用 `print()` 印出變數的輸出結果。
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +232,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "您不必更改或刪除已經存在的變數 `first` 和 `second`。"
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="確保您將調用 `sorted()` 的結果賦值給 `full_sorted`。"),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("太棒了！前往觀看有關 Python 方法的影片。")
 ```
 
 ---
 
-## Methods
+## 方法
 
 ```yaml
 type: VideoExercise
@@ -266,7 +263,7 @@ xp: 50
 
 ---
 
-## String Methods
+## 字串方法
 
 ```yaml
 type: NormalExercise
@@ -277,19 +274,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+字串自帶了許多方法。請跟著指引操作，探索其中幾個範例。如果你想了解更多細節，可以隨時在 IPython Shell 終端內輸入 `help(str)` 來進行查看。
 
-A string `place` has already been created for you to experiment with.
+我們已經提前為你建立好了一個名為 `place` 的字串，方便你動手嘗試。
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- 對 `place` 使用 `.upper()` [方法](https://docs.python.org/3/library/stdtypes.html#str.upper)，並將結果儲存在 `place_up` 中。使用你在前一個影片中學到的呼叫方法的語法。
+- 印出 `place` 和 `place_up`。看看這兩個變數是不是都改變了？
+- 透過對 `place` 呼叫 `.count()`，並將字母 `'o'` 作為輸入傳遞給該方法，印出 `place` 中字母 o 的數量。 注意，我們討論的是變數 `place`，而不是單詞 `"place"`！
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- 你可以直接對 `place` 呼叫 `.upper()` 方法，無需任何額外的輸入。
+- 要印出變數 `x`，你可以寫 `print(x)`。
+- 確保將 `place.count(____)` 呼叫嵌套在 `print()` 函式中，以便印出結果。
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +327,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不需要更改或移除預定義的變數。"
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "別忘了輸出 `%s`。"
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="將 `place.upper()` 呼叫的結果賦值給 `place_up`。"),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "您已經正確計算了 `place` 中字母 o 的數量；現在請確保將 `place.count('o')` 呼叫包裝在 `print()` 函數中以輸出結果。"),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("很好！從輸出中注意到 `upper()` 方法不會改變其被調用的對象。在下一個練習中，這對於列表將會有所不同！")
 ```
 
 ---
 
-## List Methods
+## 串列方法
 
 ```yaml
 type: NormalExercise
@@ -365,20 +362,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+在 Python 中，並不是只有字串才自帶方法，串列、浮點數、整數和布林值也都綁定了許多超實用的內建方法。在本練習中，你將嘗試使用：
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()`：用來查找串列中第一個匹配元素的索引位置；
+- `.count()`：用來統計某個元素在串列中一共出現了多少次。
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+接下來，你將對記錄房屋各區域面積的串列 `areas` 進行操作。
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- 使用 `.index()` 方法取得 `areas` 中等於 `20.0` 的元素的索引。印出該索引。
+- 對 `areas` 呼叫 `.count()`，統計 `9.50` 在串列中出現了多少次。同樣，將該數字印出。
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- 要印出索引，請將 `areas.index(___)` 呼叫嵌套在 `print()` 函式中。
+- 要印出元素 `x` 在串列中出現的次數，請將 `areas.count(___)` 呼叫嵌套在 `print()` 函式中。
 
 `@pre_exercise_code`
 ```{python}
@@ -411,7 +408,7 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "您不需要更改或移除預定義的列表 `areas`。"
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
@@ -420,12 +417,12 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("很好！這些是 `list` 方法的範例，這些方法不會改變它們所被調用的列表。")
 ```
 
 ---
 
-## List Methods (2)
+## 串列方法 (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +433,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+大多數串列方法都會修改呼叫它們的原串列。例如：
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()`：向呼叫它的串列中新增一個元素；
+- `.remove()`：從串列中[移除](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable)第一個與輸入匹配的元素；
+- `.reverse()`：將所呼叫串列中元素的順序[反轉](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable)。
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+接下來你將對記錄房屋各區域面積的串列 `areas` 進行操作。
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- 使用 `.append()` 兩次，依次加入泳池小屋和車庫的面積：分別是 `24.5` 和 `15.45`。注意，務必要按上面的順序新增。
+- 印出 `areas`。
+- 使用 `.reverse()` 方法將 `areas` 中元素的順序反轉。
+- 再次印出 `areas`。
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- 對於第一條指令，需要呼叫 `areas.append(___)` 兩次。
+- 要印出變數 `x`，只需加入 `print(x)`。
+- `.reverse()` 方法不需要額外輸入；只需使用點號加空括號：`.reverse()`。
+- 要印出變數 `x`，只需加入 `print(x)`。
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +506,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("做得好！")
 ```
 
 ---
 
-## Packages
+## 套件
 
 ```yaml
 type: VideoExercise
@@ -527,7 +524,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## 匯入套件
 
 ```yaml
 type: NormalExercise
@@ -538,24 +535,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+假設你想計算一個圓的周長和面積，公式如下：
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+你不需要手動輸入 `pi` 的數值，可以直接使用包含圓周率數值的 `math` 套件。
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+補充說明：`**` 代表次方運算。例如，`3**4` 表示 `3` 的 `4` 次方，結果為 `81`。
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- 匯入 `math` 套件。
+- 使用 `math.pi` 計算圓的周長，並將結果儲存在 `C` 中。
+- 使用 `math.pi` 計算圓的面積，並將結果儲存在 `A` 中。
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- 你可以直接使用 `import math`，然後使用 `math.pi` 來引用 `pi`。
+- 按照題目中給出的公式計算 `C`。乘法使用 `*` 運算子。
+- 按照題目中給出的公式計算 `A`。乘法和次方運算分別使用 `*` 和 `**` 運算子。
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +591,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "您對 `%s` 的計算不太正確。請確保使用 `math.pi`。"
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +599,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:保留 `{{sol_call}}` 以列印出圓周長。"),
+  has_printout(1, not_printed_msg = "__JINJA__:保留 `{{sol_call}}` 以列印出面積。")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("很好！如果您知道如何處理來自套件的函數，許多 Python 程式設計師的力量就在您的指尖！")
 ```
 
 ---
 
-## Selective import
+## 選擇性匯入
 
 ```yaml
 type: NormalExercise
@@ -622,22 +619,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+通用匯入（如 `import math`）會使 `math` 套件中的**所有**功能都可用。不過，如果你只打算使用套件中的某個部分，也可以進行更有針對性的匯入：
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+再試一下剛才的操作，不過這次僅使用 `pi`。
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- 從 `math` 套件中執行選擇性匯入，僅匯入 `pi` 函式。
+- 使用 `pi` 計算圓的周長，並將結果儲存在 `C` 中。
+- 使用 `pi` 計算圓的面積，並將結果儲存在 `A` 中。
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- 使用 `from math import pi` 進行選擇性匯入。
+- 現在，你可以直接使用 `pi` 了！
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +673,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "您對 `%s` 的計算不太正確。請確保僅使用 `pi`。"
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "請確保從 `math` 套件中匯入 `pi`。您應該使用 `from ___ import ___` 的表示法。",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +683,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:保留 `{{sol_call}}` 以列印出圓周長。"),
+  has_printout(1, not_printed_msg = "__JINJA__:保留 `{{sol_call}}` 以列印出面積。")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("很好！繼續進行下一個練習。")
 ```
 
 ---
 
-## Different ways of importing
+## 幾種常見的匯入方式
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +703,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+將套件和模組匯入 Python 有多種方式。根據匯入方式的不同，撰寫的 Python 呼叫程式碼也不同。
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+假設你想使用 `inv()` [函式](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html)，該函式位於 `scipy` 套件的子套件 `linalg` 中。你希望能夠按如下方式使用該函式：
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+為了讓上面的程式碼正常執行而不出現錯誤，你需要使用下面哪句 `import` 陳述式？
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +720,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- 在 IPython Shell 中試試上面幾種不同的 import 陳述式，看看哪一個能讓 `my_inv([[1, 2], [3, 4]])` 這行程式碼正常執行而不出現錯誤。按 **enter** 即可執行輸入的程式碼。
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +729,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "不正確，請再試一次。嘗試在 IPython shell 中使用不同的 import 語句，看看哪一個能讓 `my_inv([[1, 2], [3, 4]])` 這行程式碼運行而不出錯。"
+msg4 = "正確！`as` 關鍵字允許您為匯入的函數創建一個本地名稱：`inv()` 現在可以作為 `my_inv()` 使用。"
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
