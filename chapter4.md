@@ -1,19 +1,16 @@
 ---
-title_meta: Chapter 4
+title_meta: 第 4 章
 title: NumPy
-description: >-
-  NumPy is a fundamental Python package to efficiently practice data science.
-  Learn to work with powerful tools in the NumPy array, and get started with
-  data exploration.
+description: NumPy 是進行資料科學實踐的基礎 Python 套件。學習使用強大的 NumPy 陣列工具，並開始進行資料探索。
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
 lessons:
   - nb_of_exercises: 5
     title: Numpy
   - nb_of_exercises: 5
-    title: 2D Numpy Arrays
+    title: 二維 Numpy 陣列
   - nb_of_exercises: 3
-    title: 'Numpy: Basic Statistics'
+    title: Numpy：基礎統計學
 ---
 
 ## NumPy
@@ -29,7 +26,7 @@ a0487c26210f6b71ea98f917734cea3a
 
 ---
 
-## Your First NumPy Array
+## 建立第一個 NumPy 陣列
 
 ```yaml
 type: NormalExercise
@@ -40,19 +37,19 @@ skills:
   - 2
 ```
 
-You're now going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of `numpy`, a powerful package to do data science.
+現在，你將深入探索棒球的資料世界。在此過程中，你會熟練掌握 `numpy` 的基礎用法，這是資料科學領域一個極為強大的套件。
 
-A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code to create a `numpy` array from it?
+Python 腳本中已經定義了一個串列 `baseball`，代表一些棒球球員的身高（公分）。你能新增幾行程式碼，將其轉換成 `numpy` 陣列嗎？
 
 `@instructions`
-- Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use `np.array()` to create a `numpy` array from `baseball`. Name this array `np_baseball`.
-- Print out the type of `np_baseball` to check that you got it right.
+- 使用 `np` 匯入 `numpy` 套件，以便使用 `np` 來引用 `numpy`。
+- 使用 `np.array()` 將 `numpy` 串列轉換成 `baseball` 陣列，並將其命名為 `np_baseball`。
+- 印出 `np_baseball` 的資料類型，檢查操作是否正確。
 
 `@hint`
-- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
-- `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
-- To print out the type of a variable `x`, simply type `print(type(x))`.
+- 寫成 `import numpy as np` 這樣就能完成匯入。以後只要你想要使用 `np.fun_name()` 中的函式，都要寫成 `numpy` 形式。
+- 將 `baseball` 傳遞給 `np.array()`，然後將函式呼叫回傳的結果賦值給 `np_baseball`。
+- 要印出變數 `x` 的資料類型，只需直接輸入 `print(type(x))`。
 
 `@pre_exercise_code`
 ```{python}
@@ -89,7 +86,7 @@ print(type(np_baseball))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined variables."
+predef_msg = "您不需要更改或刪除預定義的變數。"
 Ex().has_import("numpy")
 Ex().check_correct(
   check_object("np_baseball"),
@@ -100,12 +97,12 @@ Ex().check_correct(
 )
 
 Ex().has_printout(0)
-success_msg("Great job!")
+success_msg("做得好！")
 ```
 
 ---
 
-## Baseball players' height
+## 棒球球員的身高
 
 ```yaml
 type: NormalExercise
@@ -116,21 +113,21 @@ skills:
   - 2
 ```
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height_in`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
+你是一位超級棒球迷。你決定致電 MLB（美國職業棒球大聯盟），詢問有關主要球員身高的更多統計資料。他們提供了包含一千多名球員的資料，這些資料以普通 Python 串列的形式儲存：`height_in`。球員的身高以英吋為單位。你能用它建立一個 `numpy` 陣列並將單位轉換為公尺嗎？
 
-`height_in` is already available and the `numpy` package is loaded, so you can start straight away (Source: stat.ucla.edu).
+`height_in` 已準備就緒，`numpy` 套件也已載入完成，你可以直接上手了（資料來源：stat.ucla.edu）。
 
 `@instructions`
-- Create a `numpy` array from `height_in`. Name this new array `np_height_in`.
-- Print `np_height_in`.
-- Multiply `np_height_in` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
-- Print out `np_height_m` and check if the output makes sense.
+- 使用 `height_in` 建立一個 `numpy` 陣列。將這個新陣列命名為 `np_height_in`。
+- 印出 `np_height_in` 的輸出結果。
+- 將 `np_height_in` 乘以 `0.0254`，以便將所有身高測量值的單位從英吋轉換為公尺。將新值儲存到新陣列 `np_height_m` 中。
+- 印出 `np_height_m` 的輸出結果，並檢查輸出是否合理。
 
 `@hint`
-- Use `np.array()` and pass it `height`. Store the result in `np_height_in`.
-- To print out a variable `x`, type `print(x)` in the Python script.
-- Perform calculations as if `np_height_in` is a single number: `np_height_in * conversion_factor` is part of the answer.
-- To print out a variable `x`, type `print(x)` in the Python script.
+- 使用 `np.array()` 並傳入 `height`。將結果儲存在 `np_height_in` 中。
+- 要印出變數 `x` 的輸出結果，只需在 Python 腳本中加上 `print(x)`。
+- 像對待單個數值一樣對 `np_height_in` 進行計算：`np_height_in * conversion_factor` 是解題的關鍵點之一。
+- 要印出變數 `x` 的輸出結果，只需在 Python 腳本中加上 `print(x)`。
 
 `@pre_exercise_code`
 ```{python}
@@ -190,15 +187,15 @@ Ex().check_correct(
 
 Ex().check_correct(
   has_printout(1),
-  check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height_in * 0.0254` to calculate `np_height_m`.")
+  check_object("np_height_m").has_equal_value(incorrect_msg = "使用 `np_height_in * 0.0254` 來計算 `np_height_m`。")
 )
 
-success_msg("Nice! In the blink of an eye, `numpy` performs multiplications on more than 1000 height measurements.")
+success_msg("很好！在眨眼之間，`numpy` 就能對超過 1000 個高度測量值進行乘法運算。")
 ```
 
 ---
 
-## NumPy Side Effects
+## NumPy 的一些「副作用」
 
 ```yaml
 type: MultipleChoiceExercise
@@ -209,19 +206,19 @@ skills:
   - 2
 ```
 
-`numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things are different.
+`numpy` 非常適合進行向量算術運算。但是，如果你將它的功能與常規 Python 串列進行比較，就會發現一些不同之處。
 
-First, `numpy` arrays cannot contain elements with different types. If you mix types, like booleans and integers, `numpy` automatically converts them to a common type. Booleans like `True` and `False` are treated as `1` and `0` when combined with numbers, so the array ends up as integers.
+首先，`numpy` 陣列不能包含不同類型的元素。如果你混用不同的資料類型（例如布林值和整數），`numpy` 會自動將它們轉換為通用類型。當布林值（`True` 和 `False`）與數字結合運算時，它們會被視為 `1` 和 `0`，因此該陣列最終會轉換為整數類型。
 
-Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and `numpy` arrays.
+其次，典型的算術運算子（例如 `+`、`-`、`*` 和 `/`）對於常規 Python 串列和 `numpy` 陣列具有不同的含義。
 
-Select the code that results in the following output:
+請選擇會得到以下輸出的程式碼：
 
 ```
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-The `numpy` package is already imported as `np`. You can run each option in the IPython Shell to see the output. 
+`numpy` 套件已透過 `np` 匯入。你可以在 IPython Shell 中執行每個選項，查看其輸出。
 
 `@possible_answers`
 - `np.array([True, 1, 2, 3, 4, False])`
@@ -230,7 +227,7 @@ The `numpy` package is already imported as `np`. You can run each option in the 
 - `np.array([0, 1, 2, 3, 4, 5])`
 
 `@hint`
-- Copy the different code chunks and paste them in the IPython Shell. Hit **enter** to run the code and see which output matches the one generated by `np.array([True, 1, 2]) + np.array([3, 4, False])`.
+- 複製不同的程式碼區塊並將其貼到 IPython Shell 中。按下 Enter 鍵來執行程式碼，查看哪個輸出與 `np.array([True, 1, 2]) + np.array([3, 4, False])` 所產生的輸出相符。
 
 `@pre_exercise_code`
 ```{python}
@@ -239,14 +236,14 @@ import numpy as np
 
 `@sct`
 ```{python}
-msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
+msg1 = msg3 = msg4 = "不正確。請嘗試不同的程式碼區塊，看看哪一個與目標程式碼區塊相符。"
+msg2 = "做得好！`True` 轉換為 1，`False` 轉換為 0。"
 Ex().has_chosen(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Subsetting NumPy Arrays
+## 提取 NumPy 陣列子集
 
 ```yaml
 type: NormalExercise
@@ -257,17 +254,17 @@ skills:
   - 2
 ```
 
-Subsetting (using the square bracket notation on lists or arrays) works exactly the same with both lists and arrays.
+子集提取操作（也就是在串列或陣列後面使用方括號來取值）在串列和陣列中的用法完全一樣。
 
-This exercise already has two lists, `height_in` and `weight_lb`, loaded in the background for you. These contain the height and weight of the MLB players as regular lists. It also has two `numpy` array lists, `np_weight_lb` and `np_height_in` prepared for you.
+本練習已在後台載入 `height_in` 和 `weight_lb` 這兩個串列。它們是普通串列，其中存放著 MLB 球員的身高和體重。練習還為你準備好了兩個 `numpy` 陣列：`np_weight_lb` 和 `np_height_in`。
 
 `@instructions`
-- Subset `np_weight_lb` by printing out the element at index 50.
-- Print out a sub-array of `np_height_in` that contains the elements at index 100 up to **and including** index 110.
+- 透過印出索引為 50 的元素來從 `np_weight_lb` 中提取子集。
+- 印出 `np_height_in` 的一個子陣列，其中包含從索引 100 到 110（包含索引 110）的元素。
 
 `@hint`
-- Make sure to wrap a `print()` call around your subsetting operations.
-- Use `[100:111]` to get the elements from index 100 up to and including index 110.
+- 確保將子集提取操作包含在 `print()` 呼叫中。
+- 使用 `[100:111]` 來取得從索引 100 到 110（包含索引 110）的元素。
 
 `@pre_exercise_code`
 ```{python}
@@ -308,7 +305,7 @@ print(np_height_in[100:111])
 `@sct`
 ```{python}
 Ex().has_import("numpy", same_as=False)
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不需要更改或刪除預定義的變數。"
 Ex().multi(
     check_object("np_height_in", missing_msg=msg).has_equal_value(incorrect_msg = msg),
     check_object("np_weight_lb", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -317,12 +314,12 @@ Ex().multi(
 Ex().has_printout(0)
 Ex().has_printout(1)
 
-success_msg("Nice! Time to learn something new: 2D NumPy arrays!")
+success_msg("很好！是時候學習一些新東西了：2D NumPy 陣列！")
 ```
 
 ---
 
-## 2D NumPy Arrays
+## 二維 NumPy 陣列
 
 ```yaml
 type: VideoExercise
@@ -335,7 +332,7 @@ ae3238dcc7feb9adecfee0c395fc8dc8
 
 ---
 
-## Your First 2D NumPy Array
+## 建立第一個二維 NumPy 陣列
 
 ```yaml
 type: NormalExercise
@@ -346,19 +343,19 @@ skills:
   - 2
 ```
 
-Before working on the actual MLB data, let's try to create a 2D `numpy` array from a small list of lists.
+在處理實際的 MLB 資料之前，我們先試著使用一個簡短的「巢狀串列」來建立一個二維 `numpy` 陣列。
 
-In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
+在本練習中，`baseball` 就是一個巢狀串列。主串列包含 4 個元素。其中的每個元素都是一個依次包含 4 名棒球球員身高和體重的串列。腳本中已為你寫好了 `baseball`。
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
+- 使用 `np.array()` 將 `numpy` 轉換為二維 `baseball` 陣列，將其命名為 `np_baseball`。
+- 印出 `np_baseball` 的資料類型。
+- 印出 `np_baseball` 的 `shape` 屬性。請使用 `np_baseball.shape`。
 
 `@hint`
-- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- Use `print()` in combination with `type()` for the second instruction.
-- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+- 腳本中已為你寫好 `baseball`。對其呼叫 `np.array()`，並將得到的二維 `numpy` 陣列儲存在 `np_baseball` 中。
+- 對於第二條指令，將 `print()` 與 `type()` 結合使用。
+- 呼叫 `np_baseball.shape` 可取得 `np_baseball` 的維度。記得要將其包含在 `print()` 呼叫中。
 
 `@pre_exercise_code`
 ```{python}
@@ -405,7 +402,7 @@ print(np_baseball.shape)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不需要更改或刪除預定義的變數。"
 Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 Ex().has_import("numpy", same_as = False)
 
@@ -420,12 +417,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Great! You're ready to convert the actual MLB data to a 2D `numpy` array now!")
+success_msg("太好了！您現在準備好將實際的 MLB 數據轉換為 2D `numpy` 陣列了！")
 ```
 
 ---
 
-## Baseball data in 2D form
+## 二維形式的棒球資料
 
 ```yaml
 type: NormalExercise
@@ -436,19 +433,19 @@ skills:
   - 2
 ```
 
-You realize that it makes more sense to restructure all this information in a 2D `numpy` array.
+你發現，將這些資訊重構成一個二維 `numpy` 陣列更合理。
 
-You have a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this list is `baseball` and it has been loaded for you already (although you can't see it).
+你有一個由串列組成的 Python 串列（巢狀串列）。在這個巢狀串列中，每個子串列分別代表一位棒球球員的身高和體重。該串列的名稱為 `baseball`，並且已經提前載入好（雖然你看不到它）。
 
-Store the data as a 2D array to unlock `numpy`'s extra functionality.
+將資料儲存為二維陣列，以便使用 `numpy` 的更多功能。
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`.
+- 使用 `np.array()` 將 `baseball` 轉換為二維 `numpy` 陣列，並命名為 `np_baseball`。
+- 印出 `np_baseball` 的 `shape` 屬性。
 
 `@hint`
-- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()`call around it.
+- `baseball` 在 Python 環境中已經可用。對其呼叫 `np.array()`，並將得到的二維 `numpy` 陣列儲存在 `np_baseball` 中。
+- 使用 `np_baseball.shape` 即可取得 `np_baseball` 的維度。記得將其包含在 `print()` 呼叫中。
 
 `@pre_exercise_code`
 ```{python}
@@ -491,12 +488,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Slick! Time to show off some killer features of multi-dimensional `numpy` arrays!")
+success_msg("太好了！是時候展示多維 `numpy` 陣列的一些絕佳功能了！")
 ```
 
 ---
 
-## Subsetting 2D NumPy Arrays
+## 二維 NumPy 陣列的子集提取
 
 ```yaml
 type: NormalExercise
@@ -507,7 +504,7 @@ skills:
   - 2
 ```
 
-If your 2D `numpy` array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
+如果你的二維 `numpy` 陣列結構規整，即每一列和每一欄都包含固定數量的數值，複雜的子集提取操作就會變得非常簡單。請看下面的程式碼，其中元素 `"a"` 和 `"c"` 是從一個巢狀串列中提取出來的。
 
 ```
 # numpy
@@ -516,17 +513,17 @@ np_x = np.array(x)
 np_x[:, 0]
 ```
 
-The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
+逗號前的索引代表「列」，逗號後的索引代表「欄」。冒號 `:` 表示切片；在此範例中，它的意思是讓 Python 選擇所有列。
 
 `@instructions`
-- Print out the 50th row of `np_baseball`.
-- Make a new variable, `np_weight_lb`, containing the entire second column of `np_baseball`.
-- Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
+- 印出 `np_baseball` 的第 50 列。
+- 建立一個新變數 `np_weight_lb`，用來提取 `np_baseball` 的整個第二欄。
+- 選擇 `np_baseball` 中第 124 位棒球球員的身高（第一欄）並將其印出。
 
 `@hint`
-- You need row index 49 in the first instruction! More specifically, you'll want to use `[49, :]`.
-- To select the entire second column, you'll need `[:, 1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a `print()` statement.
+- 你需要在第一條指令中使用列索引 49！更具體地說，你需要使用 `[49, :]`。
+- 要選擇整個第二欄，你需要使用 `[:, 1]`。
+- 對於最後一條指令，使用 `[123, 0]`；別忘記將整行程式碼包含在 `print()` 陳述式中。
 
 `@pre_exercise_code`
 ```{python}
@@ -569,7 +566,7 @@ print(np_baseball[123, 0])
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不需要更改或刪除預定義的變數。"
 Ex().multi(
     has_import("numpy", same_as = False),
     check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -577,16 +574,16 @@ Ex().multi(
 
 Ex().has_printout(0)
 
-Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight_lb`. This will select the entire first column.")
+Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "您可以使用 `np_baseball[:,1]` 來定義 `np_weight_lb`。這將選擇整個第一列。")
 
 Ex().has_printout(1)
 
-success_msg("This is going well!")
+success_msg("進展順利！")
 ```
 
 ---
 
-## 2D Arithmetic
+## 二維陣列的數學運算
 
 ```yaml
 type: NormalExercise
@@ -597,19 +594,19 @@ skills:
   - 2
 ```
 
-2D `numpy` arrays can perform calculations element by element, like `numpy` arrays.
+二維 `numpy` 陣列可以像一維 `numpy` 陣列一樣，逐元素執行計算。
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
+`np_baseball` 已提前寫好；它是一個二維 `numpy` 陣列，包含 3 欄，分別代表身高（英吋）、體重（磅）和年齡（歲）。`baseball` 可作為常規巢狀串列使用，`updated` 可作為二維 numpy 陣列使用。
 
 `@instructions`
-- You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
-- You want to convert the units of height and weight to metric (meters and kilograms, respectively). As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
-- Multiply `np_baseball` with `conversion` and print out the result.
+- 你已經成功取得了所有棒球球員身高、體重和年齡的變化資料。這些資料儲存在二維 `numpy` 陣列 `updated` 中。將 `np_baseball` 與 `updated` 相加並印出結果。
+- 你想把身高和體重的單位轉換為公制（分別為公尺和公斤）。第一步，建立一個包含三個數值 `0.0254`、`0.453592` 和 `1` 的 `numpy` 陣列，將其命名為 `conversion`。
+- 將 `np_baseball` 與 `conversion` 相乘並印出結果。
 
 `@hint`
-- `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with `np.array()`; the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
+- `np_baseball + updated` 會對這兩個 `numpy` 陣列進行逐元素相加。
+- 使用 `numpy` 建立一個 `np.array()` 陣列；其輸入是一個包含三個元素的常規 Python 串列。
+- 你可以直接使用 `np_baseball * conversion`，無需額外操作。試試看！記得將其包含在 `print()` 呼叫中。
 
 `@pre_exercise_code`
 ```{python}
@@ -657,7 +654,7 @@ print(np_baseball * conversion)
 ```{python}
 Ex().has_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
+msg = "您不需要更改或移除預定義的變數。"
 Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
 
 Ex().has_printout(0)
@@ -670,12 +667,12 @@ Ex().check_correct(
     )    
 )
 
-success_msg("Great job! Notice how with very little code, you can change all values in your `numpy` data structure in a very specific way. This will be very useful in your future as a data scientist!")
+success_msg("做得好！注意，通過很少的代碼，您可以以非常特定的方式更改 `numpy` 數據結構中的所有值。這在您未來作為數據科學家時將非常有用！")
 ```
 
 ---
 
-## NumPy: Basic Statistics
+## NumPy：基礎統計學
 
 ```yaml
 type: VideoExercise
@@ -688,7 +685,7 @@ xp: 50
 
 ---
 
-## Average versus median
+## 平均值與中位數
 
 ```yaml
 type: NormalExercise
@@ -699,19 +696,19 @@ skills:
   - 2
 ```
 
-You now know how to use `numpy` functions to get a better feeling for your data. 
+現在，你已經學會了怎麼使用 `numpy` 的函式來更好地理解資料。
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_. `np_baseball` is available.
+棒球資料存放在一個二維 `numpy` 陣列中，共有 3 欄（身高、體重、年齡）和 1015 列。該 `numpy` 陣列名為 `np_baseball`。不過，在重構資料後，你發現有些身高值異常高。那麼，你可以按照指示操作，探索在處理所謂的離群值 (_outliers_) 時，哪種彙總統計指標更合適。`np_baseball` 已提前準備好。
 
 `@instructions`
-- Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
-- Print out the mean of `np_height_in`.
-- Print out the median of `np_height_in`.
+- 建立 `numpy` 陣列 `np_height_in`，它等於 `np_baseball` 的第一欄。
+- 印出 `np_height_in` 的平均值。
+- 印出 `np_height_in` 的中位數。
 
 `@hint`
-- Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a NumPy array. Don't forget to throw in a `print()` call.
-- For the last instruction, use `np.median()`.
+- 使用二維 `numpy` 提取子集：`[:,0]` 是解題關鍵點之一。
+- 如果將 `numpy` 匯入為 `np`，可以使用 `np.mean()` 計算 NumPy 陣列的平均值。別忘記將其包含在 `print()` 呼叫中。
+- 對於最後一條指令，請使用 `np.median()`。
 
 `@pre_exercise_code`
 ```{python}
@@ -753,7 +750,7 @@ print(np.median(np_height_in))
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
+Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "您可以使用 `np_baseball[:,0]` 從 `np_baseball` 中選擇第一列"),
 
 Ex().check_correct(
     has_printout(0),
@@ -765,12 +762,12 @@ Ex().check_correct(
     check_function('numpy.median').has_equal_value()
 )
 
-success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get an idea about the overall distribution of the entire dataset.")
+success_msg("平均身高為 1586 英吋，這聽起來不太對，是嗎？然而，中位數似乎不受異常值的影響：74 英吋非常合理。檢查中位數和平均數以了解整個數據集的整體分佈總是一個好主意。")
 ```
 
 ---
 
-## Explore the baseball data
+## 探索棒球資料
 
 ```yaml
 type: NormalExercise
@@ -781,19 +778,19 @@ skills:
   - 2
 ```
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D NumPy array `np_baseball`, with three columns.
+由於均值和中位數相差甚遠，你決定向 MLB 投訴。他們找到了錯誤，並將更正後的資料傳送給了你。這些資料同樣以包含三欄的二維 NumPy 陣列 `np_baseball` 提供。
 
-The Python script in the editor already includes code to print out informative messages with the different summary statistics and `numpy` is already loaded as `np`. Can you finish the job? `np_baseball` is available.
+編輯器中的 Python 腳本已經寫好了用於印出包含不同彙總統計資訊的提示程式碼，並且 `numpy` 也已經使用 `np` 匯入。你能把剩下的程式碼補充完整嗎？`np_baseball` 已準確就緒。
 
 `@instructions`
-- The code to print out the mean height is already included. Complete the code for the median height.
-- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`. 
-- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
+- 印出平均身高的程式碼已包含在內。請把計算身高中位數的程式碼補充完整。
+- 對 `np_baseball` 的第 1 欄呼叫 `np.std()` 來計算 `stddev`。
+- 身材高大的球員體重往往也更重嗎？使用 `np.corrcoef()` 計算 `np_baseball` 第 1 欄與第 2 欄之間的相關係數，並將結果儲存到 `corr` 中。
 
 `@hint`
-- Use `np.median()` to calculate the median. Make sure to select to correct column first!
-- Subset the same column when calculating the standard deviation with `np.std()`.
-- Use `np_baseball[:, 0]` and `np_baseball[:, 1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
+- 使用 `np.median()` 計算中位數。首先要確保選擇正確的欄！
+- 使用 `np.std()` 計算標準差時，要對同一欄提取子集。
+- 使用 `np_baseball[:, 0]` 和 `np_baseball[:, 1]` 選擇第 1 欄和第 2 欄；它們是傳遞給 `np.corrcoef()` 的輸入。
 
 `@pre_exercise_code`
 ```{python}
@@ -840,26 +837,26 @@ print("Correlation: " + str(corr))
 
 `@sct`
 ```{python}
-msg = "You shouldn't change or remove the predefined `avg` variable."
+msg = "您不應更改或移除預定義的 `avg` 變數。"
 Ex().check_object("avg", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-missing = "Have you used `np.median()` to calculate the median?"
-incorrect = "To calculate `med`, pass the first column of `np_baseball` to `numpy.median()`. The example of `np.mean()` shows how it's done."
+missing = "您是否使用了 `np.median()` 來計算中位數？"
+incorrect = "要計算 `med`，請將 `np_baseball` 的第一列傳遞給 `numpy.median()`。`np.mean()` 的範例顯示了如何完成此操作。"
 Ex().check_correct(
   check_object("med").has_equal_value(),
   check_function("numpy.median", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.std()` to calculate the standard deviation?"
-incorrect = "To calculate `stddev`, pass the first column of `np_baseball` to `numpy.std()`. The example of `np.mean()` shows how it's done."
+missing = "您是否使用了 `np.std()` 來計算標準差？"
+incorrect = "要計算 `stddev`，請將 `np_baseball` 的第一列傳遞給 `numpy.std()`。`np.mean()` 的範例顯示了如何完成此操作。"
 Ex().check_correct(
   check_object("stddev").has_equal_value(),
   check_function("numpy.std", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.corrcoef()` to calculate the correlation?"
-incorrect1 = "To calculate `corr`, the first argument to `np.corrcoef()` should be the first column of `np_baseball`, similar to how did it before."
-incorrect2 = "To calculate `corr`, the second argument to `np.corrcoef()` should be the second column of `np_baseball`. Instead of `[:,0]`, use `[:,1]` this time."
+missing = "您是否使用了 `np.corrcoef()` 來計算相關性？"
+incorrect1 = "要計算 `corr`，`np.corrcoef()` 的第一個參數應該是 `np_baseball` 的第一列，類似於之前的做法。"
+incorrect2 = "要計算 `corr`，`np.corrcoef()` 的第二個參數應該是 `np_baseball` 的第二列。這次請使用 `[:,1]` 而不是 `[:,0]`。"
 Ex().check_correct(
   check_object("corr").has_equal_value(),
   check_function("numpy.corrcoef", index=0, missing_msg=missing).multi(
@@ -868,5 +865,5 @@ Ex().check_correct(
   )
 )
 
-success_msg("Great work! You've built a solid foundation - now it's time to use all of your new data science skills to solve more challenges and make an impact.")
+success_msg("做得好！您已經建立了堅實的基礎 - 現在是時候運用您所有的新數據科學技能來解決更多挑戰並產生影響。")
 ```
