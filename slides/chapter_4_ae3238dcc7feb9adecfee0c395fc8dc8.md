@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/ko-KR/c9ecb707-0ad6-4828-9cfe-e3e412aabcf9-d02b11f1d9370bd64a9a749ee5da168d.mp3
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy 배열
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+정말 대단합니다! 자, 이전 영상에서 등장한 numpy 배열을 다시 만들어보죠.
 
 ---
 
-## Type of NumPy Arrays
+## NumPy 배열의 타입
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+이 배열들이 무슨 타입인지 물어보면, Python은 numpy-dot-ndarray라고 답합니다. numpy-dot은 numpy 패키지에서 정의된 타입이라는 의미입니다. ndarray는 n차원 배열을 뜻합니다. np_height와 np_weight는 1차원 배열이지만, 2차원, 3차원, 심지어 7차원 배열도 얼마든지 만들 수 있습니다. 이번 영상에서는 2차원까지만 다루겠습니다.
 
 ---
 
-## 2D NumPy Arrays
+## 2D NumPy 배열
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+일반적인 Python 리스트 속의 리스트에서 2D numpy 배열을 만들 수 있습니다. 모든 가족의 키와 몸무게 데이터를 하나의 numpy 배열로 만들어보겠습니다. 이렇게요.
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+지금 np_2d를 출력해 보면, 직사각형 데이터 구조라는 것을 알 수 있습니다: 리스트 내의 각 하위 리스트는 2차원 numpy 배열의 하나의 행에 해당합니다. np_2d.shape를 보면, 실제로 두 개의 행과 다섯 개의 열이 있다는 것을 알 수 있습니다. shape는 np2d 배열의 속성이라고 불리며, 데이터 구조의 생김새에 대한 더 많은 정보를 줍니다.
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+속성에 접근하는 문법은 메서드를 호출하는 것과 비슷해 보이지만, 사실 이 둘은 다릅니다. 메서드에는 괄호가 붙지만, 보시는 것처럼 속성에는 괄호가 없습니다.
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+또한 2D 배열에도 배열에는 하나의 타입만 포함할 수 있다는 NumPy 규칙이 적용됩니다. 실수 하나를 문자열로 바꾸면, 배열의 모든 요소가 문자열로 강제 변환되어 결국 동일한 타입의 배열이 됩니다.
 
 ---
 
-## Subsetting
+## 부분 추출
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+2D numpy 배열은 리스트 속의 리스트를 개선한 형태라고 생각하시면 됩니다. 앞서 보여드린 것처럼 배열에 대해 계산을 수행할 수 있고, 더 발전된 방식으로 부분 추출도 가능합니다.
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+첫 번째 행을 선택한 다음, 그 행의 세 번째 요소를 선택하고 싶다고 가정해 봅시다. 행을 선택하려면 대괄호 안에 인덱스 0을 넣어야 합니다. 인덱스가 0부터 시작한다는 걸 잊지 마세요.
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+이제 세 번째 요소를 선택하려면, 같은 방식으로 대괄호를 한 번 더 추가하고 인덱스 '2'를 사용하면 됩니다.
 
 ---
 
-## Subsetting
+## 부분 추출
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+이렇게요. 우선 행을 선택하고, 그 다음 그 행에서 다른 요소를 선택하는 거죠.
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+대괄호 한 쌍과 쉼표를 이용한 다른 부분 추출 방법도 있습니다. 이렇게 호출해도 이전과 정확히 같은 값을 반환하죠. 쉼표 앞의 값은 행을 지정하고, 쉼표 뒤의 값은 열을 지정합니다. 지정한 행과 열의 교차점에 있는 값이 반환됩니다. 익숙해지면 이 문법이 더 직관적으로 느껴지고, 더 많은 가능성이 생깁니다.
 
 ---
 
-## Subsetting
+## 부분 추출
 
 ```yaml
 type: FullSlide
@@ -222,15 +217,15 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+두 번째와 세 번째 가족 구성원의 키와 몸무게를 선택하고 싶다고 가정해 봅시다. 원하는 행이 두 개이므로, 쉼표 앞에 콜론을 넣습니다. 두 번째와 세 번째 열만 선택하려면, 쉼표 뒤에 인덱스 1부터 3을 입력합니다. 이 경우 세 번째 인덱스는 포함되지 않는다는 걸 기억하세요. 교차점은 두 개의 행과 두 개의 열이 있는 2차원 배열을 반환합니다.
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+마찬가지로, 모든 가족 구성원의 몸무게를 선택하고 싶은 경우에는, 두 번째 행만 필요하므로 쉼표 앞에 1을 넣어 선택할 수 있습니다. 열은 전부 필요하기 때문에 쉼표 뒤에는 콜론을 넣습니다. 교차점은 두 번째 행 전체를 반환합니다.
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+마지막으로, 2차원 numpy 배열을 사용해서 1차원 numpy 배열과 같은 방식으로 요소별 계산을 할 수 있습니다. 이 내용을
 
 ---
 
-## Let's practice!
+## 연습해봅시다!
 
 ```yaml
 type: FinalSlide
@@ -238,4 +233,4 @@ key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+연습 문제에서 실습해보고, 2D numpy 배열 생성과 부분 추출도 시도해보세요! 신나네요.
