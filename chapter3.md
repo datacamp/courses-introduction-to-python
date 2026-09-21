@@ -1,22 +1,22 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
+title_meta: บทที่ 3
+title: ฟังก์ชันและแพ็กเกจ
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  เรียนรู้การใช้ฟังก์ชัน เมธอด และแพ็กเกจ เพื่อนำโค้ดที่นักพัฒนา Python
+  มืออาชีพเขียนไว้มาใช้ได้อย่างเต็มประสิทธิภาพ
+  เป้าหมายคือลดปริมาณโค้ดที่ต้องเขียนเพื่อแก้ปัญหาที่ซับซ้อน
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: ฟังก์ชัน
   - nb_of_exercises: 4
-    title: Methods
+    title: เมธอด
   - nb_of_exercises: 4
-    title: Packages
+    title: แพ็กเกจ
 ---
 
-## Functions
+## ฟังก์ชัน
 
 ```yaml
 type: VideoExercise
@@ -29,7 +29,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## ฟังก์ชันที่คุ้นเคย
 
 ```yaml
 type: NormalExercise
@@ -40,23 +40,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python มีฟังก์ชันในตัว (built-in functions) หลายตัวที่ช่วยให้การทำงานด้านวิทยาศาสตร์ข้อมูลง่ายขึ้น คุณรู้จักฟังก์ชันสองตัวไปแล้ว ได้แก่ `print()` และ `type()` นอกจากนี้ยังมีฟังก์ชันอย่าง `str()`, `int()`, `bool()` และ `float()` สำหรับแปลงชนิดข้อมูล ดูรายละเอียดเพิ่มเติมได้ [ที่นี่](https://docs.python.org/3/library/functions.html) ซึ่งทั้งหมดนี้ก็เป็นฟังก์ชันในตัวเช่นกัน
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+การเรียกใช้ฟังก์ชันทำได้ง่ายมาก ตัวอย่างเช่น หากต้องการหาชนิดข้อมูลของ `3.0` และเก็บผลลัพธ์ไว้ในตัวแปรใหม่ชื่อ `result` ให้เขียนดังนี้:
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- ใช้ `print()` ร่วมกับ `type()` เพื่อแสดงชนิดข้อมูลของ `var1`
+- ใช้ `len()` เพื่อหา[ความยาวของลิสต์](https://docs.python.org/3/library/functions.html#len) `var1` แล้วครอบด้วย `print()` เพื่อแสดงผลออกมาทันที
+- ใช้ `int()` เพื่อแปลง `var2` ให้เป็น[จำนวนเต็ม](https://docs.python.org/3/library/functions.html#int) แล้วเก็บผลลัพธ์ไว้ในตัวแปร `out2`
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- เรียกใช้ฟังก์ชัน `type()` แบบนี้: `type(var1)`
+- เรียกใช้ `print()` เหมือนที่เคยทำมาก่อน โดยใส่ตัวแปรที่ต้องการแสดงผลไว้ในวงเล็บ
+- `int(x)` จะแปลงค่า `x` ให้เป็นจำนวนเต็ม
 
 `@pre_exercise_code`
 ```{python}
@@ -97,26 +97,26 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "คุณไม่จำเป็นต้องเปลี่ยนแปลงหรือลบตัวแปรที่กำหนดไว้ล่วงหน้า"
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__:โปรดตรวจสอบให้แน่ใจว่าได้แสดงผล %s ของ `var1` ด้วย `{{sol_call}}`"
+Ex().has_printout(0, not_printed_msg = patt % 'ประเภท')
+Ex().has_printout(1, not_printed_msg = patt % 'ความยาว')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "คุณได้ใช้ `int()` เพื่อแปลง `var2` ให้เป็นจำนวนเต็มแล้วหรือไม่?"
+int_incorr_msg = "คุณได้ส่ง `var2` ไปยัง `int()` แล้วหรือไม่?"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="คุณเรียกใช้ `int()` ได้อย่างถูกต้องแล้ว โปรดตรวจสอบให้แน่ใจว่าได้กำหนดผลลัพธ์ของการเรียกใช้นี้ให้กับ `out2`"),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("ยอดเยี่ยมมาก! ฟังก์ชัน `len()` มีประโยชน์อย่างมาก และยังสามารถใช้กับสตริงเพื่อนับจำนวนอักขระได้อีกด้วย!")
 ```
 
 ---
 
-## Help!
+## ขอความช่วยเหลือ!
 
 ```yaml
 type: MultipleChoiceExercise
@@ -127,27 +127,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+บางทีคุณอาจรู้ชื่อฟังก์ชัน Python อยู่แล้ว แต่ยังไม่แน่ใจว่าต้องใช้งานอย่างไร วิธีดูข้อมูลของฟังก์ชันก็คือเรียกใช้อีกฟังก์ชันหนึ่งนั่นเอง ได้แก่ `help()` และใน IPython ยังสามารถใช้ `?` นำหน้าชื่อฟังก์ชันได้ด้วย
 
-To get help on the `max()` function, for example, you can use one of these calls:
+ตัวอย่างเช่น หากต้องการดูข้อมูลของฟังก์ชัน `max()` ให้ใช้คำสั่งใดคำสั่งหนึ่งต่อไปนี้:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+ให้ใช้ IPython Shell เปิดดู [เอกสาร](https://docs.python.org/3/library/functions.html#pow) ของฟังก์ชัน `pow()` โดยพิมพ์ `?pow` หรือ `help(pow)` แล้วกด **Enter**
 
-Which of the following statements is true?
+ข้อใดต่อไปนี้ถูกต้อง?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` รับอาร์กิวเมนต์ 3 ตัว ได้แก่ `base`, `exp` และ `mod` หากไม่ระบุ `mod` ฟังก์ชันจะเกิดข้อผิดพลาด
+- `pow()` ต้องการอาร์กิวเมนต์บังคับ 3 ตัว ได้แก่ `base`, `exp` และ `None`
+- `pow()` ต้องการอาร์กิวเมนต์ `base` และ `exp` ส่วน `mod` เป็นอาร์กิวเมนต์ที่ไม่บังคับ
+- `pow()` รับอาร์กิวเมนต์ 2 ตัว ได้แก่ `exp` และ `mod` หากไม่ระบุ `exp` จะเกิดข้อผิดพลาด
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- อาร์กิวเมนต์ที่ไม่บังคับจะถูกกำหนดค่าเริ่มต้นด้วย `=` ซึ่งฟังก์ชันจะใช้ค่านั้นหากไม่ได้ระบุอาร์กิวเมนต์นั้นมา
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +156,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "ไม่ถูกต้องทีเดียว `mod` มีค่าเริ่มต้นที่จะถูกใช้หากท่านไม่ได้ระบุค่า"
+msg2 = "ไม่ถูกต้อง `None` คือค่าเริ่มต้นสำหรับอาร์กิวเมนต์ `mod`"
+msg3 = "ยอดเยี่ยม! การใช้ `help()` ช่วยให้ท่านเข้าใจวิธีการทำงานของฟังก์ชัน และปลดปล่อยศักยภาพสูงสุดของฟังก์ชันเหล่านั้นได้!"
+msg4 = "ไม่ถูกต้อง `pow()` รับอาร์กิวเมนต์สามตัว โดยหนึ่งในนั้นมีค่าเริ่มต้น"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## อาร์กิวเมนต์หลายตัว
 
 ```yaml
 type: NormalExercise
@@ -176,25 +176,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+ในแบบฝึกหัดก่อนหน้า เราได้ระบุอาร์กิวเมนต์ที่ไม่บังคับโดยดูจากเอกสารประกอบด้วย `help()` คราวนี้จะนำความรู้นั้นมาใช้เพื่อเปลี่ยนพฤติกรรมของฟังก์ชัน `sorted()`
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+ลองดู[เอกสารประกอบ](https://docs.python.org/3/library/functions.html#sorted) ของ `sorted()` โดยพิมพ์ `help(sorted)` ใน IPython Shell
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+จะเห็นว่า `sorted()` รับอาร์กิวเมนต์สามตัว ได้แก่ `iterable`, `key`, และ `reverse` ในแบบฝึกหัดนี้ต้องระบุเพียง `iterable` และ `reverse` เท่านั้น ไม่จำเป็นต้องระบุ `key`
 
-Two lists have been created for you.
+มีลิสต์สองรายการเตรียมไว้ให้แล้ว
 
-Can you paste them together and sort them in descending order?
+ลองนำลิสต์ทั้งสองมาต่อกัน แล้วเรียงลำดับจากมากไปน้อยดูสิ
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- ใช้ `+` เพื่อรวมเนื้อหาของ `first` และ `second` เข้าด้วยกันเป็นลิสต์ใหม่ชื่อ `full`
+- เรียกใช้ `sorted()` กับ `full` และกำหนดอาร์กิวเมนต์ `reverse` ให้เป็น `True` จากนั้นบันทึกลิสต์ที่เรียงแล้วไว้ในชื่อ `full_sorted`
+- สุดท้าย พิมพ์ `full_sorted` แสดงผลออกมา
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- นำ `first` และ `second` มาบวกกันเหมือนกับตัวเลขสองตัว แล้วกำหนดผลลัพธ์ให้กับ `full`
+- ใช้ `sorted()` โดยระบุอินพุตสองตัว ได้แก่ `full` และ `reverse=True`
+- หากต้องการแสดงผลตัวแปร ให้ใช้ `print()`
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +235,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "คุณไม่จำเป็นต้องเปลี่ยนแปลงหรือลบตัวแปร `first` และ `second` ที่มีอยู่แล้ว"
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="โปรดตรวจสอบให้แน่ใจว่าคุณได้กำหนดผลลัพธ์จากการเรียกใช้ `sorted()` ให้กับ `full_sorted`"),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("ยอดเยี่ยม! ไปที่วิดีโอเกี่ยวกับเมธอดใน Python ได้เลย")
 ```
 
 ---
 
-## Methods
+## เมธอด
 
 ```yaml
 type: VideoExercise
@@ -266,7 +266,7 @@ xp: 50
 
 ---
 
-## String Methods
+## เมธอดของ String
 
 ```yaml
 type: NormalExercise
@@ -277,19 +277,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+String มีเมธอดให้ใช้งานหลายตัว ทำตามคำแนะนำด้านล่างเพื่อลองใช้บางส่วนจากนั้น หากอยากศึกษาเพิ่มเติม สามารถพิมพ์ `help(str)` ใน IPython Shell ได้เลย
 
-A string `place` has already been created for you to experiment with.
+ตัวแปร `place` ชนิด string ถูกสร้างไว้ให้แล้วสำหรับการทดลองในแบบฝึกหัดนี้
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- เรียกใช้[เมธอด](https://docs.python.org/3/library/stdtypes.html#str.upper) `.upper()` บน `place` แล้วเก็บผลลัพธ์ไว้ในตัวแปร `place_up` โดยใช้ syntax การเรียกเมธอดที่เรียนไปในวิดีโอก่อนหน้า
+- พิมพ์ `place` และ `place_up` ออกมา ทั้งสองตัวแปรเปลี่ยนแปลงไปหรือไม่?
+- พิมพ์จำนวนตัวอักษร o ในตัวแปร `place` โดยเรียกใช้ `.count()` บน `place` และส่งตัวอักษร `'o'` เป็น input ของเมธอด — ที่กล่าวถึงคือตัวแปร `place` ไม่ใช่คำว่า `"place"`!
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- สามารถเรียกใช้เมธอด `.upper()` บน `place` ได้โดยไม่ต้องใส่อาร์กิวเมนต์เพิ่มเติม
+- หากต้องการพิมพ์ตัวแปร `x` ให้เขียน `print(x)`
+- อย่าลืมครอบ `place.count(____)` ด้วยฟังก์ชัน `print()` เพื่อแสดงผลลัพธ์
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +330,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "คุณไม่จำเป็นต้องเปลี่ยนแปลงหรือลบตัวแปรที่กำหนดไว้ล่วงหน้า"
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "อย่าลืมพิมพ์ `%s` ออกมาด้วย"
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="กรุณากำหนดผลลัพธ์ของการเรียก `place.upper()` ให้กับ `place_up`"),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "คุณคำนวณจำนวนตัวอักษร o ใน `place` ได้ถูกต้องแล้ว ขณะนี้โปรดตรวจสอบให้แน่ใจว่าได้ครอบการเรียก `place.count('o')` ด้วยฟังก์ชัน `print()` เพื่อพิมพ์ผลลัพธ์ออกมา"),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("ยอดเยี่ยม! สังเกตจากผลลัพธ์ที่พิมพ์ออกมาว่าเมธอด `upper()` ไม่ได้เปลี่ยนแปลงออบเจกต์ที่ถูกเรียกใช้ ซึ่งจะแตกต่างออกไปสำหรับรายการในแบบฝึกหัดถัดไป!")
 ```
 
 ---
 
-## List Methods
+## เมธอดของลิสต์
 
 ```yaml
 type: NormalExercise
@@ -365,20 +365,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+ใน Python ไม่ใช่แค่ String เท่านั้นที่มีเมธอด ลิสต์ ตัวเลขทศนิยม จำนวนเต็ม และบูลีน ก็มีเมธอดที่มีประโยชน์มากมายเช่นกัน ในแบบฝึกหัดนี้ จะได้ทดลองใช้งาน:
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()` เพื่อหา index ของสมาชิกตัวแรกในลิสต์ที่ตรงกับค่าที่ระบุ และ
+- `.count()` เพื่อนับจำนวนครั้งที่สมาชิกนั้นปรากฏในลิสต์
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+จะทำงานกับลิสต์ `areas` ซึ่งเก็บพื้นที่ของส่วนต่าง ๆ ในบ้าน
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- ใช้เมธอด `.index()` เพื่อหา index ของสมาชิกใน `areas` ที่มีค่าเท่ากับ `20.0` แล้วพิมพ์ค่านั้นออกมา
+- เรียก `.count()` บน `areas` เพื่อตรวจสอบว่า `9.50` ปรากฏในลิสต์กี่ครั้ง แล้วพิมพ์ตัวเลขนั้นออกมา
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- หากต้องการพิมพ์ค่า index ให้ครอบการเรียก `areas.index(___)` ด้วยฟังก์ชัน `print()`
+- หากต้องการพิมพ์จำนวนครั้งที่สมาชิก `x` ปรากฏในลิสต์ ให้ครอบการเรียก `areas.count(___)` ด้วยฟังก์ชัน `print()`
 
 `@pre_exercise_code`
 ```{python}
@@ -411,7 +411,7 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "คุณไม่จำเป็นต้องเปลี่ยนแปลงหรือลบรายการที่กำหนดไว้ล่วงหน้า `areas`"
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
@@ -420,12 +420,12 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("ดีมาก! นี่คือตัวอย่างของเมธอด `list` ที่ไม่ได้เปลี่ยนแปลงรายการที่ถูกเรียกใช้")
 ```
 
 ---
 
-## List Methods (2)
+## เมธอดของลิสต์ (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +436,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+เมธอดส่วนใหญ่ของลิสต์จะเปลี่ยนแปลงลิสต์ที่ถูกเรียกใช้โดยตรง ตัวอย่างเช่น:
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()` ใช้เพิ่มสมาชิกเข้าไปในลิสต์
+- `.remove()` ใช้[ลบ](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable)สมาชิกตัวแรกในลิสต์ที่ตรงกับค่าที่ระบุ
+- `.reverse()` ใช้[สลับ](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable)ลำดับของสมาชิกในลิสต์
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+ในแบบฝึกหัดนี้จะทำงานกับลิสต์ `areas` ที่เก็บพื้นที่ของแต่ละส่วนในบ้าน
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- ใช้ `.append()` สองครั้งเพื่อเพิ่มขนาดของห้องพักริมสระน้ำและโรงรถอีกครั้ง ได้แก่ `24.5` และ `15.45` ตามลำดับ โดยเพิ่มตามลำดับนี้
+- แสดงค่า `areas`
+- ใช้เมธอด `.reverse()` เพื่อสลับลำดับสมาชิกใน `areas`
+- แสดงค่า `areas` อีกครั้ง
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- สำหรับคำแนะนำข้อแรก ให้ใช้คำสั่ง `areas.append(___)` สองครั้ง
+- หากต้องการแสดงค่าตัวแปร `x` ให้เขียน `print(x)`
+- เมธอด `.reverse()` ไม่ต้องการอาร์กิวเมนต์เพิ่มเติม ใช้เพียง dot notation กับวงเล็บเปล่า: `.reverse()`
+- หากต้องการแสดงค่าตัวแปร `x` ให้เขียน `print(x)`
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +509,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("ยอดเยี่ยม!")
 ```
 
 ---
 
-## Packages
+## แพ็กเกจ
 
 ```yaml
 type: VideoExercise
@@ -527,7 +527,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## Import แพ็กเกจ
 
 ```yaml
 type: NormalExercise
@@ -538,24 +538,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+สมมติว่าต้องการคำนวณเส้นรอบวงและพื้นที่ของวงกลม สูตรที่ใช้มีดังนี้:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+แทนที่จะพิมพ์ค่าตัวเลขของ `pi` เอง สามารถใช้แพ็กเกจ `math` ซึ่งมีค่าคงที่นี้อยู่แล้ว
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+สำหรับข้อมูลเพิ่มเติม `**` คือสัญลักษณ์สำหรับการยกกำลัง เช่น `3**4` หมายถึง `3` ยกกำลัง `4` ซึ่งได้ผลลัพธ์เป็น `81`
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- Import แพ็กเกจ `math`
+- ใช้ `math.pi` คำนวณเส้นรอบวงของวงกลม แล้วเก็บผลลัพธ์ไว้ในตัวแปร `C`
+- ใช้ `math.pi` คำนวณพื้นที่ของวงกลม แล้วเก็บผลลัพธ์ไว้ในตัวแปร `A`
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- ใช้ `import math` จากนั้นอ้างอิงค่า `pi` ด้วย `math.pi`
+- ใช้สมการในโจทย์เพื่อหาค่า `C` โดยใช้ `*`
+- ใช้สมการในโจทย์เพื่อหาค่า `A` โดยใช้ `*` และ `**`
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +594,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "การคำนวณ `%s` ของท่านยังไม่ถูกต้อง โปรดตรวจสอบให้แน่ใจว่าได้ใช้ `math.pi`"
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +602,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:โปรดคงคำสั่ง `{{sol_call}}` ไว้เพื่อแสดงผลเส้นรอบวง"),
+  has_printout(1, not_printed_msg = "__JINJA__:โปรดคงคำสั่ง `{{sol_call}}` ไว้เพื่อแสดงผลพื้นที่")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("ยอดเยี่ยม! หากท่านทราบวิธีใช้งานฟังก์ชันจากแพ็กเกจต่าง ๆ ท่านก็จะสามารถใช้ประโยชน์จากพลังของนักพัฒนา Python จำนวนมากได้อย่างเต็มที่!")
 ```
 
 ---
 
-## Selective import
+## การนำเข้าแบบเจาะจง
 
 ```yaml
 type: NormalExercise
@@ -622,22 +622,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+การนำเข้าแบบทั่วไป เช่น `import math` จะทำให้ใช้งานฟังก์ชันทั้งหมดจากแพ็กเกจ `math` ได้ทุกอย่าง แต่ถ้าต้องการใช้เพียงบางส่วนของแพ็กเกจ สามารถนำเข้าแบบเจาะจงได้:
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+ลองทำแบบเดิมอีกครั้ง แต่คราวนี้ให้นำเข้าเฉพาะ `pi` เท่านั้น
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- นำเข้าแบบเจาะจงจากแพ็กเกจ `math` โดยนำเข้าเฉพาะฟังก์ชัน `pi`
+- ใช้ `pi` คำนวณเส้นรอบวงของวงกลม แล้วเก็บผลลัพธ์ไว้ในตัวแปร `C`
+- ใช้ `pi` คำนวณพื้นที่ของวงกลม แล้วเก็บผลลัพธ์ไว้ในตัวแปร `A`
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- ใช้ `from math import pi` เพื่อนำเข้าแบบเจาะจง
+- จากนั้นสามารถใช้ `pi` ได้โดยตรงเลย!
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +676,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "การคำนวณ `%s` ของท่านยังไม่ถูกต้อง โปรดตรวจสอบให้แน่ใจว่าใช้เฉพาะ `pi` เท่านั้น"
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "โปรดนำเข้า `pi` จากแพ็กเกจ `math` ท่านควรใช้รูปแบบ `from ___ import ___`",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +686,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:โปรดคงไว้ซึ่ง `{{sol_call}}` เพื่อแสดงผลค่าเส้นรอบวง"),
+  has_printout(1, not_printed_msg = "__JINJA__:โปรดคงไว้ซึ่ง `{{sol_call}}` เพื่อแสดงผลค่าพื้นที่")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("ยอดเยี่ยม! ดำเนินการไปยังแบบฝึกหัดถัดไปได้เลย")
 ```
 
 ---
 
-## Different ways of importing
+## วิธีการ import ที่แตกต่างกัน
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +706,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+มีหลายวิธีในการ import แพ็กเกจและโมดูลเข้าสู่ Python โดยขึ้นอยู่กับคำสั่ง import ที่ใช้ โค้ด Python ที่ต้องเขียนก็จะแตกต่างกันออกไป
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+สมมติว่าต้องการใช้ [ฟังก์ชัน](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()` ซึ่งอยู่ใน subpackage `linalg` ของแพ็กเกจ `scipy` โดยต้องการเรียกใช้ฟังก์ชันนี้ในรูปแบบต่อไปนี้:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+ต้องใช้คำสั่ง `import` แบบใดจึงจะรันโค้ดข้างต้นได้โดยไม่เกิดข้อผิดพลาด?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- ลองใช้คำสั่ง import แต่ละแบบใน IPython shell แล้วดูว่าแบบไหนทำให้บรรทัด `my_inv([[1, 2], [3, 4]])` รันได้โดยไม่เกิดข้อผิดพลาด กด **enter** เพื่อรันโค้ดที่พิมพ์ไว้
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "ไม่ถูกต้อง ลองอีกครั้ง ลองใช้คำสั่ง import ที่แตกต่างกันใน IPython shell และดูว่าคำสั่งใดทำให้บรรทัด `my_inv([[1, 2], [3, 4]])` ทำงานได้โดยไม่เกิดข้อผิดพลาด"
+msg4 = "ถูกต้อง! คำว่า `as` ช่วยให้คุณสามารถสร้างชื่อในเครื่องสำหรับฟังก์ชันที่คุณนำเข้า: ขณะนี้ `inv()` สามารถใช้งานได้ในชื่อ `my_inv()` แล้ว"
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```

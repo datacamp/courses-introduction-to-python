@@ -1,18 +1,18 @@
 ---
-title_meta: Chapter 2
+title_meta: บทที่ 2
 title: Python Lists
 description: >-
-  Learn to store, access, and manipulate data in lists: the first step toward
-  efficiently working with huge amounts of data.
+  เรียนรู้การจัดเก็บ เข้าถึง และจัดการข้อมูลใน List
+  ซึ่งเป็นก้าวแรกสู่การทำงานกับข้อมูลจำนวนมากอย่างมีประสิทธิภาพ
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
   - nb_of_exercises: 4
     title: Python Lists
   - nb_of_exercises: 4
-    title: Subsetting Lists
+    title: การ Subset List
   - nb_of_exercises: 5
-    title: Manipulating Lists
+    title: การจัดการ List
 ---
 
 ## Python Lists
@@ -28,7 +28,7 @@ a0530c4542f10988847b2dbb91f717c3
 
 ---
 
-## Create a list
+## สร้างลิสต์
 
 ```yaml
 type: NormalExercise
@@ -39,7 +39,7 @@ skills:
   - 2
 ```
 
-A list is a **compound data type**; you can group values together, like this:
+ลิสต์คือ **ชนิดข้อมูลแบบประกอบ** ที่ใช้รวมค่าหลายค่าเข้าด้วยกัน ดังตัวอย่างนี้:
 
 ```
 a = "is"
@@ -47,17 +47,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
+หลังจากวัดส่วนสูงของสมาชิกในครอบครัวแล้ว คุณตัดสินใจรวบรวมข้อมูลเกี่ยวกับบ้านที่อาศัยอยู่ด้วย พื้นที่ของแต่ละส่วนในบ้านถูกเก็บไว้ในตัวแปรแยกกันในแบบฝึกหัดนี้
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the `print()` function.
+- สร้างลิสต์ชื่อ `areas` ที่เก็บพื้นที่ของโถงทางเดิน (`hall`), ครัว (`kit`), ห้องนั่งเล่น (`liv`), ห้องนอน (`bed`) และห้องน้ำ (`bath`) ตามลำดับนี้ โดยใช้ตัวแปรที่กำหนดไว้ให้แล้ว
+- แสดงผล `areas` ด้วยฟังก์ชัน `print()`
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Make sure to use square brackets `[]` rather than parentheses `()`.
-- You don't need to use quotation marks when storing variables within a list.
-- Type `print(areas)` to print out the list when submitting.
+- ใช้ตัวแปรที่สร้างไว้แล้วเพื่อสร้างลิสต์ได้เลย เช่น `areas = [hall, kit, ...]`
+- ใช้วงเล็บเหลี่ยม `[]` ไม่ใช่วงเล็บกลม `()`
+- ไม่ต้องใส่เครื่องหมายคำพูดเมื่อเก็บตัวแปรไว้ในลิสต์
+- พิมพ์ `print(areas)` เพื่อแสดงผลลิสต์เมื่อส่งคำตอบ
 
 `@pre_exercise_code`
 ```{python}
@@ -96,11 +96,11 @@ print(areas)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
+predef_msg = "อย่าลบหรือแก้ไขตัวแปรที่กำหนดไว้ล่วงหน้า!"
+areas_msg = "กรุณากำหนด `areas` เป็นรายการที่ประกอบด้วยตัวแปรพื้นที่ทั้งหมด ตามลำดับที่ถูกต้อง: `[hall, kit, liv, bed, bath]` กรุณาตรวจสอบการพิมพ์ผิด รายการไม่ควรมีสิ่งอื่นใดนอกจากนี้!"
 
 Ex().check_correct(
-    has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?"),
+    has_printout(0, not_printed_msg = "__JINJA__:คุณได้ใช้ `{{sol_call}}` เพื่อพิมพ์รายการ `areas` ที่ท้ายสคริปต์ของคุณหรือไม่?"),
     check_correct(
         check_object("areas").has_equal_value(incorrect_msg = areas_msg),
         multi(
@@ -113,12 +113,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("ยอดเยี่ยม! การใช้รายการดีกว่ามากใช่ไหม?")
 ```
 
 ---
 
-## Create lists with different types
+## สร้างลิสต์ที่มีข้อมูลหลายประเภท
 
 ```yaml
 type: NormalExercise
@@ -129,19 +129,19 @@ skills:
   - 2
 ```
 
-Although it's not really common, a list can also contain a mix of Python types including strings, floats, and booleans.
+แม้จะไม่ค่อยพบบ่อยนัก แต่ลิสต์สามารถเก็บข้อมูลได้หลายประเภทพร้อมกัน ไม่ว่าจะเป็นสตริง, float หรือ boolean
 
-You're now going to add the room names to your list, so you can easily see both the room name and size together.
+ตอนนี้จะเพิ่มชื่อห้องลงในลิสต์ เพื่อให้ดูทั้งชื่อห้องและขนาดพื้นที่ได้ในที่เดียว
 
-Some of the code has been provided for you to get you started. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+โค้ดบางส่วนเตรียมไว้ให้แล้ว สังเกตให้ดี! `"bathroom"` คือสตริง ส่วน `bath` คือตัวแปรที่เก็บค่า float `9.50` ที่กำหนดไว้ก่อนหน้านี้
 
 `@instructions`
-- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- เติมโค้ดที่สร้างลิสต์ `areas` ให้ครบ โดยจัดเรียงให้ลิสต์มีชื่อห้องเป็นสตริงก่อน ตามด้วยขนาดพื้นที่ของห้องนั้น กล่าวคือ ให้เพิ่มสตริง `"hallway"`, `"kitchen"` และ `"bedroom"` ในตำแหน่งที่เหมาะสม
+- พิมพ์ `areas` อีกครั้ง ผลลัพธ์ที่ได้ให้ข้อมูลมากขึ้นกว่าเดิมหรือไม่?
 
 `@hint`
-- The first four elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
-- A string will need to be in quotation marks `""`.
+- สี่ธาตุแรกของลิสต์ `areas` เขียนได้ว่า `["hallway", hall, "kitchen", kit, ...`
+- สตริงต้องอยู่ในเครื่องหมายคำพูด `""`
 
 `@pre_exercise_code`
 ```{python}
@@ -181,22 +181,22 @@ print(areas)
 `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
+predef_msg = "อย่าลบหรือแก้ไขตัวแปรที่กำหนดไว้ล่วงหน้า!"
+areas_msg = "คุณไม่ได้กำหนดค่าที่ถูกต้องให้กับ `areas` กรุณาอ่านคำแนะนำอีกครั้ง โปรดวางชื่อห้องไว้ก่อนตัวแปรที่มีพื้นที่ของแต่ละห้องทุกครั้ง ลำดับมีความสำคัญที่นี่! ระวังการพิมพ์ผิดด้วย"
 
 Ex().check_correct(
   check_object("areas").has_equal_value(incorrect_msg = areas_msg),
   multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:คุณได้ใช้ `{{sol_call}}` เพื่อพิมพ์รายการ `areas` ที่ท้ายสคริปต์ของคุณหรือไม่?")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("ดีมาก! รายการนี้มีทั้งสตริงและจำนวนทศนิยม แต่นั่นไม่ใช่ปัญหาสำหรับ Python!")
 ```
 
 ---
 
-## List of lists
+## ลิสต์ของลิสต์
 
 ```yaml
 type: NormalExercise
@@ -207,20 +207,20 @@ skills:
   - 2
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+ในฐานะนักวิทยาศาสตร์ข้อมูล คุณจะต้องจัดการกับข้อมูลจำนวนมาก และการจัดกลุ่มข้อมูลบางส่วนเข้าด้วยกันก็เป็นเรื่องสมเหตุสมผล
 
-Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
+แทนที่จะสร้างลิสต์ที่มีแต่ string และ float เพื่อเก็บชื่อและพื้นที่ของห้องต่าง ๆ ในบ้าน คุณสามารถสร้างลิสต์ของลิสต์ได้แทน
 
-Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+จำไว้ว่า `"hallway"` คือ string ในขณะที่ `hall` คือตัวแปรที่แทนค่า float `11.25` ที่กำหนดไว้ก่อนหน้านี้
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
+- เติมลิสต์ของลิสต์ให้ครบโดยเพิ่มข้อมูลของห้องนอนและห้องน้ำเข้าไปด้วย ตรวจสอบให้แน่ใจว่าเรียงลำดับถูกต้อง
+- แสดงผล `house` แล้วดูว่าการจัดโครงสร้างข้อมูลแบบนี้เข้าใจง่ายขึ้นหรือไม่
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- Remember to include a comma `,` after each sublist.
-- To print a variable `x`, write `print(x)` on a new line.
+- เพิ่ม _ลิสต์ย่อย_ ลงในลิสต์ `house` โดยใส่ `["bedroom", bed]` และ `["bathroom", bath]` ภายในวงเล็บเหลี่ยม
+- อย่าลืมใส่เครื่องหมายจุลภาค `,` หลังลิสต์ย่อยแต่ละรายการ
+- หากต้องการแสดงผลตัวแปร `x` ให้เขียน `print(x)` ในบรรทัดใหม่
 
 `@pre_exercise_code`
 ```{python}
@@ -267,8 +267,8 @@ print(house)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
+predef_msg = "อย่าลบหรือแก้ไขตัวแปรที่กำหนดไว้ล่วงหน้า!"
+house_msg = "คุณยังไม่ได้กำหนดค่าที่ถูกต้องให้กับ `house` กรุณาอ่านคำแนะนำอีกครั้ง ขยายรายการของรายการให้ครอบคลุมรายการสำหรับแต่ละคู่ของชื่อห้องและพื้นที่ห้อง โปรดตรวจสอบลำดับและการพิมพ์ผิด!"
 
 Ex().check_correct(
     check_object("house").has_equal_value(incorrect_msg = house_msg),
@@ -281,14 +281,14 @@ Ex().check_correct(
     )
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:คุณได้ใช้ `{{sol_call}}` เพื่อแสดงเนื้อหาของ `house` หรือไม่?")
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("ยอดเยี่ยม! เตรียมพร้อมที่จะเรียนรู้เกี่ยวกับการเลือกข้อมูลจากรายการได้เลย!")
 ```
 
 ---
 
-## Subsetting Lists
+## การดึงข้อมูลจาก List
 
 ```yaml
 type: VideoExercise
@@ -301,7 +301,7 @@ fc15ba5cb9485456df8589130b519ea3
 
 ---
 
-## Subset and conquer
+## Subset และพิชิตลิสต์
 
 ```yaml
 type: NormalExercise
@@ -312,26 +312,26 @@ skills:
   - 2
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+การ subset ลิสต์ใน Python นั้นไม่ยากเลย ดูตัวอย่างโค้ดด้านล่าง ซึ่งสร้างลิสต์ `x` แล้วเลือกค่า "b" ออกมา จำไว้ว่า "b" เป็นสมาชิกตัวที่สอง จึงมี index เป็น 1 และยังสามารถใช้ index ติดลบได้ด้วย
 
 ```
 x = ["a", "b", "c", "d"]
 x[1]
-x[-3] # same result!
+x[-3] # ได้ผลลัพธ์เหมือนกัน!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+จำลิสต์ `areas` ที่มีทั้ง string และ float ได้ไหม? โค้ดที่กำหนดลิสต์นี้อยู่ในสคริปต์แล้ว ลองเพิ่มโค้ดเพื่อ subset ลิสต์ดูสิ
 
 `@instructions`
-- Print out the second element from the `areas` list (it has the value `11.25`).
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room (`20.0`) and print it out.
+- แสดงผลสมาชิกตัวที่สองของลิสต์ `areas` (มีค่าเป็น `11.25`)
+- Subset และแสดงผลสมาชิกตัวสุดท้ายของ `areas` ซึ่งมีค่าเป็น `9.50` การใช้ index ติดลบเหมาะมากสำหรับกรณีนี้!
+- เลือกตัวเลขที่แทนพื้นที่ของห้องนั่งเล่น (`20.0`) แล้วแสดงผลออกมา
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`.
-- Use `x[-1]` to select the last element of a list `x`.
-- Make sure to wrap your subsetting operations in a `print()` call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
+- ใช้ `x[1]` เพื่อเลือกสมาชิกตัวที่สองของลิสต์ `x`
+- ใช้ `x[-1]` เพื่อเลือกสมาชิกตัวสุดท้ายของลิสต์ `x`
+- อย่าลืมครอบการ subset ด้วย `print()`
+- ตัวเลขที่แทนพื้นที่ของห้องนั่งเล่นคือสมาชิกตัวที่ 6 ในลิสต์ ดังนั้นต้องใช้ `[5]` ที่นี่ หากใช้ `area[4]` จะได้ค่าที่เป็น string แทน!
 
 `@pre_exercise_code`
 ```{python}
@@ -370,17 +370,17 @@ print(areas[5])
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "อย่าลบหรือแก้ไขรายการ `areas` ที่กำหนดไว้ล่วงหน้า"
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
-Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
-Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
-success_msg("Good job!")
+Ex().has_printout(0, not_printed_msg = "ลองตรวจสอบโค้ดของท่านอีกครั้งเพื่อแสดงผลองค์ประกอบที่สองใน `areas` ซึ่งอยู่ที่ดัชนี `1`")
+Ex().has_printout(1, not_printed_msg = "ลองตรวจสอบโค้ดของท่านอีกครั้งเพื่อแสดงผลองค์ประกอบสุดท้ายใน `areas` ซึ่งอยู่ที่ดัชนี `-1`")
+Ex().has_printout(2, not_printed_msg = "ลองตรวจสอบโค้ดของท่านอีกครั้งเพื่อแสดงผลพื้นที่ของห้องนั่งเล่น ซึ่งอยู่ที่ดัชนี `5`")
+success_msg("ทำได้ดีมาก!")
 ```
 
 ---
 
-## Slicing and dicing
+## การ Slice ข้อมูล
 
 ```yaml
 type: NormalExercise
@@ -391,23 +391,23 @@ skills:
   - 2
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+การเลือกค่าทีละตัวจากลิสต์เป็นเพียงส่วนหนึ่งเท่านั้น ยังสามารถ _slice_ ลิสต์ได้ด้วย นั่นคือการเลือกหลายธาตุพร้อมกัน โดยใช้ syntax ดังนี้:
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
+ดัชนี `start` จะถูกรวมไว้ด้วย แต่ดัชนี `end` _จะไม่ถูกรวม_ อย่างไรก็ตาม สามารถละเว้นดัชนีเหล่านี้ได้ หากไม่ระบุดัชนี `start` Python จะเริ่ม slice ตั้งแต่ธาตุแรกของลิสต์โดยอัตโนมัติ
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-- Print both `downstairs` and `upstairs` using `print()`.
+- ใช้ slicing เพื่อสร้างลิสต์ `downstairs` ที่มี 6 ธาตุแรกของ `areas`
+- สร้าง `upstairs` โดยดึง `4` ธาตุสุดท้ายของ `areas` คราวนี้ให้ละดัชนี `end` เพื่อให้โค้ดกระชับขึ้น
+- แสดงผล `downstairs` และ `upstairs` ด้วย `print()`
 
 `@hint`
-- Use the brackets `[0:6]` to get the first six elements of a list.
-- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
-- Add two `print()` calls to print out `downstairs` and `upstairs`.
+- ใช้ `[0:6]` เพื่อดึงหกธาตุแรกของลิสต์
+- หากต้องการดึงทุกธาตุยกเว้น 5 ธาตุแรกของลิสต์ `l` ให้ใช้ `l[5:]`
+- เพิ่ม `print()` สองครั้งเพื่อแสดงผล `downstairs` และ `upstairs`
 
 `@pre_exercise_code`
 ```{python}
@@ -448,22 +448,22 @@ print(upstairs)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "อย่าลบหรือแก้ไขรายการ `areas` ที่กำหนดไว้ล่วงหน้า"
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
+patt = "`%s` ไม่ถูกต้อง กรุณาใช้ `areas[%s]` และการแบ่งส่วนเพื่อเลือกองค์ประกอบที่ต้องการ หรือวิธีที่เทียบเท่า"
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
-Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
+Ex().has_printout(0, not_printed_msg="คุณได้พิมพ์ `downstairs` หลังจากคำนวณแล้วหรือไม่?")
+Ex().has_printout(1, not_printed_msg="คุณได้พิมพ์ `upstairs` หลังจากคำนวณแล้วหรือไม่?")
 
-success_msg("Great!")
+success_msg("ยอดเยี่ยม!")
 ```
 
 ---
 
-## Subsetting lists of lists
+## การ Subset ลิสต์ซ้อนลิสต์
 
 ```yaml
 type: NormalExercise
@@ -471,20 +471,20 @@ key: dbbbd306cf
 xp: 100
 ```
 
-A Python list can also contain other lists.
+ลิสต์ใน Python สามารถมีลิสต์อื่นอยู่ภายในได้
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
+ในการ subset ลิสต์ซ้อนลิสต์ ใช้เทคนิคเดิมคือวงเล็บก้ามปู ตัวอย่างเช่น สำหรับลิสต์ `house`:
 
 ```
 house[2][0]
 ```
 
 `@instructions`
-- Subset the `house` list to get the float `9.5`.
+- Subset ลิสต์ `house` เพื่อดึงค่า float `9.5` ออกมา
 
 `@hint`
-- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
-- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+- ลองแยกเป็นขั้นตอน ขั้นแรกให้เข้าถึงองค์ประกอบสุดท้ายของลิสต์ คือ `["bathroom", 9.50]` โดยจำไว้ว่า index ขององค์ประกอบสุดท้ายคือ `-1`
+- จากนั้นให้เข้าถึงองค์ประกอบที่สองของ `["bathroom", 9.50]` ซึ่งอยู่ที่ index `1`
 
 `@pre_exercise_code`
 ```{python}
@@ -522,12 +522,12 @@ Ex().check_or(
   has_code("house[4][1]", pattern=False)
 )
 
-success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
+success_msg("ถูกต้องมาก! ส่วนสุดท้ายของปริศนารายการคือการจัดการ")
 ```
 
 ---
 
-## Manipulating Lists
+## การจัดการ Lists
 
 ```yaml
 type: VideoExercise
@@ -540,7 +540,7 @@ xp: 50
 
 ---
 
-## Replace list elements
+## แทนที่ elements ในลิสต์
 
 ```yaml
 type: NormalExercise
@@ -551,18 +551,18 @@ skills:
   - 2
 ```
 
-To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+การแทนที่ elements ในลิสต์ทำได้โดยเลือก subset แล้วกำหนดค่าใหม่ให้กับ subset นั้น สามารถเลือกทีละ element หรือจะเปลี่ยนทั้ง slice ของลิสต์พร้อมกันก็ได้
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+ในแบบฝึกหัดนี้และแบบฝึกหัดถัดไป จะทำงานกับลิสต์ `areas` ที่เก็บชื่อและพื้นที่ของห้องต่างๆ ในบ้านต่อไป
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
+- อัปเดตพื้นที่ห้องน้ำจาก `9.50` เป็น `10.50` ตารางเมตร โดยใช้ negative indexing
+- เพิ่มความทันสมัยให้ลิสต์ `areas` ด้วยการเปลี่ยน `"living room"` เป็น `"chill zone"` คราวนี้ไม่ต้องใช้ negative indexing
 
 `@hint`
-- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
-- Then, replace the value with the new bathroom area by assigning it to this subset.
-- Do the same to update the `"living room"` name, which is at index 4.
+- ในการอัปเดตพื้นที่ห้องน้ำ ให้เลือก subset ของค่าพื้นที่ห้องน้ำก่อน (เป็น item สุดท้ายในลิสต์!)
+- จากนั้นกำหนดค่าพื้นที่ห้องน้ำใหม่ให้กับ subset นั้น
+- ทำแบบเดียวกันเพื่ออัปเดตชื่อ `"living room"` ซึ่งอยู่ที่ index 4
 
 `@pre_exercise_code`
 ```{python}
@@ -595,21 +595,21 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
+bathroom_msg = 'คุณสามารถใช้ `areas[-1] = 10.50` เพื่ออัปเดตพื้นที่ห้องน้ำได้'
+chillzone_msg = 'คุณสามารถใช้ `areas[4] = "chill zone"` เพื่ออัปเดตชื่อห้องนั่งเล่นได้'
 Ex().check_correct(
-  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  check_object('areas').has_equal_value(incorrect_msg = 'การเปลี่ยนแปลง `areas` ของคุณไม่ได้ให้ผลลัพธ์เป็นรายการที่ถูกต้อง คุณแน่ใจหรือไม่ว่าใช้การดำเนินการกับชุดข้อมูลย่อยที่ถูกต้อง? หากไม่แน่ใจ คุณสามารถใช้คำใบ้ได้!'),
   multi(
     has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
     has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
-success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
+success_msg('ยอดเยี่ยม! ดังที่ตัวอย่างโค้ดแสดงให้เห็น คุณยังสามารถแบ่งส่วนรายการและแทนที่ด้วยรายการอื่นเพื่ออัปเดตหลายองค์ประกอบในคำสั่งเดียวได้อีกด้วย')
 ```
 
 ---
 
-## Extend a list
+## ต่อขยายลิสต์
 
 ```yaml
 type: NormalExercise
@@ -620,22 +620,22 @@ skills:
   - 2
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+นอกจากจะแก้ไขสมาชิกในลิสต์ได้แล้ว ยังสามารถเพิ่มสมาชิกใหม่เข้าไปได้อีกด้วย โดยใช้ตัวดำเนินการ `+`:
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+สมมติว่าคุณถูกรางวัลลอตเตอรีและตัดสินใจสร้างสระว่ายน้ำและโรงจอดรถเพิ่ม ลองเพิ่มข้อมูลเหล่านี้ลงในลิสต์ `areas` กัน
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- ใช้ตัวดำเนินการ `+` เพื่อต่อลิสต์ `["poolhouse", 24.5]` ไว้ท้ายลิสต์ `areas` แล้วเก็บผลลัพธ์ไว้ในตัวแปร `areas_1`
+- ต่อขยาย `areas_1` เพิ่มเติมโดยเพิ่มข้อมูลโรงจอดรถ ได้แก่ string `"garage"` และ float `15.45` แล้วตั้งชื่อลิสต์ที่ได้ว่า `areas_2`
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- ดูตัวอย่างโค้ดในโจทย์ โดย `x` คือ `areas` และ `["e", "f"]` คือ `["poolhouse", 24.5]`
+- หากต้องการเพิ่มสมาชิกใน `areas_1` ให้ใช้ `areas_1 + ["element", 123]`
 
 `@pre_exercise_code`
 ```{python}
@@ -670,16 +670,16 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "อย่าลบหรือแก้ไขรายการ `areas` ที่กำหนดไว้ล่วงหน้า"
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
-success_msg("Cool! The list is shaping up nicely!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "ใช้ `areas + [\"poolhouse\", 24.5]` เพื่อสร้าง `areas_1` โปรดตรวจสอบการพิมพ์ให้ถูกต้อง!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "ใช้ `areas_1 + [\"garage\", 15.45]` เพื่อสร้าง `areas_2` โปรดตรวจสอบการพิมพ์ให้ถูกต้อง!")
+success_msg("ยอดเยี่ยม! รายการมีรูปแบบที่ดีขึ้นเรื่อยๆ!")
 ```
 
 ---
 
-## Delete list elements
+## ลบสมาชิกออกจากลิสต์
 
 ```yaml
 type: NormalExercise
@@ -687,23 +687,23 @@ key: 85f792356e
 xp: 100
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+สุดท้าย เราสามารถลบสมาชิกออกจากลิสต์ได้ด้วยคำสั่ง `del`:
 
 ```
 x = ["a", "b", "c", "d"]
 del x[1]
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+สังเกตให้ดี: ทันทีที่ลบสมาชิกออกจากลิสต์ index ของสมาชิกที่อยู่ถัดจากตำแหน่งที่ถูกลบจะเปลี่ยนไปทั้งหมด!
 
-Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
+น่าเสียดายที่เงินรางวัลลอตเตอรีที่ได้มานั้นไม่มากอย่างที่คิด และดูเหมือนว่าโปรเจกต์ poolhouse คงไม่เกิดขึ้นแล้ว จึงต้องลบรายการนั้นออกจากลิสต์ โดยจะลบทั้ง string และ float ที่เกี่ยวข้องออกจากลิสต์ `areas`
 
 `@instructions`
-- Delete the string and float for the `"poolhouse"` from your `areas` list.
-- Print the updated `areas` list.
+- ลบ string และ float ของ `"poolhouse"` ออกจากลิสต์ `areas`
+- แสดงผลลิสต์ `areas` ที่อัปเดตแล้ว
 
 `@hint`
-- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
+- ต้องใช้ `del` สองครั้งเพื่อลบสองสมาชิก แต่ระวังเรื่อง index ที่เปลี่ยนไปด้วย!
 
 `@pre_exercise_code`
 ```{python}
@@ -764,13 +764,13 @@ Ex().check_or(
   )
 )
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="คุณได้พิมพ์ `areas` หลังจากลบสตริงและตัวเลขทศนิยมของ poolhouse แล้วหรือไม่?")
+success_msg("ถูกต้อง! คุณจะได้เรียนรู้วิธีที่ง่ายกว่าในการลบองค์ประกอบเฉพาะออกจากรายการ Python ในภายหลัง")
 ```
 
 ---
 
-## Inner workings of lists
+## กลไกภายในของ List
 
 ```yaml
 type: NormalExercise
@@ -781,17 +781,17 @@ skills:
   - 2
 ```
 
-Some code has been provided for you in this exercise: a list with the name `areas` and a copy named `areas_copy`.
+ในแบบฝึกหัดนี้มีโค้ดตั้งต้นให้แล้ว ได้แก่ list ชื่อ `areas` และสำเนาของมันชื่อ `areas_copy`
 
-Currently, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit the run code button you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+ปัจจุบัน โค้ดจะเปลี่ยนค่าสมาชิกตัวแรกใน `areas_copy` แล้วพิมพ์ `areas` ออกมา ถ้ากด **รันโค้ด** จะเห็นว่าแม้จะแก้ `areas_copy` แต่การเปลี่ยนแปลงนั้นส่งผลกับ `areas` ด้วย เหตุผลคือ `areas` และ `areas_copy` ชี้ไปยัง list เดียวกัน
 
-If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list with `list()` or by using `[:]`.
+หากต้องการให้การเปลี่ยนแปลงใน `areas_copy` ไม่กระทบกับ `areas` จะต้องสร้างสำเนาแบบชัดเจนของ `areas` โดยใช้ `list()` หรือ `[:]`
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
+- แก้ไขคำสั่งที่สอง ซึ่งเป็นส่วนที่สร้างตัวแปร `areas_copy` ให้ `areas_copy` เป็นสำเนาแบบชัดเจนของ `areas` หลังจากแก้ไขแล้ว การเปลี่ยนแปลงใน `areas_copy` จะต้องไม่ส่งผลกับ `areas` จากนั้นกด **ส่งคำตอบ** เพื่อตรวจสอบผลลัพธ์
 
 `@hint`
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+- แก้ไขบรรทัด `areas_copy = areas` แทนที่จะกำหนดค่า `areas` ตรงๆ ให้ใช้ `list(areas)` หรือ `areas[:]` แทน
 
 `@pre_exercise_code`
 ```{python}
@@ -831,16 +831,16 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_object("areas_copy").has_equal_value(incorrect_msg = "ดูเหมือนว่า `areas_copy` ยังไม่ได้รับการอัปเดตอย่างถูกต้อง"),
+  check_function("list", missing_msg = "โปรดใช้ `list(areas)` เพื่อสร้าง `areas_copy`")
 )
 
-mmsg = "Don't remove the predefined `areas` list."
-imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+mmsg = "โปรดอย่าลบรายการ `areas` ที่กำหนดไว้ล่วงหน้า"
+imsg = "โปรดแก้ไขเฉพาะสำเนาเท่านั้น ไม่ใช่รายการ `areas` ต้นฉบับ หากท่านไม่แน่ใจวิธีการสร้างสำเนา โปรดอ่านคำอธิบายแบบฝึกหัดอีกครั้ง"
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_function("list", missing_msg = "โปรดใช้ `list(areas)` เพื่อสร้าง `areas_copy`")
 )
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("ยอดเยี่ยม! ความแตกต่างระหว่างการคัดลอกแบบชัดเจนและการคัดลอกแบบอ้างอิงนั้นมีความละเอียดอ่อน แต่อาจมีความสำคัญอย่างมาก โปรดจำไว้ว่ารายการถูกจัดเก็บในหน่วยความจำของคอมพิวเตอร์อย่างไร")
 ```
