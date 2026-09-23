@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Capítulo 1
+title: Noções básicas de Python
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  Introdução aos conceitos básicos do Python. Aprenda a usar o Python de forma
+  interativa e por meio de um script. Crie suas primeiras variáveis e
+  familiarize-se com os tipos de dados básicos do Python.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: 'Olá, Python!'
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Variáveis e tipos
 ---
 
-## Hello Python!
+## Olá, Python!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## Seu primeiro código Python
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+É hora de rodar seu primeiro código Python!
 
-Head to the code and hit the run code button to see the output.
+Vá até o código e clique no botão “Executar código” para ver o resultado.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Clique no botão “Executar código” para ver o resultado de `print(5 / 8)`.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Execute o código antes de enviar sua resposta, para você ter tempo de ver o resultado.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Você usou `{{sol_call}}` para imprimir `5 / 8`?")
+success_msg("Ótimo! Vamos para a próxima!")
 ```
 
 ---
 
-## Python as a calculator
+## O Python como calculadora
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+O Python é perfeito para fazer cálculos básicos. Ele pode fazer adição, subtração, multiplicação e divisão.
 
-The code in the script gives some examples.
+O código no script fornece alguns exemplos.
 
-Now it's your turn to practice by writing some code yourself.
+Agora é a sua vez de treinar escrevendo um pouco de código.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- Imprima o resultado de `5` menos `5` embaixo de `# Subtraction` usando `print()`.
+- Imprima o resultado de `3` multiplicado por `5` embaixo de `# Multiplication`.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Você precisa usar `print()` para gerar uma saída.
+- Você pode subtrair com `-` e multiplicar com `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Você usou `print(4 + 5)` para imprimir o resultado da sua soma?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Você usou `print(5 - 5)` para imprimir o resultado da sua subtração?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Você usou `print(3 * 5)` para imprimir o resultado da sua multiplicação?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Você usou `print(10 / 2)` para imprimir o resultado da sua divisão?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Está correto! Python pode te ajudar a fazer cálculos, uma característica que será útil para análise à medida que desenvolvemos nossas habilidades com dados.")
 ```
 
 ---
 
-## Variables and Types
+## Variáveis e tipos
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Atribuição de variáveis
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+Em Python, uma variável permite que você faça referência a um valor com um nome. Para criar uma variável `x` com valor `5`, usamos `=`, como neste exemplo:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Agora você pode usar o nome dessa variável, `x`, em vez do valor real, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Lembre-se de que `=` em Python significa _atribuição_, ele não testa a igualdade! Faça o teste no exercício substituindo `____` pelo seu código.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- Crie uma variável chamada `savings` com valor `100`.
+- Verifique essa variável digitando `print(savings)` no script.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- Digite `savings = 100` para criar a variável `savings`.
+- Depois de criar a variável `savings`, você pode digitar `print(savings)`.
+- O código final não deve incluir nenhum `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Atribua `100` à variável `savings`.")
+Ex().has_printout(0, not_printed_msg = "Imprima `savings`, a variável que você criou, com `print(savings)`.")
+success_msg("Ótimo! Vamos tentar fazer alguns cálculos com essa variável agora!")
 ```
 
 ---
 
-## Calculations with variables
+## Cálculos com variáveis
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Agora que você criou uma variável chamada “savings”, vamos começar a economizar!
 
-Instead of calculating with the actual values, you can use variables instead.
+Em vez de calcular com os valores reais, você pode usar variáveis.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Quanto dinheiro você teria economizado daqui a quatro meses se economizasse $10 por mês?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- Crie uma variável `monthly_savings` igual a `10` e outra variável `num_months` igual a `4`.
+- Multiplique `monthly_savings` por `num_months` e atribua o resultado a `new_savings`.
+- Imprima o valor de `new_savings`.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- Você pode fazer cálculos com variáveis da mesma forma do que com números. Portanto, em vez de `10 * 4`, substitua os números pelas variáveis!
+- Use `print()` para ver o valor de `new_savings`.
+- Lembre-se de escrever as variáveis corretamente!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Você salvou `10` em `monthly_savings` usando `monthly_savings = 10`?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Você salvou `4` em `num_months` usando `num_months = 4`?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Você usou as variáveis e símbolos corretos para multiplicar? Esperado `monthly_savings * num_months`, mas obteve algo diferente.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Você usou as variáveis e símbolos corretos para somar? Esperado `savings + new_savings`, mas obteve algo diferente.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Lembre-se de imprimir `new_savings` no final do seu script.")
 
-success_msg("You have $40 in new savings!")
+success_msg("Você tem $40 em novas economias!")
 ```
 
 ---
 
-## Other variable types
+## Outros tipos de variáveis
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+No exercício anterior, você trabalhou com o tipo de dados número inteiro do Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int` ou inteiro: um número sem uma parte fracionária. `savings`, com valor `100`, é um exemplo de número inteiro.
 
-Next to numerical data types, there are three other very common data types:
+Além dos tipos de dados numéricos, há três outros tipos de dados muito comuns:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float` ou ponto flutuante: número que tem uma parte inteira e uma parte fracionária, separadas por um ponto. `1.1` é um exemplo de float.
+- `str` ou string: tipo usado para representar texto. Você pode usar aspas simples ou duplas para criar uma string.
+- `bool` ou booleano: tipo usado para representar valores lógicos. Pode ser apenas `True` ou `False` (a distinção entre maiúsculas e minúsculas é importante!).
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Crie um novo float, `half`, com o valor `0.5`.
+- Crie uma nova string, `intro`, com o valor `"Hello! How are you?"`.
+- Crie um novo booleano, `is_good`, com o valor `True`.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Para criar uma variável em Python, use `=`. Lembre-se de colocar a string entre aspas simples ou duplas.
+- Existem apenas dois valores booleanos em Python: `True` e `False`. `TRUE`, `true`, `FALSE`, `false` e outras versões não são aceitas.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Você salvou o float, `0.5` em `half`?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, algo está incorreto na sua variável `intro`. Verifique a ortografia e certifique-se de que você usou aspas.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Você capitalizou o valor booleano? Lembre-se de que não precisa usar aspas aqui.")
 
-success_msg("Nice!")
+success_msg("Legal!")
 ```
 
 ---
 
-## Operations with other types
+## Operações com outros tipos
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Existem variáveis de diferentes tipos no Python. Você pode ver o tipo de uma variável usando `type()`. Por exemplo: para ver o tipo de `a`, execute `type(a)`.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Diferentes tipos se comportam de maneira diferente em Python. Ao somar duas strings, por exemplo, temos um comportamento diferente de quando somamos dois inteiros ou dois booleanos.
 
-Time for you to test this out.
+É sua vez de testar isso.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- Some `savings` a `new_savings` e atribua o resultado a `total_savings`.
+- Use `type()` para imprimir o tipo resultante de `total_savings`.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- Atribua `savings + new_savings` a uma nova variável, `total_savings`.
+- Para imprimir o tipo de uma variável `x`, use `print(type(x))`.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Você não precisa mudar ou remover as variáveis predefinidas."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Adicione `savings` e `new_savings` para criar a variável `total_savings`."),
+    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` para imprimir o tipo de `total_savings`.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- Calcule a soma de `intro` e `intro` e atribua o resultado a `doubleintro`.
+- Imprima `doubleintro`. Você esperava por isso?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- Atribua `intro + intro` a uma nova variável, `doubleintro`.
+- Para imprimir uma variável `x`, escreva `print(x)` no script.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Você não precisa mudar ou remover as variáveis predefinidas."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Você armazenou o resultado de `intro + intro` em `doubleintro`?"),
+    has_printout(0, not_printed_msg = "Não se esqueça de imprimir `doubleintro`.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Legal. Note como `intro + intro` faz com que `\"Hello! How are you?\"` e `\"Hello! How are you?\"` sejam colados juntos.")
 ```
