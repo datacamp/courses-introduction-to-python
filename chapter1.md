@@ -134,11 +134,14 @@ print(3 * 5)
 ```{python}
 Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+# `print(5 - 5)` outputs `0`, which is a substring of the `5.0` printed by the division above,
+# so has_printout() here would also accept a script that never does the subtraction.
+# Match a whole output line instead.
+Ex().has_output(r"(?m)^0$", pattern = True, no_output_msg = "Have you used `print(5 - 5)` to print out the result of your subtraction?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
 
 success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
 ```
