@@ -1,21 +1,19 @@
 ---
-title_meta: Chapter 2
-title: Python Lists
-description: >-
-  Learn to store, access, and manipulate data in lists: the first step toward
-  efficiently working with huge amounts of data.
+title_meta: 챕터 2
+title: Python 리스트
+description: '리스트에서 데이터를 저장하고, 접근하고, 조작하는 방법을 배웁니다. 대량의 데이터를 효율적으로 다루기 위한 첫걸음을 떼보세요.'
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Python Lists
+    title: Python 리스트
   - nb_of_exercises: 4
-    title: Subsetting Lists
+    title: 리스트 부분 추출하기
   - nb_of_exercises: 5
-    title: Manipulating Lists
+    title: 리스트 조작하기
 ---
 
-## Python Lists
+## Python 리스트
 
 ```yaml
 type: VideoExercise
@@ -28,7 +26,7 @@ a0530c4542f10988847b2dbb91f717c3
 
 ---
 
-## Create a list
+## 리스트 만들기
 
 ```yaml
 type: NormalExercise
@@ -39,7 +37,7 @@ skills:
   - 2
 ```
 
-A list is a **compound data type**; you can group values together, like this:
+리스트는 **복합 데이터 타입**으로, 다음과 같이 다양한 값을 하나로 묶을 수 있습니다:
 
 ```
 a = "is"
@@ -47,17 +45,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
+가족의 키를 측정한 후, 이번에는 여러분이 살고 있는 집에 대한 정보를 수집하기로 했습니다. 집 안 각 공간의 면적은 연습 문제에서 각기 다른 변수에 저장되었습니다.
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the `print()` function.
+- 리스트 `areas`를 만들어 복도(`hall`), 주방(`kit`), 거실(`liv`), 침실(`bed`), 욕실(`bath`)의 면적을 순서대로 포함하세요. 미리 정의된 변수를 사용하세요.
+- `print()` 함수를 사용해 `areas`를 출력하세요.
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Make sure to use square brackets `[]` rather than parentheses `()`.
-- You don't need to use quotation marks when storing variables within a list.
-- Type `print(areas)` to print out the list when submitting.
+- 이미 생성된 변수들을 사용해 다음과 같이 리스트를 만들 수 있습니다. `areas = [hall, kit, ...]`
+- 소괄호 `()` 대신 대괄호 `[]`를 사용해야 합니다.
+- 리스트에 변수를 포함할 때는 따옴표를 사용할 필요가 없습니다.
+- `print(areas)`를 입력하여 제출 전에 리스트를 출력하세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -96,11 +94,11 @@ print(areas)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
+predef_msg = "미리 정의된 변수를 제거하거나 수정하지 마십시오!"
+areas_msg = "`areas`를 모든 면적 변수를 포함하는 리스트로 정의하십시오. 올바른 순서로: `[hall, kit, liv, bed, bath]`. 오타에 주의하십시오. 리스트에는 다른 것이 포함되어서는 안 됩니다!"
 
 Ex().check_correct(
-    has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?"),
+    has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}`을 사용하여 스크립트의 끝에서 `areas` 리스트를 출력했는지 확인하십시오."),
     check_correct(
         check_object("areas").has_equal_value(incorrect_msg = areas_msg),
         multi(
@@ -113,12 +111,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("좋습니다! 여기서는 리스트가 훨씬 낫지 않습니까?")
 ```
 
 ---
 
-## Create lists with different types
+## 다양한 타입이 포함된 리스트 만들기
 
 ```yaml
 type: NormalExercise
@@ -129,19 +127,19 @@ skills:
   - 2
 ```
 
-Although it's not really common, a list can also contain a mix of Python types including strings, floats, and booleans.
+흔한 경우는 아니지만, 리스트에는 문자열, 실수, 불리언 등 다양한 Python 타입을 함께 담을 수 있습니다.
 
-You're now going to add the room names to your list, so you can easily see both the room name and size together.
+이번에는 리스트에 방 이름을 추가해서 방 이름과 넓이를 한눈에 확인할 수 있도록 만들어 보겠습니다.
 
-Some of the code has been provided for you to get you started. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+시작을 돕기 위해 일부 코드가 미리 작성되어 있습니다. 이 부분을 주의하세요! `"bathroom"`은 문자열이고, `bath`는 앞서 지정한 실수 값 `9.50`을 나타내는 변수입니다.
 
 `@instructions`
-- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- `areas` 리스트를 완성하는 코드를 작성하세요. 각 방의 이름을 문자열로 먼저 넣고, 그 다음에 해당 방의 넓이가 오도록 리스트를 구성하세요. 적절한 위치에 `"hallway"`, `"kitchen"`, `"bedroom"` 문자열을 추가하면 됩니다.
+- `areas`를 다시 출력해 보세요. 출력 결과가 더 이해하기 쉬워졌나요?
 
 `@hint`
-- The first four elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
-- A string will need to be in quotation marks `""`.
+- `areas` 리스트의 첫 요소 네 개는 `["hallway", hall, "kitchen", kit, ...`와 같이 작성됩니다.
+- 문자열은 반드시 따옴표 `""`로 감싸야 합니다.
 
 `@pre_exercise_code`
 ```{python}
@@ -181,22 +179,22 @@ print(areas)
 `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
+predef_msg = "미리 정의된 변수를 제거하거나 수정하지 마십시오!"
+areas_msg = "올바른 값을 `areas`에 할당하지 않았습니다. 지침을 다시 한 번 살펴보세요. 각 경우에 방 이름을 면적을 포함하는 변수 앞에 배치해야 합니다. 순서가 중요합니다! 오타에 주의하세요."
 
 Ex().check_correct(
   check_object("areas").has_equal_value(incorrect_msg = areas_msg),
   multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:스크립트의 끝에서 `areas` 리스트를 출력하기 위해 `{{sol_call}}`을(를) 사용했는지 확인하세요.")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("좋습니다! 이 리스트는 문자열과 부동 소수점 수를 모두 포함하고 있지만, 이는 Python에게 문제가 되지 않습니다!")
 ```
 
 ---
 
-## List of lists
+## 리스트 안의 리스트
 
 ```yaml
 type: NormalExercise
@@ -207,20 +205,20 @@ skills:
   - 2
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+데이터 과학자로서 수많은 데이터를 다루게 될 텐데, 이때 데이터를 그룹으로 묶으면 훨씬 편리하게 작업할 수 있습니다.
 
-Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
+집 안의 모든 방 이름과 넓이를 문자열과 실수로 구성된 단순한 리스트에 담는 대신, 리스트 안에 리스트를 넣는 방식을 활용할 수 있습니다.
 
-Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+`"hallway"`는 문자열이고, `hall`은 앞서 지정한 실수 `11.25`를 나타내는 변수라는 것을 기억하세요.
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
+- 침실과 욕실 데이터도 포함하는 리스트 안의 리스트를 완성하세요. 순서에 맞게 입력해야합니다!
+- `house`를 출력해 보세요. 이런 방식으로 데이터를 구조화하면 더 쉽게 이해할 수 있겠죠?
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- Remember to include a comma `,` after each sublist.
-- To print a variable `x`, write `print(x)` on a new line.
+- `house` 리스트에 대괄호를 사용해 `["bedroom", bed]`와 `["bathroom", bath]`를 추가하여 _하위 리스트_를 만드세요.
+- 각 하위 리스트 뒤에는 반드시 쉼표 `,`를 붙여야 합니다.
+- 변수 `x`를 출력하려면 새 줄에 `print(x)`를 작성하세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -267,8 +265,8 @@ print(house)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
+predef_msg = "미리 정의된 변수를 제거하거나 수정하지 마십시오!"
+house_msg = "`house`에 올바른 값을 할당하지 않았습니다. 지침을 다시 한 번 살펴보세요. 리스트의 리스트를 확장하여 각 방 이름과 방 면적 쌍에 대한 리스트를 포함하도록 하십시오. 순서와 오타에 주의하세요!"
 
 Ex().check_correct(
     check_object("house").has_equal_value(incorrect_msg = house_msg),
@@ -281,14 +279,14 @@ Ex().check_correct(
     )
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:`{{sol_call}}`을 사용하여 `house`의 내용을 출력했는지 확인하십시오.")
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("훌륭합니다! 리스트 서브세팅에 대해 배울 준비를 하세요!")
 ```
 
 ---
 
-## Subsetting Lists
+## 리스트 부분 추출하기
 
 ```yaml
 type: VideoExercise
@@ -301,7 +299,7 @@ fc15ba5cb9485456df8589130b519ea3
 
 ---
 
-## Subset and conquer
+## 부분 추출하여 처리하기
 
 ```yaml
 type: NormalExercise
@@ -312,7 +310,7 @@ skills:
   - 2
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+Python 리스트에서 원하는 요소를 추출하는 건 어렵지 않습니다. 아래의 샘플 코드를 살펴보시면, 리스트 `x`를 만든 뒤 리스트에서 'b'를 선택합니다. 두 번째 요소이므로 인덱스 1에 위치한다는 것을 잊지 마세요. 음수 인덱싱을 사용해도 괜찮습니다.
 
 ```
 x = ["a", "b", "c", "d"]
@@ -320,18 +318,18 @@ x[1]
 x[-3] # same result!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+앞서 사용한 문자열과 실수가 모두 포함된 `areas` 리스트를 기억하시나요? 해당 리스트의 정의는 이미 스크립트에 포함되어 있습니다. 올바른 코드를 추가해서 Python 부분 추출을 직접 시도해보세요.
 
 `@instructions`
-- Print out the second element from the `areas` list (it has the value `11.25`).
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room (`20.0`) and print it out.
+- `areas` 리스트에서 두 번째 요소(`11.25`)를 출력하세요.
+- `areas`의 마지막 요소인 `9.50`을 선택해 출력하세요. 음수 인덱스를 사용하면 편리합니다!
+- 거실의 면적을 나타내는 숫자(`20.0`)를 선택해 출력하세요.
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`.
-- Use `x[-1]` to select the last element of a list `x`.
-- Make sure to wrap your subsetting operations in a `print()` call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
+- 리스트 `x`의 두 번째 요소를 선택하려면 `x[1]`을 사용하세요.
+- 리스트 `x`의 마지막 요소를 선택하려면 `x[-1]`을 사용하세요.
+- 부분 추출 연산을 반드시 `print()`로 감싸서 실행해야합니다.
+- 거실의 면적을 나타내는 숫자는 리스트의 6번째 요소이므로 `[5]`를 사용해야 합니다. `area[4]`를 사용하면 문자열이 출력됩니다!
 
 `@pre_exercise_code`
 ```{python}
@@ -370,17 +368,17 @@ print(areas[5])
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "미리 정의된 `areas` 리스트를 제거하거나 수정하지 마십시오."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
-Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
-Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
-success_msg("Good job!")
+Ex().has_printout(0, not_printed_msg = "코드를 다시 살펴보고 `areas`의 두 번째 요소를 출력하십시오. 이는 인덱스 `1`에 있습니다.")
+Ex().has_printout(1, not_printed_msg = "코드를 다시 살펴보고 `areas`의 마지막 요소를 출력하십시오. 이는 인덱스 `-1`에 있습니다.")
+Ex().has_printout(2, not_printed_msg = "코드를 다시 살펴보고 거실의 면적을 출력하십시오. 이는 인덱스 `5`에 있습니다.")
+success_msg("잘하셨습니다!")
 ```
 
 ---
 
-## Slicing and dicing
+## 슬라이싱 활용하기
 
 ```yaml
 type: NormalExercise
@@ -391,23 +389,23 @@ skills:
   - 2
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+리스트에서 단일 값을 선택하는 것은 시작에 불과합니다. 리스트를 _슬라이싱_해서 여러 개의 요소를 한 번에 선택할 수도 있습니다. 다음 문법을 사용하세요:
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
+`start` 인덱스는 결과에 포함되지만, `end` 인덱스는 _포함되지 않습니다_. 인덱스를 생략하는 것도 가능합니다. `start` 인덱스를 지정하지 않으면 Python은 자동으로 리스트의 맨 앞부터 슬라이싱을 시작합니다.
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-- Print both `downstairs` and `upstairs` using `print()`.
+- 슬라이싱을 사용하여 `downstairs`의 첫 6개 요소를 담은 리스트 `areas`를 만드세요.
+- `areas`의 마지막 `4`개 요소로 `upstairs`를 만드세요. 이번에는 `end` 인덱스를 생략하여 간단히 표현하세요.
+- `print()`를 사용하여 `upstairs`와 `downstairs`를 모두 출력하세요.
 
 `@hint`
-- Use the brackets `[0:6]` to get the first six elements of a list.
-- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
-- Add two `print()` calls to print out `downstairs` and `upstairs`.
+- `[0:6]`와 같이 괄호를 사용하여 리스트의 첫 6개 요소를 가져올 수 있습니다.
+- 리스트 `l`에서 첫 5개 요소를 제외한 나머지를 가져오려면 `l[5:]`를 사용하세요.
+- `print()` 호출을 두 번 추가하여 `downstairs`와 `upstairs`를 출력하세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -448,22 +446,22 @@ print(upstairs)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "미리 정의된 `areas` 리스트를 제거하거나 수정하지 마십시오."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
+patt = "`%s`이(가) 잘못되었습니다. `areas[%s]`와 슬라이싱을 사용하여 원하는 요소를 선택하거나 이에 상응하는 것을 사용하십시오."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
-Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
+Ex().has_printout(0, not_printed_msg="계산 후 `downstairs`를 출력하셨습니까?")
+Ex().has_printout(1, not_printed_msg="계산 후 `upstairs`를 출력하셨습니까?")
 
-success_msg("Great!")
+success_msg("훌륭합니다!")
 ```
 
 ---
 
-## Subsetting lists of lists
+## 리스트 안의 리스트에서 부분 추출하기
 
 ```yaml
 type: NormalExercise
@@ -471,20 +469,20 @@ key: dbbbd306cf
 xp: 100
 ```
 
-A Python list can also contain other lists.
+Python 리스트는 다른 리스트를 요소로 포함할 수 있습니다.
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
+리스트 안의 리스트에서 일부를 추출할 때도 이전과 동일한 방법인 대괄호를 사용합니다. 예를 들어 `house` 리스트는 이렇게 보일 것입니다.
 
-```
+ ```
 house[2][0]
 ```
 
 `@instructions`
-- Subset the `house` list to get the float `9.5`.
+- `house` 리스트에서 `9.5`를 가져오세요.
 
 `@hint`
-- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
-- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+- 단계별로 생각해 보세요. 먼저 리스트의 마지막 요소인 `["bathroom", 9.50]`에 접근해야 합니다. 마지막 요소의 인덱스는 `-1`이라는 것을 기억하세요.
+- 다음으로 `["bathroom", 9.50]`의 두 번째 요소에 접근해야 합니다. 해당 요소의 인덱스는 `1`입니다.
 
 `@pre_exercise_code`
 ```{python}
@@ -522,12 +520,12 @@ Ex().check_or(
   has_code("house[4][1]", pattern=False)
 )
 
-success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
+success_msg("정확합니다! 리스트 퍼즐의 마지막 조각은 조작입니다.")
 ```
 
 ---
 
-## Manipulating Lists
+## 리스트 조작하기
 
 ```yaml
 type: VideoExercise
@@ -540,7 +538,7 @@ xp: 50
 
 ---
 
-## Replace list elements
+## 리스트 요소 교체하기
 
 ```yaml
 type: NormalExercise
@@ -551,18 +549,18 @@ skills:
   - 2
 ```
 
-To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+리스트의 요소를 교체하려면 리스트의 일부를 선택한 뒤 새 값을 할당하면 됩니다. 단일 요소를 선택할 수도 있고, 전체 리스트의 슬라이스를 한 번에 변경할 수도 있습니다.
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+이번 연습 문제와 이후의 연습 문제에서는 집의 다양한 방 이름과 면적이 담긴 `areas` 리스트를 계속 활용합니다.
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
+- 음수 인덱싱을 사용하여 욕실 면적을 `10.50`에서 `9.50` 제곱미터로 업데이트하세요.
+- `areas` 리스트를 좀 더 세련되게 바꿔볼까요? `"living room"`을 `"chill zone"`으로 변경하세요. 이번에는 음수 인덱싱을 사용하지 마세요.
 
 `@hint`
-- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
-- Then, replace the value with the new bathroom area by assigning it to this subset.
-- Do the same to update the `"living room"` name, which is at index 4.
+- 욕실 면적을 업데이트하려면 욕실 면적에 해당하는 부분(리스트의 마지막 항목)을 선택하세요.
+- 그리고 해당 부분에 새로운 욕실 면적 값을 할당하여 교체하세요.
+- 같은 방법으로 인덱스 4에 있는 `"living room"`의 이름도 업데이트하세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -595,21 +593,21 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
+bathroom_msg = '욕실 면적을 업데이트하려면 `areas[-1] = 10.50`을(를) 사용할 수 있습니다.'
+chillzone_msg = '거실 이름을 업데이트하려면 `areas[4] = "chill zone"`을(를) 사용할 수 있습니다.'
 Ex().check_correct(
-  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  check_object('areas').has_equal_value(incorrect_msg = '귀하의 `areas` 변경 사항이 올바른 목록을 생성하지 않았습니다. 올바른 하위 집합 연산을 사용했는지 확인하십시오. 의심스러울 때는 힌트를 사용할 수 있습니다!'),
   multi(
     has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
     has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
-success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
+success_msg('좋습니다! 코드 샘플에서 보여준 것처럼, 리스트를 슬라이스하고 다른 리스트로 대체하여 한 번의 명령으로 여러 요소를 업데이트할 수도 있습니다.')
 ```
 
 ---
 
-## Extend a list
+## 리스트 확장하기
 
 ```yaml
 type: NormalExercise
@@ -620,22 +618,22 @@ skills:
   - 2
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+리스트의 요소를 변경할 수 있다면, 새로운 요소도 추가할 수 있어야겠죠? `+` 연산자를 사용할 수 있습니다.
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+와우, 복권에 당첨됐습니다! 여러분은 수영장 옆 별채와 차고를 짓기로 결정했습니다. `areas` 리스트에 해당 정보를 추가해보세요.
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- `+` 연산자를 사용하여 `["poolhouse", 24.5]` 리스트를 `areas` 리스트의 끝에 추가하세요. 결과 리스트를 `areas_1`로 저장하세요.
+- 차고 정보를 추가하여 `areas_1`을 더 확장하세요. 문자열 `"garage"`와 실수 `15.45`를 추가하고, 결과 리스트의 이름을 `areas_2`로 지정하세요.
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- 과제의 코드 예시를 참고하세요. 여기서 `x`는 `areas`이고, `["e", "f"]`는 `["poolhouse", 24.5]`입니다.
+- `areas_1`에 더 많은 요소를 추가하려면 `areas_1 + ["element", 123]`을 사용하세요.
 
 `@pre_exercise_code`
 ```{python}
@@ -670,16 +668,16 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "미리 정의된 `areas` 리스트를 제거하거나 수정하지 마십시오."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
-success_msg("Cool! The list is shaping up nicely!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "`areas + [\"poolhouse\", 24.5]`를 사용하여 `areas_1`을 생성하십시오. 오타에 주의하세요!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "`areas_1 + [\"garage\", 15.45]`를 사용하여 `areas_2`을 생성하십시오. 오타에 주의하세요!")
+success_msg("멋집니다! 리스트가 잘 형성되고 있습니다!")
 ```
 
 ---
 
-## Delete list elements
+## 리스트 요소 삭제하기
 
 ```yaml
 type: NormalExercise
@@ -687,23 +685,23 @@ key: 85f792356e
 xp: 100
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+마지막으로, 리스트에서 요소를 삭제할 수도 있습니다. `del` 명령문을 사용하시면 됩니다.
 
 ```
 x = ["a", "b", "c", "d"]
 del x[1]
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+주의할 점은 리스트에서 요소를 삭제하면, 삭제된 요소 뒤에 있는 모든 요소의 인덱스가 바뀐다는 점입니다!
 
-Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
+아쉽게도 복권 당첨금이 생각보다 크지 않아서 수영장 옆 별채 공사는 포기해야 할 것 같습니다. 리스트에서 해당 항목을 삭제해야 합니다. `areas` 리스트에서 해당하는 문자열과 실수를 삭제하세요.
 
 `@instructions`
-- Delete the string and float for the `"poolhouse"` from your `areas` list.
-- Print the updated `areas` list.
+- `areas` 리스트에서 `"poolhouse"`에 해당하는 문자열과 실수를 삭제하세요.
+- 업데이트된 `areas` 리스트를 출력하세요.
 
 `@hint`
-- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
+- 요소 두 개를 삭제하려면 `del`을 두 번 사용해야 합니다. 삭제 후 인덱스가 변경된다는 점에 주의하세요!
 
 `@pre_exercise_code`
 ```{python}
@@ -764,13 +762,13 @@ Ex().check_or(
   )
 )
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="`areas`에서 poolhouse 문자열과 float을 제거한 후 출력하셨나요?")
+success_msg("정답입니다! 나중에 Python 리스트에서 특정 요소를 더 쉽게 제거하는 방법에 대해 배우게 될 것입니다.")
 ```
 
 ---
 
-## Inner workings of lists
+## 리스트의 내부 동작 방식
 
 ```yaml
 type: NormalExercise
@@ -781,17 +779,17 @@ skills:
   - 2
 ```
 
-Some code has been provided for you in this exercise: a list with the name `areas` and a copy named `areas_copy`.
+이 연습 문제에서는 `areas`라는 이름의 리스트와 `areas_copy`라는 복사본이 제공됩니다.
 
-Currently, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit the run code button you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+현재 `areas_copy` 리스트의 첫 번째 요소가 변경되었고, `areas` 리스트가 출력된 상태입니다. 코드 실행 버튼을 클릭해보면, `areas_copy`만 수정했음에도 `areas`도 동일하게 변경되었다는 것을 확인할 수 있습니다. `areas`와 `areas_copy`가 동일한 리스트를 가리키고 있기 때문입니다.
 
-If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list with `list()` or by using `[:]`.
+`areas_copy`를 변경하여도 `areas`에 영향을 미치지 않도록 하려면, `list()`를 사용하거나 `[:]`을 이용해 `areas` 리스트를 명시적으로 복사해야 합니다.
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
+- `areas_copy` 변수를 생성하는 두 번째 명령어를 수정하여, `areas_copy`를 `areas`의 명시적인 복사본으로 만드세요. 수정 후에는 `areas_copy`를 변경해도 `areas`가 영향을 받지 않아야 합니다. 답변 제출을 클릭해서 확인해 보세요.
 
 `@hint`
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+- `areas_copy = areas` 코드를 변경하세요. `areas`를 직접 할당하는 대신 `list(areas)` 또는 `areas[:]`를 할당할 수 있습니다.
 
 `@pre_exercise_code`
 ```{python}
@@ -831,16 +829,16 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_object("areas_copy").has_equal_value(incorrect_msg = "`areas_copy`가 올바르게 업데이트되지 않은 것 같습니다."),
+  check_function("list", missing_msg = "`list(areas)`를 사용하여 `areas_copy`를 생성했는지 확인하세요.")
 )
 
-mmsg = "Don't remove the predefined `areas` list."
-imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+mmsg = "미리 정의된 `areas` 리스트를 제거하지 마세요."
+imsg = "원본 `areas` 리스트가 아닌 복사본만 편집해야 합니다. 복사본을 만드는 방법이 확실하지 않다면 연습 문제 설명을 다시 확인하세요."
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_function("list", missing_msg = "`list(areas)`를 사용하여 `areas_copy`를 생성했는지 확인하세요.")
 )
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("좋습니다! 명시적 복사와 참조 기반 복사의 차이는 미묘하지만 매우 중요할 수 있습니다. 리스트가 컴퓨터의 메모리에 어떻게 저장되는지 기억해 두세요.")
 ```
