@@ -1,19 +1,19 @@
 ---
-title_meta: Chapter 4
+title_meta: Chương 4
 title: NumPy
 description: >-
-  NumPy is a fundamental Python package to efficiently practice data science.
-  Learn to work with powerful tools in the NumPy array, and get started with
-  data exploration.
+  NumPy là package Python nền tảng giúp bạn thực hành khoa học dữ liệu hiệu quả.
+  Học cách làm việc với các công cụ hữu ích trong array NumPy và bắt đầu khám
+  phá dữ liệu.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter4.pdf'
 lessons:
   - nb_of_exercises: 5
     title: Numpy
   - nb_of_exercises: 5
-    title: 2D Numpy Arrays
+    title: Array Numpy hai chiều
   - nb_of_exercises: 3
-    title: 'Numpy: Basic Statistics'
+    title: 'Numpy: Thống kê cơ bản'
 ---
 
 ## NumPy
@@ -29,7 +29,7 @@ a0487c26210f6b71ea98f917734cea3a
 
 ---
 
-## Your First NumPy Array
+## Array NumPy đầu tiên của bạn
 
 ```yaml
 type: NormalExercise
@@ -40,19 +40,19 @@ skills:
   - 2
 ```
 
-You're now going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of `numpy`, a powerful package to do data science.
+Giờ bạn sẽ bước vào thế giới bóng chày. Ở đó, bạn sẽ làm quen với những kiến thức cơ bản của `numpy`, một package hữu ích cho khoa học dữ liệu.
 
-A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code to create a `numpy` array from it?
+Một list `baseball` đã có sẵn trong script Python, thể hiện chiều cao của một số cầu thủ bóng chày theo đơn vị cm. Bạn hãy thêm code để tạo một array `numpy` từ list này.
 
 `@instructions`
-- Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use `np.array()` to create a `numpy` array from `baseball`. Name this array `np_baseball`.
-- Print out the type of `np_baseball` to check that you got it right.
+- Import package `numpy` với tên viết tắt `np`, để gọi `numpy` bằng `np`.
+- Dùng `np.array()` để tạo một array `numpy` từ `baseball`. Đặt tên array này là `np_baseball`.
+- Hiển thị ra kiểu của `np_baseball` để kiểm tra kết quả.
 
 `@hint`
-- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
-- `np.array()` should take on input `baseball`. Assign the result of the function call to `np_baseball`.
-- To print out the type of a variable `x`, simply type `print(type(x))`.
+- `import numpy as np` sẽ giải quyết việc này. Từ giờ, bạn dùng `np.fun_name()` mỗi khi muốn gọi một hàm của `numpy`.
+- Hàm `np.array()`  có đầu vào là `baseball`. Gán kết quả của hàm cho `np_baseball`.
+- Để hiển thị ra kiểu của một biến `x`, chỉ cần gõ `print(type(x))`.
 
 `@pre_exercise_code`
 ```{python}
@@ -89,7 +89,7 @@ print(type(np_baseball))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined variables."
+predef_msg = "Bạn không cần phải thay đổi hoặc xóa các biến được định nghĩa trước."
 Ex().has_import("numpy")
 Ex().check_correct(
   check_object("np_baseball"),
@@ -100,12 +100,12 @@ Ex().check_correct(
 )
 
 Ex().has_printout(0)
-success_msg("Great job!")
+success_msg("Làm tốt lắm!")
 ```
 
 ---
 
-## Baseball players' height
+## Chiều cao của các cầu thủ bóng chày
 
 ```yaml
 type: NormalExercise
@@ -116,21 +116,21 @@ skills:
   - 2
 ```
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height_in`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
+Giả sử bạn là một fan cuồng của bóng chày. Bạn quyết định gọi cho MLB (Major League Baseball) để xin một số thống kê về chiều cao của các cầu thủ. Họ gửi cho bạn dữ liệu của hơn một nghìn cầu thủ, được lưu trong một list Python thông thường: `height_in`. Chiều cao được tính bằng inch. Từ đó, bạn hãy tạo một array `numpy` từ đó và chuyển đổi đơn vị sang mét không?
 
-`height_in` is already available and the `numpy` package is loaded, so you can start straight away (Source: stat.ucla.edu).
+`height_in` đã có sẵn và package `numpy` cũng đã được import, nên bạn có thể bắt đầu ngay (Nguồn: stat.ucla.edu).
 
 `@instructions`
-- Create a `numpy` array from `height_in`. Name this new array `np_height_in`.
-- Print `np_height_in`.
-- Multiply `np_height_in` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
-- Print out `np_height_m` and check if the output makes sense.
+- Tạo một array `numpy` từ `height_in`. Đặt tên array mới là `np_height_in`.
+- Hiển thị kết quả của `np_height_in`.
+- Nhân `np_height_in` với `0.0254` để đổi tất cả số đo chiều cao từ inch sang mét. Lưu các giá trị mới vào một array mới là `np_height_m`.
+- Hiển thị kết quả của `np_height_m` và kiểm tra xem có hợp lý không.
 
 `@hint`
-- Use `np.array()` and pass it `height`. Store the result in `np_height_in`.
-- To print out a variable `x`, type `print(x)` in the Python script.
-- Perform calculations as if `np_height_in` is a single number: `np_height_in * conversion_factor` is part of the answer.
-- To print out a variable `x`, type `print(x)` in the Python script.
+- Dùng `np.array()` và đưa `height` vào. Lưu kết quả vào biến `np_height_in`.
+- Để hiển thị một biến `x`, gõ `print(x)` trong script Python.
+- Thực hiện phép tính như thể `np_height_in` là một số duy nhất: `np_height_in * conversion_factor` sẽ là một phần của đáp án.
+- Để hiển thị ra một biến `x`, gõ `print(x)` trong script Python.
 
 `@pre_exercise_code`
 ```{python}
@@ -190,15 +190,15 @@ Ex().check_correct(
 
 Ex().check_correct(
   has_printout(1),
-  check_object("np_height_m").has_equal_value(incorrect_msg = "Use `np_height_in * 0.0254` to calculate `np_height_m`.")
+  check_object("np_height_m").has_equal_value(incorrect_msg = "Sử dụng `np_height_in * 0.0254` để tính `np_height_m`.")
 )
 
-success_msg("Nice! In the blink of an eye, `numpy` performs multiplications on more than 1000 height measurements.")
+success_msg("Tuyệt vời! Trong nháy mắt, `numpy` thực hiện phép nhân trên hơn 1000 phép đo chiều cao.")
 ```
 
 ---
 
-## NumPy Side Effects
+## Hiệu ứng phụ của NumPy
 
 ```yaml
 type: MultipleChoiceExercise
@@ -209,19 +209,19 @@ skills:
   - 2
 ```
 
-`numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things are different.
+`numpy` rất mạnh khi thực hiện số học véc-tơ. Tuy nhiên, nếu so sánh với danh sách (list) thông thường của Python, sẽ có một vài khác biệt.
 
-First, `numpy` arrays cannot contain elements with different types. If you mix types, like booleans and integers, `numpy` automatically converts them to a common type. Booleans like `True` and `False` are treated as `1` and `0` when combined with numbers, so the array ends up as integers.
+Thứ nhất, mảng `numpy` không thể chứa các phần tử có kiểu khác nhau. Nếu bạn trộn kiểu, như boolean và số nguyên, `numpy` sẽ tự động chuyển chúng về một kiểu chung. Boolean như `True` và `False` được coi như `1` và `0` khi kết hợp với số, nên mảng cuối cùng sẽ thành số nguyên.
 
-Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and `numpy` arrays.
+Thứ hai, các toán tử số học thường gặp như `+`, `-`, `*` và `/` có ý nghĩa khác nhau đối với list Python thông thường và mảng `numpy`.
 
-Select the code that results in the following output:
+Chọn đoạn mã tạo ra đầu ra sau:
 
 ```
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-The `numpy` package is already imported as `np`. You can run each option in the IPython Shell to see the output. 
+Gói `numpy` đã được import là `np`. Bạn có thể chạy từng lựa chọn trong IPython Shell để xem đầu ra.
 
 `@possible_answers`
 - `np.array([True, 1, 2, 3, 4, False])`
@@ -230,7 +230,7 @@ The `numpy` package is already imported as `np`. You can run each option in the 
 - `np.array([0, 1, 2, 3, 4, 5])`
 
 `@hint`
-- Copy the different code chunks and paste them in the IPython Shell. Hit **enter** to run the code and see which output matches the one generated by `np.array([True, 1, 2]) + np.array([3, 4, False])`.
+- Sao chép từng đoạn mã và dán vào IPython Shell. Nhấn **enter** để chạy mã và xem đầu ra nào khớp với kết quả của `np.array([True, 1, 2]) + np.array([3, 4, False])`.
 
 `@pre_exercise_code`
 ```{python}
@@ -239,14 +239,14 @@ import numpy as np
 
 `@sct`
 ```{python}
-msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
+msg1 = msg3 = msg4 = "Không chính xác. Hãy thử các đoạn mã khác nhau và xem đoạn nào khớp với đoạn mã mục tiêu."
+msg2 = "Làm tốt lắm! `True` được chuyển đổi thành 1, `False` được chuyển đổi thành 0."
 Ex().has_chosen(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Subsetting NumPy Arrays
+## Trích xuất trong NumPy Array
 
 ```yaml
 type: NormalExercise
@@ -257,17 +257,17 @@ skills:
   - 2
 ```
 
-Subsetting (using the square bracket notation on lists or arrays) works exactly the same with both lists and arrays.
+Phép trích xuất phần tử (dùng cú pháp ngoặc vuông trên list hoặc array) hoạt động hoàn toàn giống nhau với cả list và array.
 
-This exercise already has two lists, `height_in` and `weight_lb`, loaded in the background for you. These contain the height and weight of the MLB players as regular lists. It also has two `numpy` array lists, `np_weight_lb` and `np_height_in` prepared for you.
+Bài tập này đã có sẵn hai list, `height_in` và `weight_lb`. Chúng chứa chiều cao và cân nặng của các cầu thủ MLB dưới dạng list thông thường. Ngoài ra còn có sẵn hai `numpy` array, `np_weight_lb` và `np_height_in.
 
 `@instructions`
-- Subset `np_weight_lb` by printing out the element at index 50.
-- Print out a sub-array of `np_height_in` that contains the elements at index 100 up to **and including** index 110.
+- Trích xuất phần tử của `np_weight_lb` bằng cách hiển thị phần tử ở index 50
+- Hiển thị ra một sub-array của `np_height_in` chứa các phần tử từ index 100 đến 110 bao gồm cả index 110.
 
 `@hint`
-- Make sure to wrap a `print()` call around your subsetting operations.
-- Use `[100:111]` to get the elements from index 100 up to and including index 110.
+- Hãy nhớ đặt các phép trích xuất phần tử trong hàm `print()`.
+- Dùng `[100:111]` để lấy các phần tử từ index 100 đến 110, bao gồm cả index 110.
 
 `@pre_exercise_code`
 ```{python}
@@ -308,7 +308,7 @@ print(np_height_in[100:111])
 `@sct`
 ```{python}
 Ex().has_import("numpy", same_as=False)
-msg = "You don't have to change or remove the predefined variables."
+msg = "Bạn không cần phải thay đổi hoặc xóa các biến được định nghĩa trước."
 Ex().multi(
     check_object("np_height_in", missing_msg=msg).has_equal_value(incorrect_msg = msg),
     check_object("np_weight_lb", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -317,12 +317,12 @@ Ex().multi(
 Ex().has_printout(0)
 Ex().has_printout(1)
 
-success_msg("Nice! Time to learn something new: 2D NumPy arrays!")
+success_msg("Tuyệt vời! Đã đến lúc học điều gì đó mới: mảng NumPy 2D!")
 ```
 
 ---
 
-## 2D NumPy Arrays
+## Array NumPy hai chiều
 
 ```yaml
 type: VideoExercise
@@ -335,7 +335,7 @@ ae3238dcc7feb9adecfee0c395fc8dc8
 
 ---
 
-## Your First 2D NumPy Array
+## Array NumPy 2D Đầu Tiên Của Bạn
 
 ```yaml
 type: NormalExercise
@@ -346,19 +346,19 @@ skills:
   - 2
 ```
 
-Before working on the actual MLB data, let's try to create a 2D `numpy` array from a small list of lists.
+Trước khi làm việc với dữ liệu MLB thực tế, hãy thử tạo một array `numpy` 2D từ một list chứa list nhỏ.
 
-In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
+Trong bài này, `baseball` là một list chứa list. List chính chứa 4 phần tử. Mỗi phần tử là một list gồm chiều cao và cân nặng của 4 cầu thủ bóng chày, theo đúng thứ tự đó. `baseball` đã được viết sẵn cho bạn trong script.
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
+- Dùng `np.array()` để tạo array `numpy` 2D từ `baseball`. Đặt tên là `np_baseball`.
+- Hiển thị ra kiểu dữ liệu của `np_baseball`.
+- Hiển thị ra thuộc tính `shape` của `np_baseball`. Dùng `np_baseball.shape`.
 
 `@hint`
-- `baseball` is already coded for you in the script. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- Use `print()` in combination with `type()` for the second instruction.
-- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a `print()` call around it.
+- `baseball` đã được tạo sẵn trong script. Gọi hàm `np.array()` với biến này và lưu array `numpy` 2D thu được vào `np_baseball`.
+- Dùng `print()` kết hợp với `type()` cho yêu cầu thứ hai.
+- `np_baseball.shape` sẽ cho bạn biết kích thước của `np_baseball`. Nhớ dùng lệnh `print()` bọc quanh nó.
 
 `@pre_exercise_code`
 ```{python}
@@ -405,9 +405,9 @@ print(np_baseball.shape)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
-Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
-Ex().has_import("numpy", same_as = False)
+msg = "Bạn không cần phải thay đổi hoặc xóa các biến được định nghĩa trước."
+Ex().check_object("baseball", missing_msg=msg).has_equal_value(incorrect_msg=msg)
+Ex().has_import("numpy", same_as=False)
 
 Ex().check_correct(
     multi(
@@ -420,12 +420,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Great! You're ready to convert the actual MLB data to a 2D `numpy` array now!")
+success_msg("Tuyệt vời! Bây giờ bạn đã sẵn sàng để chuyển đổi dữ liệu MLB thực tế thành một mảng 2D `numpy`!")
 ```
 
 ---
 
-## Baseball data in 2D form
+## Dữ liệu bóng chày ở dạng 2D
 
 ```yaml
 type: NormalExercise
@@ -436,19 +436,20 @@ skills:
   - 2
 ```
 
-You realize that it makes more sense to restructure all this information in a 2D `numpy` array.
+Bạn nhận thấy việc cấu trúc lại toàn bộ dữ liệu này thành một array `numpy` 2D sẽ hợp lý hơn.
 
-You have a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this list is `baseball` and it has been loaded for you already (although you can't see it).
+Bạn có một list chứa các list. Trong list này, mỗi list con hiển thị chiều cao và cân nặng của một cầu thủ bóng chày. Tên của list là `baseball`, list này đã có đủ dữ liệu (dù bạn không nhìn thấy).
 
-Store the data as a 2D array to unlock `numpy`'s extra functionality.
+
+Hãy lưu dữ liệu dưới dạng array 2D để tận dụng thêm các chức năng của `numpy`.
 
 `@instructions`
-- Use `np.array()` to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`.
+- Dùng `np.array()` để tạo array `numpy` 2D từ `baseball`. Đặt tên là `np_baseball`.
+- Hiển thị ra thuộc tính `shape` của `np_baseball`.
 
 `@hint`
-- `baseball` is already available in the Python environment. Call `np.array()` on it and store the resulting 2D `numpy` array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a `print()`call around it.
+- `baseball` đã có sẵn trong Python. Gọi hàm `np.array()` với `baseball` và lưu array `numpy` 2D thu được vào `np_baseball`.
+- `np_baseball.shape` sẽ cho bạn biết kích thước của `np_baseball`. Nhớ bọc nó bằng lệnh `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -491,12 +492,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Slick! Time to show off some killer features of multi-dimensional `numpy` arrays!")
+success_msg("Tuyệt vời! Đã đến lúc thể hiện một số tính năng nổi bật của mảng `numpy` đa chiều!")
 ```
 
 ---
 
-## Subsetting 2D NumPy Arrays
+## Trích xuất phần tử từ Array NumPy hai chiều
 
 ```yaml
 type: NormalExercise
@@ -507,7 +508,7 @@ skills:
   - 2
 ```
 
-If your 2D `numpy` array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
+Nếu array `numpy` hai chiều của bạn có cấu trúc đều đặn, tức là mỗi hàng và cột có số lượng giá trị cố định, thì những cách trích xuất phức tạp sẽ trở nên rất dễ dàng. Hãy xem đoạn code dưới đây, trong đó các phần tử `"a"` và `"c"` được trích xuất từ một list chứa list.
 
 ```
 # numpy
@@ -516,17 +517,17 @@ np_x = np.array(x)
 np_x[:, 0]
 ```
 
-The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
+Các chỉ số trước dấu phẩy chỉ hàng, còn các chỉ số sau dấu phẩy chỉ cột. Ký hiệu `:` dùng để cắt (slice); trong ví dụ này, nó đang yêu cầu Python lấy tất cả các hàng.
 
 `@instructions`
-- Print out the 50th row of `np_baseball`.
-- Make a new variable, `np_weight_lb`, containing the entire second column of `np_baseball`.
-- Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
+- Hiển thị hàng thứ 50 của `np_baseball`.
+- Tạo biến mới, `np_weight_lb`, chứa toàn bộ cột thứ hai của `np_baseball`.
+- Chọn chiều cao (cột thứ nhất) của cầu thủ bóng chày thứ 124 trong `np_baseball` và hiển thị kết quả
 
 `@hint`
-- You need row index 49 in the first instruction! More specifically, you'll want to use `[49, :]`.
-- To select the entire second column, you'll need `[:, 1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a `print()` statement.
+- Trong hướng dẫn đầu tiên, bạn cần dùng row có index 49.  Cụ thể hơn, hãy dùng `[49, :]`.
+- Để chọn toàn bộ cột thứ hai, bạn dùng `[:, 1]`.
+- Ở yêu cầu cuối, dùng `[123, 0]` và nhớ đặt tất cả trong lệnh `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -569,7 +570,7 @@ print(np_baseball[123, 0])
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Bạn không cần phải thay đổi hoặc xóa các biến được định nghĩa trước."
 Ex().multi(
     has_import("numpy", same_as = False),
     check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
@@ -577,16 +578,16 @@ Ex().multi(
 
 Ex().has_printout(0)
 
-Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "You can use `np_baseball[:,1]` to define `np_weight_lb`. This will select the entire first column.")
+Ex().check_object('np_weight_lb').has_equal_value(incorrect_msg = "Bạn có thể sử dụng `np_baseball[:,1]` để định nghĩa `np_weight_lb`. Điều này sẽ chọn toàn bộ cột đầu tiên.")
 
 Ex().has_printout(1)
 
-success_msg("This is going well!")
+success_msg("Mọi thứ đang diễn ra tốt đẹp!")
 ```
 
 ---
 
-## 2D Arithmetic
+## Các phép toán trên array hai chiều
 
 ```yaml
 type: NormalExercise
@@ -597,19 +598,19 @@ skills:
   - 2
 ```
 
-2D `numpy` arrays can perform calculations element by element, like `numpy` arrays.
+Các array `numpy` hai chiều có thể thực hiện phép tính theo từng phần tử, giống như array `numpy` một chiều. 
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height (in inches), weight (in pounds) and age (in years). `baseball` is available as a regular list of lists and `updated` is available as 2D numpy array.
+Đã có sẵn `np_baseball` cho bạn; đây là một array `numpy` hai chiều với 3 cột lần lượt thể hiện chiều cao (inch), cân nặng (pound) và tuổi (năm). `baseball` hiện có dưới dạng list chứa list thông thường và `updated` có sẵn dưới dạng array `numpy` hai chiều.
 
 `@instructions`
-- You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
-- You want to convert the units of height and weight to metric (meters and kilograms, respectively). As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
-- Multiply `np_baseball` with `conversion` and print out the result.
+- Bạn đã có dữ liệu được cập nhật về chiều cao, cân nặng và tuổi của tất cả các cầu thủ bóng chày. Dữ liệu này có sẵn dưới dạng array `numpy` hai chiều, `updated`. Hãy cộng `np_baseball` và `updated`, rồi hiển thị ra kết quả.
+- Bạn muốn đổi đơn vị chiều cao và cân nặng sang hệ mét (lần lượt là mét và kilogram). Bước đầu tiên, tạo một array `numpy` với ba giá trị: `0.0254`, `0.453592` và `1`. Đặt tên array này là `conversion`.
+- Nhân `np_baseball` với `conversion` và hiển thị ra kết quả.
 
 `@hint`
-- `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with `np.array()`; the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a `print()` call.
+- `np_baseball + updated` sẽ cộng phần tử-tương-ứng của hai array `numpy`.
+- Tạo một array `numpy` với `np.array()`; đầu vào là một list Python thông thường có ba phần tử.
+- `np_baseball * conversion` sẽ hoạt động ngay, không cần làm gì thêm. Hãy thử làm và nhớ đặt trong lệnh `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -657,8 +658,8 @@ print(np_baseball * conversion)
 ```{python}
 Ex().has_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
-Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg = msg)
+msg = "Bạn không cần phải thay đổi hoặc xóa các biến được định nghĩa trước."
+Ex().check_object("np_baseball", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().has_printout(0)
 
@@ -666,16 +667,16 @@ Ex().check_correct(
     has_printout(1),
     check_correct(
         check_object('conversion').has_equal_value(),
-        check_function('numpy.array', index = 1).check_args(0).has_equal_value()
+        check_function('numpy.array', index=1).check_args(0).has_equal_value()
     )    
 )
 
-success_msg("Great job! Notice how with very little code, you can change all values in your `numpy` data structure in a very specific way. This will be very useful in your future as a data scientist!")
+success_msg("Làm tốt lắm! Hãy chú ý rằng với rất ít mã, bạn có thể thay đổi tất cả các giá trị trong cấu trúc dữ liệu `numpy` của mình theo một cách rất cụ thể. Điều này sẽ rất hữu ích trong tương lai của bạn với tư cách là một nhà khoa học dữ liệu!")
 ```
 
 ---
 
-## NumPy: Basic Statistics
+## NumPy: Thống kê cơ bản
 
 ```yaml
 type: VideoExercise
@@ -688,7 +689,7 @@ xp: 50
 
 ---
 
-## Average versus median
+## Trung bình so với trung vị
 
 ```yaml
 type: NormalExercise
@@ -699,19 +700,19 @@ skills:
   - 2
 ```
 
-You now know how to use `numpy` functions to get a better feeling for your data. 
+Giờ bạn đã biết cách dùng các hàm của `numpy` để hiểu dữ liệu tốt hơn.
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_. `np_baseball` is available.
+Bộ dữ liệu bóng chày có dạng array `numpy` hai chiều với 3 cột (chiều cao, cân nặng, tuổi) và 1015 hàng. Tên của array `numpy` này là `np_baseball`. Tuy nhiên, sau khi tái cấu trúc dữ liệu, bạn thấy một số giá trị chiều cao cao bất thường. Hãy làm theo hướng dẫn để xem thống kê tóm tắt nào phù hợp nhất khi bạn phải xử lý các _outlier_ (giá trị ngoại lai). Đã có sẵn `np_baseball`.
 
 `@instructions`
-- Create `numpy` array `np_height_in` that is equal to first column of `np_baseball`.
-- Print out the mean of `np_height_in`.
-- Print out the median of `np_height_in`.
+- Tạo array `numpy` `np_height_in` bằng với cột đầu tiên của `np_baseball`.
+- Hiển thị giá trị trung bình của `np_height_in`.
+- Hiển thị trung vị của `np_height_in`.
 
 `@hint`
-- Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use `np.mean()` to get the mean of a NumPy array. Don't forget to throw in a `print()` call.
-- For the last instruction, use `np.median()`.
+- Dùng kỹ thuật trích xuất phần tử của array 2 chiều `numpy`: `[:,0]` là một phần của giải pháp. 
+- Nếu đã import `numpy` là `np`, hãy dùng `np.mean()` để lấy giá trị trung bình của một array NumPy. Nhớ gọi hàm `print()`.
+- Với yêu cầu cuối, dùng `np.median()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -753,7 +754,7 @@ print(np.median(np_height_in))
 ```{python}
 Ex().has_import("numpy", same_as = False)
 
-Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "You can use `np_baseball[:,0]` to select the first column from `np_baseball`"),
+Ex().check_object("np_height_in").has_equal_value(incorrect_msg = "Bạn có thể sử dụng `np_baseball[:,0]` để chọn cột đầu tiên từ `np_baseball`"),
 
 Ex().check_correct(
     has_printout(0),
@@ -765,12 +766,12 @@ Ex().check_correct(
     check_function('numpy.median').has_equal_value()
 )
 
-success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get an idea about the overall distribution of the entire dataset.")
+success_msg("Chiều cao trung bình là 1586 inch, điều đó nghe có vẻ không đúng, phải không? Tuy nhiên, trung vị dường như không bị ảnh hưởng bởi các giá trị ngoại lai: 74 inch có vẻ hoàn toàn hợp lý. Luôn là một ý tưởng tốt để kiểm tra cả trung vị và trung bình, để có được ý tưởng về phân phối tổng thể của toàn bộ tập dữ liệu.")
 ```
 
 ---
 
-## Explore the baseball data
+## Khám phá dữ liệu bóng chày
 
 ```yaml
 type: NormalExercise
@@ -781,19 +782,19 @@ skills:
   - 2
 ```
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D NumPy array `np_baseball`, with three columns.
+Vì mean và median cách nhau khá xa, bạn quyết định khiếu nại lên MLB. Họ tìm ra lỗi và gửi cho bạn dữ liệu đã chỉnh sửa. Dữ liệu lại được cung cấp dưới dạng mảng NumPy hai chiều `np_baseball` với ba cột.
 
-The Python script in the editor already includes code to print out informative messages with the different summary statistics and `numpy` is already loaded as `np`. Can you finish the job? `np_baseball` is available.
+Tệp script Python trong trình soạn thảo đã có sẵn code để hiển thị các thông báo hữu ích với những thống kê tóm tắt khác nhau và `numpy` đã được import với tên là `np`. `np_baseball` đã sẵn sàng. Hãy làm nốt phần còn lại.
 
 `@instructions`
-- The code to print out the mean height is already included. Complete the code for the median height.
-- Use `np.std()` on the first column of `np_baseball` to calculate `stddev`. 
-- Do big players tend to be heavier? Use `np.corrcoef()` to store the correlation between the first and second column of `np_baseball` in `corr`.
+- Đã có sẵn code để tính mean của chiều cao. Hãy hoàn thiện code để tính ra median của chiều cao.
+- Dùng `np.std()` trên cột thứ nhất của `np_baseball` để tính `stddev`.
+- Người cao lớn có xu hướng nặng hơn không? Dùng `np.corrcoef()` để lưu hệ số tương quan giữa cột thứ nhất và cột thứ hai của `np_baseball` vào `corr`.
 
 `@hint`
-- Use `np.median()` to calculate the median. Make sure to select to correct column first!
-- Subset the same column when calculating the standard deviation with `np.std()`.
-- Use `np_baseball[:, 0]` and `np_baseball[:, 1]` to select the first and second columns; these are the inputs to `np.corrcoef()`.
+- Dùng `np.median()` để tính trung vị. Nhớ chọn đúng cột đã nhé!
+- Cũng lấy đúng cột đó để tính độ lệch chuẩn với hàm `np.std()`.
+- Dùng `np_baseball[:, 0]` và `np_baseball[:, 1]` để chọn cột thứ nhất và thứ hai; đây là đầu vào cho `np.corrcoef()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -840,26 +841,26 @@ print("Correlation: " + str(corr))
 
 `@sct`
 ```{python}
-msg = "You shouldn't change or remove the predefined `avg` variable."
+msg = "Bạn không nên thay đổi hoặc xóa biến `avg` đã được định nghĩa trước."
 Ex().check_object("avg", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-missing = "Have you used `np.median()` to calculate the median?"
-incorrect = "To calculate `med`, pass the first column of `np_baseball` to `numpy.median()`. The example of `np.mean()` shows how it's done."
+missing = "Bạn đã sử dụng `np.median()` để tính toán trung vị chưa?"
+incorrect = "Để tính toán `med`, hãy truyền cột đầu tiên của `np_baseball` vào `numpy.median()`. Ví dụ của `np.mean()` cho thấy cách thực hiện."
 Ex().check_correct(
   check_object("med").has_equal_value(),
   check_function("numpy.median", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.std()` to calculate the standard deviation?"
-incorrect = "To calculate `stddev`, pass the first column of `np_baseball` to `numpy.std()`. The example of `np.mean()` shows how it's done."
+missing = "Bạn đã sử dụng `np.std()` để tính toán độ lệch chuẩn chưa?"
+incorrect = "Để tính toán `stddev`, hãy truyền cột đầu tiên của `np_baseball` vào `numpy.std()`. Ví dụ của `np.mean()` cho thấy cách thực hiện."
 Ex().check_correct(
   check_object("stddev").has_equal_value(),
   check_function("numpy.std", index=0, missing_msg=missing).check_args(0).has_equal_value(incorrect_msg=incorrect)
 )
 
-missing = "Have you used `np.corrcoef()` to calculate the correlation?"
-incorrect1 = "To calculate `corr`, the first argument to `np.corrcoef()` should be the first column of `np_baseball`, similar to how did it before."
-incorrect2 = "To calculate `corr`, the second argument to `np.corrcoef()` should be the second column of `np_baseball`. Instead of `[:,0]`, use `[:,1]` this time."
+missing = "Bạn đã sử dụng `np.corrcoef()` để tính toán hệ số tương quan chưa?"
+incorrect1 = "Để tính toán `corr`, đối số đầu tiên của `np.corrcoef()` nên là cột đầu tiên của `np_baseball`, tương tự như cách đã làm trước đó."
+incorrect2 = "Để tính toán `corr`, đối số thứ hai của `np.corrcoef()` nên là cột thứ hai của `np_baseball`. Thay vì `[:,0]`, lần này hãy sử dụng `[:,1]`."
 Ex().check_correct(
   check_object("corr").has_equal_value(),
   check_function("numpy.corrcoef", index=0, missing_msg=missing).multi(
@@ -868,5 +869,5 @@ Ex().check_correct(
   )
 )
 
-success_msg("Great work! You've built a solid foundation - now it's time to use all of your new data science skills to solve more challenges and make an impact.")
+success_msg("Làm tốt lắm! Bạn đã xây dựng được một nền tảng vững chắc - bây giờ là lúc sử dụng tất cả các kỹ năng khoa học dữ liệu mới của bạn để giải quyết nhiều thách thức hơn và tạo ra ảnh hưởng.")
 ```

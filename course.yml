@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Nhập môn Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python là một ngôn ngữ lập trình đa năng ngày càng phổ biến trong lĩnh vực
+  khoa học dữ liệu. Các công ty trên toàn thế giới đang sử dụng Python để khai
+  thác thông tin từ dữ liệu và tăng lợi thế cạnh tranh. Khác với các khoá học
+  Python khác, khóa học này tập trung vào Python dành riêng cho khoa học dữ
+  liệu. Trong khóa học Nhập môn Python, bạn sẽ học về cách lưu trữ và xử lý dữ
+  liệu một cách hiệu quả, cùng với các công cụ hữu ích trong khoa học dữ liệu để
+  bạn có thể bắt đầu tự thực hiện các phân tích của riêng mình. Hãy bắt đầu học
+  Python trực tuyến trên DataCamp ngay hôm nay.
+
+  Các video có chú thích trực tiếp, bạn có thể xem bằng cách bấm vào "Hiện phụ
+  đề" ở góc dưới bên trái của video.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  Bảng thuật ngữ của khóa học có thể tìm thấy ở bên phải, trong phần tài liệu
+  tham khảo.
 
 
-  The course glossary can be found on the right in the resources section.
-
-
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Để nhận tín chỉ CPE, bạn cần hoàn thành khóa học và đạt ít nhất 70% trong bài
+  kiểm tra đánh giá.Bạn có thể chuyển tới bài kiểm tra bằng cách bấm vào mục tín
+  chỉ CPE ở bên phải.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
