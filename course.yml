@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Introduzione a Python
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python è un linguaggio di programmazione general-purpose che sta diventando
+  sempre più popolare nella data science. Le aziende di tutto il mondo lo
+  utilizzano per ottenere informazioni dai propri dati e guadagnare un vantaggio
+  competitivo. A differenza di altri tutorial, questo corso si concentra
+  sull’uso di Python applicato specificamente alla data science. Qui imparerai
+  metodi efficaci per archiviare e manipolare i dati, oltre a scoprire strumenti
+  utili per iniziare a condurre le tue analisi. Inizia subito il corso online di
+  Python di DataCamp.
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  I video hanno delle trascrizioni in tempo reale, che puoi vedere cliccando su
+  "Mostra trascrizione" in basso a sinistra dei video.
 
 
-  The course glossary can be found on the right in the resources section.
+  Il glossario del corso lo trovi a destra nella sezione delle risorse.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Per ottenere i crediti CPE è necessario completare il corso e raggiungere
+  almeno il 70% nella valutazione delle competenze finale. Puoi accedere alla
+  valutazione delle competenze cliccando sulla sezione “CPE” a destra.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
