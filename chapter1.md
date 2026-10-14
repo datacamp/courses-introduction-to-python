@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Kapitola 1
+title: Základy Pythonu
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  Úvod do základních konceptů Pythonu. Naučíš se pracovat s Pythonem
+  interaktivně i pomocí skriptů, vytvoříš své první proměnné a seznámíš se se
+  základními datovými typy.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: 'Ahoj, Pythone!'
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Proměnné a typy
 ---
 
-## Hello Python!
+## Ahoj, Pythone!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## Tvůj první kód v Pythonu
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+Je čas spustit svůj první kód v Pythonu!
 
-Head to the code and hit the run code button to see the output.
+Přejdi do editoru a klikni na tlačítko pro spuštění kódu, abys viděl/a výstup.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Klikni na tlačítko pro spuštění kódu a podívej se na výstup `print(5 / 8)`.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Nejdřív spusť kód a teprve pak odešli odpověď – budeš mít čas prozkoumat výstup.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Použili jste `{{sol_call}}` pro výpis `5 / 8`?")
+success_msg("Skvělé! Pojďme na další!")
 ```
 
 ---
 
-## Python as a calculator
+## Python jako kalkulačka
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python se skvěle hodí na základní výpočty. Zvládne sčítání, odčítání, násobení i dělení.
 
-The code in the script gives some examples.
+Ukázky najdeš přímo ve skriptu.
 
-Now it's your turn to practice by writing some code yourself.
+Teď je řada na tobě – zkus si napsat vlastní kód.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- Pod `# Subtraction` vypiš pomocí `print()` výsledek odečtení `5` od `5`.
+- Pod `# Multiplication` vypiš výsledek násobení `3` číslem `5`.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Pro zobrazení výstupu použij `print()`.
+- Odečítání se zapisuje pomocí `-` a násobení pomocí `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Použili jste `print(4 + 5)` pro výpis výsledku součtu?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Použili jste `print(5 - 5)` pro výpis výsledku odčítání?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Použili jste `print(3 * 5)` pro výpis výsledku násobení?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Použili jste `print(10 / 2)` pro výpis výsledku dělení?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Správně! Python vám může pomoci s výpočty, což je vlastnost, která bude užitečná pro analýzu dat, jak budeme rozvíjet naše dovednosti.")
 ```
 
 ---
 
-## Variables and Types
+## Proměnné a datové typy
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Přiřazení proměnné
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+V Pythonu ti proměnná umožňuje odkazovat se na hodnotu pomocí názvu. Proměnnou `x` s hodnotou `5` vytvoříš pomocí `=`, jak ukazuje tento příklad:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Místo skutečné hodnoty `5` teď můžeš používat název proměnné `x`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Pamatuj, že `=` v Pythonu znamená _přiřazení_ – netestuje rovnost! Vyzkoušej si to v cvičení nahrazením `____` svým kódem.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- Vytvoř proměnnou `savings` s hodnotou `100`.
+- Zobraz její hodnotu zadáním `print(savings)` do skriptu.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- Zadej `savings = 100` pro vytvoření proměnné `savings`.
+- Po vytvoření proměnné `savings` můžeš zadat `print(savings)`.
+- Výsledný kód by neměl obsahovat žádné `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Přiřaďte `100` proměnné `savings`.")
+Ex().has_printout(0, not_printed_msg = "Vypište `savings`, proměnnou, kterou jste vytvořili, pomocí `print(savings)`.")
+success_msg("Skvělé! Zkusme nyní provést některé výpočty s touto proměnnou!")
 ```
 
 ---
 
-## Calculations with variables
+## Výpočty s proměnnými
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Teď, když máš vytvořenou proměnnou pro úspory, se pustíme do spoření!
 
-Instead of calculating with the actual values, you can use variables instead.
+Místo konkrétních čísel můžeš ve výpočtech používat proměnné.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Kolik peněz budeš mít naspořeno za čtyři měsíce, pokud budeš každý měsíc odkládat 10 $?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- Vytvoř proměnnou `monthly_savings` s hodnotou `10` a proměnnou `num_months` s hodnotou `4`.
+- Vynásob `monthly_savings` hodnotou `num_months` a výsledek ulož do `new_savings`.
+- Vypiš hodnotu proměnné `new_savings`.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- S proměnnými můžeš počítat úplně stejně jako s čísly – takže místo `10 * 4` jednoduše dosaď příslušné proměnné!
+- Pomocí `print()` zobraz hodnotu uloženou v `new_savings`.
+- Dávej pozor na správný pravopis názvů proměnných!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Uložili jste hodnotu `10` do proměnné `monthly_savings` pomocí `monthly_savings = 10`?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Uložili jste hodnotu `4` do proměnné `num_months` pomocí `num_months = 4`?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Použili jste správné proměnné a symboly pro násobení? Očekáváno `monthly_savings * num_months`, ale byl zadán jiný výraz.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Použili jste správné proměnné a symboly pro sčítání? Očekáváno `savings + new_savings`, ale byl zadán jiný výraz.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Nezapomeňte na konci skriptu vypsat hodnotu `new_savings`.")
 
-success_msg("You have $40 in new savings!")
+success_msg("Máte 40 $ v nových úsporách!")
 ```
 
 ---
 
-## Other variable types
+## Další typy proměnných
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+V předchozím cvičení jsi pracoval/a s datovým typem integer:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int`, neboli celé číslo: číslo bez desetinné části. Příkladem je proměnná `savings` s hodnotou `100`.
 
-Next to numerical data types, there are three other very common data types:
+Kromě číselných datových typů existují tři další velmi běžné typy:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float`, neboli číslo s plovoucí desetinnou čárkou: číslo, které má celou i desetinnou část oddělené tečkou. Příkladem je `1.1`.
+- `str`, neboli řetězec: typ pro reprezentaci textu. Řetězec můžeš uzavřít do jednoduchých nebo dvojitých uvozovek.
+- `bool`, neboli boolean: typ pro reprezentaci logických hodnot. Může nabývat pouze hodnot `True` nebo `False` (velikost písmen je důležitá!).
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Vytvoř novou proměnnou typu float, `half`, s hodnotou `0.5`.
+- Vytvoř novou proměnnou typu string, `intro`, s hodnotou `"Hello! How are you?"`.
+- Vytvoř novou proměnnou typu boolean, `is_good`, s hodnotou `True`.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Proměnnou v Pythonu vytvoříš pomocí `=`. Řetězec nezapomeň uzavřít do jednoduchých nebo dvojitých uvozovek.
+- V Pythonu existují pouze dvě hodnoty typu boolean: `True` a `False`. Varianty jako `TRUE`, `true`, `FALSE`, `false` a jiné nejsou platné.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Uložili jste číslo s plovoucí desetinnou čárkou `0.5` do proměnné `half`?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, něco je ve vaší proměnné `intro` nesprávně. Zkontrolujte prosím pravopis a ujistěte se, že jste použili uvozovky.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Použili jste velké písmeno u logické hodnoty? Nezapomeňte, že zde není třeba používat uvozovky.")
 
-success_msg("Nice!")
+success_msg("Výborně!")
 ```
 
 ---
 
-## Operations with other types
+## Operace s různými typy
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+V Pythonu existují proměnné různých typů. Typ proměnné zjistíš pomocí funkce `type()`. Například pro zjištění typu proměnné `a` spusť: `type(a)`.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Různé typy se v Pythonu chovají různě. Když sečteš dva řetězce, dostaneš jiný výsledek, než když sečteš dvě celá čísla nebo dvě booleovské hodnoty.
 
-Time for you to test this out.
+Čas si to vyzkoušet na vlastní kůži.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- Sečti `savings` a `new_savings` a výsledek přiřaď do `total_savings`.
+- Pomocí `type()` vypiš výsledný typ proměnné `total_savings`.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- Přiřaď `savings + new_savings` do nové proměnné `total_savings`.
+- Pro výpis typu proměnné `x` použij `print(type(x))`.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Předefinované proměnné není třeba měnit ani odstraňovat."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Přičtěte `savings` a `new_savings` pro vytvoření proměnné `total_savings`."),
+    has_printout(1, not_printed_msg = "__JINJA__:Použijte `{{sol_call}}` pro výpis typu `total_savings`.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- Vypočítej součet `intro` a `intro` a výsledek přiřaď do `doubleintro`.
+- Vypiš `doubleintro`. Čekal/a jsi takový výsledek?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- Přiřaď `intro + intro` do nové proměnné `doubleintro`.
+- Pro výpis proměnné `x` napiš do skriptu `print(x)`.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Předdefinované proměnné nemusíte měnit ani odstraňovat."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Uložili jste výsledek `intro + intro` do proměnné `doubleintro`?"),
+    has_printout(0, not_printed_msg = "Nezapomeňte vypsat `doubleintro`.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Výborně. Všimněte si, jak `intro + intro` způsobí, že se `\"Hello! How are you?\"` a `\"Hello! How are you?\"` spojí dohromady.")
 ```
