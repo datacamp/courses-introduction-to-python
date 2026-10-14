@@ -1,27 +1,28 @@
 id: 735
-title: Introduction to Python
+title: Wprowadzenie do Pythona
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python to język programowania ogólnego przeznaczenia, który zyskuje coraz
+  większą popularność w dziedzinie analizy danych. Firmy na całym świecie
+  wykorzystują go do wydobywania wartościowych informacji ze swoich danych i
+  budowania przewagi konkurencyjnej. W odróżnieniu od innych kursów, ten
+  koncentruje się na Pythonie w kontekście data science. W kursie "Wprowadzenie
+  do Pythona" poznasz skuteczne sposoby przechowywania i przetwarzania danych
+  oraz przydatne narzędzia, które pozwolą ci przeprowadzać własne analizy.
+  Rozpocznij kurs już teraz!
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  Filmy zawierają transkrypcje na żywo – możesz je wyświetlić, klikając „Pokaż
+  transkrypcję" w lewym dolnym rogu odtwarzacza.
 
 
-  The course glossary can be found on the right in the resources section.
+  Glosariusz kursu znajdziesz po prawej stronie, w sekcji zasobów.
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  Aby uzyskać punkty CPE, musisz ukończyć kurs i zdobyć co najmniej 70% punktów
+  w kwalifikowanym teście. Przejdź do testu, klikając informację o punktach CPE
+  po prawej stronie.
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
