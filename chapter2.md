@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 2
-title: Python Lists
+title_meta: Hoofdstuk 2
+title: Python-lijsten
 description: >-
-  Learn to store, access, and manipulate data in lists: the first step toward
-  efficiently working with huge amounts of data.
+  Leer gegevens in lijsten op te slaan, te openen en te bewerken: de eerste stap
+  naar efficiënt werken met grote hoeveelheden data.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Python Lists
+    title: Python-lijsten
   - nb_of_exercises: 4
-    title: Subsetting Lists
+    title: Lijsten subsetten
   - nb_of_exercises: 5
-    title: Manipulating Lists
+    title: Lijsten manipuleren
 ---
 
-## Python Lists
+## Python-lijsten
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ a0530c4542f10988847b2dbb91f717c3
 
 ---
 
-## Create a list
+## Maak een lijst
 
 ```yaml
 type: NormalExercise
@@ -39,7 +39,7 @@ skills:
   - 2
 ```
 
-A list is a **compound data type**; you can group values together, like this:
+Een lijst is een **samengesteld gegevenstype**; je kunt waarden groeperen, zoals hieronder:
 
 ```
 a = "is"
@@ -47,17 +47,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
+Na het meten van de lengte van je familie besluit je wat informatie te verzamelen over het huis waarin je woont. De oppervlaktes van de verschillende delen van je huis zijn in de oefening opgeslagen in aparte variabelen.
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the `print()` function.
+- Maak een lijst, `areas`, die de oppervlakte bevat van de hal (`hall`), keuken (`kit`), woonkamer (`liv`), slaapkamer (`bed`) en badkamer (`bath`), in deze volgorde. Gebruik de vooraf gedefinieerde variabelen.
+- Print `areas` met de functie `print()`.
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Make sure to use square brackets `[]` rather than parentheses `()`.
-- You don't need to use quotation marks when storing variables within a list.
-- Type `print(areas)` to print out the list when submitting.
+- Je kunt de al aangemaakte variabelen gebruiken om de lijst op te bouwen: `areas = [hall, kit, ...]`.
+- Zorg dat je vierkante haken `[]` gebruikt en geen ronde haken `()`.
+- Je hoeft geen aanhalingstekens te gebruiken wanneer je variabelen in een lijst opslaat.
+- Typ `print(areas)` om de lijst af te drukken wanneer je je antwoord indient.
 
 `@pre_exercise_code`
 ```{python}
@@ -96,11 +96,11 @@ print(areas)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
+predef_msg = "Verwijder of bewerk de vooraf gedefinieerde variabelen niet!"
+areas_msg = "Definieer `areas` als de lijst die alle gebiedsvariabelen bevat, in de juiste volgorde: `[hall, kit, liv, bed, bath]`. Let op typefouten. De lijst mag niets anders bevatten!"
 
 Ex().check_correct(
-    has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?"),
+    has_printout(0, not_printed_msg = "__JINJA__:Heb je `{{sol_call}}` gebruikt om de `areas` lijst aan het einde van je script af te drukken?"),
     check_correct(
         check_object("areas").has_equal_value(incorrect_msg = areas_msg),
         multi(
@@ -113,12 +113,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("Mooi! Een lijst is hier veel beter, nietwaar?")
 ```
 
 ---
 
-## Create lists with different types
+## Lijsten maken met verschillende typen
 
 ```yaml
 type: NormalExercise
@@ -129,19 +129,19 @@ skills:
   - 2
 ```
 
-Although it's not really common, a list can also contain a mix of Python types including strings, floats, and booleans.
+Hoewel het niet heel gebruikelijk is, kan een lijst ook een mix van Python-typen bevatten, zoals strings, floats en booleans.
 
-You're now going to add the room names to your list, so you can easily see both the room name and size together.
+Je gaat nu de kamernamen aan je lijst toevoegen, zodat je eenvoudig zowel de kamernaam als de oppervlakte bij elkaar ziet.
 
-Some of the code has been provided for you to get you started. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+Een deel van de code is al voor je ingevuld zodat je kunt beginnen. Let op! `"bathroom"` is een string, terwijl `bath` een variabele is die staat voor de float `9.50` die je eerder hebt gedefinieerd.
 
 `@instructions`
-- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- Maak de code af die de lijst `areas` maakt. Bouw de lijst zo op dat eerst de naam van elke kamer als string komt en daarna de oppervlakte. Voeg met andere woorden de strings `"hallway"`, `"kitchen"` en `"bedroom"` op de juiste plekken toe.
+- Print `areas` opnieuw; is de output nu informatiever?
 
 `@hint`
-- The first four elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
-- A string will need to be in quotation marks `""`.
+- De eerste vier elementen van de lijst `areas` zijn gecodeerd als `["hallway", hall, "kitchen", kit, ...`.
+- Een string moet tussen aanhalingstekens `""` staan.
 
 `@pre_exercise_code`
 ```{python}
@@ -181,22 +181,22 @@ print(areas)
 `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
+predef_msg = "Verwijder of bewerk de vooraf gedefinieerde variabelen niet!"
+areas_msg = "Je hebt niet de juiste waarde aan `areas` toegekend. Bekijk de instructies nog eens. Zorg ervoor dat je de naam van de kamer telkens voor de variabele met de oppervlakte plaatst. De volgorde is hier belangrijk! Let op typefouten."
 
 Ex().check_correct(
   check_object("areas").has_equal_value(incorrect_msg = areas_msg),
   multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Heb je `{{sol_call}}` gebruikt om de `areas` lijst aan het einde van je script af te drukken?")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("Mooi! Deze lijst bevat zowel strings als floats, maar dat is geen probleem voor Python!")
 ```
 
 ---
 
-## List of lists
+## Lijst van lijsten
 
 ```yaml
 type: NormalExercise
@@ -207,20 +207,20 @@ skills:
   - 2
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+Als data scientist werk je vaak met veel data en is het logisch om sommige gegevens te groeperen.
 
-Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
+In plaats van één lijst te maken met strings en floats die de namen en oppervlaktes van de kamers in je huis voorstellen, kun je een lijst van lijsten maken.
 
-Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+Onthoud: `"hallway"` is een string, terwijl `hall` een variabele is die de float `11.25` voorstelt die je eerder hebt opgegeven.
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
+- Maak de lijst van lijsten af zodat deze ook de gegevens van de slaapkamer en badkamer bevat. Zorg dat je ze in de juiste volgorde invoert!
+- Print `house`; is deze manier om je data te structureren logischer?
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- Remember to include a comma `,` after each sublist.
-- To print a variable `x`, write `print(x)` on a new line.
+- Voeg _sublijsten_ toe aan de lijst `house` door `["bedroom", bed]` en `["bathroom", bath]` binnen de vierkante haken te zetten.
+- Vergeet niet om na elke sublijst een komma `,` te plaatsen.
+- Om een variabele `x` te printen, schrijf je `print(x)` op een nieuwe regel.
 
 `@pre_exercise_code`
 ```{python}
@@ -267,8 +267,8 @@ print(house)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
+predef_msg = "Verwijder of bewerk de vooraf gedefinieerde variabelen niet!"
+house_msg = "Je hebt niet de juiste waarde aan `house` toegewezen. Bekijk de instructies nog eens. Breid de lijst van lijsten uit zodat deze een lijst bevat voor elk paar van kamernaam en kameroppervlakte. Let op de volgorde en typfouten!"
 
 Ex().check_correct(
     check_object("house").has_equal_value(incorrect_msg = house_msg),
@@ -281,14 +281,14 @@ Ex().check_correct(
     )
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Heb je `{{sol_call}}` gebruikt om de inhoud van `house` af te drukken?")
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("Geweldig! Maak je klaar om te leren over het subsetten van lijsten!")
 ```
 
 ---
 
-## Subsetting Lists
+## Lijsten subsetten
 
 ```yaml
 type: VideoExercise
@@ -301,7 +301,7 @@ fc15ba5cb9485456df8589130b519ea3
 
 ---
 
-## Subset and conquer
+## Subsetten en overwinnen
 
 ```yaml
 type: NormalExercise
@@ -312,26 +312,26 @@ skills:
   - 2
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+Subsets maken van Python-lijsten is kinderspel. Neem het onderstaande codevoorbeeld, waarin een lijst `x` wordt gemaakt en vervolgens "b" wordt geselecteerd. Onthoud dat dit het tweede element is, dus het heeft index 1. Je kunt ook negatieve indexering gebruiken.
 
 ```
 x = ["a", "b", "c", "d"]
 x[1]
-x[-3] # same result!
+x[-3] # zelfde resultaat!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+Weet je de `areas`-lijst nog van eerder, met zowel strings als floats? De definitie staat al in het script. Kun je de juiste code toevoegen om wat Python-subsetting te doen?
 
 `@instructions`
-- Print out the second element from the `areas` list (it has the value `11.25`).
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room (`20.0`) and print it out.
+- Print het tweede element uit de `areas`-lijst (de waarde is `11.25`).
+- Maak een subset en print het laatste element van `areas`, namelijk `9.50`. Een negatieve index is hier handig!
+- Selecteer het getal dat de oppervlakte van de woonkamer voorstelt (`20.0`) en print het.
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`.
-- Use `x[-1]` to select the last element of a list `x`.
-- Make sure to wrap your subsetting operations in a `print()` call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
+- Gebruik `x[1]` om het tweede element van een lijst `x` te selecteren.
+- Gebruik `x[-1]` om het laatste element van een lijst `x` te selecteren.
+- Zorg dat je je subsetting-bewerkingen in een `print()`-aanroep zet.
+- Het getal dat de oppervlakte van de woonkamer voorstelt is het 6e element in de lijst, dus hier heb je `[5]` nodig. `area[4]` zou de string laten zien!
 
 `@pre_exercise_code`
 ```{python}
@@ -370,17 +370,17 @@ print(areas[5])
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Verwijder of bewerk de vooraf gedefinieerde `areas`-lijst niet."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
-Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
-Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
-success_msg("Good job!")
+Ex().has_printout(0, not_printed_msg = "Kijk nog eens naar je code om het tweede element in `areas` af te drukken, dat zich op index `1` bevindt.")
+Ex().has_printout(1, not_printed_msg = "Kijk nog eens naar je code om het laatste element in `areas` af te drukken, dat zich op index `-1` bevindt.")
+Ex().has_printout(2, not_printed_msg = "Kijk nog eens naar je code om de oppervlakte van de woonkamer af te drukken. Het bevindt zich op index `5`.")
+success_msg("Goed gedaan!")
 ```
 
 ---
 
-## Slicing and dicing
+## Slicing en dicing
 
 ```yaml
 type: NormalExercise
@@ -391,23 +391,23 @@ skills:
   - 2
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+Enkele waarden selecteren uit een lijst is maar een deel van het verhaal. Je kunt je lijst ook _slicen_: meerdere elementen uit je lijst selecteren. Gebruik de volgende syntax:
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
+De `start`-index wordt meegenomen, terwijl de `end`-index _niet_ wordt meegenomen. Het is echter ook mogelijk om deze indexen weg te laten. Als je de `start`-index niet opgeeft, begrijpt Python dat je je slice aan het begin van je lijst wilt laten starten.
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-- Print both `downstairs` and `upstairs` using `print()`.
+- Gebruik slicing om een lijst `downstairs` te maken met de eerste 6 elementen van `areas`.
+- Maak `upstairs` als de laatste `4` elementen van `areas`. Vereenvoudig de slice dit keer door de `end`-index weg te laten.
+- Print zowel `downstairs` als `upstairs` met `print()`.
 
 `@hint`
-- Use the brackets `[0:6]` to get the first six elements of a list.
-- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
-- Add two `print()` calls to print out `downstairs` and `upstairs`.
+- Gebruik de haken `[0:6]` om de eerste zes elementen van een lijst op te halen.
+- Om alles te krijgen behalve de eerste 5 elementen van een lijst `l`, gebruik je `l[5:]`.
+- Voeg twee `print()`-aanroepen toe om `downstairs` en `upstairs` af te drukken.
 
 `@pre_exercise_code`
 ```{python}
@@ -448,22 +448,22 @@ print(upstairs)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Verwijder of bewerk de vooraf gedefinieerde `areas`-lijst niet."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
+patt = "`%s` is onjuist. Gebruik `areas[%s]` en slicing om de elementen te selecteren die je wilt, of iets gelijkwaardigs."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
-Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
+Ex().has_printout(0, not_printed_msg="Heb je `downstairs` afgedrukt nadat je het hebt berekend?")
+Ex().has_printout(1, not_printed_msg="Heb je `upstairs` afgedrukt nadat je het hebt berekend?")
 
-success_msg("Great!")
+success_msg("Geweldig!")
 ```
 
 ---
 
-## Subsetting lists of lists
+## Subsets maken van lijsten-van-lijsten
 
 ```yaml
 type: NormalExercise
@@ -471,20 +471,20 @@ key: dbbbd306cf
 xp: 100
 ```
 
-A Python list can also contain other lists.
+Een Python-lijst kan ook andere lijsten bevatten.
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
+Om lijsten-van-lijsten te subsetten, kun je dezelfde techniek gebruiken als eerder: vierkante haken. Voor een lijst `house` ziet dat er zo uit:
 
 ```
 house[2][0]
 ```
 
 `@instructions`
-- Subset the `house` list to get the float `9.5`.
+- Subset de lijst `house` om de float `9.5` te krijgen.
 
 `@hint`
-- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
-- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+- Pak dit stap voor stap aan. Eerst wil je het laatste element van de lijst ophalen, `["bathroom", 9.50]`. Onthoud: de index van het laatste element is `-1`.
+- Vervolgens wil je het tweede element van `["bathroom", 9.50]` krijgen, dat op index `1` staat.
 
 `@pre_exercise_code`
 ```{python}
@@ -522,12 +522,12 @@ Ex().check_or(
   has_code("house[4][1]", pattern=False)
 )
 
-success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
+success_msg("Correctomundo! Het laatste stukje van de lijstpuzzel is manipulatie.")
 ```
 
 ---
 
-## Manipulating Lists
+## Lijsten manipuleren
 
 ```yaml
 type: VideoExercise
@@ -540,7 +540,7 @@ xp: 50
 
 ---
 
-## Replace list elements
+## Lijstelementen vervangen
 
 ```yaml
 type: NormalExercise
@@ -551,18 +551,18 @@ skills:
   - 2
 ```
 
-To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+Om lijstelementen te vervangen, maak je een subset van de lijst en wijs je nieuwe waarden toe aan die subset. Je kunt losse elementen selecteren of in één keer hele slices van de lijst veranderen.
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+Voor deze en de volgende oefeningen werk je verder met de lijst `areas`, die de namen en oppervlaktes van verschillende kamers in een huis bevat.
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
+- Werk de oppervlakte van de badkamer bij naar `10.50` vierkante meter in plaats van `9.50` met behulp van negatieve indexering.
+- Maak de lijst `areas` wat hipper! Verander `"living room"` in `"chill zone"`. Gebruik deze keer geen negatieve indexering.
 
 `@hint`
-- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
-- Then, replace the value with the new bathroom area by assigning it to this subset.
-- Do the same to update the `"living room"` name, which is at index 4.
+- Om de badkameroppervlakte bij te werken, selecteer je de subset van de badkamer (het is het laatste item van de lijst!).
+- Vervang daarna de waarde door de nieuwe badkameroppervlakte door deze aan deze subset toe te kennen.
+- Doe hetzelfde om de naam van `"living room"` te updaten, die op index 4 staat.
 
 `@pre_exercise_code`
 ```{python}
@@ -595,21 +595,21 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
+bathroom_msg = 'Je kunt `areas[-1] = 10.50` gebruiken om de badkameroppervlakte bij te werken.'
+chillzone_msg = 'Je kunt `areas[4] = "chill zone"` gebruiken om de naam van de woonkamer bij te werken.'
 Ex().check_correct(
-  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  check_object('areas').has_equal_value(incorrect_msg = 'Je wijzigingen aan `areas` hebben niet geresulteerd in de juiste lijst. Weet je zeker dat je de juiste subset-bewerkingen hebt gebruikt? Als je twijfelt, kun je een hint gebruiken!'),
   multi(
     has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
     has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
-success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
+success_msg('Top! Zoals het codevoorbeeld liet zien, kun je ook een lijst slicen en deze vervangen door een andere lijst om meerdere elementen in één opdracht bij te werken.')
 ```
 
 ---
 
-## Extend a list
+## Breid een lijst uit
 
 ```yaml
 type: NormalExercise
@@ -620,22 +620,22 @@ skills:
   - 2
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+Als je elementen in een lijst kunt wijzigen, wil je ze vast ook kunnen toevoegen, toch? Je kunt hiervoor de operator `+` gebruiken:
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+Je hebt de loterij gewonnen, super! Je besluit een bijgebouw en een garage te bouwen. Kun je deze informatie toevoegen aan de lijst `areas`?
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- Gebruik de operator `+` om de lijst `["poolhouse", 24.5]` achteraan de lijst `areas` te plakken. Sla de resulterende lijst op als `areas_1`.
+- Breid `areas_1` verder uit met gegevens over je garage. Voeg de string `"garage"` en de float `15.45` toe. Noem de resulterende lijst `areas_2`.
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- Volg het codevoorbeeld in de opdracht. `x` is hier `areas`, en `["e", "f"]` is `["poolhouse", 24.5]`.
+- Om meer elementen toe te voegen aan `areas_1`, gebruik je `areas_1 + ["element", 123]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -670,16 +670,16 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Verwijder of bewerk de vooraf gedefinieerde `areas`-lijst niet."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
-success_msg("Cool! The list is shaping up nicely!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Gebruik `areas + [\"poolhouse\", 24.5]` om `areas_1` te maken. Let op typefouten!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Gebruik `areas_1 + [\"garage\", 15.45]` om `areas_2` te maken. Let op typefouten!")
+success_msg("Cool! De lijst begint er goed uit te zien!")
 ```
 
 ---
 
-## Delete list elements
+## Lijstelementen verwijderen
 
 ```yaml
 type: NormalExercise
@@ -687,23 +687,23 @@ key: 85f792356e
 xp: 100
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+Tot slot kun je ook elementen uit je lijst verwijderen. Dat kan met het `del`-statement:
 
 ```
 x = ["a", "b", "c", "d"]
 del x[1]
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+Let hier goed op: zodra je een element uit een lijst verwijdert, veranderen de indexen van alle elementen die na het verwijderde element komen!
 
-Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
+Helaas blijkt het bedrag dat je met de loterij hebt gewonnen toch niet zo groot te zijn en lijkt het poolhouse er niet in te zitten. Je moet het uit de lijst verwijderen. Je besluit de bijbehorende string en float uit de `areas`-lijst te halen.
 
 `@instructions`
-- Delete the string and float for the `"poolhouse"` from your `areas` list.
-- Print the updated `areas` list.
+- Verwijder de string en de float voor de `"poolhouse"` uit je `areas`-lijst.
+- Print de bijgewerkte `areas`-lijst.
 
 `@hint`
-- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
+- Je moet `del` twee keer gebruiken om twee elementen te verwijderen. Let wel op: als je iets verwijdert, veranderen de indexen!
 
 `@pre_exercise_code`
 ```{python}
@@ -764,13 +764,13 @@ Ex().check_or(
   )
 )
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="Heb je `areas` afgedrukt nadat je de poolhouse string en float hebt verwijderd?")
+success_msg("Correct! Je leert later over makkelijkere manieren om specifieke elementen uit Python-lijsten te verwijderen.")
 ```
 
 ---
 
-## Inner workings of lists
+## Hoe lijsten onder de motorkap werken
 
 ```yaml
 type: NormalExercise
@@ -781,17 +781,17 @@ skills:
   - 2
 ```
 
-Some code has been provided for you in this exercise: a list with the name `areas` and a copy named `areas_copy`.
+Er is alvast wat code voor je klaargezet: een lijst met de naam `areas` en een kopie genaamd `areas_copy`.
 
-Currently, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit the run code button you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+Op dit moment wordt het eerste element in de lijst `areas_copy` aangepast en wordt de lijst `areas` geprint. Als je op de knop **Code uitvoeren** drukt, zie je dat, hoewel je `areas_copy` hebt aangepast, de wijziging ook zichtbaar is in de lijst `areas`. Dat komt omdat `areas` en `areas_copy` naar dezelfde lijst verwijzen.
 
-If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list with `list()` or by using `[:]`.
+Als je wilt voorkomen dat wijzigingen in `areas_copy` ook effect hebben op `areas`, moet je een explicietere kopie van de lijst `areas` maken met `list()` of door `[:]` te gebruiken.
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
+- Pas het tweede commando aan, dat de variabele `areas_copy` maakt, zodat `areas_copy` een expliciete kopie is van `areas`. Na je wijziging mogen aanpassingen in `areas_copy` geen invloed hebben op `areas`. **Antwoord verzenden** om dit te controleren.
 
 `@hint`
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+- Pas de aanroep `areas_copy = areas` aan. In plaats van `areas` toe te wijzen, kun je `list(areas)` of `areas[:]` toewijzen.
 
 `@pre_exercise_code`
 ```{python}
@@ -831,16 +831,16 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_object("areas_copy").has_equal_value(incorrect_msg = "Het lijkt erop dat `areas_copy` niet correct is bijgewerkt."),
+  check_function("list", missing_msg = "Zorg ervoor dat je `list(areas)` gebruikt om een `areas_copy` te maken.")
 )
 
-mmsg = "Don't remove the predefined `areas` list."
-imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+mmsg = "Verwijder de vooraf gedefinieerde `areas` lijst niet."
+imsg = "Zorg ervoor dat je ALLEEN de kopie bewerkt, niet de originele `areas` lijst. Bekijk de oefenbeschrijving nog eens als je niet zeker weet hoe je een kopie moet maken."
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_function("list", missing_msg = "Zorg ervoor dat je `list(areas)` gebruikt om een `areas_copy` te maken.")
 )
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("Mooi! Het verschil tussen expliciete en referentie-gebaseerde kopieën is subtiel, maar kan echt belangrijk zijn. Probeer te onthouden hoe een lijst in het geheugen van de computer wordt opgeslagen.")
 ```
