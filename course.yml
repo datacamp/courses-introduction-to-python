@@ -1,27 +1,21 @@
 id: 735
-title: Introduction to Python
+title: Python 入門
 programming_language: python
 description: >-
-  Python is a general-purpose programming language that is becoming ever more
-  popular for data science. Companies worldwide are using Python to harvest
-  insights from their data and gain a competitive edge. Unlike other Python
-  tutorials, this course focuses on Python specifically for data science. In our
-  Introduction to Python course, you’ll learn about powerful ways to store and
-  manipulate data, and helpful data science tools to begin conducting your own
-  analyses. Start DataCamp’s online Python curriculum now.
+  Python 是一種通用程式設計語言。現在，這門語言在資料科學領域越來越受歡迎。全球眾多公司都在使用 Python
+  從企業資料中挖掘洞察，搶占市場先機。與其他 Python 教學不同，本課程專注於資料科學領域的 Python 應用。在我們的《Python
+  入門》課程中，你將學習儲存和操作資料的各種有效方法，並掌握上手實作資料分析的實用資料科學工具。現在就開始學習 DataCamp 的線上 Python
+  課程吧。
 
 
-  The videos contain live transcripts, which can be accessed by clicking "Show
-  transcript" at the bottom left of the videos.
+  我們的影片提供了即時字幕，點選影片左下角的「顯示字幕」即可開啟。
 
 
-  The course glossary can be found on the right in the resources section.
+  右側的資源區域提供了課程術語表。
 
 
-  To obtain CPE credits you need to complete the course and reach a score of 70%
-  on the qualified assessment. You can navigate to the assessment by clicking on
-  the CPE credits callout on the right.
-from: 'python-base-prod:v3.1.0'
+  只需完成課程並在合格測評中達到 70% 的得分，就能獲得 CPE 學分。點選右側的 CPE 學分入口即可進入測評。
+from: python-base-prod:v3.1.0
 practice_pool_id: 107
 datasets:
   baseball.csv: MLB (baseball)
