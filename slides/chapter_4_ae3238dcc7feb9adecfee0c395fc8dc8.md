@@ -2,16 +2,11 @@
 title: Insert title here
 key: ae3238dcc7feb9adecfee0c395fc8dc8
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch4_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch4_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/zh-TW/12200dfb-3456-4072-8f53-000c576a144b-45fa2c457587a8471a05e30fbb8ddbbf.mp3
 ---
 
-## 2D NumPy Arrays
+## 二維 NumPy 陣列
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done you legend! Let's now recreate the numpy arrays from the previous video.
+你太厲害了！我們來重新建立上一支影片中的 NumPy 陣列吧。
 
 ---
 
-## Type of NumPy Arrays
+## NumPy 陣列類型
 
 ```yaml
 type: FullSlide
@@ -59,11 +54,11 @@ numpy.ndarray
 ```
 
 `@script`
-If you ask for the type of these arrays, Python tells you that they are numpy.ndarray. numpy dot tells you it's a type that was defined in the numpy package. ndarray stands for n-dimensional array. The arrays np_height and np_weight are one-dimensional arrays, but it's perfectly possible to create 2 dimensional, three dimensional, heck even seven dimensional arrays! Let's stick to 2 in this video though.
+如果你查詢這些陣列的型別，Python 會告訴你，它們都是 numpy.ndarray。numpy. 表示這是在 numpy 套件中定義的型別。ndarray 代表 N 維陣列。np_height 和 np_weight 是一維陣列，但其實你也可以建立二維、三維，甚至七維陣列！不過在本影片中，我們先討論二維陣列。
 
 ---
 
-## 2D NumPy Arrays
+## 二維 NumPy 陣列
 
 ```yaml
 type: FullSlide
@@ -104,17 +99,17 @@ array([['1.73', '1.68', '1.71', '1.89', '1.79'],
 ```{{4}}
 
 `@script`
-You can create a 2D numpy array from a regular Python list of lists. Let's try to create one numpy array for all height and weight data of your family, like this.
+你可以使用一般 Python 巢狀串列來建立二維 NumPy 陣列。我們來試試將全家人的身高和體重資料整合到一個 NumPy 陣列中，就像這樣。
 
-If you print out np_2d now, you'll see that it is a rectangular data structure: Each sublist in the list, corresponds to a row in the two dimensional numpy array. From np_2d.shape, you can see that we indeed have 2 rows and 5 columns. shape is a so-called attribute of the np2d array, that can give you more information about what the data structure looks like.
+如果此時輸出 np_2d，你會發現它是矩形資料結構：串列中的每個子串列都對應二維 NumPy 陣列中的一列。透過檢視 np_2d.shape，你就會發現，這個陣列確實包含 2 列 5 欄。shape 是 np_2d 陣列的屬性，能讓你進一步瞭解這個陣列的結構。
 
-Note that the syntax for accessing an attribute looks a bit like calling a method, but they are not the same! Remember that methods have round brackets after them, and, you can see here, attributes do not.
+需要注意的是，存取屬性的語法與呼叫方法有點像，但兩者並不相同！請記住，方法後面會加上小括號，而你在此處可以看到，屬性則不需要。
 
-Also for 2D arrays, the NumPy rule applies: an array can only contain a single type. If you change one float to be string, all the array elements will be coerced to strings, to end up with a homogeneous array.
+NumPy 的基本規則同樣適用於二維陣列：一個陣列只能包含一種資料型別。如果你將其中一個浮點數改成字串，那麼陣列中的所有元素都會被強制轉換為字串，讓整個陣列的資料型別保持一致。
 
 ---
 
-## Subsetting
+## 選取部分資料
 
 ```yaml
 type: FullSlide
@@ -139,15 +134,15 @@ array([1.73, 1.68, 1.71, 1.89, 1.79])
 ```
 
 `@script`
-You can think of the 2D numpy array as an improved list of lists: you can perform calculations on the arrays, like I showed before, and you can do more advanced ways of subsetting.
+你可以將二維 NumPy 陣列想成巢狀串列的加強版：除了能像先前示範的那樣對陣列進行計算，還能使用更進階的方式，選取陣列元素。
 
-Suppose you want the first row, and then the third element in that row. To select the row, you need the index 0 in square brackets. Don't forget about zero indexing.
+假設你想選取第一列，以及這一列中的第三個元素。要選取第一列，你需要在方括號中輸入索引 0。還記得索引是從 0 開始計算的吧。
 
-To then select the third element, you can extend the same call with another pair of brackets, this time with the index 2,
+接著，若要選取第三個元素，只需在後面再加上一組方括號，並填入索引 2。
 
 ---
 
-## Subsetting
+## 選取部分資料
 
 ```yaml
 type: FullSlide
@@ -181,13 +176,13 @@ np_2d[0, 2]
 ```{{1}}
 
 `@script`
-like this. Basically you're selecting the row, and then from that row do another selection.
+簡單來說，就是先選取一列，然後從這一列中選取元素。
 
-There's also an alternative way of subsetting, using single square brackets and a comma. This call returns the exact same value as before. The value before the comma specifies the row, the value after the comma specifies the column. The intersection of the rows and columns you specified, are returned. Once you get used to it, this syntax is more intuitive and opens up more possibilities.
+還有另一種選取陣列元素的方式：在單個方括號內用逗號分隔。這種寫法回傳的結果與剛才的完全一致。逗號前的數值指定列，逗號後的數值則指定欄，最後回傳指定列與欄交會處的元素。一旦熟悉這種寫法，你就會發現它更直觀，也能讓你進行更多不同的操作。
 
 ---
 
-## Subsetting
+## 選取部分資料
 
 ```yaml
 type: FullSlide
@@ -222,20 +217,19 @@ array([65.4, 59.2, 63.6, 88.4, 68.7])
 ```{{2}}
 
 `@script`
-Suppose you want to select the height and weight of the second and third family member. You want both rows, so you put in a colon before the comma. You only want the second and third column, so you put in the indices 1 to 3 after the comma. Remember that the third index is not included here. The intersection gives us a 2D array with 2 rows and 2 columns:
+假設你想選取第二和第三位家庭成員的身高與體重。因為需要這兩列資料，你可以在逗號前加上冒號。同時，由於只需要第二和第三欄，你可以在逗號後指定索引範圍 1:3。還記得不包含結束位置的索引 3 吧。取其交集，你會得到一個 2 列 2 欄的二維陣列：
 
-Similarly, you can select the weight of all family members like this: you only want the second row, so put 1 before the comma. You want all columns, so you use a colon after the comma. The intersection gives us the entire second row.
+同理，你也可以這樣選取所有家庭成員的體重：我們只需要第二列，所以在逗號前填入 1 就可以了；而我們想選取所有欄，所以在逗號後填入冒號，就會得到完整的第二列資料。
 
-Finally, 2D numpy arrays enable you to do element-wise calculations, the same way you did it with 1D numpy arrays. That's something
+最後，二維 NumPy 陣列也能像一維 NumPy 陣列一樣，進行逐元素運算。你可以
 
 ---
 
-## Let's practice!
-
+## 練習看看！
 ```yaml
 type: FinalSlide
 key: 6047b27c09
 ```
 
 `@script`
-you can experiment with in the exercises, along with creating and subsetting 2D numpy arrays! Exciting
+在接下來的練習中動手試試，還可以練習建立二維 NumPy 陣列和選取其中的部分資料，真有意思吧！
