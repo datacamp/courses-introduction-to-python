@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/zh-TW/e972033b-8230-432c-9976-c1736a60fd14-44d9e600cd95383f7870daec13fad3bc.mp3
 ---
 
-## Variables and Types
+## 變數與資料型別
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+表現不錯，歡迎回來！相信你已經發現，Python 是好用的計算工具。但如果你想進行更複雜的計算，就需要在撰寫程式碼的過程中「儲存」數值。
 
 ---
 
-## Variable
+## 變數
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- 區分大小寫的特定名稱
 
-- Call up value through variable name{{1}}
+- 透過變數名取得對應的值{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1.79 公尺 - 68.7 公斤{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+只需定義一個區分大小寫的特定變數名稱，就能輕鬆儲存數值。建立或宣告變數後，隨時可以透過輸入變數名稱，取得它的值。
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+假設你測得的身高是 1.79 公尺，體重是 68.7 公斤。那麼，你可以用等號，將這兩個數值分別指派給名為 height 和 weight 的變數：
 
-If you now type the name of the variable, height,
+這時只要輸入變數名稱 height，
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python 就會找到這個變數，取得並輸出對應的值。
 
 ---
 
-## Calculate BMI
+## 計算 BMI
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+接下來計算身體質量指數 (BMI)。計算公式如下，其中體重單位為公斤，身高單位為公尺。你可以直接用具體數值計算，也可以像範例一樣，使用變數 height 和 weight 進行記算。每次輸入變數名，Python 都會將其替換為該變數的實際數值。這裡的 weight 是 68.7，height 是 1.79。
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+最後，將計算結果儲存在名為 bmi 的新變數中。此時 bmi 儲存的數值就與剛才計算得到的結果完全一致。
 
-In Python, variables are used all the time. They help to make your code reproducible.
+Python 程式設計經常會用到變數，使用變數能提高程式碼的可重現性。
 
 ---
 
-## Reproducibility
+## 可重現性
 
 ```yaml
 type: FullSlide
@@ -142,11 +137,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+假設你已經在腳本中撰寫了建立 height、weight 和 bmi 變數的程式碼，如下所示。如果你想使用另一個體重重新計算 BMI，
 
 ---
 
-## Reproducibility
+## 可重現性
 
 ```yaml
 type: FullSlide
@@ -167,13 +162,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+只需修改 weight 變數的宣告值，然後重新執行腳本即可。由於 weight 變數的值改變了，bmi 的計算結果也會隨之改變。
 
-So far, we've only worked with numerical values, such as height and weight.
+到目前為止，我們只使用了數值資料，比如身高和體重。
 
 ---
 
-## Python Types
+## Python 型別
 
 ```yaml
 type: FullSlide
@@ -199,13 +194,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+在 Python 中，每個數字都有對應的型別。你可以用 type() 函式來檢視某個值的型別。想要知道 bmi 數值的型別，只需在 type 函式的括號裡填入 bmi 即可。它的型別是浮點數 (float)，也就是 Python 用來表示既有整數部分又有小數部分的實數型別。此外，Python 還有專門表示整數的型別 (int)，就像這個範例一樣。
 
-To do data science, you'll need more than ints and floats, though.
+不過，若想進行資料科學相關的工作，只有 int 和 float 還不夠。
 
 ---
 
-## Python Types (2)
+## Python 型別 (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +230,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python 還有許多其他資料型別，其中最常見的是字串和布林值。
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+字串是 Python 用來表示文字的資料型別。你可以使用單引號或雙引號來建立字串，如範例所示。如果你輸出這裡最後一個變數的型別，會發現它是 str，也就是 string 的縮寫。
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+布林值只有 True 和 False 兩種取值，相當於我們日常說的「是」和「否」。在後續的資料篩選等操作中，布林值會非常實用。
 
-There's something special about Python data types.
+另外，Python 的資料型別還有一些非常特別的地方。
 
 ---
 
-## Python Types (3)
+## Python 型別 (3)
 
 ```yaml
 type: FullSlide
@@ -269,23 +264,22 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- 不同型別 = 不同行為！{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+看看這行對兩個整數求和的程式碼，再看看這行將兩個字串連接起來的程式碼。
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+對整數使用 + 運算子，會執行加法計算；字串則會把兩段文字串接在一起。同一個加號運算子會因資料型別不同而有不同的行為。這是一條通用原則：程式碼如何執行，取決於使用的資料型別。
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+在接下來的練習中，你將建立自己的第一組變數，親自體驗一下 Python 的各種資料型別。我們下支影片見，到時候我會帶你深入瞭解串列。
 
 ---
 
-## Let's practice!
-
+## 練習看看！
 ```yaml
 type: FinalSlide
 key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+快來動手寫程式吧！下一章見，屆時你將學會製作更棒的 Python 圖表。
