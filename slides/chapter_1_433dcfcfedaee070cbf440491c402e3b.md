@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/vi-VN/423d5444-bde9-428b-86ca-ede7dd6ef603-7bee3d51707d2f9021eafb58822bb786.mp3
 ---
 
-## Variables and Types
+## Biến và Kiểu dữ liệu
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+Bạn đã làm rất tốt. Chào mừng bạn quay trở lại. Rõ ràng Python là một công cụ tính toán tuyệt vời. Nhưng nếu muốn thực hiện các phép tính phức tạp hơn, chúng ta sẽ cần phải lưu các giá trị khi viết code. 
 
 ---
 
-## Variable
+## Biến
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- Tên cụ thể, phân biệt chữ hoa chữ thường
 
-- Call up value through variable name{{1}}
+- Truy xuất giá trị thông qua tên biến{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1,79 m - 68,7 kg{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+Chúng ta có thể làm việc đó bằng cách định nghĩa một biến, với một cái tên cụ thể, có phân biệt chữ hoa chữ thường. Khi đã tạo (hay khai báo) biến đó, về sau ta chỉ cần gõ tên biến để truy xuất giá trị của nó.
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+Giả sử bạn đo chiều cao và cân nặng tính theo mét: bạn cao một phẩy bảy mưới chín mét và nặng sáu mươi tám phẩy bảy ki-lô-gam. Bạn có thể gán các giá trị này cho hai biến, tên là height và weight, bằng dấu bằng:
 
-If you now type the name of the variable, height,
+Bây giờ nếu bạn gõ tên biến, height,
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python sẽ tìm tên biến, truy xuất giá trị của nó và hiển thị ra.
 
 ---
 
-## Calculate BMI
+## Tính BMI
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,14 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+Giờ hãy tính chỉ số khối cơ thể, hay BMI. Công thức với cân nặng tính bằng ki-lô-gam và chiều cao tính bằng mét như sau. Ta có thể tính trực tiếp với các giá trị cụ thể, nhưng cũng có thể dùng các biến height và weight như ở đây. Mỗi lần ta nhập tên biến, Python sẽ thay thế tên đó bằng giá trị hiện có của biến. weight tương ứng với sáu mươi tám phẩy bảy, và height tương ứng với một phẩy bảy mươi chín. 
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+Cuối cùng, trong phiên bản này, Python sẽ lưu kết quả vào một biến mới là biến bmi. Giờ bmi chứa cùng giá trị với kết quả phép tính trước đó.
 
-In Python, variables are used all the time. They help to make your code reproducible.
-
+Trong Python, biến được sử dụng thường xuyên. Chúng giúp ta dễ dàng chạy lại code và thu được kết quả nhất quán.
 ---
 
-## Reproducibility
+## Khả năng tái lập
 
 ```yaml
 type: FullSlide
@@ -142,11 +136,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+Giả sử đoạn code tạo các biến height, weight và bmi nằm trong một script như thế này. Nếu giờ ta muốn tính bmi cho một cân nặng khác,
 
 ---
 
-## Reproducibility
+## Khả năng tái lập
 
 ```yaml
 type: FullSlide
@@ -167,13 +161,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+ta chỉ cần thay đổi phần khai báo biến weight và chạy lại script. Giá trị bmi sẽ thay đổi tương ứng, vì giá trị của biến weight cũng đã thay đổi.
 
-So far, we've only worked with numerical values, such as height and weight.
+Cho đến giờ, ta mới chỉ làm việc với các giá trị số, như chiều cao và cân nặng.
 
 ---
 
-## Python Types
+## Các kiểu dữ liệu trong Python
 
 ```yaml
 type: FullSlide
@@ -199,13 +193,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+Trong Python, các con số này đều có kiểu dữ liệu cụ thể. Ta có thể kiểm tra kiểu dữ liệu của một giá trị bằng hàm type. Để xem kiểu của giá trị bmi, chỉ cần viết type rồi sau đó viết bmi trong dấu ngoặc đơn. Bạn sẽ thấy đó là float, tức là một số thực. Đây là cách Python biểu thị số thực, tức số có cả phần nguyên và phần thập phân. Python cũng có kiểu dữ liệu cho số nguyên là int, như ví dụ này.                                  
 
-To do data science, you'll need more than ints and floats, though.
+Tuy nhiên để làm khoa học dữ liệu, chúng ta cần nhiều kiểu dữ liệu hơn là chỉ int và float.
 
 ---
 
-## Python Types (2)
+## Các kiểu dữ liệu trong Python (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +229,18 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python có rất nhiều kiểu dữ liệu khác nhau. Phổ biến nhất là string và boolean.
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+String là kiểu dữ liệu văn bản. Ta có thể dùng dấu ngoặc kép hoặc ngoặc đơn để tạo một string, như trong các ví dụ này. Nếu cho hiển thị kiểu dữ liệu của biến cuối cùng ở đây, ta sẽ thấy đó là str, viết tắt của string. 
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+Boolean là kiểu dữ liệu chỉ có thể là True hoặc False, giống như “Có” và “Không” trong ngôn ngữ hằng ngày. Boolean sẽ rất hữu ích sau này, chẳng hạn như để lọc dữ liệu.
 
-There's something special about Python data types.
+
+Có một điều đặc biệt về các kiểu dữ liệu trong Python.
 
 ---
 
-## Python Types (3)
+## Các kiểu biến trong Python (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- Kiểu khác = hoạt động khác{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+Hãy xem dòng code này, cộng hai số nguyên, và dòng code này, cộng hai string.
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+Với số nguyên, các giá trị được cộng lại, còn với string, các chuỗi được ghép nối lại với nhau. Tuỳ theo kiểu dữ liệu mà toán tử cộng hoạt động khác nhau. Đây là một nguyên tắc chung. Code hoạt động như thế nào phụ thuộc vào kiểu dữ liệu mà ta đang làm. 
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+Trong các bài tập tiếp theo, bạn sẽ tạo những biến đầu tiên và thử nghiệm với một số kiểu dữ liệu của Python. Hẹn gặp bạn ở video tiếp theo, ở đó, mình sẽ giải thích mọi thứ về kiểu dữ liệu list.
 
 ---
 
-## Let's practice!
+## Hãy cùng luyện tập!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+Cùng bắt tay vào code nào. Mình rất mong chờ được gặp bạn ở chương tiếp theo, ở đó bạn sẽ tạo ra nhiều biểu đồ Python ấn tượng hơn nữa. 
