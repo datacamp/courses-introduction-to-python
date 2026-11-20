@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 2
-title: Python Lists
+title_meta: Capitolul 2
+title: Liste în Python
 description: >-
-  Learn to store, access, and manipulate data in lists: the first step toward
-  efficiently working with huge amounts of data.
+  Învață să stochezi, să accesezi și să manipulezi date în liste – primul pas
+  spre lucrul eficient cu volume mari de date.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Python Lists
+    title: Liste în Python
   - nb_of_exercises: 4
-    title: Subsetting Lists
+    title: Extragerea elementelor din liste
   - nb_of_exercises: 5
-    title: Manipulating Lists
+    title: Manipularea listelor
 ---
 
-## Python Lists
+## Liste Python
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ a0530c4542f10988847b2dbb91f717c3
 
 ---
 
-## Create a list
+## Creează o listă
 
 ```yaml
 type: NormalExercise
@@ -39,7 +39,7 @@ skills:
   - 2
 ```
 
-A list is a **compound data type**; you can group values together, like this:
+O listă este un **tip de date compus**; poți grupa valori împreună, astfel:
 
 ```
 a = "is"
@@ -47,17 +47,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
+După ce ai măsurat înălțimea membrilor familiei tale, decizi să colectezi câteva informații despre casa în care locuiești. Suprafețele diferitelor încăperi din casă sunt stocate în variabile separate în cadrul exercițiului.
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the `print()` function.
+- Creează o listă, `areas`, care să conțină suprafața holului (`hall`), bucătăriei (`kit`), sufrageriei (`liv`), dormitorului (`bed`) și băii (`bath`), în această ordine. Folosește variabilele predefinite.
+- Afișează `areas` cu ajutorul funcției `print()`.
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Make sure to use square brackets `[]` rather than parentheses `()`.
-- You don't need to use quotation marks when storing variables within a list.
-- Type `print(areas)` to print out the list when submitting.
+- Poți folosi variabilele deja create pentru a construi lista: `areas = [hall, kit, ...]`.
+- Asigură-te că folosești paranteze pătrate `[]` în loc de paranteze rotunde `()`.
+- Nu este nevoie să folosești ghilimele când stochezi variabile într-o listă.
+- Scrie `print(areas)` pentru a afișa lista la trimiterea răspunsului.
 
 `@pre_exercise_code`
 ```{python}
@@ -96,11 +96,11 @@ print(areas)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
+predef_msg = "Nu eliminați și nu modificați variabilele predefinite!"
+areas_msg = "Definiți `areas` ca lista care conține toate variabilele de suprafață, în ordinea corectă: `[hall, kit, liv, bed, bath]`. Aveți grijă la greșelile de scriere. Lista nu ar trebui să conțină altceva!"
 
 Ex().check_correct(
-    has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?"),
+    has_printout(0, not_printed_msg = "__JINJA__:Ați folosit `{{sol_call}}` pentru a afișa lista `areas` la sfârșitul scriptului dumneavoastră?"),
     check_correct(
         check_object("areas").has_equal_value(incorrect_msg = areas_msg),
         multi(
@@ -113,12 +113,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("Excelent! O listă este mult mai potrivită aici, nu-i așa?")
 ```
 
 ---
 
-## Create lists with different types
+## Creează liste cu tipuri diferite
 
 ```yaml
 type: NormalExercise
@@ -129,19 +129,19 @@ skills:
   - 2
 ```
 
-Although it's not really common, a list can also contain a mix of Python types including strings, floats, and booleans.
+Deși nu este foarte frecvent, o listă poate conține și o combinație de tipuri Python: șiruri de caractere, numere cu virgulă mobilă și valori booleene.
 
-You're now going to add the room names to your list, so you can easily see both the room name and size together.
+Acum vei adăuga numele camerelor în lista ta, astfel încât să poți vedea cu ușurință atât numele, cât și suprafața fiecărei camere.
 
-Some of the code has been provided for you to get you started. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+O parte din cod a fost deja scrisă pentru tine. Atenție! `"bathroom"` este un șir de caractere, în timp ce `bath` este o variabilă care reprezintă valoarea `9.50` definită anterior.
 
 `@instructions`
-- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- Completează codul care creează lista `areas`. Construiește lista astfel încât să conțină mai întâi numele fiecărei camere ca șir de caractere, apoi suprafața acesteia. Cu alte cuvinte, adaugă șirurile `"hallway"`, `"kitchen"` și `"bedroom"` în locurile potrivite.
+- Afișează din nou `areas`; de data aceasta, informațiile sunt mai clare?
 
 `@hint`
-- The first four elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
-- A string will need to be in quotation marks `""`.
+- Primele patru elemente ale listei `areas` sunt definite ca `["hallway", hall, "kitchen", kit, ...`.
+- Un șir de caractere trebuie să fie între ghilimele `""`.
 
 `@pre_exercise_code`
 ```{python}
@@ -181,22 +181,22 @@ print(areas)
 `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
+predef_msg = "Nu ștergeți și nu editați variabilele predefinite!"
+areas_msg = "Nu ați atribuit valoarea corectă variabilei `areas`. Aruncați o altă privire la instrucțiuni. Asigurați-vă că plasați numele camerei înaintea variabilei care conține suprafața de fiecare dată. Ordinea contează aici! Aveți grijă la greșelile de scriere."
 
 Ex().check_correct(
   check_object("areas").has_equal_value(incorrect_msg = areas_msg),
   multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Ați folosit `{{sol_call}}` pentru a afișa lista `areas` la sfârșitul scriptului dumneavoastră?")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("Excelent! Această listă conține atât șiruri de caractere, cât și numere cu virgulă mobilă, dar aceasta nu reprezintă o problemă pentru Python!")
 ```
 
 ---
 
-## List of lists
+## Listă de liste
 
 ```yaml
 type: NormalExercise
@@ -207,20 +207,20 @@ skills:
   - 2
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+Ca om de știință a datelor, vei lucra adesea cu cantități mari de date, iar gruparea acestora are mult sens.
 
-Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
+În loc să creezi o listă cu șiruri de caractere și numere reale care reprezintă numele și suprafețele camerelor din casa ta, poți crea o listă de liste.
 
-Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+Amintește-ți: `"hallway"` este un șir de caractere, în timp ce `hall` este o variabilă ce reprezintă valoarea `11.25` pe care ai specificat-o anterior.
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
+- Completează lista de liste astfel încât să conțină și datele pentru dormitor și baie. Asigură-te că le introduci în ordine!
+- Afișează `house`; această modalitate de a-ți structura datele are mai mult sens?
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- Remember to include a comma `,` after each sublist.
-- To print a variable `x`, write `print(x)` on a new line.
+- Adaugă _subliste_ la lista `house` introducând `["bedroom", bed]` și `["bathroom", bath]` în interiorul parantezelor pătrate.
+- Nu uita să incluzi o virgulă `,` după fiecare sublistă.
+- Pentru a afișa o variabilă `x`, scrie `print(x)` pe o linie nouă.
 
 `@pre_exercise_code`
 ```{python}
@@ -267,8 +267,8 @@ print(house)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
+predef_msg = "Nu ștergeți și nu modificați variabilele predefinite!"
+house_msg = "Nu ați atribuit valoarea corectă variabilei `house`. Revedeți instrucțiunile. Extindeți lista de liste astfel încât să includă câte o listă pentru fiecare pereche de nume de cameră și suprafață. Aveți grijă la ordine și greșeli de scriere!"
 
 Ex().check_correct(
     check_object("house").has_equal_value(incorrect_msg = house_msg),
@@ -281,14 +281,14 @@ Ex().check_correct(
     )
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Ați folosit `{{sol_call}}` pentru a afișa conținutul variabilei `house`?")
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("Excelent! Pregătiți-vă să învățați despre indexarea listelor!")
 ```
 
 ---
 
-## Subsetting Lists
+## Extragerea elementelor din liste
 
 ```yaml
 type: VideoExercise
@@ -301,7 +301,7 @@ fc15ba5cb9485456df8589130b519ea3
 
 ---
 
-## Subset and conquer
+## Selectează și cucerește
 
 ```yaml
 type: NormalExercise
@@ -312,26 +312,26 @@ skills:
   - 2
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+Indexarea listelor Python este simplă. Uită-te la exemplul de mai jos, care creează o listă `x` și selectează "b" din ea. Reține că acesta este al doilea element, deci are indexul 1. Poți folosi și indexarea negativă.
 
 ```
 x = ["a", "b", "c", "d"]
 x[1]
-x[-3] # same result!
+x[-3] # același rezultat!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+Îți amintești lista `areas` de mai devreme, care conținea atât șiruri de caractere, cât și numere reale? Definiția ei se află deja în script. Poți adăuga codul potrivit pentru a face câteva operații de indexare în Python?
 
 `@instructions`
-- Print out the second element from the `areas` list (it has the value `11.25`).
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room (`20.0`) and print it out.
+- Afișează al doilea element din lista `areas` (are valoarea `11.25`).
+- Selectează și afișează ultimul element din `areas`, adică `9.50`. Folosirea unui index negativ are sens aici!
+- Selectează numărul care reprezintă suprafața livingului (`20.0`) și afișează-l.
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`.
-- Use `x[-1]` to select the last element of a list `x`.
-- Make sure to wrap your subsetting operations in a `print()` call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
+- Folosește `x[1]` pentru a selecta al doilea element al unei liste `x`.
+- Folosește `x[-1]` pentru a selecta ultimul element al unei liste `x`.
+- Asigură-te că înfășori operațiile de indexare într-un apel `print()`.
+- Numărul care reprezintă suprafața livingului este al 6-lea element din listă, deci vei folosi `[5]` aici. `area[4]` ar afișa șirul de caractere!
 
 `@pre_exercise_code`
 ```{python}
@@ -370,17 +370,17 @@ print(areas[5])
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Nu eliminați și nu editați lista predefinită `areas`."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
-Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
-Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
-success_msg("Good job!")
+Ex().has_printout(0, not_printed_msg = "Aruncați o altă privire asupra codului dumneavoastră pentru a afișa al doilea element din `areas`, care se află la indexul `1`.")
+Ex().has_printout(1, not_printed_msg = "Aruncați o altă privire asupra codului dumneavoastră pentru a afișa ultimul element din `areas`, care se află la indexul `-1`.")
+Ex().has_printout(2, not_printed_msg = "Aruncați o altă privire asupra codului dumneavoastră pentru a afișa suprafața sufrageriei. Aceasta se află la indexul `5`.")
+success_msg("Bună treabă!")
 ```
 
 ---
 
-## Slicing and dicing
+## Feliere și segmentare
 
 ```yaml
 type: NormalExercise
@@ -391,23 +391,23 @@ skills:
   - 2
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+Selectarea unui singur element dintr-o listă este doar o parte din poveste. Poți, de asemenea, să _felieri_ lista, adică să selectezi mai multe elemente simultan. Folosește sintaxa de mai jos:
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
+Indexul `start` este inclus, în timp ce indexul `end` _nu_ este inclus. Există și posibilitatea de a nu specifica acești indecși. Dacă nu specifici indexul `start`, Python înțelege că vrei să începi felierea de la primul element al listei.
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-- Print both `downstairs` and `upstairs` using `print()`.
+- Folosește felierea pentru a crea o listă, `downstairs`, care să conțină primele 6 elemente din `areas`.
+- Creează `upstairs` ca ultimele `4` elemente din `areas`. De data aceasta, simplifică felierea omițând indexul `end`.
+- Afișează atât `downstairs`, cât și `upstairs` folosind `print()`.
 
 `@hint`
-- Use the brackets `[0:6]` to get the first six elements of a list.
-- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
-- Add two `print()` calls to print out `downstairs` and `upstairs`.
+- Folosește parantezele `[0:6]` pentru a obține primele șase elemente ale unei liste.
+- Pentru a obține tot ce urmează după primele 5 elemente ale unei liste `l`, folosești `l[5:]`.
+- Adaugă două apeluri `print()` pentru a afișa `downstairs` și `upstairs`.
 
 `@pre_exercise_code`
 ```{python}
@@ -448,22 +448,22 @@ print(upstairs)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Nu eliminați și nu editați lista predefinită `areas`."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
+patt = "`%s` este incorect. Utilizați `areas[%s]` și feliere pentru a selecta elementele dorite sau o metodă echivalentă."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
-Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
+Ex().has_printout(0, not_printed_msg="Ați afișat `downstairs` după calcularea acesteia?")
+Ex().has_printout(1, not_printed_msg="Ați afișat `upstairs` după calcularea acesteia?")
 
-success_msg("Great!")
+success_msg("Excelent!")
 ```
 
 ---
 
-## Subsetting lists of lists
+## Selectarea elementelor din liste de liste
 
 ```yaml
 type: NormalExercise
@@ -471,20 +471,20 @@ key: dbbbd306cf
 xp: 100
 ```
 
-A Python list can also contain other lists.
+O listă Python poate conține și alte liste.
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
+Pentru a selecta elemente din liste de liste, folosești aceeași tehnică: parantezele pătrate. Pentru o listă numită `house`, ar arăta astfel:
 
 ```
 house[2][0]
 ```
 
 `@instructions`
-- Subset the `house` list to get the float `9.5`.
+- Selectează din lista `house` valoarea float `9.5`.
 
 `@hint`
-- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
-- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+- Abordează problema pas cu pas. Mai întâi, accesează ultimul element al listei, `["bathroom", 9.50]`. Reține că indexul ultimului element este `-1`.
+- Apoi accesează al doilea element din `["bathroom", 9.50]`, care se află la indexul `1`.
 
 `@pre_exercise_code`
 ```{python}
@@ -522,12 +522,12 @@ Ex().check_or(
   has_code("house[4][1]", pattern=False)
 )
 
-success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
+success_msg("Corect! Ultima piesă a puzzle-ului listei este manipularea.")
 ```
 
 ---
 
-## Manipulating Lists
+## Manipularea listelor
 
 ```yaml
 type: VideoExercise
@@ -540,7 +540,7 @@ xp: 50
 
 ---
 
-## Replace list elements
+## Înlocuirea elementelor dintr-o listă
 
 ```yaml
 type: NormalExercise
@@ -551,18 +551,18 @@ skills:
   - 2
 ```
 
-To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+Pentru a înlocui elementele dintr-o listă, selectezi un subset al listei și atribui noile valori acelui subset. Poți selecta elemente individuale sau poți modifica porțiuni întregi din listă dintr-o dată.
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+Pentru acest exercițiu și cele următoare, vei continua să lucrezi cu lista `areas`, care conține numele și suprafețele diferitelor camere dintr-o casă.
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
+- Actualizează suprafața băii la `10.50` metri pătrați în loc de `9.50`, folosind indexare negativă.
+- Dă listei `areas` un aer mai modern! Schimbă `"living room"` în `"chill zone"`. De data aceasta, nu folosi indexare negativă.
 
 `@hint`
-- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
-- Then, replace the value with the new bathroom area by assigning it to this subset.
-- Do the same to update the `"living room"` name, which is at index 4.
+- Pentru a actualiza suprafața băii, identifică subsetul corespunzător (este ultimul element din listă!).
+- Apoi, înlocuiește valoarea cu noua suprafață a băii prin atribuire la acest subset.
+- Procedează la fel pentru a actualiza numele `"living room"`, care se află la indexul 4.
 
 `@pre_exercise_code`
 ```{python}
@@ -595,21 +595,21 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
+bathroom_msg = 'Puteți folosi `areas[-1] = 10.50` pentru a actualiza suprafața băii.'
+chillzone_msg = 'Puteți folosi `areas[4] = "chill zone"` pentru a actualiza numele camerei de zi.'
 Ex().check_correct(
-  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  check_object('areas').has_equal_value(incorrect_msg = 'Modificările aduse listei `areas` nu au dus la lista corectă. Sunteți sigur că ați folosit operațiile corecte de subset? În caz de îndoială, puteți folosi un indiciu!'),
   multi(
     has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
     has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
-success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
+success_msg('Excelent! Așa cum a arătat exemplul de cod, puteți, de asemenea, să selectați o porțiune dintr-o listă și să o înlocuiți cu o altă listă pentru a actualiza mai multe elemente într-o singură comandă.')
 ```
 
 ---
 
-## Extend a list
+## Extinde o listă
 
 ```yaml
 type: NormalExercise
@@ -620,22 +620,22 @@ skills:
   - 2
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+Dacă poți modifica elementele unei liste, cu siguranță vrei să poți și adăuga elemente noi, nu-i așa? Poți folosi operatorul `+`:
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+Tocmai ai câștigat la loterie – felicitări! Decizi să construiești o piscină acoperită și un garaj. Poți adăuga informațiile corespunzătoare în lista `areas`?
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- Folosește operatorul `+` pentru a adăuga lista `["poolhouse", 24.5]` la sfârșitul listei `areas`. Stochează lista rezultată în `areas_1`.
+- Extinde mai departe `areas_1` adăugând date despre garajul tău. Adaugă șirul de caractere `"garage"` și numărul cu virgulă mobilă `15.45`. Numește lista rezultată `areas_2`.
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- Urmează modelul de cod din enunț. `x` este `areas` aici, iar `["e", "f"]` este `["poolhouse", 24.5]`.
+- Pentru a adăuga mai multe elemente la `areas_1`, folosește `areas_1 + ["element", 123]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -670,16 +670,16 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Nu eliminați și nu editați lista predefinită `areas`."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
-success_msg("Cool! The list is shaping up nicely!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Utilizați `areas + [\"poolhouse\", 24.5]` pentru a crea `areas_1`. Atenție la greșeli de scriere!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Utilizați `areas_1 + [\"garage\", 15.45]` pentru a crea `areas_2`. Atenție la greșeli de scriere!")
+success_msg("Excelent! Lista prinde formă!")
 ```
 
 ---
 
-## Delete list elements
+## Ștergerea elementelor dintr-o listă
 
 ```yaml
 type: NormalExercise
@@ -687,23 +687,23 @@ key: 85f792356e
 xp: 100
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+În final, poți și să elimini elemente din lista ta. Poți face asta cu instrucțiunea `del`:
 
 ```
 x = ["a", "b", "c", "d"]
 del x[1]
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+Fii atent: imediat ce elimini un element dintr-o listă, indecșii tuturor elementelor care urmează după cel șters se modifică!
 
-Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
+Din păcate, suma câștigată la loterie nu este chiar atât de mare și se pare că piscina acoperită nu mai este o opțiune. Va trebui să o elimini din listă. Decizi să ștergi atât șirul de caractere, cât și numărul zecimal corespunzător din lista `areas`.
 
 `@instructions`
-- Delete the string and float for the `"poolhouse"` from your `areas` list.
-- Print the updated `areas` list.
+- Șterge șirul de caractere și numărul zecimal corespunzătoare `"poolhouse"` din lista ta `areas`.
+- Afișează lista `areas` actualizată.
 
 `@hint`
-- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
+- Va trebui să folosești `del` de două ori pentru a șterge două elemente. Fii atent la modificarea indecșilor!
 
 `@pre_exercise_code`
 ```{python}
@@ -764,13 +764,13 @@ Ex().check_or(
   )
 )
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="Ați afișat `areas` după eliminarea șirului și a numărului float pentru piscină?")
+success_msg("Corect! Veți învăța mai târziu despre modalități mai simple de a elimina elemente specifice din listele Python.")
 ```
 
 ---
 
-## Inner workings of lists
+## Cum funcționează listele în interior
 
 ```yaml
 type: NormalExercise
@@ -781,17 +781,17 @@ skills:
   - 2
 ```
 
-Some code has been provided for you in this exercise: a list with the name `areas` and a copy named `areas_copy`.
+În acest exercițiu ai deja un cod de pornire: o listă cu numele `areas` și o copie numită `areas_copy`.
 
-Currently, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit the run code button you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+În prezent, primul element din lista `areas_copy` este modificat, iar lista `areas` este afișată. Dacă apeși butonul Rulează codul, vei observa că, deși ai modificat `areas_copy`, schimbarea se reflectă și în lista `areas`. Acest lucru se întâmplă pentru că `areas` și `areas_copy` indică spre aceeași listă.
 
-If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list with `list()` or by using `[:]`.
+Dacă vrei să împiedici ca modificările din `areas_copy` să se reflecte și în `areas`, trebuie să faci o copie explicită a listei `areas` folosind `list()` sau sintaxa `[:]`.
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
+- Modifică a doua comandă, cea care creează variabila `areas_copy`, astfel încât `areas_copy` să fie o copie explicită a lui `areas`. După modificare, schimbările făcute în `areas_copy` nu ar trebui să afecteze `areas`. Trimite răspunsul pentru a verifica.
 
 `@hint`
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+- Modifică apelul `areas_copy = areas`. În loc să atribui `areas`, poți atribui `list(areas)` sau `areas[:]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -831,16 +831,16 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_object("areas_copy").has_equal_value(incorrect_msg = "Se pare că `areas_copy` nu a fost actualizat corect."),
+  check_function("list", missing_msg = "Asigurați-vă că utilizați `list(areas)` pentru a crea un `areas_copy`.")
 )
 
-mmsg = "Don't remove the predefined `areas` list."
-imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+mmsg = "Nu eliminați lista predefinită `areas`."
+imsg = "Asigurați-vă că editați DOAR copia, nu lista originală `areas`. Aruncați o altă privire asupra descrierii exercițiului dacă nu sunteți sigur cum să creați o copie."
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_function("list", missing_msg = "Asigurați-vă că utilizați `list(areas)` pentru a crea un `areas_copy`.")
 )
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("Excelent! Diferența dintre copiile explicite și cele bazate pe referințe este subtilă, dar poate fi foarte importantă. Încercați să țineți minte cum este stocată o listă în memoria calculatorului.")
 ```
