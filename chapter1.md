@@ -1,10 +1,9 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: บทที่ 1
+title: Python เบื้องต้น
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  แนะนำแนวคิดพื้นฐานของ Python เรียนรู้การใช้ Python แบบโต้ตอบและแบบสคริปต์
+  สร้างตัวแปรแรก และทำความรู้จักกับชนิดข้อมูลพื้นฐานของ Python
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
@@ -12,7 +11,7 @@ lessons:
   - nb_of_exercises: 3
     title: Hello Python!
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: ตัวแปรและชนิดข้อมูล
 ---
 
 ## Hello Python!
@@ -28,7 +27,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## โค้ด Python แรกของคุณ
 
 ```yaml
 type: NormalExercise
@@ -39,15 +38,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+ถึงเวลาลองรันโค้ด Python เป็นครั้งแรกแล้ว!
 
-Head to the code and hit the run code button to see the output.
+ไปที่โค้ดแล้วกดปุ่มรันโค้ดเพื่อดูผลลัพธ์
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- กดปุ่มรันโค้ดเพื่อดูผลลัพธ์ของ `print(5 / 8)`
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- รันโค้ดก่อนที่จะส่งคำตอบ เพื่อให้มีเวลาสำรวจผลลัพธ์
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +67,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:คุณได้ใช้ `{{sol_call}}` เพื่อพิมพ์ `5 / 8` หรือไม่?")
+success_msg("ยอดเยี่ยม! ไปยังข้อถัดไปกันเลย!")
 ```
 
 ---
 
-## Python as a calculator
+## Python ในฐานะเครื่องคิดเลข
 
 ```yaml
 type: NormalExercise
@@ -85,19 +84,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python เหมาะอย่างยิ่งสำหรับการคำนวณพื้นฐาน ไม่ว่าจะเป็นการบวก ลบ คูณ หรือหาร
 
-The code in the script gives some examples.
+โค้ดในสคริปต์แสดงตัวอย่างการคำนวณเหล่านี้ให้ดูแล้ว
 
-Now it's your turn to practice by writing some code yourself.
+ถึงตาลองเขียนโค้ดเองบ้าง
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- พิมพ์ผลลัพธ์ของการลบ `5` ออกจาก `5` ใต้ `# Subtraction` โดยใช้ `print()`
+- พิมพ์ผลลัพธ์ของการคูณ `3` ด้วย `5` ใต้ `# Multiplication`
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- ต้องใช้ `print()` เพื่อแสดงผลลัพธ์
+- ใช้ `-` สำหรับการลบ และ `*` สำหรับการคูณ
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +131,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "คุณได้ใช้ `print(4 + 5)` เพื่อแสดงผลลัพธ์ของการบวกหรือไม่?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "คุณได้ใช้ `print(5 - 5)` เพื่อแสดงผลลัพธ์ของการลบหรือไม่?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "คุณได้ใช้ `print(3 * 5)` เพื่อแสดงผลลัพธ์ของการคูณหรือไม่?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "คุณได้ใช้ `print(10 / 2)` เพื่อแสดงผลลัพธ์ของการหารหรือไม่?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("ถูกต้อง! Python สามารถช่วยในการคำนวณได้ ซึ่งเป็นคุณสมบัติที่จะเป็นประโยชน์สำหรับการวิเคราะห์ข้อมูลเมื่อเราพัฒนาทักษะด้านข้อมูลมากขึ้น")
 ```
 
 ---
 
-## Variables and Types
+## ตัวแปรและชนิดข้อมูล
 
 ```yaml
 type: VideoExercise
@@ -158,7 +157,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## การกำหนดค่าตัวแปร
 
 ```yaml
 type: NormalExercise
@@ -169,24 +168,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+ใน Python ตัวแปรช่วยให้อ้างอิงค่าต่าง ๆ ด้วยชื่อที่กำหนดเองได้ ตัวอย่างเช่น หากต้องการสร้างตัวแปร `x` ที่มีค่าเท่ากับ `5` ให้ใช้เครื่องหมาย `=` ดังนี้
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+จากนี้ไปสามารถใช้ชื่อตัวแปร `x` แทนค่า `5` ได้โดยตรง
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+จำไว้ว่าเครื่องหมาย `=` ใน Python หมายถึง _การกำหนดค่า_ ไม่ใช่การตรวจสอบว่าเท่ากันหรือไม่ ลองฝึกในแบบฝึกหัดนี้โดยแทนที่ `____` ด้วยโค้ดของคุณ
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- สร้างตัวแปร `savings` ที่มีค่าเท่ากับ `100`
+- ตรวจสอบค่าของตัวแปรนี้โดยพิมพ์ `print(savings)` ในสคริปต์
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- พิมพ์ `savings = 100` เพื่อสร้างตัวแปร `savings`
+- หลังจากสร้างตัวแปร `savings` แล้ว ให้พิมพ์ `print(savings)`
+- โค้ดสุดท้ายไม่ควรมี `____` หลงเหลืออยู่
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +212,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="กรุณากำหนดค่า `100` ให้กับตัวแปร `savings`")
+Ex().has_printout(0, not_printed_msg = "กรุณาแสดงผล `savings` ตัวแปรที่คุณสร้างขึ้น โดยใช้ `print(savings)`")
+success_msg("ยอดเยี่ยม! ลองทำการคำนวณด้วยตัวแปรนี้กันดูเลย!")
 ```
 
 ---
 
-## Calculations with variables
+## การคำนวณด้วยตัวแปร
 
 ```yaml
 type: NormalExercise
@@ -231,21 +230,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+ตอนนี้สร้างตัวแปร savings ไว้แล้ว มาเริ่มออมเงินกันเลย!
 
-Instead of calculating with the actual values, you can use variables instead.
+แทนที่จะคำนวณด้วยค่าตัวเลขโดยตรง ลองใช้ตัวแปรแทนดูสิ
 
-How much money would you have saved four months from now, if you saved $10 each month?
+ถ้าออมเงินเดือนละ $10 จะมีเงินออมเท่าไรหลังจากผ่านไป 4 เดือน?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- สร้างตัวแปร `monthly_savings` กำหนดค่าเป็น `10` และตัวแปร `num_months` กำหนดค่าเป็น `4`
+- คูณ `monthly_savings` ด้วย `num_months` แล้วกำหนดผลลัพธ์ให้กับ `new_savings`
+- แสดงค่าของ `new_savings` ด้วย `print()`
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- คำนวณด้วยตัวแปรได้เหมือนกับการคำนวณด้วยตัวเลขเลย แทนที่จะเขียน `10 * 4` ให้ใช้ตัวแปรแทนตัวเลขเหล่านั้น!
+- ใช้ `print()` เพื่อแสดงค่าใน `new_savings`
+- ระวังการสะกดชื่อตัวแปรให้ถูกต้องด้วย!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +279,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "คุณได้บันทึกค่า `10` ไว้ใน `monthly_savings` โดยใช้ `monthly_savings = 10` หรือไม่?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "คุณได้บันทึกค่า `4` ไว้ใน `num_months` โดยใช้ `num_months = 4` หรือไม่?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "คุณได้ใช้ตัวแปรและสัญลักษณ์ที่ถูกต้องในการคูณหรือไม่? คาดว่าจะได้ `monthly_savings * num_months` แต่ได้รับค่าอื่น")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "คุณได้ใช้ตัวแปรและสัญลักษณ์ที่ถูกต้องในการบวกหรือไม่? คาดว่าจะได้ `savings + new_savings` แต่ได้รับค่าอื่น")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="โปรดอย่าลืมพิมพ์ `new_savings` ที่ท้ายสคริปต์ของคุณ")
 
-success_msg("You have $40 in new savings!")
+success_msg("คุณมีเงินออมใหม่ $40!")
 ```
 
 ---
 
-## Other variable types
+## ชนิดข้อมูลอื่น ๆ ของตัวแปร
 
 ```yaml
 type: NormalExercise
@@ -303,24 +302,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+ในแบบฝึกหัดก่อนหน้า คุณได้ทำงานกับชนิดข้อมูล integer ใน Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int` หรือจำนวนเต็ม: ตัวเลขที่ไม่มีส่วนทศนิยม เช่น `savings` ที่มีค่าเป็น `100`
 
-Next to numerical data types, there are three other very common data types:
+นอกจากชนิดข้อมูลตัวเลขแล้ว ยังมีชนิดข้อมูลทั่วไปอีกสามประเภท ได้แก่:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float` หรือทศนิยม: ตัวเลขที่มีทั้งส่วนจำนวนเต็มและส่วนทศนิยม คั่นด้วยจุด เช่น `1.1`
+- `str` หรือสตริง: ชนิดข้อมูลสำหรับแทนข้อความ สามารถใช้เครื่องหมายคำพูดเดี่ยวหรือคู่ในการสร้างสตริง
+- `bool` หรือบูลีน: ชนิดข้อมูลสำหรับแทนค่าตรรกะ มีได้เพียง `True` หรือ `False` เท่านั้น (ตัวพิมพ์ใหญ่-เล็กมีความสำคัญ!)
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- สร้างตัวแปร float ใหม่ชื่อ `half` โดยกำหนดค่าเป็น `0.5`
+- สร้างตัวแปร string ใหม่ชื่อ `intro` โดยกำหนดค่าเป็น `"Hello! How are you?"`
+- สร้างตัวแปร boolean ใหม่ชื่อ `is_good` โดยกำหนดค่าเป็น `True`
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- ในการสร้างตัวแปรใน Python ให้ใช้ `=` และอย่าลืมใส่เครื่องหมายคำพูดล้อมรอบข้อความ (ใช้เครื่องหมายคำพูดเดี่ยวหรือคู่ก็ได้)
+- ค่าบูลีนใน Python มีเพียงสองค่าเท่านั้น คือ `True` และ `False` รูปแบบอื่น เช่น `TRUE`, `true`, `FALSE`, `false` จะไม่ถูกรับรอง
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +352,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "คุณได้บันทึกทศนิยม `0.5` ไว้ใน `half` หรือไม่?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "มีบางอย่างไม่ถูกต้องในตัวแปร `intro` ของคุณ กรุณาตรวจสอบการสะกดและตรวจสอบให้แน่ใจว่าคุณได้ใช้เครื่องหมายคำพูดอย่างถูกต้อง")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "คุณได้พิมพ์ตัวอักษรแรกของค่าบูลีนเป็นตัวพิมพ์ใหญ่หรือไม่? โปรดทราบว่าคุณไม่จำเป็นต้องใช้เครื่องหมายคำพูดในที่นี้")
 
-success_msg("Nice!")
+success_msg("ดีมาก!")
 ```
 
 ---
 
-## Operations with other types
+## การดำเนินการกับประเภทข้อมูลอื่น
 
 ```yaml
 type: BulletExercise
@@ -372,11 +371,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+ตัวแปรใน Python มีหลายประเภท สามารถตรวจสอบประเภทของตัวแปรได้โดยใช้ `type()` ตัวอย่างเช่น หากต้องการดูประเภทของ `a` ให้รัน `type(a)`
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+ตัวแปรแต่ละประเภทมีพฤติกรรมต่างกันใน Python เช่น การบวก string สองตัวเข้าด้วยกันจะได้ผลลัพธ์ที่แตกต่างจากการบวก integer หรือ boolean สองตัว
 
-Time for you to test this out.
+ลองทดสอบดูได้เลย
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +391,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- บวก `savings` กับ `new_savings` แล้วเก็บผลลัพธ์ไว้ในตัวแปร `total_savings`
+- ใช้ `type()` เพื่อพิมพ์ประเภทของ `total_savings`
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- นำ `savings + new_savings` มาเก็บไว้ในตัวแปรใหม่ชื่อ `total_savings`
+- หากต้องการพิมพ์ประเภทของตัวแปร `x` ให้ใช้ `print(type(x))`
 
 `@sample_code`
 ```{python}
@@ -428,7 +427,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "คุณไม่จำเป็นต้องเปลี่ยนแปลงหรือลบตัวแปรที่กำหนดไว้ล่วงหน้า"
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +435,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="เพิ่ม `savings` และ `new_savings` เพื่อสร้างตัวแปร `total_savings`"),
+    has_printout(1, not_printed_msg = "__JINJA__:ใช้ `{{sol_call}}` เพื่อแสดงประเภทของ `total_savings`")
 )
 ```
 
@@ -450,12 +449,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- คำนวณผลรวมของ `intro` กับ `intro` แล้วเก็บผลลัพธ์ไว้ในตัวแปร `doubleintro`
+- พิมพ์ค่าของ `doubleintro` ออกมา ผลลัพธ์เป็นไปตามที่คาดไว้หรือไม่?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- นำ `intro + intro` มาเก็บไว้ในตัวแปรใหม่ชื่อ `doubleintro`
+- หากต้องการพิมพ์ค่าของตัวแปร `x` ให้เขียน `print(x)` ในสคริปต์
 
 `@sample_code`
 ```{python}
@@ -482,14 +481,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "คุณไม่จำเป็นต้องเปลี่ยนแปลงหรือลบตัวแปรที่กำหนดไว้ล่วงหน้า"
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "คุณได้เก็บผลลัพธ์ของ `intro + intro` ไว้ใน `doubleintro` หรือไม่?"),
+    has_printout(0, not_printed_msg = "อย่าลืมพิมพ์ `doubleintro` ออกมาด้วย")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("ดีมาก โปรดสังเกตว่า `intro + intro` ทำให้ `\"Hello! How are you?\"` และ `\"Hello! How are you?\"` ถูกนำมาต่อกัน")
 ```

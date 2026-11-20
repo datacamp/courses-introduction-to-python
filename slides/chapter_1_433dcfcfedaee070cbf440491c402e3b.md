@@ -2,16 +2,11 @@
 title: Insert title here
 key: 433dcfcfedaee070cbf440491c402e3b
 video_link:
-  mp4: 'https://videos.datacamp.com/raw/735_intro_to_python/v6/735_ch1_2.mp4'
-  hls: >-
-    https://videos.datacamp.com/transcoded/735_intro_to_python/v6/hls-735_ch1_2.master.m3u8
-transformations:
-  translateX: 50
-  translateY: 0
-  scale: 1
+  mp3: >-
+    https://videos.datacamp.com/mp3/translations/course_735/th-TH/2645f6cf-5bbd-4f27-811f-97356fb16139-32ded74837e8883ea033153aeccb3f43.mp3
 ---
 
-## Variables and Types
+## ตัวแปรและประเภทข้อมูล
 
 ```yaml
 type: TitleSlide
@@ -23,11 +18,11 @@ name: Hugo Bowne-Anderson
 title: Data Scientist at DataCamp
 
 `@script`
-Well done and welcome back! It's clear that Python is a great calculator. If you want to do more complex calculations though, you will want to "save" values while you're coding along.
+ยอดเยี่ยมมาก และยินดีต้อนรับกลับมา! เราได้เห็นแล้วว่า Python ใช้คำนวณได้ดีมาก แต่ถ้าอยากทำสิ่งที่ซับซ้อนขึ้น ก็จะต้องรู้จัก "เก็บ" ค่าต่าง ๆ ไว้ระหว่างเขียนโค้ด
 
 ---
 
-## Variable
+## ตัวแปร
 
 ```yaml
 type: FullSlide
@@ -35,11 +30,11 @@ key: 36ec318b41
 ```
 
 `@part1`
-- Specific, case-sensitive name
+- ชื่อเฉพาะ แยกตัวพิมพ์ใหญ่-เล็ก
 
-- Call up value through variable name{{1}}
+- เรียกใช้ค่าผ่านชื่อตัวแปร{{1}}
 
-- 1.79 m - 68.7 kg{{2}}
+- 1.79 ม. - 68.7 กก.{{2}}
 
 ```py
 height = 1.79
@@ -54,17 +49,17 @@ height
 ```{{4}}
 
 `@script`
-You can do this by defining a variable, with a specific, case-sensitive name. Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+ทำได้โดยการสร้างตัวแปร ซึ่งต้องตั้งชื่อให้ชัดเจน และต้องระวังเรื่องตัวพิมพ์ใหญ่-เล็กด้วย เมื่อสร้างตัวแปรขึ้นมาแล้ว สามารถเรียกใช้ค่าของมันได้ทุกเมื่อ แค่พิมพ์ชื่อตัวแปรนั้น
 
-Suppose you measure your height and weight, in metric units: you are 1.79 meters tall, and weigh 68.7 kilograms. You can assign these values to two variables, named height and weight, with an equals sign:
+สมมติว่าวัดส่วนสูงและน้ำหนักได้ในหน่วยเมตริก คือสูง 1.79 เมตร และหนัก 68.7 กิโลกรัม กำหนดค่าเหล่านี้ให้กับตัวแปร 2 ตัว ชื่อว่า height และ weight โดยใช้เครื่องหมายเท่ากับ
 
-If you now type the name of the variable, height,
+เมื่อพิมพ์ชื่อตัวแปร height
 
-Python looks for the variable name, retrieves its value, and prints it out.
+Python จะค้นหาตัวแปรนั้น ดึงค่าออกมา แล้วแสดงผล
 
 ---
 
-## Calculate BMI
+## คำนวณ BMI
 
 ```yaml
 type: TwoColumns
@@ -114,15 +109,15 @@ bmi
 ```{{4}}
 
 `@script`
-Let's now calculate the Body Mass Index, or BMI, which is calculated as follows, with weight in kilograms and height in meters. You can do this with the actual values, but you can just as well use the variables height and weight, like in here. Every time you type the variable's name, you are asking Python to change it with the actual value of the variable. weight corresponds to 68.7, and height to 1.79.
+มาคำนวณค่าดัชนีมวลกาย หรือ BMI กัน โดย BMI คำนวณจากน้ำหนักหน่วยกิโลกรัมหารด้วยส่วนสูงหน่วยเมตรยกกำลัง 2 ใช้ตัวเลขจริงก็ได้ แต่จะใช้ตัวแปร height และ weight แทนก็ได้เช่นกัน ทุกครั้งที่พิมพ์ชื่อตัวแปร Python จะแทนที่ด้วยค่าจริงของตัวแปรนั้น weight คือ 68.7 และ height คือ 1.79
 
-Finally, this version has Python store the result in a new variable, bmi. bmi now contains the same value as the one you calculated earlier.
+สุดท้าย เวอร์ชันนี้ให้ Python เก็บผลลัพธ์ไว้ในตัวแปรใหม่ชื่อ bmi ตอนนี้ bmi มีค่าเดียวกับที่คำนวณไว้ก่อนหน้านี้
 
-In Python, variables are used all the time. They help to make your code reproducible.
+ใน Python นั้นตัวแปรถูกใช้ตลอดเวลา ช่วยให้โค้ดนำกลับมาใช้ซ้ำได้ง่าย
 
 ---
 
-## Reproducibility
+## การทำซ้ำได้
 
 ```yaml
 type: FullSlide
@@ -142,11 +137,11 @@ print(bmi)
 ```
 
 `@script`
-Suppose the code to create the height, weight and bmi variable are in a script, like this. If you now want to recalculate the bmi for another weight,
+สมมติว่าโค้ดที่สร้างตัวแปร height, weight และ bmi อยู่ในสคริปต์ ดังนี้ ถ้าอยากคำนวณ bmi ใหม่สำหรับน้ำหนักอื่น
 
 ---
 
-## Reproducibility
+## การทำซ้ำได้
 
 ```yaml
 type: FullSlide
@@ -167,13 +162,13 @@ print(bmi)
 ```
 
 `@script`
-you can simply change the declaration of the weight variable, and rerun the script. The bmi changes accordingly, because the value of the variable weight has changed as well.
+แค่เปลี่ยนการกำหนดค่าของตัวแปร weight แล้วรันสคริปต์ใหม่ ค่า bmi ก็จะเปลี่ยนตามไปด้วย เพราะค่าของตัวแปร weight เปลี่ยนแล้ว
 
-So far, we've only worked with numerical values, such as height and weight.
+จนถึงตอนนี้ เราทำงานกับค่าตัวเลขมาตลอด เช่น ส่วนสูงและน้ำหนัก
 
 ---
 
-## Python Types
+## ประเภทข้อมูลใน Python
 
 ```yaml
 type: FullSlide
@@ -199,13 +194,13 @@ int
 ```{{2}}
 
 `@script`
-In Python, these numbers all have a specific type. You can check out the type of a value with the type function. To see the type of our bmi value, simply write type and then bmi inside parentheses. You can see that it's a float, which is python's way of representing a real number, so a number which can have both an integer part and a fractional part. Python also has a type for integers: int, like this example.
+ใน Python ตัวเลขแต่ละตัวมีประเภทที่แน่นอน ตรวจสอบประเภทของค่าได้ด้วยฟังก์ชัน type เช่น อยากดูประเภทของ bmi ก็พิมพ์ type แล้วใส่ bmi ในวงเล็บ จะเห็นว่าเป็น float ซึ่งคือวิธีที่ Python แทนจำนวนจริง นั่นคือตัวเลขที่มีทั้งส่วนที่เป็นจำนวนเต็มและทศนิยมได้ Python ยังมีประเภทสำหรับจำนวนเต็มด้วย คือ int ดังตัวอย่างนี้
 
-To do data science, you'll need more than ints and floats, though.
+แต่การทำ Data Science ต้องการมากกว่าแค่ int และ float
 
 ---
 
-## Python Types (2)
+## ประเภทข้อมูลใน Python (2)
 
 ```yaml
 type: FullSlide
@@ -235,17 +230,17 @@ bool
 ```{{3}}
 
 `@script`
-Python features tons of other data types. The most common ones are strings and booleans.
+Python มีประเภทข้อมูลอื่นอีกมาก ที่ใช้บ่อยที่สุดคือ string และ boolean
 
-A string is Python's way to represent text. You can use both double and single quotes to build a string, as you can see from these examples. If you print the type of the last variable here, you see that it's str, short for string.
+string คือวิธีที่ Python ใช้แทนข้อความ ใช้เครื่องหมายคำพูดคู่หรือเดี่ยวก็ได้ ดังตัวอย่างที่เห็น ถ้าพิมพ์ type ของตัวแปรตัวสุดท้าย จะเห็นว่าเป็น str ซึ่งย่อมาจาก string
 
-The Boolean is a type that can either be True or False. You can think of it as 'Yes' and 'No' in everyday language. Booleans will be very useful in the future, to perform filtering operations on your data for example.
+boolean คือประเภทที่มีค่าได้เพียง 2 อย่าง คือ True หรือ False ลองคิดง่าย ๆ ว่าคือ "ใช่" กับ "ไม่ใช่" ในชีวิตประจำวัน boolean มีประโยชน์มากในอนาคต เช่น ใช้กรองข้อมูลเป็นต้น
 
-There's something special about Python data types.
+ยังมีสิ่งที่น่าสนใจเกี่ยวกับประเภทข้อมูลใน Python อีกด้วย
 
 ---
 
-## Python Types (3)
+## ประเภทข้อมูลใน Python (3)
 
 ```yaml
 type: FullSlide
@@ -269,18 +264,18 @@ key: 24601e2af0
 'abcd'
 ```{{2}}
 
-- Different type = different behavior!{{3}}
+- ประเภทต่างกัน = พฤติกรรมต่างกัน!{{3}}
 
 `@script`
-Have a look at this line of code, that sums two integers, and then this line of code, that sums two strings.
+ลองดูโค้ดบรรทัดนี้ที่บวกจำนวนเต็ม 2 ตัว แล้วดูโค้ดอีกบรรทัดที่บวก string 2 ตัว
 
-For the integers, the values were summed, while for the strings, the strings were pasted together. The plus operator behaved differently for different data types. This is a general principle: how the code behaves depends on the types you're working with.
+สำหรับจำนวนเต็ม ค่าจะถูกบวกรวมกัน แต่สำหรับ string จะถูกนำมาต่อกัน เครื่องหมายบวกทำงานต่างกันขึ้นอยู่กับประเภทของข้อมูล นี่คือหลักการสำคัญ พฤติกรรมของโค้ดขึ้นอยู่กับประเภทข้อมูลที่ใช้งาน
 
-In the exercises that follow, you'll create your first variables and experiment with some of Python's data types. I'll see you in the next video to explain all about lists.
+ในแบบฝึกหัดถัดไป จะได้สร้างตัวแปรตัวแรกและลองใช้งานประเภทข้อมูลต่าง ๆ ของ Python แล้วพบกันในวิดีโอถัดไปที่จะอธิบายเรื่อง list
 
 ---
 
-## Let's practice!
+## มาฝึกกันเถอะ!
 
 ```yaml
 type: FinalSlide
@@ -288,4 +283,4 @@ key: b7fc40db4d
 ```
 
 `@script`
-Let's get you coding and I can't wait to see you in the next chapter where you'll build even more awesome python charts.
+มาลงมือเขียนโค้ดกันเลย และรอพบกันในบทถัดไป ที่จะสร้างกราฟ Python สวย ๆ ยิ่งขึ้นไปอีก
