@@ -1,22 +1,22 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
+title_meta: Kapitola 3
+title: Funkce a balíčky
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  Zjistíš, jak využívat funkce, metody a balíčky, abys mohl/a těžit z kódu,
+  který napsali skvělí vývojáři Pythonu. Cílem je psát méně kódu a přitom řešit
+  i náročné problémy!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: Funkce
   - nb_of_exercises: 4
-    title: Methods
+    title: Metody
   - nb_of_exercises: 4
-    title: Packages
+    title: Balíčky
 ---
 
-## Functions
+## Funkce
 
 ```yaml
 type: VideoExercise
@@ -29,7 +29,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## Známé funkce
 
 ```yaml
 type: NormalExercise
@@ -40,23 +40,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python hned po instalaci nabízí řadu vestavěných funkcí, které ti jako datovému analytikovi usnadní práci. Dvě z nich už znáš: `print()` a `type()`. K dispozici jsou také funkce jako `str()`, `int()`, `bool()` nebo `float()` pro převod mezi datovými typy. Víc se o nich dozvíš [zde.](https://docs.python.org/3/library/functions.html) Jsou to také vestavěné funkce.
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+Volání funkce je jednoduché. Pokud chceš zjistit typ hodnoty `3.0` a výsledek uložit do nové proměnné `result`, použij následující kód:
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- Pomocí `print()` a `type()` vypiš typ proměnné `var1`.
+- Pomocí `len()` zjisti [délku seznamu](https://docs.python.org/3/library/functions.html#len) `var1`. Výsledek obal voláním `print()`, aby se rovnou vypsal.
+- Pomocí `int()` převeď `var2` na [celé číslo](https://docs.python.org/3/library/functions.html#int). Výsledek ulož do proměnné `out2`.
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- Funkci `type()` zavoláš takto: `type(var1)`.
+- Funkci `print()` zavoláš stejně jako předtím – jednoduše vlož proměnnou, kterou chceš vypsat, do závorek.
+- `int(x)` převede `x` na celé číslo.
 
 `@pre_exercise_code`
 ```{python}
@@ -97,26 +97,26 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Předefinované proměnné není třeba měnit ani odstraňovat."
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
+patt = "__JINJA__:Ujistěte se, že jste vytiskli %s proměnné `var1` pomocí `{{sol_call}}`."
 Ex().has_printout(0, not_printed_msg = patt % 'type')
 Ex().has_printout(1, not_printed_msg = patt % 'length')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "Použili jste `int()` pro převod `var2` na celé číslo?"
+int_incorr_msg = "Předali jste `var2` funkci `int()`?"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="Funkci `int()` jste zavolali správně; nyní se ujistěte, že výsledek tohoto volání přiřadíte do `out2`."),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("Výborně! Funkce `len()` je nesmírně užitečná; funguje také na řetězcích pro počítání počtu znaků!")
 ```
 
 ---
 
-## Help!
+## Pomoc!
 
 ```yaml
 type: MultipleChoiceExercise
@@ -127,27 +127,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+Možná už název pythonové funkce znáš, ale pořád ti zbývá přijít na to, jak ji použít. Informace o funkci paradoxně získáš pomocí jiné funkce: `help()`. V IPythonu můžeš navíc použít `?` před názvem funkce.
 
-To get help on the `max()` function, for example, you can use one of these calls:
+Pro zobrazení nápovědy k funkci `max()` například poslouží jeden z těchto příkazů:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+Použij IPython Shell k otevření [dokumentace](https://docs.python.org/3/library/functions.html#pow) k funkci `pow()`. Zadej `?pow` nebo `help(pow)` a stiskni **Enter**.
 
-Which of the following statements is true?
+Které z následujících tvrzení je pravdivé?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` přijímá tři argumenty: `base`, `exp` a `mod`. Bez `mod` funkce vrátí chybu.
+- `pow()` přijímá tři povinné argumenty: `base`, `exp` a `None`.
+- `pow()` vyžaduje argumenty `base` a `exp`; argument `mod` je volitelný.
+- `pow()` přijímá dva argumenty: `exp` a `mod`. Chybějící `exp` způsobí chybu.
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- Volitelné argumenty mají přiřazenou výchozí hodnotu pomocí `=`, kterou funkce použije, pokud daný argument nezadáš.
 
 `@pre_exercise_code`
 ```{python}
@@ -156,16 +156,16 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "Není správně. `mod` má výchozí hodnotu, která bude použita, pokud hodnotu nezadáte."
+msg2 = "Nesprávně. `None` je výchozí hodnota pro argument `mod`."
+msg3 = "Výborně! Použití `help()` vám může pomoci pochopit, jak funkce fungují, a plně využít jejich potenciál!"
+msg4 = "Nesprávně. `pow()` přijímá tři argumenty, z nichž jeden má výchozí hodnotu."
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
 
-## Multiple arguments
+## Více argumentů
 
 ```yaml
 type: NormalExercise
@@ -176,25 +176,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+V předchozím cvičení jsi identifikoval/a volitelné argumenty pomocí dokumentace zobrazené přes `help()`. Teď tohle využiješ ke změně chování funkce `sorted()`.
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+Prohlédni si [dokumentaci](https://docs.python.org/3/library/functions.html#sorted) funkce `sorted()` tak, že do IPython Shellu zadáš `help(sorted)`.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+Uvidíš, že `sorted()` přijímá tři argumenty: `iterable`, `key` a `reverse`. V tomto cvičení budeš muset zadat pouze `iterable` a `reverse`, nikoli `key`.
 
-Two lists have been created for you.
+Dva seznamy už jsou pro tebe připravené.
 
-Can you paste them together and sort them in descending order?
+Dokážeš je spojit dohromady a seřadit sestupně?
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- Pomocí `+` spoj obsah `first` a `second` do nového seznamu: `full`.
+- Zavolej `sorted()` na `full` a nastav argument `reverse` na `True`. Seřazený seznam ulož jako `full_sorted`.
+- Na závěr vypiš `full_sorted`.
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- Sečti `first` a `second` jako dvě čísla a výsledek přiřaď do proměnné `full`.
+- Použij `sorted()` se dvěma vstupy: `full` a `reverse=True`.
+- Pro výpis proměnné použij `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -235,25 +235,25 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "Nemusíte měnit ani odstraňovat již existující proměnné `first` a `second`."
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="Ujistěte se, že výsledek volání `sorted()` přiřadíte do proměnné `full_sorted`."),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("Skvěle! Přejděte na video o metodách v Pythonu.")
 ```
 
 ---
 
-## Methods
+## Metody
 
 ```yaml
 type: VideoExercise
@@ -266,7 +266,7 @@ xp: 50
 
 ---
 
-## String Methods
+## Řetězcové metody
 
 ```yaml
 type: NormalExercise
@@ -277,19 +277,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+Řetězce mají k dispozici celou řadu metod. Pečlivě se řiď pokyny níže a objevíš některé z nich. Pokud je chceš prozkoumat podrobněji, stačí zadat `help(str)` v IPython Shellu.
 
-A string `place` has already been created for you to experiment with.
+Proměnná `place` je pro tebe už připravená – můžeš si na ní vše vyzkoušet.
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- Použij metodu `.upper()` na proměnné `place` a výsledek ulož do `place_up`. Využij syntaxi pro volání metod, kterou jsi viděl/a v předchozím videu.
+- Vypiš proměnné `place` i `place_up`. Změnily se obě?
+- Vypiš počet výskytů písmene `'o'` v proměnné `place` – zavolej na ní metodu `.count()` a předej jí písmeno `'o'` jako vstup. Pracujeme s proměnnou `place`, ne se slovem `"place"`!
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- Metodu `.upper()` můžeš zavolat na proměnné `place` bez jakýchkoli dalších vstupů.
+- Pro výpis proměnné `x` napiš `print(x)`.
+- Nezapomeň obalit volání `place.count(____)` funkcí `print()`, aby se výsledek vypsal.
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +330,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "Předefinované proměnné není třeba měnit ani odstraňovat."
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "Nezapomeňte vypsat `%s`."
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="Přiřaďte výsledek volání `place.upper()` do proměnné `place_up`."),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "Počet výskytů písmene 'o' v proměnné `place` jste vypočítali správně; nezapomeňte volání `place.count('o')` obalit funkcí `print()`, aby byl výsledek vypsán."),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("Výborně! Všimněte si z výpisů, že metoda `upper()` nemění objekt, na kterém je volána. U seznamů v následujícím cvičení to bude jinak!")
 ```
 
 ---
 
-## List Methods
+## Metody seznamů
 
 ```yaml
 type: NormalExercise
@@ -365,20 +365,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+Metody nejsou výsadou jen řetězců. Mají je i seznamy, čísla s desetinnou čárkou, celá čísla a booleany – každý z těchto typů přichází s užitečnou sadou metod. V tomto cvičení si vyzkoušíš:
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()` – pro získání indexu prvního prvku seznamu, který odpovídá zadané hodnotě, a
+- `.count()` – pro zjištění, kolikrát se daný prvek v seznamu vyskytuje.
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+Budeš pracovat se seznamem `areas`, který obsahuje plochy různých částí domu.
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- Pomocí metody `.index()` zjisti index prvku v `areas`, který se rovná `20.0`. Tento index vypiš.
+- Zavolej `.count()` na `areas` a zjisti, kolikrát se v seznamu vyskytuje hodnota `9.50`. Výsledek jednoduše vypiš.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- Pro výpis indexu obal volání `areas.index(___)` funkcí `print()`.
+- Pro výpis počtu výskytů prvku `x` v seznamu obal volání `areas.count(___)` funkcí `print()`.
 
 `@pre_exercise_code`
 ```{python}
@@ -411,7 +411,7 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "Nemusíte měnit ani odstraňovat předdefinovaný seznam `areas`."
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
@@ -420,12 +420,12 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("Výborně! Toto byly příklady metod `list`, které nezměnily seznam, na kterém byly volány.")
 ```
 
 ---
 
-## List Methods (2)
+## Metody seznamů (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +436,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+Většina metod seznamů upraví seznam, na kterém jsou volány. Příklady:
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()` přidá prvek na konec seznamu,
+- `.remove()` [odstraní](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) první prvek seznamu, který odpovídá zadané hodnotě,
+- `.reverse()` [obrátí](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) pořadí prvků v seznamu.
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+Budeš pracovat se seznamem `areas`, který obsahuje plochy různých částí domu.
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- Pomocí `.append()` přidej dvakrát velikost bazénového domku a garáže: `24.5` a `15.45`. Přidej je v tomto pořadí.
+- Vypiš seznam `areas`.
+- Pomocí metody `.reverse()` obrať pořadí prvků v seznamu `areas`.
+- Vypiš seznam `areas` ještě jednou.
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- Pro první instrukci použij volání `areas.append(___)` dvakrát.
+- Pro výpis proměnné `x` jednoduše napiš `print(x)`.
+- Metoda `.reverse()` nevyžaduje žádné vstupní hodnoty – stačí použít tečkovou notaci a prázdné závorky: `.reverse()`.
+- Pro výpis proměnné `x` jednoduše napiš `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -509,12 +509,12 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("Výborně!")
 ```
 
 ---
 
-## Packages
+## Balíčky
 
 ```yaml
 type: VideoExercise
@@ -527,7 +527,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## Import balíčku
 
 ```yaml
 type: NormalExercise
@@ -538,24 +538,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+Řekněme, že chceš vypočítat obvod a obsah kruhu. Příslušné vzorce vypadají takto:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+Místo ručního zadávání čísla pro `pi` můžeš využít balíček `math`, který tuto hodnotu obsahuje.
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+Pro připomenutí: `**` je operátor umocňování. Například `3**4` znamená `3` na `4`. mocninu a výsledek je `81`.
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- Importuj balíček `math`.
+- Pomocí `math.pi` vypočítej obvod kruhu a výsledek ulož do proměnné `C`.
+- Pomocí `math.pi` vypočítej obsah kruhu a výsledek ulož do proměnné `A`.
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- Stačí použít `import math` a pak se na `pi` odkazovat jako `math.pi`.
+- Pro výpočet `C` použij vzorec ze zadání a operátor `*`.
+- Pro výpočet `A` použij vzorec ze zadání a operátory `*` a `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +594,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "Váš výpočet `%s` není zcela správný. Ujistěte se, že používáte `math.pi`."
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,16 +602,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Ponechte `{{sol_call}}` pro výpis obvodu."),
+  has_printout(1, not_printed_msg = "__JINJA__:Ponechte `{{sol_call}}` pro výpis obsahu.")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("Výborně! Pokud víte, jak pracovat s funkcemi z balíčků, máte k dispozici sílu mnoha Python programátorů!")
 ```
 
 ---
 
-## Selective import
+## Selektivní import
 
 ```yaml
 type: NormalExercise
@@ -622,22 +622,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+Obecné importy, jako `import math`, ti zpřístupní **veškerou** funkcionalitu z balíčku `math`. Pokud ale potřebuješ jen určitou část balíčku, můžeš import zúžit:
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+Vyzkoušej to samé, ale tentokrát použij pouze `pi`.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- Proveď selektivní import z balíčku `math` tak, aby ses importoval/a pouze funkci `pi`.
+- Pomocí `pi` vypočítej obvod kružnice a výsledek ulož do `C`.
+- Pomocí `pi` vypočítej obsah kruhu a výsledek ulož do `A`.
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- Použij `from math import pi` pro selektivní import.
+- Teď můžeš používat `pi` samostatně!
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +676,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "Váš výpočet `%s` není zcela správný. Ujistěte se, že používáte pouze `pi`."
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "Nezapomeňte importovat `pi` z balíčku `math`. Měli byste použít notaci `from ___ import ___`.",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +686,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:Ponechte `{{sol_call}}` pro výpis obvodu."),
+  has_printout(1, not_printed_msg = "__JINJA__:Ponechte `{{sol_call}}` pro výpis obsahu.")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("Výborně! Přejděte k dalšímu cvičení.")
 ```
 
 ---
 
-## Different ways of importing
+## Různé způsoby importu
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +706,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Do Pythonu lze balíčky a moduly importovat několika způsoby. Podle toho, jaký příkaz pro import použiješ, se bude lišit i způsob, jakým pak funkci voláš.
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Představme si, že chceš použít [funkci](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()` z podbalíčku `linalg` balíčku `scipy`. Chceš ji volat takto:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+Který příkaz `import` ti umožní spustit tento kód bez chyby?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- Vyzkoušej různé způsoby importu v IPython shellu a zjisti, který z nich umožní spustit řádek `my_inv([[1, 2], [3, 4]])` bez chyby. Stiskni **enter** pro spuštění zadaného kódu.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,8 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "Nesprávně, zkuste to znovu. Vyzkoušejte různé příkazy importu v prostředí IPython a zjistěte, který z nich umožní spustit řádek `my_inv([[1, 2], [3, 4]])` bez chyb."
+msg4 = "Správně! Klíčové slovo `as` umožňuje vytvořit lokální název pro importovanou funkci: `inv()` je nyní dostupná jako `my_inv()`."
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
+
 ```
