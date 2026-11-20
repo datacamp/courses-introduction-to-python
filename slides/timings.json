@@ -12,133 +12,133 @@
         "indexf": 0,
         "indexh": 0
       },
-      "timing": 0.013136677956697042
+      "timing": 0.013843000222763165
     },
     {
       "state": {
         "indexh": 1,
         "indexf": -1
       },
-      "timing": 0.04235674154129058
+      "timing": 0.044634144532156285
     },
     {
       "state": {
         "indexh": 2,
         "indexf": -1
       },
-      "timing": 0.12376352965142207
+      "timing": 0.12463414621279653
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 2
       },
-      "timing": 0.13314221318827002
+      "timing": 0.1341783699881921
     },
     {
       "state": {
         "indexf": 1,
         "indexh": 2
       },
-      "timing": 0.16340505605950456
+      "timing": 0.16497537292659925
     },
     {
       "state": {
         "indexf": 2,
         "indexh": 2
       },
-      "timing": 0.21159869835142742
+      "timing": 0.21401966627313324
     },
     {
       "state": {
         "indexf": 3,
         "indexh": 2
       },
-      "timing": 0.2324725276530146
+      "timing": 0.2352619330711357
     },
     {
       "state": {
         "indexf": 4,
         "indexh": 2
       },
-      "timing": 0.29926794998601275
+      "timing": 0.3032363407173124
     },
     {
       "state": {
         "indexh": 3,
         "indexf": -1
       },
-      "timing": 0.40070459703826933
+      "timing": 0.4064634146119428
     },
     {
       "state": {
         "indexh": 4,
         "indexf": -1
       },
-      "timing": 0.42517239366985665
+      "timing": 0.431829266298346
     },
     {
       "state": {
         "indexh": 5,
         "indexf": -1
       },
-      "timing": 0.4806093535857616
+      "timing": 0.48853658405755046
     },
     {
       "state": {
         "indexh": 6,
         "indexf": -1
       },
-      "timing": 0.6236766064922022
+      "timing": 0.640853657304002
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 6
       },
-      "timing": 0.6382864162811315
+      "timing": 0.655683353992062
     },
     {
       "state": {
         "indexf": 1,
         "indexh": 6
       },
-      "timing": 0.6560218095165216
+      "timing": 0.6736856761388982
     },
     {
       "state": {
         "indexf": 2,
         "indexh": 6
       },
-      "timing": 0.6695670679717418
+      "timing": 0.6874347993208105
     },
     {
       "state": {
         "indexh": 7,
         "indexf": -1
       },
-      "timing": 0.6851898182230143
+      "timing": 0.70329268186732
     },
     {
       "state": {
         "indexh": 8,
         "indexf": -1
       },
-      "timing": 0.7861068781183682
+      "timing": 0.8014634109472134
     },
     {
       "state": {
         "indexh": 9,
         "indexf": -1
       },
-      "timing": 0.8983243542386974
+      "timing": 0.902682924115877
     },
     {
       "state": {
         "indexh": 10,
         "indexf": -1
       },
-      "timing": 0.9729181242554382
+      "timing": 0.9846341444387874
     }
   ],
   "slides/chapter_1_433dcfcfedaee070cbf440491c402e3b.md": [
@@ -150,175 +150,175 @@
       }
     },
     {
-      "timing": 0.0018164036669207244,
+      "timing": 0.0018467189599028985,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.05378976204258755,
+      "timing": 0.054687498831748976,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.09277627869220502,
+      "timing": 0.09512533848559918,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.1191305261370393,
+      "timing": 0.12246065653798936,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.1599448012364619,
+      "timing": 0.1647942952903701,
       "state": {
         "indexh": 1,
         "indexf": 2
       }
     },
     {
-      "timing": 0.1890278517419844,
+      "timing": 0.19495999959159505,
       "state": {
         "indexh": 1,
         "indexf": 3
       }
     },
     {
-      "timing": 0.2087864119382656,
+      "timing": 0.21545409749187533,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.23750789062469327,
+      "timing": 0.24284388994810485,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.26199198986778566,
+      "timing": 0.2661927712528451,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.2705615211140937,
+      "timing": 0.27436497174593694,
       "state": {
         "indexh": 2,
         "indexf": 2
       }
     },
     {
-      "timing": 0.3325811073684724,
+      "timing": 0.33350898777222115,
       "state": {
         "indexh": 2,
         "indexf": 3
       }
     },
     {
-      "timing": 0.40425057652145463,
+      "timing": 0.4018554648801685,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.4399043650296833,
+      "timing": 0.44689941130615773,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5103022904643116,
+      "timing": 0.5147705061513931,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5500781524609797,
+      "timing": 0.5602975202332547,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.6208413312851656,
+      "timing": 0.6412922762758988,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.6437213265980479,
+      "timing": 0.6674804672166704,
       "state": {
         "indexh": 6,
         "indexf": -1
       }
     },
     {
-      "timing": 0.6851302791723651,
+      "timing": 0.7104913468139312,
       "state": {
         "indexh": 6,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7100905323552554,
+      "timing": 0.7364172004669475,
       "state": {
         "indexh": 6,
         "indexf": 1
       }
     },
     {
-      "timing": 0.7355471111561055,
+      "timing": 0.7628585803544607,
       "state": {
         "indexh": 6,
         "indexf": 2
       }
     },
     {
-      "timing": 0.800145559558491,
+      "timing": 0.8299560535740107,
       "state": {
         "indexh": 7,
         "indexf": -1
       }
     },
     {
-      "timing": 0.8061375613966791,
+      "timing": 0.8353479355023294,
       "state": {
         "indexh": 7,
         "indexf": 0
       }
     },
     {
-      "timing": 0.8196608054381556,
+      "timing": 0.8475167794260372,
       "state": {
         "indexh": 7,
         "indexf": 1
       }
     },
     {
-      "timing": 0.8683983313548691,
+      "timing": 0.8913730719168883,
       "state": {
         "indexh": 7,
         "indexf": 2
       }
     },
     {
-      "timing": 0.9505889680107228,
+      "timing": 0.9653320292785763,
       "state": {
         "indexh": 8,
         "indexf": -1
@@ -334,175 +334,175 @@
       }
     },
     {
-      "timing": 0.009101648423246246,
+      "timing": 0.008498342642083961,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.053479179462171074,
+      "timing": 0.04993429433356757,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.06390352149755542,
+      "timing": 0.06275975398480853,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.07597435026623513,
+      "timing": 0.07761094812293644,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.09341272181477439,
+      "timing": 0.09906603180303486,
       "state": {
         "indexh": 1,
         "indexf": 2
       }
     },
     {
-      "timing": 0.11757099183229922,
+      "timing": 0.12878885903777315,
       "state": {
         "indexh": 1,
         "indexf": 3
       }
     },
     {
-      "timing": 0.14573271932762427,
+      "timing": 0.16343729041833632,
       "state": {
         "indexh": 1,
         "indexf": 4
       }
     },
     {
-      "timing": 0.15914263419129265,
+      "timing": 0.17993601248892446,
       "state": {
         "indexh": 1,
         "indexf": 5
       }
     },
     {
-      "timing": 0.1783073738170347,
+      "timing": 0.20351511167448097,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.1896970095566458,
+      "timing": 0.21707356017152277,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.2124978532152267,
+      "timing": 0.24421613711617635,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.22958235205866306,
+      "timing": 0.2645538637092141,
       "state": {
         "indexh": 2,
         "indexf": 2
       }
     },
     {
-      "timing": 0.244669010310582,
+      "timing": 0.2825133212000028,
       "state": {
         "indexh": 2,
         "indexf": 3
       }
     },
     {
-      "timing": 0.269790023659306,
+      "timing": 0.31241787420494405,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.34840423150132865,
+      "timing": 0.385836087110073,
       "state": {
         "indexh": 3,
         "indexf": 0
       }
     },
     {
-      "timing": 0.39449008461638674,
+      "timing": 0.42887590228845845,
       "state": {
         "indexh": 3,
         "indexf": 1
       }
     },
     {
-      "timing": 0.4310653464946173,
+      "timing": 0.4630337274112777,
       "state": {
         "indexh": 3,
         "indexf": 2
       }
     },
     {
-      "timing": 0.45246299362118864,
+      "timing": 0.4830171000805585,
       "state": {
         "indexh": 3,
         "indexf": 3
       }
     },
     {
-      "timing": 0.46727232750199693,
+      "timing": 0.4968476131352627,
       "state": {
         "indexh": 3,
         "indexf": 4
       }
     },
     {
-      "timing": 0.5288649220833096,
+      "timing": 0.5543692538981795,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.6504155204650062,
+      "timing": 0.6810970141528065,
       "state": {
         "indexh": 4,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7510149798303951,
+      "timing": 0.7859812708980357,
       "state": {
         "indexh": 4,
         "indexf": 1
       }
     },
     {
-      "timing": 0.8304102696387075,
+      "timing": 0.8687582163522963,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.8812461066199063,
+      "timing": 0.9158753267524026,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.9557059486205268,
+      "timing": 0.9848883066550495,
       "state": {
         "indexh": 6,
         "indexf": -1
@@ -518,133 +518,133 @@
       }
     },
     {
-      "timing": 0.0036423018609792997,
+      "timing": 0.0029154816451142707,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.04352152060506437,
+      "timing": 0.03483681455699336,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.06839807707467102,
+      "timing": 0.0654560646187373,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.15904320621558488,
+      "timing": 0.17702640512931844,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.1814619479495268,
+      "timing": 0.20462045979922014,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.2236042700712579,
+      "timing": 0.2373925214846506,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.3223465275327428,
+      "timing": 0.3141796368965412,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.3591302731088733,
+      "timing": 0.3427845907374809,
       "state": {
         "indexh": 2,
         "indexf": 2
       }
     },
     {
-      "timing": 0.3620663504500594,
+      "timing": 0.34506783719600786,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.39755027602523657,
+      "timing": 0.39713971402544834,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.45140850547190475,
+      "timing": 0.45610527285923025,
       "state": {
         "indexh": 4,
         "indexf": 0
       }
     },
     {
-      "timing": 0.5701899900180148,
+      "timing": 0.5861507030065983,
       "state": {
         "indexh": 4,
         "indexf": 1
       }
     },
     {
-      "timing": 0.622699714396069,
+      "timing": 0.6436398792006621,
       "state": {
         "indexh": 4,
         "indexf": 2
       }
     },
     {
-      "timing": 0.7054929379418935,
+      "timing": 0.7342843126361134,
       "state": {
         "indexh": 4,
         "indexf": 3
       }
     },
     {
-      "timing": 0.7414187774846519,
+      "timing": 0.7736169685175922,
       "state": {
         "indexh": 4,
         "indexf": 4
       }
     },
     {
-      "timing": 0.8033314841740911,
+      "timing": 0.8414008037153281,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.8430838862589054,
+      "timing": 0.8850737414686428,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.8903795304490586,
+      "timing": 0.9370338650433772,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.8991275630914827,
+      "timing": 0.9466446625051612,
       "state": {
         "indexh": 6,
         "indexf": -1
@@ -660,182 +660,182 @@
       }
     },
     {
-      "timing": 0.001672973879810585,
+      "timing": 0.0016519163636555464,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.03946281454201404,
+      "timing": 0.03896610095624315,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.0497157248358726,
+      "timing": 0.048966200951824815,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.0563646008748452,
+      "timing": 0.055451132872840425,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.062058954182912754,
+      "timing": 0.06100507812923811,
       "state": {
         "indexh": 1,
         "indexf": 2
       }
     },
     {
-      "timing": 0.07155693830852704,
+      "timing": 0.07026886648691867,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.18616452948742485,
+      "timing": 0.20739420434381461,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.24930496438535144,
+      "timing": 0.28294027750309164,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.2666354495268139,
+      "timing": 0.3036758030106247,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.3487319206750413,
+      "timing": 0.37856750578767673,
       "state": {
         "indexh": 3,
         "indexf": 0
       }
     },
     {
-      "timing": 0.36901752755910316,
+      "timing": 0.3970728522436807,
       "state": {
         "indexh": 3,
         "indexf": 1
       }
     },
     {
-      "timing": 0.41270234742976697,
+      "timing": 0.43692390186694396,
       "state": {
         "indexh": 3,
         "indexf": 2
       }
     },
     {
-      "timing": 0.4463481465503608,
+      "timing": 0.4676169530077946,
       "state": {
         "indexh": 3,
         "indexf": 3
       }
     },
     {
-      "timing": 0.5381587822732565,
+      "timing": 0.5513703073988349,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5645437583757377,
+      "timing": 0.5754223032421552,
       "state": {
         "indexh": 4,
         "indexf": 0
       }
     },
     {
-      "timing": 0.5825557595193129,
+      "timing": 0.5918416691325195,
       "state": {
         "indexh": 4,
         "indexf": 1
       }
     },
     {
-      "timing": 0.6017074008589095,
+      "timing": 0.609299907339884,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.6989134831266881,
+      "timing": 0.7035380159863033,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7310166962112555,
+      "timing": 0.7346610281680774,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.7505964243002609,
+      "timing": 0.7536429323851004,
       "state": {
         "indexh": 5,
         "indexf": 2
       }
     },
     {
-      "timing": 0.78673062157379,
+      "timing": 0.7886738515320469,
       "state": {
         "indexh": 6,
         "indexf": -1
       }
     },
     {
-      "timing": 0.8045826694769683,
+      "timing": 0.80503961542534,
       "state": {
         "indexh": 7,
         "indexf": -1
       }
     },
     {
-      "timing": 0.8612726735015773,
+      "timing": 0.8853097779257406,
       "state": {
         "indexh": 8,
         "indexf": -1
       }
     },
     {
-      "timing": 0.9022159518879699,
+      "timing": 0.9088193232651675,
       "state": {
         "indexh": 9,
         "indexf": -1
       }
     },
     {
-      "timing": 0.9277965217836873,
+      "timing": 0.9379140129736097,
       "state": {
         "indexh": 10,
         "indexf": -1
       }
     },
     {
-      "timing": 0.9562455681281354,
+      "timing": 0.9670087026820519,
       "state": {
         "indexh": 11,
         "indexf": -1
@@ -855,273 +855,273 @@
         "indexf": 0,
         "indexh": 0
       },
-      "timing": 0.0028611577329662814
+      "timing": 0.002435801961598927
     },
     {
       "state": {
         "indexh": 1,
         "indexf": -1
       },
-      "timing": 0.03836959534368071
+      "timing": 0.0326653558896943
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 1
       },
-      "timing": 0.04329904367906463
+      "timing": 0.03847422319977954
     },
     {
       "state": {
         "indexf": 1,
         "indexh": 1
       },
-      "timing": 0.054084321463057944
+      "timing": 0.05118360633702018
     },
     {
       "state": {
         "indexf": 2,
         "indexh": 1
       },
-      "timing": 0.08590163596200213
+      "timing": 0.08867716454331052
     },
     {
       "state": {
         "indexf": 3,
         "indexh": 1
       },
-      "timing": 0.09668598943314172
+      "timing": 0.10138545846927335
     },
     {
       "state": {
         "indexf": 4,
         "indexh": 1
       },
-      "timing": 0.11216139262155497
+      "timing": 0.11962169051298772
     },
     {
       "state": {
         "indexh": 2,
         "indexf": -1
       },
-      "timing": 0.12713277856819213
+      "timing": 0.13726398808771562
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 2
       },
-      "timing": 0.20521302993116405
+      "timing": 0.22042336420118797
     },
     {
       "state": {
         "indexf": 1,
         "indexh": 2
       },
-      "timing": 0.24086893712196836
+      "timing": 0.25839869016374384
     },
     {
       "state": {
         "indexh": 3,
         "indexf": -1
       },
-      "timing": 0.25220650200810013
+      "timing": 0.27047376428452014
     },
     {
       "state": {
         "indexh": 4,
         "indexf": -1
       },
-      "timing": 0.2703959615995671
+      "timing": 0.29827406679197976
     },
     {
       "state": {
         "indexh": 5,
         "indexf": -1
       },
-      "timing": 0.31230759686585174
+      "timing": 0.33904784202920335
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 5
       },
-      "timing": 0.3319073311309236
+      "timing": 0.35871642152084166
     },
     {
       "state": {
         "indexh": 6,
         "indexf": -1
       },
-      "timing": 0.3635581324179583
+      "timing": 0.3904783981205693
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 6
       },
-      "timing": 0.4339231783792037
+      "timing": 0.45939320525607175
     },
     {
       "state": {
         "indexf": 1,
         "indexh": 6
       },
-      "timing": 0.4820768942211075
+      "timing": 0.5065544625929932
     },
     {
       "state": {
         "indexf": 2,
         "indexh": 6
       },
-      "timing": 0.5505806960758866
+      "timing": 0.5736463862658762
     },
     {
       "state": {
         "indexh": 7,
         "indexf": -1
       },
-      "timing": 0.5653305143291795
+      "timing": 0.5880922075727966
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 7
       },
-      "timing": 0.596556098080154
+      "timing": 0.6185044407320635
     },
     {
       "state": {
         "indexh": 8,
         "indexf": -1
       },
-      "timing": 0.5993452050997783
+      "timing": 0.6212208982901809
     },
     {
       "state": {
         "indexh": 9,
         "indexf": -1
       },
-      "timing": 0.6179483762588034
+      "timing": 0.6380169132798645
     },
     {
       "state": {
         "indexh": 10,
         "indexf": -1
       },
-      "timing": 0.62528775401621
+      "timing": 0.6472836807823511
     },
     {
       "state": {
         "indexh": 11,
         "indexf": -1
       },
-      "timing": 0.636900772633793
+      "timing": 0.6573612897761613
     },
     {
       "state": {
         "indexh": 12,
         "indexf": -1
       },
-      "timing": 0.6941416735633308
+      "timing": 0.7159735911253835
     },
     {
       "state": {
         "indexh": 13,
         "indexf": -1
       },
-      "timing": 0.7123508793387741
+      "timing": 0.7299895749774626
     },
     {
       "state": {
         "indexh": 14,
         "indexf": -1
       },
-      "timing": 0.7248499370448553
+      "timing": 0.7402988536022642
     },
     {
       "state": {
         "indexh": 15,
         "indexf": -1
       },
-      "timing": 0.7318285283588017
+      "timing": 0.7464380877378055
     },
     {
       "state": {
         "indexh": 16,
         "indexf": -1
       },
-      "timing": 0.7378888010392806
+      "timing": 0.7530406611353296
     },
     {
       "state": {
         "indexh": 17,
         "indexf": -1
       },
-      "timing": 0.7544399500504574
+      "timing": 0.7758600732279123
     },
     {
       "state": {
         "indexh": 18,
         "indexf": -1
       },
-      "timing": 0.7931830955772077
+      "timing": 0.8092204335762881
     },
     {
       "state": {
         "indexh": 19,
         "indexf": -1
       },
-      "timing": 0.8106031876472712
+      "timing": 0.8243947655833245
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 19
       },
-      "timing": 0.8352352406310323
+      "timing": 0.8442391121407977
     },
     {
       "state": {
         "indexf": 1,
         "indexh": 19
       },
-      "timing": 0.8420419636748427
+      "timing": 0.84972281953178
     },
     {
       "state": {
         "indexh": 20,
         "indexf": -1
       },
-      "timing": 0.8475549510465406
+      "timing": 0.8541642533027721
     },
     {
       "state": {
         "indexf": 0,
         "indexh": 20
       },
-      "timing": 0.8638910498205834
+      "timing": 0.871567472079887
     },
     {
       "state": {
         "indexf": 1,
         "indexh": 20
       },
-      "timing": 0.900950720386374
+      "timing": 0.9110479847521696
     },
     {
       "state": {
         "indexf": 2,
         "indexh": 20
       },
-      "timing": 0.931163764499559
+      "timing": 0.943234630039835
     },
     {
       "state": {
         "indexh": 21,
         "indexf": -1
       },
-      "timing": 0.9704220126915846
+      "timing": 0.9850573376239551
     }
   ],
   "slides/chapter_3_8e387776f3a264a745128b68aa8d8f83.md": [
@@ -1133,294 +1133,294 @@
       }
     },
     {
-      "timing": 0.0007613577792102294,
+      "timing": 0.0003895433246862285,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.011371834875856779,
+      "timing": 0.00581831891166751,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.026460151811135948,
+      "timing": 0.022961013351898908,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.03327961292654451,
+      "timing": 0.030708990720742894,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.05632292990769267,
+      "timing": 0.056889812848993714,
       "state": {
         "indexh": 1,
         "indexf": 2
       }
     },
     {
-      "timing": 0.06446604693880555,
+      "timing": 0.06614167093589633,
       "state": {
         "indexh": 1,
         "indexf": 3
       }
     },
     {
-      "timing": 0.0810842213695144,
+      "timing": 0.08502252342872856,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.10720803798656495,
+      "timing": 0.1110184554429236,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.10946989398639113,
+      "timing": 0.1132692389199062,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.1324398312201677,
+      "timing": 0.1361267308190742,
       "state": {
         "indexh": 2,
         "indexf": 2
       }
     },
     {
-      "timing": 0.16718514328808445,
+      "timing": 0.17070195325192608,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.21679236369659477,
+      "timing": 0.21539883248882644,
       "state": {
         "indexh": 3,
         "indexf": 0
       }
     },
     {
-      "timing": 0.24863310708898945,
+      "timing": 0.24408783885731963,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.2878487933634992,
+      "timing": 0.2812500017962299,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.3282510308794704,
+      "timing": 0.32000112655168167,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.3552761963391209,
+      "timing": 0.34592185824011007,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.3933502840763826,
+      "timing": 0.3824399773980753,
       "state": {
         "indexh": 5,
         "indexf": 2
       }
     },
     {
-      "timing": 0.41947355224951266,
+      "timing": 0.40749566951406063,
       "state": {
         "indexh": 5,
         "indexf": 3
       }
     },
     {
-      "timing": 0.4732600552050473,
+      "timing": 0.4590840867487614,
       "state": {
         "indexh": 6,
         "indexf": -1
       }
     },
     {
-      "timing": 0.48771748627338685,
+      "timing": 0.47257095728283605,
       "state": {
         "indexh": 6,
         "indexf": 0
       }
     },
     {
-      "timing": 0.4988785202823599,
+      "timing": 0.48298272545893095,
       "state": {
         "indexh": 6,
         "indexf": 1
       }
     },
     {
-      "timing": 0.5131195184173984,
+      "timing": 0.49626769269933313,
       "state": {
         "indexh": 6,
         "indexf": 2
       }
     },
     {
-      "timing": 0.5423533650473551,
+      "timing": 0.5235390040995058,
       "state": {
         "indexh": 6,
         "indexf": 3
       }
     },
     {
-      "timing": 0.5565535222203116,
+      "timing": 0.5367858721253599,
       "state": {
         "indexh": 6,
         "indexf": 4
       }
     },
     {
-      "timing": 0.5726500532110702,
+      "timing": 0.5518018060415515,
       "state": {
         "indexh": 7,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5768892674388447,
+      "timing": 0.5560579901349048,
       "state": {
         "indexh": 7,
         "indexf": 0
       }
     },
     {
-      "timing": 0.5897783984924699,
+      "timing": 0.5689987172649852,
       "state": {
         "indexh": 7,
         "indexf": 1
       }
     },
     {
-      "timing": 0.6244069913989276,
+      "timing": 0.6037659308061238,
       "state": {
         "indexh": 7,
         "indexf": 2
       }
     },
     {
-      "timing": 0.6329809489482306,
+      "timing": 0.6123742104961047,
       "state": {
         "indexh": 7,
         "indexf": 3
       }
     },
     {
-      "timing": 0.6487343697609214,
+      "timing": 0.6281906933337916,
       "state": {
         "indexh": 8,
         "indexf": -1
       }
     },
     {
-      "timing": 0.6618186864654386,
+      "timing": 0.6413812674404944,
       "state": {
         "indexh": 8,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7336305143361925,
+      "timing": 0.7137762773335166,
       "state": {
         "indexh": 9,
         "indexf": -1
       }
     },
     {
-      "timing": 0.756750599050686,
+      "timing": 0.7389958001392651,
       "state": {
         "indexh": 9,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7710240918647784,
+      "timing": 0.7545654090740038,
       "state": {
         "indexh": 9,
         "indexf": 1
       }
     },
     {
-      "timing": 0.790735105750906,
+      "timing": 0.7760662976029287,
       "state": {
         "indexh": 9,
         "indexf": 2
       }
     },
     {
-      "timing": 0.8179227111110821,
+      "timing": 0.8057226955738596,
       "state": {
         "indexh": 9,
         "indexf": 3
       }
     },
     {
-      "timing": 0.8675818217665615,
+      "timing": 0.8598911421498348,
       "state": {
         "indexh": 10,
         "indexf": -1
       }
     },
     {
-      "timing": 0.8832473159730078,
+      "timing": 0.879043318925,
       "state": {
         "indexh": 10,
         "indexf": 0
       }
     },
     {
-      "timing": 0.8929955201228443,
+      "timing": 0.8909611892875732,
       "state": {
         "indexh": 10,
         "indexf": 1
       }
     },
     {
-      "timing": 0.9005795727482191,
+      "timing": 0.9002332310526879,
       "state": {
         "indexh": 10,
         "indexf": 2
       }
     },
     {
-      "timing": 0.940007587865181,
+      "timing": 0.9484367735303461,
       "state": {
         "indexh": 10,
         "indexf": 3
       }
     },
     {
-      "timing": 0.9619959213116677,
+      "timing": 0.9753190693333792,
       "state": {
         "indexh": 11,
         "indexf": -1
@@ -1436,126 +1436,126 @@
       }
     },
     {
-      "timing": 0.00362796903972153,
+      "timing": 0.0024832340257304477,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.026002737762759433,
+      "timing": 0.01779807999121913,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.0336402337655068,
+      "timing": 0.026672886224523025,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.0662449288645639,
+      "timing": 0.06455969509434056,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.08183739620554,
+      "timing": 0.08267821539215855,
       "state": {
         "indexh": 1,
         "indexf": 2
       }
     },
     {
-      "timing": 0.10136632991081054,
+      "timing": 0.10537092809733947,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.1416460515816992,
+      "timing": 0.14880847278371054,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.26640826325184624,
+      "timing": 0.2833517099210523,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.3149947279815943,
+      "timing": 0.3376884500378501,
       "state": {
         "indexh": 3,
         "indexf": 0
       }
     },
     {
-      "timing": 0.48965395813108,
+      "timing": 0.5330188419571016,
       "state": {
         "indexh": 3,
         "indexf": 1
       }
     },
     {
-      "timing": 0.6061068153804047,
+      "timing": 0.6632540561347832,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.6323038776430374,
+      "timing": 0.6884179441450184,
       "state": {
         "indexh": 4,
         "indexf": 0
       }
     },
     {
-      "timing": 0.6641639270842098,
+      "timing": 0.7190214793086459,
       "state": {
         "indexh": 4,
         "indexf": 1
       }
     },
     {
-      "timing": 0.701464179779185,
+      "timing": 0.7548506639767554,
       "state": {
         "indexh": 4,
         "indexf": 2
       }
     },
     {
-      "timing": 0.7489263699349847,
+      "timing": 0.8004410139872838,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.7816835111688705,
+      "timing": 0.8326508291556968,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.8354351008552117,
+      "timing": 0.885504304873976,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.929771315735684,
+      "timing": 0.9782642933996065,
       "state": {
         "indexh": 6,
         "indexf": -1
@@ -1571,266 +1571,266 @@
       }
     },
     {
-      "timing": 0.0018865244150179528,
+      "timing": 0.0008229588487706254,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.014893968614940927,
+      "timing": 0.006497198322694895,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.019042396351992452,
+      "timing": 0.010471001052615829,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.025017654828301525,
+      "timing": 0.016194735428670424,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.030636824413938224,
+      "timing": 0.0215773702133762,
       "state": {
         "indexh": 1,
         "indexf": 2
       }
     },
     {
-      "timing": 0.03871384171551842,
+      "timing": 0.029314391426490158,
       "state": {
         "indexh": 1,
         "indexf": 3
       }
     },
     {
-      "timing": 0.05617062104474014,
+      "timing": 0.04603634049999453,
       "state": {
         "indexh": 1,
         "indexf": 4
       }
     },
     {
-      "timing": 0.07870810480560102,
+      "timing": 0.06762512549787704,
       "state": {
         "indexh": 1,
         "indexf": 5
       }
     },
     {
-      "timing": 0.08952088603191,
+      "timing": 0.07798275067027154,
       "state": {
         "indexh": 1,
         "indexf": 6
       }
     },
     {
-      "timing": 0.09866045450068396,
+      "timing": 0.08673759574257035,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.11489787280924448,
+      "timing": 0.10396437091528626,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.1702740586119187,
+      "timing": 0.16271466511952426,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.18817033145024073,
+      "timing": 0.18170136994887637,
       "state": {
         "indexh": 2,
         "indexf": 2
       }
     },
     {
-      "timing": 0.23959027711870975,
+      "timing": 0.236254367635521,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.24853745558848236,
+      "timing": 0.24548131414608731,
       "state": {
         "indexh": 3,
         "indexf": 0
       }
     },
     {
-      "timing": 0.26493775051192464,
+      "timing": 0.26239442754014264,
       "state": {
         "indexh": 3,
         "indexf": 1
       }
     },
     {
-      "timing": 0.29720103547730936,
+      "timing": 0.29566654853744845,
       "state": {
         "indexh": 3,
         "indexf": 2
       }
     },
     {
-      "timing": 0.3076193879140482,
+      "timing": 0.3064106709428284,
       "state": {
         "indexh": 3,
         "indexf": 3
       }
     },
     {
-      "timing": 0.318037740350787,
+      "timing": 0.31715479334820845,
       "state": {
         "indexh": 3,
         "indexf": 4
       }
     },
     {
-      "timing": 0.3324890034081989,
+      "timing": 0.33205793087825164,
       "state": {
         "indexh": 3,
         "indexf": 5
       }
     },
     {
-      "timing": 0.34763867416424304,
+      "timing": 0.3476813145171233,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.3735043481831998,
+      "timing": 0.3749554597680856,
       "state": {
         "indexh": 4,
         "indexf": 0
       }
     },
     {
-      "timing": 0.4179783982798292,
+      "timing": 0.4218512685277975,
       "state": {
         "indexh": 4,
         "indexf": 1
       }
     },
     {
-      "timing": 0.487662728108223,
+      "timing": 0.49533013987144214,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5033667337711133,
+      "timing": 0.5095630581045376,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.5343289683038966,
+      "timing": 0.5376248763360731,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.5661603877539089,
+      "timing": 0.5664744577741382,
       "state": {
         "indexh": 6,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5763926195428003,
+      "timing": 0.5771968429580627,
       "state": {
         "indexh": 6,
         "indexf": 0
       }
     },
     {
-      "timing": 0.6965969079939668,
+      "timing": 0.7031592632906675,
       "state": {
         "indexh": 7,
         "indexf": -1
       }
     },
     {
-      "timing": 0.7099408970827711,
+      "timing": 0.7150735340755606,
       "state": {
         "indexh": 7,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7340558800561704,
+      "timing": 0.7366047594989404,
       "state": {
         "indexh": 7,
         "indexf": 1
       }
     },
     {
-      "timing": 0.7599265365130382,
+      "timing": 0.7597035498500713,
       "state": {
         "indexh": 7,
         "indexf": 2
       }
     },
     {
-      "timing": 0.7795531674208145,
+      "timing": 0.7772273198167741,
       "state": {
         "indexh": 8,
         "indexf": -1
       }
     },
     {
-      "timing": 0.7952931663301264,
+      "timing": 0.7939222810488359,
       "state": {
         "indexh": 8,
         "indexf": 0
       }
     },
     {
-      "timing": 0.8192691670500447,
+      "timing": 0.8193529310015571,
       "state": {
         "indexh": 8,
         "indexf": 1
       }
     },
     {
-      "timing": 0.8625757578022608,
+      "timing": 0.8652869782570042,
       "state": {
         "indexh": 8,
         "indexf": 2
       }
     },
     {
-      "timing": 0.9037903445513215,
+      "timing": 0.9090020974215899,
       "state": {
         "indexh": 8,
         "indexf": 3
       }
     },
     {
-      "timing": 0.9774851398529034,
+      "timing": 0.9871680336235787,
       "state": {
         "indexh": 9,
         "indexf": -1
@@ -1846,266 +1846,266 @@
       }
     },
     {
-      "timing": 0.0016339295605876417,
+      "timing": 0.001163812663611532,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.014669949678163988,
+      "timing": 0.010449087660701142,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.01815976286466355,
+      "timing": 0.014295481071268688,
       "state": {
         "indexh": 1,
         "indexf": 0
       }
     },
     {
-      "timing": 0.07402044983731729,
+      "timing": 0.07586387078123712,
       "state": {
         "indexh": 1,
         "indexf": 1
       }
     },
     {
-      "timing": 0.09005551308865314,
+      "timing": 0.09353735595992001,
       "state": {
         "indexh": 1,
         "indexf": 2
       }
     },
     {
-      "timing": 0.09724179612437417,
+      "timing": 0.10145791509529199,
       "state": {
         "indexh": 1,
         "indexf": 3
       }
     },
     {
-      "timing": 0.1075577485124789,
+      "timing": 0.11282792522730556,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.12693739640142582,
+      "timing": 0.13385425876414772,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.13653916068702995,
+      "timing": 0.14427188345826814,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.15085323749912855,
+      "timing": 0.15980222513670603,
       "state": {
         "indexh": 2,
         "indexf": 2
       }
     },
     {
-      "timing": 0.17807722792257824,
+      "timing": 0.1893394337654411,
       "state": {
         "indexh": 2,
         "indexf": 3
       }
     },
     {
-      "timing": 0.1989506285434568,
+      "timing": 0.21198644397005068,
       "state": {
         "indexh": 2,
         "indexf": 4
       }
     },
     {
-      "timing": 0.207508722798017,
+      "timing": 0.2212717181539406,
       "state": {
         "indexh": 2,
         "indexf": 5
       }
     },
     {
-      "timing": 0.2202414971767529,
+      "timing": 0.2350863943787524,
       "state": {
         "indexh": 2,
         "indexf": 6
       }
     },
     {
-      "timing": 0.24177371450472793,
+      "timing": 0.25844820084294495,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.3243479435554617,
+      "timing": 0.34447377124250866,
       "state": {
         "indexh": 3,
         "indexf": 0
       }
     },
     {
-      "timing": 0.33759642785757177,
+      "timing": 0.3582760002444706,
       "state": {
         "indexh": 3,
         "indexf": 1
       }
     },
     {
-      "timing": 0.3504962678359421,
+      "timing": 0.37171501269374935,
       "state": {
         "indexh": 3,
         "indexf": 2
       }
     },
     {
-      "timing": 0.3599096645769151,
+      "timing": 0.381521859616196,
       "state": {
         "indexh": 3,
         "indexf": 3
       }
     },
     {
-      "timing": 0.40732529260551953,
+      "timing": 0.43091931078111234,
       "state": {
         "indexh": 3,
         "indexf": 4
       }
     },
     {
-      "timing": 0.46595201466938,
+      "timing": 0.49199644421824823,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5186480909289518,
+      "timing": 0.5435385489135239,
       "state": {
         "indexh": 4,
         "indexf": 0
       }
     },
     {
-      "timing": 0.5332478696329024,
+      "timing": 0.5578186125520419,
       "state": {
         "indexh": 4,
         "indexf": 1
       }
     },
     {
-      "timing": 0.5512168280377646,
+      "timing": 0.5753940754917561,
       "state": {
         "indexh": 4,
         "indexf": 2
       }
     },
     {
-      "timing": 0.5731164960936905,
+      "timing": 0.5968141709495332,
       "state": {
         "indexh": 4,
         "indexf": 3
       }
     },
     {
-      "timing": 0.577557359779794,
+      "timing": 0.6011577858312013,
       "state": {
         "indexh": 4,
         "indexf": 4
       }
     },
     {
-      "timing": 0.6572323491102666,
+      "timing": 0.6790880025220551,
       "state": {
         "indexh": 4,
         "indexf": 5
       }
     },
     {
-      "timing": 0.6745130429489182,
+      "timing": 0.6959902729425593,
       "state": {
         "indexh": 4,
         "indexf": 6
       }
     },
     {
-      "timing": 0.6849618423325728,
+      "timing": 0.7062102579964642,
       "state": {
         "indexh": 4,
         "indexf": 7
       }
     },
     {
-      "timing": 0.7496354243817374,
+      "timing": 0.7694675775846767,
       "state": {
         "indexh": 4,
         "indexf": 8
       }
     },
     {
-      "timing": 0.7808825776499109,
+      "timing": 0.8000304611899809,
       "state": {
         "indexh": 4,
         "indexf": 9
       }
     },
     {
-      "timing": 0.7808825776499109,
+      "timing": 0.8000304611899809,
       "state": {
         "indexh": 4,
         "indexf": 10
       }
     },
     {
-      "timing": 0.8270157726170817,
+      "timing": 0.8451534026631342,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.853118502567697,
+      "timing": 0.8714351633032523,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.8789934764894979,
+      "timing": 0.8974876058051923,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.8952450061021748,
+      "timing": 0.9138505997190185,
       "state": {
         "indexh": 6,
         "indexf": -1
       }
     },
     {
-      "timing": 0.9203259087771308,
+      "timing": 0.9345290892277203,
       "state": {
         "indexh": 6,
         "indexf": 0
       }
     },
     {
-      "timing": 0.9445914631336811,
+      "timing": 0.9545353472834079,
       "state": {
         "indexh": 7,
         "indexf": -1
@@ -2121,98 +2121,98 @@
       }
     },
     {
-      "timing": 0.002955816632138702,
+      "timing": 0.0018703797961939737,
       "state": {
         "indexh": 0,
         "indexf": 0
       }
     },
     {
-      "timing": 0.03251707040201399,
+      "timing": 0.020576131431853335,
       "state": {
         "indexh": 1,
         "indexf": -1
       }
     },
     {
-      "timing": 0.15479243486524027,
+      "timing": 0.14864696355524248,
       "state": {
         "indexh": 2,
         "indexf": -1
       }
     },
     {
-      "timing": 0.2026954180446143,
+      "timing": 0.19576655598968987,
       "state": {
         "indexh": 2,
         "indexf": 0
       }
     },
     {
-      "timing": 0.21334507324434596,
+      "timing": 0.2062420499834505,
       "state": {
         "indexh": 2,
         "indexf": 1
       }
     },
     {
-      "timing": 0.2706174734214313,
+      "timing": 0.26257783483387737,
       "state": {
         "indexh": 2,
         "indexf": 2
       }
     },
     {
-      "timing": 0.4212578228226072,
+      "timing": 0.4107546580055594,
       "state": {
         "indexh": 2,
         "indexf": 3
       }
     },
     {
-      "timing": 0.45702904715164766,
+      "timing": 0.4459408906657275,
       "state": {
         "indexh": 3,
         "indexf": -1
       }
     },
     {
-      "timing": 0.5887646851802607,
+      "timing": 0.5928420019758167,
       "state": {
         "indexh": 4,
         "indexf": -1
       }
     },
     {
-      "timing": 0.6361722805317447,
+      "timing": 0.6486074801982697,
       "state": {
         "indexh": 4,
         "indexf": 0
       }
     },
     {
-      "timing": 0.7201157471014565,
+      "timing": 0.7473500450173468,
       "state": {
         "indexh": 5,
         "indexf": -1
       }
     },
     {
-      "timing": 0.7480788155767378,
+      "timing": 0.7762557420198846,
       "state": {
         "indexh": 5,
         "indexf": 0
       }
     },
     {
-      "timing": 0.8376339374157974,
+      "timing": 0.868829746163726,
       "state": {
         "indexh": 5,
         "indexf": 1
       }
     },
     {
-      "timing": 0.9341260986816129,
+      "timing": 0.9685746357181481,
       "state": {
         "indexh": 6,
         "indexf": -1

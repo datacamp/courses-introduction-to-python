@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 2
-title: Python Lists
+title_meta: Kapitel 2
+title: Python-listor
 description: >-
-  Learn to store, access, and manipulate data in lists: the first step toward
-  efficiently working with huge amounts of data.
+  Lär dig lagra, komma åt och bearbeta data i listor – det första steget mot att
+  arbeta effektivt med stora datamängder.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter2.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Python Lists
+    title: Python-listor
   - nb_of_exercises: 4
-    title: Subsetting Lists
+    title: Indexering av listor
   - nb_of_exercises: 5
-    title: Manipulating Lists
+    title: Manipulera listor
 ---
 
-## Python Lists
+## Pythonlistor
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ a0530c4542f10988847b2dbb91f717c3
 
 ---
 
-## Create a list
+## Skapa en lista
 
 ```yaml
 type: NormalExercise
@@ -39,7 +39,7 @@ skills:
   - 2
 ```
 
-A list is a **compound data type**; you can group values together, like this:
+En lista är en **sammansatt datatyp** – du kan gruppera värden tillsammans, så här:
 
 ```
 a = "is"
@@ -47,17 +47,17 @@ b = "nice"
 my_list = ["my", "list", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables in the exercise.
+Efter att ha mätt upp längden på din familj bestämmer du dig för att samla lite information om huset du bor i. Arean för husets olika delar är lagrade i separata variabler i övningen.
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the `print()` function.
+- Skapa en lista, `areas`, som innehåller arean för hallen (`hall`), köket (`kit`), vardagsrummet (`liv`), sovrummet (`bed`) och badrummet (`bath`), i den ordningen. Använd de fördefinierade variablerna.
+- Skriv ut `areas` med funktionen `print()`.
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Make sure to use square brackets `[]` rather than parentheses `()`.
-- You don't need to use quotation marks when storing variables within a list.
-- Type `print(areas)` to print out the list when submitting.
+- Du kan använda de variabler som redan har skapats för att bygga listan: `areas = [hall, kit, ...]`.
+- Se till att använda hakparenteser `[]` i stället för vanliga parenteser `()`.
+- Du behöver inte använda citationstecken när du lagrar variabler i en lista.
+- Skriv `print(areas)` för att skriva ut listan när du skickar in svaret.
 
 `@pre_exercise_code`
 ```{python}
@@ -96,11 +96,11 @@ print(areas)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
+predef_msg = "Ta inte bort eller redigera de fördefinierade variablerna!"
+areas_msg = "Definiera `areas` som listan som innehåller alla areavariablerna, i rätt ordning: `[hall, kit, liv, bed, bath]`. Kontrollera stavningen. Listan får inte innehålla något annat!"
 
 Ex().check_correct(
-    has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?"),
+    has_printout(0, not_printed_msg = "__JINJA__:Har du använt `{{sol_call}}` för att skriva ut listan `areas` i slutet av ditt skript?"),
     check_correct(
         check_object("areas").has_equal_value(incorrect_msg = areas_msg),
         multi(
@@ -113,12 +113,12 @@ Ex().check_correct(
     )
 )
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("Bra jobbat! En lista är mycket bättre här, eller hur?")
 ```
 
 ---
 
-## Create lists with different types
+## Skapa listor med olika typer
 
 ```yaml
 type: NormalExercise
@@ -129,19 +129,19 @@ skills:
   - 2
 ```
 
-Although it's not really common, a list can also contain a mix of Python types including strings, floats, and booleans.
+Även om det inte är så vanligt kan en lista innehålla en blandning av Python-typer, till exempel strängar, flyttal och booleaner.
 
-You're now going to add the room names to your list, so you can easily see both the room name and size together.
+Nu ska du lägga till rumsnamnen i din lista, så att du enkelt kan se både namn och yta tillsammans.
 
-Some of the code has been provided for you to get you started. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+En del av koden är redan skriven åt dig. Lägg märke till följande: `"bathroom"` är en sträng, medan `bath` är en variabel som representerar flyttalet `9.50` som du angav tidigare.
 
 `@instructions`
-- Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- Slutför koden som skapar listan `areas`. Bygg listan så att varje rums namn som en sträng kommer först, följt av rummets yta. Med andra ord, lägg till strängarna `"hallway"`, `"kitchen"` och `"bedroom"` på rätt platser.
+- Skriv ut `areas` igen – är utskriften mer informativ den här gången?
 
 `@hint`
-- The first four elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
-- A string will need to be in quotation marks `""`.
+- De fyra första elementen i listan `areas` är kodade som `["hallway", hall, "kitchen", kit, ...`.
+- En sträng måste omges av citationstecken `""`.
 
 `@pre_exercise_code`
 ```{python}
@@ -181,22 +181,22 @@ print(areas)
 `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
-predef_msg = "Don't remove or edit the predefined variables!"
-areas_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos."
+predef_msg = "Ta inte bort eller redigera de fördefinierade variablerna!"
+areas_msg = "Du tilldelade inte rätt värde till `areas`. Ta en ny titt på instruktionerna. Se till att placera rumsnamnet före variabeln som innehåller arean varje gång. Ordningen är viktig här! Se upp för stavfel."
 
 Ex().check_correct(
   check_object("areas").has_equal_value(incorrect_msg = areas_msg),
   multi([ check_object(obj, missing_msg = predef_msg).has_equal_value(incorrect_msg = predef_msg) for obj in objs])
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the `areas` list at the end of your script?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Har du använt `{{sol_call}}` för att skriva ut listan `areas` i slutet av ditt skript?")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("Bra gjort! Den här listan innehåller både strängar och flyttal, men det är inget problem för Python!")
 ```
 
 ---
 
-## List of lists
+## Lista av listor
 
 ```yaml
 type: NormalExercise
@@ -207,20 +207,20 @@ skills:
   - 2
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+Som datavetare arbetar du ofta med stora mängder data, och det kan vara praktiskt att gruppera en del av den.
 
-Instead of creating a list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists.
+I stället för att skapa en lista med strängar och flyttal som representerar namnen på och ytorna av rummen i ditt hus, kan du skapa en lista av listor.
 
-Remember: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+Kom ihåg: `"hallway"` är en sträng, medan `hall` är en variabel som representerar flyttalet `11.25` som du angav tidigare.
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
+- Komplettera listan av listor så att den även innehåller data för sovrummet och badrummet. Se till att du lägger in dem i rätt ordning!
+- Skriv ut `house` – är det här sättet att strukturera data tydligare?
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- Remember to include a comma `,` after each sublist.
-- To print a variable `x`, write `print(x)` on a new line.
+- Lägg till _underlistor_ i listan `house` genom att lägga till `["bedroom", bed]` och `["bathroom", bath]` inom hakparenteserna.
+- Kom ihåg att inkludera ett kommatecken `,` efter varje underlista.
+- För att skriva ut en variabel `x` skriver du `print(x)` på en ny rad.
 
 `@pre_exercise_code`
 ```{python}
@@ -267,8 +267,8 @@ print(house)
 
 `@sct`
 ```{python}
-predef_msg = "Don't remove or edit the predefined variables!"
-house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
+predef_msg = "Ta inte bort eller redigera de fördefinierade variablerna!"
+house_msg = "Du tilldelade inte rätt värde till `house`. Ta en ny titt på instruktionerna. Utöka listan med listor så att den innehåller en lista för varje par av rumsnamn och rumsyta. Var uppmärksam på ordningen och eventuella stavfel!"
 
 Ex().check_correct(
     check_object("house").has_equal_value(incorrect_msg = house_msg),
@@ -281,14 +281,14 @@ Ex().check_correct(
     )
 )
 
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out the contents of `house`?")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Har du använt `{{sol_call}}` för att skriva ut innehållet i `house`?")
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("Utmärkt! Gör dig redo att lära dig om listindexering!")
 ```
 
 ---
 
-## Subsetting Lists
+## Subsetta listor
 
 ```yaml
 type: VideoExercise
@@ -301,7 +301,7 @@ fc15ba5cb9485456df8589130b519ea3
 
 ---
 
-## Subset and conquer
+## Välj och erövra
 
 ```yaml
 type: NormalExercise
@@ -312,26 +312,26 @@ skills:
   - 2
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+Att ta ut delar av Python-listor är enkelt. Ta kodexemplet nedan, som skapar en lista `x` och sedan väljer ut "b" från den. Kom ihåg att det är det andra elementet och därför har index 1. Du kan även använda negativt index.
 
 ```
 x = ["a", "b", "c", "d"]
 x[1]
-x[-3] # same result!
+x[-3] # samma resultat!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+Kommer du ihåg listan `areas` från tidigare, som innehåller både strängar och flyttal? Definitionen finns redan i skriptet. Kan du lägga till rätt kod för att göra några dellistningsoperationer?
 
 `@instructions`
-- Print out the second element from the `areas` list (it has the value `11.25`).
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room (`20.0`) and print it out.
+- Skriv ut det andra elementet i listan `areas` (det har värdet `11.25`).
+- Ta ut och skriv ut det sista elementet i `areas`, som är `9.50`. Här passar ett negativt index utmärkt!
+- Välj talet som representerar vardagsrummets area (`20.0`) och skriv ut det.
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`.
-- Use `x[-1]` to select the last element of a list `x`.
-- Make sure to wrap your subsetting operations in a `print()` call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here. `area[4]` would show the string!
+- Använd `x[1]` för att välja det andra elementet i en lista `x`.
+- Använd `x[-1]` för att välja det sista elementet i en lista `x`.
+- Se till att omge dina dellistningsoperationer med ett `print()`-anrop.
+- Talet som representerar vardagsrummets area är det 6:e elementet i listan, så du behöver `[5]` här. `area[4]` skulle visa strängen!
 
 `@pre_exercise_code`
 ```{python}
@@ -370,17 +370,17 @@ print(areas[5])
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Ta inte bort eller redigera den fördefinierade listan `areas`."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().has_printout(0, not_printed_msg = "Have another look at your code to print out the second element in `areas`, which is at index `1`.")
-Ex().has_printout(1, not_printed_msg = "Have another look at your code to print out the last element in `areas`, which is at index `-1`.")
-Ex().has_printout(2, not_printed_msg = "Have another look at your code to print out the area of the living room. It's at index `5`.")
-success_msg("Good job!")
+Ex().has_printout(0, not_printed_msg = "Ta en ny titt på din kod för att skriva ut det andra elementet i `areas`, som finns vid index `1`.")
+Ex().has_printout(1, not_printed_msg = "Ta en ny titt på din kod för att skriva ut det sista elementet i `areas`, som finns vid index `-1`.")
+Ex().has_printout(2, not_printed_msg = "Ta en ny titt på din kod för att skriva ut vardagsrummets area. Den finns vid index `5`.")
+success_msg("Bra jobbat!")
 ```
 
 ---
 
-## Slicing and dicing
+## Skiva och dela
 
 ```yaml
 type: NormalExercise
@@ -391,23 +391,23 @@ skills:
   - 2
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+Att välja enskilda värden från en lista är bara en del av historien. Det går också att _skiva_ din lista, det vill säga välja ut flera element på en gång. Använd följande syntax:
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_. However, it's also possible not to specify these indexes. If you don't specify the `start` index, Python figures out that you want to start your slice at the beginning of your list.
+Indexet `start` inkluderas, medan indexet `end` _inte_ inkluderas. Det är också möjligt att utelämna dessa index. Om du inte anger `start`-indexet förstår Python att du vill börja från listans början.
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Create `upstairs`, as the last `4` elements of `areas`. This time, simplify the slicing by omitting the `end` index.
-- Print both `downstairs` and `upstairs` using `print()`.
+- Använd skivning för att skapa en lista, `downstairs`, som innehåller de första 6 elementen i `areas`.
+- Skapa `upstairs` som de sista `4` elementen i `areas`. Förenkla skivningen den här gången genom att utelämna `end`-indexet.
+- Skriv ut både `downstairs` och `upstairs` med `print()`.
 
 `@hint`
-- Use the brackets `[0:6]` to get the first six elements of a list.
-- To get everything except the first 5 elements of a list, `l`, you would use `l[5:]`.
-- Add two `print()` calls to print out `downstairs` and `upstairs`.
+- Använd hakparenteserna `[0:6]` för att hämta de första sex elementen i en lista.
+- För att hämta allt utom de första 5 elementen i en lista `l` använder du `l[5:]`.
+- Lägg till två `print()`-anrop för att skriva ut `downstairs` och `upstairs`.
 
 `@pre_exercise_code`
 ```{python}
@@ -448,22 +448,22 @@ print(upstairs)
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Ta inte bort eller redigera den fördefinierade listan `areas`."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
 
-patt = "`%s` is incorrect. Use `areas[%s]` and slicing to select the elements you want, or something equivalent."
+patt = "`%s` är felaktig. Använd `areas[%s]` och slicing för att välja de element du vill ha, eller något likvärdigt."
 Ex().check_object("downstairs").has_equal_value(incorrect_msg = patt % ('downstairs', '0:6'))
 Ex().check_object("upstairs").has_equal_value(incorrect_msg = patt % ("upstairs",":6"))
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `downstairs` after calculating it?")
-Ex().has_printout(1, not_printed_msg="Have you printed out `upstairs` after calculating it?")
+Ex().has_printout(0, not_printed_msg="Har du skrivit ut `downstairs` efter att ha beräknat det?")
+Ex().has_printout(1, not_printed_msg="Har du skrivit ut `upstairs` efter att ha beräknat det?")
 
-success_msg("Great!")
+success_msg("Bra gjort!")
 ```
 
 ---
 
-## Subsetting lists of lists
+## Subsetting av listor i listor
 
 ```yaml
 type: NormalExercise
@@ -471,20 +471,20 @@ key: dbbbd306cf
 xp: 100
 ```
 
-A Python list can also contain other lists.
+En lista i Python kan också innehålla andra listor.
 
-To subset lists of lists, you can use the same technique as before: square brackets. This would look something like this for a list, `house`:
+För att subset:a listor i listor använder du samma teknik som tidigare: hakparenteser. För en lista som heter `house` ser det ut så här:
 
 ```
 house[2][0]
 ```
 
 `@instructions`
-- Subset the `house` list to get the float `9.5`.
+- Subset:a listan `house` för att hämta flyttalet `9.5`.
 
 `@hint`
-- Break this down step by step. First you want to get to the last element of the list, `["bathroom", 9.50]`. Recall the index of the last element is `-1`.
-- Next you want to get the second element of `["bathroom", 9.50]`, which is at index `1`.
+- Dela upp det i steg. Börja med att hämta det sista elementet i listan, `["bathroom", 9.50]`. Kom ihåg att det sista elementets index är `-1`.
+- Hämta sedan det andra elementet i `["bathroom", 9.50]`, som har index `1`.
 
 `@pre_exercise_code`
 ```{python}
@@ -522,12 +522,12 @@ Ex().check_or(
   has_code("house[4][1]", pattern=False)
 )
 
-success_msg("Correctomundo! The last piece of the list puzzle is manipulation.")
+success_msg("Korrekt! Den sista biten av listpusslet är manipulation.")
 ```
 
 ---
 
-## Manipulating Lists
+## Manipulera listor
 
 ```yaml
 type: VideoExercise
@@ -540,7 +540,7 @@ xp: 50
 
 ---
 
-## Replace list elements
+## Ersätt listelement
 
 ```yaml
 type: NormalExercise
@@ -551,18 +551,18 @@ skills:
   - 2
 ```
 
-To replace list elements, you subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+För att ersätta element i en lista väljer du ut en delmängd av listan och tilldelar den nya värden. Du kan välja enskilda element eller ändra hela listsnitt på en gång.
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+I den här och kommande övningar fortsätter du arbeta med listan `areas`, som innehåller namn och ytor för olika rum i ett hus.
 
 `@instructions`
-- Update the area of the bathroom to be `10.50` square meters instead of `9.50` using negative indexing.
-- Make the `areas` list more trendy! Change `"living room"` to `"chill zone"`. Don't use negative indexing this time.
+- Uppdatera badrummets yta till `10.50` kvadratmeter i stället för `9.50` med hjälp av negativt index.
+- Gör listan `areas` lite mer trendig! Ändra `"living room"` till `"chill zone"`. Använd inte negativt index den här gången.
 
 `@hint`
-- To update the bathroom area, identify the subset of the bathroom area (it's the last item of the list!).
-- Then, replace the value with the new bathroom area by assigning it to this subset.
-- Do the same to update the `"living room"` name, which is at index 4.
+- För att uppdatera badrummets yta, identifiera delmängden för badrummet (det är det sista elementet i listan!).
+- Ersätt sedan värdet med den nya ytan genom att tilldela det till den här delmängden.
+- Gör samma sak för att uppdatera namnet `"living room"`, som finns på index 4.
 
 `@pre_exercise_code`
 ```{python}
@@ -595,21 +595,21 @@ areas[4] = "chill zone"
 
 `@sct`
 ```{python}
-bathroom_msg = 'You can use `areas[-1] = 10.50` to update the bathroom area.'
-chillzone_msg = 'You can use `areas[4] = "chill zone"` to update the living room name.'
+bathroom_msg = 'Du kan använda `areas[-1] = 10.50` för att uppdatera badrumsarean.'
+chillzone_msg = 'Du kan använda `areas[4] = "chill zone"` för att uppdatera vardagsrumsnamnet.'
 Ex().check_correct(
-  check_object('areas').has_equal_value(incorrect_msg = 'Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!'),
+  check_object('areas').has_equal_value(incorrect_msg = 'Dina ändringar av `areas` resulterade inte i den korrekta listan. Är du säker på att du använde rätt delmängdsoperationer? Om du är osäker kan du använda en ledtråd!'),
   multi(
     has_equal_value(expr_code='areas[-1]', override=10.50, incorrect_msg = bathroom_msg),
     has_equal_value(expr_code='areas[4]', override='chill zone', incorrect_msg = chillzone_msg),
   )
 )
-success_msg('Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.')
+success_msg('Utmärkt! Som kodexemplet visade kan du även dela upp en lista och ersätta den med en annan lista för att uppdatera flera element i ett enda kommando.')
 ```
 
 ---
 
-## Extend a list
+## Utöka en lista
 
 ```yaml
 type: NormalExercise
@@ -620,22 +620,22 @@ skills:
   - 2
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+Om du kan ändra element i en lista vill du säkert också kunna lägga till nya element, eller hur? Det gör du med operatorn `+`:
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+Du har precis vunnit på lotteriet – grattis! Du bestämmer dig för att bygga ett poolhus och ett garage. Kan du lägga till den informationen i listan `areas`?
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- Använd operatorn `+` för att lägga till listan `["poolhouse", 24.5]` i slutet av listan `areas`. Lagra den nya listan som `areas_1`.
+- Utöka `areas_1` ytterligare genom att lägga till data om ditt garage. Lägg till strängen `"garage"` och flyttalet `15.45`. Döp den nya listan till `areas_2`.
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- Följ kodexemplet i uppgiften. `x` är `areas` här, och `["e", "f"]` är `["poolhouse", 24.5]`.
+- För att lägga till fler element i `areas_1`, använd `areas_1 + ["element", 123]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -670,16 +670,16 @@ areas_2 = areas_1 + ["garage", 15.45]
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "Ta inte bort eller redigera den fördefinierade listan `areas`."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
-Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Use `areas + [\"poolhouse\", 24.5]` to create `areas_1`. Watch out for typos!")
-Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Use `areas_1 + [\"garage\", 15.45]` to create `areas_2`. Watch out for typos!")
-success_msg("Cool! The list is shaping up nicely!")
+Ex().check_object("areas_1").has_equal_value(incorrect_msg = "Använd `areas + [\"poolhouse\", 24.5]` för att skapa `areas_1`. Kontrollera att det inte finns några stavfel!")
+Ex().check_object("areas_2").has_equal_value(incorrect_msg = "Använd `areas_1 + [\"garage\", 15.45]` för att skapa `areas_2`. Kontrollera att det inte finns några stavfel!")
+success_msg("Bra! Listan tar fin form!")
 ```
 
 ---
 
-## Delete list elements
+## Ta bort listelement
 
 ```yaml
 type: NormalExercise
@@ -687,23 +687,23 @@ key: 85f792356e
 xp: 100
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+Slutligen kan du även ta bort element från din lista. Det gör du med `del`-satsen:
 
 ```
 x = ["a", "b", "c", "d"]
 del x[1]
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+Observera: så fort du tar bort ett element från en lista förändras indexen för alla efterföljande element!
 
-Unfortunately, the amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You'll need to remove it from the list. You decide to remove the corresponding string and float from the `areas` list.
+Tyvärr visade sig lotterinsten vara mindre än väntat, och det verkar som att poolhuset inte blir av. Du behöver ta bort det från listan. Du bestämmer dig för att ta bort motsvarande sträng och flyttal från listan `areas`.
 
 `@instructions`
-- Delete the string and float for the `"poolhouse"` from your `areas` list.
-- Print the updated `areas` list.
+- Ta bort strängen och flyttalet för `"poolhouse"` från din lista `areas`.
+- Skriv ut den uppdaterade listan `areas`.
 
 `@hint`
-- You'll need to use `del` twice to delete two elements. Be careful about changing indexes though!
+- Du behöver använda `del` två gånger för att ta bort två element. Var uppmärksam på att indexen förändras!
 
 `@pre_exercise_code`
 ```{python}
@@ -764,13 +764,13 @@ Ex().check_or(
   )
 )
 
-Ex().has_printout(0, not_printed_msg="Have you printed out `areas` after removing the poolhouse string and float?")
-success_msg("Correct! You'll learn about easier ways to remove specific elements from Python lists later on.")
+Ex().has_printout(0, not_printed_msg="Har du skrivit ut `areas` efter att ha tagit bort poolhouse-strängen och flyttalet?")
+success_msg("Rätt! Du kommer att lära dig om enklare sätt att ta bort specifika element från Python-listor senare.")
 ```
 
 ---
 
-## Inner workings of lists
+## Listors inre funktionssätt
 
 ```yaml
 type: NormalExercise
@@ -781,17 +781,17 @@ skills:
   - 2
 ```
 
-Some code has been provided for you in this exercise: a list with the name `areas` and a copy named `areas_copy`.
+I den här övningen finns det redan kod på plats: en lista med namnet `areas` och en kopia som heter `areas_copy`.
 
-Currently, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit the run code button you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+För närvarande ändras det första elementet i listan `areas_copy`, varefter `areas` skrivs ut. Om du klickar på **Kör koden** ser du att ändringen i `areas_copy` även påverkar `areas`. Det beror på att `areas` och `areas_copy` pekar på samma lista.
 
-If you want to prevent changes in `areas_copy` from also taking effect in `areas`, you'll have to do a more explicit copy of the `areas` list with `list()` or by using `[:]`.
+För att förhindra att ändringar i `areas_copy` också påverkar `areas` behöver du skapa en explicit kopia av `areas` med `list()` eller med `[:]`.
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`. After your edit, changes made to `areas_copy` shouldn't affect `areas`. Submit the answer to check this.
+- Ändra det andra kommandot, som skapar variabeln `areas_copy`, så att `areas_copy` blir en explicit kopia av `areas`. Efter din ändring ska ändringar i `areas_copy` inte påverka `areas`. Skicka in svaret för att kontrollera att det fungerar.
 
 `@hint`
-- Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+- Ändra anropet `areas_copy = areas`. Istället för att tilldela `areas` direkt kan du använda `list(areas)` eller `areas[:]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -831,16 +831,16 @@ print(areas)
 `@sct`
 ```{python}
 Ex().check_correct(
-  check_object("areas_copy").has_equal_value(incorrect_msg = "It seems that `areas_copy` has not been updated correctly."),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_object("areas_copy").has_equal_value(incorrect_msg = "Det verkar som att `areas_copy` inte har uppdaterats korrekt."),
+  check_function("list", missing_msg = "Se till att använda `list(areas)` för att skapa en `areas_copy`.")
 )
 
-mmsg = "Don't remove the predefined `areas` list."
-imsg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy."
+mmsg = "Ta inte bort den fördefinierade listan `areas`."
+imsg = "Se till att endast redigera kopian, inte den ursprungliga listan `areas`. Ta en ny titt på övningsbeskrivningen om du är osäker på hur du skapar en kopia."
 Ex().check_correct(
   check_object("areas", missing_msg = mmsg).has_equal_value(incorrect_msg = imsg),
-  check_function("list", missing_msg = "Make sure to use `list(areas)` to create an `areas_copy`.")
+  check_function("list", missing_msg = "Se till att använda `list(areas)` för att skapa en `areas_copy`.")
 )
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("Bra! Skillnaden mellan explicita kopior och referensbaserade kopior är subtil, men kan vara mycket viktig. Försök att komma ihåg hur en lista lagras i datorns minne.")
 ```
