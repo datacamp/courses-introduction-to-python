@@ -1,19 +1,19 @@
 ---
-title_meta: Chapter 3
-title: Functions and Packages
+title_meta: अध्याय 3
+title: फंक्शंस और पैकेजेज
 description: >-
-  You'll learn how to use functions, methods, and packages to efficiently
-  leverage the code that brilliant Python developers have written. The goal is
-  to reduce the amount of code you need to solve challenging problems!
+  आप सीखेंगे कि बेहतरीन Python डेवलपर्स द्वारा लिखे गए कोड का कुशलतापूर्वक लाभ
+  उठाने के लिए फंक्शंस, मेथड्स और पैकेजेज कैसे उपयोग करें. लक्ष्य है कि
+  चुनौतीपूर्ण समस्याएँ सुलझाने के लिए आपको कम से कम कोड लिखना पड़े!
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter3.pdf'
 lessons:
   - nb_of_exercises: 4
-    title: Functions
+    title: फंक्शंस
   - nb_of_exercises: 4
-    title: Methods
+    title: मेथड्स
   - nb_of_exercises: 4
-    title: Packages
+    title: पैकेजेज
 ---
 
 ## Functions
@@ -29,7 +29,7 @@ xp: 50
 
 ---
 
-## Familiar functions
+## पहचाने-पहचाने functions
 
 ```yaml
 type: NormalExercise
@@ -40,23 +40,23 @@ skills:
   - 2
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: `print()` and `type()`. There are also functions like `str()`, `int()`, `bool()` and `float()` to switch between data types. You can find out about them [here.](https://docs.python.org/3/library/functions.html) These are built-in functions as well.
+Python शुरू से ही कई built-in functions देता है, जिनसे एक data scientist के रूप में आपका काम आसान हो जाता है। आप पहले से दो ऐसे functions जानते हैं: `print()` और `type()`। इसके अलावा `str()`, `int()`, `bool()` और `float()` जैसे functions भी हैं, जिनसे आप data types के बीच स्विच कर सकते हैं। इनके बारे में आप [यहाँ](https://docs.python.org/3/library/functions.html) पढ़ सकते हैं। ये भी built-in functions ही हैं।
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+किसी function को कॉल करना आसान है। `3.0` का type पाने और उसे `result` नाम के नए वैरिएबल में स्टोर करने के लिए आप यह लिखेंगे:
 
 ```
 result = type(3.0)
 ```
 
 `@instructions`
-- Use `print()` in combination with `type()` to print out the type of `var1`.
-- Use `len()` to get the [length of the list](https://docs.python.org/3/library/functions.html#len) `var1`. Wrap it in a `print()` call to directly print it out.
-- Use `int()` to convert `var2` to an [integer](https://docs.python.org/3/library/functions.html#int). Store the output as `out2`.
+- `type()` के साथ `print()` का इस्तेमाल करके `var1` का type प्रिंट करें।
+- `len()` का उपयोग करके लिस्ट `var1` की [length](https://docs.python.org/3/library/functions.html#len) निकालें। उसे सीधे प्रिंट करने के लिए `print()` में wrap करें।
+- `int()` का उपयोग करके `var2` को [integer](https://docs.python.org/3/library/functions.html#int) में बदलें। आउटपुट को `out2` के रूप में स्टोर करें।
 
 `@hint`
-- Call the `type()` function like this: `type(var1)`.
-- Call `print()` like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- `type()` फंक्शन को ऐसे कॉल करें: `type(var1)`.
+- `print()` को वैसे ही कॉल करें जैसे आपने पहले कई बार किया है। जिस वैरिएबल को प्रिंट करना है, उसे कोष्ठकों में रखिए।
+- `int(x)` से `x` को integer में बदला जा सकता है.
 
 `@pre_exercise_code`
 ```{python}
@@ -97,21 +97,21 @@ out2 = int(var2)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "आपको पूर्वनिर्धारित वेरिएबल्स को बदलने या हटाने की आवश्यकता नहीं है।"
 Ex().check_object("var1", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 Ex().check_object("var2", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "__JINJA__:Make sure to print out the %s of `var1` with `{{sol_call}}`."
-Ex().has_printout(0, not_printed_msg = patt % 'type')
-Ex().has_printout(1, not_printed_msg = patt % 'length')
+patt = "__JINJA__:सुनिश्चित करें कि `var1` के %s को `{{sol_call}}` के साथ प्रिंट करें।"
+Ex().has_printout(0, not_printed_msg = patt % 'प्रकार')
+Ex().has_printout(1, not_printed_msg = patt % 'लंबाई')
 
-int_miss_msg = "Have you used `int()` to make an integer of `var2`?"
-int_incorr_msg = "Have you passed `var2` to `int()`?"
+int_miss_msg = "`int()` का उपयोग करके `var2` का पूर्णांक बनाया है?"
+int_incorr_msg = "क्या आपने `var2` को `int()` में पास किया है?"
 Ex().check_correct(
-  check_object("out2").has_equal_value(incorrect_msg="You called `int()` correctly; now make sure to assign the result of this call to `out2`."),
+  check_object("out2").has_equal_value(incorrect_msg="आपने `int()` को सही तरीके से कॉल किया है; अब सुनिश्चित करें कि इस कॉल के परिणाम को `out2` को असाइन करें।"),
   check_function("int", missing_msg=int_miss_msg).has_equal_value(incorrect_msg=int_incorr_msg)
 )
-success_msg("Great job! The `len()` function is extremely useful; it also works on strings to count the number of characters!")
+success_msg("बहुत अच्छा काम! `len()` फ़ंक्शन अत्यंत उपयोगी है; यह स्ट्रिंग्स पर भी काम करता है ताकि वर्णों की संख्या गिनी जा सके!")
 ```
 
 ---
@@ -127,27 +127,27 @@ skills:
   - 2
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: `help()`. In IPython specifically, you can also use `?` before the function name.
+हो सकता है आपको किसी Python फंक्शन का नाम पता हो, लेकिन उसका उपयोग कैसे करें यह जानना हो। दिलचस्प बात यह है कि किसी फंक्शन के बारे में जानकारी पाने के लिए आपको एक और फंक्शन बुलाना पड़ता है: `help()`। खासकर IPython में, आप फंक्शन नाम से पहले `?` भी लगा सकते हैं।
 
-To get help on the `max()` function, for example, you can use one of these calls:
+उदाहरण के लिए, `max()` फंक्शन पर मदद पाने के लिए, आप इनमें से कोई एक कॉल कर सकते हैं:
 
 ```
 help(max)
 ?max
 ```
 
-Use the IPython Shell to open up the [documentation](https://docs.python.org/3/library/functions.html#pow) on `pow()`. Do this by typing `?pow` or `help(pow)` and hitting **Enter**.
+IPython Shell का उपयोग करके `pow()` की [documentation](https://docs.python.org/3/library/functions.html#pow) खोलिए। ऐसा करने के लिए `?pow` या `help(pow)` टाइप करें और **Enter** दबाएँ।
 
-Which of the following statements is true?
+निम्न में से कौन-सा कथन सही है?
 
 `@possible_answers`
-- `pow()` takes three arguments: `base`, `exp`, and `mod`. Without `mod`, the function will return an error.
-- `pow()` takes three required arguments: `base`, `exp`, and `None`.
-- `pow()` requires `base` and `exp` arguments; `mod` is optional.
-- `pow()` takes two arguments: `exp` and `mod`. Missing `exp` results in an error.
+- `pow()` तीन आर्ग्युमेंट लेता है: `base`, `exp`, और `mod`। `mod` न देने पर फंक्शन error देगा।
+- `pow()` तीन required आर्ग्युमेंट्स लेता है: `base`, `exp`, और `None`।
+- `pow()` में `base` और `exp` आर्ग्युमेंट आवश्यक होते हैं; `mod` वैकल्पिक है।
+- `pow()` दो आर्ग्युमेंट्स लेता है: `exp` और `mod`। `exp` न होने पर error आता है.
 
 `@hint`
-- Optional arguments are set `=` to a default value, which the function will use if that argument is not specified.
+- वैकल्पिक आर्ग्युमेंट्स को `=` के साथ एक default मान दिया जाता है। अगर वह आर्ग्युमेंट पास नहीं किया गया, तो फंक्शन वही मान उपयोग करेगा.
 
 `@pre_exercise_code`
 ```{python}
@@ -156,10 +156,10 @@ Which of the following statements is true?
 
 `@sct`
 ```{python}
-msg1 = "Not quite. `mod` has a default value that will be used if you don't specify a value."
-msg2 = "Incorrect. `None` is the default value for the `mod` argument."
-msg3 = "Perfect! Using `help()` can help you understand how functions work, unleashing their full potential!"
-msg4 = "Incorrect. `pow()` takes three arguments, one of which has a default value."
+msg1 = "सही नहीं। `mod` का एक डिफ़ॉल्ट मान होता है जो उपयोग किया जाएगा यदि आप कोई मान निर्दिष्ट नहीं करते हैं।"
+msg2 = "गलत। `mod` तर्क के लिए डिफ़ॉल्ट मान `None` है।"
+msg3 = "सही! `help()` का उपयोग करने से आपको यह समझने में मदद मिल सकती है कि फ़ंक्शन कैसे काम करते हैं, उनकी पूरी क्षमता को उजागर करते हैं!"
+msg4 = "गलत। `pow()` तीन तर्क लेता है, जिनमें से एक का डिफ़ॉल्ट मान होता है।"
 Ex().has_chosen(3, [msg1, msg2, msg3, msg4])
 ```
 
@@ -176,25 +176,25 @@ skills:
   - 2
 ```
 
-In the previous exercise, you identified optional arguments by viewing the documentation with `help()`. You'll now apply this to change the behavior of the `sorted()` function.
+पिछले अभ्यास में, आपने `help()` से डॉक्युमेंटेशन देख कर वैकल्पिक आर्ग्युमेंट्स पहचाने थे. अब आप इसे `sorted()` फंक्शन के व्यवहार को बदलने के लिए लागू करेंगे.
 
-Have a look at the [documentation](https://docs.python.org/3/library/functions.html#sorted) of `sorted()` by typing `help(sorted)` in the IPython Shell.
+IPython Shell में `help(sorted)` टाइप करके `sorted()` के [डॉक्युमेंटेशन](https://docs.python.org/3/library/functions.html#sorted) को देखें.
 
-You'll see that `sorted()` takes three arguments: `iterable`, `key`, and `reverse`. In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`.
+आप देखेंगे कि `sorted()` तीन आर्ग्युमेंट्स लेता है: `iterable`, `key`, और `reverse`. इस अभ्यास में, आपको केवल `iterable` और `reverse` बताने हैं, `key` नहीं.
 
-Two lists have been created for you.
+आपके लिए दो लिस्ट बनाई गई हैं.
 
-Can you paste them together and sort them in descending order?
+क्या आप इन्हें जोड़कर एक साथ पेस्ट कर सकते हैं और descending ऑर्डर में sort कर सकते हैं?
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call `sorted()` and on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- `+` का उपयोग करके `first` और `second` की सामग्री को मिलाकर एक नई लिस्ट `full` बनाएँ.
+- `full` पर `sorted()` कॉल करें और `reverse` आर्ग्युमेंट को `True` सेट करें. सॉर्ट की हुई लिस्ट को `full_sorted` के रूप में सेव करें.
+- अंत में `full_sorted` को प्रिंट करें.
 
 `@hint`
-- Sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use `sorted()` with two inputs: `full` and `reverse=True`.
-- To print out a variable, use `print()`.
+- `first` और `second` को दो संख्याओं की तरह जोड़ें और परिणाम `full` को असाइन करें.
+- `sorted()` को दो इनपुट के साथ इस्तेमाल करें: `full` और `reverse=True`.
+- किसी वैरिएबल को प्रिंट करने के लिए `print()` का उपयोग करें.
 
 `@pre_exercise_code`
 ```{python}
@@ -235,20 +235,20 @@ print(full_sorted)
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the already variables `first` and `second`."
+msg = "आपको पहले से मौजूद वेरिएबल्स `first` और `second` को बदलने या हटाने की आवश्यकता नहीं है।"
 Ex().multi(
   check_object("first", missing_msg=msg).has_equal_value(incorrect_msg=msg),
   check_object("second", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 )
 Ex().check_correct(
-  check_object("full_sorted").has_equal_value(incorrect_msg="Make sure you assign the result of calling `sorted()` to `full_sorted`."),
+  check_object("full_sorted").has_equal_value(incorrect_msg="सुनिश्चित करें कि आप `sorted()` को कॉल करने के परिणाम को `full_sorted` में असाइन कर रहे हैं।"),
   check_function("sorted").multi(
     check_args(0).has_equal_value(),
     check_args('reverse').has_equal_value()
   )
 )
 
-success_msg("Cool! Head over to the video on Python methods.")
+success_msg("बहुत बढ़िया! Python विधियों पर वीडियो देखें।")
 ```
 
 ---
@@ -266,7 +266,7 @@ xp: 50
 
 ---
 
-## String Methods
+## स्ट्रिंग मेथड्स
 
 ```yaml
 type: NormalExercise
@@ -277,19 +277,19 @@ skills:
   - 2
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+स्ट्रिंग्स के साथ कई मेथड्स आते हैं. कुछ को जानने के लिए निर्देशों का ध्यान से पालन कीजिए. अगर आप उन्हें विस्तार से देखना चाहते हैं, तो IPython Shell में कभी भी `help(str)` टाइप कर सकते हैं.
 
-A string `place` has already been created for you to experiment with.
+आपके लिए प्रयोग करने हेतु एक स्ट्रिंग `place` पहले से बनाई गई है.
 
 `@instructions`
-- Use the `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) on `place` and store the result in `place_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `place` and `place_up`. Did both change?
-- Print out the number of o's on the variable `place` by calling `.count()` on `place` and passing the letter `'o'` as an input to the method. We're talking about the variable `place`, not the word `"place"`!
+- `place` पर `.upper()` [method](https://docs.python.org/3/library/stdtypes.html#str.upper) का उपयोग करें और परिणाम `place_up` में स्टोर करें. मेथड कॉल करने की वह सिंटैक्स इस्तेमाल कीजिए जो आपने पिछले वीडियो में सीखी थी.
+- `place` और `place_up` को प्रिंट करें. क्या दोनों बदले?
+- वैरिएबल `place` में मौजूद o की संख्या प्रिंट करें: इसके लिए `place` पर `.count()` कॉल करें और इस मेथड को इनपुट के रूप में अक्षर `'o'` पास करें. हम वैरिएबल `place` की बात कर रहे हैं, शब्द `"place"` की नहीं!
 
 `@hint`
-- You can call the `.upper()` method on `place` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `place.count(____)` call in a `print()` function so that you print it out.
+- आप `place` पर बिना किसी अतिरिक्त इनपुट के `.upper()` मेथड कॉल कर सकते हैं.
+- किसी वैरिएबल `x` को प्रिंट करने के लिए `print(x)` लिखिए.
+- यह सुनिश्चित करें कि आप `place.count(____)` कॉल को `print()` फंक्शन में रैप करें ताकि आउटपुट प्रिंट हो.
 
 `@pre_exercise_code`
 ```{python}
@@ -330,31 +330,31 @@ print(place.count('o'))
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "आपको पूर्वनिर्धारित चर को बदलने या हटाने की आवश्यकता नहीं है।"
 Ex().check_object("place", missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
-patt = "Don't forget to print out `%s`."
+patt = "`%s` को प्रिंट करना न भूलें।"
 Ex().has_printout(0, not_printed_msg=patt % "place")
 Ex().check_correct(
     has_printout(1, not_printed_msg=patt % "place_up"),
     check_correct(
-        check_object("place_up").has_equal_value(incorrect_msg="Assign the result of your `place.upper()` call to `place_up`."),
+        check_object("place_up").has_equal_value(incorrect_msg="अपने `place.upper()` कॉल के परिणाम को `place_up` को असाइन करें।"),
         check_function("place.upper", signature=False)
     )
 )    
 
 # check count of place
 Ex().check_correct(
-  has_printout(2, not_printed_msg = "You have calculated the number of o's in `place` fine; now make sure to wrap `place.count('o')` call in a `print()` function to print out the result."),
+  has_printout(2, not_printed_msg = "आपने `place` में o's की संख्या की गणना ठीक से की है; अब सुनिश्चित करें कि `place.count('o')` कॉल को प्रिंट करने के लिए `print()` फ़ंक्शन में लपेटें।"),
   check_function("place.count", signature=False).check_args(0).has_equal_value()
 )
 
-success_msg("Nice! Notice from the printouts that the `upper()` method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("अच्छा! प्रिंटआउट से ध्यान दें कि `upper()` विधि उस वस्तु को नहीं बदलती जिस पर इसे कॉल किया जाता है। यह अगली कसरत में सूचियों के लिए अलग होगा!")
 ```
 
 ---
 
-## List Methods
+## लिस्ट मेथड्स
 
 ```yaml
 type: NormalExercise
@@ -365,20 +365,20 @@ skills:
   - 2
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+केवल strings ही ऐसे Python टाइप नहीं हैं जिनके साथ मेथड्स जुड़े होते हैं. Lists, floats, integers और booleans भी ऐसे टाइप हैं जिनके साथ कई उपयोगी मेथड्स आते हैं. इस अभ्यास में, आप इन पर प्रयोग करेंगे:
 
-- `.index()`, to get the index of the first element of a list that matches its input and
-- `.count()`, to get the number of times an element appears in a list.
+- `.index()`, जिससे किसी लिस्ट में दिए गए इनपुट से मेल खाने वाले पहले एलिमेंट का इंडेक्स मिलता है, और
+- `.count()`, जिससे पता चलता है कि कोई एलिमेंट लिस्ट में कितनी बार आता है.
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+आप घर के अलग-अलग हिस्सों के एरिया वाली लिस्ट `areas` पर काम करेंगे.
 
 `@instructions`
-- Use the `.index()` method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call `.count()` on `areas` to find out how many times `9.50` appears in the list. Again, simply print out this number.
+- `.index()` मेथड का उपयोग करके `areas` में उस एलिमेंट का इंडेक्स निकालिए जो `20.0` के बराबर है. इस इंडेक्स को प्रिंट करें.
+- `areas` पर `.count()` कॉल करके पता लगाइए कि `9.50` लिस्ट में कितनी बार आता है. फिर, बस इस संख्या को प्रिंट करें.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a `print()` function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a `print()` function.
+- इंडेक्स प्रिंट करने के लिए, `areas.index(___)` कॉल को `print()` फंक्शन में लपेटें.
+- यह प्रिंट करने के लिए कि किसी एलिमेंट `x` की सूची में कितनी बार उपस्थिति है, `areas.count(___)` कॉल को `print()` फंक्शन में लपेटें.
 
 `@pre_exercise_code`
 ```{python}
@@ -411,7 +411,7 @@ print(areas.count(9.50))
 
 `@sct`
 ```{python}
-predef_msg = "You don't have to change or remove the predefined list `areas`."
+predef_msg = "आपको पूर्वनिर्धारित सूची `areas` को बदलने या हटाने की आवश्यकता नहीं है।"
 
 Ex().check_object("areas", missing_msg=predef_msg).has_equal_value(incorrect_msg=predef_msg)
 
@@ -420,12 +420,12 @@ Ex().check_function("print", index=0).check_args(0).check_function('areas.index'
 
 Ex().check_function("print", index=1).check_args(0).check_function('areas.count', signature=False).has_equal_value()
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("अच्छा! ये `list` विधियों के उदाहरण थे जिन्होंने उस सूची को नहीं बदला जिस पर उन्हें बुलाया गया था।")
 ```
 
 ---
 
-## List Methods (2)
+## लिस्ट मेथड्स (2)
 
 ```yaml
 type: NormalExercise
@@ -436,25 +436,25 @@ skills:
   - 2
 ```
 
-Most list methods will change the list they're called on. Examples are:
+अधिकांश लिस्ट मेथड्स उस लिस्ट को बदल देते हैं जिस पर उन्हें कॉल किया जाता है. उदाहरण के लिए:
 
-- `.append()`, that adds an element to the list it is called on,
-- `.remove()`, that [removes](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the first element of a list that matches the input, and
-- `.reverse()`, that [reverses](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) the order of the elements in the list it is called on.
+- `.append()`, जो उस लिस्ट में एक एलिमेंट जोड़ता है जिस पर इसे कॉल किया गया है,
+- `.remove()`, जो इनपुट से मेल खाने वाले लिस्ट के पहले एलिमेंट को [हटा देता](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) है, और
+- `.reverse()`, जो उस लिस्ट के एलिमेंट्स के क्रम को [उलट देता](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) है जिस पर इसे कॉल किया गया है.
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+आप घर के अलग-अलग हिस्सों के क्षेत्रफल वाली लिस्ट `areas` पर काम करेंगे.
 
 `@instructions`
-- Use `.append()` twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the `.reverse()` method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- `.append()` का दो बार उपयोग करके poolhouse और garage के आकार फिर से जोड़ें: क्रमशः `24.5` और `15.45`. ध्यान रखें कि इन्हें इसी क्रम में जोड़ें.
+- `areas` को प्रिंट करें
+- `areas` के एलिमेंट्स के क्रम को उलटने के लिए `.reverse()` मेथड का उपयोग करें.
+- `areas` को एक बार फिर प्रिंट करें.
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The `.reverse()` method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- पहली निर्देश के लिए, `areas.append(___)` कॉल का दो बार उपयोग करें.
+- किसी वैरिएबल `x` को प्रिंट करने के लिए बस `print(x)` लिखें.
+- `.reverse()` मेथड को अतिरिक्त इनपुट की ज़रूरत नहीं होती; बस डॉट नोटेशन और खाली ब्रैकेट्स का उपयोग करें: `.reverse()`.
+- किसी वैरिएबल `x` को प्रिंट करने के लिए बस `print(x)` लिखें.
 
 `@pre_exercise_code`
 ```{python}
@@ -509,7 +509,7 @@ Ex().multi(
   check_function("print", index=1).check_args(0).has_equal_ast()
 )
 
-success_msg("Great!")
+success_msg("बहुत बढ़िया!")
 ```
 
 ---
@@ -527,7 +527,7 @@ cedcfb34350be8545599768f96695cdd
 
 ---
 
-## Import package
+## पैकेज इम्पोर्ट करें
 
 ```yaml
 type: NormalExercise
@@ -538,24 +538,24 @@ skills:
   - 2
 ```
 
-Let's say you wanted to calculate the circumference and area of a circle. Here's what those formulas look like:
+मान लीजिए आप किसी वृत्त की परिधि और क्षेत्रफल निकालना चाहते हैं. उनके फ़ॉर्मूले इस प्रकार हैं:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-Rather than typing the number for `pi`, you can use the `math` package that contains the number
+`pi` की संख्या खुद टाइप करने के बजाय, आप `math` पैकेज का उपयोग कर सकते हैं जिसमें यह संख्या उपलब्ध होती है.
 
-For reference, `**` is the symbol for exponentiation. For example `3**4` is `3` to the power of `4` and will give `81`.
+जानकारी के लिए, `**` घातांक (exponentiation) का प्रतीक है. उदाहरण के लिए, `3**4` का अर्थ है `3` की घात `4`, और परिणाम `81` होगा.
 
 `@instructions`
-- Import the `math` package.
-- Use `math.pi` to calculate the circumference of the circle and store it in `C`.
-- Use `math.pi` to calculate the area of the circle and store it in `A`.
+- `math` पैकेज इम्पोर्ट करें.
+- वृत्त की परिधि निकालने के लिए `math.pi` का उपयोग करें और उसे `C` में स्टोर करें.
+- वृत्त का क्षेत्रफल निकालने के लिए `math.pi` का उपयोग करें और उसे `A` में स्टोर करें.
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment text to find `C`. Use `*`
-- Use the equation in the assignment text to find `A`. Use `*` and `**`.
+- आप सरल रूप से `import math` कर सकते हैं, और फिर `pi` को `math.pi` के रूप में संदर्भित करें.
+- `C` निकालने के लिए असाइनमेंट टेक्स्ट में दी हुई समीकरण का उपयोग करें. `*` का प्रयोग करें.
+- `A` निकालने के लिए असाइनमेंट टेक्स्ट में दी हुई समीकरण का उपयोग करें. `*` और `**` का प्रयोग करें.
 
 `@pre_exercise_code`
 ```{python}
@@ -594,7 +594,7 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use `math.pi`."
+patt = "`%s` की आपकी गणना सही नहीं है। सुनिश्चित करें कि `math.pi` का उपयोग करें।"
 Ex().multi(
   has_import('math', same_as=False),
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -602,11 +602,11 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:व्यास को प्रिंट करने के लिए `{{sol_call}}` को वहीं रखें।"),
+  has_printout(1, not_printed_msg = "__JINJA__:क्षेत्रफल को प्रिंट करने के लिए `{{sol_call}}` को वहीं रखें।")
 )
 
-success_msg("Nice! If you know how to deal with functions from packages, the power of a lot of Python programmers is at your fingertips!")
+success_msg("अच्छा! यदि आप पैकेजों से फ़ंक्शनों को संभालना जानते हैं, तो बहुत से Python प्रोग्रामरों की शक्ति आपके हाथों में है!")
 ```
 
 ---
@@ -622,22 +622,22 @@ skills:
   - 2
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+सामान्य इंपोर्ट, जैसे `import math`, `math` पैकेज की **सारी** फ़ंक्शनैलिटी आपके लिए उपलब्ध कर देता है. लेकिन, अगर आप किसी पैकेज के केवल किसी खास हिस्से का उपयोग करना चाहते हैं, तो आप अपना इंपोर्ट और अधिक चयनात्मक बना सकते हैं:
 
 ```
 from math import pi
 ```
 
-Try the same thing again, but this time only use `pi`.
+अब वही काम दोबारा कीजिए, लेकिन इस बार सिर्फ `pi` का इस्तेमाल करें.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `pi` function.
-- Use `pi` to calculate the circumference of the circle and store it in `C`.
-- Use `pi` to calculate the area of the circle and store it in `A`.
+- `math` पैकेज से चयनात्मक इंपोर्ट करें जहाँ आप केवल `pi` को इंपोर्ट करें.
+- `pi` का उपयोग करके वृत्त की परिधि निकालें और उसे `C` में स्टोर करें.
+- `pi` का उपयोग करके वृत्त का क्षेत्रफल निकालें और उसे `A` में स्टोर करें.
 
 `@hint`
-- Use `from math import pi` to do the selective import.
-- Now, you can use `pi` on it's own!
+- चयनात्मक इंपोर्ट करने के लिए `from math import pi` का उपयोग करें.
+- अब आप `pi` को सीधे इस्तेमाल कर सकते हैं!
 
 `@pre_exercise_code`
 ```{python}
@@ -676,9 +676,9 @@ print("Area: " + str(A))
 
 `@sct`
 ```{python}
-patt = "Your calculation of `%s` is not quite correct. Make sure to use only `pi`."
+patt = "आपकी `%s` की गणना सही नहीं है। सुनिश्चित करें कि केवल `pi` का उपयोग करें।"
 
-Ex().has_import("math.pi", not_imported_msg = "Be sure to import `pi` from the `math` package. You should use the `from ___ import ___` notation.",)
+Ex().has_import("math.pi", not_imported_msg = "सुनिश्चित करें कि `math` पैकेज से `pi` आयात करें। आपको `from ___ import ___` नोटेशन का उपयोग करना चाहिए।",)
 
 Ex().multi(
   check_object('C').has_equal_value(incorrect_msg=patt%'C'),
@@ -686,16 +686,16 @@ Ex().multi(
 )
 
 Ex().multi(
-  has_printout(0, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the circumference."),
-  has_printout(1, not_printed_msg = "__JINJA__:Keep `{{sol_call}}` in there to print out the area.")
+  has_printout(0, not_printed_msg = "__JINJA__:व्यास को प्रिंट करने के लिए `{{sol_call}}` को वहीं रखें।"),
+  has_printout(1, not_printed_msg = "__JINJA__:क्षेत्रफल को प्रिंट करने के लिए `{{sol_call}}` को वहीं रखें।")
 )
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("अच्छा! अगले अभ्यास पर जाएं।")
 ```
 
 ---
 
-## Different ways of importing
+## Import करने के अलग-अलग तरीके
 
 ```yaml
 type: MultipleChoiceExercise
@@ -706,15 +706,15 @@ skills:
   - 2
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Python में पैकेज और मॉड्यूल import करने के कई तरीके होते हैं. आप जो import कॉल करेंगे, उसके अनुसार आपको अलग Python कोड लिखना होगा.
 
-Suppose you want to use the [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()`, which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+मान लीजिए आप `scipy` पैकेज के `linalg` सबपैकेज में मौजूद [function](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html) `inv()` का इस्तेमाल करना चाहते हैं. आप यह फ़ंक्शन इस तरह इस्तेमाल कर पाना चाहते हैं:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+ऊपर दिया गया कोड बिना किसी त्रुटि के चलाने के लिए आपको कौन-सा `import` स्टेटमेंट चाहिए?
 
 `@possible_answers`
 - `import scipy`
@@ -723,7 +723,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-- Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors. Hit **enter** to run the code you have typed.
+- IPython शेल में अलग-अलग import स्टेटमेंट आज़माएँ और देखें कि इनमें से कौन-सा `my_inv([[1, 2], [3, 4]])` लाइन को बिना त्रुटि के चलाता है. आपने जो कोड टाइप किया है उसे चलाने के लिए **enter** दबाएँ.
 
 `@pre_exercise_code`
 ```{python}
@@ -732,7 +732,7 @@ Which `import` statement will you need in order to run the above code without an
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: `inv()` is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "गलत है, पुनः प्रयास करें। IPython शेल में विभिन्न आयात कथनों को आज़माएँ और देखें कि कौन सा कथन `my_inv([[1, 2], [3, 4]])` को बिना त्रुटियों के चलाने की अनुमति देता है।"
+msg4 = "सही! `as` शब्द आपको आयात की जा रही फ़ंक्शन के लिए एक स्थानीय नाम बनाने की अनुमति देता है: `inv()` अब `my_inv()` के रूप में उपलब्ध है।"
 Ex().has_chosen(4, [msg1, msg2, msg3, msg4])
 ```
