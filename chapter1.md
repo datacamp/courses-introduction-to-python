@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Bab 1
+title: Dasar-dasar Python
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  Pengantar konsep dasar Python. Pelajari cara menggunakan Python secara
+  interaktif dan melalui skrip. Buat variabel pertama Anda dan kenali tipe data
+  dasar Python.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: 'Halo, Python!'
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Variabel dan Tipe
 ---
 
-## Hello Python!
+## Halo, Python!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## Kode Python pertama Anda
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+Saatnya menjalankan kode Python pertama Anda!
 
-Head to the code and hit the run code button to see the output.
+Buka bagian kode dan tekan tombol jalankan kode untuk melihat hasilnya.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Tekan tombol jalankan kode untuk melihat hasil dari `print(5 / 8)`.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Jalankan kodenya terlebih dahulu sebelum mengirim jawaban Anda agar Anda punya waktu untuk mengeksplorasi hasilnya.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Apakah kamu sudah menggunakan `{{sol_call}}` untuk mencetak `5 / 8`?")
+success_msg("Bagus! Lanjut ke yang berikutnya!")
 ```
 
 ---
 
-## Python as a calculator
+## Python sebagai kalkulator
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python sangat cocok untuk melakukan perhitungan dasar. Python dapat melakukan penjumlahan, pengurangan, perkalian, dan pembagian.
 
-The code in the script gives some examples.
+Kode dalam skrip memberikan beberapa contoh.
 
-Now it's your turn to practice by writing some code yourself.
+Sekarang giliran Anda berlatih dengan menulis beberapa kode sendiri.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- Cetak hasil pengurangan `5` dengan `5` di bawah `# Subtraction` menggunakan `print()`.
+- Cetak hasil perkalian `3` dengan `5` di bawah `# Multiplication`.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Anda perlu menggunakan `print()` untuk menghasilkan output.
+- Anda dapat melakukan pengurangan dengan `-` dan perkalian dengan `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Apakah kamu sudah menggunakan `print(4 + 5)` untuk mencetak hasil penjumlahanmu?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Apakah kamu sudah menggunakan `print(5 - 5)` untuk mencetak hasil penguranganmu?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Apakah kamu sudah menggunakan `print(3 * 5)` untuk mencetak hasil perkalianmu?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Apakah kamu sudah menggunakan `print(10 / 2)` untuk mencetak hasil pembagianmu?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Itu benar! Python bisa membantumu melakukan perhitungan, sebuah karakteristik yang akan berguna untuk analisis saat kita mengembangkan keterampilan data kita.")
 ```
 
 ---
 
-## Variables and Types
+## Variabel dan Tipe
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Penetapan Variabel
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+Di Python, sebuah variabel memungkinkan Anda merujuk suatu nilai dengan sebuah nama. Untuk membuat variabel `x` dengan nilai `5`, Anda menggunakan `=`, seperti contoh berikut:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Sekarang Anda dapat menggunakan nama variabel ini, `x`, alih-alih nilai sebenarnya, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Ingat, `=` dalam Python berarti -_penugasan_, bukan untuk menguji kesetaraan! Cobalah pada latihan ini dengan mengganti `____` dengan kode Anda.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- Buat variabel `savings` dengan nilai `100`.
+- Periksa variabel ini dengan mengetik `print(savings)` di skrip.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- Ketik `savings = 100` untuk membuat variabel `savings`.
+- Setelah membuat variabel `savings`, Anda dapat mengetik `print(savings)`.
+- Kode akhir Anda tidak boleh menyertakan `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Tetapkan `100` ke variabel `savings`.")
+Ex().has_printout(0, not_printed_msg = "Cetak `savings`, variabel yang kamu buat, dengan `print(savings)`.")
+success_msg("Bagus! Ayo coba lakukan beberapa perhitungan dengan variabel ini sekarang!")
 ```
 
 ---
 
-## Calculations with variables
+## Perhitungan dengan variabel
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Anda sekarang telah membuat sebuah variabel tabungan, jadi mari mulai menabung!
 
-Instead of calculating with the actual values, you can use variables instead.
+Alih-alih menghitung dengan nilai sebenarnya, Anda dapat menggunakan variabel.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Berapa banyak uang yang akan Anda tabung empat bulan dari sekarang, jika Anda menabung $10 setiap bulan?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- Buat variabel `monthly_savings` bernilai `10` dan `num_months` bernilai `4`.
+- Kalikan `monthly_savings` dengan `num_months` dan tetapkan ke `new_savings`.
+- Cetak nilai `new_savings`.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- Anda dapat melakukan perhitungan dengan variabel sama seperti dengan angka, jadi alih-alih `10 * 4`, gantilah angkanya dengan variabel!
+- Gunakan `print()` untuk melihat jumlah dalam `new_savings`.
+- Pastikan ejaan nama variabel ditulis dengan benar!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Apakah kamu menyimpan `10` ke `monthly_savings` menggunakan `monthly_savings = 10`?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Apakah kamu menyimpan `4` ke `num_months` menggunakan `num_months = 4`?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Apakah kamu menggunakan variabel dan simbol yang benar untuk mengalikan? Diharapkan `monthly_savings * num_months` tetapi mendapatkan sesuatu yang lain.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Apakah kamu menggunakan variabel dan simbol yang benar untuk menambahkan? Diharapkan `savings + new_savings` tetapi mendapatkan sesuatu yang lain.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Ingat untuk mencetak `new_savings` di akhir skripmu.")
 
-success_msg("You have $40 in new savings!")
+success_msg("Kamu punya $40 dalam tabungan baru!")
 ```
 
 ---
 
-## Other variable types
+## Tipe variabel lainnya
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+Pada latihan sebelumnya, Anda bekerja dengan tipe data bilangan bulat di Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int`, atau integer: bilangan tanpa bagian pecahan. `savings` dengan nilai `100` adalah contoh integer.
 
-Next to numerical data types, there are three other very common data types:
+Selain tipe data numerik tersebut, ada tiga tipe data lain yang sangat umum:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float`, atau floating point: bilangan yang memiliki bagian bulat dan pecahan, dipisahkan oleh titik. `1.1` adalah contoh float.
+- `str`, atau string: tipe untuk merepresentasikan teks. Anda dapat menggunakan tanda petik tunggal atau ganda untuk membuat string.
+- `bool`, atau boolean: tipe untuk merepresentasikan nilai logis. Nilainya hanya bisa `True` atau `False` (penggunaan huruf besar-kecil penting!).
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Buat float baru, `half`, dengan nilai `0.5`.
+- Buat string baru, `intro`, dengan nilai `"Halo! Apa kabar?"`.
+- Buat boolean baru, `is_good`, dengan nilai `True`.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Untuk membuat variabel di Python, gunakan `=`. Pastikan Anda membungkus string dengan tanda petik tunggal atau ganda.
+- Hanya ada dua nilai boolean di Python: `True` dan `False`. `TRUE`, `true`, `FALSE`, `false`, dan variasi lainnya tidak akan diterima.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Apakah kamu menyimpan float, `0.5` ke `half`?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, ada yang salah di variabel `intro` kamu. Periksa kembali ejaannya dan pastikan kamu sudah menggunakan tanda kutip.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Apakah kamu menggunakan huruf kapital untuk nilai boolean? Ingat, kamu tidak perlu menggunakan tanda kutip di sini.")
 
-success_msg("Nice!")
+success_msg("Bagus!")
 ```
 
 ---
 
-## Operations with other types
+## Operasi dengan tipe lainnya
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+Variabel memiliki berbagai tipe dalam Python. Anda dapat melihat tipe sebuah variabel dengan menggunakan fungsi `type()`. Sebagai contoh, untuk melihat tipe dari `a`, jalankan: `type(a)`.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Tipe yang berbeda berperilaku berbeda dalam Python. Misalnya, ketika Anda menjumlahkan dua string, perilakunya akan berbeda dibandingkan saat Anda menjumlahkan dua integer atau dua boolean.
 
-Time for you to test this out.
+Sekarang saatnya Anda mengujinya.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- Tambahkan `savings` dan `new_savings` lalu tetapkan ke `total_savings`.
+- Gunakan `type()` untuk mencetak tipe hasil dari `total_savings`.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- Tetapkan `savings + new_savings` ke variabel baru, `total_savings`.
+- Untuk mencetak tipe variabel `x`, gunakan `print(type(x))`.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Kamu tidak perlu mengubah atau menghapus variabel yang sudah ditentukan."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Tambahkan `savings` dan `new_savings` untuk membuat variabel `total_savings`."),
+    has_printout(1, not_printed_msg = "__JINJA__:Gunakan `{{sol_call}}` untuk mencetak tipe dari `total_savings`.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- Hitung penjumlahan `intro` dan `intro` lalu tetapkan hasilnya ke `doubleintro`.
+- Cetak `doubleintro`. Apakah ini sesuai dengan perkiraan Anda?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- Tetapkan `intro + intro` ke variabel baru, `doubleintro`.
+- Untuk mencetak variabel `x`, tuliskan `print(x)` di skrip.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Kamu tidak perlu mengubah atau menghapus variabel yang sudah ditentukan."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Apakah kamu sudah menyimpan hasil dari `intro + intro` di `doubleintro`?"),
+    has_printout(0, not_printed_msg = "Jangan lupa untuk mencetak `doubleintro`.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Bagus. Perhatikan bagaimana `intro + intro` menyebabkan `\"Hello! How are you?\"` dan `\"Hello! How are you?\"` digabungkan.")
 ```
