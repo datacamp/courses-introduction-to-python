@@ -1,21 +1,21 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
+title_meta: Розділ 1
+title: Основи Python
 description: >-
-  An introduction to the basic concepts of Python. Learn how to use Python
-  interactively and by using a script. Create your first variables and acquaint
-  yourself with Python's basic data types.
+  Вступ до базових понять Python. Дізнайтеся, як працювати з Python інтерактивно
+  та за допомогою скрипту. Створіть свої перші змінні та ознайомтеся з основними
+  типами даних у Python.
 attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
   - nb_of_exercises: 3
-    title: Hello Python!
+    title: 'Привіт, Python!'
   - nb_of_exercises: 5
-    title: Variables and Types
+    title: Змінні та типи
 ---
 
-## Hello Python!
+## Привіт, Python!
 
 ```yaml
 type: VideoExercise
@@ -28,7 +28,7 @@ d8fcd4c930027fa4e1c3870c7e7e0ff1
 
 ---
 
-## Your first Python code
+## Ваш перший код на Python
 
 ```yaml
 type: NormalExercise
@@ -39,15 +39,15 @@ skills:
   - 2
 ```
 
-It's time to run your first Python code!
+Час запустити ваш перший код на Python!
 
-Head to the code and hit the run code button to see the output.
+Перейдіть до редактора коду та натисніть кнопку "Запустити код", щоб побачити результат.
 
 `@instructions`
-- Hit the run code button to see the output of `print(5 / 8)`.
+- Натисніть кнопку "Запустити код", щоб побачити результат виконання `print(5 / 8)`.
 
 `@hint`
-- Run the code first before submitting your answer so you have time to explore the output.
+- Спочатку запустіть код, перш ніж надсилати відповідь, щоб мати час дослідити результати.
 
 `@pre_exercise_code`
 ```{python}
@@ -68,13 +68,13 @@ print(5 / 8)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "__JINJA__:Have you used `{{sol_call}}` to print out `5 / 8`?")
-success_msg("Great! On to the next one!")
+Ex().has_printout(0, not_printed_msg = "__JINJA__:Чи використали Ви `{{sol_call}}` для виведення `5 / 8`?")
+success_msg("Чудово! Переходимо до наступного завдання!")
 ```
 
 ---
 
-## Python as a calculator
+## Python як калькулятор
 
 ```yaml
 type: NormalExercise
@@ -85,19 +85,19 @@ skills:
   - 2
 ```
 
-Python is perfectly suited to do basic calculations. It can do addition, subtraction, multiplication and division.
+Python чудово підходить для базових обчислень. Він уміє додавати, віднімати, множити й ділити.
 
-The code in the script gives some examples.
+Код у скрипті містить кілька прикладів.
 
-Now it's your turn to practice by writing some code yourself.
+Тепер ваша черга потренуватися та написати власний код.
 
 `@instructions`
-- Print the result of subtracting `5` from `5` under `# Subtraction` using `print()`.
-- Print the result of multiplying `3` by `5` under `# Multiplication`.
+- Виведіть результат віднімання `5` від `5` під розділом `# Subtraction`, використовуючи `print()`.
+- Виведіть результат множення `3` на `5` під розділом `# Multiplication`.
 
 `@hint`
-- You'll need to use `print()` to generate an output.
-- You can subtract with `-` and multiply with `*`.
+- Щоб отримати вивід, вам знадобиться використати `print()`.
+- Для віднімання використовуйте `-`, а для множення — `*`.
 
 `@pre_exercise_code`
 ```{python}
@@ -132,20 +132,20 @@ print(3 * 5)
 
 `@sct`
 ```{python}
-Ex().has_printout(0, not_printed_msg = "Have you used `print(4 + 5)` to print out the result of your sum?")
+Ex().has_printout(0, not_printed_msg = "Ви використали `print(4 + 5)`, щоб вивести результат вашого додавання?")
 
-Ex().has_printout(1, not_printed_msg = "Have you used `print(5 - 5)` to print out the result of your subtration?")
+Ex().has_printout(1, not_printed_msg = "Ви використали `print(5 - 5)`, щоб вивести результат вашого віднімання?")
 
-Ex().has_printout(2, not_printed_msg = "Have you used `print(3 * 5)` to print out the result of your multiplication?")
+Ex().has_printout(2, not_printed_msg = "Ви використали `print(3 * 5)`, щоб вивести результат вашого множення?")
 
-Ex().has_printout(3, not_printed_msg = "Have you used `print(10 / 2)` to print out the result of your division?")
+Ex().has_printout(3, not_printed_msg = "Ви використали `print(10 / 2)`, щоб вивести результат вашого ділення?")
 
-success_msg("That's correct! Python can help you do the math, a characteristic that will be helpful for analysis as we grow our data skills.")
+success_msg("Це правильно! Python може допомогти вам виконувати обчислення, що буде корисно для аналізу, коли ми розвиватимемо наші навички роботи з даними.")
 ```
 
 ---
 
-## Variables and Types
+## Змінні та типи
 
 ```yaml
 type: VideoExercise
@@ -158,7 +158,7 @@ xp: 50
 
 ---
 
-## Variable Assignment
+## Присвоювання змінній
 
 ```yaml
 type: NormalExercise
@@ -169,24 +169,24 @@ skills:
   - 2
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable `x` with a value of `5`, you use `=`, like this example:
+У Python змінна дає змогу звертатися до значення за назвою. Щоб створити змінну `x` зі значенням `5`, використайте `=`, як у прикладі:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Тепер ви можете використовувати назву цієї змінної, `x`, замість фактичного значення `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality! Try it in the exercise by replacing `____` with your code.
+Пам'ятайте: `=` у Python означає _присвоювання_, а не перевірку на рівність! Спробуйте у вправі, замінивши `____` на свій код.
 
 `@instructions`
-- Create a variable `savings` with the value of `100`.
-- Check out this variable by typing `print(savings)` in the script.
+- Створіть змінну `savings` зі значенням `100`.
+- Перевірте цю змінну, ввівши в скрипті `print(savings)`.
 
 `@hint`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
-- Your final code should not include any `____`.
+- Введіть `savings = 100`, щоб створити змінну `savings`.
+- Після створення змінної `savings` введіть `print(savings)`.
+- У фінальному коді не має бути жодних `____`.
 
 `@pre_exercise_code`
 ```{python}
@@ -213,14 +213,14 @@ print(savings)
 
 `@sct`
 ```{python}
-Ex().check_object("savings").has_equal_value(incorrect_msg="Assign `100` to the variable `savings`.")
-Ex().has_printout(0, not_printed_msg = "Print out `savings`, the variable you created, with `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+Ex().check_object("savings").has_equal_value(incorrect_msg="Призначте `100` змінній `savings`.")
+Ex().has_printout(0, not_printed_msg = "Виведіть на екран `savings`, змінну, яку Ви створили, за допомогою `print(savings)`.")
+success_msg("Чудово! Давайте спробуємо виконати деякі обчислення з цією змінною зараз!")
 ```
 
 ---
 
-## Calculations with variables
+## Обчислення зі змінними
 
 ```yaml
 type: NormalExercise
@@ -231,21 +231,21 @@ skills:
   - 2
 ```
 
-You've now created a savings variable, so let's start saving!
+Ви вже створили змінну для заощаджень, тож почнімо відкладати!
 
-Instead of calculating with the actual values, you can use variables instead.
+Замість обчислень із самими значеннями можна використовувати змінні.
 
-How much money would you have saved four months from now, if you saved $10 each month?
+Скільки грошей ви заощадите за чотири місяці, якщо щомісяця відкладатимете по $10?
 
 `@instructions`
-- Create a variable `monthly_savings`, equal to `10` and `num_months`, equal to `4`.
-- Multiply `monthly_savings` by `num_months` and assign it to `new_savings`.
-- Print the value of `new_savings`.
+- Створіть змінну `monthly_savings`, що дорівнює `10`, і `num_months`, що дорівнює `4`.
+- Помножте `monthly_savings` на `num_months` і присвойте результат змінній `new_savings`.
+- Виведіть значення `new_savings`.
 
 `@hint`
-- You can do calculations with variables the same way as with numbers so instead of `10 * 4`, replace the numbers with the variables!
-- Use `print()` to see the amount in `new_savings`.
-- Take care to spell the variables correctly!
+- Обчислення зі змінними виконуються так само, як і з числами, тож замість `10 * 4` підставте змінні!
+- Скористайтеся `print()`, щоб побачити суму в `new_savings`.
+- Уважно перевірте написання назв змінних!
 
 `@pre_exercise_code`
 ```{python}
@@ -280,19 +280,19 @@ print(new_savings)
 
 `@sct`
 ```{python}
-Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Did you save `10` to `monthly_savings` using `monthly_savings = 10`?")
-Ex().check_object("num_months").has_equal_value(incorrect_msg = "Did you save `4` to `num_months` using `num_months = 4`?")
-Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to multiply? Expected `monthly_savings * num_months` but got something else.")
-# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Did you use the correct variables and symbols to add? Expected `savings + new_savings` but got something else.")
+Ex().check_object("monthly_savings").has_equal_value(incorrect_msg = "Чи зберегли Ви `10` у `monthly_savings`, використовуючи `monthly_savings = 10`?")
+Ex().check_object("num_months").has_equal_value(incorrect_msg = "Чи зберегли Ви `4` у `num_months`, використовуючи `num_months = 4`?")
+Ex().check_object("new_savings").has_equal_value(incorrect_msg = "Чи використали Ви правильні змінні та символи для множення? Очікувалося `monthly_savings * num_months`, але отримано щось інше.")
+# Ex().check_object("total_savings").has_equal_value(incorrect_msg = "Чи використали Ви правильні змінні та символи для додавання? Очікувалося `savings + new_savings`, але отримано щось інше.")
 
-Ex().has_printout(0, not_printed_msg="Remember to print out `new_savings` at the end of your script.")
+Ex().has_printout(0, not_printed_msg="Не забудьте вивести `new_savings` в кінці Вашого скрипту.")
 
-success_msg("You have $40 in new savings!")
+success_msg("У Вас $40 нових заощаджень!")
 ```
 
 ---
 
-## Other variable types
+## Інші типи змінних
 
 ```yaml
 type: NormalExercise
@@ -303,24 +303,24 @@ skills:
   - 2
 ```
 
-In the previous exercise, you worked with the integer Python data type:
+У попередній вправі ви працювали з цілим числом — типом даних Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
+- `int` (integer): число без дробової частини. `savings` зі значенням `100` — це приклад цілого числа.
 
-Next to numerical data types, there are three other very common data types:
+Окрім числових типів даних, є ще три дуже поширені типи даних:
 
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `1.1`, is an example of a float.
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. It can only be `True` or `False` (the capitalization is important!).
+- `float` (floating point): число, що має цілу і дробову частини, розділені крапкою. `1.1` — це приклад числа з плаваючою комою.
+- `str` (string): тип для представлення тексту. Ви можете використовувати одинарні або подвійні лапки, щоб створити рядок.
+- `bool` (boolean): тип для представлення логічних значень. Він може бути лише `True` або `False` (важливо дотримуватися регістру!).
 
 `@instructions`
-- Create a new float, `half`, with the value `0.5`.
-- Create a new string, `intro`, with the value `"Hello! How are you?"`.
-- Create a new boolean, `is_good`, with the value `True`.
+- Створіть нове число з плаваючою комою `half` зі значенням `0.5`.
+- Створіть новий рядок `intro` зі значенням `"Hello! How are you?"`.
+- Створіть нове булеве значення `is_good` зі значенням `True`.
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Щоб створити змінну в Python, використовуйте `=`. Не забудьте взяти рядок у одинарні або подвійні лапки.
+- У Python є лише два булеві значення: `True` і `False`. `TRUE`, `true`, `FALSE`, `false` та інші варіанти не приймаються.
 
 `@pre_exercise_code`
 ```{python}
@@ -353,18 +353,18 @@ is_good = True
 
 `@sct`
 ```{python}
-Ex().check_object("half").has_equal_value(incorrect_msg = "Did you save the float, `0.5` to `half`?")
+Ex().check_object("half").has_equal_value(incorrect_msg = "Чи зберегли Ви число з плаваючою комою, `0.5` у змінну `half`?")
 
-Ex().check_object("intro").has_equal_value(incorrect_msg = "Hmm, something is incorrect in your `intro` variable. Double check the spelling and make sure you've used quotation marks.")
+Ex().check_object("intro").has_equal_value(incorrect_msg = "Хмм, щось не так у Вашій змінній `intro`. Перевірте правопис і переконайтеся, що Ви використали лапки.")
 
-Ex().check_object("is_good").has_equal_value(incorrect_msg = "Did you capitalize the boolean value? Remember you don't need to use quotation marks here.")
+Ex().check_object("is_good").has_equal_value(incorrect_msg = "Чи написали Ви з великої літери значення типу boolean? Пам'ятайте, що тут не потрібно використовувати лапки.")
 
-success_msg("Nice!")
+success_msg("Чудово!")
 ```
 
 ---
 
-## Operations with other types
+## Операції з іншими типами
 
 ```yaml
 type: BulletExercise
@@ -372,11 +372,11 @@ key: 4d0d83cc02
 xp: 100
 ```
 
-Variables come in different types in Python. You can see the type of a variable by using `type()`. For example, to see type of `a`, execute: `type(a)`.
+У Python змінні можуть бути різних типів. Ви можете побачити тип змінної за допомогою `type()`. Наприклад, щоб дізнатися тип `a`, виконайте: `type(a)`.
 
-Different types behave differently in Python. When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Різні типи в Python поводяться по‑різному. Якщо, наприклад, додати два рядки, ви отримаєте інший результат, ніж коли додаєте два цілі числа або два булеві значення.
 
-Time for you to test this out.
+Час перевірити це на практиці.
 
 `@pre_exercise_code`
 ```{python}
@@ -392,12 +392,12 @@ xp: 50
 ```
 
 `@instructions`
-- Add `savings` and `new_savings` and assign it to `total_savings`.
-- Use `type()` to print the resulting type of `total_savings`.
+- Додайте `savings` і `new_savings` та присвойте результат змінній `total_savings`.
+- Використайте `type()`, щоб надрукувати тип `total_savings`.
 
 `@hint`
-- Assign `savings + new_savings` to a new variable, `total_savings`.
-- To print the type of a variable `x`, use `print(type(x))`.
+- Присвойте `savings + new_savings` новій змінній `total_savings`.
+- Щоб надрукувати тип змінної `x`, використайте `print(type(x))`.
 
 `@sample_code`
 ```{python}
@@ -428,7 +428,7 @@ print(type(total_savings))
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Вам не потрібно змінювати або видаляти попередньо визначені змінні."
 
 Ex().multi(
     check_object('savings', missing_msg=msg).has_equal_value(incorrect_msg=msg),
@@ -436,8 +436,8 @@ Ex().multi(
 )
 
 Ex().multi(
-    check_object("total_savings").has_equal_value(incorrect_msg="Add `savings` and `new_savings` to create the `total_savings` variable."),
-    has_printout(1, not_printed_msg = "__JINJA__:Use `{{sol_call}}` to print out the type of `total_savings`.")
+    check_object("total_savings").has_equal_value(incorrect_msg="Додайте `savings` та `new_savings`, щоб створити змінну `total_savings`."),
+    has_printout(1, not_printed_msg = "__JINJA__:Використовуйте `{{sol_call}}`, щоб вивести тип `total_savings`.")
 )
 ```
 
@@ -450,12 +450,12 @@ xp: 50
 ```
 
 `@instructions`
-- Calculate the sum of `intro` and `intro` and assign the result to `doubleintro`.
-- Print out `doubleintro`. Did you expect this?
+- Обчисліть суму `intro` і `intro` та присвойте результат змінній `doubleintro`.
+- Виведіть `doubleintro`. Ви цього й очікували?
 
 `@hint`
-- Assign `intro + intro` to a new variable, `doubleintro`.
-- To print a variable `x`, write `print(x)` in the script.
+- Присвойте `intro + intro` новій змінній `doubleintro`.
+- Щоб вивести змінну `x`, запишіть у скрипті `print(x)`.
 
 `@sample_code`
 ```{python}
@@ -482,14 +482,14 @@ print(doubleintro)
 `@sct`
 ```{python}
 # predefined
-msg = "You don't have to change or remove the predefined variables."
+msg = "Вам не потрібно змінювати або видаляти попередньо визначені змінні."
 
 Ex().check_object('intro', missing_msg=msg).has_equal_value(incorrect_msg=msg)
 
 Ex().multi(
-    check_object("doubleintro").has_equal_value(incorrect_msg  = "Have you stored the result of `intro + intro` in `doubleintro`?"),
-    has_printout(0, not_printed_msg = "Don't forget to print out `doubleintro`.")
+    check_object("doubleintro").has_equal_value(incorrect_msg  = "Чи зберегли Ви результат `intro + intro` у `doubleintro`?"),
+    has_printout(0, not_printed_msg = "Не забудьте вивести `doubleintro`.")
 )
 
-success_msg("Nice. Notice how `intro + intro` causes `\"Hello! How are you?\"` and `\"Hello! How are you?\"` to be pasted together.")
+success_msg("Чудово. Зверніть увагу, як `intro + intro` призводить до об'єднання `\"Hello! How are you?\"` та `\"Hello! How are you?\"`.")
 ```
